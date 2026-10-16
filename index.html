@@ -68,7 +68,7 @@
       <div style="color:var(--sub);font-size:16px">Doutor em Ecologia Vegetal, pesquisador e professor de Biologia desde 2010</div>
       <p style="font-family:Fredoka;font-size:19px;margin:14px 0;border-left:4px solid var(--neon);padding-left:14px">“Criei a Expedição Vida para transformar a maneira como se aprende Biologia no ensino médio: menos decoreba, mais curiosidade e entusiasmo.”</p>
       <div style="display:flex;flex-wrap:wrap;gap:8px;font-size:13.5px;font-weight:700">
-        <span style="background:var(--vidro);border:1px solid var(--borda);border-radius:12px;padding:7px 11px">🎓 Licenciado pela UERJ · Mestre pela UFF</span>
+        <span style="background:var(--vidro);border:1px solid var(--borda);border-radius:12px;padding:7px 11px">🎓 Licenciado pela UERJ e mestre pela UFF</span>
         <span style="background:var(--vidro);border:1px solid var(--borda);border-radius:12px;padding:7px 11px">🔬 Doutor pela Universidade de Tartu (Estônia)</span>
         <span style="background:var(--vidro);border:1px solid var(--borda);border-radius:12px;padding:7px 11px">🌎 Pós-doutorados na USP e no Instituto Tecnológico Vale</span>
         <span style="background:var(--vidro);border:1px solid var(--borda);border-radius:12px;padding:7px 11px">📰 Publicações em Nature, Journal of Ecology e Scientific Reports</span>
@@ -92,7 +92,7 @@
 </div></section>
 
 <section id="planos"><div class="cont">
-  <div class="sec-tit"><div class="etq">Lista de espera · turma fundadora</div><h2>Garanta seu lugar nos planos premium</h2><p>Quem está na lista recebe primeiro o aviso de abertura e o <b>preço de fundador</b>. As mentorias têm vagas limitadas na primeira turma.</p></div>
+  <div class="sec-tit"><div class="etq">Lista de espera da turma fundadora</div><h2>Garanta seu lugar nos planos premium</h2><p>Quem está na lista recebe primeiro o aviso de abertura e o <b>preço de fundador</b>. As mentorias têm vagas limitadas na primeira turma.</p></div>
   <div class="planos" id="cartoesPlanos"></div>
   <p style="text-align:center;color:var(--sub);font-size:13.5px;margin-top:18px">Entrar na lista é gratuito e não gera nenhuma cobrança ou compromisso de compra. Os números exibidos são as inscrições reais.</p>
 </div></section>
@@ -152,7 +152,7 @@ async function renderPlanos() {
     const pct = c ? Math.min(100, c.inscritos / c.vagas * 100) : 0, cheio = c && c.inscritos >= c.vagas;
     const legenda = p === 'digital' ? 'preço de fundador para os primeiros' : 'vagas na turma fundadora';
     return `<div class="plano ${d.selo ? 'destaque' : ''}">${d.selo ? `<div class="fita">${d.selo}</div>` : ''}
-      <div style="font-size:34px">${PLANOS[p].ic}</div><h3>${PLANOS[p].nome}</h3><div class="preco">Preço de fundador · revelado primeiro para a lista</div>
+      <div style="font-size:34px">${PLANOS[p].ic}</div><h3>${PLANOS[p].nome}</h3><div class="preco">Preço de fundador revelado primeiro para a lista</div>
       <ul>${d.itens.map(i => `<li>${esc(i)}</li>`).join('')}</ul>
       <div class="vagas"><div class="barra"><div data-w="${pct}"></div></div>
         <div class="info"><span>${c && c.inscritos >= 5 ? `<b>${c.inscritos}</b> na lista` : '🚀 Seja um(a) dos primeiros'}</span><span>${c ? (cheio ? '🔥 turma fundadora completa' : `<b>${c.vagas}</b> ${legenda}`) : ''}</span></div></div>
