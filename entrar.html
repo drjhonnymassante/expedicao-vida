@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Entrar — Expedição Vida</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@500;700;800&display=swap">
+<link rel="stylesheet" href="estilo.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧬</text></svg>">
+</head>
+<body>
+<nav class="topo"><div class="cont"><a class="logo" href="./">🧬 <span>Expedição Vida</span></a><div class="links"><a href="./#planos">Planos</a></div></div></nav>
+<main class="cont" style="display:grid;place-items:center;min-height:calc(100vh - 64px);padding:30px 0">
+  <div class="modal" style="animation:none">
+    <div class="abas" id="abas"><button data-a="login" class="on">Entrar</button><button data-a="cadastro">Criar conta grátis</button></div>
+
+    <form id="fLogin">
+      <h3>Bem-vindo(a) de volta 👋</h3>
+      <label class="campo">E-mail</label><input class="inp" name="email" type="email" required autocomplete="email">
+      <label class="campo">Senha</label><input class="inp" name="senha" type="password" required autocomplete="current-password" minlength="8">
+      <button class="bt prim" style="width:100%;margin-top:16px" id="btLogin">Entrar na expedição</button>
+      <p style="text-align:center;margin:12px 0 0"><a href="#" id="lnkEsqueci">Esqueci minha senha</a></p>
+      <div id="mLogin"></div>
+    </form>
+
+    <form id="fCadastro" class="oculto">
+      <h3>Crie sua conta grátis 🧬</h3>
+      <p style="color:var(--sub);margin:0">30 aulas completas, o mundo aberto e seu progresso salvo na nuvem.</p>
+      <label class="campo">Apelido de explorador(a)</label><input class="inp" name="apelido" maxlength="24" minlength="2" required>
+      <label class="campo">E-mail</label><input class="inp" name="email" type="email" required autocomplete="email" maxlength="160">
+      <label class="campo">Senha (mínimo 8 caracteres)</label><input class="inp" name="senha" type="password" required minlength="8" autocomplete="new-password">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <div><label class="campo">Data de nascimento</label><input class="inp" name="nasc" type="date" required></div>
+        <div><label class="campo">Série</label><select class="inp" name="serie"><option value="1a">1ª série</option><option value="2a">2ª série</option><option value="3a" selected>3ª série</option><option value="cursinho">Cursinho</option><option value="concluido">Já concluí</option><option value="outro">Outro</option></select></div>
+      </div>
+      <label class="campo">Objetivo</label><select class="inp" name="objetivo"><option value="enem">ENEM</option><option value="medicina">Medicina</option><option value="vestibulares">Outros vestibulares</option><option value="escola">Ir bem na escola</option><option value="outro">Outro</option></select>
+      <div id="blocoMenor" class="oculto">
+        <label class="campo">E-mail do seu responsável (recomendado para menores de 18)</label><input class="inp" name="resp" type="email" maxlength="160">
+        <p style="font-size:12.5px;color:var(--sub);margin:6px 0 0">Para menores de 18 anos, comunicações de marketing só são enviadas com autorização do responsável.</p>
+      </div>
+      <label class="check"><input type="checkbox" name="aceite" required> <span>Li e aceito os <a href="termos.html" target="_blank">Termos de Uso</a> e a <a href="privacidade.html" target="_blank">Política de Privacidade</a>.</span></label>
+      <label class="check" id="lblMkt"><input type="checkbox" name="mkt"> <span>Quero receber dicas de estudo e novidades por e-mail (opcional).</span></label>
+      <button class="bt prim" style="width:100%;margin-top:8px" id="btCad">Criar conta e começar</button>
+      <div id="mCad"></div>
+    </form>
+
+    <form id="fReset" class="oculto">
+      <h3>Recuperar senha</h3>
+      <p style="color:var(--sub)">Enviaremos um link para você criar uma nova senha.</p>
+      <label class="campo">E-mail</label><input class="inp" name="email" type="email" required>
+      <button class="bt roxo" style="width:100%;margin-top:14px">Enviar link</button>
+      <p style="text-align:center;margin:12px 0 0"><a href="#" id="lnkVoltar">Voltar para entrar</a></p>
+      <div id="mReset"></div>
+    </form>
+
+    <form id="fNova" class="oculto">
+      <h3>Nova senha</h3>
+      <label class="campo">Nova senha (mínimo 8 caracteres)</label><input class="inp" name="senha" type="password" required minlength="8" autocomplete="new-password">
+      <button class="bt prim" style="width:100%;margin-top:14px">Salvar e entrar</button>
+      <div id="mNova"></div>
+    </form>
+  </div>
+</main>
+<script src="app/vendor/supabase.js"></script>
+<script src="config.js"></script>
+<script src="vida.js"></script>
+<script>
+const { sb } = Vida, q = new URLSearchParams(location.search);
+const volta = q.get('volta') && q.get('volta').startsWith('/') ? q.get('volta') : 'app/mundo3d/';
+const forms = ['fLogin', 'fCadastro', 'fReset', 'fNova'];
+function mostrar(id) { forms.forEach(f => document.getElementById(f).classList.toggle('oculto', f !== id)); document.querySelectorAll('#abas button').forEach(b => b.classList.toggle('on', (b.dataset.a === 'login' && id === 'fLogin') || (b.dataset.a === 'cadastro' && id === 'fCadastro'))); document.getElementById('abas').classList.toggle('oculto', id === 'fNova' || id === 'fReset'); }
+document.querySelectorAll('#abas button').forEach(b => b.onclick = () => mostrar(b.dataset.a === 'login' ? 'fLogin' : 'fCadastro'));
+document.getElementById('lnkEsqueci').onclick = e => { e.preventDefault(); mostrar('fReset'); };
+document.getElementById('lnkVoltar').onclick = e => { e.preventDefault(); mostrar('fLogin'); };
+if (q.get('modo') === 'cadastro') mostrar('fCadastro');
+const msg = (id, txt, tipo = 'erro') => document.getElementById(id).innerHTML = `<div class="msg ${tipo}">${Vida.esc(txt)}</div>`;
+const traduz = m => /Invalid login/i.test(m) ? 'E-mail ou senha incorretos.' : /already registered|already been registered/i.test(m) ? 'Este e-mail já tem conta. Use a aba Entrar.' : /12 anos/.test(m) ? 'O cadastro é permitido a partir de 12 anos.' : /rate limit|too many/i.test(m) ? 'Muitas tentativas. Aguarde alguns minutos e tente de novo.' : /Email not confirmed/i.test(m) ? 'Confirme seu e-mail pelo link enviado antes de entrar.' : 'Não foi possível concluir agora. Tente novamente.';
+const ir = () => location.href = volta.startsWith('/') ? volta : volta;
+
+sb.auth.getSession().then(({ data: { session } }) => { if (session && q.get('modo') !== 'nova-senha') ir(); });
+sb.auth.onAuthStateChange(ev => { if (ev === 'PASSWORD_RECOVERY') mostrar('fNova'); });
+
+// idade → bloco do responsável
+const fC = document.getElementById('fCadastro');
+function idade(d) { if (!d) return null; const n = new Date(d), h = new Date(); let a = h.getFullYear() - n.getFullYear(); if (h < new Date(h.getFullYear(), n.getMonth(), n.getDate())) a--; return a; }
+fC.nasc.addEventListener('change', () => { const a = idade(fC.nasc.value); document.getElementById('blocoMenor').classList.toggle('oculto', !(a !== null && a < 18)); });
+
+document.getElementById('fLogin').onsubmit = async e => {
+  e.preventDefault(); const f = e.target, bt = document.getElementById('btLogin'); bt.disabled = true;
+  const { error } = await sb.auth.signInWithPassword({ email: f.email.value.trim(), password: f.senha.value });
+  bt.disabled = false; if (error) return msg('mLogin', traduz(error.message)); ir();
+};
+fC.onsubmit = async e => {
+  e.preventDefault(); const f = e.target, a = idade(f.nasc.value), bt = document.getElementById('btCad');
+  if (a === null || a < 12) return msg('mCad', 'O cadastro é permitido a partir de 12 anos.');
+  if (a > 100) return msg('mCad', 'Confira a data de nascimento.');
+  const menor = a < 18, resp = f.resp.value.trim();
+  const mkt = f.mkt.checked && (!menor || !!resp);
+  bt.disabled = true; bt.textContent = 'Criando sua conta…';
+  const { data, error } = await sb.auth.signUp({ email: f.email.value.trim().toLowerCase(), password: f.senha.value,
+    options: { emailRedirectTo: location.origin + location.pathname.replace(/entrar\.html.*$/, '') + 'app/mundo3d/',
+      data: { apelido: f.apelido.value.trim(), serie: f.serie.value, objetivo: f.objetivo.value, data_nascimento: f.nasc.value, responsavel_email: menor ? resp : '', marketing_optin: mkt, aceite_termos: true } } });
+  bt.disabled = false; bt.textContent = 'Criar conta e começar';
+  if (error) return msg('mCad', traduz(error.message));
+  // guarda o apelido para o jogo
+  try { const st = JSON.parse(localStorage.getItem('expedicao_vida') || 'null') || {}; st.nome = f.apelido.value.trim(); localStorage.setItem('expedicao_vida', JSON.stringify(st)); } catch { }
+  if (data.session) return ir();
+  msg('mCad', 'Conta criada! Enviamos um link de confirmação para o seu e-mail. Depois de confirmar, é só entrar.', 'ok');
+};
+document.getElementById('fReset').onsubmit = async e => {
+  e.preventDefault(); const { error } = await sb.auth.resetPasswordForEmail(e.target.email.value.trim(), { redirectTo: location.origin + location.pathname + '?modo=nova-senha' });
+  if (error) return msg('mReset', traduz(error.message)); msg('mReset', 'Se este e-mail tiver conta, você receberá o link em instantes. Confira também o spam.', 'ok');
+};
+document.getElementById('fNova').onsubmit = async e => {
+  e.preventDefault(); const { error } = await sb.auth.updateUser({ password: e.target.senha.value });
+  if (error) return msg('mNova', traduz(error.message)); msg('mNova', 'Senha atualizada! Entrando…', 'ok'); setTimeout(ir, 900);
+};
+</script>
+</body>
+</html>

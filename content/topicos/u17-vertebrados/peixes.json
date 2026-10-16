@@ -1,0 +1,459 @@
+{
+  "topico": "peixes",
+  "versao": 1,
+  "questoes": [
+    {
+      "id": "peixes-q01",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Todos os cordados apresentam, pelo menos em alguma fase da vida, um conjunto de características que, juntas, definem o filo. Esse conjunto é formado por:",
+      "alternativas": [
+        "coluna vertebral, crânio, mandíbulas e escamas",
+        "brânquias, nadadeiras pares, bexiga natatória e linha lateral",
+        "notocorda, tubo nervoso dorsal, fendas faríngeas e cauda pós-anal",
+        "pulmões, coração com quatro cavidades, pelos e penas",
+        "exoesqueleto, corpo segmentado, apêndices articulados e cordão nervoso ventral"
+      ],
+      "correta": 2,
+      "explicacao": "Notocorda, tubo nervoso dorsal e oco, fendas faríngeas e cauda pós-anal definem os cordados, inclusive os protocordados, que não têm crânio nem vértebras. Coluna vertebral e crânio são exclusivos dos vertebrados, não de todos os cordados. Cordão nervoso ventral e exoesqueleto são características de artrópodes.",
+      "habilidade": "Reconhecer as características diagnósticas dos cordados.",
+      "tags": [
+        "cordados",
+        "notocorda"
+      ]
+    },
+    {
+      "id": "peixes-q02",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Qual destes animais é um vertebrado agnato, ou seja, sem mandíbula?",
+      "alternativas": [
+        "Lampreia",
+        "Tubarão",
+        "Cavalo-marinho",
+        "Raia",
+        "Pirarucu"
+      ],
+      "correta": 0,
+      "explicacao": "A lampreia tem boca circular em forma de ventosa e não possui mandíbula, assim como as feiticeiras. Tubarão e raia são condrictes; cavalo-marinho e pirarucu são osteíctes. Todos esses são gnatostomados, isto é, têm mandíbula.",
+      "habilidade": "Identificar representantes dos agnatos.",
+      "tags": [
+        "agnatos",
+        "mandíbulas"
+      ]
+    },
+    {
+      "id": "peixes-q03",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Nos peixes ósseos, a estrutura que permite ajustar a densidade do corpo e permanecer em diferentes profundidades com pouco gasto de energia é:",
+      "alternativas": [
+        "a linha lateral",
+        "o opérculo",
+        "a válvula espiral",
+        "a glândula retal",
+        "a bexiga natatória"
+      ],
+      "correta": 4,
+      "explicacao": "A bexiga natatória é um saco de gás cujo volume pode ser ajustado, alterando a densidade do peixe. A linha lateral é sensorial, o opérculo protege as brânquias, e a válvula espiral (intestino) e a glândula retal (eliminação de sal) são estruturas típicas dos condrictes.",
+      "habilidade": "Relacionar estruturas dos peixes ósseos às suas funções.",
+      "tags": [
+        "bexiga natatória",
+        "flutuação"
+      ]
+    },
+    {
+      "id": "peixes-q04",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Um estudante comparou um tubarão com uma tilápia. Qual característica ele encontrou no tubarão e NÃO na tilápia?",
+      "alternativas": [
+        "Brânquias como principal órgão respiratório",
+        "Escamas placoides e fecundação interna",
+        "Opérculo cobrindo as brânquias",
+        "Bexiga natatória cheia de gás",
+        "Coluna vertebral e crânio"
+      ],
+      "correta": 1,
+      "explicacao": "Escamas placoides (dentículos dérmicos) e fecundação interna, com machos portadores de clásperes, são marcas dos condrictes. Opérculo e bexiga natatória são típicos dos peixes ósseos, como a tilápia. Brânquias, crânio e coluna vertebral estão presentes nos dois.",
+      "habilidade": "Comparar condrictes e osteíctes.",
+      "tags": [
+        "condrictes",
+        "osteíctes"
+      ]
+    },
+    {
+      "id": "peixes-q05",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Um lambari vive em um rio cuja água é muito menos concentrada em sais do que o seu sangue. Para manter o equilíbrio hídrico e salino, esse peixe:",
+      "alternativas": [
+        "bebe grande quantidade de água, produz pouca urina e elimina sais pelas brânquias",
+        "retém ureia no sangue até igualar sua concentração à da água do rio",
+        "perde água por osmose, bebe pouca água e elimina sais ativamente pelas brânquias",
+        "quase não bebe água, produz muita urina diluída e absorve sais ativamente pelas brânquias",
+        "elimina o excesso de sal por uma glândula retal e produz urina concentrada"
+      ],
+      "correta": 3,
+      "explicacao": "Em água doce, o peixe é hipertônico em relação ao meio: ganha água por osmose e perde sais. Por isso quase não bebe, elimina muita urina diluída e repõe sais por transporte ativo nas brânquias. Beber muito e urinar pouco é a estratégia do peixe ósseo marinho; ureia e glândula retal são estratégias de condrictes marinhos.",
+      "habilidade": "Explicar a osmorregulação de peixes de água doce.",
+      "tags": [
+        "osmorregulação",
+        "água doce"
+      ]
+    },
+    {
+      "id": "peixes-q06",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Nas lamelas branquiais dos peixes, a água e o sangue circulam em sentidos opostos. A principal vantagem desse arranjo é:",
+      "alternativas": [
+        "impedir que o sangue entre em contato com a água",
+        "permitir a eliminação de ureia pelas brânquias",
+        "manter um gradiente de concentração de O₂ favorável à difusão ao longo de toda a lamela",
+        "fazer o sangue passar duas vezes pelo coração",
+        "transformar o oxigênio dissolvido em gás para encher a bexiga natatória"
+      ],
+      "correta": 2,
+      "explicacao": "No fluxo contracorrente, o sangue sempre encontra água um pouco mais oxigenada que ele, e a difusão de O₂ ocorre ao longo de toda a lamela, o que aumenta a extração de oxigênio. O arranjo não isola sangue e água (a troca exige proximidade) e não cria circulação dupla: a circulação dos peixes é simples.",
+      "habilidade": "Explicar a eficiência das trocas gasosas nas brânquias.",
+      "tags": [
+        "brânquias",
+        "contracorrente"
+      ]
+    },
+    {
+      "id": "peixes-q07",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Texto-base: Em muitos rios brasileiros, espécies como o dourado e o curimbatá realizam a piracema, migrando rio acima na época das chuvas para desovar. Durante esse período, a pesca dessas espécies é restringida pelo defeso. Em trechos de rios barrados por usinas hidrelétricas, pescadores relatam redução dos estoques dessas espécies nos anos seguintes à construção. Uma explicação compatível com os relatos e uma medida que pode reduzir o problema são, respectivamente:",
+      "alternativas": [
+        "o represamento aumenta a temperatura da água e os peixes passam a se reproduzir duas vezes ao ano; a medida é ampliar a pesca",
+        "a barragem eleva a salinidade do rio e os peixes morrem por desidratação; a medida é adicionar sal à água do reservatório",
+        "os peixes migradores se adaptam rapidamente ao lago e deixam de precisar migrar; a medida é eliminar o defeso",
+        "a barragem aumenta a oferta de oxigênio e atrai predadores marinhos; a medida é introduzir tilápias no reservatório",
+        "a barragem interrompe a rota até as áreas de desova, reduzindo o recrutamento de jovens; a medida é instalar sistemas de transposição de peixes e manter o defeso"
+      ],
+      "correta": 4,
+      "explicacao": "Peixes de piracema precisam percorrer longos trechos do rio para se reproduzir. A barragem bloqueia esse caminho, menos jovens nascem e a população diminui. Escadas ou elevadores para peixes e o defeso ajudam a proteger a reprodução. Barragens não salinizam rios de água doce, e introduzir espécies exóticas como a tilápia agrava o problema, pois cria competição.",
+      "habilidade": "Avaliar impactos ambientais de intervenções humanas sobre a reprodução de peixes.",
+      "tags": [
+        "piracema",
+        "defeso",
+        "barragens",
+        "conservação"
+      ]
+    },
+    {
+      "id": "peixes-q08",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Texto-base: Um aquarista iniciante transferiu um peixe de água doce diretamente para um aquário com água do mar. Em poucas horas, o peixe apresentou letargia e morreu. Ao examinar o caso, um técnico afirmou que a causa principal foi a incapacidade do animal de lidar com o novo meio. Do ponto de vista fisiológico, o que ocorreu com esse peixe?",
+      "alternativas": [
+        "O meio hipertônico fez o peixe perder água por osmose pelas brânquias, e seus mecanismos, adaptados para absorver sais, não conseguiram eliminar o excesso de sal",
+        "O peixe absorveu tanta água do mar por osmose que suas células incharam e se romperam, pois o meio era hipotônico",
+        "A água do mar tem menos oxigênio dissolvido que qualquer água doce, e o peixe morreu asfixiado imediatamente",
+        "A bexiga natatória se encheu de água salgada, o peixe ficou mais denso e afundou até morrer por compressão",
+        "O sal ativou a linha lateral, que provocou contrações musculares contínuas"
+      ],
+      "correta": 0,
+      "explicacao": "A água do mar é hipertônica em relação ao sangue de um peixe de água doce. O animal perde água por osmose e ganha sais, mas suas brânquias estão especializadas em absorver sais, não em eliminá-los. O inchaço celular ocorreria no caso inverso (meio hipotônico). A bexiga natatória contém gás, não água, e a linha lateral é um órgão sensorial.",
+      "habilidade": "Aplicar conceitos de osmose a uma situação-problema envolvendo peixes.",
+      "tags": [
+        "osmorregulação",
+        "osmose",
+        "situação-problema"
+      ]
+    },
+    {
+      "id": "peixes-q09",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Texto-base: Ribeirinhos da Amazônia sabem que o pirarucu sobe à superfície a intervalos regulares para \"boiar\" e engolir ar, comportamento que os pescadores usam para localizá-lo. Se o animal ficar preso no fundo por muito tempo, ele morre afogado, mesmo tendo brânquias. Esse comportamento se explica porque o pirarucu:",
+      "alternativas": [
+        "não possui brânquias funcionais em nenhuma fase da vida",
+        "depende da respiração aérea, realizada em uma bexiga natatória modificada e muito vascularizada, estrutura homóloga aos pulmões dos tetrápodes",
+        "é um mamífero aquático, assim como o peixe-boi",
+        "precisa encher a bexiga natatória de ar apenas para flutuar, sem nenhuma troca gasosa",
+        "respira pela linha lateral, que só funciona fora da água"
+      ],
+      "correta": 1,
+      "explicacao": "O pirarucu é um peixe ósseo com respiração aérea obrigatória: grande parte do O₂ vem do ar engolido e absorvido em uma bexiga natatória modificada. A bexiga natatória e os pulmões têm a mesma origem embrionária (evaginação do tubo digestório), por isso são homólogos. O pirarucu tem brânquias, embora insuficientes, e não é mamífero; a linha lateral é sensorial.",
+      "habilidade": "Relacionar adaptação respiratória, homologia e conhecimento tradicional.",
+      "tags": [
+        "pirarucu",
+        "bexiga natatória",
+        "homologia",
+        "Amazônia"
+      ]
+    },
+    {
+      "id": "peixes-q10",
+      "nivel": "diamante",
+      "tipo": "multipla_escolha",
+      "enunciado": "Os dados a seguir apresentam valores aproximados, para fins didáticos, da concentração osmótica (em mOsm/L) de ambientes e do sangue de alguns peixes: água do mar, cerca de 1000; sangue de tubarão marinho, cerca de 1050 (grande parte dessa concentração se deve à ureia); sangue de peixe ósseo marinho, cerca de 400; sangue de peixe ósseo de água doce, cerca de 300; água de rio, menos de 10. Com base nesses dados e na fisiologia desses animais, assinale a alternativa correta.",
+      "alternativas": [
+        "O peixe ósseo marinho é isotônico em relação ao mar e, por isso, não precisa gastar energia com osmorregulação.",
+        "O tubarão marinho perde muita água por osmose e compensa bebendo grandes volumes de água do mar, eliminando o excesso de ureia pelas brânquias.",
+        "O peixe ósseo de água doce perde água por osmose para o rio e produz urina escassa e concentrada para economizá-la.",
+        "O tubarão, levemente hiperosmótico em relação ao mar pela ureia retida, não depende de beber água; já o peixe ósseo marinho, hiposmótico, perde água, bebe água do mar e elimina sais ativamente.",
+        "Como a ureia é mais tóxica que a amônia, o tubarão precisa eliminá-la imediatamente, e seu sangue fica menos concentrado que o do peixe ósseo de água doce."
+      ],
+      "correta": 3,
+      "explicacao": "Pelos dados, o sangue do tubarão (cerca de 1050) é um pouco mais concentrado que o mar (cerca de 1000), principalmente pela ureia retida; assim ele não perde água e pode até ganhar um pouco, eliminando o excesso de NaCl pela glândula retal. O peixe ósseo marinho (cerca de 400) é hiposmótico: perde água, bebe água do mar e excreta sais ativamente pelas brânquias. Ele não é isotônico ao mar, e o tubarão não perde muita água nem precisa beber grandes volumes. O peixe de água doce ganha água e urina muito. A ureia é menos tóxica que a amônia, o que permite retê-la no sangue.",
+      "habilidade": "Integrar osmose, transporte ativo e excreção nitrogenada na interpretação de dados.",
+      "tags": [
+        "osmorregulação",
+        "ureia",
+        "transporte ativo",
+        "interpretação de dados",
+        "integração"
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "peixes-f01",
+      "frente": "Quatro características que definem os cordados",
+      "verso": "Notocorda, tubo nervoso dorsal e oco, fendas faríngeas e cauda pós-anal, em pelo menos uma fase da vida."
+    },
+    {
+      "id": "peixes-f02",
+      "frente": "O que os vertebrados acrescentam às características dos cordados?",
+      "verso": "Crânio protegendo o encéfalo e coluna vertebral segmentada."
+    },
+    {
+      "id": "peixes-f03",
+      "frente": "Agnatos atuais",
+      "verso": "Feiticeiras (mixinas) e lampreias: boca circular sem mandíbula, sem nadadeiras pares e com notocorda persistente."
+    },
+    {
+      "id": "peixes-f04",
+      "frente": "De onde surgiram as mandíbulas?",
+      "verso": "De arcos esqueléticos que sustentavam as brânquias na região anterior da faringe."
+    },
+    {
+      "id": "peixes-f05",
+      "frente": "Escamas placoides",
+      "verso": "Dentículos dérmicos com dentina e esmalte, semelhantes a dentes; típicas dos condrictes."
+    },
+    {
+      "id": "peixes-f06",
+      "frente": "Como os tubarões compensam a ausência de bexiga natatória?",
+      "verso": "Com o fígado grande e rico em óleo, que reduz a densidade, e com a sustentação gerada pelo nado."
+    },
+    {
+      "id": "peixes-f07",
+      "frente": "Actinopterígios x sarcopterígios",
+      "verso": "Actinopterígios têm nadadeiras sustentadas por raios finos (maioria dos peixes). Sarcopterígios têm nadadeiras lobadas com ossos internos (celacanto, peixes pulmonados)."
+    },
+    {
+      "id": "peixes-f08",
+      "frente": "Fluxo contracorrente nas brânquias",
+      "verso": "Água e sangue correm em sentidos opostos, mantendo o gradiente de O₂ ao longo de toda a lamela e aumentando a extração de oxigênio."
+    },
+    {
+      "id": "peixes-f09",
+      "frente": "Circulação dos peixes",
+      "verso": "Simples e completa: o coração (átrio e ventrículo como câmaras principais) bombeia só sangue pobre em O₂ para as brânquias."
+    },
+    {
+      "id": "peixes-f10",
+      "frente": "Bexiga natatória é homóloga a quê?",
+      "verso": "Aos pulmões dos tetrápodes: ambos surgem de uma evaginação do tubo digestório."
+    },
+    {
+      "id": "peixes-f11",
+      "frente": "Linha lateral",
+      "verso": "Sistema de canais com neuromastos (células ciliadas) que detectam movimentos e vibrações da água."
+    },
+    {
+      "id": "peixes-f12",
+      "frente": "Peixe ósseo de água doce: osmorregulação",
+      "verso": "Ganha água por osmose, praticamente não bebe, urina muito e diluído e absorve sais ativamente pelas brânquias."
+    },
+    {
+      "id": "peixes-f13",
+      "frente": "Peixe ósseo marinho: osmorregulação",
+      "verso": "Perde água por osmose, bebe água do mar, urina pouco e elimina sais ativamente pelas brânquias."
+    },
+    {
+      "id": "peixes-f14",
+      "frente": "Estratégia osmótica dos condrictes marinhos",
+      "verso": "Retêm ureia no sangue, ficando com concentração igual ou um pouco maior que a do mar; eliminam NaCl pela glândula retal."
+    }
+  ],
+  "minijogos": {
+    "pares": [
+      {
+        "a": "Lampreia",
+        "b": "Agnato com boca em ventosa"
+      },
+      {
+        "a": "Escama placoide",
+        "b": "Dentículo dérmico dos tubarões"
+      },
+      {
+        "a": "Opérculo",
+        "b": "Placa que cobre as brânquias dos peixes ósseos"
+      },
+      {
+        "a": "Bexiga natatória",
+        "b": "Controle da flutuação"
+      },
+      {
+        "a": "Linha lateral",
+        "b": "Percepção de vibrações na água"
+      },
+      {
+        "a": "Ampolas de Lorenzini",
+        "b": "Detecção de campos elétricos"
+      },
+      {
+        "a": "Glândula retal",
+        "b": "Eliminação de NaCl em condrictes"
+      },
+      {
+        "a": "Piramboia",
+        "b": "Peixe pulmonado (sarcopterígio)"
+      }
+    ],
+    "sequencia": {
+      "instrucao": "Coloque em ordem o caminho da água durante a respiração de um peixe ósseo.",
+      "itens": [
+        "A boca se abre e a água entra na cavidade bucal",
+        "A boca se fecha e a cavidade bucal se contrai, empurrando a água para trás",
+        "A água passa entre os filamentos e as lamelas das brânquias",
+        "O O₂ se difunde da água para o sangue em fluxo contracorrente",
+        "A água sai pela abertura do opérculo"
+      ]
+    },
+    "classificacao": {
+      "instrucao": "Classifique cada animal ou característica no grupo de peixes correspondente.",
+      "categorias": [
+        "Agnatos",
+        "Condrictes",
+        "Osteíctes"
+      ],
+      "itens": [
+        {
+          "texto": "Lampreia",
+          "categoria": "Agnatos"
+        },
+        {
+          "texto": "Feiticeira (mixina)",
+          "categoria": "Agnatos"
+        },
+        {
+          "texto": "Boca circular sem mandíbula",
+          "categoria": "Agnatos"
+        },
+        {
+          "texto": "Tubarão-martelo",
+          "categoria": "Condrictes"
+        },
+        {
+          "texto": "Arraia de água doce",
+          "categoria": "Condrictes"
+        },
+        {
+          "texto": "Escamas placoides",
+          "categoria": "Condrictes"
+        },
+        {
+          "texto": "Fígado rico em óleo no lugar da bexiga natatória",
+          "categoria": "Condrictes"
+        },
+        {
+          "texto": "Pirarucu",
+          "categoria": "Osteíctes"
+        },
+        {
+          "texto": "Cavalo-marinho",
+          "categoria": "Osteíctes"
+        },
+        {
+          "texto": "Piramboia",
+          "categoria": "Osteíctes"
+        },
+        {
+          "texto": "Poraquê",
+          "categoria": "Osteíctes"
+        },
+        {
+          "texto": "Opérculo cobrindo as brânquias",
+          "categoria": "Osteíctes"
+        }
+      ]
+    },
+    "verdadeiro_falso": [
+      {
+        "afirmacao": "Todos os cordados têm coluna vertebral.",
+        "valor": false,
+        "explicacao": "Protocordados, como o anfioxo, são cordados sem vértebras. A coluna vertebral é exclusiva dos vertebrados."
+      },
+      {
+        "afirmacao": "Lampreias e feiticeiras não têm mandíbula.",
+        "valor": true,
+        "explicacao": "São os agnatos atuais, com boca circular."
+      },
+      {
+        "afirmacao": "Os tubarões possuem bexiga natatória.",
+        "valor": false,
+        "explicacao": "Condrictes não têm bexiga natatória; o fígado rico em óleo reduz a densidade."
+      },
+      {
+        "afirmacao": "O peixe ósseo marinho bebe água do mar.",
+        "valor": true,
+        "explicacao": "Ele perde água por osmose e repõe bebendo água do mar, eliminando o excesso de sais pelas brânquias."
+      },
+      {
+        "afirmacao": "O peixe de água doce produz pouca urina para não perder água.",
+        "valor": false,
+        "explicacao": "Ele ganha água por osmose e produz urina abundante e diluída."
+      },
+      {
+        "afirmacao": "No coração dos peixes circula apenas sangue pobre em oxigênio.",
+        "valor": true,
+        "explicacao": "O coração bombeia o sangue para as brânquias; o sangue oxigenado vai direto para o corpo."
+      },
+      {
+        "afirmacao": "A bexiga natatória e os pulmões são estruturas homólogas.",
+        "valor": true,
+        "explicacao": "Ambos se originam de uma evaginação do tubo digestório."
+      },
+      {
+        "afirmacao": "Peixes formam um grupo monofilético que inclui todos os descendentes de seu ancestral comum.",
+        "valor": false,
+        "explicacao": "O grupo é parafilético, pois os tetrápodes descendem de peixes e não são incluídos nele."
+      },
+      {
+        "afirmacao": "A linha lateral permite ao peixe perceber movimentos na água ao seu redor.",
+        "valor": true,
+        "explicacao": "Os neuromastos detectam vibrações e deslocamentos da água."
+      },
+      {
+        "afirmacao": "O poraquê, chamado de enguia-elétrica, é um peixe cartilaginoso.",
+        "valor": false,
+        "explicacao": "O poraquê é um peixe ósseo da Amazônia, que produz descargas elétricas em órgãos derivados de músculos."
+      }
+    ]
+  },
+  "missao_mundo_aberto": {
+    "titulo": "Contra a Correnteza",
+    "regiao": "Travessia dos Vertebrados",
+    "npc": "Mestra Piracema, pescadora e guardiã do estuário",
+    "narrativa": "No início da Travessia, um grande rio encontra o oceano. Peixes de água doce estão sendo arrastados para o mar salgado e uma barragem impede o cardume de chegar às áreas de desova. A Mestra Piracema precisa de um viajante que entenda como cada peixe respira, flutua e controla a água do corpo.",
+    "objetivo": "Guiar cada peixe ao ambiente adequado, explicar sua estratégia de osmorregulação e abrir um caminho seguro para a piracema antes do fim da estação das chuvas.",
+    "mecanica": "exploracao",
+    "etapas": [
+      "Poço das Mandíbulas: separar agnatos de gnatostomados observando a boca de cada animal",
+      "Recife dos Cartilaginosos: identificar tubarões e raias por escamas placoides, fendas expostas e fígado oleoso",
+      "Remanso da Flutuação: ajustar a bexiga natatória de um tambaqui para mantê-lo na profundidade certa",
+      "Estuário Salgado: devolver os peixes de água doce ao rio e explicar por que perdem água no mar",
+      "Barragem da Piracema: construir uma escada de peixes e garantir o defeso para o cardume subir o rio"
+    ],
+    "recompensa_xp": 150,
+    "item_recompensa": "Escama Placoide da Correnteza"
+  }
+}

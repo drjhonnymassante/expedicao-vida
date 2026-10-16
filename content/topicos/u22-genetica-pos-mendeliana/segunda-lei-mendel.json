@@ -1,0 +1,295 @@
+{
+  "topico": "segunda-lei-mendel",
+  "versao": 1,
+  "questoes": [
+    {
+      "id": "segunda-lei-mendel-q01",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Em ervilhas, sementes amarelas (V) são dominantes sobre verdes (v) e lisas (R) são dominantes sobre rugosas (r). Os genes estão em cromossomos diferentes. Na descendência do cruzamento VvRr × VvRr, a proporção fenotípica esperada é:",
+      "alternativas": ["3:1", "1:2:1", "9:3:3:1", "1:1:1:1", "9:7"],
+      "correta": 2,
+      "explicacao": "Cada gene isolado segrega 3:1; como são independentes, (3:1) × (3:1) = 9:3:3:1. A proporção 1:1:1:1 é a do cruzamento-teste (VvRr × vvrr), 1:2:1 é genotípica de um único gene e 9:7 aparece em casos de interação gênica.",
+      "habilidade": "Reconhecer a proporção fenotípica do cruzamento entre diíbridos.",
+      "tags": ["9:3:3:1", "diibridismo"]
+    },
+    {
+      "id": "segunda-lei-mendel-q02",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Quantos tipos diferentes de gametas um indivíduo de genótipo AaBbCcDD pode formar, considerando que todos os genes segregam de forma independente?",
+      "alternativas": ["8", "4", "16", "6", "3"],
+      "correta": 0,
+      "explicacao": "Usa-se 2^n, em que n é o número de pares heterozigotos. Há três (Aa, Bb, Cc); DD é homozigoto e não aumenta a variedade. Logo, 2³ = 8. O valor 16 aparece quando se conta, por engano, o par DD.",
+      "habilidade": "Calcular o número de tipos de gametas pela fórmula 2^n.",
+      "tags": ["gametas", "2^n"]
+    },
+    {
+      "id": "segunda-lei-mendel-q03",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "O evento celular que explica a Segunda Lei de Mendel é a:",
+      "alternativas": ["separação das cromátides-irmãs na anáfase da mitose", "duplicação do DNA na interfase", "permutação (crossing-over) entre cromátides de cromossomos homólogos", "fusão dos gametas na fecundação", "disposição aleatória dos pares de homólogos na metáfase I e sua separação independente na anáfase I"],
+      "correta": 4,
+      "explicacao": "A orientação de cada par de homólogos na placa equatorial da metáfase I não depende da dos outros pares; na anáfase I os homólogos se separam, gerando combinações independentes de alelos de genes em cromossomos diferentes. Mitose não forma gametas, e o crossing-over recombina alelos de genes situados no mesmo cromossomo, não explica a independência entre cromossomos diferentes.",
+      "habilidade": "Relacionar a segregação independente ao comportamento dos cromossomos na meiose.",
+      "tags": ["meiose", "metáfase I", "base citológica"]
+    },
+    {
+      "id": "segunda-lei-mendel-q04",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Um indivíduo duplo-heterozigoto (AaBb), com genes de segregação independente e dominância completa, é cruzado com um duplo-recessivo (aabb). A proporção fenotípica esperada na descendência é:",
+      "alternativas": ["9:3:3:1", "1:1:1:1", "3:1", "100% com os dois caracteres dominantes", "1:2:1"],
+      "correta": 1,
+      "explicacao": "O duplo-recessivo só forma gametas ab, enquanto AaBb forma AB, Ab, aB e ab em frequências iguais. Os filhos (AaBb, Aabb, aaBb, aabb) aparecem na proporção 1:1:1:1. O 9:3:3:1 exigiria dois pais duplo-heterozigotos.",
+      "habilidade": "Interpretar o cruzamento-teste de um diíbrido.",
+      "tags": ["cruzamento-teste", "1:1:1:1"]
+    },
+    {
+      "id": "segunda-lei-mendel-q05",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "No cruzamento AaBb × AaBb, com genes independentes e dominância completa, qual é a probabilidade de um descendente apresentar o fenótipo recessivo para o gene A e o fenótipo dominante para o gene B (aaB_)?",
+      "alternativas": ["1/16", "9/16", "1/4", "3/16", "3/4"],
+      "correta": 3,
+      "explicacao": "P(aa) = 1/4 e P(B_) = 3/4. Como os eventos são independentes e precisam ocorrer juntos, multiplica-se: 1/4 × 3/4 = 3/16. O valor 1/16 corresponde a aabb, e 9/16 a A_B_.",
+      "habilidade": "Aplicar a regra do produto em problemas de diibridismo.",
+      "tags": ["probabilidade", "regra do E"]
+    },
+    {
+      "id": "segunda-lei-mendel-q06",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Do cruzamento entre dois indivíduos AaBbCc, com os três genes em cromossomos diferentes, qual é a probabilidade de nascer um descendente aabbcc?",
+      "alternativas": ["1/64", "1/8", "1/16", "1/32", "27/64"],
+      "correta": 0,
+      "explicacao": "Para cada gene, Aa × Aa (e igualmente para B e C) dá 1/4 de homozigoto recessivo. Multiplicando: 1/4 × 1/4 × 1/4 = 1/64. O valor 27/64 é a probabilidade de A_B_C_, e 1/8 seria o resultado de multiplicar 1/2 três vezes.",
+      "habilidade": "Resolver problemas de poliibridismo pela multiplicação de probabilidades.",
+      "tags": ["poliibridismo", "probabilidade"]
+    },
+    {
+      "id": "segunda-lei-mendel-q07",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Texto-base: Em um programa de melhoramento de feijão, uma equipe trabalha com dois genes de segregação independente. O alelo P determina grão de cor escura e é dominante sobre p (grão claro, a cor preferida pelo mercado da região). O alelo R confere resistência a um fungo e é dominante sobre r (suscetibilidade). Plantas duplo-heterozigotas (PpRr) foram autofecundadas, gerando 1.600 plantas. Considerando as proporções esperadas, o número de plantas com grão claro e resistentes ao fungo deve ser próximo de:",
+      "alternativas": ["100", "900", "300", "600", "400"],
+      "correta": 2,
+      "explicacao": "Grão claro e resistente corresponde a ppR_: P(pp) = 1/4 e P(R_) = 3/4, então 3/16. Em 1.600 plantas: 3/16 × 1.600 = 300. O valor 900 corresponde a P_R_ (9/16), 100 a pprr (1/16) e 400 apenas a pp (1/4), sem considerar a resistência.",
+      "habilidade": "Aplicar a Segunda Lei a um contexto de melhoramento genético e estimar frequências absolutas.",
+      "tags": ["melhoramento", "frequência esperada", "contexto"]
+    },
+    {
+      "id": "segunda-lei-mendel-q08",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Texto-base: Ao autofecundar plantas de ervilha F1 de sementes amarelas e lisas, um pesquisador obteve 556 sementes: 315 amarelas e lisas, 108 verdes e lisas, 101 amarelas e rugosas e 32 verdes e rugosas. A análise que melhor interpreta esses dados é:",
+      "alternativas": ["Os caracteres cor e textura são condicionados pelo mesmo gene, pois os fenótipos parentais predominam", "Os dados indicam que os genes estão ligados no mesmo cromossomo, pois surgiram fenótipos recombinantes", "As plantas F1 eram homozigotas, já que todas as classes fenotípicas apareceram", "A proporção obtida, cerca de 1:1:1:1, é típica de um cruzamento-teste", "Cada caráter segregou na razão aproximada de 3:1 e os dois se combinaram ao acaso, resultando em uma proporção próxima de 9:3:3:1"],
+      "correta": 4,
+      "explicacao": "Amarelas 416 e verdes 140 (≈ 3:1); lisas 423 e rugosas 133 (≈ 3:1). O produto das duas segregações independentes é 9:3:3:1, compatível com 315:108:101:32. O surgimento de combinações novas em proporção 9:3:3:1 indica genes independentes, não ligados; um único gene não produziria quatro classes nessa proporção; F1 homozigota não segregaria, e a proporção não é 1:1:1:1.",
+      "habilidade": "Interpretar dados experimentais e reconhecer a segregação independente.",
+      "tags": ["interpretação de dados", "9:3:3:1", "Mendel"]
+    },
+    {
+      "id": "segunda-lei-mendel-q09",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Texto-base: Em uma criação de porquinhos-da-índia, a pelagem preta (B) é dominante sobre a branca (b), e o pelo curto (S) é dominante sobre o longo (s); os genes segregam de forma independente. Para conhecer o genótipo de um macho preto de pelo curto, o criador o cruzou com várias fêmeas brancas de pelo longo. Nasceram 24 filhotes: 12 pretos de pelo curto e 12 pretos de pelo longo. O genótipo mais provável do macho é:",
+      "alternativas": ["BbSs", "BBSs", "BbSS", "BBSS", "bbSs"],
+      "correta": 1,
+      "explicacao": "As fêmeas bbss só formam gametas bs. Todos os filhotes pretos indicam que o macho não forma gametas b (é BB); a metade de pelo longo indica que ele forma gametas s (é Ss). Logo, BBSs. BbSs geraria 1:1:1:1 com filhotes brancos; BbSS geraria brancos de pelo curto; BBSS daria só pretos de pelo curto.",
+      "habilidade": "Deduzir genótipos a partir dos resultados de um cruzamento-teste.",
+      "tags": ["cruzamento-teste", "dedução de genótipo"]
+    },
+    {
+      "id": "segunda-lei-mendel-q10",
+      "nivel": "diamante",
+      "tipo": "multipla_escolha",
+      "enunciado": "Analise as afirmativas a seguir, que relacionam meiose e herança de vários genes.\nI. Desconsiderando o crossing-over, a orientação independente dos 23 pares de homólogos na metáfase I permite que uma pessoa forme 2²³ combinações cromossômicas diferentes de gametas.\nII. No cruzamento AaBbDd × AaBbdd, com genes em cromossomos diferentes, a probabilidade de nascer um descendente AaBbDd é 1/8.\nIII. No mesmo cruzamento AaBbDd × AaBbdd, o número de genótipos diferentes possíveis na prole é 27.\nIV. Se os genes A e B estivessem muito próximos em um mesmo cromossomo, um indivíduo AaBb não formaria necessariamente os quatro tipos de gametas em frequências iguais.\nEstão corretas apenas:",
+      "alternativas": ["I e II", "II e III", "I, III e IV", "I, II e IV", "I, II, III e IV"],
+      "correta": 3,
+      "explicacao": "I: correta, cada par tem duas orientações possíveis, logo 2²³. II: correta, P(Aa) = 1/2, P(Bb) = 1/2 e P(Dd) = 1/2 (Dd × dd), totalizando 1/8. III: incorreta, pois Aa × Aa e Bb × Bb geram 3 genótipos cada, mas Dd × dd gera apenas 2 (Dd, dd): 3 × 3 × 2 = 18; o valor 27 (3³) só valeria se os dois pais fossem heterozigotos para os três genes. IV: correta, genes ligados tendem a ser herdados juntos, e os gametas recombinantes ficam menos frequentes, o que é a principal exceção à Segunda Lei.",
+      "habilidade": "Integrar meiose, poliibridismo e ligação gênica na análise de afirmativas.",
+      "tags": ["integração", "meiose", "poliibridismo", "linkage"]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "segunda-lei-mendel-f01",
+      "frente": "Enunciado da Segunda Lei de Mendel",
+      "verso": "Na formação dos gametas, os alelos de genes diferentes segregam-se de forma independente uns dos outros."
+    },
+    {
+      "id": "segunda-lei-mendel-f02",
+      "frente": "Outro nome da Segunda Lei de Mendel",
+      "verso": "Lei da Segregação Independente (ou da distribuição independente dos genes)."
+    },
+    {
+      "id": "segunda-lei-mendel-f03",
+      "frente": "Em que fase da meiose está a base da segregação independente?",
+      "verso": "Na metáfase I (orientação aleatória de cada par de homólogos), com a separação dos homólogos na anáfase I."
+    },
+    {
+      "id": "segunda-lei-mendel-f04",
+      "frente": "Condição para dois genes segregarem de forma independente",
+      "verso": "Estarem em cromossomos diferentes (não homólogos) ou muito distantes no mesmo cromossomo."
+    },
+    {
+      "id": "segunda-lei-mendel-f05",
+      "frente": "Proporção fenotípica de AaBb × AaBb (dominância completa)",
+      "verso": "9:3:3:1."
+    },
+    {
+      "id": "segunda-lei-mendel-f06",
+      "frente": "Quantos genótipos diferentes surgem de AaBb × AaBb?",
+      "verso": "9 genótipos (3 × 3)."
+    },
+    {
+      "id": "segunda-lei-mendel-f07",
+      "frente": "Proporção do cruzamento-teste de um diíbrido (AaBb × aabb)",
+      "verso": "1:1:1:1."
+    },
+    {
+      "id": "segunda-lei-mendel-f08",
+      "frente": "Fórmula do número de tipos de gametas",
+      "verso": "2^n, em que n é o número de pares de genes em heterozigose."
+    },
+    {
+      "id": "segunda-lei-mendel-f09",
+      "frente": "Gametas formados por AaBb",
+      "verso": "AB, Ab, aB e ab, cada um com frequência 1/4."
+    },
+    {
+      "id": "segunda-lei-mendel-f10",
+      "frente": "Quantos tipos de gametas forma AaBBCc?",
+      "verso": "4 (2², pois só Aa e Cc são heterozigotos)."
+    },
+    {
+      "id": "segunda-lei-mendel-f11",
+      "frente": "Estratégia geral para resolver poliibridismo",
+      "verso": "Separar os genes, resolver cada um como monoibridismo e multiplicar as probabilidades (regra do E)."
+    },
+    {
+      "id": "segunda-lei-mendel-f12",
+      "frente": "P(aabbcc) em AaBbCc × AaBbCc",
+      "verso": "1/64 (1/4 × 1/4 × 1/4)."
+    },
+    {
+      "id": "segunda-lei-mendel-f13",
+      "frente": "Poli-híbridos iguais com n genes: genótipos e fenótipos na prole",
+      "verso": "3^n genótipos e 2^n fenótipos (com dominância completa)."
+    },
+    {
+      "id": "segunda-lei-mendel-f14",
+      "frente": "Proporção fenotípica de AaBb × Aabb",
+      "verso": "3:3:1:1, produto de (3:1) × (1:1)."
+    }
+  ],
+  "minijogos": {
+    "pares": [
+      { "a": "AaBb × AaBb", "b": "9:3:3:1" },
+      { "a": "AaBb × aabb", "b": "1:1:1:1" },
+      { "a": "AaBb × Aabb", "b": "3:3:1:1" },
+      { "a": "Gametas de AaBbCc", "b": "8 tipos" },
+      { "a": "Gametas de AaBBcc", "b": "2 tipos" },
+      { "a": "Genótipos de AaBb × AaBb", "b": "9" },
+      { "a": "P(aabb) em AaBb × AaBb", "b": "1/16" },
+      { "a": "Metáfase I", "b": "Orientação aleatória dos pares de homólogos" }
+    ],
+    "sequencia": {
+      "instrucao": "Ordene os passos para calcular a probabilidade de um genótipo em um cruzamento de poliibridismo.",
+      "itens": [
+        "Identificar os genótipos dos pais",
+        "Separar o cruzamento em monoibridismos, um para cada gene",
+        "Calcular a probabilidade do genótipo desejado em cada gene",
+        "Multiplicar as probabilidades obtidas (regra do E)",
+        "Multiplicar o resultado pelo total de descendentes, se a questão pedir um número esperado"
+      ]
+    },
+    "classificacao": {
+      "instrucao": "Arraste cada cruzamento para a proporção fenotípica esperada na prole (genes independentes, dominância completa).",
+      "categorias": ["9:3:3:1", "1:1:1:1", "3:3:1:1", "3:1"],
+      "itens": [
+        { "texto": "AaBb × AaBb", "categoria": "9:3:3:1" },
+        { "texto": "AaBbCC × AaBbcc", "categoria": "9:3:3:1" },
+        { "texto": "AaBb × aabb", "categoria": "1:1:1:1" },
+        { "texto": "Aabb × aaBb", "categoria": "1:1:1:1" },
+        { "texto": "AaBbDD × aabbdd", "categoria": "1:1:1:1" },
+        { "texto": "AaBb × Aabb", "categoria": "3:3:1:1" },
+        { "texto": "AaBb × aaBb", "categoria": "3:3:1:1" },
+        { "texto": "AaBbCC × aaBbcc", "categoria": "3:3:1:1" },
+        { "texto": "AaBB × AaBB", "categoria": "3:1" },
+        { "texto": "AABb × aaBb", "categoria": "3:1" },
+        { "texto": "AaBB × Aabb", "categoria": "3:1" }
+      ]
+    },
+    "verdadeiro_falso": [
+      {
+        "afirmacao": "A Segunda Lei de Mendel vale para qualquer par de genes, inclusive genes muito próximos no mesmo cromossomo.",
+        "valor": false,
+        "explicacao": "Genes próximos no mesmo cromossomo tendem a ser herdados juntos (ligação gênica) e não segregam de forma independente."
+      },
+      {
+        "afirmacao": "Na F2 do diibridismo de Mendel surgiram combinações de caracteres que não existiam nos pais da geração parental.",
+        "valor": true,
+        "explicacao": "Apareceram sementes amarelas rugosas e verdes lisas, combinações novas."
+      },
+      {
+        "afirmacao": "Um indivíduo AaBbCC forma 8 tipos de gametas.",
+        "valor": false,
+        "explicacao": "Só os pares heterozigotos contam: 2² = 4 tipos."
+      },
+      {
+        "afirmacao": "O 9:3:3:1 equivale ao produto de duas proporções 3:1 independentes.",
+        "valor": true,
+        "explicacao": "(3/4 + 1/4) × (3/4 + 1/4) gera 9/16, 3/16, 3/16 e 1/16."
+      },
+      {
+        "afirmacao": "A base citológica da Segunda Lei é a separação das cromátides-irmãs na anáfase II.",
+        "valor": false,
+        "explicacao": "A base é a orientação independente dos pares de homólogos na metáfase I e sua separação na anáfase I."
+      },
+      {
+        "afirmacao": "No cruzamento AaBb × AaBb, o genótipo mais frequente na prole é AaBb.",
+        "valor": true,
+        "explicacao": "AaBb ocupa 4 das 16 casas do quadro de Punnett (1/2 × 1/2 = 1/4)."
+      },
+      {
+        "afirmacao": "O cruzamento AaBb × aabb produz descendentes na proporção 9:3:3:1.",
+        "valor": false,
+        "explicacao": "É um cruzamento-teste e produz 1:1:1:1."
+      },
+      {
+        "afirmacao": "Em AaBbCc × AaBbCc, a probabilidade de um descendente A_B_C_ é 27/64.",
+        "valor": true,
+        "explicacao": "3/4 × 3/4 × 3/4 = 27/64."
+      },
+      {
+        "afirmacao": "Cada gameta de um indivíduo AaBb carrega os dois alelos do gene A.",
+        "valor": false,
+        "explicacao": "Pela Primeira Lei, cada gameta recebe apenas um alelo de cada gene."
+      },
+      {
+        "afirmacao": "Para calcular a chance de um genótipo em poliibridismo, multiplicam-se as probabilidades de cada gene.",
+        "valor": true,
+        "explicacao": "Os genes segregam de forma independente, então vale a regra do produto (regra do E)."
+      }
+    ]
+  },
+  "missao_mundo_aberto": {
+    "titulo": "As Portas que Escolhem Sozinhas",
+    "regiao": "Labirinto dos Cromossomos",
+    "npc": "Guardiã Ervília, a jardineira das ervilhas",
+    "narrativa": "Na entrada do Labirinto dos Cromossomos, a Guardiã Ervília cultiva um canteiro de ervilhas mágicas. Cada corredor do labirinto tem duas portas que se abrem ao acaso, como os pares de homólogos na metáfase I. Ela perdeu a chave da saída e só a recuperará quem provar que entende como os genes se separam de forma independente.",
+    "objetivo": "Atravessar quatro salões do labirinto resolvendo desafios de diibridismo e poliibridismo para recuperar a Chave da Segregação Independente.",
+    "mecanica": "exploracao",
+    "etapas": [
+      "No Salão da Metáfase, orientar dois pares de homólogos de todas as maneiras possíveis e coletar os quatro gametas de uma planta VvRr",
+      "No Jardim F2, preencher o quadro de Punnett de 16 casas e separar as ervilhas nas quatro classes 9:3:3:1",
+      "Na Ponte da Ramificação, abrir apenas os galhos corretos para listar os gametas de AaBbCC e AaBbCc",
+      "No Portão do Teste, cruzar um porquinho-da-índia misterioso com um duplo-recessivo e deduzir seu genótipo pelos filhotes"
+    ],
+    "recompensa_xp": 150,
+    "item_recompensa": "Chave da Segregação Independente"
+  }
+}

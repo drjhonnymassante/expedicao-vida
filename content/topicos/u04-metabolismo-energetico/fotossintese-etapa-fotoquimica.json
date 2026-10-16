@@ -1,0 +1,196 @@
+{
+  "topico": "fotossintese-etapa-fotoquimica",
+  "versao": 1,
+  "questoes": [
+    {
+      "id": "fotossintese-etapa-fotoquimica-q01",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Em uma célula vegetal, a etapa fotoquímica da fotossíntese, que depende diretamente da luz, ocorre:",
+      "alternativas": ["na matriz das mitocôndrias", "no estroma do cloroplasto", "nas membranas dos tilacoides do cloroplasto", "no núcleo da célula", "no vacúolo central"],
+      "correta": 2,
+      "explicacao": "Os pigmentos, os fotossistemas, a cadeia de transporte e a ATP sintase ficam nas membranas dos tilacoides. O estroma abriga o ciclo de Calvin, e a matriz mitocondrial participa da respiração, não da fotossíntese.",
+      "habilidade": "Localizar as etapas da fotossíntese no cloroplasto.",
+      "tags": ["tilacoide", "cloroplasto"]
+    },
+    {
+      "id": "fotossintese-etapa-fotoquimica-q02",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "O gás oxigênio liberado pelas plantas durante a fotossíntese tem origem na:",
+      "alternativas": ["quebra das moléculas de água", "quebra das moléculas de CO₂", "degradação da glicose", "decomposição da clorofila", "respiração celular das raízes"],
+      "correta": 0,
+      "explicacao": "O O₂ vem da fotólise da água, que fornece elétrons ao fotossistema II. Os átomos de oxigênio do CO₂ vão para a glicose e para a água produzida. A degradação da glicose (respiração) consome O₂ em vez de liberá-lo.",
+      "habilidade": "Identificar a origem do O₂ na fotossíntese.",
+      "tags": ["fotólise da água", "oxigênio"]
+    },
+    {
+      "id": "fotossintese-etapa-fotoquimica-q03",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "As folhas da maioria das plantas são verdes porque a clorofila:",
+      "alternativas": ["absorve principalmente a luz verde", "produz luz verde durante a fotossíntese", "absorve igualmente todas as cores do espectro", "só existe em plantas que vivem à sombra", "absorve sobretudo luz azul e vermelha e reflete grande parte da luz verde"],
+      "correta": 4,
+      "explicacao": "Enxergamos a cor que é refletida ou transmitida. A clorofila absorve bem o azul-violeta e o vermelho e pouco o verde, que chega aos nossos olhos. Ela não emite luz nem absorve todas as cores igualmente.",
+      "habilidade": "Relacionar a cor das folhas ao espectro de absorção da clorofila.",
+      "tags": ["clorofila", "espectro de absorção"]
+    },
+    {
+      "id": "fotossintese-etapa-fotoquimica-q04",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Na fotofosforilação acíclica, que envolve os fotossistemas II e I, os produtos formados são:",
+      "alternativas": ["apenas ATP", "glicose e O₂", "CO₂, H₂O e ATP", "ATP, NADPH e O₂", "NADP⁺, ADP e CO₂"],
+      "correta": 3,
+      "explicacao": "Na via acíclica, a água é quebrada (liberando O₂), os elétrons seguem até o NADP⁺ (formando NADPH) e o gradiente de prótons gera ATP. Apenas ATP é o resultado da via cíclica; a glicose só é formada no ciclo de Calvin; CO₂ é consumido, não produzido.",
+      "habilidade": "Diferenciar fotofosforilação acíclica e cíclica.",
+      "tags": ["fotofosforilação", "NADPH", "ATP"]
+    },
+    {
+      "id": "fotossintese-etapa-fotoquimica-q05",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Durante a etapa fotoquímica, a fotólise da água é indispensável porque:",
+      "alternativas": ["fornece o CO₂ que será fixado no estroma", "repõe os elétrons perdidos pelo centro de reação do fotossistema II quando ele é excitado pela luz", "produz diretamente a glicose", "absorve a luz verde que a clorofila não consegue captar", "consome o ATP produzido em excesso"],
+      "correta": 1,
+      "explicacao": "Ao ser excitado, o centro de reação do fotossistema II perde elétrons, que são repostos pelos elétrons retirados da água; o processo também libera H⁺ e O₂. A água não é fonte de CO₂, a fotólise não forma glicose, não absorve luz e não consome ATP.",
+      "habilidade": "Explicar a função da fotólise da água.",
+      "tags": ["fotólise da água", "fotossistema II"]
+    },
+    {
+      "id": "fotossintese-etapa-fotoquimica-q06",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Em um experimento clássico do século XVIII, uma vela acesa em uma campânula fechada apagava-se em pouco tempo. Quando um ramo verde de hortelã era mantido dentro da campânula, em local iluminado, por alguns dias, a vela podia ser acesa novamente. Com os conhecimentos atuais, o resultado se explica porque a planta:",
+      "alternativas": ["liberou oxigênio pela fotossíntese, renovando o gás consumido na combustão", "absorveu todo o oxigênio do ar", "produziu gás carbônico, que alimenta a chama", "liberou água, que aumentou a umidade do ar", "fez fermentação e produziu etanol, que é combustível"],
+      "correta": 0,
+      "explicacao": "Iluminada, a planta faz fotossíntese e libera O₂, o gás necessário à combustão. O CO₂ não alimenta chamas, e a planta não absorveu o oxigênio (isso apagaria a vela). Umidade e fermentação não explicam o resultado.",
+      "habilidade": "Interpretar experimentos históricos com base em conhecimentos atuais.",
+      "tags": ["Priestley", "história da ciência", "oxigênio"]
+    },
+    {
+      "id": "fotossintese-etapa-fotoquimica-q07",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Para investigar a origem do oxigênio liberado na fotossíntese, pesquisadores cultivaram algas em dois frascos iluminados. No frasco A, a água continha o isótopo pesado ¹⁸O e o CO₂ era comum. No frasco B, o CO₂ continha ¹⁸O e a água era comum. Em seguida, analisaram o gás O₂ liberado. O resultado esperado, compatível com o conhecimento atual, é:",
+      "alternativas": ["¹⁸O no O₂ liberado apenas no frasco B", "¹⁸O no O₂ liberado nos dois frascos, em igual proporção", "nenhum O₂ liberado no frasco A, porque o isótopo bloqueia a fotólise", "¹⁸O apenas na glicose do frasco A", "¹⁸O no O₂ liberado apenas no frasco A"],
+      "correta": 4,
+      "explicacao": "O O₂ liberado vem da quebra da água; logo, só sai marcado quando o ¹⁸O está na água (frasco A). No frasco B, o oxigênio do CO₂ é incorporado à glicose e à água produzida, não ao O₂ liberado. O isótopo não bloqueia a fotólise.",
+      "habilidade": "Prever resultados de experimento com marcação isotópica.",
+      "tags": ["isótopos", "origem do O₂", "experimento"]
+    },
+    {
+      "id": "fotossintese-etapa-fotoquimica-q08",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Fazendas verticais que cultivam alface em prédios de grandes cidades brasileiras usam iluminação artificial com LEDs. Um produtor que deseja maximizar a fotossíntese gastando o mínimo de energia elétrica deveria priorizar LEDs que emitam:",
+      "alternativas": ["somente luz verde, cor predominante das folhas", "somente luz amarela, para estimular os carotenoides", "principalmente luz vermelha e azul, faixas mais absorvidas pelas clorofilas", "luz infravermelha, por aquecer as folhas e acelerar a fotólise", "luz ultravioleta, mais energética e, por isso, mais eficiente"],
+      "correta": 2,
+      "explicacao": "Os espectros de absorção e de ação mostram picos no azul e no vermelho. A luz verde é pouco absorvida (por isso as folhas parecem verdes), o amarelo também é pouco aproveitado, o infravermelho não excita os fotossistemas e o ultravioleta pode danificar tecidos e não é a faixa usada pelos pigmentos.",
+      "habilidade": "Aplicar o espectro de ação da fotossíntese a uma tecnologia agrícola.",
+      "tags": ["espectro de ação", "LED", "tecnologia"]
+    },
+    {
+      "id": "fotossintese-etapa-fotoquimica-q09",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "No século XVII, um pesquisador plantou uma pequena muda de salgueiro em um vaso com solo previamente pesado e, durante cinco anos, apenas a regou. Ao final, a árvore havia ganhado dezenas de quilos, enquanto o solo perdera apenas algumas dezenas de gramas. Ele concluiu que toda a massa da planta vinha da água. Analisando essa conclusão hoje, é correto afirmar que:",
+      "alternativas": ["ela está totalmente correta, pois a água é a única matéria-prima da fotossíntese", "ela acertou ao descartar o solo como principal fonte de massa, mas ignorou o CO₂ do ar, de onde vem a maior parte da massa seca da planta", "ela está errada, pois a massa veio quase toda dos minerais do solo", "ela está errada, pois a massa veio do oxigênio absorvido pelas folhas", "o experimento não permite nenhuma conclusão, pois não usou luz artificial"],
+      "correta": 1,
+      "explicacao": "O solo quase não perdeu massa, o que exclui os minerais como fonte principal. Porém, a maior parte da massa seca (moléculas orgânicas) é construída com o carbono e o oxigênio do CO₂ atmosférico; a água contribui com hidrogênios e permanece em grande quantidade nos tecidos. O O₂ não é fonte de massa orgânica, e a luz natural bastava.",
+      "habilidade": "Avaliar conclusões de experimentos históricos e suas limitações.",
+      "tags": ["Van Helmont", "história da ciência", "CO₂"]
+    },
+    {
+      "id": "fotossintese-etapa-fotoquimica-q10",
+      "nivel": "diamante",
+      "tipo": "multipla_escolha",
+      "enunciado": "Alguns herbicidas atuam bloqueando a transferência de elétrons logo após o fotossistema II, impedindo que eles cheguem à cadeia transportadora. Uma planta tratada com um desses herbicidas e mantida sob iluminação apresentará, nas horas seguintes:",
+      "alternativas": ["aumento da liberação de O₂, pois a água deixará de ser usada na produção de NADPH", "interrupção imediata da respiração celular, que depende do fotossistema II para receber oxigênio", "aceleração do ciclo de Calvin, que passará a usar elétrons vindos diretamente do CO₂", "redução da liberação de O₂ e da produção de NADPH, com queda da fixação de CO₂ no ciclo de Calvin, embora o fotossistema I ainda possa gerar algum ATP pela via cíclica", "produção normal de ATP e NADPH, pois o fotossistema I recebe elétrons diretamente da água"],
+      "correta": 3,
+      "explicacao": "Sem escoamento dos elétrons, o fotossistema II deixa de oxidar a água: cai a liberação de O₂ e cessa o fluxo acíclico até o NADP⁺, reduzindo o NADPH e parte do ATP. Sem NADPH, o ciclo de Calvin fixa menos CO₂. A via cíclica envolve apenas o fotossistema I e pode manter alguma produção de ATP. A respiração ocorre nas mitocôndrias e continua; o fotossistema I não recebe elétrons da água; e o CO₂ não é fonte de elétrons para o ciclo.",
+      "habilidade": "Integrar etapa fotoquímica, oxirredução e ciclo de Calvin na previsão dos efeitos de um bloqueio.",
+      "tags": ["herbicida", "fotossistemas", "ciclo de Calvin", "integração"]
+    }
+  ],
+  "flashcards": [
+    { "id": "fotossintese-etapa-fotoquimica-f01", "frente": "Equação completa da fotossíntese", "verso": "6 CO₂ + 12 H₂O + luz → C₆H₁₂O₆ + 6 O₂ + 6 H₂O" },
+    { "id": "fotossintese-etapa-fotoquimica-f02", "frente": "De onde vem o O₂ liberado na fotossíntese?", "verso": "Da água, quebrada na fotólise." },
+    { "id": "fotossintese-etapa-fotoquimica-f03", "frente": "Evidência experimental da origem do O₂", "verso": "Água marcada com ¹⁸O gera O₂ marcado; CO₂ marcado não gera." },
+    { "id": "fotossintese-etapa-fotoquimica-f04", "frente": "Onde ocorrem a etapa fotoquímica e o ciclo de Calvin?", "verso": "Fotoquímica nas membranas dos tilacoides; ciclo de Calvin no estroma." },
+    { "id": "fotossintese-etapa-fotoquimica-f05", "frente": "Pigmento principal da fotossíntese", "verso": "Clorofila a, presente nos centros de reação." },
+    { "id": "fotossintese-etapa-fotoquimica-f06", "frente": "Pigmentos acessórios", "verso": "Clorofila b, carotenoides (carotenos e xantofilas) e ficobilinas." },
+    { "id": "fotossintese-etapa-fotoquimica-f07", "frente": "Cores mais absorvidas pelas clorofilas", "verso": "Azul-violeta e vermelho. O verde é pouco absorvido e é refletido." },
+    { "id": "fotossintese-etapa-fotoquimica-f08", "frente": "Espectro de absorção x espectro de ação", "verso": "Absorção: quanto de luz o pigmento absorve. Ação: quanto de fotossíntese ocorre em cada comprimento de onda." },
+    { "id": "fotossintese-etapa-fotoquimica-f09", "frente": "Partes de um fotossistema", "verso": "Complexo antena (capta e transfere energia) e centro de reação (perde o elétron excitado)." },
+    { "id": "fotossintese-etapa-fotoquimica-f10", "frente": "Qual fotossistema atua primeiro na via acíclica?", "verso": "O fotossistema II (P680); depois vem o fotossistema I (P700)." },
+    { "id": "fotossintese-etapa-fotoquimica-f11", "frente": "Equação da fotólise da água", "verso": "2 H₂O → 4 H⁺ + 4 e⁻ + O₂" },
+    { "id": "fotossintese-etapa-fotoquimica-f12", "frente": "Como se forma o ATP na etapa fotoquímica?", "verso": "Os H⁺ acumulados no interior do tilacoide voltam ao estroma pela ATP sintase, que une ADP + Pi (fotofosforilação)." },
+    { "id": "fotossintese-etapa-fotoquimica-f13", "frente": "Produtos da fotofosforilação acíclica x cíclica", "verso": "Acíclica: ATP, NADPH e O₂. Cíclica: apenas ATP." },
+    { "id": "fotossintese-etapa-fotoquimica-f14", "frente": "O que Engelmann demonstrou com bactérias aeróbicas e uma alga sob luz decomposta?", "verso": "Que a fotossíntese (liberação de O₂) é maior sob luz azul e vermelha." },
+    { "id": "fotossintese-etapa-fotoquimica-f15", "frente": "Conclusão e limitação do experimento de Van Helmont", "verso": "A massa da planta não vem do solo; mas ele atribuiu tudo à água e ignorou o CO₂ do ar." }
+  ],
+  "minijogos": {
+    "pares": [
+      { "a": "Clorofila a", "b": "Pigmento dos centros de reação" },
+      { "a": "Carotenoides", "b": "Pigmentos acessórios amarelos e alaranjados" },
+      { "a": "Fotólise da água", "b": "Fonte de elétrons, H⁺ e O₂" },
+      { "a": "Fotossistema II", "b": "P680, primeiro da via acíclica" },
+      { "a": "Fotossistema I", "b": "P700, envia elétrons ao NADP⁺" },
+      { "a": "ATP sintase", "b": "Usa o fluxo de H⁺ para formar ATP" },
+      { "a": "Van Helmont", "b": "Salgueiro no vaso: a massa não vem do solo" },
+      { "a": "Priestley", "b": "Planta restaura o ar da vela apagada" },
+      { "a": "Engelmann", "b": "Bactérias aeróbicas no azul e no vermelho" }
+    ],
+    "sequencia": {
+      "instrucao": "Ordene o caminho do elétron na fotofosforilação acíclica.",
+      "itens": ["A antena capta a luz e transfere a energia ao centro de reação do fotossistema II", "O fotossistema II perde um elétron excitado, reposto pela quebra da água", "O elétron percorre a cadeia transportadora, que bombeia H⁺ para dentro do tilacoide", "O elétron chega ao fotossistema I e é excitado novamente pela luz", "O elétron reduz o NADP⁺, formando NADPH no estroma"]
+    },
+    "classificacao": {
+      "instrucao": "Arraste cada evento para a etapa da fotossíntese em que ele ocorre.",
+      "categorias": ["Etapa fotoquímica (tilacoides)", "Ciclo de Calvin (estroma)"],
+      "itens": [
+        { "texto": "Quebra da água", "categoria": "Etapa fotoquímica (tilacoides)" },
+        { "texto": "Liberação de O₂", "categoria": "Etapa fotoquímica (tilacoides)" },
+        { "texto": "Excitação de elétrons da clorofila pela luz", "categoria": "Etapa fotoquímica (tilacoides)" },
+        { "texto": "Redução do NADP⁺ a NADPH", "categoria": "Etapa fotoquímica (tilacoides)" },
+        { "texto": "Bombeamento de H⁺ para o interior do tilacoide", "categoria": "Etapa fotoquímica (tilacoides)" },
+        { "texto": "Síntese de ATP pela ATP sintase", "categoria": "Etapa fotoquímica (tilacoides)" },
+        { "texto": "Fixação do CO₂", "categoria": "Ciclo de Calvin (estroma)" },
+        { "texto": "Consumo de NADPH", "categoria": "Ciclo de Calvin (estroma)" },
+        { "texto": "Consumo de ATP", "categoria": "Ciclo de Calvin (estroma)" },
+        { "texto": "Formação de açúcares", "categoria": "Ciclo de Calvin (estroma)" },
+        { "texto": "Devolução de ADP e NADP⁺ para a etapa fotoquímica", "categoria": "Ciclo de Calvin (estroma)" }
+      ]
+    },
+    "verdadeiro_falso": [
+      { "afirmacao": "O oxigênio liberado na fotossíntese vem do gás carbônico.", "valor": false, "explicacao": "Vem da fotólise da água." },
+      { "afirmacao": "A clorofila absorve pouco a luz verde.", "valor": true, "explicacao": "Por isso o verde é refletido e as folhas parecem verdes." },
+      { "afirmacao": "A fotofosforilação cíclica libera O₂.", "valor": false, "explicacao": "A via cíclica usa só o fotossistema I, não quebra água e produz apenas ATP." },
+      { "afirmacao": "O ATP produzido na etapa fotoquímica é usado principalmente no ciclo de Calvin.", "valor": true, "explicacao": "As demais atividades da célula e as células sem cloroplasto obtêm ATP sobretudo pela respiração celular." },
+      { "afirmacao": "O fotossistema I recebe elétrons diretamente da água.", "valor": false, "explicacao": "Quem recebe elétrons da água é o fotossistema II; o I recebe os elétrons que vêm da cadeia transportadora." },
+      { "afirmacao": "Os carotenoides ajudam a proteger a clorofila contra o excesso de luz.", "valor": true, "explicacao": "Além de captar luz, dissipam energia em excesso." },
+      { "afirmacao": "O ciclo de Calvin ocorre apenas durante a noite.", "valor": false, "explicacao": "Ele depende de ATP e NADPH gerados com luz e ocorre principalmente de dia." },
+      { "afirmacao": "Na etapa fotoquímica, o acúmulo de H⁺ dentro do tilacoide impulsiona a ATP sintase.", "valor": true, "explicacao": "O fluxo de prótons de volta ao estroma fornece energia para unir ADP + Pi." },
+      { "afirmacao": "Van Helmont concluiu corretamente que o CO₂ do ar é a principal fonte de massa das plantas.", "valor": false, "explicacao": "Ele atribuiu a massa à água; o papel do CO₂ só foi reconhecido depois." },
+      { "afirmacao": "No experimento de Engelmann, as bactérias aeróbicas se concentraram nas regiões iluminadas por luz azul e vermelha.", "valor": true, "explicacao": "Nessas regiões a alga liberava mais O₂." }
+    ]
+  },
+  "missao_mundo_aberto": {
+    "titulo": "A Folha que Perdeu a Cor",
+    "regiao": "Vale das Usinas de ATP",
+    "npc": "Guardiã Clorofila, zeladora dos campos de luz",
+    "narrativa": "No lado iluminado do Vale das Usinas de ATP, uma das folhas gigantes empalideceu: os painéis de pigmento estão bagunçados, as fontes de água secaram e as turbinas de ATP sintase giram sem força. Sem ATP e NADPH, as esteiras deixam de levar açúcar às fornalhas mitocondriais. A Guardiã Clorofila precisa de alguém que reacenda a folha.",
+    "objetivo": "Restaurar a etapa fotoquímica da folha gigante: coletar os pigmentos certos, reativar os dois fotossistemas na ordem correta e fazer as turbinas de ATP sintase girarem de novo.",
+    "mecanica": "coleta",
+    "etapas": [
+      "Coletar clorofila a, clorofila b e carotenoides nos jardins do vale, deixando para trás os cristais que só refletem a luz verde",
+      "Ajustar os refletores da folha às cores que a clorofila mais absorve, guiado pelo mapa de bactérias de Engelmann",
+      "Reabrir a fonte de água do fotossistema II e coletar as bolhas de O₂ liberadas pela fotólise",
+      "Conduzir o elétron pela cadeia até o fotossistema I e encher o caminhão de NADPH",
+      "Represar prótons no tilacoide e liberá-los pela turbina de ATP sintase para recarregar a esteira de ATP"
+    ],
+    "recompensa_xp": 150,
+    "item_recompensa": "Prisma de Engelmann"
+  }
+}

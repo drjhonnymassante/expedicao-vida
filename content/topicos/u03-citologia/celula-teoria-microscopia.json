@@ -1,0 +1,196 @@
+{
+  "topico": "celula-teoria-microscopia",
+  "versao": 1,
+  "questoes": [
+    {
+      "id": "celula-teoria-microscopia-q01",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "A expressão latina \"omnis cellula e cellula\", associada a Rudolf Virchow, resume qual postulado da teoria celular?",
+      "alternativas": ["Todos os seres vivos são formados por células", "A célula é a menor unidade capaz de realizar fotossíntese", "Toda célula se origina de outra célula preexistente", "As células surgem espontaneamente da matéria orgânica em decomposição", "Somente as plantas são formadas por células"],
+      "correta": 2,
+      "explicacao": "A frase significa \"toda célula vem de outra célula\": células surgem por divisão de células preexistentes. A ideia de que todos os seres vivos são formados por células é verdadeira, mas está ligada a Schleiden e Schwann. A geração espontânea é justamente o que esse postulado contraria, e a teoria vale para plantas e animais.",
+      "habilidade": "Reconhecer os postulados da teoria celular e seus autores.",
+      "tags": ["teoria celular", "Virchow", "história da ciência"]
+    },
+    {
+      "id": "celula-teoria-microscopia-q02",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Ao comparar uma bactéria com uma célula do fígado humano, qual estrutura está presente APENAS na célula do fígado?",
+      "alternativas": ["Carioteca (envelope nuclear)", "Ribossomos", "Membrana plasmática", "DNA", "Citoplasma"],
+      "correta": 0,
+      "explicacao": "A carioteca delimita o núcleo, ausente nos procariontes, cujo DNA fica no nucleoide. Ribossomos, membrana plasmática, DNA e citoplasma existem em todas as células, procarióticas ou eucarióticas.",
+      "habilidade": "Diferenciar células procarióticas e eucarióticas.",
+      "tags": ["procarionte", "eucarionte", "núcleo"]
+    },
+    {
+      "id": "celula-teoria-microscopia-q03",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Em citologia, as medidas costumam ser expressas em micrômetros (µm) e nanômetros (nm). Um micrômetro corresponde a:",
+      "alternativas": ["0,1 milímetro", "10 nanômetros", "100 nanômetros", "1 milímetro dividido por 100", "1.000 nanômetros"],
+      "correta": 4,
+      "explicacao": "1 µm = 1.000 nm e 1 µm = 0,001 mm (1 mm = 1.000 µm). Por isso 0,1 mm equivale a 100 µm, e 1 mm dividido por 100 equivale a 10 µm, valores maiores que um micrômetro.",
+      "habilidade": "Converter unidades de medida usadas em citologia.",
+      "tags": ["unidades de medida", "micrômetro", "nanômetro"]
+    },
+    {
+      "id": "celula-teoria-microscopia-q04",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Em uma aula prática, um estudante observa células da mucosa da bochecha em um microscópio óptico com ocular de 10× e objetiva de 40×. O aumento total da imagem é de:",
+      "alternativas": ["50×", "400×", "30×", "4×", "4.000×"],
+      "correta": 1,
+      "explicacao": "No microscópio óptico composto, o aumento total é o produto dos aumentos da ocular e da objetiva: 10 × 40 = 400×. Somar (50×) ou subtrair (30×) os valores é um erro comum; 4× e 4.000× não correspondem a nenhuma operação correta.",
+      "habilidade": "Calcular o aumento total de um microscópio óptico.",
+      "tags": ["microscópio óptico", "aumento"]
+    },
+    {
+      "id": "celula-teoria-microscopia-q05",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Ao analisar uma célula, um pesquisador encontrou núcleo delimitado, mitocôndrias, centríolos, lisossomos abundantes e reserva de glicogênio, mas nenhuma parede celular. Trata-se, mais provavelmente, de uma célula:",
+      "alternativas": ["vegetal, pois tem mitocôndrias", "bacteriana, pois não tem parede celular", "de fungo, pois armazena glicogênio", "animal", "de cianobactéria"],
+      "correta": 3,
+      "explicacao": "Núcleo e organelas indicam célula eucariótica; centríolos, lisossomos abundantes, glicogênio e ausência de parede indicam célula animal. Plantas também têm mitocôndrias, mas teriam parede de celulose e reserva de amido. Fungos armazenam glicogênio, porém têm parede de quitina. Bactérias e cianobactérias são procariontes, sem núcleo nem mitocôndrias.",
+      "habilidade": "Identificar o tipo celular a partir de suas estruturas.",
+      "tags": ["célula animal", "célula vegetal", "fungos"]
+    },
+    {
+      "id": "celula-teoria-microscopia-q06",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Considere duas células hipotéticas em forma de cubo, uma com 1 µm de lado e outra com 2 µm de lado. Comparando a célula maior com a menor, é correto afirmar que a razão superfície/volume:",
+      "alternativas": ["cai pela metade, porque a área quadruplica enquanto o volume fica oito vezes maior", "dobra, porque o lado dobrou", "permanece igual, porque as duas têm a mesma forma", "fica quatro vezes maior, porque a área quadruplica", "cai a um oitavo, porque o volume fica oito vezes maior"],
+      "correta": 0,
+      "explicacao": "Cubo de 1 µm: área 6 e volume 1 (razão 6). Cubo de 2 µm: área 24 e volume 8 (razão 3). A área aumenta 4 vezes e o volume 8 vezes, então a razão cai pela metade. Manter a mesma forma não mantém a razão, e considerar só a área ou só o volume leva aos erros das outras alternativas.",
+      "habilidade": "Calcular e interpretar a relação superfície/volume.",
+      "tags": ["superfície/volume", "tamanho celular"]
+    },
+    {
+      "id": "celula-teoria-microscopia-q07",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Durante a investigação de um surto, um laboratório de saúde pública precisa observar a forma e a estrutura de partículas virais com cerca de 100 nm de diâmetro. O laboratório dispõe de um microscópio óptico de boa qualidade, com resolução de aproximadamente 0,2 µm, e pode enviar amostras a um centro de pesquisa com microscópio eletrônico de transmissão. A decisão mais adequada é:",
+      "alternativas": ["usar o microscópio óptico com a objetiva de maior aumento, pois o problema está apenas no aumento da imagem", "usar o microscópio óptico com corantes, pois a coloração permite separar estruturas menores que o limite de resolução", "enviar a amostra ao microscópio eletrônico, pois o vírus é menor que o limite de resolução do microscópio óptico", "usar o microscópio óptico, pois 100 nm equivalem a 100 µm, tamanho visível com lentes de vidro", "dispensar a microscopia, pois vírus não possuem estrutura definida"],
+      "correta": 2,
+      "explicacao": "0,2 µm = 200 nm; uma partícula de 100 nm está abaixo do limite de resolução do microscópio óptico, que depende do comprimento de onda da luz. Aumentar a imagem ou usar corantes não supera esse limite. O feixe de elétrons tem resolução nanométrica. Além disso, 100 nm equivalem a 0,1 µm, e vírus têm estrutura definida (capsídeo, às vezes envelope).",
+      "habilidade": "Selecionar o instrumento adequado com base em resolução e escala.",
+      "tags": ["microscópio eletrônico", "resolução", "vírus", "unidades de medida"]
+    },
+    {
+      "id": "celula-teoria-microscopia-q08",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Em 1665, Robert Hooke descreveu fatias finas de cortiça como formadas por pequenas cavidades semelhantes aos alvéolos de um favo de mel, que chamou de \"cells\". Sabendo que a cortiça é um tecido vegetal de revestimento formado por células mortas, a interpretação atual mais adequada da observação de Hooke é que ele viu:",
+      "alternativas": ["células vivas com núcleo e citoplasma bem visíveis", "microrganismos que haviam contaminado a cortiça", "cloroplastos, responsáveis pela cor da cortiça", "os primeiros vírus observados pelo ser humano", "as paredes celulares que permaneceram após a morte das células, delimitando espaços vazios"],
+      "correta": 4,
+      "explicacao": "Na cortiça, o conteúdo celular desaparece e restam as paredes, que delimitam cavidades vazias; foi isso que Hooke viu. Ele não observou núcleo nem citoplasma. A cortiça não tem cloroplastos ativos, e vírus só seriam visualizados no século XX, com o microscópio eletrônico.",
+      "habilidade": "Interpretar um episódio da história da ciência à luz do conhecimento atual.",
+      "tags": ["Hooke", "história da ciência", "parede celular"]
+    },
+    {
+      "id": "celula-teoria-microscopia-q09",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Em uma feira de ciências, estudantes prepararam cubos de gelatina contendo um indicador que fica rosa em meio básico e incolor em meio ácido. Os cubos, de 1 cm, 2 cm e 3 cm de lado, ficaram 10 minutos imersos em vinagre. Ao cortá-los ao meio, perceberam que o cubo de 1 cm ficou totalmente incolor, enquanto os maiores mantinham um núcleo rosa, proporcionalmente maior no cubo de 3 cm. A conclusão que melhor relaciona o experimento à biologia celular é:",
+      "alternativas": ["o vinagre penetra mais rapidamente em cubos maiores, porque eles têm mais superfície total", "quanto maior o cubo, menor a razão superfície/volume e menor a fração do volume alcançada por difusão no mesmo tempo, o que ajuda a explicar por que as células são pequenas", "o tamanho do cubo não interfere na difusão, e a diferença se deve à qualidade da gelatina", "cubos maiores representam células mais eficientes, pois armazenam mais indicador", "a difusão só ocorre em estruturas com menos de 1 cm, o que limita o tamanho dos seres vivos"],
+      "correta": 1,
+      "explicacao": "O ácido entra pela superfície e se difunde a uma velocidade semelhante em todos os cubos. Nos cubos maiores, a razão superfície/volume é menor, então uma fração menor do volume é alcançada no mesmo tempo. Células grandes teriam o mesmo problema para receber nutrientes e eliminar resíduos. Ter mais superfície total não compensa o volume muito maior, e a difusão ocorre em qualquer tamanho, só que de forma mais lenta até o centro.",
+      "habilidade": "Interpretar um experimento-modelo sobre superfície, volume e difusão.",
+      "tags": ["superfície/volume", "difusão", "experimentação"]
+    },
+    {
+      "id": "celula-teoria-microscopia-q10",
+      "nivel": "diamante",
+      "tipo": "multipla_escolha",
+      "enunciado": "Alguns antibióticos atuam ligando-se aos ribossomos bacterianos e bloqueando a síntese de proteínas, sem afetar os ribossomos do citoplasma das células humanas, que são maiores e estruturalmente diferentes. Ainda assim, o uso prolongado ou em doses elevadas de certos fármacos desse grupo pode prejudicar a síntese de proteínas em uma organela das células humanas. Essa organela e a explicação biológica para o efeito são:",
+      "alternativas": ["o núcleo, porque é nele que os ribossomos citoplasmáticos são montados por completo e passam a funcionar", "o complexo golgiense, porque ele empacota as proteínas produzidas pelos ribossomos bacterianos", "os lisossomos, porque suas enzimas digestivas são produzidas por ribossomos semelhantes aos das bactérias", "as mitocôndrias, que têm DNA e ribossomos próprios semelhantes aos bacterianos, uma evidência da teoria endossimbiótica", "o retículo endoplasmático rugoso, porque seus ribossomos aderidos são idênticos aos bacterianos"],
+      "correta": 3,
+      "explicacao": "Mitocôndrias têm DNA próprio e ribossomos parecidos com os de bactérias, coerentes com a hipótese de que se originaram de bactérias englobadas por uma célula ancestral (endossimbiose). Por isso podem ser afetadas por antibióticos que agem em ribossomos bacterianos. Os ribossomos aderidos ao retículo são do mesmo tipo dos ribossomos citoplasmáticos, e as enzimas lisossômicas são produzidas por eles. O complexo golgiense não recebe proteínas de ribossomos bacterianos, e o núcleo não é local de síntese proteica (as subunidades ribossômicas são montadas no nucléolo, mas funcionam no citoplasma).",
+      "habilidade": "Integrar diferenças entre procariontes e eucariontes, endossimbiose e farmacologia.",
+      "tags": ["ribossomos", "mitocôndrias", "endossimbiose", "antibióticos", "integração"]
+    }
+  ],
+  "flashcards": [
+    { "id": "celula-teoria-microscopia-f01", "frente": "O que Robert Hooke observou na cortiça em 1665?", "verso": "Pequenas cavidades delimitadas por paredes de células mortas, que ele chamou de \"cells\"." },
+    { "id": "celula-teoria-microscopia-f02", "frente": "Contribuição de Schleiden e Schwann para a teoria celular", "verso": "Schleiden concluiu que as plantas são formadas por células; Schwann estendeu a conclusão aos animais." },
+    { "id": "celula-teoria-microscopia-f03", "frente": "O que significa \"omnis cellula e cellula\" (Virchow)?", "verso": "Toda célula se origina de outra célula preexistente." },
+    { "id": "celula-teoria-microscopia-f04", "frente": "Os vírus se encaixam na teoria celular?", "verso": "Não. Vírus são acelulares e só se reproduzem dentro de células." },
+    { "id": "celula-teoria-microscopia-f05", "frente": "Quantos nanômetros há em 1 micrômetro? E quantos micrômetros em 1 milímetro?", "verso": "1 µm = 1.000 nm; 1 mm = 1.000 µm." },
+    { "id": "celula-teoria-microscopia-f06", "frente": "Como se calcula o aumento total de um microscópio óptico?", "verso": "Multiplicando o aumento da ocular pelo da objetiva (ex.: 10× × 40× = 400×)." },
+    { "id": "celula-teoria-microscopia-f07", "frente": "O que é poder de resolução?", "verso": "A menor distância entre dois pontos que ainda aparecem separados na imagem." },
+    { "id": "celula-teoria-microscopia-f08", "frente": "Limite de resolução aproximado do microscópio óptico", "verso": "Cerca de 0,2 µm (200 nm), imposto pelo comprimento de onda da luz visível." },
+    { "id": "celula-teoria-microscopia-f09", "frente": "MET x MEV", "verso": "MET (transmissão): cortes ultrafinos, mostra o interior da célula. MEV (varredura): mostra a superfície com aspecto tridimensional." },
+    { "id": "celula-teoria-microscopia-f10", "frente": "Por que o microscópio eletrônico não observa células vivas?", "verso": "A amostra precisa ser fixada e colocada em vácuo para o feixe de elétrons, o que mata as células." },
+    { "id": "celula-teoria-microscopia-f11", "frente": "Onde fica o DNA de uma bactéria?", "verso": "No nucleoide, região do citoplasma sem membrana; pode haver também plasmídeos." },
+    { "id": "celula-teoria-microscopia-f12", "frente": "Quatro componentes presentes em TODAS as células", "verso": "Membrana plasmática, citoplasma, ribossomos e DNA." },
+    { "id": "celula-teoria-microscopia-f13", "frente": "Três estruturas típicas da célula vegetal ausentes na animal", "verso": "Parede de celulose, plastos (cloroplastos) e vacúolo central grande." },
+    { "id": "celula-teoria-microscopia-f14", "frente": "Reserva energética típica de plantas e de animais", "verso": "Plantas armazenam amido; animais (e fungos) armazenam glicogênio." },
+    { "id": "celula-teoria-microscopia-f15", "frente": "O que acontece com a razão superfície/volume quando uma célula cresce?", "verso": "Diminui, porque o volume cresce mais rápido (ao cubo) que a superfície (ao quadrado)." }
+  ],
+  "minijogos": {
+    "pares": [
+      { "a": "Robert Hooke", "b": "Cortiça e o termo \"célula\"" },
+      { "a": "Leeuwenhoek", "b": "Primeiros \"animálculos\" vivos observados" },
+      { "a": "Schleiden", "b": "Plantas são formadas por células" },
+      { "a": "Schwann", "b": "Animais são formados por células" },
+      { "a": "Virchow", "b": "Toda célula vem de outra célula" },
+      { "a": "Microscópio de varredura (MEV)", "b": "Imagem tridimensional da superfície" },
+      { "a": "Nucleoide", "b": "Região do DNA nos procariontes" },
+      { "a": "Plasmodesmos", "b": "Pontes de citoplasma entre células vegetais" }
+    ],
+    "sequencia": {
+      "instrucao": "Ordene do MENOR para o MAIOR tamanho (valores típicos).",
+      "itens": ["Ribossomo (cerca de 25 nm)", "Vírus da gripe (cerca de 100 nm)", "Bactéria Escherichia coli (cerca de 2 µm)", "Hemácia humana (cerca de 7 µm)", "Óvulo humano (cerca de 100 µm)"]
+    },
+    "classificacao": {
+      "instrucao": "Arraste cada estrutura para o grupo de células em que ela é encontrada.",
+      "categorias": ["Só em procariontes", "Só em eucariontes", "Em procariontes e eucariontes"],
+      "itens": [
+        { "texto": "Nucleoide", "categoria": "Só em procariontes" },
+        { "texto": "Parede de peptidoglicano", "categoria": "Só em procariontes" },
+        { "texto": "Carioteca", "categoria": "Só em eucariontes" },
+        { "texto": "Mitocôndrias", "categoria": "Só em eucariontes" },
+        { "texto": "Retículo endoplasmático", "categoria": "Só em eucariontes" },
+        { "texto": "Complexo golgiense", "categoria": "Só em eucariontes" },
+        { "texto": "Lisossomos", "categoria": "Só em eucariontes" },
+        { "texto": "Cloroplastos", "categoria": "Só em eucariontes" },
+        { "texto": "Ribossomos", "categoria": "Em procariontes e eucariontes" },
+        { "texto": "Membrana plasmática", "categoria": "Em procariontes e eucariontes" },
+        { "texto": "DNA", "categoria": "Em procariontes e eucariontes" },
+        { "texto": "Citoplasma", "categoria": "Em procariontes e eucariontes" }
+      ]
+    },
+    "verdadeiro_falso": [
+      { "afirmacao": "Hooke observou células vivas na cortiça.", "valor": false, "explicacao": "A cortiça é formada por células mortas; Hooke viu apenas as paredes celulares." },
+      { "afirmacao": "Segundo a teoria celular, toda célula se origina de outra célula.", "valor": true, "explicacao": "É o postulado popularizado por Virchow: omnis cellula e cellula." },
+      { "afirmacao": "Um vírus de 100 nm pode ser visto em detalhes no microscópio óptico comum.", "valor": false, "explicacao": "100 nm está abaixo do limite de resolução do microscópio óptico (cerca de 200 nm)." },
+      { "afirmacao": "As cores das imagens de microscopia eletrônica são acrescentadas artificialmente.", "valor": true, "explicacao": "O microscópio eletrônico gera imagens em tons de cinza; as cores são colorização." },
+      { "afirmacao": "Bactérias não possuem ribossomos.", "valor": false, "explicacao": "Todas as células têm ribossomos; os bacterianos são menores que os eucarióticos." },
+      { "afirmacao": "Células vegetais possuem mitocôndrias e realizam respiração celular.", "valor": true, "explicacao": "Plantas têm cloroplastos e mitocôndrias; respiram de dia e de noite." },
+      { "afirmacao": "A parede celular é uma estrutura exclusiva das plantas.", "valor": false, "explicacao": "Fungos (quitina) e bactérias (peptidoglicano) também têm parede celular." },
+      { "afirmacao": "1 milímetro equivale a 1.000 micrômetros.", "valor": true, "explicacao": "Cada unidade (mm, µm, nm) é mil vezes maior que a seguinte." },
+      { "afirmacao": "Quanto maior a célula, maior a sua razão superfície/volume.", "valor": false, "explicacao": "É o contrário: o volume cresce mais depressa que a superfície, e a razão diminui." },
+      { "afirmacao": "Animais grandes, como bois, costumam ter mais células, e não células muito maiores, que animais pequenos.", "valor": true, "explicacao": "O tamanho das células é limitado pela razão superfície/volume; o organismo cresce aumentando o número de células." }
+    ]
+  },
+  "missao_mundo_aberto": {
+    "titulo": "As Lentes do Cartógrafo",
+    "regiao": "Arquipélago das Organelas",
+    "npc": "Cartógrafo Hooke, o mapeador de ilhas",
+    "narrativa": "Uma neblina cobriu o Arquipélago das Organelas e os mapas antigos mostram apenas \"celas\" vazias. O Cartógrafo Hooke precisa de alguém que recupere as lentes perdidas, meça cada ilha na escala certa e descubra quais visitantes que chegam ao porto são procariontes e quais são eucariontes.",
+    "objetivo": "Recuperar as lentes do microscópio óptico e do eletrônico, usar cada uma para revelar ilhas do tamanho adequado e classificar corretamente as células que chegam ao arquipélago.",
+    "mecanica": "exploracao",
+    "etapas": [
+      "Encontrar os pergaminhos de Hooke, Schleiden, Schwann e Virchow e montar os postulados da teoria celular",
+      "Ajustar a ocular e a objetiva para obter o aumento pedido pelo Cartógrafo",
+      "Converter as medidas das ilhas entre milímetros, micrômetros e nanômetros e escolher a lente capaz de enxergar cada uma",
+      "Separar os barcos-célula no porto entre procariontes, células animais e células vegetais",
+      "Desafio final: explicar ao Cartógrafo por que nenhuma ilha-célula pode crescer sem limite, usando a relação superfície/volume"
+    ],
+    "recompensa_xp": 120,
+    "item_recompensa": "Lente de Resolução Nanométrica"
+  }
+}

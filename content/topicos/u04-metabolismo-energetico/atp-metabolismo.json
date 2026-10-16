@@ -1,0 +1,196 @@
+{
+  "topico": "atp-metabolismo",
+  "versao": 1,
+  "questoes": [
+    {
+      "id": "atp-metabolismo-q01",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "A molécula de ATP, principal transportadora imediata de energia nas células, é formada por:",
+      "alternativas": ["glicose, adenina e um grupo fosfato", "adenina, ribose e três grupos fosfato", "adenina, desoxirribose e dois grupos fosfato", "três aminoácidos ligados a uma ribose", "um ácido graxo, glicerol e três fosfatos"],
+      "correta": 1,
+      "explicacao": "ATP é a adenosina trifosfato: a adenosina (adenina + ribose) ligada a três fosfatos. O açúcar é a ribose, e não a desoxirribose do DNA; com dois fosfatos a molécula seria o ADP. Aminoácidos e ácidos graxos não fazem parte do ATP.",
+      "habilidade": "Reconhecer a composição química do ATP.",
+      "tags": ["ATP", "nucleotídeo"]
+    },
+    {
+      "id": "atp-metabolismo-q02",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "O conjunto de reações metabólicas em que moléculas maiores são sintetizadas a partir de moléculas menores, com consumo de energia, é chamado de:",
+      "alternativas": ["catabolismo", "fermentação", "oxidação", "anabolismo", "hidrólise"],
+      "correta": 3,
+      "explicacao": "Anabolismo é a parte do metabolismo que constrói moléculas e consome energia. Catabolismo, fermentação e hidrólise envolvem degradação de moléculas; oxidação é a perda de elétrons, não a síntese em si.",
+      "habilidade": "Diferenciar anabolismo e catabolismo.",
+      "tags": ["anabolismo", "metabolismo"]
+    },
+    {
+      "id": "atp-metabolismo-q03",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Qual dos organismos abaixo é autótrofo, ou seja, capaz de produzir sua própria matéria orgânica a partir de CO₂?",
+      "alternativas": ["Cogumelo que cresce em um tronco caído", "Onça-pintada do Pantanal", "Levedura usada na fabricação do pão", "Protozoário causador da giardíase", "Cianobactéria que vive em uma lagoa"],
+      "correta": 4,
+      "explicacao": "Cianobactérias fazem fotossíntese e produzem matéria orgânica a partir de CO₂ e água. Fungos (cogumelo e levedura), animais (onça) e protozoários como a giárdia obtêm matéria orgânica pronta: são heterótrofos.",
+      "habilidade": "Classificar seres vivos quanto ao modo de nutrição.",
+      "tags": ["autótrofos", "heterótrofos"]
+    },
+    {
+      "id": "atp-metabolismo-q04",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Em uma etapa da respiração celular, a coenzima NAD⁺ recebe dois elétrons e um próton e se transforma em NADH. Sobre essa transformação, é correto afirmar que o NAD⁺:",
+      "alternativas": ["foi reduzido, enquanto a molécula que cedeu os elétrons foi oxidada", "foi oxidado, porque ganhou hidrogênio", "foi reduzido, sem que nenhuma outra molécula sofresse alteração", "produziu ATP diretamente ao receber os elétrons", "foi hidrolisado, liberando energia para a célula"],
+      "correta": 0,
+      "explicacao": "Ganhar elétrons (e hidrogênio) é sofrer redução, e toda redução é acompanhada de uma oxidação: a molécula doadora perde elétrons. O NADH não fabrica ATP diretamente; ele leva elétrons até a cadeia respiratória. Não houve hidrólise.",
+      "habilidade": "Identificar oxidação e redução em transportadores de elétrons.",
+      "tags": ["oxirredução", "NAD"]
+    },
+    {
+      "id": "atp-metabolismo-q05",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Durante uma maratona de mais de duas horas, os músculos de um atleta consomem uma quantidade enorme de ATP. Como a quantidade de ATP armazenada nas células é pequena, a energia para manter a corrida vem principalmente:",
+      "alternativas": ["de grandes estoques de ATP guardados no tecido adiposo", "da hidrólise de proteínas musculares, que é a principal fonte em qualquer esforço", "da oxidação de glicose (inclusive do glicogênio) e de ácidos graxos, que regenera o ATP continuamente", "da fosfocreatina, suficiente para sustentar horas de exercício", "da absorção direta de ATP pela pele durante a transpiração"],
+      "correta": 2,
+      "explicacao": "O ATP é constantemente regenerado a partir de ADP + Pi com a energia liberada pela oxidação de glicose (vinda do glicogênio) e de gorduras. Não existem grandes estoques de ATP; a fosfocreatina sustenta apenas os primeiros segundos de esforço intenso; proteínas não são a fonte principal.",
+      "habilidade": "Relacionar o ciclo ATP–ADP às reservas energéticas do corpo.",
+      "tags": ["ATP", "reserva de energia", "exercício"]
+    },
+    {
+      "id": "atp-metabolismo-q06",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Um vaso com uma planta foi mantido em um recipiente fechado e completamente escuro por dois dias. Durante esse período, a concentração de CO₂ no ar do recipiente aumentou. A explicação correta é que a planta:",
+      "alternativas": ["realizou fotossíntese mesmo sem luz, liberando CO₂", "continuou respirando e liberando CO₂, mas sem a fotossíntese para consumi-lo", "transformou o oxigênio do ar diretamente em CO₂ sem gastar matéria orgânica", "fez quimiossíntese, que libera CO₂ como produto principal", "só respira no escuro, pois de dia apenas faz fotossíntese"],
+      "correta": 1,
+      "explicacao": "Plantas respiram o tempo todo, de dia e de noite, oxidando glicose e liberando CO₂. No escuro não há fotossíntese para consumir esse CO₂, e ele se acumula. A fotossíntese consome CO₂ (não libera), plantas não fazem quimiossíntese e a respiração não para durante o dia.",
+      "habilidade": "Reconhecer que autótrofos também realizam respiração celular.",
+      "tags": ["respiração", "fotossíntese", "plantas"]
+    },
+    {
+      "id": "atp-metabolismo-q07",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Nas usinas brasileiras de etanol, o caldo da cana-de-açúcar é fermentado por leveduras em grandes tanques. Para cada molécula de glicose, a levedura obtém 2 ATP e libera etanol e CO₂. Se houvesse oxigênio disponível e a levedura fizesse respiração aeróbica, obteria cerca de 30 ATP e liberaria apenas CO₂ e água. A comparação permite concluir corretamente que:",
+      "alternativas": ["a fermentação produz mais energia que a respiração, por isso é usada na indústria", "o etanol é uma molécula sem energia química, como a água e o CO₂", "na fermentação a glicose é totalmente oxidada a CO₂ e água", "a levedura só faz fermentação, por isso o rendimento é sempre de 2 ATP", "na fermentação a glicose é degradada só parcialmente, e boa parte da sua energia permanece no etanol, que pode ser usado como combustível"],
+      "correta": 4,
+      "explicacao": "A fermentação quebra a glicose de forma incompleta: rende só 2 ATP, e o etanol ainda contém muita energia química, liberada quando ele queima no motor. A respiração aeróbica oxida a glicose até CO₂ e água e rende muito mais ATP. Leveduras são capazes de respirar ou fermentar conforme a disponibilidade de O₂.",
+      "habilidade": "Comparar rendimento energético de processos e relacioná-lo a aplicações tecnológicas.",
+      "tags": ["fermentação", "respiração", "etanol", "rendimento"]
+    },
+    {
+      "id": "atp-metabolismo-q08",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Um extrato preparado com as lanternas de vaga-lumes brilha por alguns minutos e depois se apaga. Em um experimento, o extrato apagado foi dividido em dois tubos: no tubo 1 adicionou-se glicose e no tubo 2 adicionou-se ATP. Apenas o tubo 2 voltou a brilhar imediatamente. A conclusão mais adequada é que:",
+      "alternativas": ["o ATP fornece diretamente a energia para a reação de emissão de luz, e a glicose, sem células vivas para metabolizá-la, não regenera ATP", "a glicose é tóxica para a enzima luciferase", "a luz dos vaga-lumes é produzida pela fotossíntese de bactérias simbiontes", "o ATP é a reserva de energia de longo prazo do vaga-lume", "a glicose é usada diretamente pela luciferase, mas leva horas para agir"],
+      "correta": 0,
+      "explicacao": "A luciferase usa a energia do ATP para emitir luz. No extrato, sem a maquinaria celular completa para oxidar glicose e fosforilar ADP, a glicose não é convertida em ATP; por isso não reacende. O experimento não indica toxicidade da glicose, não envolve fotossíntese e mostra o ATP como fonte imediata, não como reserva.",
+      "habilidade": "Interpretar resultado experimental sobre o papel do ATP.",
+      "tags": ["ATP", "bioluminescência", "experimento"]
+    },
+    {
+      "id": "atp-metabolismo-q09",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "No fundo do oceano, a milhares de metros de profundidade, onde a luz solar não chega, existem fontes hidrotermais que liberam água quente rica em sulfeto de hidrogênio (H₂S). Ao redor delas vivem comunidades abundantes de vermes tubulares, moluscos e crustáceos. A base da cadeia alimentar desse ecossistema é formada por:",
+      "alternativas": ["algas que fazem fotossíntese usando a luz emitida pela água quente", "animais que se alimentam apenas de restos que caem da superfície, sem nenhum produtor local", "fungos decompositores, que são autótrofos", "bactérias quimiossintetizantes, que obtêm energia da oxidação de compostos inorgânicos como o H₂S e fixam CO₂", "vermes tubulares que fazem fotossíntese com pigmentos especiais"],
+      "correta": 3,
+      "explicacao": "Sem luz, os produtores são quimioautótrofos: bactérias que oxidam H₂S e usam a energia liberada para produzir matéria orgânica a partir de CO₂, sustentando os animais (muitos vivem em simbiose com elas). Fungos são heterótrofos; não há fotossíntese possível nessas condições, e a matéria que cai da superfície não explica a abundância local.",
+      "habilidade": "Identificar a quimiossíntese como base de ecossistemas sem luz.",
+      "tags": ["quimiossíntese", "autótrofos", "ecossistemas"]
+    },
+    {
+      "id": "atp-metabolismo-q10",
+      "nivel": "diamante",
+      "tipo": "multipla_escolha",
+      "enunciado": "A pelagra é uma doença causada pela deficiência de niacina (vitamina B3) e caracteriza-se por lesões de pele, diarreia e alterações neurológicas. Sabe-se que a niacina é precursora da coenzima NAD⁺. Considerando o papel dessa coenzima no metabolismo energético, a explicação mais adequada para os sintomas é:",
+      "alternativas": ["a niacina é a principal fonte direta de energia das células, e sua falta impede a hidrólise do ATP", "o NAD⁺ transporta oxigênio no sangue, e sua falta causa hipóxia nos tecidos", "com menos NAD⁺, a célula tem menos aceptores de elétrons para oxidar nutrientes e regenerar ATP, o que afeta sobretudo tecidos de alta demanda energética ou de renovação rápida, como pele, mucosa intestinal e tecido nervoso", "o NADH é a forma oxidada da coenzima, e sua falta impede as reações de síntese", "a niacina é necessária apenas na fotossíntese, e sua falta nos seres humanos interfere na absorção de luz pela pele"],
+      "correta": 2,
+      "explicacao": "O NAD⁺ recebe elétrons e hidrogênios na oxidação de nutrientes (glicólise, ciclo de Krebs) e os leva como NADH até a cadeia respiratória, onde se forma a maior parte do ATP. Com pouca niacina, há menos NAD⁺ e a produção de energia cai, prejudicando tecidos que gastam muito ATP ou se renovam rapidamente. Vitaminas não são fonte direta de energia; quem transporta O₂ é a hemoglobina; o NADH é a forma reduzida; e a niacina é indispensável ao metabolismo humano, não apenas à fotossíntese, que nem ocorre na pele.",
+      "habilidade": "Integrar nutrição, oxirredução e metabolismo energético na análise de uma doença.",
+      "tags": ["NAD", "vitaminas", "oxirredução", "integração"]
+    }
+  ],
+  "flashcards": [
+    { "id": "atp-metabolismo-f01", "frente": "O que é metabolismo?", "verso": "O conjunto de todas as reações químicas de um organismo: anabolismo + catabolismo." },
+    { "id": "atp-metabolismo-f02", "frente": "Anabolismo: o que faz e como lida com energia?", "verso": "Sintetiza moléculas maiores a partir de menores e consome energia." },
+    { "id": "atp-metabolismo-f03", "frente": "Catabolismo: o que faz e como lida com energia?", "verso": "Degrada moléculas maiores em menores e libera energia." },
+    { "id": "atp-metabolismo-f04", "frente": "Componentes do ATP", "verso": "Adenina, ribose e três grupos fosfato." },
+    { "id": "atp-metabolismo-f05", "frente": "O que acontece na hidrólise do ATP?", "verso": "ATP + H₂O → ADP + Pi, com liberação de energia usada em trabalho celular." },
+    { "id": "atp-metabolismo-f06", "frente": "De onde vem a energia para regenerar ATP a partir de ADP + Pi?", "verso": "Do catabolismo (respiração ou fermentação) e, nos fotossintetizantes, também da luz." },
+    { "id": "atp-metabolismo-f07", "frente": "O ATP é reserva de energia?", "verso": "Não. É moeda de uso imediato; as reservas são glicogênio, gorduras e, nas plantas, amido." },
+    { "id": "atp-metabolismo-f08", "frente": "Três tipos de trabalho celular que gastam ATP", "verso": "Mecânico (contração muscular), de transporte (bomba de sódio e potássio) e químico (síntese de moléculas)." },
+    { "id": "atp-metabolismo-f09", "frente": "Oxidação e redução, em termos de elétrons", "verso": "Oxidação é perda de elétrons; redução é ganho. Uma não ocorre sem a outra." },
+    { "id": "atp-metabolismo-f10", "frente": "Formas oxidada e reduzida do NAD e do FAD", "verso": "NAD⁺ → NADH; FAD → FADH₂ (as formas reduzidas carregam elétrons e hidrogênios)." },
+    { "id": "atp-metabolismo-f11", "frente": "Qual transportador de elétrons é típico da fotossíntese?", "verso": "NADP⁺, que se reduz a NADPH." },
+    { "id": "atp-metabolismo-f12", "frente": "De quais vitaminas derivam o NAD e o FAD?", "verso": "NAD da niacina (B3); FAD da riboflavina (B2)." },
+    { "id": "atp-metabolismo-f13", "frente": "Fotoautótrofos x quimioautótrofos", "verso": "Ambos fixam CO₂; os primeiros usam energia da luz, os segundos usam energia da oxidação de compostos inorgânicos." },
+    { "id": "atp-metabolismo-f14", "frente": "Rendimento de ATP por glicose: respiração aeróbica x fermentação", "verso": "Cerca de 30 a 32 ATP na respiração; 2 ATP na fermentação." },
+    { "id": "atp-metabolismo-f15", "frente": "Energia e matéria nos ecossistemas", "verso": "A energia flui em um sentido e se perde como calor; a matéria circula em ciclos." }
+  ],
+  "minijogos": {
+    "pares": [
+      { "a": "ATP", "b": "Adenina + ribose + 3 fosfatos" },
+      { "a": "ADP + Pi", "b": "Produtos da hidrólise do ATP" },
+      { "a": "NADH", "b": "Forma reduzida do NAD" },
+      { "a": "FADH₂", "b": "Forma reduzida do FAD" },
+      { "a": "NADPH", "b": "Transportador de elétrons da fotossíntese" },
+      { "a": "Fotossíntese", "b": "Luz + CO₂ + H₂O → glicose + O₂" },
+      { "a": "Quimiossíntese", "b": "Energia da oxidação de compostos inorgânicos" },
+      { "a": "Fermentação", "b": "Degradação parcial da glicose com saldo de 2 ATP" },
+      { "a": "Fosfocreatina", "b": "Repõe ATP nos primeiros segundos de esforço" }
+    ],
+    "sequencia": {
+      "instrucao": "Ordene o caminho da energia, do Sol até o trabalho de uma célula muscular.",
+      "itens": ["Luz solar atinge a folha", "Fotossíntese armazena energia na glicose", "Glicose é oxidada na respiração celular", "Energia liberada é usada para formar ATP a partir de ADP + Pi", "Hidrólise do ATP realiza a contração muscular", "Ao final, a energia usada no trabalho se dissipa como calor"]
+    },
+    "classificacao": {
+      "instrucao": "Arraste cada processo para o tipo de metabolismo a que ele pertence.",
+      "categorias": ["Anabolismo", "Catabolismo"],
+      "itens": [
+        { "texto": "Fotossíntese em uma folha de cana", "categoria": "Anabolismo" },
+        { "texto": "Síntese de proteínas nos ribossomos", "categoria": "Anabolismo" },
+        { "texto": "Formação de glicogênio no fígado após uma refeição", "categoria": "Anabolismo" },
+        { "texto": "Duplicação do DNA antes da divisão celular", "categoria": "Anabolismo" },
+        { "texto": "Quimiossíntese de bactérias nitrificantes", "categoria": "Anabolismo" },
+        { "texto": "Respiração celular nas mitocôndrias", "categoria": "Catabolismo" },
+        { "texto": "Fermentação alcoólica do caldo de cana", "categoria": "Catabolismo" },
+        { "texto": "Digestão do amido do arroz em glicose", "categoria": "Catabolismo" },
+        { "texto": "Quebra de gorduras durante o jejum", "categoria": "Catabolismo" },
+        { "texto": "Quebra do glicogênio muscular durante a corrida", "categoria": "Catabolismo" },
+        { "texto": "Fermentação lática no iogurte", "categoria": "Catabolismo" }
+      ]
+    },
+    "verdadeiro_falso": [
+      { "afirmacao": "O ATP é a principal forma de reserva de energia de longo prazo nos animais.", "valor": false, "explicacao": "O ATP é moeda de uso imediato; a reserva de longo prazo é feita por glicogênio e gorduras." },
+      { "afirmacao": "A hidrólise do ATP em ADP + Pi libera energia utilizável pela célula.", "valor": true, "explicacao": "Essa energia é acoplada a trabalhos como contração, transporte ativo e sínteses." },
+      { "afirmacao": "O açúcar presente no ATP é a desoxirribose.", "valor": false, "explicacao": "O ATP contém ribose, o mesmo açúcar dos nucleotídeos do RNA." },
+      { "afirmacao": "Plantas realizam respiração celular inclusive durante o dia.", "valor": true, "explicacao": "A respiração é contínua; de dia ela ocorre junto com a fotossíntese." },
+      { "afirmacao": "Quando o NAD⁺ se transforma em NADH, ele sofre oxidação.", "valor": false, "explicacao": "Ao receber elétrons e hidrogênio, o NAD⁺ é reduzido." },
+      { "afirmacao": "Bactérias quimiossintetizantes são autótrofas, mesmo vivendo sem luz.", "valor": true, "explicacao": "Elas fixam CO₂ usando energia da oxidação de compostos inorgânicos." },
+      { "afirmacao": "A fermentação rende mais ATP por glicose que a respiração aeróbica.", "valor": false, "explicacao": "A fermentação rende 2 ATP; a respiração aeróbica, cerca de 30 a 32." },
+      { "afirmacao": "Nos ecossistemas, a energia é reciclada da mesma forma que o carbono.", "valor": false, "explicacao": "A energia flui e se dissipa como calor; o carbono é que circula em ciclos." },
+      { "afirmacao": "O catabolismo fornece a energia que o anabolismo utiliza, com o ATP como intermediário.", "valor": true, "explicacao": "Essa é a ideia de acoplamento energético pelo ciclo ATP–ADP." },
+      { "afirmacao": "Fungos são autótrofos porque crescem sobre a matéria orgânica do solo.", "valor": false, "explicacao": "Fungos absorvem matéria orgânica pronta: são heterótrofos." }
+    ]
+  },
+  "missao_mundo_aberto": {
+    "titulo": "As Esteiras Paradas",
+    "regiao": "Vale das Usinas de ATP",
+    "npc": "Engenheira Adenina, chefe das esteiras",
+    "narrativa": "As esteiras que levam ATP dos campos de folhas gigantes até as fornalhas mitocondriais pararam. Nas fábricas, ninguém consegue construir nada, e as caixas de ADP vazio se acumulam pelo chão. A Engenheira Adenina precisa de alguém que entenda como a energia passa de uma molécula para outra e religue o vale.",
+    "objetivo": "Reativar o ciclo ATP–ADP do vale: recarregar as baterias de ATP, colocar os caminhões de elétrons nas rotas certas e ligar cada fábrica ao processo energético adequado.",
+    "mecanica": "construcao",
+    "etapas": [
+      "Montar uma molécula de ATP encaixando adenina, ribose e três fosfatos na ordem correta",
+      "Separar as fábricas do vale em construtoras (anabolismo) e desmontadoras (catabolismo) e ligá-las pela esteira de ATP",
+      "Carregar os caminhões NAD⁺ e FAD com elétrons e enviá-los à fornalha mitocondrial, distinguindo forma oxidada e reduzida",
+      "Visitar quatro moradores (uma planta, uma levedura, uma bactéria das fontes quentes e um animal) e indicar o processo energético de cada um",
+      "Religar a esteira principal acoplando a quebra da glicose à recarga de ATP"
+    ],
+    "recompensa_xp": 120,
+    "item_recompensa": "Bateria de Adenosina Recarregável"
+  }
+}

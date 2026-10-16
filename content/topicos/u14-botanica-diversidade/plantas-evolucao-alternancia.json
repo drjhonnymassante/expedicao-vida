@@ -1,0 +1,201 @@
+{
+  "topico": "plantas-evolucao-alternancia",
+  "versao": 1,
+  "questoes": [
+    {
+      "id": "plantas-evolucao-alternancia-q01",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Qual grupo de algas é considerado o mais aparentado às plantas terrestres?",
+      "alternativas": ["Algas vermelhas (rodófitas)", "Algas pardas (feofíceas)", "Algas verdes do grupo das carófitas", "Diatomáceas", "Dinoflagelados"],
+      "correta": 2,
+      "explicacao": "As carófitas, algas verdes de água doce, compartilham com as plantas clorofilas a e b, reserva de amido, parede de celulose, fragmoplasto na divisão celular e grande semelhança no DNA. Algas vermelhas e pardas têm outros pigmentos e substâncias de reserva; diatomáceas e dinoflagelados são linhagens ainda mais distantes.",
+      "habilidade": "Reconhecer a origem evolutiva das plantas.",
+      "tags": ["origem das plantas", "carófitas"]
+    },
+    {
+      "id": "plantas-evolucao-alternancia-q02",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "No ciclo de vida haplodiplobionte das plantas, o gametófito é:",
+      "alternativas": ["haploide e produz gametas por mitose", "diploide e produz gametas por meiose", "haploide e produz esporos por meiose", "diploide e produz esporos por mitose", "a célula formada logo após a fecundação"],
+      "correta": 0,
+      "explicacao": "O gametófito se origina de um esporo haploide e, por já ser haploide, forma gametas por mitose. Quem é diploide e faz meiose para produzir esporos é o esporófito. A célula formada na fecundação é o zigoto.",
+      "habilidade": "Identificar as fases do ciclo haplodiplobionte.",
+      "tags": ["alternância de gerações", "gametófito"]
+    },
+    {
+      "id": "plantas-evolucao-alternancia-q03",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Qual estrutura das plantas terrestres tem como principal função reduzir a perda de água pela superfície de folhas e caules?",
+      "alternativas": ["Rizoide", "Anterozoide flagelado", "Esporângio", "Floema", "Cutícula"],
+      "correta": 4,
+      "explicacao": "A cutícula é uma camada de cutina e ceras sobre a epiderme que impermeabiliza a superfície. Rizoides fixam briófitas ao substrato, anterozoides são gametas, esporângios produzem esporos e o floema transporta seiva orgânica.",
+      "habilidade": "Relacionar adaptações à vida terrestre às suas funções.",
+      "tags": ["adaptações", "cutícula"]
+    },
+    {
+      "id": "plantas-evolucao-alternancia-q04",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Musgos raramente passam de poucos centímetros de altura e são encontrados principalmente em barrancos, troncos e muros úmidos e sombreados. Essas características estão relacionadas principalmente:",
+      "alternativas": ["à ausência de clorofila, que os impede de viver sob sol forte", "à ausência de vasos condutores e à dependência de água líquida para que os anterozoides cheguem à oosfera", "à presença de sementes que só germinam em solo encharcado", "à produção de grãos de pólen que precisam de umidade para serem levados pelo vento", "à ausência de embrião, que obriga o zigoto a se desenvolver na água"],
+      "correta": 1,
+      "explicacao": "Sem xilema e floema, a água passa de célula em célula, o que limita o tamanho das briófitas. Além disso, seus anterozoides flagelados precisam nadar em uma película de água até a oosfera. Musgos têm clorofila, não têm sementes nem pólen e, como todas as plantas, formam embrião retido no gametófito.",
+      "habilidade": "Explicar a distribuição das briófitas a partir de suas características.",
+      "tags": ["briófitas", "vasos", "fecundação"]
+    },
+    {
+      "id": "plantas-evolucao-alternancia-q05",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Na face inferior das folhas de uma samambaia aparecem pontos marrons, os soros, que reúnem esporângios. No interior desses esporângios, as células:",
+      "alternativas": ["sofrem mitose e originam gametas diploides", "sofrem meiose e originam gametas haploides, que se fundem logo em seguida", "sofrem mitose e originam sementes", "sofrem meiose e originam esporos haploides, que germinam e formam o prótalo", "sofrem fecundação e originam zigotos"],
+      "correta": 3,
+      "explicacao": "A folha da samambaia pertence ao esporófito (2n). Nos esporângios ocorre meiose espórica, que forma esporos (n). Cada esporo germina e origina o prótalo, o gametófito, que depois produzirá gametas por mitose. Pteridófitas não formam sementes, e esporos não se fundem como gametas.",
+      "habilidade": "Aplicar o ciclo haplodiplobionte a uma pteridófita.",
+      "tags": ["pteridófitas", "meiose espórica", "esporos"]
+    },
+    {
+      "id": "plantas-evolucao-alternancia-q06",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Qual característica está presente em todas as plantas terrestres, dos musgos às angiospermas?",
+      "alternativas": ["Embrião multicelular retido e nutrido pelo corpo da planta-mãe", "Vasos condutores com paredes reforçadas por lignina", "Sementes que protegem o embrião", "Flores que atraem polinizadores", "Grão de pólen e tubo polínico"],
+      "correta": 0,
+      "explicacao": "O embrião protegido é a novidade que define as embriófitas e aparece em todos os grupos. Vasos surgem nas pteridófitas, sementes e pólen nas gimnospermas e flores apenas nas angiospermas, por isso faltam nas briófitas.",
+      "habilidade": "Reconhecer a sinapomorfia das plantas terrestres.",
+      "tags": ["embriófitas", "evolução"]
+    },
+    {
+      "id": "plantas-evolucao-alternancia-q07",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Nos planaltos do Sul do Brasil, a araucária (Araucaria angustifolia) domina extensas áreas de mata, em regiões de inverno frio. Diferentemente das samambaias, que se concentram em locais sombreados e úmidos, as gimnospermas ocupam com sucesso ambientes onde a água líquida nem sempre está disponível na superfície. Do ponto de vista reprodutivo, essa vantagem está associada principalmente:",
+      "alternativas": ["a anterozoides flagelados capazes de nadar em gotas de orvalho", "à ausência de cutícula, que facilita a absorção de água da chuva pelas folhas", "a um gametófito dominante e de vida livre, mais resistente ao frio", "a flores vistosas e frutos carnosos, que atraem animais dispersores", "ao pólen levado pelo vento e ao tubo polínico, que dispensam água na fecundação, e à semente"],
+      "correta": 4,
+      "explicacao": "Nas gimnospermas, o grão de pólen (gametófito masculino imaturo) é levado pelo vento e forma o tubo polínico, que leva o gameta até a oosfera sem necessidade de água líquida. A semente protege e nutre o embrião até condições favoráveis. Gimnospermas não têm flores nem frutos, possuem cutícula e têm esporófito dominante; gametas nadadores dependeriam justamente de água.",
+      "habilidade": "Relacionar novidades reprodutivas à ocupação de ambientes terrestres.",
+      "tags": ["gimnospermas", "pólen", "semente", "araucária"]
+    },
+    {
+      "id": "plantas-evolucao-alternancia-q08",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Um estudante comparou o ciclo de vida humano com o de uma samambaia e observou que, em ambos, ocorrem meiose e fecundação. Mesmo assim, os ciclos são classificados de forma diferente. A diferença fundamental entre eles é que:",
+      "alternativas": ["nos humanos a meiose ocorre no zigoto, enquanto na samambaia ocorre nos gametas", "a samambaia não realiza meiose, apenas mitose, ao longo de todo o ciclo", "nos humanos a meiose forma gametas; na samambaia forma esporos, que originam um gametófito haploide multicelular", "os humanos produzem esporos e a samambaia produz apenas gametas", "na samambaia o zigoto sofre meiose imediatamente, sem formar embrião"],
+      "correta": 2,
+      "explicacao": "Os humanos têm ciclo diplonte, com meiose gamética: as únicas células haploides são os gametas. A samambaia tem ciclo haplodiplobionte, com meiose espórica: os esporos geram o prótalo (gametófito n multicelular), que forma gametas por mitose. Meiose no zigoto (zigótica) é típica de muitas algas e fungos, não de humanos nem de plantas.",
+      "habilidade": "Comparar tipos de ciclo de vida pela posição da meiose.",
+      "tags": ["ciclos de vida", "meiose", "comparação"]
+    },
+    {
+      "id": "plantas-evolucao-alternancia-q09",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "O samambaiaçu (Dicksonia sellowiana) é uma samambaia arborescente da Mata Atlântica e das matas de araucária. Seu tronco fibroso foi muito explorado para a fabricação de vasos e placas de xaxim, o que contribuiu para que a espécie seja considerada ameaçada e tenha sua exploração restringida por lei. Sobre essa planta, é correto afirmar que:",
+      "alternativas": ["é uma gimnosperma, pois possui tronco e porte de árvore", "o tronco usado no xaxim pertence ao esporófito (2n), que tem vasos condutores, mas não forma sementes", "o tronco é o gametófito, fase haploide e dominante nas pteridófitas, que forma gametas", "é uma briófita gigante, já que não produz flores", "produz sementes dentro dos soros, que são dispersas pelo vento"],
+      "correta": 1,
+      "explicacao": "Nas pteridófitas, a planta grande é o esporófito (2n), com xilema e floema, mas sem sementes. A reprodução depende de esporos que originam prótalos, e a fecundação exige água, o que torna a recuperação de populações exploradas lenta. Ter tronco não a torna gimnosperma; ter vasos a exclui das briófitas; e soros contêm esporângios, não sementes.",
+      "habilidade": "Aplicar a classificação das plantas a um problema de conservação.",
+      "tags": ["pteridófitas", "conservação", "Mata Atlântica"]
+    },
+    {
+      "id": "plantas-evolucao-alternancia-q10",
+      "nivel": "diamante",
+      "tipo": "multipla_escolha",
+      "enunciado": "Uma hipótese sobre a origem do esporófito propõe que, no ancestral algal das plantas, o ciclo era haplonte e o zigoto era a única célula diploide. Nas primeiras plantas, o zigoto teria passado a realizar mitoses antes da meiose, originando um corpo diploide multicelular. Considere uma samambaia cujas células da folha apresentam 2n = 60 cromossomos e analise as afirmações:\nI. Os esporos e as células do prótalo dessa samambaia têm 30 cromossomos.\nII. Os anterozoides são formados por meiose no anterídio e têm 15 cromossomos.\nIII. De acordo com a hipótese, no ancestral a meiose era zigótica, e o atraso dessa meiose originou a fase diploide multicelular.\nIV. Um esporófito multicelular permite que uma única fecundação gere grande número de esporos, o que seria vantajoso quando o encontro dos gametas depende de água.\nEstão corretas apenas:",
+      "alternativas": ["I e II", "II e III", "I, II e IV", "I, III e IV", "III e IV"],
+      "correta": 3,
+      "explicacao": "I está correta: a meiose espórica reduz 60 para 30 cromossomos nos esporos, e o prótalo, formado por mitoses do esporo, mantém 30. II está errada: o anterídio pertence ao gametófito haploide, que forma gametas por mitose, então os anterozoides têm 30 cromossomos, não 15. III está correta: no ciclo haplonte a meiose é zigótica, e mitoses do zigoto antes da meiose criam uma geração diploide. IV está correta: muitas células do esporófito sofrem meiose, multiplicando os esporos produzidos a partir de uma só fecundação.",
+      "habilidade": "Integrar meiose, ploidia e evolução dos ciclos de vida.",
+      "tags": ["meiose", "ploidia", "evolução", "integração"]
+    }
+  ],
+  "flashcards": [
+    { "id": "plantas-evolucao-alternancia-f01", "frente": "De que grupo de algas as plantas evoluíram?", "verso": "De algas verdes do grupo das carófitas, principalmente de água doce." },
+    {
+      "id": "plantas-evolucao-alternancia-f02",
+      "frente": "Evidências do parentesco entre carófitas e plantas",
+      "verso": "Clorofilas a e b, reserva de amido nos cloroplastos, parede de celulose, fragmoplasto na divisão celular e semelhança no DNA."
+    },
+    { "id": "plantas-evolucao-alternancia-f03", "frente": "Por que as plantas são chamadas de embriófitas?", "verso": "Porque o zigoto forma um embrião multicelular retido e nutrido pela planta-mãe." },
+    { "id": "plantas-evolucao-alternancia-f04", "frente": "Função da cutícula", "verso": "Camada de cutina e ceras que reduz a perda de água pela superfície da planta." },
+    { "id": "plantas-evolucao-alternancia-f05", "frente": "Função dos estômatos", "verso": "Poros controlados por células-guarda que regulam as trocas gasosas e a perda de vapor de água." },
+    { "id": "plantas-evolucao-alternancia-f06", "frente": "Xilema x floema", "verso": "Xilema conduz água e sais minerais (seiva bruta); floema conduz a seiva orgânica produzida na fotossíntese." },
+    { "id": "plantas-evolucao-alternancia-f07", "frente": "Gametófito: ploidia e o que produz", "verso": "Haploide (n); produz gametas por mitose." },
+    { "id": "plantas-evolucao-alternancia-f08", "frente": "Esporófito: ploidia e o que produz", "verso": "Diploide (2n); produz esporos por meiose nos esporângios." },
+    { "id": "plantas-evolucao-alternancia-f09", "frente": "Tipo de meiose das plantas", "verso": "Meiose espórica (intermediária): origina esporos, não gametas." },
+    { "id": "plantas-evolucao-alternancia-f10", "frente": "Diferença entre esporo e gameta", "verso": "O esporo germina sozinho e forma um indivíduo; o gameta precisa se fundir a outro na fecundação." },
+    { "id": "plantas-evolucao-alternancia-f11", "frente": "Arquegônio e anterídio", "verso": "Gametângios multicelulares: o arquegônio forma a oosfera e o anterídio forma os anterozoides." },
+    { "id": "plantas-evolucao-alternancia-f12", "frente": "Fase dominante nas briófitas e nas demais plantas", "verso": "Briófitas: gametófito. Pteridófitas, gimnospermas e angiospermas: esporófito." },
+    { "id": "plantas-evolucao-alternancia-f13", "frente": "Novidade evolutiva de cada grupo de plantas", "verso": "Pteridófitas: vasos. Gimnospermas: semente e pólen. Angiospermas: flor e fruto." },
+    {
+      "id": "plantas-evolucao-alternancia-f14",
+      "frente": "Criptógamas, fanerógamas e traqueófitas",
+      "verso": "Criptógamas: sem sementes (briófitas e pteridófitas). Fanerógamas: com sementes. Traqueófitas: todas as plantas vasculares."
+    }
+  ],
+  "minijogos": {
+    "pares": [
+      { "a": "Cutícula", "b": "Reduz a perda de água" },
+      { "a": "Estômato", "b": "Regula as trocas gasosas" },
+      { "a": "Xilema", "b": "Conduz água e sais minerais" },
+      { "a": "Floema", "b": "Distribui a seiva orgânica" },
+      { "a": "Lignina", "b": "Endurece a parede dos vasos" },
+      { "a": "Arquegônio", "b": "Gametângio que forma a oosfera" },
+      { "a": "Esporopolenina", "b": "Parede resistente do esporo" },
+      { "a": "Tubo polínico", "b": "Leva o gameta masculino sem água líquida" }
+    ],
+    "sequencia": {
+      "instrucao": "Coloque em ordem as etapas do ciclo haplodiplobionte, começando pelo esporófito adulto.",
+      "itens": ["Esporófito (2n) desenvolve esporângios", "Meiose nos esporângios forma esporos (n)", "Esporo germina e se divide por mitose", "Gametófito (n) forma gametângios", "Gametas (n) são produzidos por mitose", "Fecundação forma o zigoto (2n)", "Zigoto origina o embrião, que cresce e forma um novo esporófito"]
+    },
+    "classificacao": {
+      "instrucao": "Classifique cada planta no seu grande grupo.",
+      "categorias": ["Briófitas", "Pteridófitas", "Gimnospermas", "Angiospermas"],
+      "itens": [
+        { "texto": "Musgo", "categoria": "Briófitas" },
+        { "texto": "Hepática", "categoria": "Briófitas" },
+        { "texto": "Antócero", "categoria": "Briófitas" },
+        { "texto": "Avenca", "categoria": "Pteridófitas" },
+        { "texto": "Samambaiaçu (xaxim)", "categoria": "Pteridófitas" },
+        { "texto": "Cavalinha", "categoria": "Pteridófitas" },
+        { "texto": "Araucária (pinheiro-do-paraná)", "categoria": "Gimnospermas" },
+        { "texto": "Pinus", "categoria": "Gimnospermas" },
+        { "texto": "Cica", "categoria": "Gimnospermas" },
+        { "texto": "Ipê-amarelo", "categoria": "Angiospermas" },
+        { "texto": "Milho", "categoria": "Angiospermas" },
+        { "texto": "Vitória-régia", "categoria": "Angiospermas" }
+      ]
+    },
+    "verdadeiro_falso": [
+      { "afirmacao": "Nas plantas, os gametas são produzidos por meiose.", "valor": false, "explicacao": "São produzidos por mitose no gametófito, que já é haploide. A meiose forma os esporos." },
+      { "afirmacao": "O esporófito das plantas é diploide.", "valor": true, "explicacao": "Ele se origina do zigoto (2n) por mitoses." },
+      { "afirmacao": "O tapete verde de um musgo corresponde ao gametófito.", "valor": true, "explicacao": "Nas briófitas o gametófito é a fase dominante; o esporófito cresce sobre ele." },
+      { "afirmacao": "As briófitas possuem xilema e floema verdadeiros.", "valor": false, "explicacao": "Briófitas são avasculares; a água passa de célula em célula." },
+      { "afirmacao": "Carófitas e plantas compartilham clorofilas a e b e reserva de amido.", "valor": true, "explicacao": "Essas semelhanças, somadas ao DNA, indicam o parentesco entre os dois grupos." },
+      { "afirmacao": "A alternância de gerações é exclusiva das plantas.", "valor": false, "explicacao": "Algumas algas, como a alface-do-mar, também têm ciclo haplodiplobionte." },
+      { "afirmacao": "Nas pteridófitas, a fecundação ainda depende de água líquida.", "valor": true, "explicacao": "Os anterozoides flagelados precisam nadar até a oosfera do prótalo." },
+      { "afirmacao": "Gimnospermas produzem frutos que envolvem as sementes.", "valor": false, "explicacao": "As sementes das gimnospermas são nuas; fruto existe apenas nas angiospermas." },
+      {
+        "afirmacao": "Ao longo da evolução das plantas, o gametófito ficou cada vez menor e mais dependente do esporófito.",
+        "valor": true,
+        "explicacao": "Nas plantas com sementes, os gametófitos são microscópicos e se desenvolvem dentro do esporófito."
+      },
+      { "afirmacao": "Esporos precisam se fundir a outro esporo para formar um novo indivíduo.", "valor": false, "explicacao": "Quem se funde são os gametas. O esporo germina sozinho." }
+    ]
+  },
+  "missao_mundo_aberto": {
+    "titulo": "A Primeira Subida",
+    "regiao": "Escadaria das Plantas",
+    "npc": "Vovó Carófita, a alga que mora na lagoa ao pé da montanha",
+    "narrativa": "A lagoa ao pé da Escadaria das Plantas está secando, e a Vovó Carófita quer que seus descendentes subam a montanha. Para abrir o primeiro degrau, o viajante precisa equipar as pequenas plantas com tudo o que a terra firme exige e provar que entende o ciclo que todas elas repetem.",
+    "objetivo": "Montar o kit de sobrevivência terrestre (cutícula, estômatos, gametângios protegidos e embrião retido), completar uma volta do ciclo haplodiplobionte sem errar onde ocorrem meiose, mitose e fecundação e indicar em qual degrau surgiram vasos, sementes e flores.",
+    "mecanica": "exploracao",
+    "etapas": ["Margem da Lagoa: reunir as evidências de parentesco entre carófitas e plantas", "Barranco Seco: aplicar cutícula e instalar estômatos para impedir que as mudas ressequem", "Roda das Gerações: girar o ciclo, marcando a meiose nos esporângios e a mitose na formação dos gametas", "Mirante dos Degraus: posicionar briófitas, pteridófitas, gimnospermas e angiospermas na escadaria conforme suas novidades evolutivas", "Portão do Musgo: identificar qual parte do musgo é gametófito e qual é esporófito para abrir o primeiro degrau"],
+    "recompensa_xp": 150,
+    "item_recompensa": "Esporo de Esporopolenina"
+  }
+}

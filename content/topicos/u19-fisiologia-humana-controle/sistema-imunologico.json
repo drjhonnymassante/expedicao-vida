@@ -1,0 +1,474 @@
+{
+  "topico": "sistema-imunologico",
+  "versao": 1,
+  "questoes": [
+    {
+      "id": "sistema-imunologico-q01",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "A lisozima, presente na lágrima e na saliva, é um exemplo de barreira:",
+      "alternativas": [
+        "física, porque forma uma camada impermeável sobre os olhos",
+        "biológica, porque é produzida por bactérias da microbiota normal",
+        "química, porque degrada a parede celular de bactérias",
+        "adaptativa, porque é produzida pelos plasmócitos",
+        "celular, porque fagocita microrganismos na superfície dos olhos"
+      ],
+      "correta": 2,
+      "explicacao": "A lisozima é uma enzima que digere a parede celular bacteriana, ou seja, atua por ação química. Ela não é produzida pela microbiota nem por plasmócitos (que secretam anticorpos), e não é uma célula, portanto não fagocita.",
+      "habilidade": "Classificar as barreiras naturais do organismo.",
+      "tags": [
+        "barreiras",
+        "lisozima"
+      ]
+    },
+    {
+      "id": "sistema-imunologico-q02",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "As células que produzem e secretam anticorpos em grande quantidade são os:",
+      "alternativas": [
+        "plasmócitos, originados de linfócitos B ativados",
+        "neutrófilos, originados de monócitos",
+        "linfócitos T citotóxicos (CD8)",
+        "mastócitos, que vivem nos tecidos",
+        "macrófagos, originados de linfócitos T"
+      ],
+      "correta": 0,
+      "explicacao": "Linfócitos B ativados se diferenciam em plasmócitos, ricos em retículo endoplasmático granuloso, que secretam anticorpos. Neutrófilos são fagócitos que não derivam de monócitos nem produzem anticorpos; linfócitos T CD8 matam células infectadas; mastócitos liberam histamina; e macrófagos derivam de monócitos, não de linfócitos T.",
+      "habilidade": "Identificar a origem dos anticorpos.",
+      "tags": [
+        "plasmócitos",
+        "anticorpos",
+        "resposta humoral"
+      ]
+    },
+    {
+      "id": "sistema-imunologico-q03",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Qual característica distingue a imunidade adaptativa da imunidade inata?",
+      "alternativas": [
+        "Agir em poucos minutos após a invasão",
+        "Ser realizada exclusivamente por barreiras físicas",
+        "Atuar da mesma forma contra qualquer invasor",
+        "Depender apenas de neutrófilos e macrófagos",
+        "Ser específica e formar memória imunológica"
+      ],
+      "correta": 4,
+      "explicacao": "A imunidade adaptativa, feita por linfócitos B e T, reconhece antígenos específicos e gera células de memória. Rapidez, inespecificidade e ação de fagócitos e barreiras são características da imunidade inata.",
+      "habilidade": "Comparar imunidade inata e adaptativa.",
+      "tags": [
+        "imunidade inata",
+        "imunidade adaptativa"
+      ]
+    },
+    {
+      "id": "sistema-imunologico-q04",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Horas depois de pisar em um prego, uma pessoa nota que o local está vermelho, quente e inchado. O inchaço (edema) se deve principalmente:",
+      "alternativas": [
+        "à multiplicação acelerada das células da pele no local da lesão",
+        "ao aumento da permeabilidade dos capilares, que deixa plasma extravasar para o tecido",
+        "ao acúmulo de anticorpos IgE produzidos no primeiro contato com a bactéria",
+        "à contração dos vasos sanguíneos, que retém o sangue no local",
+        "à destruição dos linfonodos próximos ao ferimento"
+      ],
+      "correta": 1,
+      "explicacao": "Mediadores como a histamina dilatam os vasos (rubor e calor) e aumentam a permeabilidade dos capilares, de modo que plasma passa para o tecido e forma o edema. Na inflamação há vasodilatação, e não vasoconstrição; IgE está ligada a alergias, e os linfonodos não são destruídos.",
+      "habilidade": "Explicar os sinais da inflamação.",
+      "tags": [
+        "inflamação",
+        "histamina",
+        "edema"
+      ]
+    },
+    {
+      "id": "sistema-imunologico-q05",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Um recém-nascido alimentado exclusivamente com leite materno recebe da mãe uma proteção imediata nas mucosas do tubo digestório. A classe de anticorpo mais associada a essa proteção é a:",
+      "alternativas": [
+        "IgE, que se liga aos mastócitos do intestino",
+        "IgD, receptor de membrana dos linfócitos B",
+        "IgM, que atravessa a placenta durante a gestação",
+        "IgA, predominante nas secreções, como o leite",
+        "IgG, produzida pelo próprio bebê após a primeira mamada"
+      ],
+      "correta": 3,
+      "explicacao": "A IgA é a principal imunoglobulina das secreções, incluindo o leite materno, e protege as mucosas do bebê. Quem atravessa a placenta é a IgG, não a IgM; a IgE liga-se a alergias e parasitas; a IgD é receptor de membrana; e o recém-nascido ainda produz poucos anticorpos próprios, dependendo dos recebidos da mãe.",
+      "habilidade": "Relacionar classes de anticorpos às suas funções.",
+      "tags": [
+        "IgA",
+        "amamentação",
+        "classes de anticorpos"
+      ]
+    },
+    {
+      "id": "sistema-imunologico-q06",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Uma célula do fígado infectada por um vírus pode ser reconhecida e destruída por linfócitos T citotóxicos. Esse reconhecimento é possível porque a célula infectada:",
+      "alternativas": [
+        "libera anticorpos contra o próprio vírus",
+        "perde todas as proteínas de sua membrana",
+        "exibe fragmentos de proteínas virais em moléculas de MHC de classe I",
+        "fagocita o vírus e o apresenta no MHC de classe II",
+        "secreta histamina, que atrai os linfócitos T CD8"
+      ],
+      "correta": 2,
+      "explicacao": "Quase todas as células nucleadas exibem no MHC I fragmentos das proteínas produzidas em seu interior; se houver vírus, aparecem peptídeos virais reconhecidos pelos T CD8. O MHC II é típico das células apresentadoras de antígenos; células do fígado não produzem anticorpos nem histamina.",
+      "habilidade": "Explicar a apresentação de antígenos e a resposta celular.",
+      "tags": [
+        "MHC",
+        "linfócito T CD8",
+        "resposta celular"
+      ]
+    },
+    {
+      "id": "sistema-imunologico-q07",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Uma adolescente relata que, na primeira picada de abelha, sentiu apenas dor local. Meses depois, uma nova picada provocou inchaço no rosto, falta de ar e queda de pressão, e ela precisou receber adrenalina em um pronto-socorro. A explicação mais adequada para a diferença entre as duas reações é:",
+      "alternativas": [
+        "Na primeira picada, o veneno destruiu os linfócitos B, que só se recuperaram meses depois",
+        "A segunda abelha certamente era de outra espécie, com veneno muito mais tóxico",
+        "A adrenalina foi usada para estimular a produção de anticorpos contra o veneno",
+        "Na primeira picada, a jovem produziu IgG que atravessou a placenta e passou a atacar o próprio corpo",
+        "No primeiro contato houve sensibilização, com produção de IgE que se fixou aos mastócitos; no segundo, o alérgeno ligou-se a essa IgE e causou liberação maciça de histamina"
+      ],
+      "correta": 4,
+      "explicacao": "Alergias costumam exigir um contato prévio de sensibilização: forma-se IgE, que se prende aos mastócitos. No contato seguinte, a ligação do alérgeno provoca liberação maciça de histamina e, nos casos graves, anafilaxia. A adrenalina contrai vasos e dilata brônquios, sem estimular anticorpos; nada indica outra espécie de abelha, e IgG placentária não tem relação com o caso.",
+      "habilidade": "Interpretar uma reação alérgica a partir dos mecanismos imunológicos.",
+      "tags": [
+        "alergia",
+        "IgE",
+        "anafilaxia",
+        "histamina"
+      ]
+    },
+    {
+      "id": "sistema-imunologico-q08",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Um gráfico mostra a concentração de anticorpos no sangue de uma pessoa ao longo do tempo. Após o primeiro contato com um antígeno, a concentração começa a subir depois de cerca de uma semana e atinge um pico baixo. Após um segundo contato com o mesmo antígeno, meses depois, a subida é quase imediata e o pico é muito mais alto e prolongado. Esse comportamento se explica pela:",
+      "alternativas": [
+        "existência de linfócitos de memória formados na resposta primária, que são reativados rapidamente no segundo contato",
+        "permanência do antígeno no sangue por vários meses após o primeiro contato",
+        "produção de anticorpos pelos neutrófilos, que se multiplicam após cada infecção",
+        "transformação dos anticorpos da primeira resposta em células de defesa",
+        "ação dos anticorpos produzidos pela mãe durante a gestação"
+      ],
+      "correta": 0,
+      "explicacao": "Na resposta primária formam-se células de memória que, no segundo contato, geram resposta secundária mais rápida, intensa e duradoura. O antígeno não permanece meses no sangue (ele é eliminado na primeira resposta), neutrófilos não produzem anticorpos, anticorpos não viram células e anticorpos maternos somem nos primeiros meses de vida.",
+      "habilidade": "Interpretar gráfico de resposta imune primária e secundária.",
+      "tags": [
+        "memória imunológica",
+        "resposta secundária",
+        "gráficos"
+      ]
+    },
+    {
+      "id": "sistema-imunologico-q09",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Pessoas com HIV sem tratamento antirretroviral podem apresentar, anos após a infecção, pneumonias e tuberculose graves, além de infecções por fungos que raramente afetam pessoas saudáveis. A explicação para esse quadro é que o HIV:",
+      "alternativas": [
+        "infecta diretamente os pulmões, abrindo caminho para outros microrganismos",
+        "reduz os linfócitos T auxiliares (CD4), comprometendo a coordenação das respostas humoral e celular",
+        "estimula a produção exagerada de IgE, causando alergias graves",
+        "destrói apenas as barreiras físicas, como a pele e as mucosas",
+        "transforma linfócitos B em células tumorais"
+      ],
+      "correta": 1,
+      "explicacao": "O HIV infecta principalmente os linfócitos T CD4, que liberam citocinas e ativam linfócitos B e T CD8. Com a queda dessas células, toda a defesa adaptativa enfraquece e surgem doenças oportunistas. O vírus não age primariamente nos pulmões, não causa alergias por IgE e não destrói a pele.",
+      "habilidade": "Relacionar a imunodeficiência causada pelo HIV às doenças oportunistas.",
+      "tags": [
+        "HIV",
+        "aids",
+        "linfócito T CD4",
+        "saúde pública"
+      ]
+    },
+    {
+      "id": "sistema-imunologico-q10",
+      "nivel": "diamante",
+      "tipo": "multipla_escolha",
+      "enunciado": "No diabetes tipo 1, linfócitos T atacam as células beta das ilhotas pancreáticas, e o paciente passa a depender de insulina. Pesquisadores avaliam o transplante dessas células como tratamento. Considere as afirmações: I. A doença resulta de falha na tolerância imunológica, que normalmente elimina ou inativa linfócitos que reconhecem o próprio corpo. II. Células transplantadas de um doador com MHC diferente tendem a ser reconhecidas como estranhas, o que exige compatibilidade e/ou medicamentos que reduzem a atividade imune. III. Como o diabetes tipo 1 é autoimune, células beta transplantadas de doador perfeitamente compatível estariam livres de qualquer ataque imunológico. IV. Plasmócitos que produzem anticorpos são ricos em retículo endoplasmático granuloso, organela que também é abundante nas células beta produtoras de insulina, pois ambas secretam proteínas. Estão corretas:",
+      "alternativas": [
+        "apenas I e II",
+        "apenas I e III",
+        "apenas II e IV",
+        "apenas I, II e IV",
+        "I, II, III e IV"
+      ],
+      "correta": 3,
+      "explicacao": "I está correta: doença autoimune é falha da tolerância. II está correta: diferenças de MHC levam à rejeição. IV está correta: anticorpos e insulina são proteínas de secreção, produzidas no retículo granuloso. III está errada: mesmo com MHC compatível, os linfócitos autorreativos que causaram a doença continuam no organismo e podem atacar as novas células beta.",
+      "habilidade": "Integrar imunologia, histocompatibilidade, endocrinologia e citologia na análise de um tratamento.",
+      "tags": [
+        "autoimunidade",
+        "MHC",
+        "transplante",
+        "diabetes",
+        "integração"
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "sistema-imunologico-f01",
+      "frente": "Três tipos de barreiras naturais",
+      "verso": "Físicas (pele, muco, cílios), químicas (lisozima, HCl, pH ácido da pele) e biológicas (microbiota normal)."
+    },
+    {
+      "id": "sistema-imunologico-f02",
+      "frente": "O que é a lisozima?",
+      "verso": "Enzima da lágrima e da saliva que degrada a parede celular de bactérias."
+    },
+    {
+      "id": "sistema-imunologico-f03",
+      "frente": "Cinco sinais da inflamação",
+      "verso": "Rubor, calor, edema (tumor), dor e perda de função."
+    },
+    {
+      "id": "sistema-imunologico-f04",
+      "frente": "Papel da histamina na inflamação",
+      "verso": "Liberada por mastócitos, causa vasodilatação e aumento da permeabilidade dos capilares."
+    },
+    {
+      "id": "sistema-imunologico-f05",
+      "frente": "Diapedese",
+      "verso": "Passagem de leucócitos através da parede dos capilares em direção ao tecido."
+    },
+    {
+      "id": "sistema-imunologico-f06",
+      "frente": "Primeiros fagócitos a chegar a uma infecção bacteriana",
+      "verso": "Neutrófilos, os leucócitos mais numerosos no sangue."
+    },
+    {
+      "id": "sistema-imunologico-f07",
+      "frente": "Células NK",
+      "verso": "Linfócitos da imunidade inata que destroem células infectadas por vírus e células tumorais."
+    },
+    {
+      "id": "sistema-imunologico-f08",
+      "frente": "Onde amadurecem os linfócitos B e T?",
+      "verso": "B na medula óssea; T no timo."
+    },
+    {
+      "id": "sistema-imunologico-f09",
+      "frente": "MHC de classe II: quem exibe e quem reconhece?",
+      "verso": "Exibido por células apresentadoras de antígenos (dendríticas, macrófagos, linfócitos B); reconhecido por linfócitos T CD4."
+    },
+    {
+      "id": "sistema-imunologico-f10",
+      "frente": "Função do linfócito T CD8",
+      "verso": "Destruir diretamente células infectadas por vírus ou tumorais (resposta celular)."
+    },
+    {
+      "id": "sistema-imunologico-f11",
+      "frente": "Estrutura de um anticorpo",
+      "verso": "Glicoproteína em Y com duas cadeias pesadas e duas leves; regiões variáveis nas pontas formam dois sítios de ligação."
+    },
+    {
+      "id": "sistema-imunologico-f12",
+      "frente": "Única classe de anticorpo que atravessa a placenta",
+      "verso": "IgG."
+    },
+    {
+      "id": "sistema-imunologico-f13",
+      "frente": "Primeira classe de anticorpo produzida na resposta primária",
+      "verso": "IgM, um pentâmero."
+    },
+    {
+      "id": "sistema-imunologico-f14",
+      "frente": "Resposta secundária em relação à primária",
+      "verso": "Mais rápida, mais intensa e mais duradoura, graças às células de memória."
+    },
+    {
+      "id": "sistema-imunologico-f15",
+      "frente": "Doença autoimune",
+      "verso": "Falha da tolerância imunológica: o sistema ataca moléculas do próprio corpo. Ex.: diabetes tipo 1, lúpus."
+    },
+    {
+      "id": "sistema-imunologico-f16",
+      "frente": "Célula atacada principalmente pelo HIV",
+      "verso": "Linfócito T auxiliar (CD4)."
+    }
+  ],
+  "minijogos": {
+    "pares": [
+      {
+        "a": "Neutrófilo",
+        "b": "Primeiro fagócito a chegar à infecção"
+      },
+      {
+        "a": "Macrófago",
+        "b": "Grande fagócito derivado do monócito"
+      },
+      {
+        "a": "Mastócito",
+        "b": "Libera histamina"
+      },
+      {
+        "a": "Célula dendrítica",
+        "b": "Leva antígenos aos linfonodos"
+      },
+      {
+        "a": "Plasmócito",
+        "b": "Secreta anticorpos"
+      },
+      {
+        "a": "Linfócito T CD4",
+        "b": "Coordena a resposta com citocinas"
+      },
+      {
+        "a": "Linfócito T CD8",
+        "b": "Destrói células infectadas"
+      },
+      {
+        "a": "Eosinófilo",
+        "b": "Combate vermes parasitas"
+      }
+    ],
+    "sequencia": {
+      "instrucao": "Coloque em ordem as etapas de uma resposta humoral contra uma bactéria que entrou por um corte.",
+      "itens": [
+        "Bactéria atravessa a pele lesionada",
+        "Célula dendrítica captura e processa o antígeno",
+        "Antígeno é apresentado no MHC II a um linfócito T CD4 no linfonodo",
+        "Linfócito T CD4 libera citocinas que ativam o linfócito B específico",
+        "Linfócito B se multiplica e se diferencia em plasmócitos e células de memória",
+        "Plasmócitos secretam anticorpos que marcam e neutralizam a bactéria"
+      ]
+    },
+    "classificacao": {
+      "instrucao": "Classifique cada componente: barreira natural (impede a entrada do invasor), imunidade inata (age dentro do corpo, de forma rápida e pouco específica) ou imunidade adaptativa (específica e com memória).",
+      "categorias": [
+        "Barreira natural",
+        "Imunidade inata",
+        "Imunidade adaptativa"
+      ],
+      "itens": [
+        {
+          "texto": "Pele íntegra",
+          "categoria": "Barreira natural"
+        },
+        {
+          "texto": "Lisozima da lágrima",
+          "categoria": "Barreira natural"
+        },
+        {
+          "texto": "Ácido clorídrico do estômago",
+          "categoria": "Barreira natural"
+        },
+        {
+          "texto": "Microbiota intestinal",
+          "categoria": "Barreira natural"
+        },
+        {
+          "texto": "Neutrófilo",
+          "categoria": "Imunidade inata"
+        },
+        {
+          "texto": "Macrófago",
+          "categoria": "Imunidade inata"
+        },
+        {
+          "texto": "Célula NK",
+          "categoria": "Imunidade inata"
+        },
+        {
+          "texto": "Sistema complemento",
+          "categoria": "Imunidade inata"
+        },
+        {
+          "texto": "Linfócito B",
+          "categoria": "Imunidade adaptativa"
+        },
+        {
+          "texto": "Plasmócito",
+          "categoria": "Imunidade adaptativa"
+        },
+        {
+          "texto": "Linfócito T CD8",
+          "categoria": "Imunidade adaptativa"
+        },
+        {
+          "texto": "Célula de memória",
+          "categoria": "Imunidade adaptativa"
+        }
+      ]
+    },
+    "verdadeiro_falso": [
+      {
+        "afirmacao": "Anticorpos são células de defesa.",
+        "valor": false,
+        "explicacao": "Anticorpos são glicoproteínas secretadas pelos plasmócitos."
+      },
+      {
+        "afirmacao": "Os linfócitos T amadurecem no timo.",
+        "valor": true,
+        "explicacao": "Os linfócitos B amadurecem na medula óssea e os T, no timo."
+      },
+      {
+        "afirmacao": "A IgG é a única classe de anticorpo que atravessa a placenta.",
+        "valor": true,
+        "explicacao": "Por isso o feto nasce com parte da proteção da mãe."
+      },
+      {
+        "afirmacao": "A imunidade inata melhora a cada novo contato com o mesmo agente.",
+        "valor": false,
+        "explicacao": "A memória é característica da imunidade adaptativa."
+      },
+      {
+        "afirmacao": "Na inflamação ocorre vasoconstrição no local da lesão.",
+        "valor": false,
+        "explicacao": "Ocorre vasodilatação, que causa rubor e calor."
+      },
+      {
+        "afirmacao": "O pus contém neutrófilos mortos, microrganismos e restos de tecido.",
+        "valor": true,
+        "explicacao": "É resultado da intensa atividade dos fagócitos."
+      },
+      {
+        "afirmacao": "Em geral, os sintomas de alergia aparecem já no primeiro contato com o alérgeno.",
+        "valor": false,
+        "explicacao": "O primeiro contato costuma apenas sensibilizar, com produção de IgE."
+      },
+      {
+        "afirmacao": "O HIV infecta principalmente os linfócitos T CD4.",
+        "valor": true,
+        "explicacao": "A queda dessas células enfraquece toda a resposta adaptativa."
+      },
+      {
+        "afirmacao": "Doenças autoimunes são contagiosas.",
+        "valor": false,
+        "explicacao": "Resultam de falha na tolerância imunológica do próprio indivíduo."
+      },
+      {
+        "afirmacao": "Células dendríticas são células da imunidade inata que ativam linfócitos T.",
+        "valor": true,
+        "explicacao": "Elas apresentam antígenos e ligam a imunidade inata à adaptativa."
+      }
+    ]
+  },
+  "missao_mundo_aberto": {
+    "titulo": "A Guarda das Passagens",
+    "regiao": "Cordilheira do Comando",
+    "npc": "Capitã Dendra, comandante da guarda imunológica",
+    "narrativa": "Invasores atravessaram uma fenda aberta na muralha de pele que protege a Cordilheira do Comando. As sentinelas inatas já lutam, mas a Capitã Dendra precisa levar o retrato do inimigo ao quartel dos linfonodos e convocar as tropas especializadas.",
+    "objetivo": "Conter a invasão usando a sequência correta de defesas: fechar a barreira, organizar a inflamação, apresentar o antígeno e ativar as respostas humoral e celular, deixando sentinelas de memória para o próximo ataque.",
+    "mecanica": "estrategia",
+    "etapas": [
+      "Selar a fenda na muralha de pele e reforçar as barreiras de muco, cílios e lisozima nas passagens",
+      "Disparar o alarme dos mastócitos e guiar os neutrófilos até o foco pela diapedese",
+      "Escoltar a célula dendrítica até o quartel do linfonodo e mostrar o antígeno no MHC ao comandante T CD4",
+      "Recrutar os linfócitos B corretos para virar plasmócitos e enviar os T CD8 contra as células infectadas",
+      "Posicionar células de memória nas torres para responder mais rápido a um novo ataque"
+    ],
+    "recompensa_xp": 150,
+    "item_recompensa": "Escudo do Anticorpo em Y"
+  }
+}

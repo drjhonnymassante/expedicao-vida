@@ -1,0 +1,465 @@
+{
+  "topico": "ciclo-celular-interfase",
+  "versao": 1,
+  "questoes": [
+    {
+      "id": "ciclo-celular-interfase-q01",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Em qual fase do ciclo celular ocorre a duplicação (replicação) do DNA?",
+      "alternativas": [
+        "G1",
+        "S",
+        "G2",
+        "Metáfase",
+        "G0"
+      ],
+      "correta": 1,
+      "explicacao": "A fase S (de síntese) é a etapa da interfase em que o DNA é replicado, e cada cromossomo passa a ter duas cromátides-irmãs. Em G1 a célula cresce e se prepara para a replicação; em G2 ela confere a replicação já concluída; na metáfase o DNA já está duplicado; em G0 a célula está fora do ciclo.",
+      "habilidade": "Identificar os eventos característicos de cada fase da interfase.",
+      "tags": [
+        "fase S",
+        "replicação"
+      ]
+    },
+    {
+      "id": "ciclo-celular-interfase-q02",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Durante muito tempo, a interfase foi chamada de \"fase de repouso\". Hoje se sabe que essa denominação é inadequada porque, na interfase, a célula:",
+      "alternativas": [
+        "mantém os cromossomos altamente condensados e visíveis ao microscópio",
+        "não produz proteínas, apenas armazena energia",
+        "divide o citoplasma em duas partes iguais",
+        "cresce, sintetiza RNA e proteínas intensamente e replica o seu DNA",
+        "perde o envoltório nuclear e forma o fuso mitótico"
+      ],
+      "correta": 3,
+      "explicacao": "A interfase é a fase de maior atividade metabólica: crescimento, transcrição, síntese de proteínas e organelas e replicação do DNA. Os cromossomos estão descondensados (e não visíveis individualmente); a divisão do citoplasma, a desorganização do envoltório nuclear e a formação do fuso pertencem à divisão celular.",
+      "habilidade": "Caracterizar a interfase como fase metabolicamente ativa.",
+      "tags": [
+        "interfase",
+        "metabolismo",
+        "cromatina"
+      ]
+    },
+    {
+      "id": "ciclo-celular-interfase-q03",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Qual das células humanas abaixo permanece, em condições normais, em estado G0 praticamente permanente, sem voltar a se dividir?",
+      "alternativas": [
+        "Neurônio maduro",
+        "Célula da camada basal da epiderme",
+        "Célula-tronco da medula óssea vermelha",
+        "Célula do epitélio que reveste o intestino",
+        "Célula do bulbo de um folículo piloso"
+      ],
+      "correta": 0,
+      "explicacao": "Neurônios maduros saem do ciclo e ficam em G0 de forma praticamente permanente, o que explica as sequelas de lesões no sistema nervoso. As demais células citadas pertencem a tecidos de renovação intensa e se dividem com frequência.",
+      "habilidade": "Reconhecer células em G0 e relacionar à capacidade de regeneração.",
+      "tags": [
+        "G0",
+        "neurônio",
+        "regeneração"
+      ]
+    },
+    {
+      "id": "ciclo-celular-interfase-q04",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Uma célula somática humana em G1 possui 46 cromossomos. Ao final da fase G2, essa mesma célula apresentará:",
+      "alternativas": [
+        "92 cromossomos e 92 cromátides",
+        "23 cromossomos e 46 cromátides",
+        "46 cromossomos e 46 cromátides",
+        "92 cromossomos e 184 cromátides",
+        "46 cromossomos e 92 cromátides"
+      ],
+      "correta": 4,
+      "explicacao": "A fase S duplica o DNA, e cada cromossomo passa a ter duas cromátides-irmãs unidas pelo centrômero. O número de cromossomos (contado pelos centrômeros) continua 46, mas o de cromátides passa a 92. Dobrar para 92 cromossomos seria confundir cromátide com cromossomo; 23 é o número dos gametas.",
+      "habilidade": "Diferenciar número de cromossomos, de cromátides e quantidade de DNA.",
+      "tags": [
+        "cromátides",
+        "cromossomos",
+        "G2"
+      ]
+    },
+    {
+      "id": "ciclo-celular-interfase-q05",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Um gráfico mostra a quantidade de DNA de uma célula ao longo do tempo e apresenta quatro trechos consecutivos: I, um patamar em X; II, uma subida gradual de X até 2X; III, um patamar em 2X; IV, uma queda vertical de volta a X. O trecho que corresponde à fase S é:",
+      "alternativas": [
+        "I, porque nele a célula cresce e sintetiza proteínas",
+        "IV, porque é o único em que a quantidade de DNA muda bruscamente",
+        "II, porque nele o DNA é replicado aos poucos, até dobrar",
+        "III, porque nele a quantidade de DNA já está duplicada",
+        "I e III, porque são os patamares em que a célula se prepara para a divisão"
+      ],
+      "correta": 2,
+      "explicacao": "A replicação leva horas e aumenta o DNA gradualmente: é a rampa II (fase S). O patamar I é G1, o patamar III corresponde a G2 e ao início da mitose, e a queda vertical IV é a repartição do DNA entre as células-filhas na citocinese.",
+      "habilidade": "Interpretar gráfico de quantidade de DNA ao longo do ciclo celular.",
+      "tags": [
+        "gráfico",
+        "fase S",
+        "quantidade de DNA"
+      ]
+    },
+    {
+      "id": "ciclo-celular-interfase-q06",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Em certa espécie, uma célula somática em G1 contém 6 picogramas (pg) de DNA no núcleo. Quanto DNA terá essa célula na metáfase da mitose e quanto terá cada célula-filha logo após a citocinese, respectivamente?",
+      "alternativas": [
+        "6 pg e 3 pg",
+        "12 pg e 6 pg",
+        "12 pg e 12 pg",
+        "24 pg e 12 pg",
+        "6 pg e 6 pg"
+      ],
+      "correta": 1,
+      "explicacao": "Após a fase S, a quantidade de DNA dobra (12 pg) e assim permanece em G2 e até a metáfase. Na mitose, o DNA é repartido igualmente, e cada célula-filha volta a ter 6 pg, como a célula-mãe em G1. Metade disso (3 pg) só ocorreria em gametas, formados por meiose.",
+      "habilidade": "Calcular a variação da quantidade de DNA ao longo do ciclo.",
+      "tags": [
+        "quantidade de DNA",
+        "mitose",
+        "cálculo"
+      ]
+    },
+    {
+      "id": "ciclo-celular-interfase-q07",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Em um laboratório de pesquisa, amostras de um tecido normal e de um tumor originado nesse mesmo tecido foram analisadas por citometria de fluxo, técnica que mede a quantidade de DNA de cada célula com um corante fluorescente. No tecido normal, 90% das células tinham quantidade 2C de DNA, 4% tinham valores entre 2C e 4C e 6% tinham 4C. No tumor, os valores foram 60%, 25% e 15%, respectivamente. A interpretação correta desses resultados é:",
+      "alternativas": [
+        "as células tumorais com 4C possuem o dobro de cromossomos das células normais e, por isso, são poliploides",
+        "todas as células tumorais com 2C estão em G0, pois o tumor perdeu a capacidade de se dividir",
+        "o tumor tem menos DNA total que o tecido normal, já que apresenta menos células com 2C",
+        "o tumor tem maior proporção de células em S, G2 e mitose, o que indica maior atividade de proliferação que o tecido normal",
+        "as células com valores entre 2C e 4C estão em mitose, separando as cromátides-irmãs"
+      ],
+      "correta": 3,
+      "explicacao": "Valores entre 2C e 4C indicam fase S, e 4C indica G2 ou mitose. No tumor, 40% das células estão nessas fases, contra 10% no tecido normal. Ter 4C não é ter o dobro de cromossomos (a célula em G2 continua diploide); células com 2C podem estar em G1 ou G0; a mitose não gera valores intermediários.",
+      "habilidade": "Interpretar dados experimentais de quantidade de DNA para comparar proliferação celular.",
+      "tags": [
+        "citometria",
+        "histograma",
+        "câncer",
+        "proliferação"
+      ]
+    },
+    {
+      "id": "ciclo-celular-interfase-q08",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Uma cultura de células humanas, que se dividem de forma não sincronizada, completa o ciclo celular em 20 horas. Em uma amostra de 1.000 células, 450 estavam em G1, 300 em S, 150 em G2 e 100 em mitose. Considerando que a proporção de células em cada fase é proporcional à duração dessa fase, a estimativa correta é:",
+      "alternativas": [
+        "a mitose dura cerca de 10 horas, pois 10% das células estão em divisão",
+        "G1 dura cerca de 4,5 horas",
+        "G2 é a fase mais longa do ciclo",
+        "a interfase dura cerca de 2 horas",
+        "a fase S dura cerca de 6 horas, e a interfase ocupa cerca de 18 das 20 horas do ciclo"
+      ],
+      "correta": 4,
+      "explicacao": "30% das células estão em S: 0,30 × 20 h = 6 h. A mitose (10%) dura cerca de 2 h, logo a interfase dura cerca de 18 h. G1 (45%) dura cerca de 9 h e é a fase mais longa. A primeira alternativa confunde porcentagem com horas; as demais erram as proporções.",
+      "habilidade": "Estimar a duração das fases do ciclo a partir de dados populacionais.",
+      "tags": [
+        "duração das fases",
+        "índice mitótico",
+        "cálculo"
+      ]
+    },
+    {
+      "id": "ciclo-celular-interfase-q09",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "No transplante de fígado intervivos, uma pessoa saudável doa parte do próprio fígado a um paciente. Nas semanas seguintes, tanto a porção que ficou no doador quanto a transplantada aumentam de tamanho e recuperam sua função. Do ponto de vista do ciclo celular, essa recuperação é possível porque:",
+      "alternativas": [
+        "os hepatócitos se dividem continuamente durante toda a vida, sem nunca sair do ciclo",
+        "os hepatócitos se dividem por meiose, o que gera células novas mais rapidamente",
+        "os hepatócitos, normalmente em G0, são estimulados a voltar ao ciclo, replicam o DNA na fase S e se dividem por mitose",
+        "o tecido perdido é substituído por neurônios, que migram para o fígado",
+        "os hepatócitos não possuem fase S e, por isso, se dividem sem precisar duplicar o DNA"
+      ],
+      "correta": 2,
+      "explicacao": "Em um fígado saudável, a maioria dos hepatócitos está em G0, mas esse estado é reversível: diante da perda de massa, eles retornam a G1, passam pela fase S e se dividem por mitose. Eles não se dividem continuamente; a meiose ocorre só na formação de gametas; nenhuma célula se divide por mitose sem antes replicar o DNA.",
+      "habilidade": "Relacionar o estado G0 reversível à regeneração de órgãos.",
+      "tags": [
+        "G0",
+        "fígado",
+        "regeneração",
+        "transplante"
+      ]
+    },
+    {
+      "id": "ciclo-celular-interfase-q10",
+      "nivel": "diamante",
+      "tipo": "multipla_escolha",
+      "enunciado": "Um fármaco experimental contra o câncer inibe a DNA polimerase, enzima que adiciona nucleotídeos durante a replicação semiconservativa do DNA. Uma cultura de células em divisão não sincronizada foi tratada com o fármaco e, após um tempo equivalente a um ciclo celular, a quantidade de DNA de cada célula foi medida. Pacientes que recebem medicamentos com esse tipo de ação costumam apresentar queda de cabelo, feridas na mucosa da boca e redução das células do sangue. Assinale a alternativa que explica corretamente o resultado esperado na cultura e os efeitos observados nos pacientes.",
+      "alternativas": [
+        "Na cultura, as células ficam retidas em G1 ou na fase S, com DNA de 2C ou intermediário, e a proporção de células com 4C diminui; nos pacientes, sofrem mais os tecidos de renovação intensa, e células em G0, como neurônios maduros, são relativamente poupadas",
+        "Na cultura, as células acumulam-se em metáfase com 4C, pois o fármaco impede a formação do fuso; nos pacientes, os efeitos atingem principalmente os neurônios, que se dividem com maior frequência",
+        "Na cultura, as células passam a apresentar quantidade de DNA igual a C, pois o fármaco faz o DNA ser repartido sem replicação; nos pacientes, os efeitos decorrem da formação de gametas anormais",
+        "Na cultura, a quantidade de DNA de todas as células aumenta para 8C, pois a replicação ocorre duas vezes seguidas; nos pacientes, os efeitos são causados pelo excesso de DNA nos tecidos",
+        "Na cultura, nada se altera, porque a fase S ocupa uma fração desprezível do ciclo; nos pacientes, os efeitos vêm só da toxicidade do fármaco sobre as proteínas do cabelo"
+      ],
+      "correta": 0,
+      "explicacao": "Sem DNA polimerase ativa, a replicação não começa ou não termina: as células param no limite G1/S ou no meio de S (2C ou valores intermediários) e não chegam a 4C. Por isso sofrem mais as células que se dividem muito (folículos pilosos, mucosa digestiva, medula óssea); neurônios em G0 não replicam DNA. Acúmulo em metáfase com 4C é efeito de drogas que bloqueiam o fuso, como a colchicina, e neurônios maduros não se dividem; C, 8C ou fase S desprezível não condizem com o mecanismo.",
+      "habilidade": "Integrar replicação do DNA, fases do ciclo, interpretação de dados e efeitos da quimioterapia.",
+      "tags": [
+        "DNA polimerase",
+        "quimioterapia",
+        "fase S",
+        "G0",
+        "integração"
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "ciclo-celular-interfase-f01",
+      "frente": "Quais são as duas grandes etapas do ciclo celular?",
+      "verso": "Interfase (G1, S e G2) e fase M (mitose e citocinese)."
+    },
+    {
+      "id": "ciclo-celular-interfase-f02",
+      "frente": "Por que \"fase de repouso\" é um nome inadequado para a interfase, que ocupa a maior parte do ciclo?",
+      "verso": "Porque é a fase de maior atividade metabólica: crescimento, síntese de RNA e proteínas e replicação do DNA."
+    },
+    {
+      "id": "ciclo-celular-interfase-f03",
+      "frente": "O que a célula faz em G1?",
+      "verso": "Cresce, sintetiza RNA, proteínas e organelas e exerce sua função; no fim de G1 há um ponto de checagem."
+    },
+    {
+      "id": "ciclo-celular-interfase-f04",
+      "frente": "Qual fase do ciclo tem a duração mais variável?",
+      "verso": "G1."
+    },
+    {
+      "id": "ciclo-celular-interfase-f05",
+      "frente": "O que acontece na fase S?",
+      "verso": "Replicação semiconservativa do DNA e síntese de histonas; cada cromossomo passa a ter duas cromátides-irmãs."
+    },
+    {
+      "id": "ciclo-celular-interfase-f06",
+      "frente": "O que acontece em G2?",
+      "verso": "A célula produz proteínas para a divisão, como a tubulina do fuso, e verifica se a replicação terminou sem erros."
+    },
+    {
+      "id": "ciclo-celular-interfase-f07",
+      "frente": "Como se conta o número de cromossomos de uma célula?",
+      "verso": "Pelo número de centrômeros. Um cromossomo com duas cromátides-irmãs continua sendo um cromossomo."
+    },
+    {
+      "id": "ciclo-celular-interfase-f08",
+      "frente": "Célula humana em G2: número de cromossomos e de cromátides",
+      "verso": "46 cromossomos e 92 cromátides (quantidade de DNA 4C)."
+    },
+    {
+      "id": "ciclo-celular-interfase-f09",
+      "frente": "Quando a quantidade de DNA por célula volta de 4C para 2C?",
+      "verso": "Na citocinese, ao final da mitose, quando o DNA é repartido entre as duas células-filhas."
+    },
+    {
+      "id": "ciclo-celular-interfase-f10",
+      "frente": "O que é G0?",
+      "verso": "Estado em que a célula sai do ciclo (a partir de G1): continua viva e ativa, mas não se prepara para dividir."
+    },
+    {
+      "id": "ciclo-celular-interfase-f11",
+      "frente": "Exemplo de célula em G0 reversível e de célula em G0 praticamente permanente",
+      "verso": "Reversível: hepatócito (fígado). Praticamente permanente: neurônio maduro ou célula muscular cardíaca."
+    },
+    {
+      "id": "ciclo-celular-interfase-f12",
+      "frente": "No gráfico DNA × tempo, o que indicam a rampa inclinada e a queda vertical?",
+      "verso": "A rampa é a fase S (replicação gradual); a queda vertical é a citocinese."
+    },
+    {
+      "id": "ciclo-celular-interfase-f13",
+      "frente": "Em um histograma de DNA por célula, o que representam os picos em 2C e em 4C?",
+      "verso": "2C: células em G1 (ou G0). 4C: células em G2 ou em mitose. Os valores intermediários são células em S."
+    },
+    {
+      "id": "ciclo-celular-interfase-f14",
+      "frente": "Como estimar a duração de uma fase a partir da porcentagem de células nela?",
+      "verso": "Multiplicar a fração de células na fase pela duração total do ciclo (em populações não sincronizadas)."
+    }
+  ],
+  "minijogos": {
+    "pares": [
+      {
+        "a": "G1",
+        "b": "Crescimento e síntese de proteínas e organelas"
+      },
+      {
+        "a": "Fase S",
+        "b": "Replicação do DNA"
+      },
+      {
+        "a": "G2",
+        "b": "Síntese de tubulina e checagem da replicação"
+      },
+      {
+        "a": "G0",
+        "b": "Célula ativa, mas fora do ciclo"
+      },
+      {
+        "a": "Citocinese",
+        "b": "Queda do DNA de 4C para 2C por célula"
+      },
+      {
+        "a": "Centrômero",
+        "b": "Região que une as cromátides-irmãs"
+      },
+      {
+        "a": "Histonas",
+        "b": "Proteínas produzidas em grande quantidade na fase S"
+      },
+      {
+        "a": "Índice mitótico",
+        "b": "Porcentagem de células em divisão em uma amostra"
+      }
+    ],
+    "sequencia": {
+      "instrucao": "Coloque em ordem os eventos de um ciclo celular completo, a partir do nascimento de uma célula-filha.",
+      "itens": [
+        "G1: a célula cresce e produz proteínas e organelas",
+        "Ponto de checagem no fim de G1 libera a entrada em S",
+        "Fase S: o DNA é replicado e surgem as cromátides-irmãs",
+        "G2: a célula produz tubulina e confere a replicação",
+        "Mitose: as cromátides-irmãs são separadas",
+        "Citocinese: o citoplasma se divide e cada célula-filha fica com 2C"
+      ]
+    },
+    "classificacao": {
+      "instrucao": "Arraste cada característica ou exemplo para a fase correspondente.",
+      "categorias": [
+        "G1",
+        "S",
+        "G2",
+        "G0"
+      ],
+      "itens": [
+        {
+          "texto": "Célula recém-formada cresce e produz organelas",
+          "categoria": "G1"
+        },
+        {
+          "texto": "Cromossomos com uma única cromátide e DNA igual a 2C, em célula que vai se dividir",
+          "categoria": "G1"
+        },
+        {
+          "texto": "Fase de duração mais variável entre tipos celulares",
+          "categoria": "G1"
+        },
+        {
+          "texto": "Replicação semiconservativa do DNA",
+          "categoria": "S"
+        },
+        {
+          "texto": "Síntese intensa de histonas",
+          "categoria": "S"
+        },
+        {
+          "texto": "Quantidade de DNA intermediária entre 2C e 4C",
+          "categoria": "S"
+        },
+        {
+          "texto": "Cromossomos já com duas cromátides, pouco antes da mitose",
+          "categoria": "G2"
+        },
+        {
+          "texto": "Produção de tubulina para o fuso mitótico",
+          "categoria": "G2"
+        },
+        {
+          "texto": "Checagem final da replicação antes da divisão",
+          "categoria": "G2"
+        },
+        {
+          "texto": "Neurônio maduro conduzindo impulsos nervosos",
+          "categoria": "G0"
+        },
+        {
+          "texto": "Célula muscular cardíaca de um adulto",
+          "categoria": "G0"
+        },
+        {
+          "texto": "Hepatócito de um fígado saudável e sem lesões",
+          "categoria": "G0"
+        }
+      ]
+    },
+    "verdadeiro_falso": [
+      {
+        "afirmacao": "A interfase é a fase de repouso da célula, em que o metabolismo praticamente para.",
+        "valor": false,
+        "explicacao": "A interfase é a fase de maior atividade metabólica, com crescimento, síntese de proteínas e replicação do DNA."
+      },
+      {
+        "afirmacao": "Na fase S, o número de cromossomos da célula dobra.",
+        "valor": false,
+        "explicacao": "Dobram a quantidade de DNA e o número de cromátides; o número de cromossomos (centrômeros) não muda."
+      },
+      {
+        "afirmacao": "Uma célula humana em G2 tem 46 cromossomos, cada um com duas cromátides-irmãs.",
+        "valor": true,
+        "explicacao": "São 46 cromossomos e 92 cromátides, com quantidade de DNA 4C."
+      },
+      {
+        "afirmacao": "Células em G0 estão mortas ou sem nenhuma atividade.",
+        "valor": false,
+        "explicacao": "Estão vivas e exercendo suas funções; apenas não se preparam para dividir."
+      },
+      {
+        "afirmacao": "Hepatócitos em G0 podem voltar ao ciclo celular quando o fígado perde parte de sua massa.",
+        "valor": true,
+        "explicacao": "O G0 dos hepatócitos é reversível, o que permite a regeneração do fígado."
+      },
+      {
+        "afirmacao": "A quantidade de DNA por célula cai para 2C já no início da anáfase.",
+        "valor": false,
+        "explicacao": "Na anáfase as cromátides se separam, mas continuam na mesma célula; o DNA por célula só cai com a citocinese."
+      },
+      {
+        "afirmacao": "Em G1, a célula ainda não replicou o seu DNA.",
+        "valor": true,
+        "explicacao": "A replicação ocorre na fase S, que vem depois de G1."
+      },
+      {
+        "afirmacao": "Na interfase, os cromossomos estão muito condensados e podem ser contados ao microscópio óptico.",
+        "valor": false,
+        "explicacao": "Na interfase a cromatina está descondensada; cromossomos individualizados aparecem durante a divisão."
+      },
+      {
+        "afirmacao": "Em uma população não sincronizada, a fase com mais células em um dado momento tende a ser a fase de maior duração.",
+        "valor": true,
+        "explicacao": "A proporção de células em cada fase é aproximadamente proporcional à duração da fase."
+      },
+      {
+        "afirmacao": "Uma célula diploide em G2 é tetraploide, porque tem quantidade de DNA 4C.",
+        "valor": false,
+        "explicacao": "Ela continua diploide (2n): tem o dobro de DNA porque cada cromossomo tem duas cromátides, não porque há mais conjuntos cromossômicos."
+      }
+    ]
+  },
+  "missao_mundo_aberto": {
+    "titulo": "O Relógio dos Espelhos",
+    "regiao": "Ilha dos Espelhos Gêmeos",
+    "npc": "Guardião Cronos-S, relojoeiro do templo",
+    "narrativa": "O Grande Relógio da Ilha dos Espelhos Gêmeos marca o ritmo em que tudo se duplica. Alguém embaralhou seus ponteiros: árvores se dividem antes de crescer e rochas se partem sem copiar suas runas. O Guardião Cronos-S precisa de ajuda para restaurar a ordem das horas.",
+    "objetivo": "Remontar o Grande Relógio com os setores G1, S, G2 e M na ordem e no tamanho corretos, calibrar o medidor de DNA de cada setor e descobrir quais criaturas estão em G0 por natureza e quais podem ser despertadas.",
+    "mecanica": "quebra-cabeca",
+    "etapas": [
+      "Encaixar os quatro setores do relógio na ordem correta, com tamanhos proporcionais à duração de cada fase",
+      "Ajustar o medidor de DNA de cada setor para 2C, entre 2C e 4C ou 4C",
+      "Ler o histograma do Farol de Fluorescência e calcular quanto tempo dura a fase S de uma colônia de criaturas",
+      "No Bosque Silencioso, separar as criaturas em G0 reversível (que podem regenerar a floresta) das que não se dividem mais"
+    ],
+    "recompensa_xp": 120,
+    "item_recompensa": "Ampulheta das Cromátides"
+  }
+}

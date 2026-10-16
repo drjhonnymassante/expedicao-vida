@@ -1,0 +1,194 @@
+{
+  "topico": "epidemiologia-conceitos",
+  "versao": 1,
+  "questoes": [
+    {
+      "id": "epidemiologia-conceitos-q01",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Em parasitologia, o hospedeiro definitivo é aquele que abriga:",
+      "alternativas": ["apenas as formas de resistência do parasita, como cistos e ovos", "a fase adulta do parasita ou a fase em que ocorre sua reprodução sexuada", "somente as larvas do parasita", "o parasita apenas durante o transporte, sem que ele se desenvolva", "o parasita por mais tempo, independentemente da fase do ciclo"],
+      "correta": 1,
+      "explicacao": "Hospedeiro definitivo é aquele em que o parasita atinge a fase adulta ou se reproduz sexuadamente. Larvas e reprodução assexuada caracterizam o hospedeiro intermediário, e o simples transporte descreve um vetor mecânico. O tempo de permanência não é o critério.",
+      "habilidade": "Diferenciar hospedeiro definitivo de hospedeiro intermediário.",
+      "tags": ["hospedeiro definitivo", "parasitismo"]
+    },
+    {
+      "id": "epidemiologia-conceitos-q02",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Moscas domésticas que pousam em fezes e depois em alimentos podem levar ovos de vermes e cistos de protozoários até as pessoas. Nesse caso, a mosca atua como:",
+      "alternativas": ["hospedeiro definitivo", "hospedeiro intermediário", "vetor biológico", "vetor mecânico", "reservatório do parasita"],
+      "correta": 3,
+      "explicacao": "A mosca apenas transporta os agentes no corpo, sem que eles se desenvolvam ou se multipliquem nela: é um vetor mecânico. Num vetor biológico o agente cumpre uma etapa obrigatória do ciclo, e hospedeiros abrigam fases do desenvolvimento do parasita.",
+      "habilidade": "Classificar vetores mecânicos e biológicos.",
+      "tags": ["vetor mecânico", "mosca"]
+    },
+    {
+      "id": "epidemiologia-conceitos-q03",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Uma doença infecciosa que se dissemina por vários países de diferentes continentes, com transmissão sustentada entre pessoas, caracteriza um(a):",
+      "alternativas": ["pandemia", "endemia", "surto", "zoonose", "doença de notificação dispensável"],
+      "correta": 0,
+      "explicacao": "Pandemia é uma epidemia que atinge vários continentes. Endemia é a ocorrência habitual em uma região, surto é um aumento localizado e zoonose é doença transmitida entre animais e seres humanos.",
+      "habilidade": "Diferenciar endemia, epidemia, surto e pandemia.",
+      "tags": ["pandemia", "epidemiologia"]
+    },
+    {
+      "id": "epidemiologia-conceitos-q04",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "No ciclo do Plasmodium, a reprodução assexuada ocorre no fígado e nas hemácias humanas, e a reprodução sexuada ocorre no organismo do mosquito Anopheles. Com base nisso, é correto classificar:",
+      "alternativas": ["o ser humano como hospedeiro definitivo e o mosquito como vetor mecânico", "o ser humano e o mosquito como hospedeiros definitivos", "o mosquito como hospedeiro intermediário, pois apenas transporta o parasita", "o ser humano como reservatório e o mosquito como vetor mecânico", "o mosquito como hospedeiro definitivo e o ser humano como hospedeiro intermediário"],
+      "correta": 4,
+      "explicacao": "Como a reprodução sexuada do Plasmodium acontece no Anopheles, o mosquito é o hospedeiro definitivo; o ser humano, onde só há reprodução assexuada, é o intermediário. O mosquito também é vetor biológico, não mecânico, porque o parasita se desenvolve nele.",
+      "habilidade": "Aplicar os critérios de classificação de hospedeiros a um ciclo heteroxeno.",
+      "tags": ["malária", "hospedeiro definitivo", "vetor biológico"]
+    },
+    {
+      "id": "epidemiologia-conceitos-q05",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Uma doença rara, que atinge poucas pessoas de um país, mas leva à morte grande parte dos que a contraem, apresenta:",
+      "alternativas": ["alta mortalidade e baixa letalidade", "alta prevalência e alta incidência", "baixa mortalidade e alta letalidade", "baixa letalidade e alta prevalência", "letalidade e mortalidade sempre iguais"],
+      "correta": 2,
+      "explicacao": "Letalidade relaciona os óbitos ao número de doentes: se boa parte dos doentes morre, ela é alta. Mortalidade relaciona os óbitos à população total: como poucas pessoas adoecem, ela é baixa.",
+      "habilidade": "Interpretar indicadores epidemiológicos.",
+      "tags": ["letalidade", "mortalidade", "indicadores"]
+    },
+    {
+      "id": "epidemiologia-conceitos-q06",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Um município quer reduzir, com uma única política pública, a ocorrência de amebíase, giardíase, ascaridíase, hepatite A e esquistossomose. A medida com maior impacto sobre todas essas doenças ao mesmo tempo é:",
+      "alternativas": ["distribuir mosquiteiros impregnados com inseticida", "aplicar inseticida nas paredes das casas", "vacinar toda a população contra hepatite A", "ampliar o abastecimento de água tratada e a coleta e o tratamento de esgoto", "proibir a criação de porcos na zona urbana"],
+      "correta": 3,
+      "explicacao": "Todas se ligam à contaminação fecal da água, do solo ou dos alimentos, via que o saneamento básico interrompe. Mosquiteiros e inseticidas miram insetos vetores, ausentes nessas transmissões; a vacina protege só contra a hepatite A, e porcos não se relacionam com elas.",
+      "habilidade": "Relacionar saneamento básico à profilaxia de doenças de veiculação hídrica e fecal.",
+      "tags": ["saneamento básico", "profilaxia"]
+    },
+    {
+      "id": "epidemiologia-conceitos-q07",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Texto-base: a secretaria de saúde de uma cidade do interior paulista acompanha semanalmente os casos de dengue e os compara com uma faixa calculada a partir da média dos últimos anos para cada semana. Em todos os verões há casos, que normalmente ficam dentro da faixa. Neste ano, a partir de fevereiro, a curva de casos ultrapassou o limite superior da faixa por seis semanas seguidas, e os casos ficaram restritos à cidade e a municípios vizinhos. Com base no texto, a situação da dengue nessa cidade é corretamente descrita como:",
+      "alternativas": ["pandemia, pois o número de casos foi muito alto", "endemia, com uma epidemia neste ano, já que os casos ultrapassaram o esperado para o período", "surto, porque a dengue ocorre todos os verões", "endemia apenas, pois a presença de casos todos os anos impede que haja epidemia", "epidemia permanente, pois sempre há casos no verão"],
+      "correta": 1,
+      "explicacao": "Casos habituais dentro da faixa caracterizam endemia; ultrapassar o limite superior caracteriza epidemia, pois o critério é o excesso sobre o histórico, e os dois conceitos não se excluem. Não é pandemia (não atinge continentes) nem surto (grupo restrito), e casos sazonais dentro do esperado não são epidemia.",
+      "habilidade": "Interpretar dados de vigilância para identificar endemia e epidemia.",
+      "tags": ["dengue", "endemia", "epidemia", "gráficos"]
+    },
+    {
+      "id": "epidemiologia-conceitos-q08",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Texto-base: no início do século XX, Carlos Chagas descreveu no interior de Minas Gerais uma doença transmitida por um inseto que se escondia nas frestas das paredes de casas de pau a pique e saía à noite para se alimentar de sangue. Décadas depois, programas de controle combinaram borrifação de inseticida e melhoria das moradias, reduzindo muito a transmissão vetorial domiciliar no país. A melhoria das moradias contribui para o controle porque:",
+      "alternativas": ["paredes rebocadas e sem frestas eliminam abrigos do barbeiro, reduzindo o contato do vetor com os moradores", "o reboco das paredes mata o Trypanosoma cruzi presente no sangue das pessoas", "casas de alvenaria impedem que o barbeiro injete o protozoário pela picada", "a reforma elimina os caramujos que atuam como hospedeiros intermediários", "a melhoria das casas torna os moradores imunes à doença"],
+      "correta": 0,
+      "explicacao": "O barbeiro se abriga em frestas de paredes e telhados; sem abrigos, sua população no domicílio cai e a transmissão diminui. A reforma não age sobre o parasita no sangue, não gera imunidade nem envolve caramujos, e a transmissão vetorial ocorre pelas fezes do inseto, não pela picada.",
+      "habilidade": "Avaliar medidas de profilaxia com base no ciclo de transmissão.",
+      "tags": ["doença de Chagas", "barbeiro", "profilaxia", "moradia"]
+    },
+    {
+      "id": "epidemiologia-conceitos-q09",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Texto-base: num sábado, cerca de 60 dos 150 convidados de uma festa de casamento em uma cidade do Nordeste procuraram atendimento com diarreia e vômitos. Os médicos do pronto-socorro comunicaram os casos à vigilância epidemiológica municipal, que entrevistou os doentes, recolheu amostras dos alimentos servidos e identificou a maionese do bufê como provável origem. Sobre essa situação, é correto afirmar que:",
+      "alternativas": ["trata-se de uma endemia, pois a diarreia é comum no Brasil", "trata-se de uma pandemia, pois atingiu muitas pessoas em pouco tempo", "a comunicação dos casos era desnecessária, já que todos os doentes se recuperariam", "a investigação só poderia começar após a confirmação laboratorial do agente", "trata-se de um surto, e a notificação permitiu investigar a fonte comum e impedir novos casos"],
+      "correta": 4,
+      "explicacao": "Aumento de casos restrito a um grupo e a um evento é um surto. A notificação, feita já na suspeita, permite investigar rápido e retirar a fonte comum. Não é endemia (ocorrência habitual) nem pandemia (vários continentes), e a investigação não espera confirmação laboratorial.",
+      "habilidade": "Reconhecer o papel da vigilância epidemiológica na investigação de surtos.",
+      "tags": ["surto", "vigilância epidemiológica", "notificação"]
+    },
+    {
+      "id": "epidemiologia-conceitos-q10",
+      "nivel": "diamante",
+      "tipo": "multipla_escolha",
+      "enunciado": "Após a construção de uma represa em um município da Amazônia, grandes áreas de mata foram alagadas, formando remansos de água parada nas margens. Nos dois anos seguintes, os casos de malária no município ficaram bem acima da média histórica local, e um trabalhador infectado foi diagnosticado em uma capital do Sudeste, onde a doença não é transmitida habitualmente. Considerando ecologia, parasitologia e vigilância em saúde, a análise correta é:",
+      "alternativas": ["O Anopheles é vetor mecânico e o ser humano é hospedeiro definitivo do Plasmodium; o caso no Sudeste transforma a situação em pandemia", "O alagamento eliminou os criadouros do mosquito; o aumento de casos se deve só à chegada de trabalhadores já doentes de outros estados, sem transmissão local", "Tratar os doentes não interfere na transmissão, pois o parasita só se multiplica no mosquito, que é o hospedeiro intermediário; basta notificar os casos graves", "Os novos criadouros favoreceram o Anopheles, hospedeiro definitivo e vetor biológico do Plasmodium; o excesso de casos sobre o histórico é epidemia, e notificar o caso do Sudeste permite investigar sua origem", "O caso do Sudeste dispensa notificação, pois a malária é endêmica apenas na Amazônia; no município, o aumento configura somente endemia"],
+      "correta": 3,
+      "explicacao": "A água parada amplia os criadouros do Anopheles, onde o Plasmodium se reproduz sexuadamente (hospedeiro definitivo) e cumpre etapa obrigatória do ciclo (vetor biológico). Casos acima da média histórica são epidemia, não pandemia (vários continentes). A malária é de notificação compulsória em qualquer região, e tratar os doentes reduz a fonte de infecção para os mosquitos.",
+      "habilidade": "Integrar alterações ambientais, ciclo de vida do parasita e conceitos de vigilância epidemiológica.",
+      "tags": ["malária", "impacto ambiental", "epidemia", "vigilância", "integração"]
+    }
+  ],
+  "flashcards": [
+    { "id": "epidemiologia-conceitos-f01", "frente": "O que é parasitismo?", "verso": "Relação interespecífica desarmônica em que o parasita vive à custa do hospedeiro, retirando dele alimento ou abrigo e causando prejuízo." },
+    { "id": "epidemiologia-conceitos-f02", "frente": "Ectoparasita x endoparasita", "verso": "Ectoparasita vive na superfície do corpo (piolho, carrapato); endoparasita vive dentro do corpo (lombriga, Plasmodium)." },
+    { "id": "epidemiologia-conceitos-f03", "frente": "Hospedeiro definitivo", "verso": "Abriga a fase adulta do parasita ou aquela em que ocorre a reprodução sexuada." },
+    { "id": "epidemiologia-conceitos-f04", "frente": "Hospedeiro intermediário", "verso": "Abriga as fases larvais ou aquelas em que ocorre apenas reprodução assexuada." },
+    { "id": "epidemiologia-conceitos-f05", "frente": "Na malária, quem é o hospedeiro definitivo?", "verso": "O mosquito Anopheles, onde ocorre a reprodução sexuada do Plasmodium. O ser humano é o intermediário." },
+    { "id": "epidemiologia-conceitos-f06", "frente": "Ciclo monoxeno x heteroxeno", "verso": "Monoxeno: um único hospedeiro (lombriga). Heteroxeno: dois ou mais hospedeiros (esquistossomo, tênia, Plasmodium)." },
+    { "id": "epidemiologia-conceitos-f07", "frente": "Vetor mecânico", "verso": "Apenas transporta o agente, que não se desenvolve nele. Exemplo: mosca doméstica." },
+    { "id": "epidemiologia-conceitos-f08", "frente": "Vetor biológico", "verso": "O agente cumpre uma etapa obrigatória do ciclo dentro dele. Exemplos: Anopheles, Aedes aegypti, barbeiro e flebotomíneo." },
+    { "id": "epidemiologia-conceitos-f09", "frente": "Como o barbeiro transmite o Trypanosoma cruzi?", "verso": "Pelas fezes contaminadas, que entram pela lesão da picada ou pelas mucosas. A picada em si não injeta o parasita." },
+    { "id": "epidemiologia-conceitos-f10", "frente": "Endemia", "verso": "Ocorrência habitual de uma doença em uma região, com número de casos relativamente estável." },
+    { "id": "epidemiologia-conceitos-f11", "frente": "Epidemia x surto x pandemia", "verso": "Epidemia: casos acima do esperado na região. Surto: epidemia localizada em grupo ou local pequeno. Pandemia: epidemia em vários continentes." },
+    { "id": "epidemiologia-conceitos-f12", "frente": "Incidência x prevalência", "verso": "Incidência: casos novos em um período. Prevalência: total de casos existentes em um momento." },
+    { "id": "epidemiologia-conceitos-f13", "frente": "Letalidade x mortalidade", "verso": "Letalidade: óbitos em relação aos doentes. Mortalidade: óbitos em relação à população total." },
+    { "id": "epidemiologia-conceitos-f14", "frente": "Quatro componentes do saneamento básico (Lei nº 11.445/2007)", "verso": "Água potável, esgotamento sanitário, limpeza urbana e manejo de resíduos sólidos, drenagem das águas pluviais." },
+    { "id": "epidemiologia-conceitos-f15", "frente": "O que é notificação compulsória?", "verso": "Comunicação obrigatória às autoridades sanitárias de casos suspeitos ou confirmados de doenças da lista nacional (ex.: dengue, malária)." }
+  ],
+  "minijogos": {
+    "pares": [
+      { "a": "Hospedeiro definitivo", "b": "Fase adulta ou reprodução sexuada" },
+      { "a": "Hospedeiro intermediário", "b": "Larvas ou reprodução assexuada" },
+      { "a": "Vetor mecânico", "b": "Só transporta o agente, como a mosca doméstica" },
+      { "a": "Vetor biológico", "b": "O agente cumpre parte do ciclo nele, como no Anopheles" },
+      { "a": "Endemia", "b": "Ocorrência habitual e estável em uma região" },
+      { "a": "Epidemia", "b": "Casos acima do esperado para o lugar e o período" },
+      { "a": "Surto", "b": "Aumento de casos restrito a um grupo ou local pequeno" },
+      { "a": "Pandemia", "b": "Epidemia espalhada por vários continentes" }
+    ],
+    "sequencia": {
+      "instrucao": "Ordene as etapas da resposta da vigilância epidemiológica a um caso suspeito de doença de notificação compulsória.",
+      "itens": ["Atendimento de paciente com suspeita da doença", "Notificação do caso às autoridades sanitárias", "Investigação do caso, dos contatos e dos vetores da área", "Análise dos dados e comparação com o esperado", "Adoção de medidas de controle, como combate ao vetor", "Divulgação dos resultados e avaliação das ações"]
+    },
+    "classificacao": {
+      "instrucao": "Arraste cada situação para o termo epidemiológico que melhor a descreve.",
+      "categorias": ["Endemia", "Epidemia", "Surto", "Pandemia"],
+      "itens": [
+        { "texto": "Malária presente todos os anos na região amazônica, com número de casos semelhante ao histórico", "categoria": "Endemia" },
+        { "texto": "Esquistossomose persistente há décadas em áreas rurais com lagoas e sem esgoto", "categoria": "Endemia" },
+        { "texto": "Leishmaniose tegumentar com casos regulares entre trabalhadores de áreas de mata", "categoria": "Endemia" },
+        { "texto": "Casos de dengue em uma cidade muito acima da média dos verões anteriores", "categoria": "Epidemia" },
+        { "texto": "Zika espalhando-se rapidamente por vários estados brasileiros em 2015–2016", "categoria": "Epidemia" },
+        { "texto": "Dezenas de convidados com diarreia após o bufê de um casamento", "categoria": "Surto" },
+        { "texto": "Vários alunos de uma mesma escola passam mal após a merenda do dia", "categoria": "Surto" },
+        { "texto": "Casos de sarampo concentrados em uma única creche", "categoria": "Surto" },
+        { "texto": "Covid-19 com transmissão sustentada em todos os continentes", "categoria": "Pandemia" },
+        { "texto": "Gripe H1N1 disseminada por mais de cem países, em todos os continentes habitados, em 2009", "categoria": "Pandemia" }
+      ]
+    },
+    "verdadeiro_falso": [
+      { "afirmacao": "Parasitismo é uma relação ecológica harmônica, pois o parasita depende do hospedeiro vivo.", "valor": false, "explicacao": "É uma relação desarmônica: o parasita se beneficia e o hospedeiro é prejudicado." },
+      { "afirmacao": "Na esquistossomose, o caramujo Biomphalaria é o hospedeiro intermediário.", "valor": true, "explicacao": "No caramujo ocorrem as fases larvais e a multiplicação assexuada; os vermes adultos vivem no ser humano." },
+      { "afirmacao": "O ser humano é o hospedeiro definitivo do Plasmodium.", "valor": false, "explicacao": "A reprodução sexuada ocorre no Anopheles, que é o hospedeiro definitivo; o ser humano é o intermediário." },
+      { "afirmacao": "A mosca doméstica é um exemplo de vetor mecânico.", "valor": true, "explicacao": "Ela só transporta ovos, cistos e bactérias, que não se desenvolvem nela." },
+      { "afirmacao": "O barbeiro transmite a doença de Chagas injetando o protozoário pela picada.", "valor": false, "explicacao": "A transmissão vetorial ocorre pelas fezes do inseto, que contaminam a lesão ou as mucosas." },
+      { "afirmacao": "Uma doença endêmica pode apresentar epidemias em alguns anos.", "valor": true, "explicacao": "A dengue, por exemplo, é endêmica em muitas cidades e, em alguns verões, supera o esperado." },
+      { "afirmacao": "Pandemia significa uma epidemia de alta gravidade, mesmo que restrita a um país.", "valor": false, "explicacao": "Pandemia se refere à extensão geográfica, com disseminação por vários continentes, e não à gravidade." },
+      { "afirmacao": "Prevalência é o número de casos novos de uma doença em um período.", "valor": false, "explicacao": "Isso é incidência. Prevalência é o total de casos existentes em um momento." },
+      { "afirmacao": "Drenagem e manejo das águas pluviais fazem parte do saneamento básico.", "valor": true, "explicacao": "A lei brasileira inclui água potável, esgoto, resíduos sólidos e drenagem urbana." },
+      { "afirmacao": "Casos suspeitos de doenças de notificação compulsória só devem ser comunicados após confirmação laboratorial.", "valor": false, "explicacao": "A notificação deve ser feita já na suspeita, para que a investigação e o controle comecem rapidamente." }
+    ]
+  },
+  "missao_mundo_aberto": {
+    "titulo": "O Mapa da Febre",
+    "regiao": "Pântano dos Parasitas",
+    "npc": "Sentinela Vígil, a epidemiologista das palafitas",
+    "narrativa": "Uma febre se espalha pelas vilas sobre palafitas do pântano. Uns dizem que é a doença de sempre; outros juram que nunca houve tantos doentes. A Sentinela Vígil precisa de alguém que reúna as pistas, descubra quem transmite a febre e quebre o ciclo antes que ela atravesse o pântano.",
+    "objetivo": "Coletar notificações, classificar a situação (endemia, epidemia, surto ou pandemia), identificar vetor e hospedeiros do parasita e aplicar a profilaxia que quebra a cadeia de transmissão.",
+    "mecanica": "investigacao",
+    "etapas": [
+      "Recolher as fichas de notificação nas três vilas e montar o gráfico de casos semanais",
+      "Comparar o gráfico com a média histórica e classificar a situação de cada vila",
+      "Capturar insetos e caramujos nas margens e descobrir quem é vetor biológico, quem é vetor mecânico e quem é hospedeiro intermediário",
+      "Escolher, entre drenagem de água parada, tratamento dos doentes, rede de esgoto e mosquiteiros, a combinação que quebra o ciclo",
+      "Apresentar o relatório ao conselho do pântano e acompanhar a queda dos casos"
+    ],
+    "recompensa_xp": 120,
+    "item_recompensa": "Lupa da Notificação"
+  }
+}

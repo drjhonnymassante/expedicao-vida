@@ -1,0 +1,456 @@
+{
+  "topico": "drogas-licitas-ilicitas",
+  "versao": 1,
+  "questoes": [
+    {
+      "id": "drogas-licitas-ilicitas-q01",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Qual alternativa reúne apenas drogas classificadas como depressoras do sistema nervoso central?",
+      "alternativas": [
+        "Cocaína, crack e anfetaminas",
+        "Nicotina, cafeína e cocaína",
+        "LSD, psilocibina e ecstasy",
+        "Álcool, benzodiazepínicos e solventes inalantes",
+        "Crack, LSD e cafeína"
+      ],
+      "correta": 3,
+      "explicacao": "Álcool, calmantes benzodiazepínicos e solventes diminuem a atividade cerebral. Cocaína, crack, anfetaminas, nicotina e cafeína são estimulantes; LSD e psilocibina são perturbadoras, e o ecstasy tem efeitos estimulantes e perturbadores.",
+      "habilidade": "Classificar drogas pelo efeito no sistema nervoso central.",
+      "tags": [
+        "classificação"
+      ]
+    },
+    {
+      "id": "drogas-licitas-ilicitas-q02",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "O monóxido de carbono presente na fumaça do cigarro é prejudicial porque:",
+      "alternativas": [
+        "liga-se à hemoglobina com grande afinidade, reduzindo o transporte de oxigênio",
+        "é a substância responsável pela dependência do tabaco",
+        "estimula o batimento dos cílios da traqueia",
+        "aumenta a produção de hemácias até níveis tóxicos em poucos minutos",
+        "é o principal componente cancerígeno do alcatrão"
+      ],
+      "correta": 0,
+      "explicacao": "O CO forma carboxiemoglobina, ocupando o lugar do oxigênio na hemoglobina. A dependência é causada pela nicotina, os cancerígenos estão no alcatrão e a fumaça prejudica, e não estimula, os cílios.",
+      "habilidade": "Relacionar componentes do tabaco a seus efeitos.",
+      "tags": [
+        "tabaco",
+        "hemoglobina"
+      ]
+    },
+    {
+      "id": "drogas-licitas-ilicitas-q03",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Um usuário de determinada droga percebe que a mesma dose produz cada vez menos efeito e passa a consumir quantidades maiores. Esse fenômeno é chamado de:",
+      "alternativas": [
+        "abstinência",
+        "overdose",
+        "tolerância",
+        "redução de danos",
+        "dependência psicológica"
+      ],
+      "correta": 2,
+      "explicacao": "Tolerância é a adaptação do organismo que reduz o efeito de uma mesma dose. Abstinência são os sintomas na falta da droga; dependência psicológica é o desejo intenso de usar; redução de danos é uma estratégia de saúde pública.",
+      "habilidade": "Diferenciar tolerância, dependência e abstinência.",
+      "tags": [
+        "tolerância",
+        "dependência"
+      ]
+    },
+    {
+      "id": "drogas-licitas-ilicitas-q04",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Após alguns copos de cerveja, uma pessoa fica falante e desinibida. Isso NÃO significa que o álcool seja estimulante, porque:",
+      "alternativas": [
+        "o álcool só age no fígado e não chega ao cérebro",
+        "a desinibição resulta da depressão de áreas cerebrais que controlam o comportamento, já que o álcool potencializa o GABA, um neurotransmissor inibitório",
+        "o álcool bloqueia a recaptação de dopamina, assim como a cocaína",
+        "a euforia é causada pelo acetaldeído produzido nos músculos",
+        "o álcool aumenta a liberação de glutamato, neurotransmissor inibitório"
+      ],
+      "correta": 1,
+      "explicacao": "O etanol reforça a ação inibitória do GABA e reduz o glutamato (excitatório). Ao deprimir circuitos de controle, libera comportamentos. Ele chega ao cérebro, não age como a cocaína e o acetaldeído é produzido no fígado.",
+      "habilidade": "Explicar o mecanismo de ação do álcool no SNC.",
+      "tags": [
+        "álcool",
+        "neurotransmissores"
+      ]
+    },
+    {
+      "id": "drogas-licitas-ilicitas-q05",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "O crack costuma levar à dependência mais rapidamente do que a cocaína aspirada. Uma explicação biológica é que o crack:",
+      "alternativas": [
+        "é uma substância depressora, diferente da cocaína",
+        "não age sobre a dopamina, apenas sobre a serotonina",
+        "é absorvido lentamente pela mucosa do estômago",
+        "produz efeitos que duram vários dias",
+        "é fumado e absorvido pelos alvéolos, chegando ao cérebro em segundos, com efeito intenso e curto que estimula o uso repetido"
+      ],
+      "correta": 4,
+      "explicacao": "A enorme superfície alveolar leva a droga ao sangue e ao cérebro muito depressa; o pico intenso e breve favorece o uso compulsivo. O crack é cocaína (estimulante, age na dopamina) e seu efeito é curto.",
+      "habilidade": "Relacionar via de administração, velocidade de efeito e dependência.",
+      "tags": [
+        "crack",
+        "cocaína",
+        "dependência"
+      ]
+    },
+    {
+      "id": "drogas-licitas-ilicitas-q06",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Sobre os cigarros eletrônicos, é correto afirmar que:",
+      "alternativas": [
+        "liberam apenas vapor de água aromatizado, sem riscos",
+        "não contêm nicotina e, por isso, não causam dependência",
+        "geralmente contêm nicotina, produzem um aerossol com substâncias tóxicas e têm a venda proibida pela Anvisa no Brasil",
+        "são recomendados por órgãos de saúde como tratamento oficial para parar de fumar",
+        "afetam apenas a boca, sem chegar aos pulmões"
+      ],
+      "correta": 2,
+      "explicacao": "Vapes e pods costumam ter nicotina, que causa dependência, e geram aerossol que atinge as vias aéreas e os pulmões. No Brasil, fabricação, importação, venda e propaganda são proibidas.",
+      "habilidade": "Avaliar informações sobre produtos de tabaco.",
+      "tags": [
+        "cigarro eletrônico",
+        "nicotina"
+      ]
+    },
+    {
+      "id": "drogas-licitas-ilicitas-q07",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Em uma sinapse dopaminérgica, depois de liberada na fenda sináptica, a dopamina é recolhida de volta ao neurônio pré-sináptico por proteínas transportadoras. A cocaína se liga a esses transportadores e impede seu funcionamento. Um efeito imediato dessa ação é:",
+      "alternativas": [
+        "o acúmulo de dopamina na fenda sináptica, prolongando a estimulação do neurônio pós-sináptico",
+        "a destruição dos receptores de dopamina do neurônio pós-sináptico",
+        "a diminuição da quantidade de dopamina na fenda, causando sonolência",
+        "a transformação da dopamina em GABA, com efeito depressor",
+        "o bloqueio da produção de dopamina no neurônio pré-sináptico"
+      ],
+      "correta": 0,
+      "explicacao": "Sem recaptação, a dopamina permanece mais tempo na fenda e continua estimulando os receptores, gerando euforia e agitação. A cocaína não destrói receptores, não converte dopamina em GABA e não bloqueia sua síntese.",
+      "habilidade": "Interpretar o mecanismo de uma droga em um esquema de sinapse.",
+      "tags": [
+        "cocaína",
+        "sinapse",
+        "dopamina"
+      ]
+    },
+    {
+      "id": "drogas-licitas-ilicitas-q08",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Um jovem de 17 anos passou a usar esteroides anabolizantes para ganhar massa muscular. Meses depois, exames mostraram testículos reduzidos e baixa contagem de espermatozoides. Esses efeitos são explicados porque o excesso de andrógenos:",
+      "alternativas": [
+        "destrói diretamente as células musculares do escroto",
+        "estimula a hipófise a produzir mais LH e FSH, esgotando os testículos",
+        "causa retroalimentação negativa sobre o hipotálamo e a hipófise, reduzindo LH e FSH, que estimulam os testículos",
+        "transforma os espermatozoides em células musculares",
+        "aumenta a temperatura corporal acima do limite da espermatogênese"
+      ],
+      "correta": 2,
+      "explicacao": "Altos níveis de hormônio sinalizam ao eixo hipotálamo-hipófise que não é preciso estimular as gônadas. Com menos LH e FSH, os testículos atrofiam e produzem menos espermatozoides. Não há aumento de LH e FSH nem conversão de células.",
+      "habilidade": "Aplicar o conceito de retroalimentação hormonal a um caso de uso de anabolizantes.",
+      "tags": [
+        "anabolizantes",
+        "hormônios",
+        "retroalimentação"
+      ]
+    },
+    {
+      "id": "drogas-licitas-ilicitas-q09",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Um posto de saúde distribui água e orientações em festas, recomenda não dirigir após beber e oferece insumos para que usuários não compartilhem cachimbos e seringas, mantendo contato com quem não deseja parar de usar drogas naquele momento. Essa estratégia:",
+      "alternativas": [
+        "incentiva o uso de drogas e por isso é contrária às políticas de saúde",
+        "só é aplicável a drogas lícitas, como álcool e tabaco",
+        "exige que o usuário esteja em abstinência para ser atendido",
+        "corresponde à redução de danos, que busca diminuir prejuízos à saúde, como a transmissão de HIV e hepatites, e aproximar a pessoa do cuidado",
+        "substitui completamente os tratamentos oferecidos nos CAPS AD"
+      ],
+      "correta": 3,
+      "explicacao": "Redução de danos diminui riscos sem impor a abstinência como condição. Vale para drogas lícitas e ilícitas, não estimula o uso e complementa, em vez de substituir, o tratamento nos CAPS AD.",
+      "habilidade": "Avaliar estratégias de saúde pública relacionadas ao uso de drogas.",
+      "tags": [
+        "redução de danos",
+        "saúde pública"
+      ]
+    },
+    {
+      "id": "drogas-licitas-ilicitas-q10",
+      "nivel": "diamante",
+      "tipo": "multipla_escolha",
+      "enunciado": "Uma gestante consome bebidas alcoólicas com frequência e também é fumante. Considerando a fisiologia da placenta, o transporte de gases e o metabolismo hepático, a análise mais correta dos riscos ao feto é:",
+      "alternativas": [
+        "O etanol atravessa a placenta, mas o fígado fetal o metaboliza tão rapidamente quanto o materno; por isso, o risco do álcool restringe-se ao primeiro trimestre.",
+        "O CO do cigarro prejudica o feto porque oxida o ferro da hemoglobina, formando metemoglobina, enquanto o etanol fica retido na placenta.",
+        "A nicotina dilata os vasos da placenta e aumenta o fluxo de sangue ao feto, o que explica o maior risco de bebês muito grandes ao nascer.",
+        "A hemoglobina fetal, por ter maior afinidade pelo O₂ que a materna, torna o feto imune aos efeitos do monóxido de carbono.",
+        "O etanol atravessa a placenta e pode causar a síndrome alcoólica fetal, enquanto o CO forma carboxiemoglobina e reduz a oferta de O₂ ao feto, e a nicotina contrai vasos, contribuindo para baixo peso ao nascer."
+      ],
+      "correta": 4,
+      "explicacao": "A placenta não barra moléculas pequenas como etanol, CO e nicotina. O fígado fetal tem pouca capacidade de metabolizar o etanol, que pode lesar o desenvolvimento, sobretudo do sistema nervoso, em qualquer fase da gestação (síndrome alcoólica fetal); não existe dose segura. O CO forma carboxiemoglobina (não metemoglobina) também no sangue fetal, e a hemoglobina fetal não protege contra ele. A nicotina causa vasoconstrição, e não vasodilatação, reduzindo oxigênio e nutrientes e favorecendo o baixo peso ao nascer.",
+      "habilidade": "Integrar placenta, transporte de gases e efeitos de drogas no desenvolvimento.",
+      "tags": [
+        "gestação",
+        "álcool",
+        "tabaco",
+        "integração"
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "drogas-licitas-ilicitas-f01",
+      "frente": "O que são drogas psicotrópicas?",
+      "verso": "Substâncias que agem no sistema nervoso central e alteram humor, percepção, comportamento ou consciência."
+    },
+    {
+      "id": "drogas-licitas-ilicitas-f02",
+      "frente": "Lícita x ilícita: qual é o critério?",
+      "verso": "Jurídico (o que a lei permite), e não o grau de perigo para a saúde."
+    },
+    {
+      "id": "drogas-licitas-ilicitas-f03",
+      "frente": "Efeito das drogas depressoras",
+      "verso": "Diminuem a atividade do SNC. Exemplos: álcool, benzodiazepínicos, opioides, solventes."
+    },
+    {
+      "id": "drogas-licitas-ilicitas-f04",
+      "frente": "Efeito das drogas estimulantes",
+      "verso": "Aumentam a atividade do SNC. Exemplos: cocaína, crack, anfetaminas, nicotina, cafeína."
+    },
+    {
+      "id": "drogas-licitas-ilicitas-f05",
+      "frente": "Efeito das drogas perturbadoras",
+      "verso": "Alteram a percepção da realidade. Exemplos: LSD, psilocibina, THC da maconha."
+    },
+    {
+      "id": "drogas-licitas-ilicitas-f06",
+      "frente": "Como o álcool age no cérebro?",
+      "verso": "Potencializa o GABA (inibitório) e inibe o glutamato (excitatório): é depressor."
+    },
+    {
+      "id": "drogas-licitas-ilicitas-f07",
+      "frente": "Metabolização do etanol no fígado",
+      "verso": "Etanol → acetaldeído (tóxico) → acetato, pela ação de enzimas como a álcool desidrogenase."
+    },
+    {
+      "id": "drogas-licitas-ilicitas-f08",
+      "frente": "Nicotina, alcatrão e CO: papel de cada um",
+      "verso": "Nicotina: dependência. Alcatrão: câncer. CO: liga-se à hemoglobina e reduz o transporte de O₂."
+    },
+    {
+      "id": "drogas-licitas-ilicitas-f09",
+      "frente": "Cigarro eletrônico no Brasil",
+      "verso": "Contém nicotina, gera aerossol tóxico e tem fabricação, importação, venda e propaganda proibidas pela Anvisa."
+    },
+    {
+      "id": "drogas-licitas-ilicitas-f10",
+      "frente": "Mecanismo da cocaína",
+      "verso": "Bloqueia a recaptação de dopamina, que se acumula na fenda sináptica."
+    },
+    {
+      "id": "drogas-licitas-ilicitas-f11",
+      "frente": "Principal composto psicoativo da maconha",
+      "verso": "THC (tetra-hidrocanabinol), que age em receptores canabinoides."
+    },
+    {
+      "id": "drogas-licitas-ilicitas-f12",
+      "frente": "Sistema de recompensa",
+      "verso": "Via que leva dopamina da área tegmentar ventral ao núcleo accumbens, gerando prazer e motivação."
+    },
+    {
+      "id": "drogas-licitas-ilicitas-f13",
+      "frente": "Tolerância x abstinência",
+      "verso": "Tolerância: a mesma dose faz menos efeito. Abstinência: sintomas que surgem na falta da droga."
+    },
+    {
+      "id": "drogas-licitas-ilicitas-f14",
+      "frente": "Por que anabolizantes causam atrofia testicular?",
+      "verso": "Retroalimentação negativa reduz LH e FSH, que estimulam os testículos."
+    },
+    {
+      "id": "drogas-licitas-ilicitas-f15",
+      "frente": "O que é redução de danos?",
+      "verso": "Estratégia de saúde pública que diminui prejuízos do uso de drogas sem exigir abstinência imediata."
+    }
+  ],
+  "minijogos": {
+    "pares": [
+      {
+        "a": "Nicotina",
+        "b": "Dependência do tabaco"
+      },
+      {
+        "a": "Alcatrão",
+        "b": "Substâncias cancerígenas"
+      },
+      {
+        "a": "Monóxido de carbono",
+        "b": "Carboxiemoglobina"
+      },
+      {
+        "a": "Cocaína",
+        "b": "Bloqueio da recaptação de dopamina"
+      },
+      {
+        "a": "THC",
+        "b": "Receptores canabinoides"
+      },
+      {
+        "a": "MDMA (ecstasy)",
+        "b": "Grande liberação de serotonina"
+      },
+      {
+        "a": "Álcool",
+        "b": "Potencializa o GABA"
+      },
+      {
+        "a": "Anabolizantes",
+        "b": "Queda de LH e FSH"
+      }
+    ],
+    "sequencia": {
+      "instrucao": "Ordene as etapas do caminho do álcool no organismo, da ingestão à sua metabolização no fígado.",
+      "itens": [
+        "Ingestão da bebida alcoólica",
+        "Absorção do etanol no estômago e, sobretudo, no intestino delgado",
+        "Transporte do etanol pelo sangue até o fígado",
+        "Oxidação do etanol a acetaldeído pela álcool desidrogenase",
+        "Conversão do acetaldeído, tóxico, em acetato"
+      ]
+    },
+    "classificacao": {
+      "instrucao": "Classifique cada substância de acordo com seu efeito principal no sistema nervoso central.",
+      "categorias": [
+        "Depressora",
+        "Estimulante",
+        "Perturbadora"
+      ],
+      "itens": [
+        {
+          "texto": "Álcool",
+          "categoria": "Depressora"
+        },
+        {
+          "texto": "Benzodiazepínicos (calmantes)",
+          "categoria": "Depressora"
+        },
+        {
+          "texto": "Morfina e heroína",
+          "categoria": "Depressora"
+        },
+        {
+          "texto": "Solventes inalantes (loló, cola)",
+          "categoria": "Depressora"
+        },
+        {
+          "texto": "Cocaína",
+          "categoria": "Estimulante"
+        },
+        {
+          "texto": "Crack",
+          "categoria": "Estimulante"
+        },
+        {
+          "texto": "Nicotina",
+          "categoria": "Estimulante"
+        },
+        {
+          "texto": "Cafeína",
+          "categoria": "Estimulante"
+        },
+        {
+          "texto": "Anfetaminas (rebite)",
+          "categoria": "Estimulante"
+        },
+        {
+          "texto": "LSD",
+          "categoria": "Perturbadora"
+        },
+        {
+          "texto": "Cogumelos com psilocibina",
+          "categoria": "Perturbadora"
+        }
+      ]
+    },
+    "verdadeiro_falso": [
+      {
+        "afirmacao": "O álcool é uma droga depressora do sistema nervoso central.",
+        "valor": true,
+        "explicacao": "Ele potencializa o GABA e reduz a atividade cerebral; a desinibição inicial não o torna estimulante."
+      },
+      {
+        "afirmacao": "Toda droga lícita é segura para a saúde.",
+        "valor": false,
+        "explicacao": "Lícito é critério legal. Álcool e tabaco causam muitas doenças e mortes."
+      },
+      {
+        "afirmacao": "A nicotina é a principal responsável pela dependência do cigarro.",
+        "valor": true,
+        "explicacao": "Ela estimula a liberação de dopamina no sistema de recompensa."
+      },
+      {
+        "afirmacao": "Cigarros eletrônicos liberam apenas vapor de água.",
+        "valor": false,
+        "explicacao": "Produzem aerossol com nicotina, solventes e outras substâncias tóxicas."
+      },
+      {
+        "afirmacao": "O crack é uma forma de cocaína preparada para ser fumada.",
+        "valor": true,
+        "explicacao": "Absorvido nos alvéolos, chega ao cérebro em segundos."
+      },
+      {
+        "afirmacao": "Tolerância é o surgimento de sintomas quando a droga falta.",
+        "valor": false,
+        "explicacao": "Isso é abstinência. Tolerância é a perda de efeito de uma mesma dose."
+      },
+      {
+        "afirmacao": "Anabolizantes podem reduzir a produção de espermatozoides.",
+        "valor": true,
+        "explicacao": "Por retroalimentação negativa, caem o LH e o FSH."
+      },
+      {
+        "afirmacao": "A placenta impede totalmente a passagem do álcool para o feto.",
+        "valor": false,
+        "explicacao": "O etanol atravessa a placenta e pode causar a síndrome alcoólica fetal."
+      },
+      {
+        "afirmacao": "A redução de danos exige que a pessoa pare de usar drogas para ser atendida.",
+        "valor": false,
+        "explicacao": "Ela não condiciona o cuidado à abstinência; busca reduzir riscos e manter o vínculo com a saúde."
+      },
+      {
+        "afirmacao": "Drogas que causam dependência costumam aumentar a dopamina no sistema de recompensa.",
+        "valor": true,
+        "explicacao": "Esse aumento, mais intenso que o de estímulos naturais, reforça o comportamento de uso."
+      }
+    ]
+  },
+  "missao_mundo_aberto": {
+    "titulo": "A Festa Segura da Praça",
+    "regiao": "Vila do Bem-Viver",
+    "npc": "Agente comunitária Dandara, do posto de saúde",
+    "narrativa": "A Vila do Bem-Viver vai fazer sua festa junina na praça, e a agente Dandara está preocupada: no ano passado houve jovens passando mal, um acidente de moto na saída e boatos de que o vape \"só solta vapor\". Ela pede ajuda ao viajante para montar uma barraca de informação que salve vidas sem julgar ninguém.",
+    "objetivo": "Montar a barraca de saúde da festa: classificar as substâncias corretamente, desmentir boatos com base no funcionamento do cérebro e organizar ações de redução de danos.",
+    "mecanica": "investigacao",
+    "etapas": [
+      "Mural das Substâncias: separar cartazes em depressoras, estimulantes e perturbadoras",
+      "Caça aos Boatos: corrigir frases erradas sobre álcool, vapes e anabolizantes ouvidas na praça",
+      "Laboratório da Sinapse: montar o modelo que mostra como a cocaína bloqueia a recaptação de dopamina",
+      "Plano de Redução de Danos: distribuir água, organizar caronas sem motorista alcoolizado e indicar o CAPS AD",
+      "Conversa com o Seu Tonico: explicar tolerância e abstinência a um morador que bebe todos os dias"
+    ],
+    "recompensa_xp": 150,
+    "item_recompensa": "Bússola da Escolha Consciente"
+  }
+}

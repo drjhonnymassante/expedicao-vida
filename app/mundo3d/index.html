@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Expedição Vida 3D</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@500;700;800&display=swap">
+<style>
+  :root { --vidro: rgba(16, 24, 40, .55); --vidro-borda: rgba(255,255,255,.16); --neon: #7CFFB2; --neon2: #6EC8FF; --roxo: #B388FF; --ouro: #FFD166; --txt: #F2F7FF; --sub: #B9C6DA; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #0b1424; color: var(--txt); font-family: Nunito, system-ui, sans-serif; }
+  canvas#cena { position: fixed; inset: 0; width: 100vw; height: 100vh; display: block; }
+  .oculto { display: none !important; }
+  .vidro { background: var(--vidro); backdrop-filter: blur(14px) saturate(140%); -webkit-backdrop-filter: blur(14px) saturate(140%); border: 1px solid var(--vidro-borda); border-radius: 18px; box-shadow: 0 10px 40px rgba(0,0,0,.35); }
+  .titulo { font-family: Fredoka, Nunito, sans-serif; }
+
+  /* Perfil */
+  #perfil { position: fixed; top: 16px; left: 16px; display: flex; gap: 12px; align-items: center; padding: 10px 16px 10px 10px; }
+  #retrato { width: 64px; height: 64px; border-radius: 16px; background: radial-gradient(circle at 50% 35%, rgba(124,255,178,.45), rgba(110,200,255,.15)); border: 2px solid rgba(124,255,178,.55); }
+  #perfil .nome { font-family: Fredoka; font-size: 18px; font-weight: 700; }
+  #perfil .forma { font-size: 12.5px; color: var(--sub); }
+  .xp { position: relative; width: 210px; height: 12px; border-radius: 8px; background: rgba(255,255,255,.12); overflow: hidden; margin-top: 6px; }
+  .xp div { position: absolute; inset: 0 auto 0 0; background: linear-gradient(90deg, #36D399, #7CFFB2, #6EC8FF); box-shadow: 0 0 14px rgba(124,255,178,.8); border-radius: 8px; transition: width .6s cubic-bezier(.2,.8,.2,1); }
+  #perfil .xptxt { font-size: 11.5px; color: var(--sub); margin-top: 4px; }
+  #nivelBadge { position: absolute; left: 52px; top: 52px; background: var(--ouro); color: #3b2a00; font-family: Fredoka; font-weight: 700; font-size: 12px; border-radius: 10px; padding: 1px 7px; box-shadow: 0 2px 10px rgba(255,209,102,.6); }
+
+  /* Barra superior direita */
+  #acoes { position: fixed; top: 16px; right: 16px; display: flex; gap: 8px; }
+  .bt { font-family: Nunito; font-weight: 800; font-size: 13.5px; color: var(--txt); background: var(--vidro); border: 1px solid var(--vidro-borda); backdrop-filter: blur(12px); border-radius: 14px; padding: 10px 14px; cursor: pointer; text-decoration: none; transition: transform .15s, background .15s; }
+  .bt:hover { transform: translateY(-2px); background: rgba(255,255,255,.18); }
+  .bt.prim { background: linear-gradient(135deg, #22c55e, #10b981); border: none; box-shadow: 0 6px 24px rgba(34,197,94,.45); }
+  .bt.roxo { background: linear-gradient(135deg, #8b5cf6, #6366f1); border: none; box-shadow: 0 6px 24px rgba(139,92,246,.45); }
+  .bt.ouro { background: linear-gradient(135deg, #fbbf24, #f59e0b); color: #2b1d00; border: none; box-shadow: 0 6px 24px rgba(251,191,36,.45); }
+
+  /* Desafios do dia */
+  #diarias { position: fixed; top: 78px; right: 16px; width: 270px; padding: 12px 14px; }
+  #diarias h4 { margin: 0 0 8px; font-family: Fredoka; font-size: 15px; display: flex; justify-content: space-between; }
+  .dq { display: flex; align-items: center; gap: 10px; font-size: 13px; margin: 7px 0; }
+  .dq .ic { width: 28px; height: 28px; border-radius: 9px; display: grid; place-items: center; background: rgba(255,255,255,.1); font-size: 15px; }
+  .dq .bar { height: 5px; border-radius: 4px; background: rgba(255,255,255,.12); margin-top: 4px; overflow: hidden; }
+  .dq .bar div { height: 100%; background: var(--ouro); }
+  .dq.ok .ic { background: rgba(124,255,178,.25); }
+  .dq.ok .tx { text-decoration: line-through; opacity: .7; }
+
+  /* Minimapa */
+  #minimapa { position: fixed; right: 16px; bottom: 16px; width: 190px; height: 190px; border-radius: 50%; border: 3px solid rgba(255,255,255,.35); box-shadow: 0 10px 40px rgba(0,0,0,.45); background: rgba(10,30,50,.6); }
+  #bussola { position: fixed; right: 100px; bottom: 202px; font-family: Fredoka; font-size: 12px; color: var(--sub); }
+
+  /* Região */
+  #regiao { position: fixed; top: 22px; left: 50%; transform: translateX(-50%) translateY(-20px); text-align: center; pointer-events: none; opacity: 0; transition: opacity .7s, transform .7s; }
+  #regiao.on { opacity: 1; transform: translateX(-50%) translateY(0); }
+  #regiao .r1 { font-size: 12px; letter-spacing: .28em; text-transform: uppercase; color: var(--neon); font-weight: 800; }
+  #regiao .r2 { font-family: Fredoka; font-size: 40px; font-weight: 700; text-shadow: 0 4px 30px rgba(0,0,0,.6); }
+  #regiao .r3 { font-size: 15px; color: var(--sub); }
+
+  #prompt { position: fixed; left: 50%; bottom: 34px; transform: translateX(-50%); padding: 10px 18px; font-weight: 800; font-size: 15px; display: flex; gap: 10px; align-items: center; }
+  .tecla { display: inline-grid; place-items: center; min-width: 28px; height: 28px; padding: 0 6px; border-radius: 8px; background: #fff; color: #111; font-family: Fredoka; font-weight: 700; box-shadow: 0 3px 0 #9aa7b8; }
+  #dica { position: fixed; left: 16px; bottom: 16px; padding: 10px 14px; font-size: 12.5px; color: var(--sub); line-height: 1.7; }
+  #dica b { color: var(--txt); }
+
+  /* Toasts e combo */
+  #toasts { position: fixed; top: 96px; left: 16px; display: flex; flex-direction: column; gap: 8px; }
+  .toast { padding: 10px 14px; font-weight: 800; font-size: 14px; animation: entra .4s cubic-bezier(.2,.9,.3,1.3), sai .5s 2.6s forwards; display: flex; gap: 10px; align-items: center; }
+  .toast .ic { font-size: 22px; }
+  .toast small { display: block; font-weight: 600; color: var(--sub); font-size: 12px; }
+  @keyframes entra { from { transform: translateX(-30px); opacity: 0; } }
+  @keyframes sai { to { transform: translateX(-30px); opacity: 0; } }
+  #combo { position: fixed; top: 42%; right: 8%; font-family: Fredoka; font-size: 54px; font-weight: 700; color: var(--ouro); text-shadow: 0 0 24px rgba(255,209,102,.8); pointer-events: none; opacity: 0; transform: scale(.6) rotate(-8deg); transition: all .25s; z-index: 40; }
+  #combo.on { opacity: 1; transform: scale(1) rotate(-8deg); }
+
+  /* Painéis */
+  #veu { position: fixed; inset: 0; z-index: 30; display: grid; place-items: center; background: radial-gradient(circle at 50% 40%, rgba(20,40,70,.35), rgba(5,10,20,.75)); }
+  .painel { width: min(680px, 94vw); max-height: 88vh; overflow-y: auto; padding: 26px 28px; border-radius: 24px; background: linear-gradient(160deg, rgba(30,41,70,.92), rgba(18,24,42,.94)); border: 1px solid rgba(255,255,255,.14); box-shadow: 0 30px 80px rgba(0,0,0,.6), inset 0 1px 0 rgba(255,255,255,.08); animation: abre .35s cubic-bezier(.2,.9,.3,1.2); }
+  @keyframes abre { from { transform: translateY(24px) scale(.96); opacity: 0; } }
+  .painel h2 { font-family: Fredoka; font-size: 28px; margin: 6px 0 10px; }
+  .etq { font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--neon); font-weight: 800; }
+  .npc { display: flex; gap: 14px; align-items: flex-start; background: rgba(255,255,255,.06); border-radius: 16px; padding: 14px; margin: 12px 0; }
+  .npc .rosto { flex: none; width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center; font-family: Fredoka; font-size: 20px; font-weight: 700; color: #fff; }
+  .npc .fala { font-size: 15.5px; line-height: 1.55; }
+  .npc .fala b { color: var(--ouro); }
+  .etapas { list-style: none; padding: 0; margin: 10px 0; }
+  .etapas li { padding: 8px 12px 8px 38px; position: relative; margin: 6px 0; background: rgba(255,255,255,.04); border-radius: 10px; font-size: 14px; color: #dfe7f5; }
+  .etapas li::before { content: attr(data-n); position: absolute; left: 10px; top: 8px; width: 20px; height: 20px; border-radius: 50%; background: rgba(124,255,178,.2); color: var(--neon); font-size: 12px; font-weight: 800; display: grid; place-items: center; }
+  .premio { display: flex; gap: 10px; flex-wrap: wrap; margin: 12px 0; }
+  .premio span { background: rgba(255,209,102,.14); color: var(--ouro); border: 1px solid rgba(255,209,102,.3); padding: 6px 12px; border-radius: 12px; font-weight: 800; font-size: 13.5px; }
+  .acoesP { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
+  .questao { font-size: 17px; line-height: 1.55; margin: 12px 0 14px; }
+  .alt { display: flex; gap: 12px; align-items: center; width: 100%; text-align: left; border: 1px solid rgba(255,255,255,.14); background: rgba(255,255,255,.05); color: var(--txt); padding: 12px 14px; border-radius: 14px; margin: 8px 0; cursor: pointer; font-size: 14.5px; font-family: Nunito; transition: transform .12s, background .12s, border-color .12s; }
+  .alt:hover:not(:disabled) { transform: translateX(4px); border-color: var(--neon2); background: rgba(110,200,255,.1); }
+  .alt .let { flex: none; width: 28px; height: 28px; border-radius: 9px; background: rgba(255,255,255,.1); display: grid; place-items: center; font-family: Fredoka; font-weight: 700; }
+  .alt.certa { border-color: #36D399; background: rgba(54,211,153,.18); }
+  .alt.certa .let { background: #36D399; color: #052e1a; }
+  .alt.errada { border-color: #f87171; background: rgba(248,113,113,.15); animation: treme .35s; }
+  @keyframes treme { 20%, 60% { transform: translateX(-6px); } 40%, 80% { transform: translateX(6px); } }
+  .exp { margin-top: 12px; padding: 12px 14px; background: rgba(255,255,255,.06); border-radius: 12px; font-size: 14px; line-height: 1.55; color: #dfe7f5; }
+  .liga { display: inline-block; padding: 3px 10px; border-radius: 10px; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+  .l-bronze { background: #7c4a1f55; color: #f0b27a } .l-prata { background: #64748b55; color: #e2e8f0 } .l-ouro { background: #b4530955; color: #fde68a } .l-diamante { background: #0369a155; color: #7dd3fc }
+  .timer { height: 6px; border-radius: 4px; background: rgba(255,255,255,.1); overflow: hidden; margin-top: 10px; }
+  .timer div { height: 100%; background: linear-gradient(90deg, var(--ouro), #f97316); transition: width .1s linear; }
+  .estrelas { font-size: 44px; letter-spacing: 6px; text-align: center; margin: 8px 0; }
+  .estrelas .off { filter: grayscale(1) opacity(.3); }
+  .flashcard { perspective: 1000px; height: 200px; margin: 14px 0; cursor: pointer; }
+  .flashcard .in { position: relative; width: 100%; height: 100%; transition: transform .6s; transform-style: preserve-3d; }
+  .flashcard.virado .in { transform: rotateY(180deg); }
+  .flashcard .face { position: absolute; inset: 0; backface-visibility: hidden; border-radius: 18px; display: grid; place-items: center; padding: 20px; text-align: center; font-size: 18px; line-height: 1.45; }
+  .flashcard .frente { background: linear-gradient(135deg, rgba(139,92,246,.35), rgba(99,102,241,.25)); border: 1px solid rgba(179,136,255,.5); }
+  .flashcard .verso { background: linear-gradient(135deg, rgba(54,211,153,.3), rgba(16,185,129,.2)); border: 1px solid rgba(124,255,178,.5); transform: rotateY(180deg); }
+
+  /* Título */
+  #inicio { position: fixed; inset: 0; z-index: 50; display: grid; place-items: center; background: radial-gradient(ellipse at 50% 120%, rgba(11,20,36,.2), rgba(11,20,36,.65)); }
+  #inicio .caixa { text-align: center; width: min(560px, 92vw); }
+  #logo { font-family: Fredoka; font-weight: 700; font-size: clamp(46px, 8vw, 86px); line-height: .95; margin: 0; background: linear-gradient(180deg, #ffffff, #b6ffd7 55%, #6EC8FF); -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(0 8px 30px rgba(0,0,0,.45)); }
+  #logo small { display: block; font-size: .32em; letter-spacing: .5em; color: var(--neon); -webkit-text-fill-color: var(--neon); margin-top: 8px; }
+  #inicio .sub { font-size: 17px; color: #e3ecfa; margin: 14px 0 22px; text-shadow: 0 2px 12px rgba(0,0,0,.5); }
+  #inicio .form { padding: 18px; }
+  #inicio input[type=text] { width: 100%; font-family: Fredoka; font-size: 18px; padding: 13px 16px; border-radius: 14px; border: 1px solid rgba(255,255,255,.25); background: rgba(255,255,255,.1); color: #fff; text-align: center; outline: none; }
+  #inicio input[type=text]::placeholder { color: rgba(255,255,255,.55); }
+  .cores { display: flex; gap: 10px; justify-content: center; margin: 14px 0; }
+  .cores button { width: 34px; height: 34px; border-radius: 50%; border: 3px solid transparent; cursor: pointer; transition: transform .15s; }
+  .cores button.sel { border-color: #fff; transform: scale(1.15); }
+  #inicio .linha { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 6px; }
+  #inicio .bt { font-size: 16px; padding: 14px 24px; }
+  #inicio label { display: block; font-size: 13px; color: var(--sub); margin-top: 14px; cursor: pointer; }
+  #carga { font-size: 12.5px; color: var(--sub); margin-top: 12px; }
+
+  /* Evolução */
+  #evolucao { position: fixed; inset: 0; z-index: 45; display: grid; place-items: end center; padding-bottom: 12vh; pointer-events: none; }
+  #evolucao .t1 { font-family: Fredoka; font-size: clamp(48px, 9vw, 96px); font-weight: 700; letter-spacing: .05em; background: linear-gradient(180deg, #fff7d1, #FFD166 60%, #ff9f43); -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(0 0 30px rgba(255,209,102,.7)); text-align: center; animation: pulsa 1s infinite alternate; }
+  #evolucao .t2 { font-size: 20px; font-weight: 800; text-align: center; text-shadow: 0 2px 12px rgba(0,0,0,.7); }
+  @keyframes pulsa { to { transform: scale(1.06); } }
+
+  /* Mapa */
+  #mapa { position: fixed; inset: 0; z-index: 35; display: grid; place-items: center; background: rgba(5,10,20,.85); backdrop-filter: blur(6px); }
+  #mapa canvas { max-width: 94vw; max-height: 84vh; border-radius: 22px; box-shadow: 0 20px 80px rgba(0,0,0,.6); }
+  #mapa .leg { text-align: center; color: var(--sub); margin-top: 12px; }
+  @media (max-width: 820px) { #diarias, #dica, #bussola { display: none; } #minimapa { width: 130px; height: 130px; } .xp { width: 130px; } #regiao .r2 { font-size: 26px; } }
+</style>
+<script type="importmap">{ "imports": { "three": "../vendor/three.module.min.js" } }</script>
+<script src="../vendor/supabase.js"></script>
+<script src="../../config.js"></script>
+<script src="../compartilhado/sessao.js"></script>
+</head>
+<body>
+<canvas id="cena"></canvas>
+
+<div id="perfil" class="vidro oculto" style="position:fixed">
+  <canvas id="retrato" width="128" height="128"></canvas>
+  <span id="nivelBadge">1</span>
+  <div>
+    <div class="nome titulo" id="pNome">Explorador(a)</div>
+    <div class="forma" id="pForma">Bactéria</div>
+    <div class="xp"><div id="pXp" style="width:0"></div></div>
+    <div class="xptxt" id="pXpTxt">0 XP</div>
+  </div>
+</div>
+<div id="acoes" class="oculto">
+  <button class="bt" id="btSom" title="Som">🔊</button>
+  <button class="bt" id="btMapa">🗺️ Mapa <span class="tecla" style="height:20px;min-width:20px;font-size:11px">M</span></button>
+  <a class="bt prim" href="../index.html" target="_blank" rel="noopener">📖 Aulas</a>
+</div>
+<div id="diarias" class="vidro oculto"></div>
+<canvas id="minimapa" class="oculto" width="380" height="380"></canvas>
+<div id="regiao"><div class="r1" id="rg1"></div><div class="r2" id="rg2"></div><div class="r3" id="rg3"></div></div>
+<div id="prompt" class="vidro oculto"></div>
+<div id="dica" class="vidro oculto"><b>WASD</b> andar · <b>Shift</b> correr · <b>Espaço</b> pular · <b>arrastar o mouse</b> girar câmera · <b>roda</b> zoom · <b>E</b> interagir · <b>M</b> mapa<span id="dicaDemo"></span></div>
+<div id="toasts"></div>
+<div id="combo"></div>
+<div id="veu" class="oculto"><div class="painel" id="painel"></div></div>
+<div id="evolucao" class="oculto"><div><div class="t1" id="ev1">EVOLUÇÃO!</div><div class="t2" id="ev2"></div></div></div>
+<div id="mapa" class="oculto"><div><canvas id="mapaCanvas"></canvas><div class="leg">Clique ou tecle M para fechar · ilhas com névoa ainda estão bloqueadas</div></div></div>
+
+<div id="inicio">
+  <div class="caixa">
+    <h1 id="logo">Expedição Vida<small>ARQUIPÉLAGO DA BIOLOGIA</small></h1>
+    <div class="sub">26 ilhas. Uma jornada da primeira célula ao cientista. Até onde você consegue evoluir?</div>
+    <div class="form vidro">
+      <input type="text" id="nome" maxlength="16" placeholder="Seu apelido de explorador(a)">
+      <div class="cores" id="cores"></div>
+      <div class="linha">
+        <button class="bt prim" id="btNovo">▶ Começar expedição</button>
+        <button class="bt oculto" id="btCont">⟳ Continuar</button>
+      </div>
+      <label><input type="checkbox" id="demo"> Modo demonstração (atalhos para apresentações)</label>
+      <div id="carga">Carregando o arquipélago…</div>
+    </div>
+    <div style="margin-top:12px;font-size:12px;color:var(--sub)">Computador antigo? <a href="../mundo/" style="color:var(--neon)">Use a versão leve</a></div>
+  </div>
+</div>
+
+<script src="../compartilhado/avatar2d.js"></script>
+<script src="../compartilhado/estado.js"></script>
+<script type="module" src="main.js"></script>
+</body>
+</html>

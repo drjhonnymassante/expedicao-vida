@@ -1,0 +1,443 @@
+{
+  "topico": "virus-estrutura-ciclos",
+  "versao": 1,
+  "questoes": [
+    {
+      "id": "virus-estrutura-ciclos-q01",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Os vírus são considerados parasitas intracelulares obrigatórios porque:",
+      "alternativas": [
+        "possuem parede celular que só se rompe dentro de outra célula",
+        "realizam fotossíntese apenas quando estão dentro de uma célula",
+        "não possuem ribossomos nem metabolismo próprio e dependem da maquinaria da célula hospedeira para se multiplicar",
+        "são células procariontes muito pequenas, incapazes de viver no ambiente",
+        "produzem energia apenas por fermentação, que só ocorre no interior de células"
+      ],
+      "correta": 2,
+      "explicacao": "Os vírus são acelulares: sem ribossomos nem metabolismo, usam ribossomos, ATP e matéria-prima da célula hospedeira. Não têm parede celular, não fazem fotossíntese nem fermentação e não são procariontes.",
+      "habilidade": "Reconhecer as características gerais dos vírus.",
+      "tags": [
+        "parasitismo intracelular",
+        "características gerais"
+      ]
+    },
+    {
+      "id": "virus-estrutura-ciclos-q02",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "O capsídeo, estrutura que envolve e protege o material genético dos vírus, é formado por:",
+      "alternativas": [
+        "subunidades proteicas chamadas capsômeros",
+        "uma bicamada de fosfolipídios derivada da célula hospedeira",
+        "peptidoglicano, como a parede das bactérias",
+        "celulose, como a parede das células vegetais",
+        "moléculas de RNA enroladas em hélice"
+      ],
+      "correta": 0,
+      "explicacao": "O capsídeo é uma capa de proteína formada por capsômeros. A bicamada lipídica é o envelope, presente só em alguns vírus; peptidoglicano e celulose são de paredes celulares, e o RNA é o genoma.",
+      "habilidade": "Identificar os componentes estruturais de um vírus.",
+      "tags": [
+        "capsídeo",
+        "estrutura"
+      ]
+    },
+    {
+      "id": "virus-estrutura-ciclos-q03",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Qual agente infeccioso é formado apenas por proteína, sem nenhum tipo de ácido nucleico?",
+      "alternativas": [
+        "Bacteriófago",
+        "Viroide",
+        "Retrovírus",
+        "Vírus envelopado",
+        "Príon"
+      ],
+      "correta": 4,
+      "explicacao": "Príons são proteínas com dobramento alterado que induzem proteínas normais a adotarem a forma anormal. Bacteriófagos e demais vírus têm DNA ou RNA, e os viroides são formados apenas por RNA, sem proteína.",
+      "habilidade": "Diferenciar vírus, príons e viroides.",
+      "tags": [
+        "príons"
+      ]
+    },
+    {
+      "id": "virus-estrutura-ciclos-q04",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "No ciclo lisogênico de um bacteriófago:",
+      "alternativas": [
+        "a bactéria é rompida imediatamente após a injeção do DNA viral",
+        "o DNA do fago integra-se ao cromossomo bacteriano e é replicado junto com ele a cada divisão da bactéria",
+        "o fago transforma seu DNA em RNA para se esconder do sistema imune da bactéria",
+        "o capsídeo do fago entra na bactéria e permanece intacto no citoplasma",
+        "a bactéria perde a capacidade de se dividir até ser destruída"
+      ],
+      "correta": 1,
+      "explicacao": "No ciclo lisogênico, o DNA viral se insere no cromossomo (prófago) e é copiado a cada divisão, sem matar a bactéria. A lise imediata é do ciclo lítico, e o fago injeta só o DNA: o capsídeo fica do lado de fora.",
+      "habilidade": "Comparar os ciclos lítico e lisogênico.",
+      "tags": [
+        "bacteriófago",
+        "ciclo lisogênico",
+        "prófago"
+      ]
+    },
+    {
+      "id": "virus-estrutura-ciclos-q05",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "A enzima transcriptase reversa, presente nos retrovírus como o HIV, tem a função de:",
+      "alternativas": [
+        "traduzir o RNA viral em proteínas do capsídeo",
+        "cortar as proteínas virais longas em sua forma ativa",
+        "romper a membrana do linfócito para liberar os novos vírus",
+        "sintetizar DNA usando o RNA viral como molde",
+        "produzir RNA a partir do DNA da célula hospedeira, como na transcrição comum"
+      ],
+      "correta": 3,
+      "explicacao": "A transcriptase reversa lê o RNA viral e produz DNA, depois integrado ao cromossomo pela integrase. A tradução ocorre nos ribossomos da célula, o corte das proteínas é feito pela protease viral e o HIV sai por brotamento.",
+      "habilidade": "Explicar a replicação dos retrovírus.",
+      "tags": [
+        "retrovírus",
+        "transcriptase reversa",
+        "HIV"
+      ]
+    },
+    {
+      "id": "virus-estrutura-ciclos-q06",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Lavar as mãos com água e sabão é muito eficiente contra vírus envelopados, como o influenza e o SARS-CoV-2. Isso ocorre porque o sabão:",
+      "alternativas": [
+        "desorganiza o envelope lipídico, eliminando as glicoproteínas que o vírus usa para se ligar às células",
+        "destrói a parede celular de peptidoglicano dos vírus",
+        "bloqueia os ribossomos virais, impedindo a síntese de proteínas",
+        "age como um antibiótico, matando o vírus por dentro",
+        "transforma o RNA viral em DNA, que não é infeccioso"
+      ],
+      "correta": 0,
+      "explicacao": "O envelope é lipídico e é desmontado pelo sabão; sem ele, o vírus perde as espículas de ligação aos receptores. Vírus não têm parede nem ribossomos, antibióticos não agem sobre eles e o sabão não converte RNA em DNA.",
+      "habilidade": "Relacionar a estrutura viral a medidas de prevenção.",
+      "tags": [
+        "envelope",
+        "prevenção",
+        "saúde"
+      ]
+    },
+    {
+      "id": "virus-estrutura-ciclos-q07",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Texto-base: Em uma farmácia, um rapaz com febre, coriza e dor no corpo, sintomas típicos de gripe, pede um antibiótico “para cortar a gripe mais rápido”. O farmacêutico explica que a venda de antibióticos no Brasil exige receita e que, nesse caso, o remédio não seria útil. Do ponto de vista biológico, a orientação do farmacêutico se justifica porque:",
+      "alternativas": [
+        "o vírus da gripe é uma bactéria resistente a todos os antibióticos conhecidos",
+        "antibióticos só funcionam contra vírus quando aplicados por via injetável",
+        "antibióticos atuam sobre estruturas e processos de bactérias, como parede celular e ribossomos próprios, que os vírus não possuem; além disso, o uso desnecessário favorece a seleção de bactérias resistentes",
+        "o antibiótico eliminaria a gripe, mas destruiria todas as células do sistema imune",
+        "a gripe é causada por um príon, que é resistente a medicamentos"
+      ],
+      "correta": 2,
+      "explicacao": "Antibióticos atacam alvos bacterianos (parede de peptidoglicano, ribossomos e enzimas próprias), ausentes no vírus influenza, que é acelular. O uso desnecessário seleciona bactérias resistentes. Influenza não é bactéria nem príon, e mudar a via de aplicação não cria um alvo.",
+      "habilidade": "Avaliar o uso de medicamentos com base nas características dos vírus.",
+      "tags": [
+        "antibióticos",
+        "gripe",
+        "saúde pública"
+      ]
+    },
+    {
+      "id": "virus-estrutura-ciclos-q08",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Texto-base: Apesar de décadas de pesquisa, ainda não existe uma vacina eficaz contra o HIV. Pesquisadores relatam que, dentro de uma única pessoa infectada, circulam muitas variantes do vírus, com glicoproteínas de superfície ligeiramente diferentes entre si. Qual característica do ciclo do HIV contribui diretamente para essa grande diversidade?",
+      "alternativas": [
+        "A ausência de envelope, que deixa o capsídeo exposto ao sistema imune",
+        "O ciclo lítico rápido, que rompe os linfócitos em poucos minutos",
+        "A presença de DNA de fita dupla, que sofre recombinação constante com o DNA humano",
+        "A capacidade de infectar bactérias intestinais, onde troca genes com elas",
+        "A atuação da transcriptase reversa, que comete muitos erros ao copiar o RNA em DNA e não os corrige, gerando mutações frequentes"
+      ],
+      "correta": 4,
+      "explicacao": "A transcriptase reversa não corrige seus erros; cada ciclo introduz mutações, algumas nas glicoproteínas reconhecidas pelos anticorpos, o que dificulta a vacina. O HIV é envelopado, tem genoma de RNA, infecta linfócitos T CD4 (não bactérias) e sai por brotamento.",
+      "habilidade": "Relacionar a biologia do retrovírus à dificuldade de produção de vacinas.",
+      "tags": [
+        "HIV",
+        "mutação",
+        "vacinas",
+        "transcriptase reversa"
+      ]
+    },
+    {
+      "id": "virus-estrutura-ciclos-q09",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Texto-base: Uma cultura de bactérias crescia normalmente, deixando o meio líquido turvo. Testes mostraram que todas as bactérias carregavam, integrado ao cromossomo, o DNA de um bacteriófago. Após a cultura ser exposta a radiação ultravioleta, o meio ficou transparente em poucas horas e foram encontradas grandes quantidades de fagos livres. A explicação mais adequada para o resultado é:",
+      "alternativas": [
+        "a radiação matou as bactérias diretamente e os fagos surgiram por geração espontânea a partir dos restos celulares",
+        "a radiação induziu os prófagos a deixarem o cromossomo e iniciarem o ciclo lítico, com produção de novos fagos e lise das bactérias",
+        "a radiação transformou as bactérias em vírus, que deixaram de ser visíveis no meio",
+        "os fagos entraram no ciclo lisogênico, multiplicando-se junto com as bactérias",
+        "a radiação ativou a transcriptase reversa dos fagos, que converteu o RNA bacteriano em DNA viral"
+      ],
+      "correta": 1,
+      "explicacao": "As bactérias eram lisogênicas (prófago integrado). A radiação UV induz o prófago a iniciar o ciclo lítico, e a lise clareia o meio. Não há geração espontânea, bactérias não viram vírus, o ciclo lisogênico não causaria lise e fagos de DNA não usam transcriptase reversa.",
+      "habilidade": "Interpretar um experimento envolvendo os ciclos dos bacteriófagos.",
+      "tags": [
+        "indução",
+        "ciclo lítico",
+        "prófago",
+        "experimento"
+      ]
+    },
+    {
+      "id": "virus-estrutura-ciclos-q10",
+      "nivel": "diamante",
+      "tipo": "multipla_escolha",
+      "enunciado": "Pesquisadores testaram a infectividade de três agentes após diferentes tratamentos. X: perde a infectividade com tratamentos que desnaturam proteínas, mas é resistente a enzimas que digerem DNA ou RNA e a doses de radiação ultravioleta que destroem ácidos nucleicos; causa degeneração do tecido nervoso de bovinos. Y: inativado por enzimas que digerem RNA, resistente a enzimas que digerem proteínas e sem proteína detectável; deforma tubérculos de batata. Z: contém DNA envolto por capa proteica, é inativado por enzimas que digerem proteínas e só se multiplica dentro de bactérias. Com base nesses dados, é correto concluir que:",
+      "alternativas": [
+        "X é um viroide, Y é um príon e Z é um bacteriófago, pois os viroides são proteínas infecciosas que atacam o sistema nervoso",
+        "X é um vírus envelopado, pois a protease destrói seu capsídeo; Y é um príon e Z é um viroide",
+        "X, Y e Z são vírus, pois todos dependem de células vivas para se multiplicar e todos possuem ácido nucleico",
+        "X é um príon, que se propaga induzindo proteínas normais a mudarem de conformação; Y é um viroide, um RNA sem capsídeo; Z é um bacteriófago, com DNA protegido por capsídeo proteico",
+        "X é um príon; Y é um retrovírus que infecta plantas usando transcriptase reversa; Z é um viroide de DNA"
+      ],
+      "correta": 3,
+      "explicacao": "X resiste a nucleases e à radiação que destrói ácidos nucleicos, mas é inativado quando suas proteínas são desnaturadas: é um príon, compatível com a encefalopatia espongiforme bovina. Y depende de RNA e não tem proteína: é um viroide. Z tem DNA e capsídeo e parasita bactérias: é um bacteriófago. Um vírus envelopado perderia a infectividade com a radiação; um retrovírus tem capsídeo e seria afetado por protease; e X não possui ácido nucleico.",
+      "habilidade": "Integrar bioquímica de proteínas e ácidos nucleicos à identificação de agentes infecciosos a partir de dados experimentais.",
+      "tags": [
+        "príons",
+        "viroides",
+        "bacteriófago",
+        "integração",
+        "experimento"
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "virus-estrutura-ciclos-f01",
+      "frente": "Por que os vírus são chamados de acelulares?",
+      "verso": "Porque não têm membrana plasmática própria, citoplasma, ribossomos nem metabolismo: são partículas de ácido nucleico envolto por proteína."
+    },
+    {
+      "id": "virus-estrutura-ciclos-f02",
+      "frente": "Capsídeo e capsômeros",
+      "verso": "O capsídeo é a capa proteica que envolve o genoma viral; os capsômeros são as subunidades proteicas que o formam."
+    },
+    {
+      "id": "virus-estrutura-ciclos-f03",
+      "frente": "De onde vem o envelope viral?",
+      "verso": "Das membranas da célula hospedeira (em geral a plasmática, durante o brotamento); o vírus insere nele suas glicoproteínas."
+    },
+    {
+      "id": "virus-estrutura-ciclos-f04",
+      "frente": "Por que vírus são parasitas intracelulares obrigatórios?",
+      "verso": "Não têm ribossomos nem produzem energia; só se multiplicam usando a maquinaria de uma célula hospedeira."
+    },
+    {
+      "id": "virus-estrutura-ciclos-f05",
+      "frente": "O que determina quais células um vírus infecta?",
+      "verso": "O encaixe entre proteínas da superfície viral e receptores da membrana da célula. Ex.: gp120 do HIV e CD4 do linfócito T auxiliar."
+    },
+    {
+      "id": "virus-estrutura-ciclos-f06",
+      "frente": "Etapas gerais da replicação viral",
+      "verso": "Adsorção, penetração, desnudamento, síntese, montagem e liberação (lise ou brotamento)."
+    },
+    {
+      "id": "virus-estrutura-ciclos-f07",
+      "frente": "Ciclo lítico",
+      "verso": "O DNA do fago comanda a bactéria, novos fagos são produzidos imediatamente e a célula se rompe (lise)."
+    },
+    {
+      "id": "virus-estrutura-ciclos-f08",
+      "frente": "O que é um prófago?",
+      "verso": "O DNA de um bacteriófago integrado ao cromossomo da bactéria, típico do ciclo lisogênico."
+    },
+    {
+      "id": "virus-estrutura-ciclos-f09",
+      "frente": "O que é indução, nos bacteriófagos?",
+      "verso": "A passagem do ciclo lisogênico para o lítico, desencadeada por estresse como radiação ultravioleta."
+    },
+    {
+      "id": "virus-estrutura-ciclos-f10",
+      "frente": "Função da transcriptase reversa",
+      "verso": "Produzir DNA a partir de um molde de RNA (RNA → DNA)."
+    },
+    {
+      "id": "virus-estrutura-ciclos-f11",
+      "frente": "O que é o provírus no HIV?",
+      "verso": "O DNA viral inserido no cromossomo da célula hospedeira pela enzima integrase."
+    },
+    {
+      "id": "virus-estrutura-ciclos-f12",
+      "frente": "O que são príons?",
+      "verso": "Proteínas com dobramento alterado, sem ácido nucleico, que induzem proteínas normais a mudar de forma. Causam encefalopatias espongiformes."
+    },
+    {
+      "id": "virus-estrutura-ciclos-f13",
+      "frente": "O que são viroides?",
+      "verso": "Pequenas moléculas de RNA circular de fita simples, sem capsídeo, que infectam plantas."
+    }
+  ],
+  "minijogos": {
+    "pares": [
+      {
+        "a": "Capsídeo",
+        "b": "Capa de proteína formada por capsômeros"
+      },
+      {
+        "a": "Envelope",
+        "b": "Membrana lipídica vinda da célula hospedeira"
+      },
+      {
+        "a": "Prófago",
+        "b": "DNA de fago integrado ao cromossomo bacteriano"
+      },
+      {
+        "a": "Transcriptase reversa",
+        "b": "Produz DNA a partir de RNA"
+      },
+      {
+        "a": "Integrase",
+        "b": "Insere o DNA do HIV no cromossomo da célula"
+      },
+      {
+        "a": "Príon",
+        "b": "Proteína infecciosa sem ácido nucleico"
+      },
+      {
+        "a": "Viroide",
+        "b": "RNA circular sem capsídeo que infecta plantas"
+      },
+      {
+        "a": "Receptor CD4",
+        "b": "Porta de entrada do HIV nos linfócitos T auxiliares"
+      }
+    ],
+    "sequencia": {
+      "instrucao": "Coloque em ordem as etapas do ciclo lítico de um bacteriófago.",
+      "itens": [
+        "Adsorção das fibras da cauda à parede da bactéria",
+        "Injeção do DNA viral na bactéria",
+        "Síntese de DNA e proteínas virais pela maquinaria bacteriana",
+        "Montagem de novos fagos",
+        "Lise da bactéria e liberação dos fagos"
+      ]
+    },
+    "classificacao": {
+      "instrucao": "Classifique cada evento como exclusivo do ciclo lítico, exclusivo do ciclo lisogênico ou comum aos dois.",
+      "categorias": [
+        "Ciclo lítico",
+        "Ciclo lisogênico",
+        "Ambos"
+      ],
+      "itens": [
+        {
+          "texto": "Rompimento da bactéria pouco depois da infecção",
+          "categoria": "Ciclo lítico"
+        },
+        {
+          "texto": "Produção imediata de centenas de novos fagos",
+          "categoria": "Ciclo lítico"
+        },
+        {
+          "texto": "Enzima viral degrada a parede bacteriana",
+          "categoria": "Ciclo lítico"
+        },
+        {
+          "texto": "DNA viral integrado ao cromossomo bacteriano",
+          "categoria": "Ciclo lisogênico"
+        },
+        {
+          "texto": "Formação de prófago",
+          "categoria": "Ciclo lisogênico"
+        },
+        {
+          "texto": "Bactéria hospedeira continua se dividindo normalmente",
+          "categoria": "Ciclo lisogênico"
+        },
+        {
+          "texto": "Genes virais copiados junto com o cromossomo a cada divisão",
+          "categoria": "Ciclo lisogênico"
+        },
+        {
+          "texto": "Pode ser interrompido por indução com radiação UV",
+          "categoria": "Ciclo lisogênico"
+        },
+        {
+          "texto": "Adsorção do fago à parede bacteriana",
+          "categoria": "Ambos"
+        },
+        {
+          "texto": "Injeção do DNA viral na bactéria",
+          "categoria": "Ambos"
+        }
+      ]
+    },
+    "verdadeiro_falso": [
+      {
+        "afirmacao": "Os vírus possuem ribossomos próprios para fabricar suas proteínas.",
+        "valor": false,
+        "explicacao": "Os vírus não têm ribossomos; usam os da célula hospedeira."
+      },
+      {
+        "afirmacao": "Vírus envelopados também possuem capsídeo proteico, localizado sob o envelope.",
+        "valor": true,
+        "explicacao": "O envelope é uma camada extra, presente só em alguns vírus; por baixo dele continua existindo o nucleocapsídeo (capsídeo + genoma)."
+      },
+      {
+        "afirmacao": "O envelope viral é fabricado inteiramente a partir de genes do vírus.",
+        "valor": false,
+        "explicacao": "Os lipídios do envelope vêm da membrana da célula hospedeira; o vírus contribui com as glicoproteínas."
+      },
+      {
+        "afirmacao": "No ciclo lisogênico, o vírus se espalha para as células-filhas sem destruir a bactéria.",
+        "valor": true,
+        "explicacao": "O prófago é copiado junto com o cromossomo a cada divisão bacteriana."
+      },
+      {
+        "afirmacao": "Todo vírus de RNA é um retrovírus.",
+        "valor": false,
+        "explicacao": "Influenza, dengue e SARS-CoV-2 têm RNA, mas não usam transcriptase reversa."
+      },
+      {
+        "afirmacao": "A transcriptase reversa sintetiza DNA a partir de RNA.",
+        "valor": true,
+        "explicacao": "É o fluxo inverso ao da transcrição comum, típico dos retrovírus."
+      },
+      {
+        "afirmacao": "Príons possuem um pequeno RNA protegido por proteína.",
+        "valor": false,
+        "explicacao": "Príons não têm ácido nucleico: são apenas proteínas com dobramento alterado."
+      },
+      {
+        "afirmacao": "Viroides infectam principalmente plantas.",
+        "valor": true,
+        "explicacao": "São RNAs circulares sem capsídeo que causam doenças em vegetais como batata e citros."
+      },
+      {
+        "afirmacao": "Sabão e álcool 70% inativam com facilidade os vírus envelopados.",
+        "valor": true,
+        "explicacao": "Eles desorganizam o envelope lipídico, eliminando as proteínas de ligação às células."
+      }
+    ]
+  },
+  "missao_mundo_aberto": {
+    "titulo": "O Despertar das Cápsulas",
+    "regiao": "Ruínas Capsídeas",
+    "npc": "Arqueóloga Capsa, decifradora de cápsulas",
+    "narrativa": "Nas Ruínas Capsídeas, estruturas geométricas que pareciam mortas voltaram a se mover e estão sequestrando as vilas-célula vizinhas. Algumas destroem as vilas na hora; outras se escondem dentro delas por gerações. A Arqueóloga Capsa precisa de alguém que descubra como cada invasor funciona antes que as vilas caiam.",
+    "objetivo": "Identificar os invasores das ruínas pela estrutura, descobrir como cada um sequestra as vilas-célula e aplicar a defesa correta para cada caso.",
+    "mecanica": "investigacao",
+    "etapas": [
+      "Examinar três cápsulas adormecidas e rotular genoma, capsídeo, capsômeros e envelope de cada uma",
+      "Proteger a Vila das Mãos Limpas dissolvendo, com sabão, os envelopes dos invasores que tentam se ligar aos portões-receptores",
+      "Na Colônia Bacteriana, distinguir as cápsulas que rompem as casas imediatamente das que se escondem como prófago no cromossomo",
+      "Rastrear o Invasor Retrógrado que escreve DNA a partir de RNA e bloquear sua transcriptase reversa e sua integrase",
+      "Separar, no Pátio das Sombras, os príons (proteínas sem ácido nucleico) dos viroides (RNA sem capsídeo)"
+    ],
+    "recompensa_xp": 150,
+    "item_recompensa": "Lupa Eletrônica de Capsa"
+  }
+}

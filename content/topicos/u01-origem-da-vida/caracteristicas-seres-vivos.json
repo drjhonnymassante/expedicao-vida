@@ -1,0 +1,482 @@
+{
+  "topico": "caracteristicas-seres-vivos",
+  "versao": 1,
+  "questoes": [
+    {
+      "id": "caracteristicas-seres-vivos-q01",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "De acordo com a teoria celular, é correto afirmar que:",
+      "alternativas": [
+        "todos os seres vivos são pluricelulares",
+        "células podem surgir espontaneamente da matéria não viva",
+        "toda célula se origina de outra célula preexistente",
+        "os vírus são as menores células conhecidas",
+        "apenas plantas e animais são formados por células"
+      ],
+      "correta": 2,
+      "explicacao": "A teoria celular afirma que todos os seres vivos são formados por células, que a célula é a unidade básica da vida e que toda célula vem de outra preexistente. Há seres unicelulares, as células não surgem espontaneamente, os vírus são acelulares e bactérias, fungos e protozoários também são formados por células.",
+      "habilidade": "Reconhecer os postulados da teoria celular.",
+      "tags": [
+        "teoria celular",
+        "célula"
+      ]
+    },
+    {
+      "id": "caracteristicas-seres-vivos-q02",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "O conjunto de todas as reações químicas de síntese e de degradação que ocorrem em um ser vivo recebe o nome de:",
+      "alternativas": [
+        "metabolismo",
+        "homeostase",
+        "hereditariedade",
+        "irritabilidade",
+        "evolução"
+      ],
+      "correta": 0,
+      "explicacao": "Metabolismo é o conjunto das reações químicas do organismo: anabolismo (síntese) mais catabolismo (degradação). Homeostase é a manutenção do meio interno, hereditariedade é a transmissão de características e irritabilidade é a resposta a estímulos.",
+      "habilidade": "Identificar o conceito de metabolismo.",
+      "tags": [
+        "metabolismo",
+        "anabolismo",
+        "catabolismo"
+      ]
+    },
+    {
+      "id": "caracteristicas-seres-vivos-q03",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Todas as capivaras que vivem em determinada área do Pantanal, em um mesmo período, constituem um(a):",
+      "alternativas": [
+        "comunidade",
+        "ecossistema",
+        "biosfera",
+        "organismo",
+        "população"
+      ],
+      "correta": 4,
+      "explicacao": "População é o conjunto de indivíduos da mesma espécie que vivem na mesma área ao mesmo tempo. Comunidade reúne populações de espécies diferentes, ecossistema inclui também os fatores abióticos e biosfera abrange todas as regiões do planeta com vida.",
+      "habilidade": "Identificar níveis de organização ecológicos.",
+      "tags": [
+        "níveis de organização",
+        "população"
+      ]
+    },
+    {
+      "id": "caracteristicas-seres-vivos-q04",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "A mula, resultado do cruzamento entre uma égua e um jumento, geralmente é estéril. Sobre a mula, é correto afirmar que:",
+      "alternativas": [
+        "não é um ser vivo, pois todo indivíduo vivo precisa obrigatoriamente gerar descendentes",
+        "é um ser vivo, pois tem células, metabolismo e homeostase; a reprodução é característica da espécie",
+        "é um ser vivo apenas porque, sendo estéril, passa a se reproduzir de forma assexuada",
+        "não possui material genético próprio, o que explicaria a sua esterilidade",
+        "não realiza metabolismo, pois a energia que obtém não é usada para produzir descendentes"
+      ],
+      "correta": 1,
+      "explicacao": "A vida é definida por um conjunto de características. A mula tem células, metabolismo, homeostase e reage a estímulos, portanto é viva. A reprodução é uma propriedade das espécies e populações, e indivíduos estéreis continuam vivos. A mula tem material genético, realiza metabolismo e não se reproduz assexuadamente.",
+      "habilidade": "Aplicar o conjunto de características da vida a um caso concreto.",
+      "tags": [
+        "reprodução",
+        "critérios de vida"
+      ]
+    },
+    {
+      "id": "caracteristicas-seres-vivos-q05",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Durante uma corrida sob sol forte, um atleta começa a suar e sua pele fica avermelhada pela dilatação dos vasos sanguíneos superficiais. Ao final, sua temperatura corporal permanece próxima de 37 °C. Essas respostas exemplificam:",
+      "alternativas": [
+        "uma adaptação evolutiva adquirida pelo próprio atleta durante a corrida",
+        "reprodução assexuada das células da pele",
+        "anabolismo, pois o suor é uma reação de síntese",
+        "homeostase, mantida por retroalimentação negativa",
+        "hereditariedade, pois o suor é transmitido aos descendentes"
+      ],
+      "correta": 3,
+      "explicacao": "O aumento da temperatura dispara respostas (suor e vasodilatação) que a reduzem: é a retroalimentação negativa mantendo a homeostase. Adaptação evolutiva ocorre em populações ao longo de gerações, não em um indivíduo durante uma corrida; as demais alternativas não descrevem o fenômeno.",
+      "habilidade": "Reconhecer mecanismos homeostáticos no cotidiano.",
+      "tags": [
+        "homeostase",
+        "termorregulação",
+        "retroalimentação negativa"
+      ]
+    },
+    {
+      "id": "caracteristicas-seres-vivos-q06",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Um cristal de sal pode aumentar de tamanho quando colocado em uma solução saturada. A diferença essencial entre esse crescimento e o crescimento de um ser vivo é que o cristal:",
+      "alternativas": [
+        "cresce por aposição, só acumulando partículas na superfície, sem metabolismo, ao contrário dos seres vivos",
+        "cresce por intussuscepção, incorporando substâncias ao seu interior, exatamente como fazem os seres vivos",
+        "só cresce porque possui DNA, que comanda a deposição de novas partículas, como nos seres vivos",
+        "cresce por divisão celular, como os seres vivos, mas não é capaz de responder a estímulos",
+        "obtém energia por fotossíntese para crescer, enquanto nenhum ser vivo é capaz de fazer isso"
+      ],
+      "correta": 0,
+      "explicacao": "O cristal cresce por aposição: novas partículas se depositam na superfície, sem reações metabólicas. Os seres vivos crescem por intussuscepção: absorvem substâncias, transformam-nas no metabolismo e as incorporam ao interior. Cristais não têm DNA, células nem fotossíntese.",
+      "habilidade": "Diferenciar crescimento biológico de crescimento de matéria não viva.",
+      "tags": [
+        "crescimento",
+        "intussuscepção",
+        "aposição"
+      ]
+    },
+    {
+      "id": "caracteristicas-seres-vivos-q07",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Fora das células, o vírus da dengue é uma partícula inerte: não produz energia nem fabrica proteínas. Dentro das células do hospedeiro, porém, usa os ribossomos e as enzimas delas para originar milhares de novas partículas. Ao longo do tempo, acumula mutações, e hoje se reconhecem quatro sorotipos do vírus. Entre os argumentos abaixo, o que sustenta a ideia de que os vírus compartilham uma propriedade fundamental dos seres vivos é:",
+      "alternativas": [
+        "possuem ribossomos próprios para fabricar suas proteínas",
+        "realizam respiração celular quando estão fora do hospedeiro",
+        "são formados por células procarióticas muito pequenas",
+        "são eliminados pelo uso de antibióticos",
+        "possuem material genético que sofre mutações e é transmitido às novas partículas, o que permite sua evolução"
+      ],
+      "correta": 4,
+      "explicacao": "A presença de material genético que é copiado, transmitido e sofre mutações permite que os vírus evoluam, como mostram os diferentes sorotipos da dengue. Vírus não têm ribossomos nem metabolismo próprio, são acelulares e não são combatidos por antibióticos.",
+      "habilidade": "Avaliar argumentos sobre a natureza dos vírus com base em um texto.",
+      "tags": [
+        "vírus",
+        "dengue",
+        "evolução",
+        "hereditariedade"
+      ]
+    },
+    {
+      "id": "caracteristicas-seres-vivos-q08",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Uma equipe de pesquisa no Pantanal desenvolveu três projetos: I. relacionar a queda do oxigênio dissolvido nas baías durante a cheia com a mortalidade de peixes de várias espécies; II. estimar o número de jacarés-do-pantanal por quilômetro quadrado em uma área; III. descrever quem se alimenta de quem entre peixes, aves aquáticas e jacarés da mesma área. Os níveis de organização estudados em I, II e III são, respectivamente:",
+      "alternativas": [
+        "comunidade, população e ecossistema",
+        "população, comunidade e biosfera",
+        "ecossistema, população e comunidade",
+        "ecossistema, comunidade e população",
+        "biosfera, organismo e população"
+      ],
+      "correta": 2,
+      "explicacao": "O projeto I relaciona um fator abiótico (oxigênio dissolvido) a seres de várias espécies: nível de ecossistema. O II estuda a densidade de uma única espécie: população. O III analisa interações entre espécies diferentes, sem fatores abióticos: comunidade. Comunidade não inclui fatores abióticos, e densidade é propriedade de população.",
+      "habilidade": "Identificar níveis de organização em situações de pesquisa ecológica.",
+      "tags": [
+        "níveis de organização",
+        "ecossistema",
+        "comunidade",
+        "Pantanal"
+      ]
+    },
+    {
+      "id": "caracteristicas-seres-vivos-q09",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Hospitais brasileiros acompanham com preocupação o aumento de infecções causadas por bactérias resistentes a vários antibióticos. Especialistas associam o problema ao uso inadequado desses medicamentos, como tratamentos interrompidos antes do prazo. A explicação biológica mais adequada para o aumento da resistência é:",
+      "alternativas": [
+        "cada bactéria aprende a resistir ao antibiótico e transmite esse aprendizado às outras",
+        "variantes resistentes que já existiam na população sobrevivem ao antibiótico e se reproduzem, tornando-se mais frequentes ao longo das gerações",
+        "o antibiótico provoca mutações dirigidas que tornam as bactérias resistentes",
+        "as bactérias perdem o metabolismo e se tornam partículas inertes, como os vírus",
+        "a resistência surge porque o paciente transmite seus anticorpos às bactérias"
+      ],
+      "correta": 1,
+      "explicacao": "É seleção natural: na população bacteriana há variantes resistentes; o antibiótico elimina as sensíveis e as resistentes sobrevivem e se multiplicam. A população evolui, não cada bactéria. O antibiótico não direciona mutações, as bactérias não perdem o metabolismo e anticorpos não são transferidos a elas.",
+      "habilidade": "Explicar a evolução de populações em um contexto de saúde pública.",
+      "tags": [
+        "evolução",
+        "seleção natural",
+        "resistência a antibióticos"
+      ]
+    },
+    {
+      "id": "caracteristicas-seres-vivos-q10",
+      "nivel": "diamante",
+      "tipo": "multipla_escolha",
+      "enunciado": "Em algumas cidades brasileiras, mosquitos Aedes aegypti portadores da bactéria Wolbachia são liberados no ambiente, pois a bactéria reduz a capacidade de o mosquito transmitir o vírus da dengue. A Wolbachia só sobrevive dentro das células de seus hospedeiros. Considere três entidades: (1) o vírus da dengue, cujo material genético é RNA; (2) a Wolbachia; (3) uma semente de feijão seca, guardada há meses, que germina quando plantada. A análise correta dessas entidades é:",
+      "alternativas": [
+        "o vírus e a Wolbachia não são seres vivos, pois ambos dependem obrigatoriamente de células hospedeiras para se multiplicar",
+        "a semente seca não é um ser vivo, pois durante a dormência não tem metabolismo algum e só passa a viver ao germinar",
+        "as três entidades são seres vivos, pois todas possuem DNA como material genético, que é transmitido aos descendentes",
+        "a Wolbachia é viva por ser celular e ter metabolismo próprio; o vírus, sem metabolismo próprio, é limítrofe; a semente dormente é viva",
+        "a Wolbachia deve ser classificada como vírus, pois vive obrigatoriamente dentro de células e não se multiplica fora delas"
+      ],
+      "correta": 3,
+      "explicacao": "Viver dentro de outras células não basta para classificar algo como não vivo: a Wolbachia é uma bactéria, com organização celular, ribossomos e metabolismo próprios, e por isso não pode ser chamada de vírus. O vírus da dengue é acelular e sem metabolismo próprio, por isso é um caso limítrofe. A semente seca não está sem vida durante a dormência: mantém um metabolismo muito baixo e o retoma ao germinar. Também não é verdade que as três tenham DNA, pois o material genético do vírus da dengue é RNA.",
+      "habilidade": "Integrar critérios de vida, organização celular, vírus e controle de doenças na análise de um caso.",
+      "tags": [
+        "vírus",
+        "bactéria",
+        "critérios de vida",
+        "dengue",
+        "integração"
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "caracteristicas-seres-vivos-f01",
+      "frente": "Quais elementos formam a sigla CHONPS?",
+      "verso": "Carbono, hidrogênio, oxigênio, nitrogênio, fósforo e enxofre, os principais elementos da matéria viva."
+    },
+    {
+      "id": "caracteristicas-seres-vivos-f02",
+      "frente": "Os seres vivos têm elementos químicos exclusivos?",
+      "verso": "Não. São os mesmos da matéria não viva; o que muda é a organização."
+    },
+    {
+      "id": "caracteristicas-seres-vivos-f03",
+      "frente": "Três ideias da teoria celular",
+      "verso": "Todo ser vivo é formado por células; a célula é a unidade básica da vida; toda célula vem de outra preexistente."
+    },
+    {
+      "id": "caracteristicas-seres-vivos-f04",
+      "frente": "Diferença entre procarionte e eucarionte",
+      "verso": "Procarionte não tem núcleo delimitado por carioteca; eucarionte tem núcleo e organelas membranosas."
+    },
+    {
+      "id": "caracteristicas-seres-vivos-f05",
+      "frente": "Anabolismo x catabolismo",
+      "verso": "Anabolismo: reações de síntese, que consomem energia. Catabolismo: reações de degradação, que liberam energia."
+    },
+    {
+      "id": "caracteristicas-seres-vivos-f06",
+      "frente": "O que é homeostase?",
+      "verso": "A manutenção do meio interno em condições relativamente constantes, em equilíbrio dinâmico."
+    },
+    {
+      "id": "caracteristicas-seres-vivos-f07",
+      "frente": "Como funciona a retroalimentação negativa?",
+      "verso": "Uma alteração dispara uma resposta que a corrige, como o suor quando a temperatura corporal sobe."
+    },
+    {
+      "id": "caracteristicas-seres-vivos-f08",
+      "frente": "Reprodução assexuada x sexuada: qual gera variabilidade?",
+      "verso": "A sexuada, por meio de gametas e fecundação. A assexuada gera clones."
+    },
+    {
+      "id": "caracteristicas-seres-vivos-f09",
+      "frente": "Por que a mula, que é estéril, é um ser vivo?",
+      "verso": "Tem células, metabolismo, homeostase e responde a estímulos. A reprodução é característica da espécie, não de cada indivíduo."
+    },
+    {
+      "id": "caracteristicas-seres-vivos-f10",
+      "frente": "Intussuscepção x aposição",
+      "verso": "Intussuscepção: crescimento dos seres vivos, incorporando ao interior substâncias transformadas. Aposição: crescimento por acúmulo na superfície, como em cristais."
+    },
+    {
+      "id": "caracteristicas-seres-vivos-f11",
+      "frente": "Quem evolui: o indivíduo ou a população?",
+      "verso": "A população, ao longo de gerações."
+    },
+    {
+      "id": "caracteristicas-seres-vivos-f12",
+      "frente": "Diferença entre população e comunidade",
+      "verso": "População: uma espécie em uma área. Comunidade: populações de várias espécies que interagem na mesma área."
+    },
+    {
+      "id": "caracteristicas-seres-vivos-f13",
+      "frente": "O que o ecossistema tem a mais que a comunidade?",
+      "verso": "Os fatores abióticos, como água, luz, solo e temperatura."
+    },
+    {
+      "id": "caracteristicas-seres-vivos-f14",
+      "frente": "O que são propriedades emergentes?",
+      "verso": "Características que surgem da interação entre as partes de um nível e não existem nas partes isoladas."
+    },
+    {
+      "id": "caracteristicas-seres-vivos-f15",
+      "frente": "Dois argumentos para considerar os vírus não vivos",
+      "verso": "São acelulares e não têm metabolismo próprio (só se multiplicam dentro de células)."
+    },
+    {
+      "id": "caracteristicas-seres-vivos-f16",
+      "frente": "Dois argumentos para considerar os vírus vivos",
+      "verso": "Têm material genético transmitido aos descendentes e sofrem mutações, ou seja, evoluem."
+    }
+  ],
+  "minijogos": {
+    "pares": [
+      {
+        "a": "Metabolismo",
+        "b": "Respiração celular quebrando a glicose"
+      },
+      {
+        "a": "Homeostase",
+        "b": "Glicemia mantida estável por insulina e glucagon"
+      },
+      {
+        "a": "Reprodução assexuada",
+        "b": "Plantio de mandioca por pedaços do caule"
+      },
+      {
+        "a": "Resposta a estímulos",
+        "b": "Dormideira fechando os folíolos ao toque"
+      },
+      {
+        "a": "Hereditariedade",
+        "b": "Filhote de onça-pintada nasce onça"
+      },
+      {
+        "a": "Evolução",
+        "b": "Bactérias resistentes ficam mais comuns na população ao longo das gerações"
+      },
+      {
+        "a": "Adaptação",
+        "b": "Folhas transformadas em espinhos no mandacaru"
+      },
+      {
+        "a": "Crescimento por intussuscepção",
+        "b": "Planta jovem aumentando de tamanho"
+      }
+    ],
+    "sequencia": {
+      "instrucao": "Ordene os níveis de organização do mais simples ao mais abrangente.",
+      "itens": [
+        "Molécula",
+        "Célula",
+        "Tecido",
+        "Órgão",
+        "Sistema",
+        "Organismo",
+        "População",
+        "Comunidade",
+        "Ecossistema",
+        "Biosfera"
+      ]
+    },
+    "classificacao": {
+      "instrucao": "Classifique cada item de acordo com sua situação em relação à vida.",
+      "categorias": [
+        "Ser vivo",
+        "Não vivo",
+        "Caso limítrofe"
+      ],
+      "itens": [
+        {
+          "texto": "Bactéria do iogurte",
+          "categoria": "Ser vivo"
+        },
+        {
+          "texto": "Semente de feijão seca",
+          "categoria": "Ser vivo"
+        },
+        {
+          "texto": "Mula estéril",
+          "categoria": "Ser vivo"
+        },
+        {
+          "texto": "Levedura do fermento de pão",
+          "categoria": "Ser vivo"
+        },
+        {
+          "texto": "Dormideira (Mimosa pudica)",
+          "categoria": "Ser vivo"
+        },
+        {
+          "texto": "Cogumelo",
+          "categoria": "Ser vivo"
+        },
+        {
+          "texto": "Cristal de sal crescendo na solução",
+          "categoria": "Não vivo"
+        },
+        {
+          "texto": "Chama de uma vela",
+          "categoria": "Não vivo"
+        },
+        {
+          "texto": "Robô aspirador que desvia de obstáculos",
+          "categoria": "Não vivo"
+        },
+        {
+          "texto": "Vírus da dengue",
+          "categoria": "Caso limítrofe"
+        },
+        {
+          "texto": "Vírus da gripe",
+          "categoria": "Caso limítrofe"
+        },
+        {
+          "texto": "Bacteriófago",
+          "categoria": "Caso limítrofe"
+        }
+      ]
+    },
+    "verdadeiro_falso": [
+      {
+        "afirmacao": "Os seres vivos possuem elementos químicos que não existem na matéria não viva.",
+        "valor": false,
+        "explicacao": "Os elementos são os mesmos; o que diferencia a matéria viva é a organização."
+      },
+      {
+        "afirmacao": "Bactérias são organismos procariontes.",
+        "valor": true,
+        "explicacao": "Bactérias não têm núcleo delimitado por carioteca."
+      },
+      {
+        "afirmacao": "Homeostase significa manter o meio interno absolutamente constante.",
+        "valor": false,
+        "explicacao": "É um equilíbrio dinâmico, com variações dentro de certos limites."
+      },
+      {
+        "afirmacao": "A respiração celular é um exemplo de catabolismo.",
+        "valor": true,
+        "explicacao": "Ela degrada a glicose e libera energia."
+      },
+      {
+        "afirmacao": "Um indivíduo estéril não pode ser considerado ser vivo.",
+        "valor": false,
+        "explicacao": "A reprodução é característica da espécie; indivíduos estéreis, como a mula, são vivos."
+      },
+      {
+        "afirmacao": "A reprodução sexuada gera variabilidade genética.",
+        "valor": true,
+        "explicacao": "A união de gametas produz novas combinações de genes."
+      },
+      {
+        "afirmacao": "Um indivíduo evolui ao longo da sua vida para se adaptar ao ambiente.",
+        "valor": false,
+        "explicacao": "Quem evolui é a população, ao longo de gerações."
+      },
+      {
+        "afirmacao": "Uma comunidade inclui os fatores abióticos do ambiente.",
+        "valor": false,
+        "explicacao": "Os fatores abióticos só passam a ser incluídos a partir do nível de ecossistema."
+      },
+      {
+        "afirmacao": "Em um organismo unicelular, a célula corresponde ao próprio organismo.",
+        "valor": true,
+        "explicacao": "Unicelulares não têm tecidos, órgãos nem sistemas."
+      },
+      {
+        "afirmacao": "Vírus têm ribossomos próprios.",
+        "valor": false,
+        "explicacao": "Vírus são acelulares e usam os ribossomos da célula hospedeira."
+      },
+      {
+        "afirmacao": "Vírus sofrem mutações e podem evoluir.",
+        "valor": true,
+        "explicacao": "Seu material genético muda, como mostram os sorotipos da dengue e as variantes da gripe."
+      }
+    ]
+  },
+  "missao_mundo_aberto": {
+    "titulo": "O Tribunal da Vida",
+    "regiao": "Vale da Sopa Primordial",
+    "npc": "Doutora Célia, a naturalista das encostas",
+    "narrativa": "Uma tempestade de relâmpagos espalhou pelo vale objetos estranhos: uma chama que não se apaga, cristais que crescem nas poças, uma semente adormecida, uma mula silenciosa e partículas misteriosas que invadem as células dos cogumelos. Doutora Célia precisa de alguém que examine cada um com rigor e decida, com argumentos, quem pertence ao mundo dos vivos.",
+    "objetivo": "Investigar seis entidades encontradas no vale, testá-las com os critérios de vida e organizar o laboratório de pedra montando a escada dos níveis de organização.",
+    "mecanica": "investigacao",
+    "etapas": [
+      "Testar a chama e o cristal nos laboratórios de pedra e provar por que crescer e consumir oxigênio não bastam para estar vivo",
+      "Despertar a semente adormecida com água e luz e registrar o retorno do metabolismo",
+      "Defender a mula diante do tribunal explicando por que um indivíduo estéril é vivo",
+      "Analisar as partículas que invadem os cogumelos e apresentar um argumento a favor e outro contra considerá-las vivas",
+      "Montar a escada dos níveis de organização, da molécula à biosfera, com as peças espalhadas pelo vale"
+    ],
+    "recompensa_xp": 120,
+    "item_recompensa": "Lupa dos Sete Critérios"
+  }
+}

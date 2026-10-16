@@ -1,0 +1,469 @@
+{
+  "topico": "cadeias-teias-alimentares",
+  "versao": 1,
+  "questoes": [
+    {
+      "id": "cadeias-teias-alimentares-q01",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Na cadeia alimentar capim → gafanhoto → sapo → cobra → gavião, o sapo é:",
+      "alternativas": [
+        "produtor, no 1º nível trófico",
+        "consumidor primário, no 2º nível trófico",
+        "consumidor secundário, no 3º nível trófico",
+        "consumidor terciário, no 3º nível trófico",
+        "decompositor, no último nível trófico"
+      ],
+      "correta": 2,
+      "explicacao": "O sapo come o gafanhoto (herbívoro), por isso é consumidor secundário. O nível trófico é a ordem do consumidor mais um: 3º nível. A alternativa com 'terciário no 3º nível' mistura as duas contagens; decompositores não ocupam uma posição linear da cadeia.",
+      "habilidade": "Atribuir papel e nível trófico em uma cadeia alimentar.",
+      "tags": [
+        "nível trófico",
+        "consumidores"
+      ]
+    },
+    {
+      "id": "cadeias-teias-alimentares-q02",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Em uma cadeia alimentar, as setas desenhadas entre os organismos indicam:",
+      "alternativas": [
+        "o sentido da transferência de energia e matéria, do alimento para quem o consome",
+        "o predador perseguindo sua presa",
+        "o retorno da energia dos consumidores para os produtores",
+        "a ordem de tamanho dos organismos, do maior para o menor",
+        "a direção em que os decompositores devolvem energia ao sol"
+      ],
+      "correta": 0,
+      "explicacao": "A seta parte do organismo que serve de alimento e aponta para o consumidor, mostrando o caminho da energia e da matéria. Ela não representa perseguição nem tamanho, e a energia não retorna aos produtores: é dissipada como calor.",
+      "habilidade": "Interpretar a representação gráfica de cadeias alimentares.",
+      "tags": [
+        "cadeia alimentar",
+        "fluxo de energia"
+      ]
+    },
+    {
+      "id": "cadeias-teias-alimentares-q03",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Os principais decompositores dos ecossistemas, responsáveis por devolver nutrientes inorgânicos ao solo e à água, são:",
+      "alternativas": [
+        "minhocas e tatuzinhos-de-jardim",
+        "urubus e hienas",
+        "algas e cianobactérias",
+        "capim e demais plantas rasteiras",
+        "bactérias e fungos"
+      ],
+      "correta": 4,
+      "explicacao": "Bactérias e fungos digerem a matéria orgânica morta e liberam nutrientes inorgânicos. Minhocas e tatuzinhos são detritívoros, que fragmentam os restos; urubus e hienas são necrófagos (consumidores); algas, cianobactérias e plantas são produtores.",
+      "habilidade": "Reconhecer o papel dos decompositores.",
+      "tags": [
+        "decompositores",
+        "detritívoros"
+      ]
+    },
+    {
+      "id": "cadeias-teias-alimentares-q04",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "A afirmação 'nos ecossistemas, a energia flui e a matéria circula' significa que:",
+      "alternativas": [
+        "a energia é reaproveitada pelos produtores após a ação dos decompositores",
+        "a energia segue um único sentido e é perdida como calor a cada nível, enquanto os elementos químicos são reciclados",
+        "a matéria é perdida como calor, enquanto a energia é reciclada pelos decompositores",
+        "energia e matéria são igualmente recicladas, sem perdas",
+        "a energia aumenta ao longo da cadeia, acompanhando o tamanho dos predadores"
+      ],
+      "correta": 1,
+      "explicacao": "A energia entra como luz, é usada na respiração e sai como calor, que os produtores não reaproveitam: o fluxo é unidirecional. Carbono, nitrogênio e fósforo voltam ao ambiente pela respiração e pela decomposição e são reutilizados. Por isso a energia diminui, e não aumenta, a cada nível.",
+      "habilidade": "Diferenciar fluxo de energia e ciclagem de matéria.",
+      "tags": [
+        "fluxo de energia",
+        "ciclo da matéria"
+      ]
+    },
+    {
+      "id": "cadeias-teias-alimentares-q05",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Em uma teia alimentar do Cerrado, o lobo-guará come frutos de lobeira e também roedores que se alimentam de sementes. Assim, o lobo-guará:",
+      "alternativas": [
+        "ocupa apenas o 2º nível trófico, por comer frutos",
+        "é um decompositor, por consumir frutos caídos",
+        "é um produtor, por dispersar sementes",
+        "ocupa o 2º e o 3º níveis tróficos, comportando-se como onívoro",
+        "ocupa apenas o 4º nível trófico, por ser um predador"
+      ],
+      "correta": 3,
+      "explicacao": "Ao comer lobeira, o lobo-guará é consumidor primário (2º nível); ao comer o roedor granívoro, é consumidor secundário (3º nível). Em teias, um mesmo organismo pode ocupar mais de um nível. Dispersar sementes não o torna produtor, e frutos não fazem dele decompositor.",
+      "habilidade": "Identificar organismos que ocupam vários níveis tróficos em uma teia.",
+      "tags": [
+        "teia alimentar",
+        "onívoro",
+        "Cerrado"
+      ]
+    },
+    {
+      "id": "cadeias-teias-alimentares-q06",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Comparando uma monocultura de soja com um fragmento de floresta nativa, espera-se que a monocultura seja mais suscetível a explosões populacionais de pragas porque:",
+      "alternativas": [
+        "tem teias alimentares simples, com poucos predadores e poucas rotas alternativas de controle",
+        "não possui produtores",
+        "não recebe energia solar suficiente",
+        "tem excesso de decompositores",
+        "nela a energia é reciclada mais rapidamente"
+      ],
+      "correta": 0,
+      "explicacao": "Com poucas espécies e poucas conexões, faltam predadores e parasitas que controlem o herbívoro; teias complexas oferecem caminhos alternativos e tendem a ser mais estáveis. A soja é produtora, recebe luz, e a energia não é reciclada em nenhum ecossistema.",
+      "habilidade": "Relacionar complexidade da teia à estabilidade da comunidade.",
+      "tags": [
+        "estabilidade",
+        "teia alimentar",
+        "pragas"
+      ]
+    },
+    {
+      "id": "cadeias-teias-alimentares-q07",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Um estudo hipotético mediu a concentração de metilmercúrio (em microgramas por grama de tecido) em organismos de um rio amazônico próximo a uma área de garimpo: fitoplâncton, 0,01; peixe herbívoro (pacu), 0,08; peixe que come pequenos peixes, 0,4; tucunaré (carnívoro de topo), 1,2. A água do rio apresentava concentração muito menor que a de qualquer organismo. O padrão observado é explicado principalmente porque o metilmercúrio:",
+      "alternativas": [
+        "é produzido pelos próprios peixes carnívoros durante a digestão",
+        "é eliminado rapidamente pelos organismos, concentrando-se apenas na água",
+        "é persistente, acumula-se nos tecidos e é transferido e concentrado a cada nível trófico, num processo de biomagnificação",
+        "é mais absorvido por organismos pequenos, que por isso apresentam as maiores concentrações",
+        "só afeta os peixes, não oferecendo risco a populações humanas que os consomem"
+      ],
+      "correta": 2,
+      "explicacao": "A concentração cresce do fitoplâncton ao tucunaré porque cada predador consome muitas presas e retém o metilmercúrio de todas: é a biomagnificação. Se fosse rapidamente eliminado, não se acumularia; os organismos pequenos têm as menores concentrações; e o metilmercúrio é neurotóxico para pessoas que comem peixe de topo.",
+      "habilidade": "Interpretar dados de concentração de poluentes ao longo de uma cadeia.",
+      "tags": [
+        "biomagnificação",
+        "mercúrio",
+        "garimpo",
+        "Amazônia"
+      ]
+    },
+    {
+      "id": "cadeias-teias-alimentares-q08",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Uma família ribeirinha pesca diariamente em um rio contaminado por mercúrio. Uma agente de saúde recomenda que gestantes e crianças da comunidade prefiram peixes como o pacu e o jaraqui, que se alimentam principalmente de frutos, sementes ou detritos, e reduzam o consumo de grandes peixes predadores. A recomendação tem fundamento biológico porque:",
+      "alternativas": [
+        "peixes herbívoros e detritívoros não absorvem nenhum mercúrio",
+        "o mercúrio dos peixes predadores é destruído pelo cozimento, mas o dos herbívoros não",
+        "os peixes predadores são consumidores primários e, por isso, mais contaminados",
+        "peixes de níveis tróficos mais baixos tendem a acumular menos metilmercúrio, e essa substância pode prejudicar o desenvolvimento do sistema nervoso de fetos e crianças",
+        "o mercúrio só se acumula em animais de sangue quente"
+      ],
+      "correta": 3,
+      "explicacao": "Peixes que comem em níveis tróficos baixos recebem menos mercúrio acumulado ao longo da cadeia; o metilmercúrio é neurotóxico e atravessa a placenta. Herbívoros também absorvem algum mercúrio (só que menos), o cozimento não elimina o metal, predadores não são consumidores primários e peixes acumulam mercúrio, mesmo sendo ectotérmicos.",
+      "habilidade": "Aplicar o conceito de biomagnificação a decisões de saúde pública.",
+      "tags": [
+        "biomagnificação",
+        "mercúrio",
+        "saúde"
+      ]
+    },
+    {
+      "id": "cadeias-teias-alimentares-q09",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Em um costão rochoso, uma estrela-do-mar alimenta-se principalmente de mexilhões, que são os melhores competidores por espaço nas rochas. Pesquisadores removeram as estrelas-do-mar de uma área experimental e mantiveram outra área intacta como controle. Após alguns anos, na área sem estrelas, os mexilhões cobriam quase toda a rocha, e o número de espécies de algas e invertebrados havia diminuído bastante. Esses resultados indicam que a estrela-do-mar:",
+      "alternativas": [
+        "é a espécie mais abundante do costão",
+        "atua como espécie-chave, pois, ao controlar o competidor dominante, mantém a diversidade da comunidade",
+        "é um decompositor, por se alimentar de mexilhões mortos",
+        "compete com as algas por luz",
+        "não tem influência sobre a comunidade, pois a área controle também mudou"
+      ],
+      "correta": 1,
+      "explicacao": "A remoção de um único predador levou ao domínio dos mexilhões e à perda de espécies: a estrela-do-mar tem impacto desproporcional, sendo uma espécie-chave. O texto não indica que ela seja a mais abundante; ela é predadora (não decompositora), não faz fotossíntese, e a área controle não sofreu a mesma mudança.",
+      "habilidade": "Reconhecer espécies-chave a partir de dados experimentais.",
+      "tags": [
+        "espécie-chave",
+        "cascata trófica",
+        "experimento"
+      ]
+    },
+    {
+      "id": "cadeias-teias-alimentares-q10",
+      "nivel": "diamante",
+      "tipo": "multipla_escolha",
+      "enunciado": "Em um lago, a cadeia principal é: fitoplâncton → zooplâncton → peixe planctófago (come zooplâncton) → peixe piscívoro. Por causa da pesca intensa, o peixe piscívoro foi quase eliminado. Ao mesmo tempo, o lago recebia pequenas quantidades de um inseticida organoclorado, persistente e lipossolúvel. Considerando efeito cascata, fluxo de energia e biomagnificação, a previsão mais coerente para os anos seguintes é:",
+      "alternativas": [
+        "aumento do zooplâncton e do fitoplâncton, pois a retirada do predador de topo libera energia para todos os níveis",
+        "diminuição do peixe planctófago, já que a energia antes usada pelo piscívoro deixa de circular no lago",
+        "aumento do peixe planctófago, queda do zooplâncton e aumento do fitoplâncton; o inseticida continua a se biomagnificar, com as maiores concentrações nos consumidores mais altos que restarem",
+        "fim da biomagnificação do inseticida, pois ela só ocorre em cadeias com cinco níveis tróficos",
+        "aumento simultâneo de todas as populações, já que a energia passa a ser reciclada pelos decompositores"
+      ],
+      "correta": 2,
+      "explicacao": "Sem o piscívoro, o planctófago aumenta, consome mais zooplâncton, e o fitoplâncton, menos pastejado, aumenta: os efeitos se alternam entre os níveis (cascata trófica). A biomagnificação depende da persistência e da lipossolubilidade do composto, não de um número mínimo de níveis; o planctófago passa a ser o topo e concentra mais inseticida. A energia não é reciclada nem 'liberada' para todos os níveis ao mesmo tempo.",
+      "habilidade": "Integrar cascata trófica, fluxo de energia e biomagnificação em uma previsão.",
+      "tags": [
+        "cascata trófica",
+        "biomagnificação",
+        "fluxo de energia",
+        "integração"
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "cadeias-teias-alimentares-f01",
+      "frente": "O que são produtores?",
+      "verso": "Seres autótrofos que fabricam matéria orgânica a partir de substâncias inorgânicas, por fotossíntese ou quimiossíntese."
+    },
+    {
+      "id": "cadeias-teias-alimentares-f02",
+      "frente": "Quem são os consumidores primários?",
+      "verso": "Os herbívoros, que se alimentam diretamente dos produtores."
+    },
+    {
+      "id": "cadeias-teias-alimentares-f03",
+      "frente": "Em que nível trófico está o consumidor secundário?",
+      "verso": "No 3º nível trófico (ordem do consumidor + 1)."
+    },
+    {
+      "id": "cadeias-teias-alimentares-f04",
+      "frente": "Quem são os decompositores?",
+      "verso": "Principalmente bactérias e fungos, que devolvem nutrientes inorgânicos ao ambiente."
+    },
+    {
+      "id": "cadeias-teias-alimentares-f05",
+      "frente": "Minhoca é decompositora?",
+      "verso": "Não: é detritívora. Fragmenta os restos orgânicos e acelera o trabalho de bactérias e fungos."
+    },
+    {
+      "id": "cadeias-teias-alimentares-f06",
+      "frente": "Para onde aponta a seta de uma cadeia alimentar?",
+      "verso": "Do alimento para o consumidor, no sentido da passagem de energia."
+    },
+    {
+      "id": "cadeias-teias-alimentares-f07",
+      "frente": "Por que o fluxo de energia é unidirecional?",
+      "verso": "Porque, a cada nível, parte da energia é perdida como calor na respiração, e o calor não é reaproveitado pelos produtores."
+    },
+    {
+      "id": "cadeias-teias-alimentares-f08",
+      "frente": "Quanto da energia de um nível passa, em média, ao seguinte?",
+      "verso": "Cerca de 10%."
+    },
+    {
+      "id": "cadeias-teias-alimentares-f09",
+      "frente": "Por que as cadeias raramente passam de 4 ou 5 níveis?",
+      "verso": "Porque a energia disponível diminui muito a cada nível e não sustenta muitos degraus."
+    },
+    {
+      "id": "cadeias-teias-alimentares-f10",
+      "frente": "O que é uma teia alimentar?",
+      "verso": "O conjunto de cadeias alimentares interligadas de uma comunidade."
+    },
+    {
+      "id": "cadeias-teias-alimentares-f11",
+      "frente": "Por que teias complexas tendem a ser mais estáveis?",
+      "verso": "Porque oferecem caminhos alternativos: se uma presa diminui, o predador pode comer outra."
+    },
+    {
+      "id": "cadeias-teias-alimentares-f12",
+      "frente": "Bioacumulação",
+      "verso": "Aumento da concentração de uma substância dentro de um organismo ao longo da vida."
+    },
+    {
+      "id": "cadeias-teias-alimentares-f13",
+      "frente": "Biomagnificação",
+      "verso": "Aumento da concentração de uma substância de um nível trófico para o seguinte."
+    },
+    {
+      "id": "cadeias-teias-alimentares-f14",
+      "frente": "Que características favorecem a biomagnificação de um poluente?",
+      "verso": "Ser persistente, ficar retido nos tecidos e ser pouco excretado (ex.: DDT, que é lipossolúvel, e metilmercúrio, que se liga a proteínas)."
+    },
+    {
+      "id": "cadeias-teias-alimentares-f15",
+      "frente": "O que é espécie-chave?",
+      "verso": "Espécie cujo impacto na comunidade é muito maior do que sua abundância faria supor."
+    },
+    {
+      "id": "cadeias-teias-alimentares-f16",
+      "frente": "O que é cascata trófica?",
+      "verso": "A propagação, para outros níveis tróficos, de uma alteração ocorrida em um nível (ex.: lontras, ouriços e algas)."
+    }
+  ],
+  "minijogos": {
+    "pares": [
+      {
+        "a": "Produtor",
+        "b": "Autótrofo que fabrica matéria orgânica"
+      },
+      {
+        "a": "Consumidor primário",
+        "b": "Herbívoro, 2º nível trófico"
+      },
+      {
+        "a": "Consumidor secundário",
+        "b": "3º nível trófico"
+      },
+      {
+        "a": "Decompositor",
+        "b": "Bactérias e fungos"
+      },
+      {
+        "a": "Detritívoro",
+        "b": "Minhoca e tatuzinho-de-jardim"
+      },
+      {
+        "a": "Biomagnificação",
+        "b": "Concentração crescente ao longo da cadeia"
+      },
+      {
+        "a": "Bioacumulação",
+        "b": "Concentração crescente dentro de um organismo"
+      },
+      {
+        "a": "Espécie-chave",
+        "b": "Impacto desproporcional à sua abundância"
+      }
+    ],
+    "sequencia": {
+      "instrucao": "Monte a cadeia alimentar aquática na ordem em que a energia passa, do produtor ao consumidor de topo.",
+      "itens": [
+        "Fitoplâncton",
+        "Zooplâncton",
+        "Peixe pequeno",
+        "Tucunaré",
+        "Ser humano"
+      ]
+    },
+    "classificacao": {
+      "instrucao": "Classifique cada organismo conforme seu papel principal no ecossistema.",
+      "categorias": [
+        "Produtor",
+        "Consumidor",
+        "Decompositor"
+      ],
+      "itens": [
+        {
+          "texto": "Capim do Cerrado",
+          "categoria": "Produtor"
+        },
+        {
+          "texto": "Fitoplâncton",
+          "categoria": "Produtor"
+        },
+        {
+          "texto": "Cianobactéria",
+          "categoria": "Produtor"
+        },
+        {
+          "texto": "Bactéria quimiossintetizante de fonte hidrotermal",
+          "categoria": "Produtor"
+        },
+        {
+          "texto": "Capivara",
+          "categoria": "Consumidor"
+        },
+        {
+          "texto": "Onça-pintada",
+          "categoria": "Consumidor"
+        },
+        {
+          "texto": "Urubu",
+          "categoria": "Consumidor"
+        },
+        {
+          "texto": "Zooplâncton",
+          "categoria": "Consumidor"
+        },
+        {
+          "texto": "Lobo-guará",
+          "categoria": "Consumidor"
+        },
+        {
+          "texto": "Fungo orelha-de-pau",
+          "categoria": "Decompositor"
+        },
+        {
+          "texto": "Bactéria do solo que decompõe folhas",
+          "categoria": "Decompositor"
+        },
+        {
+          "texto": "Bolor que cresce em frutos caídos",
+          "categoria": "Decompositor"
+        }
+      ]
+    },
+    "verdadeiro_falso": [
+      {
+        "afirmacao": "O consumidor primário ocupa o 2º nível trófico.",
+        "valor": true,
+        "explicacao": "Os produtores ocupam o 1º nível; os herbívoros, o 2º."
+      },
+      {
+        "afirmacao": "Os decompositores reciclam a energia dos ecossistemas.",
+        "valor": false,
+        "explicacao": "Eles reciclam matéria; a energia é dissipada como calor e não volta."
+      },
+      {
+        "afirmacao": "O urubu é um decompositor.",
+        "valor": false,
+        "explicacao": "O urubu é um consumidor necrófago; decompositores são bactérias e fungos."
+      },
+      {
+        "afirmacao": "Em uma teia alimentar, um mesmo animal pode ocupar mais de um nível trófico.",
+        "valor": true,
+        "explicacao": "Onívoros como o lobo-guará e o ser humano ocupam vários níveis."
+      },
+      {
+        "afirmacao": "Na biomagnificação, os herbívoros apresentam as maiores concentrações do poluente.",
+        "valor": false,
+        "explicacao": "As maiores concentrações estão nos níveis tróficos mais altos."
+      },
+      {
+        "afirmacao": "O metilmercúrio é a forma orgânica do mercúrio que se acumula nos peixes.",
+        "valor": true,
+        "explicacao": "Microrganismos transformam o mercúrio em metilmercúrio, facilmente absorvido e acumulado."
+      },
+      {
+        "afirmacao": "Espécie-chave é sempre a espécie mais numerosa da comunidade.",
+        "valor": false,
+        "explicacao": "É a de maior impacto relativo, mesmo que seja pouco abundante."
+      },
+      {
+        "afirmacao": "Algumas cadeias alimentares começam com produtores quimiossintetizantes, sem depender da luz.",
+        "valor": true,
+        "explicacao": "Em fontes hidrotermais do fundo do mar, bactérias e arqueas quimiossintetizantes são os produtores."
+      },
+      {
+        "afirmacao": "O DDT foi associado a ovos de casca fina em aves predadoras.",
+        "valor": true,
+        "explicacao": "O DDT e seus derivados alteram o metabolismo do cálcio nessas aves."
+      },
+      {
+        "afirmacao": "Comer em níveis tróficos mais altos aproveita melhor a energia do ecossistema.",
+        "valor": false,
+        "explicacao": "É o contrário: quanto mais perto dos produtores, mais energia está disponível."
+      }
+    ]
+  },
+  "missao_mundo_aberto": {
+    "titulo": "O Rastro do Mercúrio",
+    "regiao": "Savana da Teia Alimentar",
+    "npc": "Pescador Raimundo",
+    "narrativa": "O rio que corta a Savana da Teia Alimentar está diferente: os grandes peixes predadores andam doentes, e o pescador Raimundo desconfia do garimpo rio acima. Ao mesmo tempo, a caça a um predador da savana desequilibrou os herbívoros, e o capim das margens está sumindo. Raimundo pede ajuda para seguir o caminho da energia e do veneno pela teia.",
+    "objetivo": "Montar a teia alimentar do rio e da savana, rastrear a biomagnificação do mercúrio e explicar ao conselho da aldeia o efeito cascata causado pela perda do predador.",
+    "mecanica": "investigacao",
+    "etapas": [
+      "Coletar amostras de fitoplâncton, zooplâncton, peixes herbívoros e peixes predadores e ordená-las na cadeia, do produtor ao topo",
+      "Comparar as concentrações de mercúrio de cada amostra e mostrar a Raimundo onde o metal se concentra mais",
+      "Recomendar à comunidade quais peixes são mais seguros para gestantes e crianças, justificando pelo nível trófico",
+      "Observar a margem sem predadores e explicar a cascata: mais herbívoros, menos capim, mais erosão",
+      "Levar os decompositores ao laboratório da aldeia e demonstrar que eles reciclam a matéria, mas não a energia"
+    ],
+    "recompensa_xp": 150,
+    "item_recompensa": "Rede do Ecólogo Ribeirinho"
+  }
+}

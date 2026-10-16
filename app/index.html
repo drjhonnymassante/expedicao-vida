@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prévia do Conteúdo — Expedição Vida</title>
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="compartilhado/avatar2d.js"></script>
+<script src="compartilhado/estado.js"></script>
+<style>
+  :root { --verde:#2E7D32; --verde-claro:#E8F5E9; --roxo:#6A1B9A; --fundo:#F6F8F6; --texto:#1f2a1f; --cinza:#6b746b; --borda:#dfe6df; --ouro:#C9A227; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background:var(--fundo); color:var(--texto); }
+  header { position:sticky; top:0; z-index:10; background:#fff; border-bottom:1px solid var(--borda); display:flex; align-items:center; gap:16px; padding:10px 16px; }
+  header h1 { font-size:17px; margin:0; color:var(--verde); white-space:nowrap; }
+  .hud { margin-left:auto; display:flex; align-items:center; gap:10px; font-size:13px; }
+  .avatar { width:38px; height:38px; border-radius:50%; background:var(--verde-claro); display:grid; place-items:center; font-size:20px; border:2px solid var(--verde); }
+  .xpbar { width:140px; height:8px; background:#e6ece6; border-radius:4px; overflow:hidden; }
+  .xpbar div { height:100%; background:linear-gradient(90deg,var(--verde),#66BB6A); transition:width .4s; }
+  .badge { padding:2px 8px; border-radius:10px; font-size:12px; font-weight:600; }
+  .b-bronze{background:#f3e3d3;color:#8a5a2b}.b-prata{background:#eceff1;color:#546e7a}.b-ouro{background:#fff4cc;color:#8a6d00}.b-diamante{background:#e1f5fe;color:#0277bd}
+  .layout { display:grid; grid-template-columns: 320px 1fr; min-height:calc(100vh - 60px); }
+  nav { border-right:1px solid var(--borda); background:#fff; overflow-y:auto; max-height:calc(100vh - 60px); position:sticky; top:60px; }
+  .stats { padding:12px 16px; font-size:12px; color:var(--cinza); border-bottom:1px solid var(--borda); }
+  .stats b { color:var(--texto); }
+  details.u { border-bottom:1px solid var(--borda); }
+  details.u summary { cursor:pointer; padding:10px 16px; list-style:none; }
+  details.u summary::-webkit-details-marker{display:none}
+  .u-reg { font-size:11px; color:var(--roxo); text-transform:uppercase; letter-spacing:.04em; }
+  .u-tit { font-weight:600; font-size:14px; }
+  .u-prog { font-size:11px; color:var(--cinza); }
+  .t { display:flex; gap:8px; align-items:center; padding:6px 16px 6px 28px; font-size:13px; cursor:pointer; }
+  .t:hover { background:var(--verde-claro); }
+  .t.off { color:#b3bab3; cursor:not-allowed; }
+  .t.prem { color:#8a7a52; }
+  .t.ativo { background:var(--verde-claro); font-weight:600; }
+  .dot { width:8px; height:8px; border-radius:50%; flex:none; background:#cfd8cf; }
+  .dot.pronto { background:var(--verde); }
+  .free { font-size:10px; color:var(--verde); border:1px solid var(--verde); border-radius:6px; padding:0 4px; }
+  main { padding:24px clamp(16px,4vw,48px); max-width:980px; }
+  .tabs { display:flex; gap:6px; flex-wrap:wrap; margin:16px 0; }
+  .tabs button { border:1px solid var(--borda); background:#fff; padding:7px 12px; border-radius:18px; cursor:pointer; font-size:13px; }
+  .tabs button.on { background:var(--verde); color:#fff; border-color:var(--verde); }
+  .card { background:#fff; border:1px solid var(--borda); border-radius:12px; padding:20px; }
+  .aula { line-height:1.65; }
+  .aula h1 { color:var(--verde); }
+  .aula h2 { margin-top:1.6em; border-bottom:2px solid var(--verde-claro); padding-bottom:4px; }
+  .aula table { border-collapse:collapse; width:100%; font-size:14px; display:block; overflow-x:auto; }
+  .aula th,.aula td { border:1px solid var(--borda); padding:6px 8px; text-align:left; vertical-align:top; }
+  .aula th { background:var(--verde-claro); }
+  .aula blockquote { margin:12px 0; padding:10px 14px; border-left:4px solid var(--roxo); background:#f7f0fa; border-radius:6px; }
+  .aula a.lk { color:var(--roxo); font-weight:600; text-decoration:none; border-bottom:1px dashed var(--roxo); cursor:pointer; }
+  .meta { display:flex; flex-wrap:wrap; gap:6px; font-size:12px; color:var(--cinza); }
+  .meta span { background:#fff; border:1px solid var(--borda); border-radius:10px; padding:2px 8px; }
+  .alt { display:block; width:100%; text-align:left; border:1px solid var(--borda); background:#fff; padding:10px 12px; border-radius:8px; margin:6px 0; cursor:pointer; font-size:14px; }
+  .alt:hover { border-color:var(--verde); }
+  .alt.certa { background:#e8f5e9; border-color:var(--verde); }
+  .alt.errada { background:#ffebee; border-color:#c62828; }
+  .exp { margin-top:10px; padding:10px 12px; background:#f3f6f3; border-radius:8px; font-size:14px; }
+  .btn { background:var(--verde); color:#fff; border:none; padding:9px 16px; border-radius:8px; cursor:pointer; font-size:14px; }
+  .btn.sec { background:#fff; color:var(--verde); border:1px solid var(--verde); }
+  .flash { min-height:160px; display:grid; place-items:center; text-align:center; font-size:18px; cursor:pointer; padding:24px; border-radius:12px; border:2px dashed var(--verde); background:#fff; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:8px; }
+  .chip { padding:10px; border:1px solid var(--borda); border-radius:8px; background:#fff; cursor:pointer; font-size:13px; text-align:center; }
+  .chip.sel { border-color:var(--roxo); background:#f7f0fa; }
+  .chip.ok { border-color:var(--verde); background:#e8f5e9; cursor:default; opacity:.7; }
+  .chip.no { border-color:#c62828; background:#ffebee; }
+  .seq li { padding:8px 10px; border:1px solid var(--borda); border-radius:8px; margin:6px 0; background:#fff; display:flex; justify-content:space-between; gap:8px; align-items:center; }
+  .seq button { border:1px solid var(--borda); background:#fff; border-radius:6px; cursor:pointer; padding:2px 8px; }
+  .cats { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:10px; }
+  .cat { border:2px dashed var(--borda); border-radius:10px; padding:10px; min-height:90px; cursor:pointer; }
+  .cat h4 { margin:0 0 6px; font-size:13px; color:var(--roxo); }
+  .missao { background:linear-gradient(135deg,#f1f8e9,#f3e5f5); }
+  .toast { position:fixed; bottom:20px; right:20px; background:var(--verde); color:#fff; padding:10px 16px; border-radius:10px; opacity:0; transition:opacity .3s; pointer-events:none; }
+  .toast.on { opacity:1; }
+  .vazio { color:var(--cinza); text-align:center; padding:60px 20px; }
+  @media (max-width: 800px) { .layout { grid-template-columns:1fr; } nav { position:static; max-height:45vh; } .xpbar { width:70px; } header h1 { font-size:14px; } }
+</style>
+<script src="vendor/supabase.js"></script>
+<script src="../config.js"></script>
+<script src="compartilhado/sessao.js"></script>
+</head>
+<body>
+<header>
+  <h1>🧬 Expedição Vida <small style="color:var(--cinza);font-weight:400">· prévia do conteúdo</small></h1>
+  <a href="mundo3d/" style="margin-left:16px;background:#6A1B9A;color:#fff;padding:7px 12px;border-radius:10px;font-size:13px;font-weight:600;text-decoration:none;white-space:nowrap">🗺️ Mundo aberto</a>
+  <div class="hud" title="HUD de demonstração (XP salvo só neste navegador)">
+    <canvas class="avatar" id="avatar" width="76" height="76"></canvas>
+    <div><div><b id="nivel">Nível 1</b> · <span id="forma"></span> · <span id="xp">0 XP</span></div><div class="xpbar"><div id="xpfill" style="width:0"></div></div></div>
+    <span class="badge b-bronze" id="liga">Bronze</span>
+  </div>
+</header>
+<div class="layout">
+  <nav id="nav"><div class="stats">Carregando…</div></nav>
+  <main id="main"><div class="vazio">Escolha uma região e um tópico no mapa à esquerda.<br><br>Tópicos com ● verde já estão prontos.</div></main>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+const BASE = '../content/';
+let CUR = null, IDX = {}, ATUAL = null, DADOS = null;
+const LIGAS = ['bronze','prata','ouro','diamante'];
+let st = EstadoVida.completar(EstadoVida.carregar());
+const { nivelDe, formaDe, FORMAS } = Avatar2D;
+function hud() {
+  st = EstadoVida.completar(EstadoVida.carregar() || st);
+  const n = nivelDe(st.xp), ini = 50*(n-1)*n, fim = 50*n*(n+1), f = formaDe(n);
+  document.getElementById('nivel').textContent = 'Nível ' + n;
+  document.getElementById('forma').textContent = FORMAS[f].nome;
+  document.getElementById('xp').textContent = st.xp + ' XP';
+  document.getElementById('xpfill').style.width = Math.round((st.xp-ini)/(fim-ini)*100) + '%';
+  const liga = LIGAS[Math.min(Math.floor(st.xp/600),3)];
+  const b = document.getElementById('liga'); b.textContent = liga[0].toUpperCase()+liga.slice(1); b.className = 'badge b-'+liga;
+}
+(function retrato(t) { const g = document.getElementById('avatar').getContext('2d'); g.clearRect(0,0,76,76); Avatar2D.desenhar(g, 38, 44, formaDe(nivelDe(st.xp)), t/1000, 1, 1.6, false); requestAnimationFrame(retrato); })(0);
+addEventListener('storage', e => { if (e.key === EstadoVida.CHAVE) hud(); });
+addEventListener('focus', hud); document.addEventListener('visibilitychange', () => { if (!document.hidden) hud(); });
+function ganhar(v, msg, chave) {
+  st = EstadoVida.completar(EstadoVida.carregar() || st);
+  if (chave) { if (st.aulas[chave]) { toast('Já contabilizado ✓'); return; } st.aulas[chave] = true; }
+  st.xp += v; EstadoVida.salvar(st); hud(); toast('+' + v + ' XP · ' + msg);
+}
+function toast(m) { const t = document.getElementById('toast'); t.textContent = m; t.classList.add('on'); setTimeout(()=>t.classList.remove('on'), 1600); }
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const embaralhar = a => a.map(v=>[Math.random(),v]).sort((x,y)=>x[0]-y[0]).map(x=>x[1]);
+
+async function iniciar() {
+  CUR = await fetch(BASE+'curriculo.json').then(r=>r.json());
+  let tot=0, ok=0;
+  const html = CUR.unidades.map(u => {
+    u.topicos.forEach(t => { IDX[t.id] = {...t, unidade:u}; tot++; if (t.status==='pronto') ok++; });
+    const pr = u.topicos.filter(t=>t.status==='pronto').length;
+    return `<details class="u" ${pr?'':''}><summary><div class="u-reg">${esc(u.regiao_mundo.nome)} · ${u.serie}ª série</div><div class="u-tit">${esc(u.titulo)}</div><div class="u-prog">${pr}/${u.topicos.length} tópicos prontos</div></summary>`
+      + u.topicos.map(t => `<div class="t ${t.status==='pronto'?'':t.status==='premium'?'prem':'off'}" data-id="${t.id}"><span class="dot ${t.status==='pronto'?'pronto':''}"></span><span>${esc(t.titulo)}</span>${t.acesso==='gratuito'?'<span class="free">grátis</span>':t.status==='premium'?'<span class="free" style="color:#b8860b;border-color:#b8860b">🔒 premium</span>':''}</div>`).join('') + '</details>';
+  }).join('');
+  const e = CUR.estatisticas || {};
+  document.getElementById('nav').innerHTML = `<div class="stats"><b>${ok}</b> de ${tot} tópicos prontos · ${e.questoes??'?'} questões · ${e.flashcards??'?'} flashcards</div>` + html;
+  document.querySelectorAll('.t').forEach(el => el.onclick = () => { if (el.classList.contains('prem')) { location.href = (window.RAIZ_SITE || '../') + 'index.html#lista-digital'; return; } if (!el.classList.contains('off')) abrir(el.dataset.id); });
+  hud();
+  const h = location.hash.slice(1); if (h && IDX[h]) abrir(h);
+}
+
+async function abrir(id) {
+  const t = IDX[id]; if (!t || t.status!=='pronto') return;
+  document.querySelectorAll('.t').forEach(el => el.classList.toggle('ativo', el.dataset.id===id));
+  location.hash = id;
+  const [md, js] = await Promise.all([fetch(BASE+t.arquivo_md).then(r=>r.text()), fetch(BASE+t.arquivo_json).then(r=>r.json())]);
+  ATUAL = t; DADOS = { md: md.replace(/^---[\s\S]*?\n---\s*/, ''), js };
+  document.getElementById('main').innerHTML = `
+    <div class="meta"><span>${esc(t.unidade.titulo)}</span><span>Região: ${esc(t.unidade.regiao_mundo.nome)}</span><span>${t.acesso==='gratuito'?'🔓 Gratuito':'🔒 Premium'}</span><span>ENEM: ${t.incidencia_enem}</span><span>BNCC: ${t.bncc.join(', ')}</span></div>
+    <div class="tabs" id="tabs">${[['aula','📖 Aula'],['quiz','🏆 Quiz por liga'],['flash','🃏 Flashcards'],['pares','🔗 Pares'],['seq','🔢 Sequência'],['classif','🗂️ Classificação'],['vf','⚡ V/F Relâmpago'],['missao','🗺️ Missão']].map(([k,n])=>`<button data-k="${k}">${n}</button>`).join('')}</div>
+    <div id="painel"></div>`;
+  document.querySelectorAll('#tabs button').forEach(b => b.onclick = () => aba(b.dataset.k));
+  aba('aula'); window.scrollTo(0,0);
+}
+
+function aba(k) {
+  document.querySelectorAll('#tabs button').forEach(b => b.classList.toggle('on', b.dataset.k===k));
+  const p = document.getElementById('painel'), j = DADOS.js, mj = j.minijogos || {};
+  if (k==='aula') {
+    const html = marked.parse(DADOS.md).replace(/\[\[([a-z0-9-]+)\]\]/g, (m,id) => IDX[id] ? `<a class="lk" data-id="${id}">${esc(IDX[id].titulo)}</a>` : id);
+    p.innerHTML = `<div class="card aula">${html}<p><button class="btn" id="concluir">✔ Concluir aula (+50 XP)</button></p></div>`;
+    p.querySelectorAll('a.lk').forEach(a => a.onclick = () => IDX[a.dataset.id].status==='pronto' ? abrir(a.dataset.id) : IDX[a.dataset.id].status==='premium' ? (confirm('Este tópico faz parte dos planos premium. Quer entrar na lista de espera?') && (location.href = (window.RAIZ_SITE || '../') + 'index.html#lista-digital')) : alert('Este tópico ainda está sendo escrito.'));
+    p.querySelector('#concluir').onclick = () => ganhar(50, 'aula concluída', 'aula:' + ATUAL.id);
+  }
+  if (k==='quiz') quiz(p, j.questoes, 0, 0);
+  if (k==='flash') flash(p, embaralhar(j.flashcards), 0);
+  if (k==='pares') pares(p, mj.pares || []);
+  if (k==='seq') seq(p, mj.sequencia);
+  if (k==='classif') classif(p, mj.classificacao);
+  if (k==='vf') vf(p, embaralhar(mj.verdadeiro_falso || []), 0, 0);
+  if (k==='missao') { const m = j.missao_mundo_aberto;
+    p.innerHTML = `<div class="card missao"><div class="u-reg">${esc(m.regiao)} · ${esc(m.mecanica)}</div><h2>${esc(m.titulo)}</h2><p><b>${esc(m.npc)}:</b> ${esc(m.narrativa)}</p><p><b>Objetivo:</b> ${esc(m.objetivo)}</p><ol>${m.etapas.map(e=>`<li>${esc(e)}</li>`).join('')}</ol><p>🎁 Recompensa: <b>${m.recompensa_xp} XP</b> + ${esc(m.item_recompensa||'')}</p><p style="font-size:12px;color:var(--cinza)">No mundo aberto, esta missão aparece como desafio secundário na região da unidade.</p></div>`; }
+}
+
+const XPN = {bronze:5, prata:10, ouro:15, diamante:25};
+function quiz(p, qs, i, acertos) {
+  if (i >= qs.length) { p.innerHTML = `<div class="card"><h2>Resultado: ${acertos}/${qs.length}</h2><button class="btn" onclick="aba('quiz')">Refazer</button></div>`; return; }
+  const q = qs[i];
+  p.innerHTML = `<div class="card"><div class="meta"><span class="badge b-${q.nivel}">${q.nivel}</span><span>Questão ${i+1}/${qs.length}</span></div><p style="font-size:16px">${esc(q.enunciado)}</p>${q.alternativas.map((a,n)=>`<button class="alt" data-n="${n}">${'ABCDE'[n]}) ${esc(a)}</button>`).join('')}<div id="fb"></div></div>`;
+  p.querySelectorAll('.alt').forEach(b => b.onclick = () => {
+    const n = +b.dataset.n, ok = n === q.correta;
+    p.querySelectorAll('.alt').forEach(x => { x.disabled = true; if (+x.dataset.n===q.correta) x.classList.add('certa'); });
+    if (!ok) b.classList.add('errada'); else ganhar(XPN[q.nivel], 'questão ' + q.nivel);
+    p.querySelector('#fb').innerHTML = `<div class="exp">${ok?'✅ Correto!':'❌ Não foi dessa vez.'} ${esc(q.explicacao)}</div><p><button class="btn" id="prox">Próxima →</button></p>`;
+    p.querySelector('#prox').onclick = () => quiz(p, qs, i+1, acertos + (ok?1:0));
+  });
+}
+function flash(p, fc, i) {
+  if (i >= fc.length) { p.innerHTML = `<div class="card"><h2>Revisão concluída!</h2><button class="btn" onclick="aba('flash')">De novo</button></div>`; ganhar(20,'revisão completa'); return; }
+  const f = fc[i]; let virado = false;
+  p.innerHTML = `<div class="card"><div class="meta"><span>Cartão ${i+1}/${fc.length}</span></div><div class="flash" id="fc">${esc(f.frente)}<br><small style="color:var(--cinza)">(toque para virar)</small></div><p id="bt" style="display:none;gap:8px"><button class="btn sec" id="esq">Esqueci</button> <button class="btn" id="lem">Lembrei</button></p></div>`;
+  p.querySelector('#fc').onclick = () => { if (virado) return; virado = true; p.querySelector('#fc').innerHTML = esc(f.verso); p.querySelector('#bt').style.display='flex'; };
+  p.querySelector('#esq').onclick = () => flash(p, fc, i+1);
+  p.querySelector('#lem').onclick = () => { ganhar(3,'cartão lembrado'); flash(p, fc, i+1); };
+}
+function pares(p, ps) {
+  const itens = embaralhar(ps.flatMap((x,n)=>[{t:x.a,n},{t:x.b,n}])); let sel = null, feitos = 0;
+  p.innerHTML = `<div class="card"><p>Encontre os pares: toque em um termo e depois na associação correspondente.</p><div class="grid">${itens.map((x,k)=>`<div class="chip" data-k="${k}">${esc(x.t)}</div>`).join('')}</div></div>`;
+  p.querySelectorAll('.chip').forEach(c => c.onclick = () => {
+    if (c.classList.contains('ok')) return; const x = itens[+c.dataset.k];
+    if (!sel) { sel = c; c.classList.add('sel'); return; }
+    if (sel === c) { c.classList.remove('sel'); sel = null; return; }
+    const y = itens[+sel.dataset.k];
+    if (x.n === y.n) { [c,sel].forEach(e=>{e.classList.remove('sel'); e.classList.add('ok');}); feitos++; if (feitos===ps.length) ganhar(30,'pares completos'); }
+    else { const s = sel; [c,s].forEach(e=>e.classList.add('no')); setTimeout(()=>[c,s].forEach(e=>e.classList.remove('no','sel')),500); }
+    sel = null;
+  });
+}
+function seq(p, s) {
+  if (!s) { p.innerHTML = '<div class="card vazio">Este tópico não tem uma sequência natural.</div>'; return; }
+  let ord = embaralhar(s.itens.slice());
+  const render = () => { p.innerHTML = `<div class="card"><p>${esc(s.instrucao)}</p><ol class="seq">${ord.map((x,k)=>`<li><span>${esc(x)}</span><span><button data-k="${k}" data-d="-1">▲</button><button data-k="${k}" data-d="1">▼</button></span></li>`).join('')}</ol><button class="btn" id="ver">Verificar</button> <span id="res"></span></div>`;
+    p.querySelectorAll('.seq button').forEach(b => b.onclick = () => { const k=+b.dataset.k, d=+b.dataset.d, m=k+d; if (m<0||m>=ord.length) return; [ord[k],ord[m]]=[ord[m],ord[k]]; render(); });
+    p.querySelector('#ver').onclick = () => { const certos = ord.filter((x,k)=>x===s.itens[k]).length; p.querySelector('#res').textContent = certos===ord.length ? '✅ Ordem perfeita!' : `${certos}/${ord.length} na posição certa`; if (certos===ord.length) ganhar(25,'sequência correta'); }; };
+  render();
+}
+function classif(p, c) {
+  if (!c) { p.innerHTML = '<div class="card vazio">Sem classificação neste tópico.</div>'; return; }
+  const itens = embaralhar(c.itens.slice()); let i = 0, ac = 0;
+  const render = () => {
+    if (i >= itens.length) { p.innerHTML = `<div class="card"><h2>${ac}/${itens.length} classificados corretamente</h2><button class="btn" onclick="aba('classif')">De novo</button></div>`; ganhar(Math.round(ac/itens.length*30),'classificação'); return; }
+    p.innerHTML = `<div class="card"><p>${esc(c.instrucao)}</p><div class="flash" style="min-height:80px;cursor:default">${esc(itens[i].texto)}</div><p></p><div class="cats">${c.categorias.map(k=>`<div class="cat" data-c="${esc(k)}"><h4>${esc(k)}</h4></div>`).join('')}</div><div id="fb"></div></div>`;
+    p.querySelectorAll('.cat').forEach(el => el.onclick = () => { const ok = el.dataset.c === itens[i].categoria; if (ok) ac++;
+      p.querySelector('#fb').innerHTML = `<div class="exp">${ok?'✅':'❌ Era: '+esc(itens[i].categoria)}</div>`; i++; setTimeout(render, ok?400:1100); });
+  };
+  render();
+}
+function vf(p, vs, i, ac) {
+  if (i >= vs.length) { p.innerHTML = `<div class="card"><h2>${ac}/${vs.length} acertos</h2><button class="btn" onclick="aba('vf')">De novo</button></div>`; ganhar(ac*2,'V/F relâmpago'); return; }
+  const v = vs[i];
+  p.innerHTML = `<div class="card"><div class="meta"><span>${i+1}/${vs.length}</span></div><div class="flash" style="cursor:default">${esc(v.afirmacao)}</div><p style="display:flex;gap:8px;justify-content:center"><button class="btn" data-v="1">Verdadeiro</button><button class="btn sec" data-v="0">Falso</button></p><div id="fb"></div></div>`;
+  p.querySelectorAll('[data-v]').forEach(b => b.onclick = () => { const ok = (b.dataset.v==='1') === v.valor;
+    p.querySelector('#fb').innerHTML = `<div class="exp">${ok?'✅':'❌'} ${esc(v.explicacao)}</div><p style="text-align:center"><button class="btn" id="prox">Próxima →</button></p>`;
+    p.querySelectorAll('[data-v]').forEach(x=>x.disabled=true); p.querySelector('#prox').onclick = () => vf(p, vs, i+1, ac+(ok?1:0)); });
+}
+iniciar().catch(e => { document.getElementById('nav').innerHTML = '<div class="stats">Erro ao carregar o conteúdo: '+esc(e.message)+'. Abra pelo servidor de prévia (node scripts/preview-conteudo.js).</div>'; });
+</script>
+</body>
+</html>

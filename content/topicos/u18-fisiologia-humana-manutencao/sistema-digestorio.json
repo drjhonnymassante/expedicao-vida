@@ -1,0 +1,482 @@
+{
+  "topico": "sistema-digestorio",
+  "versao": 1,
+  "questoes": [
+    {
+      "id": "sistema-digestorio-q01",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "A digestão química do amido presente no pão e no arroz começa:",
+      "alternativas": [
+        "no estômago, pela ação da pepsina",
+        "na boca, pela ação da amilase salivar",
+        "no esôfago, pela ação do peristaltismo",
+        "no intestino grosso, pela ação das bactérias",
+        "no fígado, pela ação da bile"
+      ],
+      "correta": 1,
+      "explicacao": "A amilase salivar (ptialina) inicia a hidrólise do amido (em maltose e dextrinas) ainda na boca. A pepsina age sobre proteínas, o peristaltismo é digestão mecânica, a bile não contém enzimas e as bactérias do intestino grosso só fermentam o que chega até lá sem ser digerido, como as fibras.",
+      "habilidade": "Identificar o local de início da digestão de cada nutriente.",
+      "tags": [
+        "digestão química",
+        "amilase",
+        "carboidratos"
+      ]
+    },
+    {
+      "id": "sistema-digestorio-q02",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Sobre a bile, é correto afirmar que ela:",
+      "alternativas": [
+        "é produzida pela vesícula biliar e contém lipase",
+        "é produzida pelo pâncreas e digere proteínas",
+        "é ácida e ajuda a pepsina no estômago",
+        "é produzida pelo fígado e emulsifica as gorduras, sem conter enzimas digestivas",
+        "é absorvida no estômago e transporta glicose ao sangue"
+      ],
+      "correta": 3,
+      "explicacao": "A bile é produzida no fígado e só armazenada na vesícula. Seus sais fragmentam as gotas de gordura (emulsificação), facilitando a ação da lipase pancreática, mas ela não tem enzimas nem digere proteínas.",
+      "habilidade": "Reconhecer a origem e a função da bile.",
+      "tags": [
+        "bile",
+        "fígado",
+        "lipídios"
+      ]
+    },
+    {
+      "id": "sistema-digestorio-q03",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "A principal função do intestino grosso no ser humano é:",
+      "alternativas": [
+        "produzir a bile e o suco pancreático",
+        "iniciar a digestão das proteínas",
+        "absorver a maior parte da glicose e dos aminoácidos",
+        "produzir enzimas que digerem a celulose",
+        "absorver água e sais minerais e formar as fezes"
+      ],
+      "correta": 4,
+      "explicacao": "O intestino grosso absorve água e sais e forma as fezes. Glicose e aminoácidos são absorvidos no delgado, as proteínas começam a ser digeridas no estômago e não produzimos celulase.",
+      "habilidade": "Associar cada órgão do tubo digestório à sua função.",
+      "tags": [
+        "intestino grosso",
+        "órgãos"
+      ]
+    },
+    {
+      "id": "sistema-digestorio-q04",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "A amilase salivar continua digerindo o amido por algum tempo dentro do bolo alimentar, mas sua atividade praticamente cessa quando o conteúdo do estômago se mistura ao bolo. Isso acontece porque:",
+      "alternativas": [
+        "o estômago absorve toda a amilase salivar",
+        "a pepsina transforma a amilase em glicose",
+        "o pH muito ácido do estômago inativa a amilase, que atua em pH próximo do neutro",
+        "a bile, liberada no estômago, destrói a amilase",
+        "o amido já foi totalmente digerido na boca"
+      ],
+      "correta": 2,
+      "explicacao": "A amilase salivar funciona em pH quase neutro e é inativada pelo ácido clorídrico do estômago. A pepsina não produz glicose, a bile é lançada no duodeno e a digestão do amido na boca é apenas parcial.",
+      "habilidade": "Relacionar pH e atividade enzimática na digestão.",
+      "tags": [
+        "enzimas",
+        "pH",
+        "estômago"
+      ]
+    },
+    {
+      "id": "sistema-digestorio-q05",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Pouco depois de uma refeição rica em gorduras, a vesícula biliar se contrai e lança bile no duodeno. O hormônio responsável principalmente por esse efeito é a:",
+      "alternativas": [
+        "colecistocinina, produzida pelo duodeno",
+        "gastrina, produzida pelo estômago",
+        "insulina, produzida pelo pâncreas",
+        "secretina, produzida pela vesícula biliar",
+        "pepsina, produzida pelo estômago"
+      ],
+      "correta": 0,
+      "explicacao": "A CCK é liberada pelo duodeno diante de gorduras e proteínas e contrai a vesícula, além de estimular as enzimas pancreáticas. A secretina também é duodenal, mas estimula sobretudo o bicarbonato pancreático. Gastrina atua no estômago, insulina regula a glicemia e pepsina é enzima.",
+      "habilidade": "Associar hormônios digestivos a estímulos e efeitos.",
+      "tags": [
+        "hormônios",
+        "colecistocinina",
+        "bile"
+      ]
+    },
+    {
+      "id": "sistema-digestorio-q06",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Após a digestão das gorduras, os ácidos graxos e monoglicerídeos absorvidos pelas células do intestino delgado são remontados e chegam à circulação principalmente:",
+      "alternativas": [
+        "pelos capilares sanguíneos das vilosidades, como glicose",
+        "pela veia porta-hepática, junto com os aminoácidos",
+        "pela urina, já que gorduras não são aproveitadas",
+        "pelos vasos linfáticos das vilosidades, na forma de quilomícrons",
+        "pelo intestino grosso, onde são absorvidos com a água"
+      ],
+      "correta": 3,
+      "explicacao": "Nas células intestinais os lipídios são remontados em triglicerídeos e empacotados em quilomícrons, grandes demais para os capilares. Eles entram nos vasos lácteos (linfáticos) e só depois chegam ao sangue. Açúcares e aminoácidos, sim, seguem pelos capilares e pela veia porta-hepática.",
+      "habilidade": "Descrever as vias de absorção dos nutrientes.",
+      "tags": [
+        "absorção",
+        "lipídios",
+        "linfa"
+      ]
+    },
+    {
+      "id": "sistema-digestorio-q07",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Uma estudante percebeu que, sempre que toma um copo de leite, sente cólicas, inchaço abdominal e tem diarreia algumas horas depois. Com iogurtes e queijos curados os sintomas são bem menores. O médico explicou que ela tem intolerância à lactose. A explicação biológica para os sintomas é que:",
+      "alternativas": [
+        "o sistema imunitário dela produz anticorpos contra as proteínas do leite, causando inflamação",
+        "a mucosa do intestino delgado produz pouca lactase; a lactose não digerida chega ao intestino grosso, retém água por osmose e é fermentada pelas bactérias, gerando gases",
+        "o estômago dela não produz ácido clorídrico suficiente para digerir a lactose",
+        "a bile não consegue emulsificar a lactose, que é uma gordura",
+        "o pâncreas libera lactase em excesso, o que irrita a parede do intestino"
+      ],
+      "correta": 1,
+      "explicacao": "Com pouca lactase na borda em escova, a lactose chega ao intestino grosso, atrai água por osmose (diarreia) e é fermentada pela microbiota (gases e cólicas). Iogurtes e queijos curados têm menos lactose, consumida na fermentação. Anticorpos caracterizam alergia, não intolerância; lactose é dissacarídeo, não gordura; e o HCl não a digere.",
+      "habilidade": "Explicar um distúrbio digestivo comum com base na ação enzimática e na osmose.",
+      "tags": [
+        "intolerância à lactose",
+        "lactase",
+        "microbiota",
+        "saúde"
+      ]
+    },
+    {
+      "id": "sistema-digestorio-q08",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "O prato de arroz com feijão é base da alimentação de muitas famílias brasileiras e aparece como exemplo de refeição saudável em guias alimentares. Do ponto de vista nutricional, uma vantagem dessa combinação é que:",
+      "alternativas": [
+        "o feijão fornece celulase, que permite digerir a celulose do arroz",
+        "o arroz é rico em todos os aminoácidos essenciais, tornando o feijão dispensável",
+        "os dois alimentos são fontes de colesterol, que é essencial para a produção de bile",
+        "a combinação dispensa o consumo de verduras, frutas e legumes",
+        "os aminoácidos essenciais em menor quantidade em um alimento são compensados pelo outro, melhorando a qualidade da proteína da refeição"
+      ],
+      "correta": 4,
+      "explicacao": "O arroz tem pouca lisina e o feijão, pouca metionina; juntos fornecem um conjunto mais completo de aminoácidos essenciais. Vegetais não contêm colesterol, alimentos não nos fornecem celulase e a combinação não substitui frutas e hortaliças.",
+      "habilidade": "Avaliar a qualidade nutricional de uma refeição com base na composição de proteínas.",
+      "tags": [
+        "alimentação equilibrada",
+        "aminoácidos essenciais",
+        "cotidiano"
+      ]
+    },
+    {
+      "id": "sistema-digestorio-q09",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Após uma semana tomando um antibiótico de amplo espectro para tratar uma infecção, um adolescente passou a ter diarreia. O médico explicou que o remédio, além de combater a bactéria causadora da infecção, havia afetado outras bactérias do corpo. A interpretação mais adequada para o caso é:",
+      "alternativas": [
+        "o antibiótico reduziu bactérias da microbiota intestinal, que competem com microrganismos patogênicos e ajudam a fermentar fibras, causando um desequilíbrio (disbiose)",
+        "o antibiótico destruiu as vilosidades intestinais, que são formadas por bactérias",
+        "os antibióticos inativam a lactase, enzima produzida por bactérias do estômago",
+        "o antibiótico estimulou a produção de bile em excesso, que é uma enzima laxante",
+        "a diarreia prova que o antibiótico atuou contra os vírus do intestino"
+      ],
+      "correta": 0,
+      "explicacao": "Antibióticos de amplo espectro também atingem bactérias benéficas; com a microbiota reduzida, oportunistas proliferam e surge a diarreia. Vilosidades são da mucosa humana, a lactase é produzida pelas células intestinais, a bile não é enzima e antibióticos não atuam sobre vírus.",
+      "habilidade": "Relacionar uso de antibióticos e equilíbrio da microbiota intestinal.",
+      "tags": [
+        "microbiota",
+        "antibióticos",
+        "disbiose",
+        "saúde"
+      ]
+    },
+    {
+      "id": "sistema-digestorio-q10",
+      "nivel": "diamante",
+      "tipo": "multipla_escolha",
+      "enunciado": "A fibrose cística é uma doença genética causada por mutações em um gene que codifica um canal de íons cloreto da membrana plasmática. Com o canal defeituoso, as secreções ficam espessas e podem obstruir os ductos do pâncreas. Muitos pacientes não tratados apresentam fezes volumosas e gordurosas, perda de peso e tendência a sangramentos. A explicação que integra corretamente esses sinais é:",
+      "alternativas": [
+        "a falta de bile, produzida pelo pâncreas, impede a emulsificação das gorduras e a coagulação do sangue",
+        "a falta de insulina impede a absorção intestinal de gorduras, que passam a ser eliminadas nas fezes",
+        "a obstrução impede que a lipase e outras enzimas pancreáticas cheguem ao duodeno; as gorduras não digeridas saem nas fezes e a absorção de vitaminas lipossolúveis, como a K, necessária à coagulação, diminui",
+        "a falta de pepsina impede a digestão das gorduras no estômago, e o excesso de ácido no sangue causa hemorragias",
+        "o canal de cloreto defeituoso destrói a microbiota intestinal, que é a única fonte de enzimas para digerir gorduras"
+      ],
+      "correta": 2,
+      "explicacao": "Sem suco pancreático no duodeno falta lipase: os triglicerídeos não são digeridos nem absorvidos e saem nas fezes (esteatorreia), com perda de peso. Como as vitaminas lipossolúveis são absorvidas com as gorduras, falta vitamina K, necessária aos fatores de coagulação. A bile vem do fígado, a insulina não controla a absorção de gorduras e a pepsina digere proteínas.",
+      "habilidade": "Integrar genética, transporte de membrana, digestão e nutrição na análise de um caso clínico.",
+      "tags": [
+        "pâncreas",
+        "lipídios",
+        "vitaminas",
+        "genética",
+        "integração"
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "sistema-digestorio-f01",
+      "frente": "Ordem dos órgãos do tubo digestório",
+      "verso": "Boca, faringe, esôfago, estômago, intestino delgado (duodeno, jejuno, íleo), intestino grosso (ceco, cólon, reto) e ânus."
+    },
+    {
+      "id": "sistema-digestorio-f02",
+      "frente": "Quais são as glândulas anexas ao tubo digestório?",
+      "verso": "Glândulas salivares, fígado e pâncreas."
+    },
+    {
+      "id": "sistema-digestorio-f03",
+      "frente": "Digestão mecânica x digestão química",
+      "verso": "Mecânica: fragmenta e mistura o alimento sem mudar as moléculas. Química: hidrólise das macromoléculas por enzimas."
+    },
+    {
+      "id": "sistema-digestorio-f04",
+      "frente": "O que é peristaltismo?",
+      "verso": "Ondas de contração da parede muscular que empurram o alimento ao longo do tubo digestório."
+    },
+    {
+      "id": "sistema-digestorio-f05",
+      "frente": "Ação da amilase salivar (ptialina)",
+      "verso": "Inicia na boca a hidrólise do amido em maltose e dextrinas, em pH quase neutro."
+    },
+    {
+      "id": "sistema-digestorio-f06",
+      "frente": "Ação da pepsina e pH ideal",
+      "verso": "Hidrolisa proteínas em peptídeos no estômago, em pH muito ácido (cerca de 2)."
+    },
+    {
+      "id": "sistema-digestorio-f07",
+      "frente": "Por que pepsina e tripsina são produzidas na forma inativa?",
+      "verso": "Para evitar que digiram as próprias células que as produzem. O pepsinogênio é ativado pelo HCl e o tripsinogênio, pela enteroquinase no duodeno."
+    },
+    {
+      "id": "sistema-digestorio-f08",
+      "frente": "Onde a bile é produzida e onde é armazenada?",
+      "verso": "Produzida no fígado; armazenada e concentrada na vesícula biliar."
+    },
+    {
+      "id": "sistema-digestorio-f09",
+      "frente": "Função da bile",
+      "verso": "Emulsificar gorduras com os sais biliares, aumentando a superfície para a lipase. Não contém enzimas."
+    },
+    {
+      "id": "sistema-digestorio-f10",
+      "frente": "Função do bicarbonato do suco pancreático",
+      "verso": "Neutralizar a acidez do quimo no duodeno, protegendo a mucosa e permitindo a ação das enzimas intestinais."
+    },
+    {
+      "id": "sistema-digestorio-f11",
+      "frente": "Estruturas que ampliam a área de absorção do intestino delgado",
+      "verso": "Pregas circulares, vilosidades e microvilosidades."
+    },
+    {
+      "id": "sistema-digestorio-f12",
+      "frente": "Para onde vão os lipídios absorvidos?",
+      "verso": "Para os vasos linfáticos (vasos lácteos), na forma de quilomícrons."
+    },
+    {
+      "id": "sistema-digestorio-f13",
+      "frente": "Gastrina, secretina e CCK: efeito principal",
+      "verso": "Gastrina: aumenta o suco gástrico. Secretina: bicarbonato pancreático. CCK: contrai a vesícula e libera enzimas pancreáticas."
+    },
+    {
+      "id": "sistema-digestorio-f14",
+      "frente": "Três funções da microbiota intestinal",
+      "verso": "Fermentar fibras, produzir vitaminas (como a K) e competir com microrganismos patogênicos. Também ajuda a amadurecer o sistema imunitário."
+    },
+    {
+      "id": "sistema-digestorio-f15",
+      "frente": "Probiótico x prebiótico",
+      "verso": "Probiótico: microrganismo vivo benéfico. Prebiótico: fibra que alimenta as bactérias benéficas."
+    }
+  ],
+  "minijogos": {
+    "pares": [
+      {
+        "a": "Amilase salivar",
+        "b": "Amido → maltose"
+      },
+      {
+        "a": "Pepsina",
+        "b": "Proteínas → peptídeos"
+      },
+      {
+        "a": "Lipase pancreática",
+        "b": "Triglicerídeos → ácidos graxos e monoglicerídeos"
+      },
+      {
+        "a": "Lactase",
+        "b": "Lactose → glicose e galactose"
+      },
+      {
+        "a": "Bile",
+        "b": "Emulsificação das gorduras"
+      },
+      {
+        "a": "Gastrina",
+        "b": "Estimula a secreção de suco gástrico"
+      },
+      {
+        "a": "Secretina",
+        "b": "Estimula a liberação de bicarbonato pelo pâncreas"
+      },
+      {
+        "a": "Colecistocinina",
+        "b": "Contração da vesícula biliar"
+      },
+      {
+        "a": "Quilomícrons",
+        "b": "Transporte de lipídios pela linfa"
+      }
+    ],
+    "sequencia": {
+      "instrucao": "Coloque em ordem o trajeto do alimento pelo tubo digestório.",
+      "itens": [
+        "Boca",
+        "Faringe",
+        "Esôfago",
+        "Estômago",
+        "Duodeno",
+        "Jejuno e íleo",
+        "Intestino grosso (ceco e cólon)",
+        "Reto",
+        "Ânus"
+      ]
+    },
+    "classificacao": {
+      "instrucao": "Classifique cada substância de acordo com o local onde é produzida.",
+      "categorias": [
+        "Glândulas salivares",
+        "Estômago",
+        "Pâncreas",
+        "Mucosa do intestino delgado"
+      ],
+      "itens": [
+        {
+          "texto": "Amilase salivar (ptialina)",
+          "categoria": "Glândulas salivares"
+        },
+        {
+          "texto": "Lisozima da saliva",
+          "categoria": "Glândulas salivares"
+        },
+        {
+          "texto": "Pepsinogênio",
+          "categoria": "Estômago"
+        },
+        {
+          "texto": "Ácido clorídrico",
+          "categoria": "Estômago"
+        },
+        {
+          "texto": "Fator intrínseco",
+          "categoria": "Estômago"
+        },
+        {
+          "texto": "Gastrina",
+          "categoria": "Estômago"
+        },
+        {
+          "texto": "Tripsinogênio",
+          "categoria": "Pâncreas"
+        },
+        {
+          "texto": "Lipase pancreática",
+          "categoria": "Pâncreas"
+        },
+        {
+          "texto": "Bicarbonato do suco pancreático",
+          "categoria": "Pâncreas"
+        },
+        {
+          "texto": "Lactase",
+          "categoria": "Mucosa do intestino delgado"
+        },
+        {
+          "texto": "Enteroquinase",
+          "categoria": "Mucosa do intestino delgado"
+        },
+        {
+          "texto": "Secretina",
+          "categoria": "Mucosa do intestino delgado"
+        },
+        {
+          "texto": "Colecistocinina",
+          "categoria": "Mucosa do intestino delgado"
+        }
+      ]
+    },
+    "verdadeiro_falso": [
+      {
+        "afirmacao": "A bile contém enzimas que digerem as gorduras.",
+        "valor": false,
+        "explicacao": "A bile não tem enzimas; ela emulsifica as gorduras para a lipase agir."
+      },
+      {
+        "afirmacao": "A vesícula biliar armazena a bile produzida pelo fígado.",
+        "valor": true,
+        "explicacao": "O fígado produz a bile; a vesícula a armazena e concentra."
+      },
+      {
+        "afirmacao": "O esôfago realiza digestão química das proteínas.",
+        "valor": false,
+        "explicacao": "O esôfago apenas transporta o bolo alimentar por peristaltismo."
+      },
+      {
+        "afirmacao": "A pepsina atua melhor em pH muito ácido.",
+        "valor": true,
+        "explicacao": "Ela é adaptada ao ambiente do estômago, com pH em torno de 2."
+      },
+      {
+        "afirmacao": "A maior parte da absorção de nutrientes ocorre no intestino grosso.",
+        "valor": false,
+        "explicacao": "A absorção de nutrientes ocorre principalmente no intestino delgado; o grosso absorve sobretudo água e sais."
+      },
+      {
+        "afirmacao": "A secretina é liberada pelo duodeno em resposta à chegada do quimo ácido.",
+        "valor": true,
+        "explicacao": "Ela estimula o pâncreas a liberar suco rico em bicarbonato."
+      },
+      {
+        "afirmacao": "O ser humano produz celulase e digere a celulose das verduras.",
+        "valor": false,
+        "explicacao": "Não produzimos celulase; a celulose funciona como fibra alimentar."
+      },
+      {
+        "afirmacao": "O sangue que sai do intestino com glicose e aminoácidos passa pelo fígado antes de seguir para o resto do corpo.",
+        "valor": true,
+        "explicacao": "Ele segue pela veia porta-hepática até o fígado."
+      },
+      {
+        "afirmacao": "Bactérias da microbiota intestinal produzem vitamina K.",
+        "valor": true,
+        "explicacao": "Elas fornecem parte da vitamina K e de algumas vitaminas do complexo B."
+      },
+      {
+        "afirmacao": "Intolerância à lactose e alergia ao leite são a mesma coisa.",
+        "valor": false,
+        "explicacao": "A intolerância é falta de lactase; a alergia é uma reação imunitária às proteínas do leite."
+      }
+    ]
+  },
+  "missao_mundo_aberto": {
+    "titulo": "A Usina de Desmontagem",
+    "regiao": "Metrópole Corpórea",
+    "npc": "Engenheira Vilosa, chefe da Usina Digestiva",
+    "narrativa": "A Usina Digestiva da Metrópole Corpórea parou: a comida chega inteira ao porto do intestino e nada entra nas avenidas de sangue. As equipes de enzimas estão nos setores errados, os mensageiros hormonais sumiram e o bairro das bactérias está em crise.",
+    "objetivo": "Reativar a linha de desmontagem levando cada enzima ao setor com o pH certo, despachando os mensageiros hormonais e encaminhando cada nutriente para a avenida de sangue ou para o canal da linfa.",
+    "mecanica": "logistica",
+    "etapas": [
+      "Estação Boca: alocar a equipe de amilase salivar e montar o bolo alimentar",
+      "Caldeirão Gástrico: ativar o pepsinogênio com ácido e reforçar o muro de muco",
+      "Central do Duodeno: enviar secretina e colecistocinina para liberar bicarbonato e bile no momento certo",
+      "Porto das Vilosidades: separar glicose e aminoácidos para a veia porta-hepática e quilomícrons para o canal da linfa",
+      "Bairro da Microbiota: entregar fibras às bactérias e recuperar o equilíbrio depois da passagem de um antibiótico"
+    ],
+    "recompensa_xp": 150,
+    "item_recompensa": "Chave da Borda em Escova"
+  }
+}

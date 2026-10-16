@@ -1,0 +1,480 @@
+{
+  "topico": "tipos-reproducao",
+  "versao": 1,
+  "questoes": [
+    {
+      "id": "tipos-reproducao-q01",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Em um aquário de água doce, observou-se uma hidra com uma pequena projeção lateral que cresceu, formou tentáculos e depois se soltou, originando um novo indivíduo. Esse processo é chamado de:",
+      "alternativas": [
+        "divisão binária",
+        "brotamento",
+        "esporulação",
+        "partenogênese",
+        "fecundação externa"
+      ],
+      "correta": 1,
+      "explicacao": "A formação de um broto que cresce no corpo do genitor e se destaca é o brotamento (gemiparidade). Na divisão binária o organismo se divide em dois de tamanho parecido; na esporulação há liberação de esporos; partenogênese e fecundação envolvem gametas.",
+      "habilidade": "Reconhecer modalidades de reprodução assexuada.",
+      "tags": [
+        "brotamento",
+        "hidra",
+        "reprodução assexuada"
+      ]
+    },
+    {
+      "id": "tipos-reproducao-q02",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Uma característica comum a todas as formas de reprodução assexuada é:",
+      "alternativas": [
+        "a participação de dois indivíduos de sexos diferentes",
+        "a formação de gametas por meiose",
+        "a ocorrência de crossing-over entre cromossomos homólogos",
+        "a produção de descendentes geneticamente idênticos ao genitor, exceto por eventuais mutações",
+        "a formação de um zigoto diploide"
+      ],
+      "correta": 3,
+      "explicacao": "Na reprodução assexuada um único genitor origina descendentes sem gametas e sem fecundação; por isso eles formam um clone, e a variação só aparece por mutação. Meiose, crossing-over, dois genitores e zigoto são características da reprodução sexuada.",
+      "habilidade": "Diferenciar reprodução assexuada e sexuada.",
+      "tags": [
+        "reprodução assexuada",
+        "clone",
+        "variabilidade"
+      ]
+    },
+    {
+      "id": "tipos-reproducao-q03",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "A fecundação externa, que ocorre fora do corpo da fêmea, é típica de qual grupo de animais?",
+      "alternativas": [
+        "Maioria dos peixes ósseos e anfíbios anuros",
+        "Aves e mamíferos",
+        "Répteis e aves",
+        "Tubarões e golfinhos",
+        "Insetos e aracnídeos"
+      ],
+      "correta": 0,
+      "explicacao": "Peixes ósseos e anuros liberam os gametas na água, onde ocorre a fecundação. Aves, mamíferos, répteis, insetos, aracnídeos, tubarões e golfinhos têm fecundação interna.",
+      "habilidade": "Associar tipo de fecundação aos grupos animais.",
+      "tags": [
+        "fecundação externa",
+        "peixes",
+        "anfíbios"
+      ]
+    },
+    {
+      "id": "tipos-reproducao-q04",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Em uma colmeia de Apis mellifera, a rainha controla se cada óvulo será ou não fecundado no momento da postura. Sobre a origem dos zangões, é correto afirmar que eles:",
+      "alternativas": [
+        "são diploides e se originam de óvulos fecundados que receberam geleia real",
+        "são clones idênticos da rainha, pois os óvulos são formados por mitose",
+        "surgem de óvulos fecundados por espermatozoides de outra colmeia",
+        "são operárias que mudaram de sexo após a metamorfose",
+        "originam-se de óvulos não fecundados, por partenogênese, e são haploides"
+      ],
+      "correta": 4,
+      "explicacao": "Zangões vêm de óvulos não fecundados (partenogênese) e por isso são haploides. Óvulos fecundados geram fêmeas diploides, operárias ou rainhas conforme a alimentação. Como os óvulos da rainha são produzidos por meiose, os zangões não são clones dela.",
+      "habilidade": "Explicar a partenogênese e suas consequências genéticas.",
+      "tags": [
+        "partenogênese",
+        "abelhas",
+        "ploidia"
+      ]
+    },
+    {
+      "id": "tipos-reproducao-q05",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Lagartas de borboletas se alimentam de folhas, enquanto as borboletas adultas se alimentam de néctar. Uma vantagem ecológica desse tipo de desenvolvimento, com fase larval e metamorfose, é:",
+      "alternativas": [
+        "dispensar a reprodução sexuada nos adultos",
+        "permitir que a larva se reproduza antes de virar adulto",
+        "reduzir a competição por alimento e espaço entre jovens e adultos da mesma espécie",
+        "eliminar a necessidade de fecundação interna",
+        "impedir que a espécie sofra ação de predadores"
+      ],
+      "correta": 2,
+      "explicacao": "No desenvolvimento indireto, larva e adulto exploram recursos e hábitats diferentes, o que diminui a competição entre as fases. A metamorfose não elimina a reprodução sexuada, as larvas não se reproduzem e os predadores continuam atuando.",
+      "habilidade": "Relacionar o desenvolvimento indireto a vantagens ecológicas.",
+      "tags": [
+        "desenvolvimento indireto",
+        "metamorfose",
+        "insetos"
+      ]
+    },
+    {
+      "id": "tipos-reproducao-q06",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "As minhocas são animais hermafroditas. Ainda assim, na reprodução, dois indivíduos se emparelham e trocam espermatozoides. Esse comportamento:",
+      "alternativas": [
+        "caracteriza fecundação cruzada, que aumenta a variabilidade genética da prole em relação à autofecundação",
+        "indica que as minhocas são, na verdade, dioicas",
+        "é um tipo de reprodução assexuada por fragmentação",
+        "produz descendentes idênticos aos dois genitores",
+        "ocorre porque minhocas não produzem óvulos"
+      ],
+      "correta": 0,
+      "explicacao": "Ser hermafrodita não obriga à autofecundação. A troca de espermatozoides entre dois indivíduos é fecundação cruzada e combina genes de genitores diferentes. Minhocas produzem óvulos e espermatozoides, não são dioicas e esse processo é sexuado, não fragmentação.",
+      "habilidade": "Diferenciar hermafroditismo, autofecundação e fecundação cruzada.",
+      "tags": [
+        "hermafroditismo",
+        "minhoca",
+        "fecundação cruzada"
+      ]
+    },
+    {
+      "id": "tipos-reproducao-q07",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "No Brasil, bananais costumam ser formados a partir de rebentos retirados da base de plantas-mãe ou de mudas produzidas por cultura de tecidos. Em certas regiões, uma doença causada por fungo de solo, o mal-do-panamá, pode comprometer plantações inteiras de variedades suscetíveis, como a banana-maçã. Do ponto de vista biológico, a rápida devastação dessas lavouras está relacionada principalmente:",
+      "alternativas": [
+        "à alta variabilidade genética produzida pela propagação vegetativa",
+        "ao fato de as bananeiras realizarem fecundação externa",
+        "à produção de sementes viáveis em excesso, que esgota o solo",
+        "à baixa variabilidade genética das plantas, clones que compartilham a mesma suscetibilidade ao patógeno",
+        "à formação de esporos pela bananeira, que espalham a doença"
+      ],
+      "correta": 3,
+      "explicacao": "Mudas de rebentos ou de cultura de tecidos são clones: se uma planta é suscetível, praticamente todas são. A propagação vegetativa gera baixa, e não alta, variabilidade; as variedades cultivadas não dependem de sementes; e os esporos que espalham a doença são do fungo, não da bananeira.",
+      "habilidade": "Avaliar consequências da reprodução assexuada em sistemas agrícolas.",
+      "tags": [
+        "propagação vegetativa",
+        "banana",
+        "variabilidade",
+        "agricultura"
+      ]
+    },
+    {
+      "id": "tipos-reproducao-q08",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Um estudante comparou dados de três animais: uma espécie de peixe marinho que libera dezenas de milhares de ovos diretamente na água, onde são fecundados; uma espécie de tubarão que produz poucos ovos fecundados dentro do corpo da fêmea; e um mamífero que gera um filhote por gestação e o amamenta por meses. A conclusão mais coerente com esses dados é:",
+      "alternativas": [
+        "o número de ovos não tem relação com o tipo de fecundação nem com o cuidado parental",
+        "espécies com fecundação externa e pouca proteção ao embrião tendem a produzir grande número de gametas, compensando as altas perdas no ambiente",
+        "a fecundação interna exige mais gametas porque os espermatozoides precisam atravessar a casca do ovo",
+        "o mamífero produz poucos filhotes porque sua reprodução é assexuada",
+        "o tubarão tem fecundação externa, pois vive na água como o peixe"
+      ],
+      "correta": 1,
+      "explicacao": "Na fecundação externa muitos gametas e embriões se perdem, e a produção em massa compensa essas perdas. Quanto maior a proteção e o cuidado parental, menor tende a ser o número de descendentes. O tubarão vive na água mas tem fecundação interna, e a reprodução do mamífero é sexuada.",
+      "habilidade": "Interpretar dados sobre estratégias reprodutivas e investimento parental.",
+      "tags": [
+        "fecundação externa",
+        "fecundação interna",
+        "cuidado parental"
+      ]
+    },
+    {
+      "id": "tipos-reproducao-q09",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Campanhas de combate à dengue orientam a população a eliminar recipientes que acumulam água, como pneus, vasos de plantas e garrafas. Essa medida é eficaz porque o Aedes aegypti:",
+      "alternativas": [
+        "tem desenvolvimento direto, e os filhotes já nascem alados",
+        "reproduz-se assexuadamente por brotamento na água",
+        "é hermafrodita e realiza autofecundação em ambiente úmido",
+        "tem fecundação externa e depende da água para o encontro dos gametas",
+        "apresenta desenvolvimento indireto com metamorfose completa, e suas fases de larva e pupa são aquáticas"
+      ],
+      "correta": 4,
+      "explicacao": "O Aedes é holometábolo: ovo, larva, pupa e adulto. Larva e pupa vivem em água parada, então eliminar esses criadouros interrompe o ciclo. O mosquito não tem desenvolvimento direto, não se reproduz por brotamento, tem sexos separados e fecundação interna.",
+      "habilidade": "Aplicar conhecimentos sobre desenvolvimento animal a ações de saúde pública.",
+      "tags": [
+        "Aedes aegypti",
+        "metamorfose",
+        "saúde pública",
+        "dengue"
+      ]
+    },
+    {
+      "id": "tipos-reproducao-q10",
+      "nivel": "diamante",
+      "tipo": "multipla_escolha",
+      "enunciado": "Dáfnias são pequenos crustáceos de lagoas. Quando a água está abundante e a temperatura é estável, as populações são formadas quase só por fêmeas, que geram filhas por partenogênese, sem meiose redutora. Quando a lagoa começa a secar ou esfriar, surgem machos, ocorre reprodução sexuada e são produzidos ovos de resistência, capazes de sobreviver à seca. Considerando os mecanismos celulares envolvidos, a interpretação mais adequada dessa alternância é:",
+      "alternativas": [
+        "a partenogênese é vantajosa em ambiente adverso porque gera filhas com grande variabilidade genética por crossing-over",
+        "a reprodução sexuada é usada em ambiente favorável porque é mais rápida e dispensa parceiros",
+        "em ambiente estável, a partenogênese multiplica rapidamente um genótipo bem-sucedido; diante de mudanças, a reprodução sexuada gera, por meiose e fecundação, descendentes variados, com maior chance de alguns sobreviverem",
+        "os ovos de resistência surgem por mitose e são clones da mãe, o que garante que todos sobrevivam à seca",
+        "a alternância não altera a variabilidade, pois mitose e meiose produzem células geneticamente idênticas"
+      ],
+      "correta": 2,
+      "explicacao": "Sem meiose redutora, as filhas partenogenéticas são praticamente clones, e a população cresce rápido enquanto o ambiente favorece aquele genótipo. Quando o ambiente muda, a reprodução sexuada combina crossing-over, segregação independente e fecundação, gerando diversidade. Erradas: essa partenogênese não tem crossing-over; a reprodução sexuada é mais lenta e exige parceiros; os ovos de resistência vêm da fecundação; meiose não gera células idênticas.",
+      "habilidade": "Integrar divisão celular, genética e ecologia para explicar estratégias reprodutivas.",
+      "tags": [
+        "partenogênese",
+        "meiose",
+        "variabilidade",
+        "ecologia",
+        "integração"
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "tipos-reproducao-f01",
+      "frente": "O que define a reprodução assexuada?",
+      "verso": "Um único genitor origina descendentes sem gametas e sem fecundação; os filhos são clones (variação só por mutação)."
+    },
+    {
+      "id": "tipos-reproducao-f02",
+      "frente": "Em que organismos ocorre a divisão binária?",
+      "verso": "Bactérias e protozoários como amebas e paramécios."
+    },
+    {
+      "id": "tipos-reproducao-f03",
+      "frente": "A divisão binária das bactérias é uma mitose?",
+      "verso": "Não. Bactérias não têm núcleo nem fuso mitótico; o cromossomo circular se duplica e a célula se divide."
+    },
+    {
+      "id": "tipos-reproducao-f04",
+      "frente": "Brotamento: dois exemplos",
+      "verso": "Hidra (e corais) e levedura do fermento de pão."
+    },
+    {
+      "id": "tipos-reproducao-f05",
+      "frente": "Três exemplos de propagação vegetativa no Brasil",
+      "verso": "Manivas de mandioca, toletes de cana-de-açúcar e rebentos de bananeira."
+    },
+    {
+      "id": "tipos-reproducao-f06",
+      "frente": "O que é partenogênese?",
+      "verso": "Desenvolvimento de um novo indivíduo a partir de um gameta feminino não fecundado."
+    },
+    {
+      "id": "tipos-reproducao-f07",
+      "frente": "Ploidia de zangões e de operárias",
+      "verso": "Zangões são haploides (n), vindos de óvulos não fecundados; operárias são diploides (2n), vindas de óvulos fecundados."
+    },
+    {
+      "id": "tipos-reproducao-f08",
+      "frente": "Três fontes de variabilidade na reprodução sexuada",
+      "verso": "Crossing-over, segregação independente dos cromossomos na meiose e fecundação ao acaso."
+    },
+    {
+      "id": "tipos-reproducao-f09",
+      "frente": "Principal vantagem e principal desvantagem da reprodução assexuada",
+      "verso": "Vantagem: multiplicação rápida e barata de um genótipo bem-sucedido. Desvantagem: baixa variabilidade, que deixa todos vulneráveis às mesmas doenças e mudanças."
+    },
+    {
+      "id": "tipos-reproducao-f10",
+      "frente": "No amplexo dos sapos, a fecundação é interna ou externa?",
+      "verso": "Externa. O abraço só aproxima os gametas, que se unem na água."
+    },
+    {
+      "id": "tipos-reproducao-f11",
+      "frente": "Por que a fecundação interna favoreceu a vida em terra?",
+      "verso": "Protege os gametas da desidratação e dispensa a água do ambiente para o encontro deles."
+    },
+    {
+      "id": "tipos-reproducao-f12",
+      "frente": "Fases da metamorfose completa (holometábolos)",
+      "verso": "Ovo → larva → pupa → adulto. Ex.: borboleta, besouro, Aedes aegypti."
+    },
+    {
+      "id": "tipos-reproducao-f13",
+      "frente": "Fases da metamorfose incompleta (hemimetábolos)",
+      "verso": "Ovo → ninfa → adulto. Ex.: gafanhoto, barata, barbeiro."
+    },
+    {
+      "id": "tipos-reproducao-f14",
+      "frente": "Hermafrodita sempre se autofecunda?",
+      "verso": "Não. A minhoca é hermafrodita e faz fecundação cruzada; tênia e Biomphalaria podem se autofecundar."
+    }
+  ],
+  "minijogos": {
+    "pares": [
+      {
+        "a": "Divisão binária",
+        "b": "Bactéria se divide em duas células iguais"
+      },
+      {
+        "a": "Brotamento",
+        "b": "Hidra forma um broto lateral"
+      },
+      {
+        "a": "Fragmentação",
+        "b": "Planária cortada regenera dois indivíduos"
+      },
+      {
+        "a": "Esporulação",
+        "b": "Bolor do pão libera esporos no ar"
+      },
+      {
+        "a": "Propagação vegetativa",
+        "b": "Mandioca plantada a partir de manivas"
+      },
+      {
+        "a": "Partenogênese",
+        "b": "Zangão nasce de óvulo não fecundado"
+      },
+      {
+        "a": "Amplexo",
+        "b": "Abraço dos anuros com fecundação externa"
+      },
+      {
+        "a": "Espermatóforo",
+        "b": "Pacote de espermatozoides recolhido pela fêmea de salamandra"
+      },
+      {
+        "a": "Hermafroditismo sequencial",
+        "b": "Peixe-palhaço muda de sexo ao longo da vida"
+      }
+    ],
+    "sequencia": {
+      "instrucao": "Coloque em ordem as fases do ciclo de vida do Aedes aegypti, começando pela postura.",
+      "itens": [
+        "Ovos depositados na parede de um recipiente, perto da água",
+        "Larva aquática que se alimenta de matéria orgânica",
+        "Pupa aquática que não se alimenta",
+        "Adulto alado emerge da pupa",
+        "Fêmea fecundada pica para obter sangue e amadurecer novos ovos"
+      ]
+    },
+    "classificacao": {
+      "instrucao": "Arraste cada exemplo para a forma de reprodução que ele ilustra.",
+      "categorias": [
+        "Divisão binária",
+        "Brotamento",
+        "Fragmentação",
+        "Esporulação",
+        "Partenogênese"
+      ],
+      "itens": [
+        {
+          "texto": "Bactéria duplica seu cromossomo e se divide em duas",
+          "categoria": "Divisão binária"
+        },
+        {
+          "texto": "Ameba se divide em duas células-filhas",
+          "categoria": "Divisão binária"
+        },
+        {
+          "texto": "Paramécio se divide transversalmente",
+          "categoria": "Divisão binária"
+        },
+        {
+          "texto": "Hidra com um pequeno indivíduo crescendo na lateral",
+          "categoria": "Brotamento"
+        },
+        {
+          "texto": "Levedura do fermento forma uma célula menor presa à célula-mãe",
+          "categoria": "Brotamento"
+        },
+        {
+          "texto": "Colônia de corais cresce com novos pólipos surgindo dos antigos",
+          "categoria": "Brotamento"
+        },
+        {
+          "texto": "Planária cortada ao meio regenera dois animais",
+          "categoria": "Fragmentação"
+        },
+        {
+          "texto": "Alga filamentosa se parte e cada pedaço continua crescendo",
+          "categoria": "Fragmentação"
+        },
+        {
+          "texto": "Braço de estrela-do-mar com parte do disco central regenera um animal",
+          "categoria": "Fragmentação"
+        },
+        {
+          "texto": "Bolor-preto do pão libera esporos de seus esporângios",
+          "categoria": "Esporulação"
+        },
+        {
+          "texto": "Penicillium espalha esporos pelo ar",
+          "categoria": "Esporulação"
+        },
+        {
+          "texto": "Zangão se desenvolve a partir de óvulo não fecundado",
+          "categoria": "Partenogênese"
+        },
+        {
+          "texto": "Pulgões fêmeas geram filhas sem acasalar",
+          "categoria": "Partenogênese"
+        }
+      ]
+    },
+    "verdadeiro_falso": [
+      {
+        "afirmacao": "Na reprodução assexuada, os descendentes são geneticamente idênticos ao genitor, exceto por mutações.",
+        "valor": true,
+        "explicacao": "Sem gametas e fecundação, os filhos formam um clone; só mutações introduzem diferenças."
+      },
+      {
+        "afirmacao": "A divisão binária das bactérias ocorre por mitose.",
+        "valor": false,
+        "explicacao": "Bactérias não têm núcleo nem fuso; a divisão binária não é mitose."
+      },
+      {
+        "afirmacao": "O endósporo bacteriano é uma forma de reprodução assexuada.",
+        "valor": false,
+        "explicacao": "O endósporo é uma estrutura de resistência: uma bactéria forma um endósporo, que depois volta a originar uma única bactéria."
+      },
+      {
+        "afirmacao": "Os zangões das abelhas são haploides.",
+        "valor": true,
+        "explicacao": "Eles se originam de óvulos não fecundados, por partenogênese."
+      },
+      {
+        "afirmacao": "Na partenogênese, os descendentes são sempre clones da mãe.",
+        "valor": false,
+        "explicacao": "Se os óvulos forem formados por meiose, como nas abelhas, os descendentes diferem entre si e da mãe."
+      },
+      {
+        "afirmacao": "A reprodução sexuada gera maior variabilidade genética que a assexuada.",
+        "valor": true,
+        "explicacao": "Crossing-over, segregação independente e fecundação combinam genes de forma nova a cada geração."
+      },
+      {
+        "afirmacao": "No amplexo dos sapos, a fecundação é interna.",
+        "valor": false,
+        "explicacao": "O abraço aproxima os gametas, mas eles se encontram na água: a fecundação é externa."
+      },
+      {
+        "afirmacao": "Tubarões têm fecundação interna.",
+        "valor": true,
+        "explicacao": "Os machos usam os clásperes para transferir espermatozoides para a fêmea."
+      },
+      {
+        "afirmacao": "Todo animal hermafrodita realiza autofecundação.",
+        "valor": false,
+        "explicacao": "A minhoca é hermafrodita e realiza fecundação cruzada."
+      },
+      {
+        "afirmacao": "O gafanhoto apresenta metamorfose completa, com fase de pupa.",
+        "valor": false,
+        "explicacao": "O gafanhoto é hemimetábolo: ovo, ninfa e adulto, sem pupa."
+      },
+      {
+        "afirmacao": "No desenvolvimento indireto, larvas e adultos costumam explorar recursos diferentes, o que reduz a competição entre eles.",
+        "valor": true,
+        "explicacao": "Lagartas comem folhas e borboletas tomam néctar, por exemplo."
+      }
+    ]
+  },
+  "missao_mundo_aberto": {
+    "titulo": "O Viveiro dos Clones",
+    "regiao": "Floresta dos Ninhos",
+    "npc": "Vovó Cissípara, a jardineira das trilhas",
+    "narrativa": "Na entrada da Floresta dos Ninhos, o viveiro da Vovó Cissípara está em crise: um fungo misterioso derrubou todas as bananeiras de uma só vez, a lagoa dos girinos está lotada de ovos sem dono e um enxame de mosquitos saiu de pneus esquecidos na trilha. A jardineira precisa de alguém que entenda como cada ser vivo se reproduz para devolver o equilíbrio à floresta.",
+    "objetivo": "Descobrir por que as bananeiras clonadas caíram juntas, identificar o modo de reprodução e de desenvolvimento de cada morador da floresta e interromper o ciclo dos mosquitos.",
+    "mecanica": "investigacao",
+    "etapas": [
+      "Examinar o bananal e explicar à Vovó Cissípara por que plantas clonadas adoeceram ao mesmo tempo",
+      "Classificar os moradores do viveiro (hidra, planária, bolor, levedura e bactérias) pelo tipo de reprodução assexuada",
+      "Visitar a colmeia e separar os ovos que darão origem a zangões e a operárias",
+      "Na lagoa, decidir quais animais têm fecundação externa ou interna e quais terão fase larval",
+      "Esvaziar os pneus com água parada da trilha antes que as larvas e pupas do Aedes virem adultos"
+    ],
+    "recompensa_xp": 120,
+    "item_recompensa": "Semente da Variabilidade"
+  }
+}

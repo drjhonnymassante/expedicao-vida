@@ -1,0 +1,196 @@
+{
+  "topico": "planos-corporais-animais",
+  "versao": 1,
+  "questoes": [
+    {
+      "id": "planos-corporais-animais-q01",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Qual destes animais apresenta simetria radial na fase adulta?",
+      "alternativas": ["Minhoca", "Planária", "Água-viva", "Gafanhoto", "Lula"],
+      "correta": 2,
+      "explicacao": "A água-viva é um cnidário, grupo de simetria radial: vários planos que passam pelo eixo central dividem o corpo em partes semelhantes. Minhoca, planária, gafanhoto e lula são bilatérios, com um único plano que separa metades direita e esquerda.",
+      "habilidade": "Identificar o tipo de simetria de animais conhecidos.",
+      "tags": ["simetria"]
+    },
+    {
+      "id": "planos-corporais-animais-q02",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Animais diblásticos formam, durante o desenvolvimento embrionário, apenas dois folhetos germinativos. Essa condição é encontrada em:",
+      "alternativas": ["cnidários, como a anêmona-do-mar e a água-viva", "platelmintos, como a planária", "nematódeos, como a lombriga", "anelídeos, como a minhoca", "equinodermos, como a estrela-do-mar"],
+      "correta": 0,
+      "explicacao": "Cnidários formam apenas ectoderma e endoderma, com a mesogleia gelatinosa entre eles. Platelmintos, nematódeos, anelídeos e equinodermos são bilatérios e, portanto, triblásticos, com mesoderma.",
+      "habilidade": "Classificar animais quanto ao número de folhetos embrionários.",
+      "tags": ["folhetos embrionários", "diblásticos"]
+    },
+    {
+      "id": "planos-corporais-animais-q03",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Nos animais deuterostômios, como os equinodermos e os cordados, o blastóporo dá origem:",
+      "alternativas": ["à boca", "ao celoma", "à notocorda", "ao mesoderma", "ao ânus"],
+      "correta": 4,
+      "explicacao": "Em deuterostômios (do grego deuteros, segundo, e stoma, boca), o blastóporo origina o ânus e a boca se forma depois, em outro ponto do embrião. Nos protostômios, em geral, o blastóporo origina a boca. Celoma, notocorda e mesoderma não derivam do blastóporo.",
+      "habilidade": "Diferenciar protostômios e deuterostômios pelo destino do blastóporo.",
+      "tags": ["deuterostômios", "blastóporo"]
+    },
+    {
+      "id": "planos-corporais-animais-q04",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "A lombriga (Ascaris lumbricoides) apresenta uma cavidade corporal chamada pseudoceloma. O que diferencia essa cavidade de um celoma verdadeiro?",
+      "alternativas": ["O pseudoceloma é totalmente revestido por mesoderma, e o celoma não", "O pseudoceloma é revestido por mesoderma apenas do lado da parede do corpo, e o intestino fica sem revestimento mesodérmico", "O pseudoceloma se origina do ectoderma, enquanto o celoma se origina do endoderma", "O pseudoceloma só ocorre em animais de simetria radial", "O pseudoceloma é preenchido por tecido maciço, sem espaço livre"],
+      "correta": 1,
+      "explicacao": "No pseudoceloma, o mesoderma forra apenas a face interna da parede do corpo; o intestino (endoderma) fica em contato direto com a cavidade. No celoma verdadeiro, o mesoderma reveste os dois lados. A origem não é ectodérmica nem endodérmica, nematódeos são bilaterais e o corpo maciço é dos acelomados.",
+      "habilidade": "Distinguir os tipos de cavidade corporal dos triblásticos.",
+      "tags": ["pseudoceloma", "celoma", "nematódeos"]
+    },
+    {
+      "id": "planos-corporais-animais-q05",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Na maioria dos animais de simetria bilateral ocorre cefalização. Do ponto de vista adaptativo, essa combinação é vantajosa principalmente porque:",
+      "alternativas": ["permite capturar alimento vindo igualmente de todas as direções", "dispensa a presença de células nervosas no restante do corpo", "favorece a vida fixa ao substrato, como nas anêmonas", "favorece o deslocamento direcionado, com órgãos dos sentidos concentrados na extremidade que encontra o ambiente primeiro", "impede a formação do mesoderma, simplificando o embrião"],
+      "correta": 3,
+      "explicacao": "Com uma extremidade anterior que avança primeiro, sentidos e neurônios concentrados na cabeça permitem perceber o ambiente e reagir rápido durante a locomoção. Receber estímulos de todos os lados e viver fixo são vantagens associadas à simetria radial. A cefalização não elimina neurônios do resto do corpo, e todos os bilatérios têm mesoderma.",
+      "habilidade": "Relacionar simetria bilateral, cefalização e modo de vida.",
+      "tags": ["simetria bilateral", "cefalização"]
+    },
+    {
+      "id": "planos-corporais-animais-q06",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "A planária possui cavidade digestiva com uma única abertura, enquanto a lombriga tem boca e ânus. Uma vantagem do tubo digestório completo é:",
+      "alternativas": ["dispensar qualquer tipo de digestão extracelular", "tornar a digestão exclusivamente intracelular", "permitir o fluxo do alimento em sentido único, com regiões especializadas em diferentes etapas da digestão e da absorção", "eliminar a necessidade de enzimas digestivas", "permitir que o mesmo orifício seja usado para entrada e saída de material"],
+      "correta": 2,
+      "explicacao": "Com boca e ânus, o alimento segue em sentido único, regiões do tubo se especializam e alimento novo não se mistura aos resíduos. A digestão extracelular, com enzimas, continua essencial, e um só orifício é a condição do tubo incompleto.",
+      "habilidade": "Comparar tubo digestório completo e incompleto.",
+      "tags": ["tubo digestório"]
+    },
+    {
+      "id": "planos-corporais-animais-q07",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Em um aquário escolar em Natal (RN), estudantes observaram estrelas-do-mar adultas, com cinco braços ao redor de um eixo central. A professora mostrou que suas larvas planctônicas têm lados direito e esquerdo bem definidos e que, no embrião, o blastóporo origina o ânus, como nos vertebrados. A partir dessas informações, conclui-se que:",
+      "alternativas": ["a simetria radial da estrela-do-mar adulta é secundária, e características embrionárias como a deuterostomia indicam parentesco mais próximo com os cordados do que com os cnidários", "equinodermos e cnidários formam um grupo natural, pois ambos têm simetria radial no adulto", "a larva bilateral indica que os equinodermos são protostômios", "a simetria do animal adulto é o critério mais confiável para estabelecer parentesco evolutivo", "equinodermos são diblásticos, como as águas-vivas, já que têm simetria radial"],
+      "correta": 0,
+      "explicacao": "A larva bilateral e a deuterostomia mostram que os equinodermos descendem de ancestrais bilaterais e partilham com os cordados um ancestral deuterostômio; a simetria pentarradial do adulto é secundária, e a semelhança com cnidários é convergência. Larva bilateral não define protostomia (o blastóporo vira ânus), a forma adulta engana e equinodermos são triblásticos.",
+      "habilidade": "Usar evidências embriológicas para inferir parentesco evolutivo.",
+      "tags": ["equinodermos", "simetria", "deuterostômios", "filogenia"]
+    },
+    {
+      "id": "planos-corporais-animais-q08",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Durante uma aula de campo em um riacho de Mata Atlântica, estudantes encontraram planárias sob as pedras. Ao pesquisar, descobriram que esses platelmintos são acelomados, não têm sistema circulatório nem sistema respiratório e possuem corpo achatado dorsoventralmente, com poucos milímetros de espessura. A relação entre a forma do corpo e a fisiologia desses animais é que:",
+      "alternativas": ["o achatamento aumenta o espaço interno disponível para o celoma", "o corpo achatado impede a entrada de oxigênio e protege as células contra radicais livres", "o mesoderma maciço transporta gases tão rapidamente quanto o sangue", "o achatamento é consequência da simetria radial típica dos platelmintos", "o corpo achatado reduz a distância entre as células internas e a superfície, permitindo que os gases se difundam diretamente"],
+      "correta": 4,
+      "explicacao": "Sem sistema circulatório, os gases se difundem entre o ambiente e as células, e a difusão só é eficiente em distâncias curtas; o corpo achatado mantém todas as células perto da superfície. Planárias não têm celoma e são bilaterais, o parênquima não transporta gases como o sangue e o achatamento facilita, e não impede, a entrada de oxigênio.",
+      "habilidade": "Relacionar forma do corpo, ausência de cavidade e trocas por difusão.",
+      "tags": ["acelomados", "platelmintos", "difusão", "forma e função"]
+    },
+    {
+      "id": "planos-corporais-animais-q09",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Um livro didático apresenta o seguinte cladograma simplificado dos animais: a primeira ramificação separa os poríferos dos demais; em seguida, os cnidários se separam dos bilatérios; entre os bilatérios, um ramo reúne os protostômios (como moluscos, anelídeos e artrópodes) e o outro reúne os deuterostômios (como equinodermos e cordados). Com base nesse cladograma, é correto afirmar que:",
+      "alternativas": ["os poríferos são mais aparentados com os cordados do que os cnidários", "a estrela-do-mar compartilha um ancestral comum mais recente com o ser humano do que com o polvo", "os cnidários atuais descendem dos poríferos atuais", "o polvo é mais aparentado com a água-viva do que com a minhoca", "os artrópodes são o grupo mais evoluído, pois aparecem na ponta do cladograma"],
+      "correta": 1,
+      "explicacao": "Estrela-do-mar e ser humano são deuterostômios: seu ancestral comum é mais recente que o que partilham com o polvo (protostômio). Cnidários estão mais próximos dos cordados que os poríferos. Grupos atuais não descendem uns dos outros, apenas compartilham ancestrais. Polvo e minhoca são protostômios, mais próximos entre si que da água-viva. A posição na ponta de um cladograma não indica grau de evolução.",
+      "habilidade": "Interpretar relações de parentesco em um cladograma.",
+      "tags": ["cladograma", "filogenia"]
+    },
+    {
+      "id": "planos-corporais-animais-q10",
+      "nivel": "diamante",
+      "tipo": "multipla_escolha",
+      "enunciado": "Um pesquisador comparou o desenvolvimento de dois embriões de animais marinhos, X e Y. Em X, a segmentação é espiral, o blastóporo dá origem à boca e o celoma surge por uma fenda em massas de mesoderma. Em Y, a segmentação é radial, o blastóporo origina o ânus e o celoma se forma a partir de bolsas que brotam da parede do intestino primitivo. Além disso, quando os blastômeros de Y são separados no estágio de quatro células, cada um pode originar uma larva completa, porém menor. A análise permite concluir corretamente que:",
+      "alternativas": ["Y é mais aparentado com um anelídeo do que com um vertebrado, pois sua larva é marinha e de vida livre", "X e Y são pseudocelomados, já que o celoma só se forma depois da gastrulação", "a segmentação de Y é determinada, pois cada blastômero isolado conserva um destino fixo e forma uma larva", "X é protostômio e Y é deuterostômio; a capacidade de cada blastômero isolado de Y formar uma larva completa revela segmentação indeterminada, comparável à origem de gêmeos monozigóticos em humanos", "Y é diblástico, já que as bolsas que formam seu celoma brotam do endoderma"],
+      "correta": 3,
+      "explicacao": "Blastóporo que vira boca, clivagem espiral e esquizocelia são o padrão protostômio (anelídeos, moluscos); blastóporo que vira ânus, clivagem radial e enterocelia, o deuterostômio (equinodermos, cordados). Na clivagem indeterminada as primeiras células ainda não têm destino fixo e podem formar um organismo inteiro, como na origem de gêmeos monozigóticos. Y é deuterostômio, logo mais próximo dos vertebrados que dos anelídeos, e o ambiente da larva não indica parentesco; ambos têm celoma verdadeiro, revestido por mesoderma; formar larvas completas a partir de blastômeros isolados é justamente sinal de clivagem indeterminada; e as bolsas da enterocelia dão origem ao mesoderma, de modo que Y é triblástico.",
+      "habilidade": "Integrar embriologia, classificação animal e reprodução humana.",
+      "tags": ["protostômios", "deuterostômios", "clivagem", "celoma", "gêmeos", "integração"]
+    }
+  ],
+  "flashcards": [
+    { "id": "planos-corporais-animais-f01", "frente": "Características gerais dos animais", "verso": "Eucariontes, pluricelulares, heterótrofos por ingestão, sem parede celular, com colágeno na matriz extracelular e reserva de glicogênio." },
+    { "id": "planos-corporais-animais-f02", "frente": "O que é simetria radial?", "verso": "Vários planos que passam pelo eixo central dividem o corpo em partes semelhantes. Típica dos cnidários." },
+    { "id": "planos-corporais-animais-f03", "frente": "O que é simetria bilateral?", "verso": "Um único plano divide o corpo em metades direita e esquerda espelhadas, com regiões anterior, posterior, dorsal e ventral." },
+    { "id": "planos-corporais-animais-f04", "frente": "O que é cefalização?", "verso": "Concentração de órgãos dos sentidos e células nervosas na extremidade anterior do corpo, associada à simetria bilateral e à locomoção ativa." },
+    { "id": "planos-corporais-animais-f05", "frente": "Simetria da estrela-do-mar", "verso": "Adulto pentarradial (simetria secundária); larva bilateral." },
+    { "id": "planos-corporais-animais-f06", "frente": "Diblástico x triblástico", "verso": "Diblástico: só ectoderma e endoderma (cnidários). Triblástico: também mesoderma (todos os bilatérios)." },
+    { "id": "planos-corporais-animais-f07", "frente": "O que é a mesogleia?", "verso": "Camada gelatinosa entre ectoderma e endoderma dos cnidários. Não é um folheto embrionário." },
+    { "id": "planos-corporais-animais-f08", "frente": "Acelomado", "verso": "Triblástico sem cavidade corporal; o espaço é preenchido por tecido mesodérmico maciço. Ex.: platelmintos." },
+    { "id": "planos-corporais-animais-f09", "frente": "Pseudocelomado", "verso": "Cavidade revestida por mesoderma só do lado da parede do corpo. Ex.: nematódeos, como a lombriga." },
+    { "id": "planos-corporais-animais-f10", "frente": "Celomado", "verso": "Cavidade totalmente revestida por mesoderma. Ex.: anelídeos, moluscos, artrópodes, equinodermos e cordados." },
+    { "id": "planos-corporais-animais-f11", "frente": "Protostômio", "verso": "Blastóporo origina a boca. Em geral, clivagem espiral e determinada e celoma por esquizocelia. Ex.: moluscos, anelídeos, artrópodes." },
+    { "id": "planos-corporais-animais-f12", "frente": "Deuterostômio", "verso": "Blastóporo origina o ânus. Em geral, clivagem radial e indeterminada e celoma por enterocelia. Ex.: equinodermos e cordados." },
+    { "id": "planos-corporais-animais-f13", "frente": "Tubo digestório incompleto x completo", "verso": "Incompleto: uma só abertura (cnidários, platelmintos). Completo: boca e ânus, fluxo em sentido único (nematódeos, moluscos, anelídeos, artrópodes, equinodermos e cordados)." },
+    { "id": "planos-corporais-animais-f14", "frente": "Ecdisozoários e lofotrocozoários", "verso": "Ecdisozoários: protostômios que fazem muda (nematódeos, artrópodes). Lofotrocozoários: incluem platelmintos, moluscos e anelídeos." },
+    { "id": "planos-corporais-animais-f15", "frente": "Como medir parentesco em um cladograma?", "verso": "Pelo ancestral comum mais recente, e não pela semelhança aparente. Nenhum grupo atual é mais evoluído que outro." }
+  ],
+  "minijogos": {
+    "pares": [
+      { "a": "Poríferos", "b": "Sem tecidos verdadeiros" },
+      { "a": "Cnidários", "b": "Simetria radial e dois folhetos" },
+      { "a": "Platelmintos", "b": "Acelomados de corpo achatado" },
+      { "a": "Nematódeos", "b": "Pseudocelomados com tubo completo" },
+      { "a": "Anelídeos", "b": "Celomados com corpo segmentado" },
+      { "a": "Equinodermos", "b": "Deuterostômios com larva bilateral" },
+      { "a": "Mesogleia", "b": "Camada gelatinosa que não é folheto" },
+      { "a": "Cefalização", "b": "Sentidos concentrados na extremidade anterior" }
+    ],
+    "sequencia": {
+      "instrucao": "Coloque em ordem as novidades evolutivas que aparecem na linhagem que vai do ancestral dos animais até os cordados.",
+      "itens": ["Pluricelularidade com colágeno e desenvolvimento com blástula (todos os animais)", "Tecidos verdadeiros, como nervoso e muscular (eumetazoários)", "Simetria bilateral e mesoderma (bilatérios)", "Blastóporo que origina o ânus (deuterostômios)", "Notocorda e tubo nervoso dorsal (cordados)"]
+    },
+    "classificacao": {
+      "instrucao": "Classifique cada animal triblástico de acordo com o tipo de cavidade corporal.",
+      "categorias": ["Acelomado", "Pseudocelomado", "Celomado"],
+      "itens": [
+        { "texto": "Planária", "categoria": "Acelomado" },
+        { "texto": "Tênia (solitária)", "categoria": "Acelomado" },
+        { "texto": "Esquistossomo", "categoria": "Acelomado" },
+        { "texto": "Lombriga", "categoria": "Pseudocelomado" },
+        { "texto": "Oxiúro", "categoria": "Pseudocelomado" },
+        { "texto": "Ancilóstomo", "categoria": "Pseudocelomado" },
+        { "texto": "Minhoca", "categoria": "Celomado" },
+        { "texto": "Sanguessuga", "categoria": "Celomado" },
+        { "texto": "Caramujo", "categoria": "Celomado" },
+        { "texto": "Caranguejo-uçá", "categoria": "Celomado" },
+        { "texto": "Ouriço-do-mar", "categoria": "Celomado" },
+        { "texto": "Ser humano", "categoria": "Celomado" }
+      ]
+    },
+    "verdadeiro_falso": [
+      { "afirmacao": "As esponjas não possuem tecidos verdadeiros.", "valor": true, "explicacao": "Suas células são especializadas, mas não formam tecidos integrados como nervoso e muscular." },
+      { "afirmacao": "A mesogleia dos cnidários corresponde ao mesoderma.", "valor": false, "explicacao": "Cnidários são diblásticos; a mesogleia é uma camada gelatinosa, não um folheto." },
+      { "afirmacao": "Todos os animais de simetria bilateral são triblásticos.", "valor": true, "explicacao": "Simetria bilateral e mesoderma são novidades compartilhadas pelos bilatérios." },
+      { "afirmacao": "Pseudocelomados não apresentam nenhuma cavidade no corpo.", "valor": false, "explicacao": "Têm cavidade, mas ela não é revestida por mesoderma do lado do intestino." },
+      { "afirmacao": "Nos deuterostômios, o blastóporo dá origem ao ânus.", "valor": true, "explicacao": "A boca se forma depois, em outro ponto do embrião." },
+      { "afirmacao": "A estrela-do-mar é mais aparentada com a água-viva do que com o ser humano.", "valor": false, "explicacao": "Ela é deuterostômia, como os cordados; a simetria radial do adulto é secundária." },
+      { "afirmacao": "A planária possui tubo digestório completo, com boca e ânus.", "valor": false, "explicacao": "Sua cavidade digestiva tem uma única abertura." },
+      { "afirmacao": "Nos artrópodes, a principal cavidade do corpo é a hemocele, e o celoma é reduzido.", "valor": true, "explicacao": "A hemolinfa circula pela hemocele, enquanto o celoma fica restrito a pequenos espaços." },
+      { "afirmacao": "Animais que aparecem na ponta de um cladograma são mais evoluídos que os da base.", "valor": false, "explicacao": "Todos os grupos atuais tiveram o mesmo tempo de evolução; o cladograma mostra parentesco, não superioridade." },
+      { "afirmacao": "Na clivagem indeterminada, uma das primeiras células do embrião pode originar um organismo completo.", "valor": true, "explicacao": "É o padrão dos deuterostômios e explica a formação de gêmeos monozigóticos em humanos." }
+    ]
+  },
+  "missao_mundo_aberto": {
+    "titulo": "O Mapa das Plantas-Baixas",
+    "regiao": "Recife dos Invertebrados",
+    "npc": "Cartógrafa Coralina, arquiteta do recife",
+    "narrativa": "Uma tempestade embaralhou as plantas-baixas com o projeto de cada criatura do Recife dos Invertebrados, e os portões dos níveis não se abrem mais. A Cartógrafa Coralina precisa de alguém que descubra o plano corporal dos moradores e reconstrua o mapa de parentesco da Rocha-Mãe.",
+    "objetivo": "Identificar simetria, folhetos, cavidade corporal e destino do blastóporo de cinco criaturas do recife e posicioná-las corretamente no cladograma da Rocha-Mãe para destrancar os níveis seguintes.",
+    "mecanica": "exploracao",
+    "etapas": [
+      "Lagoa Rasa: girar os espelhos mágicos para descobrir quais criaturas têm simetria radial e quais têm simetria bilateral",
+      "Gruta das Camadas: colorir os folhetos embrionários de uma anêmona e de uma planária e desmascarar a mesogleia que finge ser mesoderma",
+      "Túnel dos Cortes: encaixar os cortes transversais de planária, lombriga e minhoca nos moldes de acelomado, pseudocelomado e celomado",
+      "Portal do Blastóporo: acompanhar dois embriões e decidir em qual o blastóporo vira boca e em qual vira ânus",
+      "Rocha-Mãe: montar o cladograma com poríferos, cnidários, protostômios e deuterostômios e libertar a estrela-do-mar do ramo errado"
+    ],
+    "recompensa_xp": 130,
+    "item_recompensa": "Bússola do Blastóporo"
+  }
+}

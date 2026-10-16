@@ -1,0 +1,464 @@
+{
+  "topico": "ists",
+  "versao": 1,
+  "questoes": [
+    {
+      "id": "ists-q01",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "As principais células do sistema imune atacadas pelo HIV são os:",
+      "alternativas": [
+        "neutrófilos, que fagocitam bactérias",
+        "linfócitos T auxiliares (T CD4), que coordenam a resposta imune",
+        "glóbulos vermelhos, que transportam oxigênio",
+        "plaquetas, que participam da coagulação",
+        "linfócitos B, que deixam de existir logo após a infecção"
+      ],
+      "correta": 1,
+      "explicacao": "O HIV se liga à proteína CD4 e a um correceptor, infectando e destruindo os linfócitos T auxiliares, que ativam linfócitos B e T citotóxicos. Neutrófilos, hemácias e plaquetas não são o alvo principal do vírus, e os linfócitos B não desaparecem logo após a infecção; perdem eficiência por falta do comando dos T CD4.",
+      "habilidade": "Identificar a célula-alvo do HIV.",
+      "tags": [
+        "HIV",
+        "linfócito T CD4",
+        "sistema imune"
+      ]
+    },
+    {
+      "id": "ists-q02",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Qual das alternativas reúne apenas ISTs causadas por bactérias, que podem ser curadas com antibióticos?",
+      "alternativas": [
+        "HPV, herpes genital e hepatite B",
+        "Aids, sífilis e herpes genital",
+        "Gonorreia, HPV e clamídia",
+        "Hepatite B, gonorreia e aids",
+        "Sífilis, gonorreia e clamídia"
+      ],
+      "correta": 4,
+      "explicacao": "Sífilis (Treponema pallidum), gonorreia (Neisseria gonorrhoeae) e clamídia (Chlamydia trachomatis) são bacterianas e tratáveis com antibióticos. HPV, herpes, hepatite B e HIV são vírus, e antibióticos não agem sobre eles.",
+      "habilidade": "Relacionar o tipo de agente ao tratamento.",
+      "tags": [
+        "bactérias",
+        "antibióticos",
+        "classificação"
+      ]
+    },
+    {
+      "id": "ists-q03",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "A vacina oferecida pelo SUS a meninas e meninos de 9 a 14 anos tem como um de seus principais objetivos prevenir:",
+      "alternativas": [
+        "o câncer do colo do útero, ligado a tipos de alto risco do HPV",
+        "a sífilis congênita",
+        "a gonorreia resistente a antibióticos",
+        "a infecção pelo HIV",
+        "o herpes genital"
+      ],
+      "correta": 0,
+      "explicacao": "A vacina contra o HPV protege contra tipos do vírus associados a verrugas genitais e a cânceres, especialmente o do colo do útero, e funciona melhor antes do início da vida sexual. Ela não protege contra sífilis, gonorreia, HIV ou herpes genital; contra sífilis, HIV e herpes não existe vacina, e a sífilis congênita é evitada com teste e tratamento no pré-natal.",
+      "habilidade": "Associar vacinas às ISTs que elas previnem.",
+      "tags": [
+        "HPV",
+        "vacina",
+        "câncer"
+      ]
+    },
+    {
+      "id": "ists-q04",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Uma pessoa vivendo com HIV que perdeu o acompanhamento médico desenvolve tuberculose, candidíase oral e pneumonia por Pneumocystis. A melhor explicação para esse quadro é:",
+      "alternativas": [
+        "o HIV causa diretamente essas três doenças ao infectar os pulmões e a boca",
+        "os antirretrovirais provocam essas infecções como efeito colateral",
+        "a queda acentuada dos linfócitos T CD4 enfraquece a imunidade, permitindo infecções oportunistas",
+        "o aumento do número de linfócitos T CD4 desencadeia uma resposta inflamatória exagerada",
+        "a produção excessiva de anticorpos contra o HIV destrói as defesas contra fungos e bactérias"
+      ],
+      "correta": 2,
+      "explicacao": "Sem tratamento, o HIV destrói os T CD4 e surge a aids, quando agentes que normalmente seriam controlados causam infecções oportunistas. O HIV não é o agente dessas doenças, os T CD4 diminuem (e não aumentam) e o problema é falta de resposta imune, não excesso de anticorpos. O quadro decorre justamente da falta de tratamento.",
+      "habilidade": "Relacionar imunodeficiência a infecções oportunistas.",
+      "tags": [
+        "aids",
+        "infecções oportunistas",
+        "imunidade"
+      ]
+    },
+    {
+      "id": "ists-q05",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Uma jovem procura a UBS dez horas depois de a camisinha ter se rompido durante uma relação com um parceiro de sorologia desconhecida. A conduta mais adequada em relação ao HIV é:",
+      "alternativas": [
+        "iniciar a PrEP, que deve ser tomada somente nas próximas 24 horas",
+        "aguardar 90 dias e fazer um teste, pois não há medida preventiva após a exposição",
+        "tomar um antibiótico em dose única para eliminar o vírus",
+        "iniciar a PEP o quanto antes, mantendo os antirretrovirais por 28 dias, e fazer testagem",
+        "tomar a vacina contra o HIV disponível no posto"
+      ],
+      "correta": 3,
+      "explicacao": "A PEP é a profilaxia pós-exposição: começa o mais cedo possível, em até 72 horas, e dura 28 dias, com testagem associada. A PrEP é usada antes da exposição, não como emergência depois dela; antibióticos não agem em vírus; não existe vacina contra o HIV; e esperar sem agir desperdiça a janela da PEP.",
+      "habilidade": "Diferenciar PrEP e PEP e aplicar a conduta correta.",
+      "tags": [
+        "PEP",
+        "PrEP",
+        "HIV"
+      ]
+    },
+    {
+      "id": "ists-q06",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Um rapaz notou uma ferida única, indolor e de bordas endurecidas no pênis, que desapareceu sozinha em algumas semanas. Ele concluiu que estava curado. Sobre o caso, é correto afirmar que:",
+      "alternativas": [
+        "a lesão sugere herpes genital, que se cura espontaneamente",
+        "a lesão sugere sífilis primária (cancro duro); sem tratamento, a doença pode evoluir para as fases secundária, latente e terciária",
+        "o desaparecimento da ferida comprova que o sistema imune eliminou a bactéria",
+        "trata-se de HPV, e a ferida some porque o vírus é eliminado em todos os casos",
+        "a lesão é típica da gonorreia, que sempre causa feridas indolores"
+      ],
+      "correta": 1,
+      "explicacao": "O cancro duro, único e indolor, é a lesão da sífilis primária. Ele regride, mas o Treponema pallidum continua no corpo; por isso a pessoa precisa de teste e tratamento com penicilina benzatina, assim como a parceria. Herpes causa vesículas dolorosas, o HPV causa verrugas e a gonorreia causa corrimento, e não cancro.",
+      "habilidade": "Reconhecer as fases da sífilis adquirida.",
+      "tags": [
+        "sífilis",
+        "cancro duro",
+        "Treponema pallidum"
+      ]
+    },
+    {
+      "id": "ists-q07",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Texto-base: os antirretrovirais usados no tratamento do HIV atuam em diferentes etapas do ciclo do vírus. Uma classe deles inibe a transcriptase reversa; outra, a integrase; outra, a protease, que participa da maturação das novas partículas virais. O tratamento combina mais de uma classe.\n\nA inibição da transcriptase reversa impede diretamente que:",
+      "alternativas": [
+        "o vírus se ligue à proteína CD4 da membrana do linfócito",
+        "as proteínas virais sejam cortadas e as partículas amadureçam",
+        "o RNA viral seja usado como molde para a síntese de DNA viral",
+        "o DNA viral seja traduzido em proteínas pelos ribossomos",
+        "os novos vírus brotem da membrana da célula infectada"
+      ],
+      "correta": 2,
+      "explicacao": "A transcriptase reversa produz DNA a partir do RNA viral; sem ela, não há DNA para ser integrado ao genoma da célula. A ligação ao CD4 ocorre antes, o corte das proteínas é função da protease, DNA não é traduzido (é transcrito em RNA, e o RNA é traduzido) e o brotamento é a etapa final.",
+      "habilidade": "Interpretar o modo de ação de um medicamento a partir do ciclo viral.",
+      "tags": [
+        "transcriptase reversa",
+        "TARV",
+        "retrovírus"
+      ]
+    },
+    {
+      "id": "ists-q08",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Texto-base: em um município, uma gestante teve teste rápido para sífilis positivo no pré-natal e foi tratada com penicilina benzatina. Seu parceiro não foi testado nem tratado. Semanas depois, o exame não treponêmico (VDRL) dela, que vinha caindo após o tratamento, voltou a subir, indicando nova infecção.\n\nA situação evidencia que:",
+      "alternativas": [
+        "a penicilina benzatina é ineficaz contra o Treponema pallidum",
+        "a sífilis é causada por um vírus, por isso o antibiótico não funcionou",
+        "a cura da sífilis gera imunidade permanente, e o novo resultado só pode ter sido um erro de laboratório",
+        "a sífilis congênita não tem relação com a infecção da mãe durante a gestação",
+        "a cura não confere imunidade, e o tratamento da parceria é essencial para evitar a reinfecção e a sífilis congênita"
+      ],
+      "correta": 4,
+      "explicacao": "A sífilis é bacteriana e tratada com penicilina benzatina, mas a cura não protege contra nova infecção. Se a parceria não é tratada, a gestante se reinfecta e o Treponema pode atravessar a placenta, causando sífilis congênita. Por isso o pré-natal inclui testar e tratar a gestante e a parceria.",
+      "habilidade": "Analisar uma situação de saúde pública sobre transmissão vertical.",
+      "tags": [
+        "sífilis congênita",
+        "pré-natal",
+        "reinfecção"
+      ]
+    },
+    {
+      "id": "ists-q09",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Texto-base: uma campanha de saúde afirma que \"Prevenir é combinar\" e lista preservativo, testagem regular, PrEP, PEP, tratamento das pessoas vivendo com HIV e vacinação. Um estudante comenta que, se alguém usa PrEP, não precisa de mais nada.\n\nO comentário do estudante é inadequado porque:",
+      "alternativas": [
+        "a PrEP previne apenas a infecção pelo HIV e não protege contra sífilis, gonorreia, clamídia ou gravidez",
+        "a PrEP é uma vacina de dose única, que perde o efeito em poucos dias",
+        "a PrEP aumenta o risco de infecção pelo HIV",
+        "a PrEP só pode ser usada depois de uma exposição de risco",
+        "a PrEP substitui a testagem, mas não substitui as vacinas"
+      ],
+      "correta": 0,
+      "explicacao": "A PrEP é o uso de antirretrovirais antes da exposição (em geral diário e contínuo) e protege apenas contra o HIV. O preservativo continua necessário para prevenir outras ISTs e a gravidez, e o uso de PrEP exige testagem periódica. Ela não é vacina, não aumenta o risco de HIV e não é usada após a exposição (isso é a PEP).",
+      "habilidade": "Avaliar estratégias de prevenção combinada.",
+      "tags": [
+        "prevenção combinada",
+        "PrEP",
+        "preservativo"
+      ]
+    },
+    {
+      "id": "ists-q10",
+      "nivel": "diamante",
+      "tipo": "multipla_escolha",
+      "enunciado": "Compare três infecções: HIV, herpes genital e hepatite B. Considerando o material genético, a relação com a célula hospedeira e as formas de controle, assinale a alternativa correta.",
+      "alternativas": [
+        "O HIV, por ter DNA como material genético, dispensa a transcriptase reversa; o herpes permanece latente em gânglios nervosos; a hepatite B é prevenida por vacina.",
+        "O HIV é um retrovírus que integra seu DNA ao genoma de linfócitos T CD4; o herpes é eliminado definitivamente pelo aciclovir durante as crises; a hepatite B é prevenida por vacina.",
+        "O HIV é um retrovírus que integra seu DNA ao genoma de linfócitos T CD4 e é controlado com TARV; o herpes permanece latente em gânglios nervosos e tem crises controladas por antivirais; a hepatite B pode cronificar no fígado e é prevenida por vacina aplicada logo ao nascer.",
+        "O HIV é um retrovírus controlado com TARV; o herpes permanece latente em gânglios nervosos; a hepatite B, por ser transmitida apenas por sangue, dispensa a vacinação de recém-nascidos.",
+        "As três são virais e, por isso, a prevenção depende exclusivamente de vacinas, já disponíveis no SUS contra as três."
+      ],
+      "correta": 2,
+      "explicacao": "O HIV tem RNA, usa transcriptase reversa e integrase para inserir DNA no genoma dos T CD4, e a TARV controla a replicação. O HSV fica latente nos gânglios e reativa; o aciclovir controla as crises, mas não elimina o vírus. O HBV pode causar hepatite crônica, cirrose e câncer de fígado, é transmitido também por via sexual e da mãe para o bebê (daí a dose da vacina ao nascer). Não há vacina contra HIV nem herpes, e o preservativo continua essencial na prevenção.",
+      "habilidade": "Integrar virologia, imunologia e saúde pública na comparação de ISTs virais.",
+      "tags": [
+        "HIV",
+        "herpes",
+        "hepatite B",
+        "integração"
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "ists-f01",
+      "frente": "Por que se usa o termo IST em vez de DST?",
+      "verso": "Porque muitas infecções não causam sintomas por longos períodos: a pessoa pode estar infectada e transmitir sem ter doença aparente."
+    },
+    {
+      "id": "ists-f02",
+      "frente": "Que tipo de vírus é o HIV?",
+      "verso": "Um retrovírus: tem RNA e usa a transcriptase reversa para produzir DNA, que é integrado ao genoma da célula pela integrase."
+    },
+    {
+      "id": "ists-f03",
+      "frente": "Qual é a principal célula-alvo do HIV?",
+      "verso": "O linfócito T auxiliar (T CD4), que coordena a resposta imune."
+    },
+    {
+      "id": "ists-f04",
+      "frente": "Qual a diferença entre HIV e aids?",
+      "verso": "HIV é o vírus; aids é a síndrome de imunodeficiência que pode surgir quando a infecção não é tratada."
+    },
+    {
+      "id": "ists-f05",
+      "frente": "O que significa I = I?",
+      "verso": "Indetectável = intransmissível: com carga viral indetectável sustentada pela TARV, a pessoa não transmite o HIV por via sexual."
+    },
+    {
+      "id": "ists-f06",
+      "frente": "O que é a PrEP?",
+      "verso": "Profilaxia pré-exposição: uso de antirretrovirais antes de uma possível exposição ao HIV, em geral diário e contínuo."
+    },
+    {
+      "id": "ists-f07",
+      "frente": "O que é a PEP e qual o prazo para iniciá-la?",
+      "verso": "Profilaxia pós-exposição ao HIV: iniciar o quanto antes, em até 72 horas, e manter por 28 dias."
+    },
+    {
+      "id": "ists-f08",
+      "frente": "O que é janela imunológica?",
+      "verso": "O intervalo entre a infecção e o momento em que o teste consegue detectá-la; um negativo nesse período pode precisar ser repetido."
+    },
+    {
+      "id": "ists-f09",
+      "frente": "Qual é o agente da sífilis?",
+      "verso": "A bactéria espiralada Treponema pallidum."
+    },
+    {
+      "id": "ists-f10",
+      "frente": "Como é o cancro duro da sífilis primária?",
+      "verso": "Uma ferida geralmente única e indolor no local de entrada da bactéria, que desaparece sozinha."
+    },
+    {
+      "id": "ists-f11",
+      "frente": "Qual é o tratamento de escolha da sífilis?",
+      "verso": "Penicilina benzatina, para a pessoa e suas parcerias sexuais."
+    },
+    {
+      "id": "ists-f12",
+      "frente": "Como se evita a sífilis congênita?",
+      "verso": "Testando a gestante no pré-natal e tratando a tempo a gestante e sua parceria."
+    },
+    {
+      "id": "ists-f13",
+      "frente": "Que complicação gonorreia e clamídia não tratadas podem causar?",
+      "verso": "Doença inflamatória pélvica (DIP), com risco de infertilidade e gravidez ectópica."
+    },
+    {
+      "id": "ists-f14",
+      "frente": "Onde o vírus do herpes fica latente?",
+      "verso": "Nos gânglios nervosos, podendo reativar com estresse, febre ou baixa imunidade."
+    },
+    {
+      "id": "ists-f15",
+      "frente": "Quais das ISTs estudadas aqui têm vacina no SUS?",
+      "verso": "HPV (de 9 a 14 anos) e hepatite B (primeira dose ao nascer)."
+    },
+    {
+      "id": "ists-f16",
+      "frente": "Por que não usar dois preservativos ao mesmo tempo?",
+      "verso": "O atrito entre eles aumenta a chance de rompimento."
+    }
+  ],
+  "minijogos": {
+    "pares": [
+      {
+        "a": "Sífilis",
+        "b": "Treponema pallidum"
+      },
+      {
+        "a": "Gonorreia",
+        "b": "Neisseria gonorrhoeae"
+      },
+      {
+        "a": "Clamídia",
+        "b": "Chlamydia trachomatis"
+      },
+      {
+        "a": "Herpes genital",
+        "b": "Latência nos gânglios nervosos"
+      },
+      {
+        "a": "HPV",
+        "b": "Câncer do colo do útero"
+      },
+      {
+        "a": "Hepatite B",
+        "b": "Vacina logo ao nascer"
+      },
+      {
+        "a": "HIV",
+        "b": "Linfócitos T CD4"
+      },
+      {
+        "a": "PEP",
+        "b": "Até 72 h após a exposição, por 28 dias"
+      }
+    ],
+    "sequencia": {
+      "instrucao": "Ordene as etapas do ciclo do HIV em um linfócito T CD4.",
+      "itens": [
+        "Ligação do vírus à proteína CD4 e a um correceptor",
+        "Entrada do material genético viral na célula",
+        "Transcrição reversa: síntese de DNA a partir do RNA viral",
+        "Integração do DNA viral ao DNA da célula pela integrase",
+        "Produção de RNA e proteínas virais pela célula",
+        "Montagem e brotamento de novos vírus"
+      ]
+    },
+    "classificacao": {
+      "instrucao": "Classifique cada IST de acordo com o tipo de agente causador.",
+      "categorias": [
+        "Bactéria",
+        "Vírus"
+      ],
+      "itens": [
+        {
+          "texto": "Sífilis",
+          "categoria": "Bactéria"
+        },
+        {
+          "texto": "Gonorreia",
+          "categoria": "Bactéria"
+        },
+        {
+          "texto": "Clamídia",
+          "categoria": "Bactéria"
+        },
+        {
+          "texto": "Sífilis congênita",
+          "categoria": "Bactéria"
+        },
+        {
+          "texto": "HIV/aids",
+          "categoria": "Vírus"
+        },
+        {
+          "texto": "HPV",
+          "categoria": "Vírus"
+        },
+        {
+          "texto": "Herpes genital",
+          "categoria": "Vírus"
+        },
+        {
+          "texto": "Hepatite B",
+          "categoria": "Vírus"
+        },
+        {
+          "texto": "Verrugas genitais (condilomas)",
+          "categoria": "Vírus"
+        },
+        {
+          "texto": "Cancro duro",
+          "categoria": "Bactéria"
+        }
+      ]
+    },
+    "verdadeiro_falso": [
+      {
+        "afirmacao": "O HIV pode ser transmitido por picada de mosquito.",
+        "valor": false,
+        "explicacao": "O vírus não se multiplica no inseto e não é transmitido por picada."
+      },
+      {
+        "afirmacao": "Uma pessoa com carga viral indetectável sustentada não transmite o HIV por via sexual.",
+        "valor": true,
+        "explicacao": "É o princípio indetectável = intransmissível, alcançado com a TARV."
+      },
+      {
+        "afirmacao": "A PrEP protege contra todas as ISTs.",
+        "valor": false,
+        "explicacao": "Ela previne apenas a infecção pelo HIV; o preservativo segue necessário."
+      },
+      {
+        "afirmacao": "Se o cancro duro desapareceu, a sífilis está curada.",
+        "valor": false,
+        "explicacao": "A bactéria continua no corpo e a doença avança para outras fases sem tratamento."
+      },
+      {
+        "afirmacao": "Gonorreia e clamídia podem não causar sintomas, sobretudo em mulheres.",
+        "valor": true,
+        "explicacao": "Por serem silenciosas, podem evoluir para DIP e infertilidade sem diagnóstico."
+      },
+      {
+        "afirmacao": "Antibióticos curam herpes genital.",
+        "valor": false,
+        "explicacao": "O herpes é viral; antivirais como o aciclovir controlam as crises, mas não eliminam o vírus."
+      },
+      {
+        "afirmacao": "A hepatite B pode ser prevenida por vacina.",
+        "valor": true,
+        "explicacao": "A vacina faz parte do calendário do SUS, com a primeira dose logo ao nascer."
+      },
+      {
+        "afirmacao": "Usar duas camisinhas ao mesmo tempo aumenta a proteção.",
+        "valor": false,
+        "explicacao": "O atrito entre elas favorece o rompimento."
+      },
+      {
+        "afirmacao": "O Treponema pallidum pode atravessar a placenta e infectar o feto.",
+        "valor": true,
+        "explicacao": "Isso causa a sífilis congênita, evitável com teste e tratamento no pré-natal."
+      },
+      {
+        "afirmacao": "Lubrificantes oleosos são os mais indicados para preservativos de látex.",
+        "valor": false,
+        "explicacao": "Produtos oleosos danificam o látex; deve-se usar lubrificante à base de água."
+      }
+    ]
+  },
+  "missao_mundo_aberto": {
+    "titulo": "O Mutirão da Testagem",
+    "regiao": "Vila do Bem-Viver",
+    "npc": "Enfermeira Iracema, do posto de saúde",
+    "narrativa": "O posto de saúde da Vila do Bem-Viver vai fazer um mutirão de testagem na praça, mas boatos estão afastando os moradores: dizem que mosquito transmite HIV, que ferida que some é sinal de cura e que quem toma PrEP não precisa de camisinha. A enfermeira Iracema pede ajuda ao viajante para montar uma tenda de prevenção acolhedora e sem julgamentos.",
+    "objetivo": "Organizar o mutirão: identificar os agentes das ISTs, desfazer boatos, orientar sobre PrEP, PEP e testagem e garantir o cuidado das gestantes no pré-natal.",
+    "mecanica": "investigacao",
+    "etapas": [
+      "Painel dos Agentes: separar as ISTs em bacterianas e virais e indicar quais têm cura com antibiótico",
+      "Caça aos Boatos: corrigir frases erradas sobre HIV, sífilis e preservativos ouvidas na praça",
+      "Relógio da PEP: orientar um morador que teve uma exposição de risco na noite anterior",
+      "Sala do Pré-Natal: explicar a uma gestante e ao parceiro por que os dois precisam ser testados e tratados",
+      "Estação da Camisinha: demonstrar o uso correto do preservativo e escolher o lubrificante adequado"
+    ],
+    "recompensa_xp": 180,
+    "item_recompensa": "Escudo da Prevenção Combinada"
+  }
+}

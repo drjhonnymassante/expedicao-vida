@@ -1,0 +1,445 @@
+{
+  "topico": "sucessao-ecologica",
+  "versao": 1,
+  "questoes": [
+    {
+      "id": "sucessao-ecologica-q01",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "A colonização de uma rocha nua, onde nunca existiu solo nem comunidade, é um exemplo de:",
+      "alternativas": [
+        "sucessão secundária",
+        "sucessão primária",
+        "comunidade clímax",
+        "sucessão alogênica obrigatória",
+        "regeneração natural assistida"
+      ],
+      "correta": 1,
+      "explicacao": "A sucessão primária começa em um ambiente sem solo e nunca ocupado antes, como rocha nua, lava ou duna recente. A secundária exige solo já formado; o clímax é o estágio final, não o início; e regeneração assistida é uma técnica de restauração.",
+      "habilidade": "Diferenciar sucessão primária e secundária pelas condições iniciais.",
+      "tags": [
+        "sucessão primária",
+        "rocha nua"
+      ]
+    },
+    {
+      "id": "sucessao-ecologica-q02",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Os organismos considerados pioneiros clássicos na colonização de rochas nuas são os:",
+      "alternativas": [
+        "fetos arborescentes",
+        "cactos",
+        "capins africanos",
+        "liquens",
+        "cogumelos de chapéu"
+      ],
+      "correta": 3,
+      "explicacao": "Os liquens (associação mutualística entre fungo e alga ou cianobactéria) suportam secura e falta de nutrientes, fixam-se na rocha e liberam ácidos que ajudam a desagregá-la, iniciando a formação do solo. Fetos arborescentes (samambaias), cactos e capins precisam de algum solo para se estabelecer, e cogumelos de chapéu são decompositores que dependem de matéria orgânica.",
+      "habilidade": "Identificar espécies pioneiras e seu papel.",
+      "tags": [
+        "pioneiras",
+        "liquens"
+      ]
+    },
+    {
+      "id": "sucessao-ecologica-q03",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Na sucessão ecológica, o termo ecese refere-se à:",
+      "alternativas": [
+        "instalação e ao estabelecimento dos primeiros organismos no ambiente",
+        "fase final, de equilíbrio dinâmico com o clima",
+        "extinção das espécies pioneiras",
+        "fase de máxima produtividade líquida da comunidade madura",
+        "substituição de florestas por campos após o fogo"
+      ],
+      "correta": 0,
+      "explicacao": "Ecese é a fase em que os colonizadores chegam, se fixam ou germinam e conseguem sobreviver e se reproduzir. O estágio final é o clímax, cuja produtividade líquida da comunidade é próxima de zero (e não máxima); a extinção local das pioneiras e a troca de floresta por campo após o fogo são outros processos, que não definem a ecese.",
+      "habilidade": "Reconhecer os termos que descrevem as etapas da sucessão.",
+      "tags": [
+        "ecese",
+        "pioneiras"
+      ]
+    },
+    {
+      "id": "sucessao-ecologica-q04",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Uma área de pasto foi abandonada e, em poucos anos, foi ocupada por capins, ervas e arbustos, depois por árvores de crescimento rápido. Comparada à colonização de um derrame de lava, essa sucessão é mais rápida principalmente porque:",
+      "alternativas": [
+        "as espécies de pasto têm metabolismo mais rápido que os liquens",
+        "a área de pasto recebe mais luz solar que a lava",
+        "já existe solo com nutrientes, microrganismos e banco de sementes",
+        "o gado deixado na área acelera a dispersão das árvores clímax",
+        "não há competição entre as espécies em áreas abandonadas"
+      ],
+      "correta": 2,
+      "explicacao": "Trata-se de sucessão secundária: o solo já formado traz nutrientes, matéria orgânica, sementes e raízes capazes de rebrotar. A lava precisa primeiro ser transformada em solo. A luz não é o fator diferencial, o gado em geral atrapalha a regeneração e há competição intensa em áreas abandonadas.",
+      "habilidade": "Explicar a diferença de velocidade entre sucessão primária e secundária.",
+      "tags": [
+        "sucessão secundária",
+        "banco de sementes"
+      ]
+    },
+    {
+      "id": "sucessao-ecologica-q05",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Em relação aos estágios iniciais de uma sucessão, a comunidade clímax tende a apresentar:",
+      "alternativas": [
+        "menor biomassa e maior produtividade líquida",
+        "menor diversidade e teias alimentares mais simples",
+        "maior produtividade líquida e relação P/R muito maior que 1",
+        "predomínio de espécies de ciclo curto e muitos descendentes",
+        "maior biomassa, maior diversidade e produtividade líquida da comunidade próxima de zero"
+      ],
+      "correta": 4,
+      "explicacao": "No clímax, biomassa, diversidade e complexidade das teias são altas, mas quase toda a produção é consumida pela respiração de produtores, consumidores e decompositores: a produtividade líquida da comunidade tende a zero (P/R próximo de 1). Menor biomassa, teias simples, P/R muito maior que 1 e espécies de ciclo curto são marcas do início da sucessão.",
+      "habilidade": "Relacionar tendências de biomassa, diversidade e produtividade à sucessão.",
+      "tags": [
+        "clímax",
+        "produtividade",
+        "biomassa"
+      ]
+    },
+    {
+      "id": "sucessao-ecologica-q06",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Em clareiras da Mata Atlântica, embaúbas crescem rapidamente sob sol pleno. Anos depois, sob a sombra delas, desenvolvem-se árvores tolerantes à sombra, e as embaúbas deixam de se regenerar no local. Esse padrão ilustra:",
+      "alternativas": [
+        "sucessão primária causada pela ausência de solo",
+        "facilitação, em que as pioneiras modificam o ambiente e favorecem espécies tardias",
+        "a ecese das espécies clímax sem participação de pioneiras",
+        "predatismo das árvores tardias sobre as embaúbas",
+        "regressão da comunidade a um estágio anterior"
+      ],
+      "correta": 1,
+      "explicacao": "As pioneiras criam sombra, umidade e matéria orgânica, o que favorece espécies tolerantes à sombra e desfavorece as próprias pioneiras, exigentes em luz. Uma clareira tem solo (sucessão secundária), não há predação entre árvores e a comunidade avança, em vez de regredir.",
+      "habilidade": "Aplicar o conceito de facilitação a um exemplo brasileiro.",
+      "tags": [
+        "facilitação",
+        "Mata Atlântica",
+        "pioneiras"
+      ]
+    },
+    {
+      "id": "sucessao-ecologica-q07",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Texto-base: Um estudo acompanhou duas áreas de floresta na mesma região. A área A é uma mata madura, sem perturbação há séculos. A área B é uma floresta em regeneração, com cerca de 20 anos, crescendo sobre um antigo pasto. Os pesquisadores mediram o balanço anual de carbono de cada ecossistema, considerando fotossíntese e respiração de todos os organismos. Qual resultado é mais coerente com a teoria da sucessão ecológica?",
+      "alternativas": [
+        "A área A absorve muito mais carbono por ano que a B, porque tem mais biomassa",
+        "As duas áreas têm balanço nulo, porque toda floresta está em equilíbrio",
+        "A área B emite carbono, porque árvores jovens respiram mais do que fotossintetizam",
+        "A área B acumula carbono em biomassa, enquanto a A tem balanço próximo de zero",
+        "A área A só emite carbono, porque suas árvores já não fazem fotossíntese"
+      ],
+      "correta": 3,
+      "explicacao": "Comunidades em crescimento têm produção maior que a respiração total (P/R > 1) e acumulam biomassa, funcionando como sumidouro de carbono. No clímax, a produção é quase toda consumida pela respiração da comunidade, e o balanço líquido tende a zero. Muita biomassa não significa absorção líquida alta; árvores maduras continuam fazendo fotossíntese; e a floresta jovem não é emissora líquida.",
+      "habilidade": "Interpretar dados de balanço de carbono à luz das fases da sucessão.",
+      "tags": [
+        "produtividade líquida",
+        "carbono",
+        "clímax"
+      ]
+    },
+    {
+      "id": "sucessao-ecologica-q08",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Texto-base: Em um projeto de restauração em área de pasto degradado, longe de fragmentos florestais, técnicos instalaram poleiros artificiais de madeira, pilhas de galhos e pequenos grupos de mudas espalhados pelo terreno, além de transpor porções de solo retiradas de uma mata preservada. A estratégia que fundamenta essas ações é a:",
+      "alternativas": [
+        "nucleação, que cria pequenos focos de atração de dispersores e de propágulos, acelerando a chegada de espécies",
+        "monocultura de eucalipto, que cobre o solo rapidamente",
+        "sucessão primária induzida, já que o pasto não possui solo",
+        "eliminação das espécies pioneiras para favorecer as tardias",
+        "introdução de espécies exóticas invasoras para aumentar a diversidade"
+      ],
+      "correta": 0,
+      "explicacao": "Poleiros atraem aves que trazem sementes nas fezes, galhadas abrigam pequenos animais e o solo transposto leva sementes e microrganismos: são núcleos que irradiam a regeneração. O pasto tem solo (sucessão secundária), eucalipto e espécies invasoras não reconstroem a comunidade nativa e as pioneiras são aliadas da restauração.",
+      "habilidade": "Avaliar técnicas de restauração com base em processos ecológicos.",
+      "tags": [
+        "nucleação",
+        "restauração",
+        "dispersão de sementes"
+      ]
+    },
+    {
+      "id": "sucessao-ecologica-q09",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Texto-base: Um lago raso recebe, ano após ano, sedimentos trazidos pela enxurrada de encostas desmatadas. Plantas aquáticas enraizadas avançam das margens para o centro, o lago se transforma em brejo e, décadas depois, a área passa a abrigar vegetação típica de terra firme. Sobre esse processo, é correto afirmar que:",
+      "alternativas": [
+        "é uma sucessão primária, porque começa sobre rocha nua",
+        "trata-se de uma comunidade clímax que deixou de mudar",
+        "envolve um componente alogênico, pois fatores externos (sedimentos) modificam o ambiente e conduzem a substituição das comunidades",
+        "demonstra que a sucessão só ocorre em ambientes terrestres",
+        "mostra que a diversidade sempre diminui ao longo da sucessão"
+      ],
+      "correta": 2,
+      "explicacao": "O aporte de sedimentos vindos de fora da comunidade é um fator alogênico que dirige a mudança de lago para brejo e para terra firme. Não há rocha nua, a comunidade está claramente mudando, o exemplo é justamente aquático e a diversidade tende a aumentar, não a diminuir.",
+      "habilidade": "Analisar um processo sucessional e identificar suas causas.",
+      "tags": [
+        "sucessão alogênica",
+        "assoreamento",
+        "ambientes aquáticos"
+      ]
+    },
+    {
+      "id": "sucessao-ecologica-q10",
+      "nivel": "diamante",
+      "tipo": "multipla_escolha",
+      "enunciado": "Uma encosta de Mata Atlântica sofreu corte raso e foi usada como pasto por décadas. Após o abandono, um pesquisador acompanhou a área por 40 anos e registrou: (I) nos primeiros anos, domínio de capim braquiária e poucas espécies; (II) entre 5 e 20 anos, árvores pioneiras de crescimento rápido, aumento de aves frugívoras e maior teor de matéria orgânica no solo; (III) após 30 anos, dossel fechado, predomínio de árvores tolerantes à sombra, epífitas e teias alimentares complexas. Assinale a interpretação que integra corretamente sucessão, fluxo de energia e relações ecológicas.",
+      "alternativas": [
+        "Na fase I, a relação P/R é próxima de 1, porque o capim respira tanto quanto produz",
+        "O aumento de aves frugívoras na fase II reduz a diversidade, pois elas competem com as árvores por recursos",
+        "Na fase III, a produtividade líquida da comunidade atinge seu valor máximo, o que explica o dossel fechado e o predomínio de árvores de grande porte",
+        "A braquiária, por ser nativa, acelera a fase II ao fixar nitrogênio para as árvores pioneiras",
+        "A dispersão de sementes por aves (mutualismo) e a sombra das pioneiras (facilitação) explicam a passagem para a fase III, na qual a biomassa é alta e a produtividade líquida da comunidade tende a se aproximar de zero"
+      ],
+      "correta": 4,
+      "explicacao": "Aves frugívoras dispersam sementes de espécies tardias em troca de alimento (mutualismo) e as pioneiras criam condições de sombra e solo que favorecem essas espécies (facilitação). No estágio maduro, a biomassa é alta e a respiração de toda a comunidade consome quase toda a produção, então a produtividade líquida da comunidade tende a zero (não ao máximo). Na fase inicial, P/R é maior que 1 (comunidade acumula biomassa); aves dispersoras aumentam a diversidade, em vez de reduzi-la; a braquiária é africana, invasora e não forma nódulos fixadores de nitrogênio como as leguminosas, além de dificultar a regeneração.",
+      "habilidade": "Integrar sucessão ecológica, produtividade e relações ecológicas na interpretação de dados de campo.",
+      "tags": [
+        "sucessão secundária",
+        "mutualismo",
+        "produtividade líquida",
+        "integração"
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "sucessao-ecologica-f01",
+      "frente": "O que é sucessão ecológica?",
+      "verso": "A substituição gradual e ordenada de comunidades em um local ao longo do tempo, até um estado relativamente estável (clímax)."
+    },
+    {
+      "id": "sucessao-ecologica-f02",
+      "frente": "Qual a diferença essencial entre sucessão primária e secundária?",
+      "verso": "A primária começa sem solo (rocha, lava, duna nova); a secundária começa onde a comunidade foi removida, mas o solo permaneceu."
+    },
+    {
+      "id": "sucessao-ecologica-f03",
+      "frente": "Por que a sucessão secundária é mais rápida?",
+      "verso": "O solo já traz nutrientes, matéria orgânica, microrganismos, banco de sementes e raízes que rebrotam."
+    },
+    {
+      "id": "sucessao-ecologica-f04",
+      "frente": "Quem são os pioneiros clássicos em rocha nua?",
+      "verso": "Os liquens (associação mutualística de fungo com alga ou cianobactéria), seguidos por musgos."
+    },
+    {
+      "id": "sucessao-ecologica-f05",
+      "frente": "Como os liquens iniciam a formação do solo?",
+      "verso": "Liberam ácidos que desagregam a rocha, e seus restos orgânicos se misturam às partículas minerais."
+    },
+    {
+      "id": "sucessao-ecologica-f06",
+      "frente": "O que é ecese?",
+      "verso": "A fase de instalação e estabelecimento dos primeiros colonizadores em um ambiente."
+    },
+    {
+      "id": "sucessao-ecologica-f07",
+      "frente": "O que é uma comunidade serial (sere)?",
+      "verso": "Cada comunidade intermediária da série sucessional, entre as pioneiras e o clímax."
+    },
+    {
+      "id": "sucessao-ecologica-f08",
+      "frente": "O que é facilitação na sucessão?",
+      "verso": "Uma comunidade modifica o ambiente (sombra, solo, umidade) e favorece as espécies seguintes, muitas vezes desfavorecendo a si mesma."
+    },
+    {
+      "id": "sucessao-ecologica-f09",
+      "frente": "O que é comunidade clímax?",
+      "verso": "O estágio final, em equilíbrio dinâmico com o clima e o solo da região, com composição de espécies relativamente estável."
+    },
+    {
+      "id": "sucessao-ecologica-f10",
+      "frente": "Como variam biomassa e diversidade até o clímax?",
+      "verso": "Ambas tendem a aumentar; a biomassa é máxima no clímax."
+    },
+    {
+      "id": "sucessao-ecologica-f11",
+      "frente": "Como fica a produtividade líquida da comunidade no clímax?",
+      "verso": "Tende a zero: a respiração de produtores, consumidores e decompositores consome quase toda a produção (P/R ≈ 1)."
+    },
+    {
+      "id": "sucessao-ecologica-f12",
+      "frente": "Sucessão autogênica × alogênica",
+      "verso": "Autogênica: a própria comunidade altera o ambiente. Alogênica: fatores externos causam a mudança (ex.: assoreamento de um lago)."
+    },
+    {
+      "id": "sucessao-ecologica-f13",
+      "frente": "O que é nucleação na restauração ecológica?",
+      "verso": "Criação de pequenos focos de vida (poleiros, galhadas, grupos de mudas, solo transposto) que atraem dispersores e aceleram a sucessão."
+    },
+    {
+      "id": "sucessao-ecologica-f14",
+      "frente": "Por que plantar pioneiras junto com não pioneiras na restauração?",
+      "verso": "As pioneiras crescem rápido, sombreiam e controlam o capim; as não pioneiras crescem à sombra e formam a mata madura."
+    }
+  ],
+  "minijogos": {
+    "pares": [
+      {
+        "a": "Sucessão primária",
+        "b": "Começa em rocha nua, sem solo"
+      },
+      {
+        "a": "Sucessão secundária",
+        "b": "Começa em área com solo, após perturbação"
+      },
+      {
+        "a": "Ecese",
+        "b": "Instalação dos primeiros colonizadores"
+      },
+      {
+        "a": "Liquens",
+        "b": "Pioneiros que iniciam a formação do solo"
+      },
+      {
+        "a": "Sere",
+        "b": "Comunidade intermediária da sucessão"
+      },
+      {
+        "a": "Clímax",
+        "b": "Equilíbrio dinâmico com clima e solo"
+      },
+      {
+        "a": "Facilitação",
+        "b": "Espécies anteriores favorecem as seguintes"
+      },
+      {
+        "a": "Nucleação",
+        "b": "Poleiros e núcleos que atraem dispersores"
+      }
+    ],
+    "sequencia": {
+      "instrucao": "Ordene as etapas de uma sucessão primária sobre rocha nua, do início ao clímax.",
+      "itens": [
+        "Rocha nua exposta",
+        "Instalação de liquens (ecese)",
+        "Musgos sobre a fina camada de solo",
+        "Ervas e gramíneas",
+        "Arbustos e árvores pioneiras",
+        "Floresta clímax"
+      ]
+    },
+    "classificacao": {
+      "instrucao": "Classifique cada característica como típica do início da sucessão ou da comunidade clímax.",
+      "categorias": [
+        "Início da sucessão",
+        "Comunidade clímax"
+      ],
+      "itens": [
+        {
+          "texto": "Baixa biomassa total",
+          "categoria": "Início da sucessão"
+        },
+        {
+          "texto": "Produtividade líquida da comunidade alta (acúmulo de biomassa)",
+          "categoria": "Início da sucessão"
+        },
+        {
+          "texto": "Relação P/R maior que 1",
+          "categoria": "Início da sucessão"
+        },
+        {
+          "texto": "Espécies de ciclo curto e crescimento rápido",
+          "categoria": "Início da sucessão"
+        },
+        {
+          "texto": "Cadeias alimentares simples",
+          "categoria": "Início da sucessão"
+        },
+        {
+          "texto": "Biomassa máxima",
+          "categoria": "Comunidade clímax"
+        },
+        {
+          "texto": "Produtividade líquida da comunidade próxima de zero",
+          "categoria": "Comunidade clímax"
+        },
+        {
+          "texto": "Teias alimentares complexas e muitos nichos",
+          "categoria": "Comunidade clímax"
+        },
+        {
+          "texto": "Espécies longevas e tolerantes à sombra",
+          "categoria": "Comunidade clímax"
+        },
+        {
+          "texto": "Alta estabilidade",
+          "categoria": "Comunidade clímax"
+        }
+      ]
+    },
+    "verdadeiro_falso": [
+      {
+        "afirmacao": "A sucessão secundária começa em um ambiente sem solo.",
+        "valor": false,
+        "explicacao": "Na secundária o solo permanece; ambientes sem solo caracterizam a sucessão primária."
+      },
+      {
+        "afirmacao": "Liquens são associações mutualísticas entre fungos e algas ou cianobactérias.",
+        "valor": true,
+        "explicacao": "O fungo retém água e se fixa; o parceiro fotossintetizante produz matéria orgânica."
+      },
+      {
+        "afirmacao": "No clímax, a produtividade líquida da comunidade é máxima.",
+        "valor": false,
+        "explicacao": "Ela tende a zero no clímax, porque quase tudo o que é produzido é consumido na respiração de todos os organismos."
+      },
+      {
+        "afirmacao": "A biomassa total tende a aumentar ao longo da sucessão.",
+        "valor": true,
+        "explicacao": "A biomassa atinge seu valor máximo na comunidade clímax."
+      },
+      {
+        "afirmacao": "A comunidade clímax é estática e não sofre mais nenhuma mudança.",
+        "valor": false,
+        "explicacao": "Ela está em equilíbrio dinâmico: há morte, clareiras e pequenas sucessões internas."
+      },
+      {
+        "afirmacao": "O clímax de todo ecossistema terrestre é uma floresta.",
+        "valor": false,
+        "explicacao": "O clímax depende do clima e do solo; pode ser campo ou savana, como no Pampa e no Cerrado."
+      },
+      {
+        "afirmacao": "Pasto abandonado que volta a ser mata é exemplo de sucessão secundária.",
+        "valor": true,
+        "explicacao": "O solo já existia; a comunidade original foi removida e está se recompondo."
+      },
+      {
+        "afirmacao": "Uma floresta em regeneração acumula carbono em sua biomassa.",
+        "valor": true,
+        "explicacao": "Em crescimento, a produção supera a respiração da comunidade (P/R > 1)."
+      },
+      {
+        "afirmacao": "Na restauração ecológica, plantar espécies exóticas é tão eficaz quanto plantar nativas da região.",
+        "valor": false,
+        "explicacao": "Exóticas não reconstroem a comunidade original nem oferecem os mesmos recursos à fauna local."
+      }
+    ]
+  },
+  "missao_mundo_aberto": {
+    "titulo": "A Pedreira que Queria Ser Floresta",
+    "regiao": "Continente dos Biomas",
+    "npc": "Vó Embaúba, a guardiã das clareiras",
+    "narrativa": "Na borda do Continente dos Biomas, uma antiga pedreira e um pasto abandonado ficaram sem vida depois que os mineradores partiram. Vó Embaúba lembra de quando ali existia uma mata cheia de bugios e sabiás. Ela precisa de alguém que entenda a ordem certa em que a vida volta e que saiba ajudar a natureza a correr um pouco mais rápido.",
+    "objetivo": "Reconduzir a sucessão ecológica na pedreira (primária) e no pasto (secundária), escolhendo os colonizadores certos para cada etapa até alcançar a comunidade clímax.",
+    "mecanica": "construcao",
+    "etapas": [
+      "Diagnosticar qual área sofrerá sucessão primária e qual sofrerá sucessão secundária",
+      "Liberar propágulos de liquens (fragmentos com fungo e alga juntos) na rocha nua e acompanhar a ecese até a formação da primeira camada de solo",
+      "No pasto, cercar a área, controlar o capim invasor e plantar linhas alternadas de pioneiras e não pioneiras",
+      "Instalar poleiros e núcleos de mudas para atrair aves dispersoras",
+      "Comparar biomassa, diversidade e produtividade líquida nas duas áreas até que o painel indique o clímax"
+    ],
+    "recompensa_xp": 120,
+    "item_recompensa": "Semente-Mãe da Mata Atlântica"
+  }
+}

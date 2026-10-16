@@ -1,0 +1,191 @@
+{
+  "topico": "agua-sais-minerais",
+  "versao": 1,
+  "questoes": [
+    {
+      "id": "agua-sais-minerais-q01",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "A capacidade da água de dissolver grande variedade de substâncias iônicas e polares, como sais e açúcares, deve-se principalmente à sua:",
+      "alternativas": ["apolaridade", "baixa densidade no estado líquido", "polaridade", "incapacidade de formar pontes de hidrogênio", "baixa temperatura de ebulição"],
+      "correta": 2,
+      "explicacao": "A água é polar: tem região parcialmente negativa (oxigênio) e regiões parcialmente positivas (hidrogênios), que envolvem íons e moléculas polares. Ela não é apolar e forma, sim, pontes de hidrogênio.",
+      "habilidade": "Relacionar estrutura molecular da água à propriedade de solvente.",
+      "tags": ["polaridade", "solvente"]
+    },
+    {
+      "id": "agua-sais-minerais-q02",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Qual mineral faz parte do grupo heme da hemoglobina e, quando em carência na dieta, provoca o tipo mais comum de anemia?",
+      "alternativas": ["Ferro", "Cálcio", "Iodo", "Sódio", "Magnésio"],
+      "correta": 0,
+      "explicacao": "O ferro compõe o grupo heme da hemoglobina, que transporta oxigênio. Sua carência causa anemia ferropriva. Iodo relaciona-se à tireoide, magnésio à clorofila e cálcio aos ossos e à contração muscular.",
+      "habilidade": "Associar mineral à função e à doença carencial.",
+      "tags": ["ferro", "anemia"]
+    },
+    {
+      "id": "agua-sais-minerais-q03",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "O bócio endêmico, caracterizado pelo aumento da glândula tireoide em populações inteiras, está associado principalmente à carência de:",
+      "alternativas": ["cálcio", "ferro", "potássio", "flúor", "iodo"],
+      "correta": 4,
+      "explicacao": "O iodo é necessário para produzir os hormônios tireoidianos (T3 e T4). Na sua falta, a tireoide aumenta de volume (bócio). Por isso o sal de cozinha é iodado no Brasil.",
+      "habilidade": "Associar mineral à função e à doença carencial.",
+      "tags": ["iodo", "tireoide", "saúde pública"]
+    },
+    {
+      "id": "agua-sais-minerais-q04",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Em um mesmo indivíduo adulto, qual das estruturas abaixo tende a apresentar o MAIOR teor de água?",
+      "alternativas": ["Tecido ósseo compacto", "Tecido nervoso do encéfalo", "Esmalte dentário", "Tecido adiposo", "Unhas"],
+      "correta": 1,
+      "explicacao": "O teor de água acompanha a atividade metabólica do tecido. O tecido nervoso é muito ativo e rico em água. Osso, tecido adiposo, unhas e, principalmente, o esmalte dentário têm teores bem menores.",
+      "habilidade": "Relacionar teor hídrico à atividade metabólica.",
+      "tags": ["teor de água", "tecidos"]
+    },
+    {
+      "id": "agua-sais-minerais-q05",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Alguns insetos, como o alfaiate (Gerris), conseguem caminhar sobre a superfície de lagoas sem afundar. Esse fenômeno é possível principalmente graças à:",
+      "alternativas": ["alta densidade do gelo", "baixa polaridade da água", "capacidade da água de dissolver lipídios", "tensão superficial, resultante da coesão entre as moléculas de água", "alto calor de vaporização da água"],
+      "correta": 3,
+      "explicacao": "As pontes de hidrogênio mantêm as moléculas da superfície fortemente unidas (coesão), formando uma 'película' capaz de sustentar objetos leves. O gelo é menos denso, a água é polar e não dissolve bem lipídios.",
+      "habilidade": "Explicar fenômenos naturais pelas propriedades da água.",
+      "tags": ["coesão", "tensão superficial"]
+    },
+    {
+      "id": "agua-sais-minerais-q06",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Durante um treino intenso, a evaporação do suor ajuda a evitar o superaquecimento do corpo. Isso acontece porque a água:",
+      "alternativas": ["tem alto calor de vaporização e, ao evaporar, retira grande quantidade de calor da pele", "tem baixo calor específico e esfria rapidamente", "é um solvente apolar que dissolve o calor", "libera calor para a pele ao passar para o estado gasoso", "forma ligações covalentes com as proteínas da pele"],
+      "correta": 0,
+      "explicacao": "Para evaporar, a água precisa absorver muita energia (alto calor de vaporização). Essa energia sai da pele, que se resfria. A evaporação absorve calor em vez de liberá-lo, e a água tem calor específico alto, não baixo.",
+      "habilidade": "Aplicar propriedades da água à termorregulação.",
+      "tags": ["calor de vaporização", "termorregulação", "suor"]
+    },
+    {
+      "id": "agua-sais-minerais-q07",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "O soro de reidratação oral, recomendado em casos de diarreia, é preparado com água, cloreto de sódio e glicose em proporções definidas. Sobre o papel da glicose nessa mistura, é correto afirmar que ela:",
+      "alternativas": ["fornece energia suficiente para substituir uma refeição completa", "impede a multiplicação de microrganismos no intestino", "favorece a absorção intestinal de sódio, por cotransporte, e assim também a absorção de água por osmose", "neutraliza a acidez do suco gástrico", "aumenta a eliminação de água pela urina"],
+      "correta": 2,
+      "explicacao": "As células intestinais absorvem glicose e Na⁺ juntas por cotransporte. Com mais soluto absorvido, a água acompanha por osmose e o organismo se reidrata. A glicose não tem ação antimicrobiana e não serve para substituir refeições.",
+      "habilidade": "Interpretar intervenção de saúde com base em transporte celular.",
+      "tags": ["soro caseiro", "sódio", "osmose", "saúde pública"]
+    },
+    {
+      "id": "agua-sais-minerais-q08",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Duas cidades na mesma latitude foram comparadas: uma no litoral e outra no interior, longe de grandes corpos d'água. A cidade litorânea apresentou menor diferença entre as temperaturas máxima e mínima ao longo do dia. A propriedade da água que melhor explica essa observação é o(a):",
+      "alternativas": ["baixa densidade no estado sólido", "alta tensão superficial", "capacidade de dissolver gases atmosféricos", "baixa viscosidade", "alto calor específico"],
+      "correta": 4,
+      "explicacao": "Por ter alto calor específico, a água do mar aquece e esfria lentamente e amortece as variações de temperatura do ar próximo. As outras propriedades não explicam a estabilidade térmica.",
+      "habilidade": "Relacionar propriedade física da água a fenômenos ambientais.",
+      "tags": ["calor específico", "clima", "interdisciplinar"]
+    },
+    {
+      "id": "agua-sais-minerais-q09",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Em regiões de inverno rigoroso, lagos congelam apenas na superfície, e peixes e outros organismos sobrevivem na água líquida abaixo do gelo. Qual explicação é correta?",
+      "alternativas": ["O gelo é mais denso que a água líquida, afunda e libera espaço na superfície", "A água atinge densidade máxima por volta de 4 °C; o gelo, menos denso, flutua e isola termicamente a água abaixo dele", "Os sais dissolvidos nos lagos impedem qualquer congelamento", "Os peixes produzem calor metabólico suficiente para manter o lago líquido", "No gelo, todas as pontes de hidrogênio se rompem, o que o torna mais leve"],
+      "correta": 1,
+      "explicacao": "A água mais densa (cerca de 4 °C) fica no fundo. O gelo flutua por ser menos denso: no estado sólido, as pontes de hidrogênio formam uma rede organizada e espaçada, e não se rompem. A camada de gelo funciona como isolante térmico.",
+      "habilidade": "Explicar adaptação ambiental com base na densidade da água.",
+      "tags": ["densidade", "pontes de hidrogênio", "ecossistemas aquáticos"]
+    },
+    {
+      "id": "agua-sais-minerais-q10",
+      "nivel": "diamante",
+      "tipo": "multipla_escolha",
+      "enunciado": "Uma adolescente com dieta vegetariana pouco planejada relata cansaço, palidez e queda de rendimento escolar. O exame de sangue mostra baixa concentração de hemoglobina. A nutricionista recomenda consumir feijão e folhas verde-escuras acompanhados de frutas cítricas e evitar café ou chá logo após as refeições. A justificativa biológica coerente para essas orientações é:",
+      "alternativas": ["as frutas cítricas fornecem ferro heme, que é mais bem absorvido que o ferro dos vegetais", "o café estimula a produção de hemoglobina, mas deve ser evitado por causar insônia", "o feijão é rico em iodo, que estimula a medula óssea a produzir hemácias", "a vitamina C favorece a absorção do ferro não heme dos vegetais, enquanto polifenóis do café e do chá reduzem essa absorção", "o cálcio do feijão substitui o ferro na molécula de hemoglobina"],
+      "correta": 3,
+      "explicacao": "O quadro sugere anemia ferropriva. O ferro dos vegetais (não heme) é menos absorvido, e a vitamina C aumenta sua absorção. Polifenóis, como os taninos do café e do chá, diminuem a absorção quando consumidos junto das refeições. Frutas não fornecem ferro heme (presente em carnes), o iodo atua na tireoide e o cálcio não substitui o ferro na hemoglobina.",
+      "habilidade": "Integrar bioquímica, nutrição e fisiologia na análise de um caso clínico.",
+      "tags": ["ferro", "vitamina C", "anemia", "nutrição", "integração"]
+    }
+  ],
+  "flashcards": [
+    { "id": "agua-sais-minerais-f01", "frente": "Por que a molécula de água é polar?", "verso": "O oxigênio, mais eletronegativo, atrai os elétrons das ligações, e a molécula tem formato angular. Surgem cargas parciais negativa (O) e positivas (H)." },
+    { "id": "agua-sais-minerais-f02", "frente": "Que ligação une moléculas de água vizinhas?", "verso": "Pontes (ligações) de hidrogênio." },
+    { "id": "agua-sais-minerais-f03", "frente": "Que propriedade da água estabiliza a temperatura de organismos e oceanos?", "verso": "O alto calor específico." },
+    { "id": "agua-sais-minerais-f04", "frente": "Por que o suor resfria o corpo?", "verso": "A água tem alto calor de vaporização: ao evaporar, retira muito calor da pele." },
+    { "id": "agua-sais-minerais-f05", "frente": "O que explica a tensão superficial da água?", "verso": "A coesão entre as moléculas, causada pelas pontes de hidrogênio." },
+    { "id": "agua-sais-minerais-f06", "frente": "Por que o gelo flutua?", "verso": "No estado sólido a água forma uma rede espaçada e fica menos densa que a água líquida (densidade máxima por volta de 4 °C)." },
+    { "id": "agua-sais-minerais-f07", "frente": "Três fatores que alteram o teor de água de um organismo ou tecido", "verso": "Espécie, idade (diminui com o envelhecimento) e atividade metabólica do tecido." },
+    { "id": "agua-sais-minerais-f08", "frente": "Hidrólise e síntese por desidratação: qual consome e qual libera água?", "verso": "A hidrólise consome água (quebra moléculas); a síntese por desidratação libera água (une monômeros)." },
+    { "id": "agua-sais-minerais-f09", "frente": "Ferro: função e carência", "verso": "Compõe o grupo heme da hemoglobina. A carência causa anemia ferropriva." },
+    { "id": "agua-sais-minerais-f10", "frente": "Iodo: função e carência", "verso": "É necessário para os hormônios da tireoide (T3 e T4). A carência causa bócio." },
+    { "id": "agua-sais-minerais-f11", "frente": "Cálcio: três funções", "verso": "Ossos e dentes, contração muscular e coagulação do sangue (também atua na liberação de neurotransmissores)." },
+    { "id": "agua-sais-minerais-f12", "frente": "Qual mineral fica no centro da molécula de clorofila?", "verso": "Magnésio." },
+    { "id": "agua-sais-minerais-f13", "frente": "Por que o soro de reidratação oral tem açúcar?", "verso": "A glicose é absorvida junto com o sódio (cotransporte), e a água acompanha por osmose." },
+    { "id": "agua-sais-minerais-f14", "frente": "Como aumentar a absorção do ferro do feijão?", "verso": "Consumir uma fonte de vitamina C na mesma refeição e evitar café ou chá logo depois." }
+  ],
+  "minijogos": {
+    "pares": [
+      { "a": "Ferro", "b": "Hemoglobina e transporte de O₂" },
+      { "a": "Iodo", "b": "Hormônios da tireoide" },
+      { "a": "Cálcio", "b": "Ossos, contração muscular e coagulação" },
+      { "a": "Sódio e potássio", "b": "Impulso nervoso e equilíbrio osmótico" },
+      { "a": "Fósforo", "b": "ATP, DNA e fosfolipídios" },
+      { "a": "Magnésio", "b": "Centro da clorofila" },
+      { "a": "Flúor", "b": "Esmalte dentário mais resistente" },
+      { "a": "Cloro", "b": "Ácido clorídrico do suco gástrico" }
+    ],
+    "sequencia": {
+      "instrucao": "Ordene do MAIOR para o MENOR teor de água (valores típicos).",
+      "itens": ["Água-viva", "Encéfalo humano", "Corpo humano adulto (média)", "Tecido ósseo", "Semente seca"]
+    },
+    "classificacao": {
+      "instrucao": "Arraste cada fenômeno para a propriedade da água que melhor o explica.",
+      "categorias": ["Polaridade (solvente)", "Alto calor específico", "Coesão e adesão"],
+      "itens": [
+        { "texto": "Açúcar se dissolve no suco", "categoria": "Polaridade (solvente)" },
+        { "texto": "Íons e nutrientes transportados pelo plasma", "categoria": "Polaridade (solvente)" },
+        { "texto": "Óleo não se mistura com a água", "categoria": "Polaridade (solvente)" },
+        { "texto": "Cidades litorâneas com pouca variação de temperatura", "categoria": "Alto calor específico" },
+        { "texto": "Oceanos amortecem mudanças bruscas de temperatura", "categoria": "Alto calor específico" },
+        { "texto": "Temperatura corporal estável mesmo com variações no ambiente", "categoria": "Alto calor específico" },
+        { "texto": "Inseto caminhando sobre a lagoa", "categoria": "Coesão e adesão" },
+        { "texto": "Gota de água quase esférica sobre uma folha", "categoria": "Coesão e adesão" },
+        { "texto": "Água subindo por tubos muito finos (capilaridade)", "categoria": "Coesão e adesão" },
+        { "texto": "Coluna de água contínua no xilema das plantas", "categoria": "Coesão e adesão" }
+      ]
+    },
+    "verdadeiro_falso": [
+      { "afirmacao": "A água é uma substância orgânica.", "valor": false, "explicacao": "A água é inorgânica. Ser essencial à vida não a torna orgânica." },
+      { "afirmacao": "Sais minerais são uma importante fonte de energia para as células.", "valor": false, "explicacao": "Sais minerais têm função estrutural e reguladora, não energética." },
+      { "afirmacao": "O teor de água de um organismo tende a diminuir com a idade.", "valor": true, "explicacao": "Embriões e jovens têm proporcionalmente mais água que idosos." },
+      { "afirmacao": "O gelo é mais denso que a água líquida.", "valor": false, "explicacao": "O gelo é menos denso e por isso flutua." },
+      { "afirmacao": "A hidrólise é uma reação que consome água.", "valor": true, "explicacao": "Na hidrólise, a água entra na reação para quebrar ligações entre monômeros." },
+      { "afirmacao": "O bócio endêmico é causado pelo excesso de iodo na alimentação.", "valor": false, "explicacao": "O bócio endêmico clássico é causado pela carência de iodo." },
+      { "afirmacao": "O magnésio é o átomo central da molécula de clorofila.", "valor": true, "explicacao": "Sem magnésio a planta produz menos clorofila e as folhas amarelam." },
+      { "afirmacao": "No soro caseiro, a glicose ajuda o intestino a absorver sódio e água.", "valor": true, "explicacao": "Glicose e sódio são absorvidos juntos (cotransporte), e a água segue por osmose." },
+      { "afirmacao": "Tecidos com alta atividade metabólica costumam ter menos água.", "valor": false, "explicacao": "É o contrário: quanto maior a atividade metabólica, maior o teor de água." }
+    ]
+  },
+  "missao_mundo_aberto": {
+    "titulo": "Os Cristais da Vila Cansada",
+    "regiao": "Minas Moleculares",
+    "npc": "Mestra Hidra, a mineradora",
+    "narrativa": "Os moradores da Vila Cansada andam pálidos, com o pescoço inchado e os ossos fracos. Mestra Hidra suspeita que os veios de minerais que abasteciam a vila secaram. Ela precisa de alguém que explore as galerias, encontre os cristais certos e descubra o que falta para cada morador.",
+    "objetivo": "Coletar cristais de ferro, iodo e cálcio nas galerias das Minas Moleculares e entregá-los aos moradores certos, diagnosticando cada sintoma pela função do mineral.",
+    "mecanica": "coleta",
+    "etapas": [
+      "Atravessar o Rio Polar usando pontes que só se formam quando você identifica corretamente propriedades da água",
+      "Coletar os cristais de ferro, iodo e cálcio escondidos nas galerias",
+      "Ouvir os sintomas de três moradores (palidez, bócio, ossos frágeis) e entregar o cristal correto a cada um",
+      "Preparar o soro de reidratação para o mensageiro desidratado escolhendo as proporções corretas de água, sal e açúcar"
+    ],
+    "recompensa_xp": 120,
+    "item_recompensa": "Lanterna de Cristal Iônico"
+  }
+}

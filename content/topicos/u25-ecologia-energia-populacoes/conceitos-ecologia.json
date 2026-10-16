@@ -1,0 +1,446 @@
+{
+  "topico": "conceitos-ecologia",
+  "versao": 1,
+  "questoes": [
+    {
+      "id": "conceitos-ecologia-q01",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "O conjunto de todos os indivíduos de jacaré-do-pantanal (Caiman yacare) que vivem em uma mesma lagoa, em determinado período, constitui um(a):",
+      "alternativas": [
+        "comunidade",
+        "ecossistema",
+        "população",
+        "biocenose",
+        "biosfera"
+      ],
+      "correta": 2,
+      "explicacao": "População é o conjunto de indivíduos da mesma espécie que ocupam a mesma área ao mesmo tempo. Comunidade e biocenose (sinônimos) reúnem várias espécies, e o ecossistema inclui ainda o ambiente físico.",
+      "habilidade": "Reconhecer níveis de organização ecológica.",
+      "tags": [
+        "população",
+        "níveis de organização"
+      ]
+    },
+    {
+      "id": "conceitos-ecologia-q02",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Em ecologia, o termo biocenose é sinônimo de:",
+      "alternativas": [
+        "comunidade",
+        "biótopo",
+        "hábitat",
+        "população",
+        "nicho ecológico"
+      ],
+      "correta": 0,
+      "explicacao": "Biocenose é a parte viva do ecossistema, isto é, a comunidade formada por todas as populações de uma área. Biótopo é a parte física e química; hábitat é o lugar onde a espécie vive.",
+      "habilidade": "Dominar o vocabulário básico da ecologia.",
+      "tags": [
+        "biocenose",
+        "comunidade"
+      ]
+    },
+    {
+      "id": "conceitos-ecologia-q03",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Qual dos itens abaixo é um fator abiótico de um ecossistema?",
+      "alternativas": [
+        "Presença de predadores",
+        "Competição entre árvores por luz",
+        "Ação de fungos decompositores",
+        "Parasitismo por carrapatos",
+        "Salinidade da água"
+      ],
+      "correta": 4,
+      "explicacao": "A salinidade é uma condição química do ambiente, portanto abiótica. Predadores, competição, decompositores e parasitas envolvem outros seres vivos e são fatores bióticos.",
+      "habilidade": "Classificar fatores ambientais em bióticos e abióticos.",
+      "tags": [
+        "fatores abióticos"
+      ]
+    },
+    {
+      "id": "conceitos-ecologia-q04",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Sobre o conceito de nicho ecológico, é correto afirmar que ele corresponde ao(à):",
+      "alternativas": [
+        "local físico onde a espécie é encontrada",
+        "modo de vida da espécie, incluindo alimentação, horário de atividade, condições toleradas e papel na comunidade",
+        "conjunto de indivíduos de uma espécie em uma região",
+        "zona de transição entre duas comunidades",
+        "parte física e química do ecossistema"
+      ],
+      "correta": 1,
+      "explicacao": "Nicho é o modo de vida e o papel da espécie (a 'profissão'). O local físico é o hábitat, o conjunto de indivíduos é a população, a zona de transição é o ecótono e a parte física é o biótopo.",
+      "habilidade": "Diferenciar hábitat e nicho ecológico.",
+      "tags": [
+        "nicho",
+        "hábitat"
+      ]
+    },
+    {
+      "id": "conceitos-ecologia-q05",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Em uma área de Cerrado, uma espécie de coruja e uma espécie de gavião alimentam-se de pequenos roedores. A coruja caça à noite e o gavião, durante o dia. Essa diferença:",
+      "alternativas": [
+        "indica que as duas aves pertencem à mesma população",
+        "mostra que as duas espécies têm hábitats totalmente diferentes",
+        "prova que não existe nenhuma relação ecológica entre elas",
+        "reduz a sobreposição de nichos e, portanto, a intensidade da competição entre elas",
+        "faz com que uma das espécies seja necessariamente extinta pela outra"
+      ],
+      "correta": 3,
+      "explicacao": "As aves dividem o mesmo hábitat, mas o horário de atividade é uma dimensão do nicho. Explorar as presas em horários diferentes diminui a sobreposição de nichos e a competição. São espécies diferentes (não formam uma população) e a exclusão competitiva só tende a ocorrer com sobreposição intensa.",
+      "habilidade": "Relacionar sobreposição de nichos à competição.",
+      "tags": [
+        "nicho",
+        "competição"
+      ]
+    },
+    {
+      "id": "conceitos-ecologia-q06",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Um agricultor percebeu que sua lavoura, irrigada e bem iluminada, não aumentava a produção mesmo com mais água. A análise do solo indicou baixíssima concentração de fósforo. Nesse caso, o fósforo é considerado:",
+      "alternativas": [
+        "um fator biótico",
+        "um fator irrelevante, pois a planta obtém fósforo do ar",
+        "o fator limitante da produção",
+        "a biocenose da lavoura",
+        "um fator que só afeta animais"
+      ],
+      "correta": 2,
+      "explicacao": "O fósforo é o recurso disponível em menor quantidade em relação à necessidade da planta; por isso, aumentar a água não aumenta a produção: ele é o fator limitante (lei do mínimo). O fósforo é abiótico, vem do solo e não do ar, e é essencial para as plantas (ATP, DNA, fosfolipídios).",
+      "habilidade": "Identificar fatores limitantes.",
+      "tags": [
+        "fator limitante",
+        "fatores abióticos"
+      ]
+    },
+    {
+      "id": "conceitos-ecologia-q07",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Pesquisadores compararam a borda e o interior de fragmentos de Mata Atlântica cercados por pastagens. Nas bordas, registraram mais luz no sub-bosque, maior temperatura, menor umidade do ar, maior mortalidade de árvores grandes e aumento de cipós e capins. Aves típicas do interior úmido da mata eram raras nessas faixas. Com base no texto, a medida mais eficaz para reduzir esse problema em uma paisagem fragmentada é:",
+      "alternativas": [
+        "ligar fragmentos por corredores ecológicos e priorizar a conservação de áreas grandes e pouco recortadas",
+        "dividir os fragmentos grandes em vários fragmentos menores, aumentando o número de áreas protegidas",
+        "abrir trilhas largas no interior dos fragmentos para facilitar a fiscalização",
+        "introduzir capins exóticos nas bordas para proteger o solo",
+        "substituir as pastagens vizinhas por novas estradas"
+      ],
+      "correta": 0,
+      "explicacao": "Fragmentos maiores e menos recortados têm menor proporção de borda em relação ao interior, e corredores reconectam populações. Dividir fragmentos, abrir trilhas largas ou estradas aumenta a área de borda; capins exóticos favorecem invasão e fogo.",
+      "habilidade": "Aplicar o conceito de efeito de borda a problemas de conservação.",
+      "tags": [
+        "efeito de borda",
+        "fragmentação",
+        "Mata Atlântica",
+        "conservação"
+      ]
+    },
+    {
+      "id": "conceitos-ecologia-q08",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Em bromélias-tanque da Mata Atlântica, a água da chuva se acumula entre as folhas. Nesse pequeno reservatório vivem algas, bactérias, larvas de insetos, pequenos crustáceos e até girinos de algumas rãs. Folhas que caem das árvores são decompostas ali, e os nutrientes liberados são aproveitados pela própria bromélia. Considerando o conjunto formado pelos organismos, pela água, pela luz e pelos nutrientes dentro da bromélia, é correto classificá-lo como:",
+      "alternativas": [
+        "uma população, pois todos vivem na mesma planta",
+        "uma biocenose, pois inclui apenas seres vivos",
+        "um bioma, por ter vegetação característica",
+        "um nicho ecológico, pois é o modo de vida da bromélia",
+        "um ecossistema, pois envolve uma comunidade interagindo com fatores abióticos, com fluxo de energia e ciclagem de matéria"
+      ],
+      "correta": 4,
+      "explicacao": "O conjunto reúne biocenose (algas, bactérias, larvas, girinos) e biótopo (água, luz, nutrientes) em interação: é um ecossistema, mesmo sendo pequeno. Não é população (há várias espécies), nem apenas biocenose (inclui fatores abióticos), nem bioma (escala muito maior).",
+      "habilidade": "Reconhecer ecossistemas em diferentes escalas.",
+      "tags": [
+        "ecossistema",
+        "biótopo",
+        "biocenose"
+      ]
+    },
+    {
+      "id": "conceitos-ecologia-q09",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Na Mata dos Cocais, região do Maranhão e do Piauí onde predominam palmeiras como o babaçu e a carnaúba, convivem espécies vegetais e animais associadas à Amazônia, ao Cerrado e à Caatinga. Do ponto de vista ecológico, essa região pode ser interpretada como:",
+      "alternativas": [
+        "um biótopo sem biocenose própria",
+        "uma área de transição (ecótono) que tende a reunir espécies de comunidades vizinhas e, por isso, pode ter elevada diversidade",
+        "uma única população de palmeiras",
+        "uma área sem fatores abióticos limitantes",
+        "um fragmento florestal sem relação com os biomas vizinhos"
+      ],
+      "correta": 1,
+      "explicacao": "A mistura de espécies de biomas vizinhos caracteriza um ecótono, zona de transição que frequentemente abriga maior diversidade (efeito de borda no sentido clássico). A região tem biocenose própria, várias espécies e fatores abióticos como a disponibilidade de água.",
+      "habilidade": "Identificar ecótonos em paisagens brasileiras.",
+      "tags": [
+        "ecótono",
+        "efeito de borda",
+        "biomas"
+      ]
+    },
+    {
+      "id": "conceitos-ecologia-q10",
+      "nivel": "diamante",
+      "tipo": "multipla_escolha",
+      "enunciado": "Duas espécies de cracas vivem em um costão rochoso. A espécie A ocupa apenas a faixa superior, que fica exposta ao ar na maré baixa; a espécie B ocupa a faixa inferior, quase sempre submersa. Em um experimento, a espécie B foi removida, e as larvas da espécie A passaram a se fixar e a sobreviver também na faixa inferior. Quando a espécie A foi removida, a espécie B NÃO passou a ocupar a faixa superior, pois seus indivíduos morriam por dessecação. A conclusão coerente com esses resultados é:",
+      "alternativas": [
+        "o nicho fundamental e o nicho efetivo da espécie A são idênticos",
+        "a espécie B ocupa a faixa inferior porque é eliminada pela espécie A na faixa superior",
+        "as duas espécies não competem, pois vivem em hábitats completamente diferentes",
+        "a distribuição da espécie B é limitada principalmente por um fator biótico, a predação pela espécie A",
+        "o nicho efetivo da espécie A é menor que o seu nicho fundamental por causa da competição com B, enquanto a espécie B é limitada na faixa superior por um fator abiótico (a dessecação)"
+      ],
+      "correta": 4,
+      "explicacao": "A espécie A consegue viver na faixa inferior quando B está ausente; logo, seu nicho fundamental é maior que o efetivo, reduzido pela competição com B (fator biótico). Já B não ocupa a faixa superior nem sem A, porque não tolera a dessecação (fator abiótico). As duas espécies competem onde suas faixas se encontram, e não há predação entre cracas.",
+      "habilidade": "Integrar nicho fundamental e efetivo, competição e fatores abióticos na análise de um experimento.",
+      "tags": [
+        "nicho fundamental",
+        "nicho efetivo",
+        "competição",
+        "fatores abióticos",
+        "integração"
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "conceitos-ecologia-f01",
+      "frente": "O que é população?",
+      "verso": "Conjunto de indivíduos da mesma espécie que vivem na mesma área ao mesmo tempo."
+    },
+    {
+      "id": "conceitos-ecologia-f02",
+      "frente": "O que é comunidade?",
+      "verso": "Conjunto de todas as populações, de espécies diferentes, que convivem em uma área."
+    },
+    {
+      "id": "conceitos-ecologia-f03",
+      "frente": "Qual é a fórmula do ecossistema?",
+      "verso": "Ecossistema = biótopo (parte física e química) + biocenose (comunidade)."
+    },
+    {
+      "id": "conceitos-ecologia-f04",
+      "frente": "Biocenose é sinônimo de quê?",
+      "verso": "De comunidade."
+    },
+    {
+      "id": "conceitos-ecologia-f05",
+      "frente": "O que é biótopo?",
+      "verso": "A parte não viva do ecossistema: solo, água, ar, relevo e clima."
+    },
+    {
+      "id": "conceitos-ecologia-f06",
+      "frente": "O que é biosfera?",
+      "verso": "O conjunto de todos os ecossistemas da Terra, a camada do planeta onde existe vida."
+    },
+    {
+      "id": "conceitos-ecologia-f07",
+      "frente": "Hábitat em uma frase",
+      "verso": "O lugar onde a espécie vive (o 'endereço')."
+    },
+    {
+      "id": "conceitos-ecologia-f08",
+      "frente": "Nicho ecológico em uma frase",
+      "verso": "O modo de vida e o papel da espécie na comunidade (a 'profissão')."
+    },
+    {
+      "id": "conceitos-ecologia-f09",
+      "frente": "O que acontece quando os nichos de duas espécies se sobrepõem muito?",
+      "verso": "A competição entre elas se intensifica; pode haver exclusão competitiva (princípio de Gause)."
+    },
+    {
+      "id": "conceitos-ecologia-f10",
+      "frente": "Nicho fundamental x nicho efetivo",
+      "verso": "Fundamental: tudo o que a espécie poderia ocupar sem competidores nem predadores. Efetivo: o que ela de fato ocupa, em geral menor."
+    },
+    {
+      "id": "conceitos-ecologia-f11",
+      "frente": "Três exemplos de fatores abióticos",
+      "verso": "Luz, temperatura e água (também salinidade, pH, nutrientes do solo, vento e fogo)."
+    },
+    {
+      "id": "conceitos-ecologia-f12",
+      "frente": "O que é fator limitante?",
+      "verso": "O fator mais próximo do limite de tolerância da espécie (por falta ou por excesso), que restringe seu crescimento ou sobrevivência."
+    },
+    {
+      "id": "conceitos-ecologia-f13",
+      "frente": "O que é ecótono?",
+      "verso": "Zona de transição entre duas comunidades vizinhas, como a faixa entre Cerrado e Amazônia."
+    },
+    {
+      "id": "conceitos-ecologia-f14",
+      "frente": "Efeito de borda na fragmentação florestal",
+      "verso": "Bordas recebem mais luz, vento e calor e perdem umidade; árvores grandes morrem e espécies de interior declinam."
+    }
+  ],
+  "minijogos": {
+    "pares": [
+      {
+        "a": "População",
+        "b": "Indivíduos da mesma espécie na mesma área"
+      },
+      {
+        "a": "Comunidade",
+        "b": "Todas as populações de uma área"
+      },
+      {
+        "a": "Ecossistema",
+        "b": "Biótopo + biocenose"
+      },
+      {
+        "a": "Biótopo",
+        "b": "Parte física e química do ambiente"
+      },
+      {
+        "a": "Hábitat",
+        "b": "Endereço da espécie"
+      },
+      {
+        "a": "Nicho ecológico",
+        "b": "Profissão da espécie"
+      },
+      {
+        "a": "Ecótono",
+        "b": "Zona de transição entre comunidades"
+      },
+      {
+        "a": "Biosfera",
+        "b": "Todos os ecossistemas do planeta"
+      }
+    ],
+    "sequencia": {
+      "instrucao": "Ordene os níveis de organização ecológica do MENOS para o MAIS abrangente.",
+      "itens": [
+        "Indivíduo",
+        "População",
+        "Comunidade",
+        "Ecossistema",
+        "Biosfera"
+      ]
+    },
+    "classificacao": {
+      "instrucao": "Arraste cada fator para o grupo correto.",
+      "categorias": [
+        "Fator biótico",
+        "Fator abiótico"
+      ],
+      "itens": [
+        {
+          "texto": "Intensidade da luz no sub-bosque",
+          "categoria": "Fator abiótico"
+        },
+        {
+          "texto": "Temperatura da água de um lago",
+          "categoria": "Fator abiótico"
+        },
+        {
+          "texto": "Salinidade do manguezal",
+          "categoria": "Fator abiótico"
+        },
+        {
+          "texto": "pH ácido do solo do Cerrado",
+          "categoria": "Fator abiótico"
+        },
+        {
+          "texto": "Quantidade de chuva na Caatinga",
+          "categoria": "Fator abiótico"
+        },
+        {
+          "texto": "Oxigênio dissolvido na água",
+          "categoria": "Fator abiótico"
+        },
+        {
+          "texto": "Onça-pintada caçando capivaras",
+          "categoria": "Fator biótico"
+        },
+        {
+          "texto": "Abelhas polinizando flores",
+          "categoria": "Fator biótico"
+        },
+        {
+          "texto": "Fungos decompondo folhas caídas",
+          "categoria": "Fator biótico"
+        },
+        {
+          "texto": "Carrapatos parasitando o gado",
+          "categoria": "Fator biótico"
+        },
+        {
+          "texto": "Árvores competindo por luz",
+          "categoria": "Fator biótico"
+        }
+      ]
+    },
+    "verdadeiro_falso": [
+      {
+        "afirmacao": "Uma população é formada por indivíduos de espécies diferentes.",
+        "valor": false,
+        "explicacao": "População reúne indivíduos da mesma espécie. Várias espécies formam uma comunidade."
+      },
+      {
+        "afirmacao": "Biocenose e comunidade são sinônimos.",
+        "valor": true,
+        "explicacao": "Ambos designam o conjunto de populações que vivem em uma área."
+      },
+      {
+        "afirmacao": "O ecossistema inclui os seres vivos e o ambiente físico.",
+        "valor": true,
+        "explicacao": "Ecossistema = biótopo + biocenose."
+      },
+      {
+        "afirmacao": "Hábitat e nicho ecológico significam a mesma coisa.",
+        "valor": false,
+        "explicacao": "Hábitat é o lugar; nicho é o modo de vida e o papel da espécie."
+      },
+      {
+        "afirmacao": "Duas espécies podem viver no mesmo hábitat sem competir intensamente se tiverem nichos diferentes.",
+        "valor": true,
+        "explicacao": "A competição depende da sobreposição de nichos, não do simples compartilhamento do lugar."
+      },
+      {
+        "afirmacao": "A temperatura é um fator biótico.",
+        "valor": false,
+        "explicacao": "Temperatura é uma condição física, portanto abiótica."
+      },
+      {
+        "afirmacao": "Um ecossistema precisa ter pelo menos o tamanho de um bioma.",
+        "valor": false,
+        "explicacao": "Uma bromélia com água ou um aquário também podem ser estudados como ecossistemas."
+      },
+      {
+        "afirmacao": "Fragmentos florestais pequenos têm proporcionalmente mais borda que fragmentos grandes.",
+        "valor": true,
+        "explicacao": "Quanto menor e mais recortado o fragmento, maior a proporção de borda em relação ao interior."
+      },
+      {
+        "afirmacao": "O nicho efetivo de uma espécie costuma ser maior que o seu nicho fundamental.",
+        "valor": false,
+        "explicacao": "É o contrário: as interações com outras espécies reduzem o nicho efetivo."
+      }
+    ]
+  },
+  "missao_mundo_aberto": {
+    "titulo": "O Censo da Savana",
+    "regiao": "Savana da Teia Alimentar",
+    "npc": "Guarda-parque Jacira",
+    "narrativa": "A guarda-parque Jacira precisa entregar o relatório anual da Savana da Teia Alimentar, mas o vento espalhou suas fichas e misturou tudo: populações com comunidades, hábitats com nichos, fatores vivos com fatores não vivos. Sem o relatório, o conselho não aprova o novo corredor ecológico que ligaria dois fragmentos de mata.",
+    "objetivo": "Reorganizar as fichas do censo usando os conceitos corretos de ecologia e convencer o conselho a aprovar o corredor ecológico.",
+    "mecanica": "exploracao",
+    "etapas": [
+      "Contar os indivíduos de uma só espécie no bebedouro e registrar a ficha como população, não como comunidade",
+      "Visitar a lagoa e separar as fichas de biótopo (água, luz, lama) e de biocenose (plantas, animais, fungos e bactérias)",
+      "Observar duas aves que caçam no mesmo lugar em horários diferentes e explicar ao NPC como seus nichos evitam a competição",
+      "Medir luz, vento e umidade na borda e no interior de um fragmento de mata e apresentar ao conselho a prova do efeito de borda"
+    ],
+    "recompensa_xp": 120,
+    "item_recompensa": "Binóculo do Ecólogo"
+  }
+}

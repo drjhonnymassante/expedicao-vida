@@ -1,0 +1,196 @@
+{
+  "topico": "acidos-nucleicos-estrutura",
+  "versao": 1,
+  "questoes": [
+    {
+      "id": "acidos-nucleicos-estrutura-q01",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Os ácidos nucleicos são polímeros formados por unidades chamadas nucleotídeos. Cada nucleotídeo é composto por:",
+      "alternativas": ["um aminoácido, uma pentose e um grupo fosfato", "uma base nitrogenada, um ácido graxo e um glicerol", "um grupo fosfato, uma pentose e uma base nitrogenada", "uma hexose, uma base nitrogenada e um aminoácido", "duas bases nitrogenadas unidas por pontes de hidrogênio"],
+      "correta": 2,
+      "explicacao": "Todo nucleotídeo tem grupo fosfato, pentose (desoxirribose no DNA, ribose no RNA) e base nitrogenada. Aminoácidos formam proteínas; ácido graxo e glicerol formam lipídios; o açúcar é uma pentose, não uma hexose; e duas bases pareadas formam um par de bases, não um nucleotídeo.",
+      "habilidade": "Identificar os componentes de um nucleotídeo.",
+      "tags": ["nucleotídeo", "componentes"]
+    },
+    {
+      "id": "acidos-nucleicos-estrutura-q02",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Ao analisar um ácido nucleico, um técnico encontrou a base nitrogenada uracila. Essa informação indica que a molécula analisada é:",
+      "alternativas": ["RNA, pois a uracila ocorre no RNA e não no DNA", "DNA, pois a uracila substitui a citosina no DNA", "DNA de fita dupla, pois a uracila pareia com a guanina", "uma proteína, pois a uracila é um aminoácido", "ATP, pois a uracila é a base do ATP"],
+      "correta": 0,
+      "explicacao": "A uracila é exclusiva do RNA, onde ocupa o lugar que a timina tem no DNA. Ela pareia com a adenina, não com a guanina; não é aminoácido; e a base do ATP é a adenina.",
+      "habilidade": "Diferenciar DNA e RNA pela composição de bases.",
+      "tags": ["uracila", "diferenças DNA e RNA"]
+    },
+    {
+      "id": "acidos-nucleicos-estrutura-q03",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Na dupla-hélice do DNA, as bases nitrogenadas de uma fita se unem às bases complementares da outra fita por meio de:",
+      "alternativas": ["ligações peptídicas", "ligações fosfodiéster", "ligações glicosídicas entre hexoses", "pontes dissulfeto", "pontes de hidrogênio"],
+      "correta": 4,
+      "explicacao": "As fitas são mantidas unidas por pontes de hidrogênio entre bases complementares: duas entre A e T, três entre G e C. As ligações fosfodiéster unem nucleotídeos dentro da mesma fita; ligações peptídicas unem aminoácidos e pontes dissulfeto aparecem em proteínas.",
+      "habilidade": "Reconhecer o tipo de ligação entre as fitas do DNA.",
+      "tags": ["pontes de hidrogênio", "dupla-hélice"]
+    },
+    {
+      "id": "acidos-nucleicos-estrutura-q04",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "A análise de uma amostra de DNA de fita dupla revelou que 18% das bases nitrogenadas são adenina. A porcentagem esperada de citosina nessa amostra é:",
+      "alternativas": ["18%", "32%", "36%", "64%", "82%"],
+      "correta": 1,
+      "explicacao": "Pela regra de Chargaff, A = T = 18%, somando 36%. Restam 64% para G + C, e como G = C, a citosina vale 32%. Os distratores correspondem a A, A + T, G + C e 100% − A.",
+      "habilidade": "Aplicar a regra de Chargaff em cálculos de composição de bases.",
+      "tags": ["regra de Chargaff", "cálculo"]
+    },
+    {
+      "id": "acidos-nucleicos-estrutura-q05",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Um trecho de uma fita de DNA tem a sequência 5'-ATGCCA-3'. A fita complementar, pareada a esse trecho na dupla-hélice, é:",
+      "alternativas": ["5'-TACGGT-3'", "3'-UACGGU-5'", "5'-ATGCCA-3'", "3'-TACGGT-5'", "3'-GCATTG-5'"],
+      "correta": 3,
+      "explicacao": "Cada base é trocada pela complementar (A↔T, G↔C), gerando TACGGT, e as fitas são antiparalelas: diante da extremidade 5' fica a 3'. Logo, 3'-TACGGT-5'. 5'-TACGGT-3' ignora o antiparalelismo; U só existe no RNA; repetir a sequência ou trocar A↔G e T↔C não gera a complementar.",
+      "habilidade": "Construir a fita complementar respeitando o pareamento e o antiparalelismo.",
+      "tags": ["pareamento", "antiparalelismo", "sequência complementar"]
+    },
+    {
+      "id": "acidos-nucleicos-estrutura-q06",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Durante a síntese de proteínas, um tipo de RNA tem uma região chamada anticódon e um local onde se liga um aminoácido específico. Esse RNA e sua função são, respectivamente:",
+      "alternativas": ["RNA mensageiro; levar a informação do DNA até o núcleo", "RNA ribossômico; formar o envoltório nuclear", "RNA transportador; levar aminoácidos até o ribossomo e reconhecer o códon do RNA mensageiro", "RNA mensageiro; formar as subunidades do ribossomo", "RNA transportador; armazenar a informação genética no núcleo"],
+      "correta": 2,
+      "explicacao": "O RNA transportador tem o anticódon, que pareia com o códon do RNA mensageiro, e carrega o aminoácido correspondente até o ribossomo. O RNA mensageiro leva a mensagem do núcleo ao citoplasma, o RNA ribossômico forma ribossomos (não o envoltório nuclear) e quem armazena a informação genética é o DNA.",
+      "habilidade": "Associar cada tipo de RNA à sua função.",
+      "tags": ["RNA transportador", "anticódon", "tipos de RNA"]
+    },
+    {
+      "id": "acidos-nucleicos-estrutura-q07",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Em uma aula prática de um curso de Biotecnologia, duas amostras de DNA de fita dupla foram aquecidas lentamente, e os estudantes registraram a temperatura em que metade das moléculas tinha as fitas separadas. A amostra X, com 62% de guanina + citosina, separou-se em temperatura mais alta que a amostra Y, com 38% de guanina + citosina. A explicação mais adequada para esse resultado é que a amostra X:",
+      "alternativas": ["tem mais ligações fosfodiéster entre as bases das duas fitas", "contém uracila, que torna a molécula mais rígida", "é formada por fitas paralelas, mais difíceis de separar", "tem mais adenina e timina, bases que formam três pontes de hidrogênio", "tem mais pares guanina-citosina, unidos por três pontes de hidrogênio, enquanto adenina e timina se unem por duas"],
+      "correta": 4,
+      "explicacao": "A separação das fitas (desnaturação) exige romper as pontes de hidrogênio entre as bases. Pares G-C têm três pontes e pares A-T têm duas, então o DNA mais rico em G + C precisa de mais energia. Fosfodiéster fica dentro de cada fita; DNA não tem uracila; as fitas são antiparalelas; e A-T forma duas pontes, não três.",
+      "habilidade": "Relacionar composição de bases à estabilidade térmica do DNA.",
+      "tags": ["desnaturação", "pontes de hidrogênio", "G-C"]
+    },
+    {
+      "id": "acidos-nucleicos-estrutura-q08",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Vacinas de RNA mensageiro levam às células uma molécula de RNA com a instrução para produzir uma proteína do agente infeccioso, que estimula a resposta imune. Algumas dessas vacinas precisam ser transportadas e armazenadas em temperaturas muito baixas, o que exige uma rede de frio eficiente. Considerando a estrutura dos ácidos nucleicos, essa exigência está relacionada principalmente ao fato de o RNA:",
+      "alternativas": ["ser, em geral, de fita simples e conter ribose, com um grupo –OH a mais, o que o torna quimicamente menos estável e mais sujeito à degradação que o DNA", "ter timina no lugar da uracila, o que o torna sensível ao calor", "formar dupla-hélice com três pontes de hidrogênio entre A e U", "ser composto por aminoácidos, que se desnaturam com o calor", "conter desoxirribose, um açúcar que se decompõe facilmente"],
+      "correta": 0,
+      "explicacao": "O RNA tem ribose, cujo –OH no carbono 2' o torna mais reativo, e é degradado por enzimas presentes em toda parte; por isso é menos estável que o DNA. O RNA tem uracila (não timina), não forma dupla-hélice com três pontes entre A e U, não é formado por aminoácidos e não contém desoxirribose.",
+      "habilidade": "Relacionar a estrutura do RNA à sua estabilidade em uma situação de saúde pública.",
+      "tags": ["RNA", "estabilidade", "vacinas", "saúde pública"]
+    },
+    {
+      "id": "acidos-nucleicos-estrutura-q09",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Um laboratório analisou a composição de bases (em %) do material genético de quatro amostras hipotéticas:\n\nAmostra I: A 30, T 30, G 20, C 20, U 0\nAmostra II: A 22, T 22, G 28, C 28, U 0\nAmostra III: A 26, T 0, G 24, C 19, U 31\nAmostra IV: A 24, T 33, G 25, C 18, U 0\n\nCom base nesses dados, a conclusão correta é:",
+      "alternativas": ["a amostra III é DNA de fita dupla, pois contém as bases A, G e C", "a amostra I não segue a regra de Chargaff, pois A é diferente de G", "as amostras I e II pertencem à mesma espécie, já que ambas têm purinas = pirimidinas", "a amostra IV é provavelmente DNA de fita simples, pois contém timina, mas A ≠ T e G ≠ C", "a amostra II é RNA, pois tem mais guanina que adenina"],
+      "correta": 3,
+      "explicacao": "A amostra IV tem timina (logo, é DNA), mas A ≠ T e G ≠ C, o que indica fita simples, comum em alguns vírus. A amostra III tem uracila, então é RNA. Chargaff exige A = T e G = C (não A = G), e I segue a regra. Purinas = pirimidinas vale para todo DNA de fita dupla; I e II têm razões (A+T)/(G+C) diferentes. A amostra II tem timina, então é DNA.",
+      "habilidade": "Interpretar dados de composição de bases para inferir o tipo de ácido nucleico.",
+      "tags": ["regra de Chargaff", "interpretação de tabela", "fita simples"]
+    },
+    {
+      "id": "acidos-nucleicos-estrutura-q10",
+      "nivel": "diamante",
+      "tipo": "multipla_escolha",
+      "enunciado": "Três amostras de ácidos nucleicos tiveram sua composição de bases determinada (em %):\n\nAmostra 1: A 20, G 30, C 30, T 20\nAmostra 2: A 31, G 19, C 19, T 31\nAmostra 3: A 27, G 23, C 18, U 32\n\nConsiderando a estrutura dos ácidos nucleicos, o pareamento de bases e a regra de Chargaff, assinale a alternativa correta.",
+      "alternativas": ["A amostra 3 é DNA de fita dupla, pois nela a soma de purinas é igual à soma de pirimidinas.", "Um segmento de 1.000 pares de bases com a composição da amostra 2 tem 2.380 pontes de hidrogênio entre as bases, e esse DNA se desnatura em temperatura mais baixa que o da amostra 1.", "A amostra 1 tem, em média, menos pontes de hidrogênio por par de bases que a amostra 2, pois tem menos adenina.", "A amostra 3 contém desoxirribose, já que apresenta tanto purinas quanto pirimidinas.", "As três amostras pertencem ao mesmo organismo, pois em todas a soma de purinas é 50%."],
+      "correta": 1,
+      "explicacao": "Na amostra 2, 62% dos pares são A-T (620 pares × 2 pontes = 1.240) e 38% são G-C (380 pares × 3 pontes = 1.140), totalizando 2.380 pontes. Com menos G + C que a amostra 1 (38% contra 60%), ela se desnatura em temperatura mais baixa. A amostra 3 tem uracila, portanto é RNA (com ribose) e, como A ≠ U e G ≠ C, é de fita simples: a igualdade purinas = pirimidinas nela é coincidência. A amostra 1, mais rica em G-C, tem mais pontes por par. Purinas = 50% ocorre em todo DNA de fita dupla e não indica o mesmo organismo.",
+      "habilidade": "Integrar regra de Chargaff, pareamento, pontes de hidrogênio e diferenças entre DNA e RNA em análise quantitativa.",
+      "tags": ["regra de Chargaff", "pontes de hidrogênio", "cálculo", "DNA e RNA", "integração"]
+    }
+  ],
+  "flashcards": [
+    { "id": "acidos-nucleicos-estrutura-f01", "frente": "Quais são os três componentes de um nucleotídeo?", "verso": "Grupo fosfato, pentose e base nitrogenada." },
+    { "id": "acidos-nucleicos-estrutura-f02", "frente": "Qual é a pentose do DNA e qual é a do RNA?", "verso": "DNA: desoxirribose. RNA: ribose." },
+    { "id": "acidos-nucleicos-estrutura-f03", "frente": "Qual a diferença química entre ribose e desoxirribose?", "verso": "A ribose tem um grupo –OH no carbono 2'; a desoxirribose tem apenas um H nessa posição." },
+    { "id": "acidos-nucleicos-estrutura-f04", "frente": "Quais bases são purinas?", "verso": "Adenina e guanina (dois anéis)." },
+    { "id": "acidos-nucleicos-estrutura-f05", "frente": "Quais bases são pirimidinas?", "verso": "Citosina, timina e uracila (um anel)." },
+    { "id": "acidos-nucleicos-estrutura-f06", "frente": "Que ligação une os nucleotídeos de uma mesma fita?", "verso": "Ligação fosfodiéster, formando o esqueleto açúcar-fosfato." },
+    { "id": "acidos-nucleicos-estrutura-f07", "frente": "O que significa dizer que as fitas do DNA são antiparalelas?", "verso": "Correm em sentidos opostos: uma 5' → 3' e a outra 3' → 5'." },
+    { "id": "acidos-nucleicos-estrutura-f08", "frente": "Regra de Chargaff (DNA de fita dupla)", "verso": "A = T, G = C e purinas = pirimidinas (A + G = T + C)." },
+    { "id": "acidos-nucleicos-estrutura-f09", "frente": "Quantas pontes de hidrogênio há entre A e T? E entre G e C?", "verso": "A-T: duas. G-C: três." },
+    { "id": "acidos-nucleicos-estrutura-f10", "frente": "Por que DNA rico em G + C precisa de mais calor para se desnaturar?", "verso": "Pares G-C têm três pontes de hidrogênio, contra duas dos pares A-T." },
+    { "id": "acidos-nucleicos-estrutura-f11", "frente": "Que cientista obteve as imagens de raios X decisivas para o modelo da dupla-hélice?", "verso": "Rosalind Franklin." },
+    { "id": "acidos-nucleicos-estrutura-f12", "frente": "Função do RNA mensageiro", "verso": "Levar a informação de um gene até os ribossomos, em trincas chamadas códons." },
+    { "id": "acidos-nucleicos-estrutura-f13", "frente": "Função do RNA transportador", "verso": "Carregar aminoácidos até o ribossomo; seu anticódon reconhece o códon do RNAm." },
+    { "id": "acidos-nucleicos-estrutura-f14", "frente": "Função do RNA ribossômico", "verso": "Formar os ribossomos com proteínas e participar da formação das ligações peptídicas." }
+  ],
+  "minijogos": {
+    "pares": [
+      { "a": "Desoxirribose", "b": "Pentose do DNA" },
+      { "a": "Ribose", "b": "Pentose do RNA" },
+      { "a": "Uracila", "b": "Pirimidina exclusiva do RNA" },
+      { "a": "Timina", "b": "Pirimidina exclusiva do DNA" },
+      { "a": "Adenina e guanina", "b": "Purinas (dois anéis)" },
+      { "a": "Ligação fosfodiéster", "b": "Une nucleotídeos de uma mesma fita" },
+      { "a": "Par G-C", "b": "Três pontes de hidrogênio" },
+      { "a": "Par A-T", "b": "Duas pontes de hidrogênio" },
+      { "a": "Anticódon", "b": "Região do RNA transportador" }
+    ],
+    "sequencia": {
+      "instrucao": "Ordene a montagem do DNA, da peça mais simples à estrutura completa.",
+      "itens": ["Base nitrogenada", "Nucleosídeo (base + pentose)", "Nucleotídeo (base + pentose + fosfato)", "Fita polinucleotídica (nucleotídeos unidos por ligações fosfodiéster)", "Dupla-hélice (duas fitas antiparalelas unidas por pontes de hidrogênio)"]
+    },
+    "classificacao": {
+      "instrucao": "Arraste cada característica para o ácido nucleico em que ela aparece.",
+      "categorias": ["Somente DNA", "Somente RNA", "DNA e RNA"],
+      "itens": [
+        { "texto": "Timina", "categoria": "Somente DNA" },
+        { "texto": "Desoxirribose", "categoria": "Somente DNA" },
+        { "texto": "Forma os cromossomos humanos", "categoria": "Somente DNA" },
+        { "texto": "Material genético de todos os seres vivos celulares", "categoria": "Somente DNA" },
+        { "texto": "Uracila", "categoria": "Somente RNA" },
+        { "texto": "Ribose", "categoria": "Somente RNA" },
+        { "texto": "Possui anticódon", "categoria": "Somente RNA" },
+        { "texto": "Componente estrutural dos ribossomos", "categoria": "Somente RNA" },
+        { "texto": "Adenina", "categoria": "DNA e RNA" },
+        { "texto": "Guanina e citosina", "categoria": "DNA e RNA" },
+        { "texto": "Grupo fosfato", "categoria": "DNA e RNA" },
+        { "texto": "Ligações fosfodiéster", "categoria": "DNA e RNA" }
+      ]
+    },
+    "verdadeiro_falso": [
+      { "afirmacao": "A uracila é encontrada no DNA, no lugar da timina.", "valor": false, "explicacao": "A uracila é exclusiva do RNA; o DNA tem timina." },
+      { "afirmacao": "No DNA de fita dupla, a quantidade de adenina é igual à de timina.", "valor": true, "explicacao": "É a regra de Chargaff, consequência do pareamento A-T." },
+      { "afirmacao": "As duas fitas do DNA são paralelas, ambas no sentido 5' → 3'.", "valor": false, "explicacao": "As fitas são antiparalelas: uma 5' → 3' e a outra 3' → 5'." },
+      { "afirmacao": "Guanina e citosina se unem por três pontes de hidrogênio.", "valor": true, "explicacao": "G-C tem três pontes; A-T tem duas." },
+      { "afirmacao": "Adenina e guanina são pirimidinas.", "valor": false, "explicacao": "Adenina e guanina são purinas, com dois anéis." },
+      { "afirmacao": "Na dupla-hélice, o esqueleto de açúcar e fosfato fica voltado para fora e as bases, para dentro.", "valor": true, "explicacao": "Os corrimãos da 'escada' são de açúcar-fosfato; os degraus são pares de bases." },
+      { "afirmacao": "A regra de Chargaff vale para qualquer RNA.", "valor": false, "explicacao": "O RNA geralmente é de fita simples, então A não precisa ser igual a U nem G igual a C." },
+      { "afirmacao": "O RNA transportador possui o anticódon, que reconhece o códon do RNA mensageiro.", "valor": true, "explicacao": "O pareamento códon-anticódon garante que o aminoácido certo seja colocado." },
+      { "afirmacao": "As fitas do DNA são unidas entre si por ligações fosfodiéster.", "valor": false, "explicacao": "Fosfodiéster une nucleotídeos dentro de cada fita; entre as fitas há pontes de hidrogênio." },
+      { "afirmacao": "Um DNA rico em G e C precisa de temperatura mais alta para se desnaturar.", "valor": true, "explicacao": "Pares G-C têm mais pontes de hidrogênio, então exigem mais energia para separar as fitas." }
+    ]
+  },
+  "missao_mundo_aberto": {
+    "titulo": "A Biblioteca das Escadas Torcidas",
+    "regiao": "Cidadela do Código Genético",
+    "npc": "Arquivista Rosalina, guardiã dos raios",
+    "narrativa": "Um tremor atingiu a Grande Biblioteca da Cidadela, e as escadas em espiral onde ficam guardadas as receitas da vida se desmontaram. Degraus estão soltos, corrimãos foram montados ao contrário e mensageiros de RNA saem pelos portões com cópias defeituosas. A Arquivista Rosalina, que conhece a forma das escadas pelas sombras projetadas por seus raios, precisa de alguém que reconstrua tudo peça por peça.",
+    "objetivo": "Reconstruir trechos da dupla-hélice com os nucleotídeos corretos, respeitando o pareamento, o antiparalelismo e a regra de Chargaff, e despachar pelos portões os três tipos de RNA com a função certa.",
+    "mecanica": "construcao",
+    "etapas": [
+      "Montar nucleotídeos no Pátio das Peças, combinando fosfato, a pentose certa e uma base nitrogenada",
+      "Encaixar os degraus da escada: purina sempre com pirimidina, A com T por dois laços e G com C por três",
+      "Virar os corrimãos que foram montados no mesmo sentido para que as fitas fiquem antiparalelas",
+      "Conferir o inventário de bases de um andar usando a regra de Chargaff para achar os degraus que faltam",
+      "Separar as cartas de RNA nos portões: mensageiro, transportador e ribossômico, cada um no destino correto"
+    ],
+    "recompensa_xp": 120,
+    "item_recompensa": "Lente de Difração de Raios X"
+  }
+}

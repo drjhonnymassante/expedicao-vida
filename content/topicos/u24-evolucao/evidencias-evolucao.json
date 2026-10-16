@@ -1,0 +1,465 @@
+{
+  "topico": "evidencias-evolucao",
+  "versao": 1,
+  "questoes": [
+    {
+      "id": "evidencias-evolucao-q01",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "O braço humano, a asa do morcego e a nadadeira da baleia têm o mesmo conjunto de ossos (úmero, rádio, ulna e falanges), embora tenham funções diferentes. Essas estruturas são classificadas como:",
+      "alternativas": [
+        "análogas, pois resultam de convergência evolutiva",
+        "vestigiais, pois perderam a função original",
+        "homólogas, pois têm a mesma origem embrionária e evolutiva",
+        "análogas, pois todas servem para locomoção",
+        "independentes, pois surgiram separadamente em cada espécie"
+      ],
+      "correta": 2,
+      "explicacao": "Homologia é definida pela origem comum, e não pela função. O mesmo plano ósseo indica herança de um ancestral comum e divergência evolutiva. Analogia exigiria origens diferentes com função semelhante, e nenhuma dessas estruturas é vestigial.",
+      "habilidade": "Reconhecer estruturas homólogas.",
+      "tags": [
+        "homologia",
+        "anatomia comparada"
+      ]
+    },
+    {
+      "id": "evidencias-evolucao-q02",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Qual par de estruturas é um exemplo de analogia?",
+      "alternativas": [
+        "Asa de uma borboleta e asa de um beija-flor",
+        "Braço humano e pata dianteira de um cachorro",
+        "Nadadeira de um golfinho e asa de um morcego",
+        "Pata de um cavalo e braço de um macaco",
+        "Pelve de uma baleia e pelve de um ser humano"
+      ],
+      "correta": 0,
+      "explicacao": "As asas da borboleta e do beija-flor têm a mesma função (voo), mas origens diferentes: uma é expansão do exoesqueleto e a outra é um membro com ossos. Todas as outras alternativas comparam membros ou pelves de mamíferos, que são homólogos.",
+      "habilidade": "Diferenciar homologia e analogia.",
+      "tags": [
+        "analogia",
+        "convergência"
+      ]
+    },
+    {
+      "id": "evidencias-evolucao-q03",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "A maior parte dos fósseis é encontrada em rochas:",
+      "alternativas": [
+        "magmáticas, formadas pelo resfriamento da lava",
+        "metamórficas, formadas sob alta pressão e temperatura",
+        "graníticas, típicas do interior dos continentes",
+        "vulcânicas, que preservam o organismo pelo calor",
+        "sedimentares, formadas pelo acúmulo e compactação de sedimentos"
+      ],
+      "correta": 4,
+      "explicacao": "A fossilização depende de soterramento rápido em sedimentos finos, como lama e areia, que depois se compactam em rochas sedimentares. Calor e pressão intensos, como nas rochas magmáticas e metamórficas, destroem os restos orgânicos.",
+      "habilidade": "Relacionar a formação de fósseis ao tipo de rocha.",
+      "tags": [
+        "fósseis",
+        "fossilização"
+      ]
+    },
+    {
+      "id": "evidencias-evolucao-q04",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Em um sítio arqueológico, um pedaço de carvão de fogueira apresentou 1/8 da quantidade de carbono-14 esperada em um material vivo. Considerando a meia-vida do carbono-14 como 5.700 anos, a idade aproximada do carvão é:",
+      "alternativas": [
+        "5.700 anos",
+        "17.100 anos",
+        "11.400 anos",
+        "45.600 anos",
+        "712 anos"
+      ],
+      "correta": 1,
+      "explicacao": "De 1 para 1/2, de 1/2 para 1/4 e de 1/4 para 1/8 passam três meias-vidas: 3 × 5.700 = 17.100 anos. 11.400 anos corresponderia a 1/4 restante; 45.600 anos resultaria de multiplicar por 8 em vez de contar as meias-vidas.",
+      "habilidade": "Calcular a idade de um material pela meia-vida.",
+      "tags": [
+        "datação radiométrica",
+        "meia-vida",
+        "cálculo"
+      ]
+    },
+    {
+      "id": "evidencias-evolucao-q05",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Assinale a alternativa que apresenta apenas exemplos de estruturas vestigiais.",
+      "alternativas": [
+        "Coração humano, asa de morcego e nadadeira de golfinho",
+        "Pulmões de aves, brânquias de peixes e traqueia de insetos",
+        "Asa de inseto, asa de ave e asa de morcego",
+        "Cóccix humano, ossos pélvicos de baleias e músculos que movem a orelha humana",
+        "Notocorda de anfioxo, coluna vertebral humana e cauda de macaco"
+      ],
+      "correta": 3,
+      "explicacao": "Cóccix, pelve reduzida das baleias e músculos auriculares humanos são estruturas reduzidas, homólogas a estruturas funcionais em parentes ou ancestrais. As demais alternativas trazem órgãos plenamente funcionais.",
+      "habilidade": "Identificar órgãos vestigiais.",
+      "tags": [
+        "órgãos vestigiais"
+      ]
+    },
+    {
+      "id": "evidencias-evolucao-q06",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Embriões jovens de peixes, aves e seres humanos apresentam arcos faríngeos, notocorda e cauda. A interpretação evolutiva mais adequada para esse fato é:",
+      "alternativas": [
+        "o embrião humano passa pela forma adulta de um peixe antes de se tornar humano",
+        "os embriões humanos respiram por brânquias durante as primeiras semanas",
+        "esses vertebrados herdaram de um ancestral comum um programa de desenvolvimento semelhante",
+        "as semelhanças são coincidências causadas por ambientes uterinos parecidos",
+        "peixes descendem diretamente das aves, que descendem dos seres humanos"
+      ],
+      "correta": 2,
+      "explicacao": "As semelhanças embrionárias refletem um programa de desenvolvimento herdado de um ancestral comum. O embrião humano não passa pela forma adulta de um peixe (ideia de Haeckel, hoje rejeitada) nem tem brânquias funcionais: os arcos faríngeos originam estruturas da cabeça e do pescoço.",
+      "habilidade": "Interpretar semelhanças embrionárias como evidência evolutiva.",
+      "tags": [
+        "embriologia comparada",
+        "Haeckel"
+      ]
+    },
+    {
+      "id": "evidencias-evolucao-q07",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Uma equipe comparou a sequência de aminoácidos de uma mesma proteína respiratória entre o ser humano e quatro outras espécies. Os dados (hipotéticos) mostram o número de diferenças em relação à proteína humana: espécie P = 1; espécie Q = 12; espécie R = 20; espécie S = 45. Com base nesses dados e na teoria evolutiva, conclui-se que:",
+      "alternativas": [
+        "a espécie P é o ancestral direto do ser humano",
+        "a espécie S é a mais evoluída, pois acumulou mais mudanças",
+        "proteínas não podem ser usadas para estimar parentesco, pois variam ao acaso",
+        "as espécies Q e R são análogas ao ser humano",
+        "a espécie P compartilha com o ser humano o ancestral comum mais recente entre as espécies comparadas"
+      ],
+      "correta": 4,
+      "explicacao": "Quanto menos diferenças, mais recente é o ancestral comum, pois houve menos tempo para acumular mutações desde a separação das linhagens. Espécies atuais não são ancestrais umas das outras, e não existe espécie 'mais evoluída': todas as linhagens atuais evoluíram pelo mesmo tempo. Analogia se refere a estruturas, não a espécies inteiras.",
+      "habilidade": "Interpretar dados moleculares para inferir parentesco evolutivo.",
+      "tags": [
+        "evidências moleculares",
+        "parentesco",
+        "interpretação de dados"
+      ]
+    },
+    {
+      "id": "evidencias-evolucao-q08",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Fósseis do *Mesosaurus*, um pequeno réptil que vivia em lagos e mares rasos de água salobra, são encontrados em rochas do Sul do Brasil e do Sul da África, com a mesma idade. Esse animal não teria sido capaz de atravessar um oceano aberto. A explicação mais aceita para essa distribuição é que:",
+      "alternativas": [
+        "o *Mesosaurus* surgiu de forma independente em cada continente, por convergência",
+        "na época em que o *Mesosaurus* viveu, América do Sul e África estavam unidas no supercontinente Gondwana, que depois se fragmentou",
+        "os fósseis foram transportados por correntes marinhas depois da morte dos animais",
+        "o *Mesosaurus* migrava todos os anos entre os continentes, como as aves",
+        "a semelhança entre os fósseis é apenas aparente, pois são espécies análogas"
+      ],
+      "correta": 1,
+      "explicacao": "A distribuição contínua dos fósseis nos dois continentes, em rochas de mesma idade, é uma das evidências da deriva continental: as massas de terra estavam unidas e depois se afastaram. A origem independente de uma mesma espécie é inviável, o animal não conseguiria atravessar um oceano aberto e o transporte de carcaças por correntes não explicaria fósseis incluídos nas mesmas camadas de rocha, de mesma idade, nos dois lados do Atlântico.",
+      "habilidade": "Relacionar biogeografia histórica, fósseis e deriva continental.",
+      "tags": [
+        "biogeografia",
+        "deriva continental",
+        "fósseis"
+      ]
+    },
+    {
+      "id": "evidencias-evolucao-q09",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "As ilhas Galápagos surgiram de atividade vulcânica no oceano Pacífico e nunca estiveram ligadas a um continente. Nelas vivem tentilhões, jabutis e outras espécies endêmicas que se parecem mais com espécies da América do Sul, o continente mais próximo, do que com espécies de ilhas de clima semelhante em outras partes do mundo. Esse padrão é mais bem explicado pela hipótese de que:",
+      "alternativas": [
+        "cada espécie foi formada de acordo com o clima local, sem relação com outras regiões",
+        "as ilhas oceânicas abrigam apenas espécies trazidas por seres humanos",
+        "as espécies das ilhas são análogas às do continente por viverem em ambientes iguais",
+        "as ilhas foram colonizadas por organismos vindos de regiões próximas, cujos descendentes se modificaram no isolamento",
+        "as espécies insulares são idênticas às continentais, sem diferenças hereditárias"
+      ],
+      "correta": 3,
+      "explicacao": "Colonizadores vindos da região continental mais próxima deram origem, no isolamento, a espécies novas e endêmicas, mas ainda aparentadas às continentais. Se o clima fosse o único fator, ilhas de clima semelhante teriam espécies parecidas no mundo todo, o que não ocorre. As espécies insulares não são análogas às continentais (a semelhança vem de parentesco, não de convergência), não foram todas trazidas por seres humanos e, por serem endêmicas, diferem hereditariamente das continentais.",
+      "habilidade": "Usar padrões biogeográficos como evidência de descendência com modificação.",
+      "tags": [
+        "biogeografia",
+        "ilhas",
+        "endemismo"
+      ]
+    },
+    {
+      "id": "evidencias-evolucao-q10",
+      "nivel": "diamante",
+      "tipo": "multipla_escolha",
+      "enunciado": "O tubarão (peixe cartilaginoso), o boto (mamífero) e o extinto ictiossauro (réptil marinho conhecido apenas por fósseis) têm corpo fusiforme e nadadeiras. A nadadeira peitoral do boto contém úmero, rádio, ulna e falanges, como o braço humano, e o DNA do boto é muito mais semelhante ao de outros mamíferos terrestres do que ao do tubarão. Integrando anatomia comparada, paleontologia e biologia molecular, a conclusão correta é:",
+      "alternativas": [
+        "o corpo fusiforme das três espécies é resultado de convergência, enquanto a nadadeira do boto é homóloga ao braço humano, o que indica que os botos descendem de mamíferos ancestrais terrestres",
+        "o corpo fusiforme indica que tubarão, boto e ictiossauro descendem de um ancestral comum exclusivo e recente",
+        "a nadadeira do boto é análoga ao braço humano, pois os dois têm funções diferentes",
+        "a semelhança de DNA entre boto e mamíferos terrestres é convergência causada pelo ambiente aquático",
+        "como o ictiossauro está extinto, ele não pode fornecer qualquer informação sobre a evolução da forma corporal"
+      ],
+      "correta": 0,
+      "explicacao": "O formato hidrodinâmico surgiu independentemente em três linhagens distantes (convergência) por causa de pressões semelhantes do meio aquático. Já o esqueleto da nadadeira do boto é homólogo ao do braço humano (mesma origem, função diferente), e a semelhança molecular com mamíferos terrestres confirma que os cetáceos descendem de mamíferos com patas, o que também é sustentado por fósseis de baleias primitivas. Semelhança de DNA reflete parentesco, não ambiente, e fósseis de espécies extintas são justamente uma das evidências da evolução.",
+      "habilidade": "Integrar evidências anatômicas, fósseis e moleculares para distinguir convergência de parentesco.",
+      "tags": [
+        "homologia",
+        "analogia",
+        "convergência",
+        "evidências moleculares",
+        "integração"
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "evidencias-evolucao-f01",
+      "frente": "O que é um fóssil?",
+      "verso": "Qualquer vestígio de ser vivo do passado preservado em rochas ou outros materiais: ossos, conchas, moldes, pegadas, ovos ou organismos em âmbar ou gelo."
+    },
+    {
+      "id": "evidencias-evolucao-f02",
+      "frente": "Condições que favorecem a fossilização",
+      "verso": "Soterramento rápido em sedimentos finos, pouco oxigênio e decompositores e presença de partes duras."
+    },
+    {
+      "id": "evidencias-evolucao-f03",
+      "frente": "Princípio da superposição",
+      "verso": "Em camadas sedimentares não perturbadas, as camadas inferiores são mais antigas que as superiores. Fornece idade relativa."
+    },
+    {
+      "id": "evidencias-evolucao-f04",
+      "frente": "O que é meia-vida?",
+      "verso": "Tempo necessário para que metade dos átomos de um isótopo radioativo decaia."
+    },
+    {
+      "id": "evidencias-evolucao-f05",
+      "frente": "Por que o carbono-14 não data dinossauros?",
+      "verso": "Sua meia-vida (cerca de 5.700 anos) é curta: após milhões de anos quase nada resta. Usam-se isótopos de meia-vida longa, como potássio-40 e urânio-238, em rochas vulcânicas."
+    },
+    {
+      "id": "evidencias-evolucao-f06",
+      "frente": "Estruturas homólogas",
+      "verso": "Mesma origem embrionária e evolutiva, função que pode ser diferente. Indicam ancestral comum e divergência."
+    },
+    {
+      "id": "evidencias-evolucao-f07",
+      "frente": "Estruturas análogas",
+      "verso": "Mesma função, origens diferentes. Resultam de convergência evolutiva e não indicam parentesco próximo."
+    },
+    {
+      "id": "evidencias-evolucao-f08",
+      "frente": "Asa de ave x asa de morcego",
+      "verso": "Homólogas como membros anteriores (mesmo esqueleto herdado), mas análogas como asas (o voo surgiu independentemente)."
+    },
+    {
+      "id": "evidencias-evolucao-f09",
+      "frente": "Exemplos de órgãos vestigiais",
+      "verso": "Cóccix, músculos auriculares, prega semilunar e sisos no ser humano; ossos pélvicos em baleias, jiboias e sucuris."
+    },
+    {
+      "id": "evidencias-evolucao-f10",
+      "frente": "Estruturas comuns a embriões de vertebrados",
+      "verso": "Notocorda, arcos faríngeos, cauda pós-anal e tubo nervoso dorsal."
+    },
+    {
+      "id": "evidencias-evolucao-f11",
+      "frente": "Por que a ideia de Haeckel está errada?",
+      "verso": "O embrião não passa pelas formas adultas dos ancestrais; apenas compartilha estruturas embrionárias semelhantes às dos embriões de outros vertebrados."
+    },
+    {
+      "id": "evidencias-evolucao-f12",
+      "frente": "Unidade bioquímica da vida",
+      "verso": "DNA como material genético, código genético praticamente universal, mesmos aminoácidos e ATP: evidência de origem comum."
+    },
+    {
+      "id": "evidencias-evolucao-f13",
+      "frente": "Número de diferenças em DNA ou proteínas e parentesco",
+      "verso": "Menos diferenças indicam ancestral comum mais recente."
+    },
+    {
+      "id": "evidencias-evolucao-f14",
+      "frente": "Relógio molecular",
+      "verso": "Uso do acúmulo aproximadamente constante de mutações para estimar quando duas linhagens se separaram, calibrado com fósseis datados."
+    },
+    {
+      "id": "evidencias-evolucao-f15",
+      "frente": "Mesosaurus no Brasil e na África",
+      "verso": "Evidência da deriva continental: os continentes estavam unidos em Gondwana quando o réptil viveu."
+    }
+  ],
+  "minijogos": {
+    "pares": [
+      {
+        "a": "Braço humano e nadadeira de baleia",
+        "b": "Homologia"
+      },
+      {
+        "a": "Asa de borboleta e asa de beija-flor",
+        "b": "Analogia"
+      },
+      {
+        "a": "Cóccix humano",
+        "b": "Órgão vestigial"
+      },
+      {
+        "a": "Carbono-14",
+        "b": "Restos orgânicos de até dezenas de milhares de anos"
+      },
+      {
+        "a": "Urânio-238",
+        "b": "Rochas com bilhões de anos"
+      },
+      {
+        "a": "Arcos faríngeos no embrião",
+        "b": "Embriologia comparada"
+      },
+      {
+        "a": "Citocromo c idêntico em humanos e chimpanzés",
+        "b": "Evidência molecular"
+      },
+      {
+        "a": "Mesosaurus no Brasil e na África",
+        "b": "Deriva continental"
+      },
+      {
+        "a": "Pegadas e coprólitos",
+        "b": "Icnofósseis"
+      }
+    ],
+    "sequencia": {
+      "instrucao": "Coloque em ordem as etapas de formação de um fóssil de osso.",
+      "itens": [
+        "Morte do animal perto de um rio ou lago",
+        "Soterramento rápido do corpo por lama ou areia",
+        "Decomposição das partes moles sob o sedimento, restando os ossos",
+        "Substituição gradual do material do osso por minerais enquanto o sedimento endurece e vira rocha",
+        "Elevação das camadas rochosas por movimentos da crosta terrestre",
+        "Exposição do fóssil por erosão ou escavação"
+      ]
+    },
+    "classificacao": {
+      "instrucao": "Classifique cada observação de acordo com a linha de evidência da evolução a que pertence.",
+      "categorias": [
+        "Registro fóssil",
+        "Anatomia comparada",
+        "Embriologia comparada",
+        "Evidência molecular",
+        "Biogeografia"
+      ],
+      "itens": [
+        {
+          "texto": "Archaeopteryx com dentes, penas e cauda óssea",
+          "categoria": "Registro fóssil"
+        },
+        {
+          "texto": "Tiktaalik, com características de peixes e de tetrápodes",
+          "categoria": "Registro fóssil"
+        },
+        {
+          "texto": "Mesmo plano ósseo no braço humano e na asa do morcego",
+          "categoria": "Anatomia comparada"
+        },
+        {
+          "texto": "Pelve reduzida nas baleias",
+          "categoria": "Anatomia comparada"
+        },
+        {
+          "texto": "Arcos faríngeos em embriões de peixe e de ser humano",
+          "categoria": "Embriologia comparada"
+        },
+        {
+          "texto": "Cauda que regride no embrião humano",
+          "categoria": "Embriologia comparada"
+        },
+        {
+          "texto": "Código genético praticamente universal",
+          "categoria": "Evidência molecular"
+        },
+        {
+          "texto": "Poucas diferenças na hemoglobina entre primatas",
+          "categoria": "Evidência molecular"
+        },
+        {
+          "texto": "Marsupiais muito diversificados na Austrália isolada",
+          "categoria": "Biogeografia"
+        },
+        {
+          "texto": "Espécies endêmicas de Fernando de Noronha",
+          "categoria": "Biogeografia"
+        },
+        {
+          "texto": "Tentilhões de Galápagos parecidos com aves sul-americanas",
+          "categoria": "Biogeografia"
+        }
+      ]
+    },
+    "verdadeiro_falso": [
+      {
+        "afirmacao": "Estruturas análogas indicam parentesco evolutivo próximo.",
+        "valor": false,
+        "explicacao": "Analogia resulta de convergência; parentesco é indicado por homologia."
+      },
+      {
+        "afirmacao": "Estruturas homólogas podem ter funções diferentes.",
+        "valor": true,
+        "explicacao": "O braço humano e a nadadeira da baleia são homólogos e têm funções distintas."
+      },
+      {
+        "afirmacao": "O carbono-14 é usado para datar fósseis de dinossauros.",
+        "valor": false,
+        "explicacao": "Sua meia-vida é curta demais; usam-se isótopos de meia-vida longa em rochas vulcânicas."
+      },
+      {
+        "afirmacao": "Depois de duas meias-vidas, resta 1/4 do isótopo radioativo original.",
+        "valor": true,
+        "explicacao": "1 → 1/2 → 1/4."
+      },
+      {
+        "afirmacao": "A maioria dos fósseis é encontrada em rochas sedimentares.",
+        "valor": true,
+        "explicacao": "O soterramento em sedimentos é a condição mais comum para a fossilização."
+      },
+      {
+        "afirmacao": "O embrião humano possui brânquias funcionais nas primeiras semanas.",
+        "valor": false,
+        "explicacao": "Ele tem arcos faríngeos, que originam estruturas da cabeça e do pescoço, e não brânquias."
+      },
+      {
+        "afirmacao": "Os seres humanos descendem dos chimpanzés atuais.",
+        "valor": false,
+        "explicacao": "Humanos e chimpanzés compartilham um ancestral comum; nenhuma espécie atual é ancestral da outra."
+      },
+      {
+        "afirmacao": "O código genético é praticamente o mesmo em bactérias, plantas e animais.",
+        "valor": true,
+        "explicacao": "Essa universalidade é uma evidência de origem comum da vida."
+      },
+      {
+        "afirmacao": "Fósseis iguais em continentes hoje separados por oceanos podem indicar que esses continentes já estiveram unidos.",
+        "valor": true,
+        "explicacao": "É o caso do Mesosaurus e da Glossopteris no Brasil e na África."
+      },
+      {
+        "afirmacao": "Um órgão vestigial nunca tem função alguma.",
+        "valor": false,
+        "explicacao": "Pode ter função reduzida ou diferente, como o apêndice cecal na defesa imunológica."
+      }
+    ]
+  },
+  "missao_mundo_aberto": {
+    "titulo": "Os Cinco Selos do Tempo",
+    "regiao": "Galápagos do Tempo",
+    "npc": "Paleontóloga Arara-Fóssil, guardiã das camadas",
+    "narrativa": "Uma tempestade embaralhou as ilhas do arquipélago, e os viajantes começaram a duvidar de que as espécies mudam com o tempo. A Paleontóloga Arara-Fóssil guarda cinco selos, um para cada linha de evidência, e só quem reunir as provas de todas as ilhas consegue reabrir a Trilha da Ancestralidade.",
+    "objetivo": "Reunir uma evidência de cada tipo (fóssil, anatômica, embrionária, molecular e biogeográfica) e explicar à guardiã como cada uma indica ancestralidade comum.",
+    "mecanica": "investigacao",
+    "etapas": [
+      "Ilha das Camadas: ordenar estratos pela superposição e datar a cinza vulcânica contando meias-vidas",
+      "Ilha dos Esqueletos: separar membros homólogos de asas análogas e encontrar três órgãos vestigiais",
+      "Ilha dos Embriões: identificar notocorda, arcos faríngeos e cauda em embriões de três vertebrados",
+      "Ilha do Código: montar uma árvore de parentesco a partir de uma tabela de diferenças em uma proteína",
+      "Ilha da Pangeia: encaixar América do Sul e África usando fósseis de Mesosaurus e Glossopteris"
+    ],
+    "recompensa_xp": 150,
+    "item_recompensa": "Martelo das Meias-Vidas"
+  }
+}

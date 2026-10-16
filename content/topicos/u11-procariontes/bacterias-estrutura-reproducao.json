@@ -1,0 +1,199 @@
+{
+  "topico": "bacterias-estrutura-reproducao",
+  "versao": 1,
+  "questoes": [
+    {
+      "id": "bacterias-estrutura-reproducao-q01",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Qual das estruturas abaixo NÃO é encontrada em células bacterianas?",
+      "alternativas": ["Ribossomos", "Membrana plasmática", "Carioteca (envoltório nuclear)", "Molécula de DNA", "Citoplasma"],
+      "correta": 2,
+      "explicacao": "Bactérias são procariontes: não têm carioteca, e o DNA fica disperso no nucleoide. Ribossomos (70S), membrana plasmática, citoplasma e DNA estão presentes em todas as células, inclusive nas bacterianas.",
+      "habilidade": "Diferenciar células procarióticas de eucarióticas.",
+      "tags": ["célula procariótica", "nucleoide"]
+    },
+    {
+      "id": "bacterias-estrutura-reproducao-q02",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "A bactéria causadora da cólera, observada ao microscópio, tem a forma de um bastonete curvo, semelhante a uma vírgula. Essa forma é denominada:",
+      "alternativas": ["vibrião", "coco", "bacilo reto", "estafilococo", "sarcina"],
+      "correta": 0,
+      "explicacao": "Vibriões são bastonetes curvos em forma de vírgula, como o Vibrio cholerae. Cocos são esféricos, bacilos são bastonetes retos, e estafilococos e sarcinas são agrupamentos de cocos.",
+      "habilidade": "Reconhecer as formas bacterianas.",
+      "tags": ["morfologia", "cólera"]
+    },
+    {
+      "id": "bacterias-estrutura-reproducao-q03",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Plasmídeos são:",
+      "alternativas": ["organelas membranosas responsáveis pela respiração celular bacteriana", "grânulos de reserva de amido no citoplasma", "proteínas da parede celular que dão forma à bactéria", "filamentos usados pela bactéria para se locomover", "pequenas moléculas de DNA circular, separadas do cromossomo, que se duplicam de forma independente"],
+      "correta": 4,
+      "explicacao": "Plasmídeos são DNA extracromossômico circular, que se replica independentemente e pode carregar genes como os de resistência a antibióticos. Bactérias não têm organelas membranosas; a parede é de peptidoglicano e a locomoção depende de flagelos.",
+      "habilidade": "Identificar componentes da célula bacteriana.",
+      "tags": ["plasmídeo", "estrutura"]
+    },
+    {
+      "id": "bacterias-estrutura-reproducao-q04",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Na coloração de Gram, algumas bactérias terminam o procedimento com cor rosa ou avermelhada. Isso ocorre porque elas:",
+      "alternativas": ["não possuem parede celular e, por isso, não absorvem nenhum corante", "têm parede com camada fina de peptidoglicano e membrana externa, perdem o cristal violeta no álcool e são coradas pela safranina", "têm parede espessa de peptidoglicano, que retém a safranina e expulsa o cristal violeta", "possuem cápsula de celulose, que reage com o lugol", "estão mortas, já que bactérias vivas sempre ficam roxas"],
+      "correta": 1,
+      "explicacao": "As Gram-negativas têm camada fina de peptidoglicano e membrana externa; o álcool remove o complexo cristal violeta-iodo, e a safranina dá a cor rosa. Parede espessa é característica das Gram-positivas, que ficam roxas. A técnica não distingue bactérias vivas e mortas, e a cápsula não é de celulose.",
+      "habilidade": "Relacionar o resultado da coloração de Gram à estrutura da parede.",
+      "tags": ["Gram", "parede celular"]
+    },
+    {
+      "id": "bacterias-estrutura-reproducao-q05",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Bactérias do gênero Clostridium formam endósporos quando o ambiente se torna desfavorável. Sobre esse processo, é correto afirmar que:",
+      "alternativas": ["é a principal forma de reprodução das bactérias, pois cada célula forma vários esporos", "ocorre por meiose, gerando variabilidade genética", "é idêntico à divisão binária, mas mais lento", "é uma estratégia de resistência, pois cada célula origina um único endósporo, que depois origina uma única célula", "torna a bactéria sensível ao calor e a desinfetantes"],
+      "correta": 3,
+      "explicacao": "Na esporulação bacteriana, uma célula forma um endósporo, que germina e origina uma célula: o número de indivíduos não aumenta, então não é reprodução. Bactérias não fazem meiose, e o endósporo é justamente muito resistente a calor e desinfetantes.",
+      "habilidade": "Diferenciar reprodução de formas de resistência.",
+      "tags": ["endósporo", "esporulação"]
+    },
+    {
+      "id": "bacterias-estrutura-reproducao-q06",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Um plasmídeo com um gene de resistência a antibiótico passou de uma bactéria para outra por meio de uma ponte citoplasmática formada por um pilus sexual. Esse mecanismo é a:",
+      "alternativas": ["conjugação", "transformação", "transdução", "divisão binária", "esporulação"],
+      "correta": 0,
+      "explicacao": "Na conjugação, há contato entre duas bactérias vivas e transferência de DNA, geralmente plasmídeos, pelo pilus sexual. Na transformação o DNA está livre no meio; na transdução quem o carrega é um bacteriófago. Divisão binária e esporulação não envolvem troca de genes.",
+      "habilidade": "Identificar mecanismos de recombinação bacteriana.",
+      "tags": ["conjugação", "plasmídeo", "resistência"]
+    },
+    {
+      "id": "bacterias-estrutura-reproducao-q07",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Uma família preparou conserva caseira de palmito: os pedaços foram fervidos por alguns minutos em panela comum e guardados em vidros bem fechados, fora da geladeira. Semanas depois, uma pessoa que consumiu o produto apresentou visão dupla e fraqueza muscular, sintomas compatíveis com botulismo, causado pela toxina de Clostridium botulinum. A explicação biológica mais adequada para o ocorrido é que:",
+      "alternativas": ["a fervura produziu mutações nas bactérias, tornando-as capazes de fabricar toxina", "o oxigênio acumulado no vidro fechado estimulou o crescimento das bactérias", "endósporos da bactéria resistiram à fervura comum e, no ambiente sem oxigênio do vidro, germinaram e produziram a toxina", "a bactéria entrou no vidro depois de fechado, atravessando a tampa", "o palmito produz a toxina naturalmente quando armazenado por muito tempo"],
+      "correta": 2,
+      "explicacao": "Os endósporos de Clostridium botulinum resistem à fervura comum e só são destruídos com segurança sob vapor pressurizado, a cerca de 121 °C, como na autoclave. No vidro fechado não há oxigênio, condição favorável à germinação dessa bactéria anaeróbia e à produção da toxina. O calor não cria a capacidade de produzir toxina, o vidro fechado não acumula oxigênio e a toxina é bacteriana, não vegetal.",
+      "habilidade": "Aplicar o conceito de endósporo a uma situação de saúde e de conservação de alimentos.",
+      "tags": ["endósporo", "botulismo", "cotidiano"]
+    },
+    {
+      "id": "bacterias-estrutura-reproducao-q08",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Em um experimento clássico, pneumococos do tipo S (com cápsula) matavam camundongos, enquanto os do tipo R (sem cápsula) não matavam. Pneumococos S mortos pelo calor, injetados isoladamente, também não matavam. Porém, quando pneumococos S mortos pelo calor foram injetados junto com pneumococos R vivos, os camundongos morreram, e deles foram isolados pneumococos S vivos. A interpretação mais adequada é que:",
+      "alternativas": ["os pneumococos S mortos voltaram à vida dentro do camundongo", "o sistema imune do camundongo fabricou cápsulas e as colocou nos pneumococos R", "os pneumococos R se reproduziram sexuadamente com os S mortos, formando um zigoto", "a cápsula é tóxica por si só, independentemente da presença de bactérias vivas", "material genético liberado pelos pneumococos S mortos foi absorvido pelos R vivos, que passaram a produzir cápsula, num processo chamado transformação"],
+      "correta": 4,
+      "explicacao": "A transformação é a incorporação de DNA livre do meio. Os genes para cápsula, liberados pelas bactérias S mortas, foram absorvidos por bactérias R vivas, que se tornaram capsuladas e virulentas; a cápsula dificulta a fagocitose. Bactérias mortas pelo calor não revivem, bactérias não formam zigoto, e a injeção isolada de S mortas mostrou que a cápsula sozinha não mata.",
+      "habilidade": "Interpretar dados experimentais sobre transformação bacteriana.",
+      "tags": ["transformação", "cápsula", "experimento"]
+    },
+    {
+      "id": "bacterias-estrutura-reproducao-q09",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Em uma festa de verão, uma travessa de salpicão ficou fora da geladeira. Suponha que ela tenha sido contaminada inicialmente por 100 bactérias e que, nessa temperatura, a população dobre a cada 30 minutos por divisão binária, sem limitação de nutrientes. Após 4 horas, o número esperado de bactérias será:",
+      "alternativas": ["800", "25.600", "3.200", "51.200", "12.800"],
+      "correta": 1,
+      "explicacao": "Em 4 horas há 8 intervalos de 30 minutos, ou seja, 8 gerações. N = N₀ × 2ⁿ = 100 × 2⁸ = 100 × 256 = 25.600. O valor 800 resulta de um raciocínio linear (100 × 8), que ignora o crescimento exponencial; 12.800 e 51.200 correspondem a 7 e 9 gerações; 3.200 corresponde a 5 gerações.",
+      "habilidade": "Calcular crescimento exponencial de populações bacterianas em situação cotidiana.",
+      "tags": ["divisão binária", "crescimento exponencial", "alimentos"]
+    },
+    {
+      "id": "bacterias-estrutura-reproducao-q10",
+      "nivel": "diamante",
+      "tipo": "multipla_escolha",
+      "enunciado": "Uma pesquisadora cultivou uma bactéria Gram-positiva com penicilina, que impede a formação de novas ligações no peptidoglicano, em três condições: (I) meio hipotônico em relação ao citoplasma, com nutrientes e bactérias em divisão ativa; (II) igual a I, mas com sacarose em concentração isotônica ao citoplasma; (III) igual a I, mas sem nutrientes, com bactérias sem crescer. Observou lise intensa em I, células arredondadas e intactas em II e células normais e intactas em III. A interpretação que explica os três resultados é:",
+      "alternativas": ["A penicilina destrói diretamente a membrana plasmática; a sacarose em II e a falta de nutrientes em III neutralizam quimicamente o antibiótico", "A penicilina age nos ribossomos 70S, impedindo a síntese de proteínas da membrana; a lise em I resulta da falta dessas proteínas", "Em III as bactérias formaram endósporos, e em II a sacarose serviu de alimento extra, permitindo reconstruir a parede apesar do antibiótico", "Em I, células em crescimento formaram parede defeituosa e romperam-se por entrada de água; em II, sem diferença osmótica, perderam a forma sem estourar; em III, sem crescimento, não houve síntese de parede a bloquear e a parede antiga se manteve", "O resultado em I indica que a linhagem é Gram-negativa, já que apenas bactérias com membrana externa sofrem lise por penicilina"],
+      "correta": 3,
+      "explicacao": "A penicilina bloqueia a construção do peptidoglicano, o que só afeta células que estão sintetizando parede, isto é, crescendo. Em I, a parede enfraquecida não resiste à entrada de água no meio hipotônico e ocorre lise osmótica. Em II, sem diferença osmótica, as células perdem a forma, mas não estouram: a parede é o que mantém a forma e resiste à pressão osmótica. Em III, sem crescimento, a parede antiga permanece. A penicilina não age em ribossomos nem na membrana, a sacarose atua osmoticamente e não como alimento, nada indica endósporos e as Gram-positivas costumam ser as mais sensíveis à penicilina.",
+      "habilidade": "Integrar estrutura da parede bacteriana, osmose e mecanismo de ação de antibióticos na interpretação de um experimento.",
+      "tags": ["parede celular", "osmose", "penicilina", "integração"]
+    }
+  ],
+  "flashcards": [
+    { "id": "bacterias-estrutura-reproducao-f01", "frente": "O que caracteriza uma célula procariótica?", "verso": "Ausência de carioteca e de organelas membranosas. O DNA fica no nucleoide e os ribossomos são 70S." },
+    { "id": "bacterias-estrutura-reproducao-f02", "frente": "Componente principal da parede bacteriana", "verso": "Peptidoglicano (mureína), um polímero de açúcares ligados por pequenas cadeias de aminoácidos." },
+    { "id": "bacterias-estrutura-reproducao-f03", "frente": "Função da parede celular bacteriana", "verso": "Dar forma à célula e impedir que ela se rompa por entrada de água (lise osmótica)." },
+    { "id": "bacterias-estrutura-reproducao-f04", "frente": "Função da cápsula bacteriana", "verso": "Adesão, proteção contra ressecamento e contra a fagocitose; aumenta a virulência." },
+    { "id": "bacterias-estrutura-reproducao-f05", "frente": "O que é o nucleoide?", "verso": "Região do citoplasma onde fica o cromossomo bacteriano, geralmente um DNA circular, sem envoltório." },
+    { "id": "bacterias-estrutura-reproducao-f06", "frente": "O que são plasmídeos?", "verso": "Pequenos DNAs circulares extracromossômicos, de replicação independente, que podem levar genes de resistência a antibióticos." },
+    { "id": "bacterias-estrutura-reproducao-f07", "frente": "Estreptococos x estafilococos", "verso": "Estreptococos formam cadeias de cocos; estafilococos formam cachos, como uvas." },
+    { "id": "bacterias-estrutura-reproducao-f08", "frente": "Etapas da coloração de Gram, em ordem", "verso": "Cristal violeta, lugol, álcool (descoloração) e safranina." },
+    { "id": "bacterias-estrutura-reproducao-f09", "frente": "Gram-positiva x Gram-negativa: parede e cor", "verso": "Positiva: peptidoglicano espesso, fica roxa. Negativa: peptidoglicano fino e membrana externa, fica rosa." },
+    { "id": "bacterias-estrutura-reproducao-f10", "frente": "Como as bactérias se reproduzem?", "verso": "Assexuadamente, por divisão binária (cissiparidade), originando duas células geneticamente iguais." },
+    { "id": "bacterias-estrutura-reproducao-f11", "frente": "Fórmula do crescimento bacteriano ideal", "verso": "N = N₀ × 2ⁿ, em que n é o número de gerações (divisões)." },
+    { "id": "bacterias-estrutura-reproducao-f12", "frente": "Por que a esporulação não é reprodução?", "verso": "Uma célula forma um endósporo, que origina uma só célula: a população não aumenta. É uma forma de resistência." },
+    { "id": "bacterias-estrutura-reproducao-f13", "frente": "Transformação bacteriana", "verso": "Absorção de fragmentos de DNA livres no ambiente, como no experimento de Griffith." },
+    { "id": "bacterias-estrutura-reproducao-f14", "frente": "Conjugação bacteriana", "verso": "Transferência de DNA, geralmente plasmídeo, de uma bactéria doadora para uma receptora pelo pilus sexual." },
+    { "id": "bacterias-estrutura-reproducao-f15", "frente": "Transdução bacteriana", "verso": "Transferência de DNA bacteriano de uma célula para outra por meio de um bacteriófago." }
+  ],
+  "minijogos": {
+    "pares": [
+      { "a": "Coco", "b": "Forma esférica" },
+      { "a": "Bacilo", "b": "Forma de bastonete" },
+      { "a": "Vibrião", "b": "Forma de vírgula" },
+      { "a": "Espiroqueta", "b": "Espiral flexível, como a leptospira" },
+      { "a": "Cápsula", "b": "Dificulta a fagocitose" },
+      { "a": "Plasmídeo", "b": "DNA extra que pode levar genes de resistência" },
+      { "a": "Endósporo", "b": "Forma de resistência ao calor e ao ressecamento" },
+      { "a": "Pilus sexual", "b": "Ponte usada na conjugação" }
+    ],
+    "sequencia": {
+      "instrucao": "Coloque em ordem as etapas da coloração de Gram.",
+      "itens": ["Preparar e fixar o esfregaço de bactérias na lâmina", "Aplicar cristal violeta", "Aplicar lugol (solução de iodo)", "Descolorir com álcool ou álcool-acetona", "Aplicar safranina como corante de contraste", "Observar ao microscópio: roxas são Gram-positivas e rosa são Gram-negativas"]
+    },
+    "classificacao": {
+      "instrucao": "Classifique cada característica de acordo com o mecanismo de recombinação bacteriana.",
+      "categorias": [
+        "Transformação",
+        "Conjugação",
+        "Transdução"
+      ],
+      "itens": [
+        { "texto": "Absorção de fragmentos de DNA livres no ambiente", "categoria": "Transformação" },
+        { "texto": "DNA liberado por bactérias mortas é incorporado por outra bactéria", "categoria": "Transformação" },
+        { "texto": "Explica o experimento de Griffith com pneumococos", "categoria": "Transformação" },
+        { "texto": "É impedida por uma enzima que degrada DNA livre no meio", "categoria": "Transformação" },
+        { "texto": "Exige contato entre duas bactérias vivas", "categoria": "Conjugação" },
+        { "texto": "Usa o pilus sexual como ponte", "categoria": "Conjugação" },
+        { "texto": "Principal via de passagem de plasmídeos de resistência entre bactérias", "categoria": "Conjugação" },
+        { "texto": "Depende de um bacteriófago como vetor", "categoria": "Transdução" },
+        { "texto": "DNA bacteriano é empacotado por engano dentro de um capsídeo viral", "categoria": "Transdução" },
+        { "texto": "Um vírus leva genes de uma bactéria que infectou antes para outra", "categoria": "Transdução" }
+      ]
+    },
+    "verdadeiro_falso": [
+      { "afirmacao": "Bactérias não possuem DNA, porque não têm núcleo organizado.", "valor": false, "explicacao": "Elas têm DNA, que fica no nucleoide, sem carioteca." },
+      { "afirmacao": "Os ribossomos bacterianos são do tipo 70S.", "valor": true, "explicacao": "São menores que os ribossomos 80S do citoplasma eucariótico, o que permite a ação seletiva de alguns antibióticos." },
+      { "afirmacao": "A parede celular bacteriana é formada por celulose.", "valor": false, "explicacao": "É formada por peptidoglicano. Celulose é componente da parede das células vegetais." },
+      { "afirmacao": "Na coloração de Gram, as bactérias Gram-positivas ficam roxas.", "valor": true, "explicacao": "A parede espessa de peptidoglicano retém o complexo cristal violeta-iodo mesmo após o álcool." },
+      { "afirmacao": "Bactérias Gram-negativas não possuem parede celular.", "valor": false, "explicacao": "Elas têm parede com camada fina de peptidoglicano, coberta por uma membrana externa." },
+      { "afirmacao": "A esporulação bacteriana aumenta o número de indivíduos da população.", "valor": false, "explicacao": "Cada célula forma um único endósporo, que origina uma única célula; é uma forma de resistência." },
+      { "afirmacao": "A conjugação bacteriana é uma forma de reprodução sexuada.", "valor": false, "explicacao": "É recombinação gênica: há troca de DNA, mas não surgem novos indivíduos." },
+      { "afirmacao": "Na transdução, o DNA bacteriano é transportado por um vírus.", "valor": true, "explicacao": "Um bacteriófago empacota por engano DNA da bactéria e o injeta em outra." },
+      { "afirmacao": "Plasmídeos podem carregar genes de resistência a antibióticos.", "valor": true, "explicacao": "E podem passar de uma bactéria para outra por conjugação, espalhando a resistência." },
+      { "afirmacao": "O antibiótico provoca as mutações que tornam as bactérias resistentes.", "valor": false, "explicacao": "O antibiótico seleciona bactérias que já eram resistentes, que passam a predominar." }
+    ]
+  },
+  "missao_mundo_aberto": {
+    "titulo": "O Laboratório das Esteiras",
+    "regiao": "Planície dos Estromatólitos",
+    "npc": "Doutora Mureína, microbiologista das esteiras",
+    "narrativa": "Uma colônia desconhecida se espalha pelas esteiras microbianas da Planície dos Estromatólitos, e alguns viajantes adoeceram depois de beber água de uma fonte próxima. A Doutora Mureína montou um laboratório de campo e precisa de ajuda para descobrir que bactéria é essa, como ela se multiplica tão depressa e de onde veio o gene que a deixou resistente ao remédio da vila.",
+    "objetivo": "Identificar a bactéria pela forma e pela coloração de Gram, prever o crescimento da colônia e descobrir por qual mecanismo de recombinação ela recebeu o plasmídeo de resistência.",
+    "mecanica": "investigacao",
+    "etapas": [
+      "Montar o modelo da célula suspeita, posicionando parede, cápsula, nucleoide, plasmídeos e flagelo",
+      "Observar amostras ao microscópio e classificar as formas: cocos, bacilos, espiroquetas e vibriões",
+      "Executar a coloração de Gram na ordem certa e interpretar a cor da bactéria suspeita",
+      "Calcular quantas bactérias haverá na fonte depois de algumas gerações de divisão binária",
+      "Vasculhar o solo da planície em busca de endósporos e decidir como esterilizar os frascos do laboratório",
+      "Rastrear a origem do gene de resistência, decidindo entre transformação, conjugação e transdução"
+    ],
+    "recompensa_xp": 150,
+    "item_recompensa": "Lâmina de Gram da Doutora Mureína"
+  }
+}

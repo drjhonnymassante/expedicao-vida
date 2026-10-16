@@ -1,0 +1,199 @@
+{
+  "topico": "taxonomia-nomenclatura",
+  "versao": 1,
+  "questoes": [
+    {
+      "id": "taxonomia-nomenclatura-q01",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Qual sequência apresenta as categorias taxonômicas da mais abrangente para a mais restrita?",
+      "alternativas": ["Reino, domínio, classe, filo, família, ordem, espécie, gênero", "Espécie, gênero, família, ordem, classe, filo, reino, domínio", "Domínio, reino, filo, classe, ordem, família, gênero, espécie", "Domínio, filo, reino, ordem, classe, gênero, família, espécie", "Reino, filo, domínio, classe, família, ordem, gênero, espécie"],
+      "correta": 2,
+      "explicacao": "A hierarquia vai de domínio (mais inclusivo) a espécie (mais restrito): domínio, reino, filo, classe, ordem, família, gênero e espécie. A alternativa com espécie primeiro está na ordem inversa, do mais restrito ao mais abrangente; as demais trocam categorias de lugar.",
+      "habilidade": "Ordenar as categorias taxonômicas.",
+      "tags": ["categorias taxonômicas", "hierarquia"]
+    },
+    {
+      "id": "taxonomia-nomenclatura-q02",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Em um texto impresso, o nome científico do mosquito transmissor da dengue está escrito corretamente em:",
+      "alternativas": ["*Aedes Aegypti*", "*aedes aegypti*", "Aedes aegypti, sem nenhum destaque gráfico", "*Aegypti aedes*", "*Aedes aegypti*"],
+      "correta": 4,
+      "explicacao": "O binômio tem o gênero com inicial maiúscula (Aedes), o epíteto específico com inicial minúscula (aegypti) e é destacado em itálico. Epíteto com maiúscula, gênero com minúscula, ausência de destaque ou inversão da ordem violam as regras.",
+      "habilidade": "Aplicar as regras da nomenclatura binomial.",
+      "tags": ["nomenclatura binomial", "Aedes aegypti"]
+    },
+    {
+      "id": "taxonomia-nomenclatura-q03",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "O sistema proposto por Carl Woese organiza os seres vivos em três domínios. São eles:",
+      "alternativas": ["Bacteria, Archaea e Eukarya", "Monera, Protista e Fungi", "Plantae, Animalia e Fungi", "Procariontes, vírus e eucariontes", "Bacteria, Protista e Animalia"],
+      "correta": 0,
+      "explicacao": "Os três domínios são Bacteria, Archaea e Eukarya, definidos a partir da comparação do RNA ribossômico. Monera, Protista, Fungi, Plantae e Animalia são reinos do sistema de Whittaker, e vírus não fazem parte de nenhum domínio, pois são acelulares.",
+      "habilidade": "Identificar os três domínios da vida.",
+      "tags": ["três domínios", "Woese"]
+    },
+    {
+      "id": "taxonomia-nomenclatura-q04",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Dois animais pertencem à mesma família. Com base na hierarquia das categorias taxonômicas, é correto afirmar que eles obrigatoriamente pertencem:",
+      "alternativas": ["ao mesmo gênero e à mesma espécie", "ao mesmo gênero, mas não necessariamente à mesma ordem", "à mesma espécie, mas não necessariamente ao mesmo filo", "à mesma ordem, à mesma classe e ao mesmo filo", "a gêneros diferentes, pois cada família tem um único gênero"],
+      "correta": 3,
+      "explicacao": "A hierarquia é inclusiva: quem está na mesma família está também na mesma ordem, classe, filo, reino e domínio. Mas uma família pode conter vários gêneros (onça e gato são ambos Felidae, de gêneros diferentes), então mesmo gênero e mesma espécie não são garantidos. Também não é obrigatório que sejam de gêneros diferentes.",
+      "habilidade": "Aplicar a ideia de hierarquia inclusiva.",
+      "tags": ["hierarquia", "categorias taxonômicas"]
+    },
+    {
+      "id": "taxonomia-nomenclatura-q05",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "O cruzamento entre a égua (64 cromossomos) e o jumento (62 cromossomos) produz a mula, um animal forte, mas estéril. A explicação para a esterilidade da mula é que:",
+      "alternativas": ["ela herda apenas os cromossomos da mãe e fica com 32 cromossomos", "seus 63 cromossomos não formam pares homólogos corretamente na meiose, o que impede a formação normal de gametas", "seus cromossomos não conseguem se duplicar na interfase, e por isso suas células não fazem mitose", "a mula é sempre do sexo masculino, e o jumento transmite um gene de esterilidade", "cavalos e jumentos são da mesma espécie, mas de raças incompatíveis"],
+      "correta": 1,
+      "explicacao": "A mula recebe 32 cromossomos da égua e 31 do jumento, totalizando 63. Na meiose, os cromossomos de origens diferentes não pareiam corretamente e a gametogênese falha. A mula faz mitose normalmente (por isso se desenvolve), existem mulas machos e fêmeas, e cavalo e jumento são espécies diferentes justamente porque o híbrido é estéril.",
+      "habilidade": "Explicar a esterilidade de híbridos com base na meiose.",
+      "tags": ["conceito biológico de espécie", "híbridos", "meiose"]
+    },
+    {
+      "id": "taxonomia-nomenclatura-q06",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "No sistema de cinco reinos de Whittaker, os fungos foram separados das plantas. Uma característica que justifica essa separação é que os fungos:",
+      "alternativas": ["são todos unicelulares e procarióticos", "fazem fotossíntese apenas no período noturno", "são heterótrofos por absorção e têm parede celular de quitina", "não possuem parede celular, como os animais", "armazenam amido, como as plantas, mas não têm núcleo"],
+      "correta": 2,
+      "explicacao": "Fungos são eucariontes heterótrofos que absorvem nutrientes do ambiente, têm parede de quitina e armazenam glicogênio. Plantas são autótrofas, com parede de celulose e reserva de amido. Há fungos pluricelulares (cogumelos, bolores), todos têm núcleo e possuem parede celular.",
+      "habilidade": "Relacionar critérios de classificação às características dos reinos.",
+      "tags": ["cinco reinos", "Whittaker", "fungos"]
+    },
+    {
+      "id": "taxonomia-nomenclatura-q07",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Um estudante do Pantanal recebeu a chave dicotômica abaixo para identificar animais observados em campo.\n\n1a. Corpo coberto de penas: tuiuiú. 1b. Sem penas: vá para 2.\n2a. Corpo coberto de pelos: vá para 3. 2b. Sem pelos: vá para 4.\n3a. Caninos grandes e garras retráteis: onça-pintada. 3b. Incisivos de crescimento contínuo e membranas entre os dedos: capivara.\n4a. Nadadeiras e brânquias: piranha. 4b. Sem nadadeiras, pele com escamas córneas: vá para 5.\n5a. Com patas: jacaré. 5b. Sem patas: sucuri.\n\nEle observou um animal sem penas, sem pelos, sem nadadeiras, com o corpo coberto por escamas córneas e com quatro patas. O caminho percorrido na chave e o animal identificado são:",
+      "alternativas": ["1b, 2a, 3b: capivara", "1b, 2b, 4a: piranha", "1b, 2b, 4b, 5b: sucuri", "1a: tuiuiú", "1b, 2b, 4b, 5a: jacaré"],
+      "correta": 4,
+      "explicacao": "Sem penas leva a 1b; sem pelos, a 2b; sem nadadeiras e com escamas córneas, a 4b; com patas, a 5a: jacaré. O caminho da capivara exige pelos (2a), o da piranha exige nadadeiras (4a) e o da sucuri exige ausência de patas (5b).",
+      "habilidade": "Utilizar chaves dicotômicas para identificar organismos.",
+      "tags": ["chave dicotômica", "Pantanal"]
+    },
+    {
+      "id": "taxonomia-nomenclatura-q08",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Uma cooperativa agrícola recebeu pedidos de mudas de \"macaxeira\" de um comprador do Pará, de \"aipim\" de um comprador gaúcho e de \"mandioca\" de um comprador paulista. Em outro pedido, um comprador mineiro solicitou mudas de \"pau-ferro\", nome popular aplicado a árvores diferentes em regiões distintas do país. Para evitar erros nesses negócios e em pesquisas sobre essas plantas, a medida mais adequada é:",
+      "alternativas": ["identificar as plantas pelo nome científico, que é único e universal para cada espécie, como *Manihot esculenta* para a mandioca", "padronizar o uso do nome popular mais comum no estado de origem da cooperativa", "traduzir os nomes populares para o inglês, idioma usado na ciência", "identificar as plantas apenas pelo nome da família a que pertencem", "registrar somente o epíteto específico, que já é suficiente para identificar a espécie"],
+      "correta": 0,
+      "explicacao": "Nomes populares variam entre regiões e um mesmo nome pode designar espécies diferentes. O nome científico binomial é único e reconhecido internacionalmente. Traduzir para o inglês mantém a ambiguidade, a família reúne muitas espécies e o epíteto sozinho não identifica a espécie, pois só o binômio completo é o nome dela.",
+      "habilidade": "Reconhecer a importância da nomenclatura científica para a comunicação.",
+      "tags": ["nomenclatura binomial", "nomes populares", "cotidiano"]
+    },
+    {
+      "id": "taxonomia-nomenclatura-q09",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "No rúmen dos bovinos vivem microrganismos procarióticos que produzem gás metano. Durante décadas eles foram classificados no reino Monera, ao lado das bactérias. A comparação de sequências do RNA ribossômico, porém, mostrou que esses metanogênicos diferem profundamente das bactérias e compartilham com os eucariontes diversas características moleculares. Com base nessas informações, conclui-se que:",
+      "alternativas": ["os metanogênicos são eucariontes, pois compartilham características moleculares com eles", "o reino Monera foi confirmado como um grupo que reúne organismos de parentesco muito próximo", "a presença ou ausência de núcleo é o critério mais seguro para indicar parentesco evolutivo", "os metanogênicos pertencem ao domínio Archaea, e o agrupamento de todos os procariontes em Monera não reflete o parentesco real", "os metanogênicos devem ser classificados como vírus, por viverem dentro de outro organismo"],
+      "correta": 3,
+      "explicacao": "Os metanogênicos são arqueias: procariontes, sem núcleo, mas mais aparentados com os eucariontes do que com as bactérias. Por isso o reino Monera, que juntava todos os procariontes, não representa o parentesco evolutivo. Eles não são eucariontes (não têm núcleo), a simples ausência de núcleo não garante parentesco próximo, e vírus são acelulares, enquanto os metanogênicos são células.",
+      "habilidade": "Interpretar dados moleculares na mudança dos sistemas de classificação.",
+      "tags": ["três domínios", "Archaea", "Monera", "dados moleculares"]
+    },
+    {
+      "id": "taxonomia-nomenclatura-q10",
+      "nivel": "diamante",
+      "tipo": "multipla_escolha",
+      "enunciado": "Pesquisadores estudaram duas populações de pererecas da Mata Atlântica que, por serem morfologicamente indistinguíveis, haviam sido descritas como uma única espécie. Em uma área onde as duas populações convivem, as fêmeas de cada uma respondem apenas ao canto dos machos da própria população, e não foram encontrados híbridos na natureza. Em laboratório, a fecundação artificial entre as populações gerou girinos que raramente completaram a metamorfose, e os poucos adultos obtidos eram estéreis. Análises de DNA revelaram diferenças acentuadas entre as populações. A interpretação mais adequada desses resultados é:",
+      "alternativas": ["As populações formam uma só espécie, porque a morfologia idêntica é o critério decisivo para definir espécie", "As populações são espécies distintas pelo conceito biológico, pois há isolamento reprodutivo antes da fecundação (comportamental) e depois dela (inviabilidade e esterilidade dos híbridos); devem receber binômios diferentes, podendo permanecer no mesmo gênero", "As populações formam uma só espécie, porque a fecundação artificial produziu descendentes", "As populações são espécies distintas e, por isso, precisam obrigatoriamente ser classificadas em gêneros diferentes", "As populações são subespécies de uma mesma espécie, pois a esterilidade dos híbridos é típica de subespécies, que recebem nome trinomial"],
+      "correta": 1,
+      "explicacao": "O conceito biológico de espécie exige cruzamento natural com prole fértil. Aqui há isolamento comportamental (o canto impede o acasalamento na natureza) e isolamento pós-zigótico (híbridos inviáveis e estéreis), além de divergência genética: são espécies diferentes, ainda que de aparência idêntica (espécies crípticas). A morfologia não é decisiva, e gerar descendentes inférteis em laboratório não indica mesma espécie: assim como na mula, a esterilidade dos híbridos costuma resultar de falhas no pareamento dos cromossomos na meiose. Espécies distintas podem compartilhar o gênero, como cavalo e jumento. Subespécies cruzam com prole fértil, o que não ocorre aqui.",
+      "habilidade": "Integrar conceito de espécie, isolamento reprodutivo, meiose e nomenclatura na análise de dados.",
+      "tags": ["conceito biológico de espécie", "especiação", "isolamento reprodutivo", "integração"]
+    }
+  ],
+  "flashcards": [
+    { "id": "taxonomia-nomenclatura-f01", "frente": "O que estuda a taxonomia?", "verso": "A descrição, a nomenclatura e a classificação dos seres vivos." },
+    { "id": "taxonomia-nomenclatura-f02", "frente": "Diferença entre taxonomia e sistemática", "verso": "A sistemática é mais ampla: além de classificar, estuda as relações de parentesco evolutivo entre os grupos." },
+    { "id": "taxonomia-nomenclatura-f03", "frente": "As oito categorias taxonômicas principais, em ordem", "verso": "Domínio, reino, filo, classe, ordem, família, gênero e espécie." },
+    { "id": "taxonomia-nomenclatura-f04", "frente": "O que é hierarquia inclusiva?", "verso": "Cada categoria contém as de baixo: organismos da mesma família estão obrigatoriamente na mesma ordem, classe, filo, reino e domínio." },
+    { "id": "taxonomia-nomenclatura-f05", "frente": "Quem popularizou a nomenclatura binomial?", "verso": "Carlos Lineu (Carl von Linné), naturalista sueco do século XVIII." },
+    { "id": "taxonomia-nomenclatura-f06", "frente": "Como se escreve o nome científico de uma espécie?", "verso": "Gênero com inicial maiúscula + epíteto específico com inicial minúscula, em latim, em itálico ou sublinhado. Ex.: *Panthera onca*." },
+    { "id": "taxonomia-nomenclatura-f07", "frente": "O epíteto específico sozinho é o nome da espécie?", "verso": "Não. O nome da espécie é o binômio completo (gênero + epíteto)." },
+    { "id": "taxonomia-nomenclatura-f08", "frente": "Terminação dos nomes de família em animais e em plantas", "verso": "Animais: -idae (Felidae). Plantas: em geral -aceae (Euphorbiaceae)." },
+    { "id": "taxonomia-nomenclatura-f09", "frente": "Conceito biológico de espécie", "verso": "Populações cujos indivíduos se cruzam na natureza e geram descendentes férteis, isoladas reprodutivamente de outros grupos." },
+    { "id": "taxonomia-nomenclatura-f10", "frente": "Por que a mula é estéril?", "verso": "Tem 63 cromossomos (32 da égua + 31 do jumento), que não pareiam corretamente na meiose; a formação de gametas falha." },
+    { "id": "taxonomia-nomenclatura-f11", "frente": "Limites do conceito biológico de espécie", "verso": "Não se aplica a organismos assexuados (como bactérias) nem a fósseis, e é difícil de testar em populações isoladas geograficamente." },
+    { "id": "taxonomia-nomenclatura-f12", "frente": "Cinco reinos de Whittaker", "verso": "Monera, Protista, Fungi, Plantae e Animalia." },
+    { "id": "taxonomia-nomenclatura-f13", "frente": "Critérios usados por Whittaker", "verso": "Tipo de célula (procariótica ou eucariótica), número de células e modo de nutrição." },
+    { "id": "taxonomia-nomenclatura-f14", "frente": "Três domínios de Woese e o dado usado", "verso": "Bacteria, Archaea e Eukarya, definidos pela comparação de sequências do RNA ribossômico." },
+    { "id": "taxonomia-nomenclatura-f15", "frente": "Archaea é mais aparentada com qual domínio?", "verso": "Com Eukarya, embora suas células sejam procarióticas." },
+    { "id": "taxonomia-nomenclatura-f16", "frente": "O que é uma chave dicotômica?", "verso": "Ferramenta de identificação com passos de duas alternativas opostas, escolhidas sucessivamente até chegar ao nome do organismo." }
+  ],
+  "minijogos": {
+    "pares": [
+      { "a": "Onça-pintada", "b": "*Panthera onca*" },
+      { "a": "Mandioca (aipim, macaxeira)", "b": "*Manihot esculenta*" },
+      { "a": "Mosquito da dengue", "b": "*Aedes aegypti*" },
+      { "a": "Protozoário da doença de Chagas", "b": "*Trypanosoma cruzi*" },
+      { "a": "Ser humano", "b": "*Homo sapiens*" },
+      { "a": "Lobo-guará", "b": "*Chrysocyon brachyurus*" },
+      { "a": "Carl Woese", "b": "Três domínios" },
+      { "a": "Robert Whittaker", "b": "Cinco reinos" },
+      { "a": "Carlos Lineu", "b": "Nomenclatura binomial" },
+      { "a": "Ernst Mayr", "b": "Conceito biológico de espécie" }
+    ],
+    "sequencia": {
+      "instrucao": "Coloque as categorias taxonômicas da onça-pintada em ordem, da mais abrangente para a mais restrita.",
+      "itens": ["Domínio Eukarya", "Reino Animalia", "Filo Chordata", "Classe Mammalia", "Ordem Carnivora", "Família Felidae", "Gênero Panthera", "Espécie Panthera onca"]
+    },
+    "classificacao": {
+      "instrucao": "Classifique cada organismo no reino correspondente do sistema de cinco reinos de Whittaker.",
+      "categorias": ["Monera", "Protista", "Fungi", "Plantae", "Animalia"],
+      "itens": [
+        { "texto": "Escherichia coli (bactéria intestinal)", "categoria": "Monera" },
+        { "texto": "Cianobactéria", "categoria": "Monera" },
+        { "texto": "Arqueia metanogênica do rúmen (procarionte; em Woese, domínio Archaea)", "categoria": "Monera" },
+        { "texto": "Trypanosoma cruzi", "categoria": "Protista" },
+        { "texto": "Ameba", "categoria": "Protista" },
+        { "texto": "Diatomácea", "categoria": "Protista" },
+        { "texto": "Levedura do pão (Saccharomyces)", "categoria": "Fungi" },
+        { "texto": "Cogumelo", "categoria": "Fungi" },
+        { "texto": "Musgo", "categoria": "Plantae" },
+        { "texto": "Samambaia", "categoria": "Plantae" },
+        { "texto": "Esponja-do-mar", "categoria": "Animalia" },
+        { "texto": "Aedes aegypti", "categoria": "Animalia" }
+      ]
+    },
+    "verdadeiro_falso": [
+      { "afirmacao": "Organismos da mesma ordem pertencem obrigatoriamente à mesma família.", "valor": false, "explicacao": "Uma ordem reúne várias famílias. Onça (Felidae) e lobo-guará (Canidae) são da mesma ordem, Carnivora." },
+      { "afirmacao": "Em *Trypanosoma cruzi*, o epíteto deve começar com minúscula, mesmo homenageando Oswaldo Cruz.", "valor": true, "explicacao": "O epíteto específico sempre começa com letra minúscula." },
+      { "afirmacao": "O nome científico de uma espécie é formado apenas pelo epíteto específico.", "valor": false, "explicacao": "O nome da espécie é o binômio completo: gênero + epíteto." },
+      { "afirmacao": "Cavalo e jumento são espécies diferentes porque seu híbrido, a mula, é estéril.", "valor": true, "explicacao": "Pelo conceito biológico, a espécie exige descendentes férteis." },
+      { "afirmacao": "O conceito biológico de espécie pode ser aplicado facilmente às bactérias.", "valor": false, "explicacao": "Bactérias se reproduzem assexuadamente, então o critério de cruzamento não se aplica." },
+      { "afirmacao": "No sistema de Whittaker, os fungos fazem parte do reino Plantae.", "valor": false, "explicacao": "Os fungos formam o reino Fungi: são heterótrofos por absorção e têm parede de quitina." },
+      { "afirmacao": "As arqueias são mais aparentadas com os eucariontes do que com as bactérias.", "valor": true, "explicacao": "Dados do RNA ribossômico e de outras moléculas aproximam Archaea de Eukarya." },
+      { "afirmacao": "Os vírus pertencem ao domínio Bacteria.", "valor": false, "explicacao": "Vírus são acelulares e não fazem parte de nenhum domínio ou reino." },
+      { "afirmacao": "Uma chave dicotômica apresenta, em cada passo, duas alternativas opostas.", "valor": true, "explicacao": "Dicotomia significa divisão em duas partes." },
+      { "afirmacao": "Todas as arqueias vivem em ambientes extremos, como fontes termais.", "valor": false, "explicacao": "Muitas são extremófilas, mas há arqueias no solo, no mar e no rúmen de bois." }
+    ]
+  },
+  "missao_mundo_aberto": {
+    "titulo": "Os Nomes Perdidos da Árvore",
+    "regiao": "Grande Árvore da Vida",
+    "npc": "Arquivista Lineia, guardiã das etiquetas",
+    "narrativa": "Uma ventania arrancou as etiquetas dos galhos da Grande Árvore da Vida. Agora macaxeira, aipim e mandioca brigam como se fossem plantas diferentes, uma mula reivindica um ramo só seu e criaturas sem núcleo disputam o mesmo galho sem perceber que vêm de linhagens distintas. A Arquivista Lineia precisa de alguém que devolva a cada ser o nome e o lugar certos.",
+    "objetivo": "Reescrever corretamente os nomes científicos, reconstruir a escada das categorias taxonômicas, separar os procariontes nos domínios Bacteria e Archaea e usar uma chave dicotômica para identificar os habitantes do Galho do Pantanal.",
+    "mecanica": "identificacao",
+    "etapas": [
+      "Oficina das Etiquetas: corrigir binômios escritos com maiúsculas, minúsculas e itálicos errados",
+      "Escada das Categorias: subir do galho da espécie ao tronco do domínio na ordem correta",
+      "Estábulo dos Híbridos: explicar à mula por que ela não forma uma linhagem própria",
+      "Raízes Antigas: separar os procariontes entre os ramos Bacteria e Archaea usando pistas do RNA ribossômico",
+      "Galho do Pantanal: percorrer a chave dicotômica e identificar seis animais"
+    ],
+    "recompensa_xp": 150,
+    "item_recompensa": "Pena de Lineu"
+  }
+}

@@ -1,0 +1,471 @@
+{
+  "topico": "biomas-brasileiros",
+  "versao": 1,
+  "questoes": [
+    {
+      "id": "biomas-brasileiros-q01",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Qual bioma é exclusivamente brasileiro, tem clima semiárido com chuvas escassas e irregulares e vegetação que perde as folhas na estação seca?",
+      "alternativas": [
+        "Pampa",
+        "Pantanal",
+        "Caatinga",
+        "Cerrado",
+        "Mata Atlântica"
+      ],
+      "correta": 2,
+      "explicacao": "A Caatinga ocupa o semiárido do Nordeste e do norte de Minas Gerais, só existe no Brasil e tem vegetação xerófila caducifólia. O Pampa e o Pantanal se estendem a países vizinhos; o Cerrado tem estação chuvosa bem definida e não é semiárido; a Mata Atlântica é úmida.",
+      "habilidade": "Reconhecer um bioma brasileiro a partir de clima e vegetação.",
+      "tags": [
+        "Caatinga",
+        "semiárido"
+      ]
+    },
+    {
+      "id": "biomas-brasileiros-q02",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "No manguezal, algumas árvores apresentam pneumatóforos, raízes que crescem para cima e emergem do lodo. A principal função dessas estruturas é:",
+      "alternativas": [
+        "facilitar as trocas gasosas em um solo encharcado e pobre em oxigênio",
+        "armazenar água doce para os períodos de maré alta",
+        "eliminar o excesso de sal absorvido pela planta",
+        "dispersar as sementes pela água do mar",
+        "fixar nitrogênio atmosférico em associação com bactérias"
+      ],
+      "correta": 0,
+      "explicacao": "O lodo do mangue é encharcado e quase sem oxigênio; os pneumatóforos, como os do mangue-preto, emergem e permitem a aeração das raízes. A eliminação de sal é feita por glândulas nas folhas, a dispersão ocorre por propágulos e a fixação de nitrogênio não é a função dessas raízes.",
+      "habilidade": "Relacionar adaptações vegetais às condições do manguezal.",
+      "tags": [
+        "manguezal",
+        "pneumatóforos",
+        "adaptações"
+      ]
+    },
+    {
+      "id": "biomas-brasileiros-q03",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Para que uma região seja considerada um hotspot de biodiversidade, ela precisa reunir:",
+      "alternativas": [
+        "grande área territorial e baixa densidade populacional",
+        "clima tropical e solo fértil",
+        "muitas espécies, mesmo que todas existam também em outras regiões",
+        "presença de unidades de conservação e de povos indígenas",
+        "alta concentração de espécies endêmicas e grande perda da vegetação original"
+      ],
+      "correta": 4,
+      "explicacao": "O conceito de hotspot combina dois critérios: muitas espécies endêmicas (sobretudo plantas) e alto grau de ameaça, medido pela perda da vegetação original. Por isso Mata Atlântica e Cerrado são hotspots e a Amazônia, que preserva a maior parte da cobertura, não é. Tamanho, clima, solo ou riqueza sem endemismo não definem um hotspot.",
+      "habilidade": "Aplicar os critérios que definem um hotspot.",
+      "tags": [
+        "hotspot",
+        "endemismo",
+        "conservação"
+      ]
+    },
+    {
+      "id": "biomas-brasileiros-q04",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Árvores do Cerrado costumam ter troncos tortuosos, casca grossa e folhas duras e coriáceas, mas suas raízes profundas alcançam água mesmo na seca. O aspecto “seco” dessas plantas é explicado principalmente:",
+      "alternativas": [
+        "pela ausência de chuvas durante todo o ano",
+        "pela pobreza do solo, ácido e rico em alumínio, associada à ocorrência de fogo",
+        "pela salinidade elevada do solo, semelhante à do manguezal",
+        "pelo frio intenso e pelas geadas do inverno",
+        "pela competição com as gramíneas por luz"
+      ],
+      "correta": 1,
+      "explicacao": "É o escleromorfismo oligotrófico: o solo ácido, pobre em nutrientes e com alumínio tóxico, somado ao fogo, explica a tortuosidade e as folhas coriáceas, e a casca suberosa protege contra as queimadas. O Cerrado tem verão chuvoso, não é salino nem tem geadas típicas, e a forma das árvores não resulta da disputa por luz com o capim.",
+      "habilidade": "Explicar adaptações da vegetação do Cerrado.",
+      "tags": [
+        "Cerrado",
+        "escleromorfismo",
+        "solo"
+      ]
+    },
+    {
+      "id": "biomas-brasileiros-q05",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Áreas da Amazônia desmatadas e queimadas para plantio costumam produzir bem por poucos anos e depois perdem a fertilidade. Isso ocorre porque:",
+      "alternativas": [
+        "as chuvas da região são escassas e não irrigam as plantações",
+        "o solo amazônico é rico em alumínio, que só se torna tóxico depois do desmatamento",
+        "as cinzas da queimada tornam o solo permanentemente salino",
+        "a maior parte dos nutrientes está na biomassa e na serrapilheira, e não no solo, que é pobre",
+        "a temperatura cai muito após a retirada da floresta"
+      ],
+      "correta": 3,
+      "explicacao": "Na floresta, os nutrientes circulam rápido entre a serrapilheira e as raízes. Desmatado, o solo é fertilizado pelas cinzas por pouco tempo, e as chuvas lavam o restante. A região é muito chuvosa, as cinzas não salinizam o solo e a temperatura não cai.",
+      "habilidade": "Relacionar ciclagem de nutrientes à fertilidade do solo amazônico.",
+      "tags": [
+        "Amazônia",
+        "solo",
+        "ciclagem de nutrientes"
+      ]
+    },
+    {
+      "id": "biomas-brasileiros-q06",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "No Pantanal, a alternância anual entre cheia e seca, chamada de pulso de inundação, é importante porque:",
+      "alternativas": [
+        "impede a presença de vegetação de Cerrado na planície",
+        "mantém o solo permanentemente seco, favorecendo os grandes herbívoros",
+        "renova os nutrientes e regula a reprodução e a alimentação de peixes e aves",
+        "transforma a água doce em salobra, como nos estuários",
+        "elimina a fauna aquática a cada estação seca"
+      ],
+      "correta": 2,
+      "explicacao": "As cheias espalham sedimentos e nutrientes pela planície, e o recuo das águas concentra peixes em lagoas, alimentando aves e jacarés; o ciclo organiza a vida do bioma. O Pantanal tem trechos de Cerrado, o solo não fica sempre seco, a água continua doce e a fauna aquática persiste nas lagoas e rios.",
+      "habilidade": "Explicar o papel do pulso de inundação no Pantanal.",
+      "tags": [
+        "Pantanal",
+        "pulso de inundação"
+      ]
+    },
+    {
+      "id": "biomas-brasileiros-q07",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Texto-base: Uma árvore grande da Amazônia pode transpirar centenas de litros de água por dia. Somada em toda a floresta, essa umidade forma massas de vapor que os ventos levam para o interior do continente e que, desviadas pelos Andes, seguem rumo ao Centro-Oeste, ao Sudeste e ao Sul do Brasil. Com base no texto, uma consequência provável do desmatamento em larga escala da Amazônia é:",
+      "alternativas": [
+        "a redução das chuvas em regiões agrícolas e urbanas distantes da floresta",
+        "o aumento da umidade no Sudeste, pela maior evaporação do solo exposto",
+        "o fortalecimento dos rios voadores, já que pastagens transpiram mais do que florestas",
+        "a transformação imediata da Amazônia em Caatinga, por ser um bioma vizinho",
+        "nenhum efeito climático fora da Amazônia, pois a chuva é sempre local"
+      ],
+      "correta": 0,
+      "explicacao": "Os rios voadores dependem da transpiração da floresta; com menos árvores, menos vapor chega ao Centro-Sul, o que pode reduzir as chuvas de lavouras, reservatórios e cidades. Pastagens transpiram menos que a floresta, não há conversão imediata em Caatinga e o texto mostra que a umidade viaja para longe.",
+      "habilidade": "Avaliar impactos do desmatamento sobre o ciclo da água em escala continental.",
+      "tags": [
+        "Amazônia",
+        "rios voadores",
+        "ciclo da água",
+        "desmatamento"
+      ]
+    },
+    {
+      "id": "biomas-brasileiros-q08",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Texto-base: Em um estuário do litoral nordestino, uma grande área de manguezal foi cortada e aterrada para a instalação de tanques de criação de camarão. Alguns anos depois, pescadores artesanais da região relataram queda acentuada na captura de peixes e de caranguejo-uçá, inclusive em pontos de pesca no mar aberto, longe dos tanques. A explicação ecológica mais adequada para o relato é que:",
+      "alternativas": [
+        "os camarões criados nos tanques passaram a predar os peixes do mar aberto",
+        "a retirada do mangue aumentou a salinidade de todo o oceano próximo",
+        "o caranguejo-uçá migrou para os tanques, onde encontrou mais alimento",
+        "os pescadores passaram a pescar menos por falta de interesse comercial",
+        "o manguezal funciona como berçário: muitas espécies marinhas passam ali a fase jovem, e sua destruição reduz as populações adultas no mar"
+      ],
+      "correta": 4,
+      "explicacao": "O manguezal abriga e alimenta jovens de muitos peixes e crustáceos, que depois povoam o mar; sem o berçário, a reposição das populações cai. Camarões em tanque não predam peixes no mar, a salinidade oceânica não muda, o caranguejo depende do lodo do mangue e o relato é de captura menor, não de desinteresse.",
+      "habilidade": "Analisar o papel ecológico dos manguezais e as consequências de sua destruição.",
+      "tags": [
+        "manguezal",
+        "berçário",
+        "pesca",
+        "impactos ambientais"
+      ]
+    },
+    {
+      "id": "biomas-brasileiros-q09",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Texto-base: No sudoeste do Rio Grande do Sul, manchas de areia exposta vêm crescendo em áreas de solos arenosos e frágeis, onde chove bem ao longo do ano. O processo é intensificado pelo pisoteio excessivo do gado e por lavouras que deixam o solo descoberto, expondo-o à ação da água e do vento. Alguns textos jornalísticos chamam essas áreas de “desertos gaúchos”. Sobre o fenômeno, é correto afirmar que:",
+      "alternativas": [
+        "é desertificação típica, porque ocorre em clima semiárido como o da Caatinga",
+        "resulta exclusivamente de causas naturais, sem relação com o uso do solo",
+        "indica que o Pampa é uma floresta degradada que está voltando a ser campo",
+        "trata-se de arenização, distinta da desertificação, pois ocorre em clima úmido, embora também seja agravada pelo manejo inadequado",
+        "prova que o Pampa tem clima equatorial, com chuvas concentradas"
+      ],
+      "correta": 3,
+      "explicacao": "Desertificação ocorre em climas áridos, semiáridos e subúmidos secos, como em núcleos da Caatinga. No Pampa, com chuvas bem distribuídas, o processo é a arenização, de base natural (solos arenosos) e agravado pelo uso humano. O Pampa é campo natural, não floresta degradada, e seu clima é subtropical.",
+      "habilidade": "Diferenciar processos de degradação do solo em biomas distintos.",
+      "tags": [
+        "Pampa",
+        "arenização",
+        "desertificação",
+        "solo"
+      ]
+    },
+    {
+      "id": "biomas-brasileiros-q10",
+      "nivel": "diamante",
+      "tipo": "multipla_escolha",
+      "enunciado": "Um estudante comparou duas árvores na estação seca. A árvore A, do Cerrado, mantinha as folhas, tinha raízes que ultrapassavam 10 metros de profundidade, casca espessa e suberosa e folhas duras e coriáceas, e seus estômatos permaneciam abertos durante boa parte do dia. A árvore B, da Caatinga, de raízes mais superficiais, estava sem folhas, mas rebrotou poucos dias depois das primeiras chuvas. Assinale a interpretação que integra corretamente fisiologia vegetal, solo e condições ambientais.",
+      "alternativas": [
+        "As duas árvores sofrem a mesma falta de água; A só mantém as folhas porque sua cutícula impede totalmente a transpiração",
+        "A alcança água profunda e transpira na seca, e seu aspecto xeromórfico se deve sobretudo ao solo pobre e ácido e ao fogo, suportado graças à casca suberosa; B, sem água no solo seco, perde as folhas e reduz a transpiração até as chuvas",
+        "B perde as folhas porque o solo da Caatinga é rico em alumínio tóxico, enquanto A mantém as folhas porque o solo do Cerrado é fértil",
+        "A casca suberosa de A serve para armazenar água, como o caule das cactáceas, e por isso A não precisa de raízes profundas",
+        "A queda das folhas de B aumenta sua taxa de fotossíntese durante a seca, o que explica a rebrota rápida após a chuva"
+      ],
+      "correta": 1,
+      "explicacao": "Com água profunda, A transpira na seca; seu aspecto xeromórfico vem do escleromorfismo oligotrófico (solo ácido, pobre, com alumínio) e do fogo, contra o qual a casca suberosa isola o câmbio. Em B, a água do solo se esgota, e a caducifolia reduz a transpiração até as chuvas. A cutícula não bloqueia toda a transpiração; o solo pobre com alumínio é do Cerrado; a cortiça protege, mas não armazena água; e sem folhas a fotossíntese de B cai.",
+      "habilidade": "Integrar fisiologia vegetal, características do solo e clima na comparação de biomas.",
+      "tags": [
+        "Cerrado",
+        "Caatinga",
+        "transpiração",
+        "integração"
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "biomas-brasileiros-f01",
+      "frente": "O que é um bioma?",
+      "verso": "Conjunto de ecossistemas com vegetação de aspecto semelhante, condicionado sobretudo por clima e solo, com fauna e flora características."
+    },
+    {
+      "id": "biomas-brasileiros-f02",
+      "frente": "Quais são os seis biomas terrestres brasileiros?",
+      "verso": "Amazônia, Cerrado, Mata Atlântica, Caatinga, Pampa e Pantanal. Há ainda o Sistema Costeiro-Marinho."
+    },
+    {
+      "id": "biomas-brasileiros-f03",
+      "frente": "Mata de várzea × mata de igapó",
+      "verso": "Várzea: alaga periodicamente com água barrenta, rica em sedimentos. Igapó: fica alagada boa parte do ano com água escura."
+    },
+    {
+      "id": "biomas-brasileiros-f04",
+      "frente": "Por que o solo amazônico perde a fertilidade após o desmatamento?",
+      "verso": "É pobre: os nutrientes estão na biomassa e na serrapilheira. Sem a floresta, as chuvas lavam o pouco que resta."
+    },
+    {
+      "id": "biomas-brasileiros-f05",
+      "frente": "O que são os rios voadores?",
+      "verso": "Massas de vapor vindas em grande parte da transpiração da Amazônia, levadas pelos ventos e que contribuem para as chuvas do Centro-Sul."
+    },
+    {
+      "id": "biomas-brasileiros-f06",
+      "frente": "O que causa as chuvas frequentes na Serra do Mar?",
+      "verso": "O ar úmido vindo do oceano sobe as encostas, resfria e condensa: são chuvas orográficas."
+    },
+    {
+      "id": "biomas-brasileiros-f07",
+      "frente": "O que é escleromorfismo oligotrófico?",
+      "verso": "Aspecto de folhas duras e troncos tortuosos das plantas do Cerrado, ligado ao solo ácido, pobre em nutrientes e rico em alumínio."
+    },
+    {
+      "id": "biomas-brasileiros-f08",
+      "frente": "Por que o Cerrado é chamado de “berço das águas”?",
+      "verso": "Porque nele nascem rios de grandes bacias, como as do São Francisco, do Tocantins-Araguaia e do Paraná."
+    },
+    {
+      "id": "biomas-brasileiros-f09",
+      "frente": "Três adaptações das plantas da Caatinga à seca",
+      "verso": "Caducifolia (perder folhas), folhas transformadas em espinhos com caule suculento (cactáceas) e órgãos subterrâneos de reserva (umbuzeiro)."
+    },
+    {
+      "id": "biomas-brasileiros-f10",
+      "frente": "O que é o pulso de inundação do Pantanal?",
+      "verso": "A alternância anual entre cheia e seca, que renova nutrientes e regula a reprodução e a alimentação da fauna."
+    },
+    {
+      "id": "biomas-brasileiros-f11",
+      "frente": "Arenização × desertificação",
+      "verso": "Arenização: manchas de areia em clima úmido, como no Pampa. Desertificação: degradação do solo em climas áridos, semiáridos e subúmidos secos."
+    },
+    {
+      "id": "biomas-brasileiros-f12",
+      "frente": "Rizóforos × pneumatóforos",
+      "verso": "Rizóforos: raízes-escora que sustentam a planta no lodo (mangue-vermelho). Pneumatóforos: raízes que emergem do lodo para a aeração (mangue-preto)."
+    },
+    {
+      "id": "biomas-brasileiros-f13",
+      "frente": "Por que o manguezal é chamado de berçário?",
+      "verso": "Porque muitos peixes e crustáceos marinhos passam ali a fase jovem, protegidos e com alimento abundante."
+    },
+    {
+      "id": "biomas-brasileiros-f14",
+      "frente": "O que é uma espécie endêmica?",
+      "verso": "Uma espécie que ocorre naturalmente apenas em uma determinada região, como o mico-leão-dourado na Mata Atlântica."
+    },
+    {
+      "id": "biomas-brasileiros-f15",
+      "frente": "Quais biomas brasileiros são hotspots e por quê?",
+      "verso": "Mata Atlântica e Cerrado: têm muitas espécies endêmicas e já perderam grande parte da vegetação original."
+    }
+  ],
+  "minijogos": {
+    "pares": [
+      {
+        "a": "Amazônia",
+        "b": "Várzea, igapó e rios voadores"
+      },
+      {
+        "a": "Mata Atlântica",
+        "b": "Bioma mais devastado, rico em epífitas"
+      },
+      {
+        "a": "Cerrado",
+        "b": "Savana de árvores tortuosas e berço das águas"
+      },
+      {
+        "a": "Caatinga",
+        "b": "Semiárido exclusivamente brasileiro"
+      },
+      {
+        "a": "Pantanal",
+        "b": "Planície alagável regida pelo pulso de inundação"
+      },
+      {
+        "a": "Pampa",
+        "b": "Campos subtropicais do Rio Grande do Sul"
+      },
+      {
+        "a": "Manguezal",
+        "b": "Estuário com rizóforos e pneumatóforos"
+      },
+      {
+        "a": "Restinga",
+        "b": "Vegetação sobre planícies arenosas do litoral"
+      }
+    ],
+    "sequencia": {
+      "instrucao": "Ordene as fisionomias do Cerrado da mais aberta (só gramíneas) para a mais fechada (formação quase florestal).",
+      "itens": [
+        "Campo limpo",
+        "Campo sujo",
+        "Cerrado típico",
+        "Cerradão"
+      ]
+    },
+    "classificacao": {
+      "instrucao": "Arraste cada espécie ou característica para o bioma ao qual ela está mais associada.",
+      "categorias": [
+        "Amazônia",
+        "Mata Atlântica",
+        "Cerrado",
+        "Caatinga",
+        "Pantanal",
+        "Pampa"
+      ],
+      "itens": [
+        {
+          "texto": "Boto-cor-de-rosa",
+          "categoria": "Amazônia"
+        },
+        {
+          "texto": "Mata de igapó",
+          "categoria": "Amazônia"
+        },
+        {
+          "texto": "Mico-leão-dourado",
+          "categoria": "Mata Atlântica"
+        },
+        {
+          "texto": "Chuvas orográficas na Serra do Mar",
+          "categoria": "Mata Atlântica"
+        },
+        {
+          "texto": "Lobo-guará",
+          "categoria": "Cerrado"
+        },
+        {
+          "texto": "Veredas de buriti",
+          "categoria": "Cerrado"
+        },
+        {
+          "texto": "Mandacaru",
+          "categoria": "Caatinga"
+        },
+        {
+          "texto": "Rios intermitentes",
+          "categoria": "Caatinga"
+        },
+        {
+          "texto": "Tuiuiú",
+          "categoria": "Pantanal"
+        },
+        {
+          "texto": "Pulso de inundação",
+          "categoria": "Pantanal"
+        },
+        {
+          "texto": "Graxaim-do-campo",
+          "categoria": "Pampa"
+        },
+        {
+          "texto": "Arenização",
+          "categoria": "Pampa"
+        }
+      ]
+    },
+    "verdadeiro_falso": [
+      {
+        "afirmacao": "O solo da maior parte da Amazônia é muito fértil.",
+        "valor": false,
+        "explicacao": "Ele é pobre; a fertilidade está na biomassa e na ciclagem rápida da serrapilheira."
+      },
+      {
+        "afirmacao": "A Caatinga é um bioma exclusivamente brasileiro.",
+        "valor": true,
+        "explicacao": "Ocorre só no semiárido do Nordeste e do norte de Minas."
+      },
+      {
+        "afirmacao": "As árvores do Cerrado são tortas principalmente por falta de água no subsolo.",
+        "valor": false,
+        "explicacao": "As raízes profundas alcançam água; a tortuosidade se liga ao solo pobre com alumínio e ao fogo."
+      },
+      {
+        "afirmacao": "O fogo natural faz parte da dinâmica do Cerrado.",
+        "valor": true,
+        "explicacao": "Queimadas por raios são naturais; o problema são as humanas, em excesso e fora de época."
+      },
+      {
+        "afirmacao": "A Amazônia é classificada como hotspot de biodiversidade.",
+        "valor": false,
+        "explicacao": "Ela mantém a maior parte da cobertura original; os hotspots brasileiros são Mata Atlântica e Cerrado."
+      },
+      {
+        "afirmacao": "No manguezal, a água é salobra e o solo é lodoso e pobre em oxigênio.",
+        "valor": true,
+        "explicacao": "É o encontro do rio com o mar, com sedimentos finos encharcados."
+      },
+      {
+        "afirmacao": "O Pampa é uma floresta degradada que virou campo.",
+        "valor": false,
+        "explicacao": "Os campos do Pampa são uma comunidade natural adaptada ao clima e ao solo da região."
+      },
+      {
+        "afirmacao": "A viviparidade das árvores de mangue permite que o propágulo caia já desenvolvido e se fixe no lodo.",
+        "valor": true,
+        "explicacao": "O embrião começa a crescer ainda preso à planta-mãe."
+      },
+      {
+        "afirmacao": "O juazeiro é uma árvore da Caatinga que mantém as folhas na seca graças a raízes profundas.",
+        "valor": true,
+        "explicacao": "É exceção à caducifolia do bioma."
+      },
+      {
+        "afirmacao": "Arenização e desertificação são sinônimos.",
+        "valor": false,
+        "explicacao": "A arenização ocorre em clima úmido, como no Pampa; a desertificação, em climas secos."
+      }
+    ]
+  },
+  "missao_mundo_aberto": {
+    "titulo": "A Rota dos Seis Biomas",
+    "regiao": "Continente dos Biomas",
+    "npc": "Guia Buriti, mateira que conhece todas as trilhas do continente",
+    "narrativa": "Queimadas e aterros apagaram as placas que ligam as regiões do Continente dos Biomas, e as rotas entre elas foram fechadas. A Guia Buriti precisa de alguém que reconheça os biomas pelas pistas do clima, do solo, das plantas e dos animais e saiba devolver a cada um o que ele precisa para voltar a funcionar.",
+    "objetivo": "Identificar os seis biomas terrestres e a zona costeira pelas pistas encontradas no caminho e restaurar um processo ecológico essencial em cada um, liberando a rota seguinte.",
+    "mecanica": "exploracao",
+    "etapas": [
+      "Amazônia: replantar árvores na borda desmatada para reativar os rios voadores e fazer chover no planalto",
+      "Mata Atlântica: ligar dois fragmentos isolados para que o mico-leão-dourado volte a circular",
+      "Cerrado: diferenciar o fogo natural das queimadas criminosas e proteger as nascentes das veredas",
+      "Caatinga: escolher plantas com caducifolia, espinhos e órgãos de reserva para conter um núcleo de desertificação",
+      "Pantanal e Pampa: restaurar o pulso de inundação e cobrir com campo nativo as manchas de arenização",
+      "Litoral: remover o aterro do manguezal e devolver o berçário aos caranguejos e peixes jovens"
+    ],
+    "recompensa_xp": 150,
+    "item_recompensa": "Mapa Vivo dos Biomas"
+  }
+}

@@ -1,0 +1,458 @@
+{
+  "topico": "engenharia-genetica-ferramentas",
+  "versao": 1,
+  "questoes": [
+    {
+      "id": "engenharia-genetica-ferramentas-q01",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Na tecnologia do DNA recombinante, a enzima responsável por cortar a molécula de DNA em sequências específicas de bases é a:",
+      "alternativas": [
+        "DNA ligase",
+        "enzima de restrição",
+        "RNA polimerase",
+        "transcriptase reversa",
+        "helicase"
+      ],
+      "correta": 1,
+      "explicacao": "As enzimas de restrição reconhecem sítios específicos (muitas vezes palindrômicos) e cortam o DNA ali. A DNA ligase faz o oposto, une fragmentos; a transcriptase reversa produz DNA a partir de RNA; a RNA polimerase transcreve; a helicase apenas abre a dupla-hélice.",
+      "habilidade": "Identificar a função das ferramentas enzimáticas da engenharia genética.",
+      "tags": [
+        "enzimas de restrição",
+        "DNA recombinante"
+      ]
+    },
+    {
+      "id": "engenharia-genetica-ferramentas-q02",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Os plasmídeos, muito usados como vetores de clonagem, são:",
+      "alternativas": [
+        "proteínas bacterianas que transportam genes através da membrana",
+        "moléculas de RNA circular presentes no núcleo de leveduras",
+        "o cromossomo principal das bactérias, de forma linear",
+        "pequenas moléculas de DNA circular extracromossômico, com replicação independente",
+        "organelas membranosas exclusivas de células vegetais"
+      ],
+      "correta": 3,
+      "explicacao": "Plasmídeos são DNA circular separado do cromossomo bacteriano, capazes de se replicar sozinhos. Não são proteínas nem RNA, não são o cromossomo principal (que, nas bactérias, também é circular) e não são organelas.",
+      "habilidade": "Reconhecer as características dos vetores de clonagem.",
+      "tags": [
+        "plasmídeo",
+        "vetor"
+      ]
+    },
+    {
+      "id": "engenharia-genetica-ferramentas-q03",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Depois que um gene é encaixado nas extremidades coesivas de um plasmídeo aberto, uma enzima sela definitivamente a união formando ligações fosfodiéster. Essa enzima é a:",
+      "alternativas": [
+        "DNA ligase",
+        "enzima de restrição EcoRI",
+        "DNA polimerase",
+        "amilase",
+        "transcriptase reversa"
+      ],
+      "correta": 0,
+      "explicacao": "A DNA ligase forma ligações fosfodiéster entre nucleotídeos vizinhos, fechando o esqueleto açúcar-fosfato. A EcoRI corta; a DNA polimerase sintetiza fitas novas a partir de um molde; a transcriptase reversa copia RNA em DNA; a amilase digere amido.",
+      "habilidade": "Identificar a função das ferramentas enzimáticas da engenharia genética.",
+      "tags": [
+        "DNA ligase",
+        "ligação fosfodiéster"
+      ]
+    },
+    {
+      "id": "engenharia-genetica-ferramentas-q04",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Para inserir um gene humano em um plasmídeo, um técnico precisa que as extremidades dos dois fragmentos sejam complementares. Para isso, ele deve:",
+      "alternativas": [
+        "cortar o gene com uma enzima de restrição e o plasmídeo com DNA ligase",
+        "usar enzimas de restrição diferentes, para que as pontas fiquem distintas",
+        "aquecer o plasmídeo até separar suas fitas, sem cortá-lo",
+        "tratar o gene com transcriptase reversa e o plasmídeo com RNA polimerase",
+        "cortar o gene e o plasmídeo com a mesma enzima de restrição"
+      ],
+      "correta": 4,
+      "explicacao": "A mesma enzima reconhece o mesmo sítio e gera extremidades coesivas complementares nos dois DNAs, que então pareiam e são seladas pela ligase. Enzimas diferentes geralmente produzem pontas incompatíveis; a ligase não corta; separar as fitas não abre o plasmídeo para receber o gene.",
+      "habilidade": "Aplicar a lógica das extremidades coesivas na construção de DNA recombinante.",
+      "tags": [
+        "extremidades coesivas",
+        "enzimas de restrição"
+      ]
+    },
+    {
+      "id": "engenharia-genetica-ferramentas-q05",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Em um experimento, bactérias sensíveis ao antibiótico ampicilina foram misturadas a plasmídeos recombinantes que continham um gene de resistência à ampicilina. Depois, foram semeadas em meio de cultura com ampicilina. O crescimento de colônias nesse meio indica que:",
+      "alternativas": [
+        "todas as bactérias passaram a produzir a proteína humana de interesse",
+        "a ampicilina induziu mutações que criaram o plasmídeo",
+        "essas bactérias absorveram o plasmídeo, isto é, foram transformadas",
+        "as bactérias perderam seu cromossomo e passaram a viver só com o plasmídeo",
+        "as colônias são formadas por bactérias que não receberam nenhum plasmídeo"
+      ],
+      "correta": 2,
+      "explicacao": "O gene de resistência funciona como marcador: como as bactérias eram sensíveis, só sobrevivem e formam colônias as que receberam o plasmídeo, ou seja, as transformadas. Por isso, as colônias não podem ser de bactérias sem plasmídeo. O crescimento mostra apenas a presença do plasmídeo; não garante, por si só, que a proteína de interesse esteja sendo produzida, o antibiótico não cria plasmídeos e as bactérias mantêm seu cromossomo.",
+      "habilidade": "Interpretar a seleção de bactérias transformadas por genes marcadores.",
+      "tags": [
+        "transformação",
+        "gene marcador",
+        "seleção"
+      ]
+    },
+    {
+      "id": "engenharia-genetica-ferramentas-q06",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "A enzima de restrição EcoRI reconhece a sequência 5'-GAATTC-3'. Um fragmento LINEAR de DNA apresenta essa sequência em três pontos diferentes. Após a digestão completa com EcoRI, serão obtidos:",
+      "alternativas": [
+        "3 fragmentos",
+        "4 fragmentos",
+        "2 fragmentos",
+        "6 fragmentos",
+        "nenhum fragmento, pois a EcoRI só corta DNA circular"
+      ],
+      "correta": 1,
+      "explicacao": "Em DNA linear, n cortes geram n + 1 fragmentos; com 3 sítios, são 4 fragmentos. Em DNA circular, 3 cortes gerariam 3 fragmentos, o que torna a primeira alternativa tentadora. A EcoRI corta DNA linear ou circular.",
+      "habilidade": "Calcular o número de fragmentos gerados por enzimas de restrição.",
+      "tags": [
+        "EcoRI",
+        "sítio de restrição",
+        "cálculo"
+      ]
+    },
+    {
+      "id": "engenharia-genetica-ferramentas-q07",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Até a década de 1980, a insulina usada no tratamento do diabetes era extraída do pâncreas de bois e porcos. Atualmente, ela é produzida por microrganismos geneticamente modificados. Em uma estratégia clássica, os pesquisadores não inserem nas bactérias o gene da insulina copiado diretamente do cromossomo humano; eles usam o RNA mensageiro maduro da insulina e, a partir dele, obtêm um DNA complementar (cDNA). Essa estratégia é necessária porque:",
+      "alternativas": [
+        "o RNA mensageiro é mais estável que o DNA dentro das bactérias",
+        "o código genético das bactérias é diferente do código genético humano",
+        "o gene humano é grande demais para qualquer plasmídeo",
+        "as bactérias não possuem ribossomos capazes de traduzir genes humanos",
+        "o gene humano contém íntrons, e as bactérias não têm a maquinaria de splicing para removê-los"
+      ],
+      "correta": 4,
+      "explicacao": "Genes eucarióticos têm íntrons, removidos no splicing do RNA dentro do núcleo. Bactérias não fazem esse processamento. O cDNA, obtido do RNAm maduro pela transcriptase reversa, contém só éxons. O código genético é praticamente universal e os ribossomos bacterianos traduzem RNAm humano sem problema; o critério não é a estabilidade do RNA nem o tamanho do gene.",
+      "habilidade": "Justificar etapas da produção de proteínas recombinantes com base na expressão gênica.",
+      "tags": [
+        "insulina",
+        "cDNA",
+        "íntrons",
+        "splicing"
+      ]
+    },
+    {
+      "id": "engenharia-genetica-ferramentas-q08",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "As enzimas de restrição foram descobertas em bactérias, onde degradam o DNA de bacteriófagos que tentam infectá-las. Curiosamente, essas mesmas enzimas não destroem o DNA da própria bactéria, mesmo quando ele contém as sequências reconhecidas. Isso ocorre porque:",
+      "alternativas": [
+        "a bactéria marca (metila) os sítios do próprio DNA, impedindo o reconhecimento e o corte pela enzima",
+        "o DNA bacteriano não possui as bases adenina e timina",
+        "as enzimas de restrição só funcionam fora da célula",
+        "o DNA bacteriano é de fita simples, e as enzimas só cortam fita dupla",
+        "as enzimas de restrição atuam apenas sobre RNA viral"
+      ],
+      "correta": 0,
+      "explicacao": "As bactérias têm enzimas que adicionam grupos metil aos próprios sítios de restrição, protegendo-os. O DNA bacteriano tem as quatro bases e é de fita dupla; as enzimas atuam dentro da célula e cortam DNA, não RNA.",
+      "habilidade": "Relacionar a função natural das enzimas de restrição ao seu uso biotecnológico.",
+      "tags": [
+        "enzimas de restrição",
+        "bacteriófagos",
+        "metilação"
+      ]
+    },
+    {
+      "id": "engenharia-genetica-ferramentas-q09",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Todas as células nucleadas de uma pessoa têm, em essência, o mesmo DNA, mas um hepatócito e uma célula beta do pâncreas produzem proteínas bem diferentes. Um grupo de pesquisa quer comparar quais genes estão ativos nas células do fígado e nas células do pâncreas de um mesmo paciente e, para isso, vai construir bibliotecas de DNA. A escolha mais adequada é:",
+      "alternativas": [
+        "duas bibliotecas genômicas, uma de cada órgão, pois cada órgão tem um genoma diferente",
+        "uma biblioteca genômica de hemácias, que têm o genoma mais completo",
+        "duas bibliotecas de cDNA, feitas a partir do RNAm de cada órgão, pois refletem os genes expressos em cada tecido",
+        "duas bibliotecas de cDNA, feitas a partir do DNA cromossômico de cada órgão",
+        "uma biblioteca de proteínas, já que bibliotecas de DNA não diferenciam tecidos"
+      ],
+      "correta": 2,
+      "explicacao": "Todas as células nucleadas do indivíduo têm o mesmo genoma, então bibliotecas genômicas seriam iguais. O cDNA vem do RNAm e mostra os genes expressos em cada tecido. cDNA não é feito do DNA cromossômico, e hemácias maduras de mamíferos nem têm núcleo.",
+      "habilidade": "Diferenciar bibliotecas genômicas e de cDNA e escolher a adequada a um objetivo.",
+      "tags": [
+        "biblioteca de cDNA",
+        "expressão gênica",
+        "diferenciação celular"
+      ]
+    },
+    {
+      "id": "engenharia-genetica-ferramentas-q10",
+      "nivel": "diamante",
+      "tipo": "multipla_escolha",
+      "enunciado": "Um laboratório pretende produzir em bactérias uma proteína humana de 120 aminoácidos. A equipe inseriu em um plasmídeo o cDNA correspondente, ao lado de um promotor bacteriano, e confirmou que as bactérias transformadas transcrevem e traduzem esse gene. Ainda assim, a proteína obtida não tem atividade biológica. Em células humanas, essa proteína recebe cadeias de açúcar (glicosilação) no retículo endoplasmático e no complexo golgiense antes de se tornar funcional. Considerando essas informações, a hipótese mais coerente e a alternativa mais adequada são:",
+      "alternativas": [
+        "o cDNA ainda contém íntrons; a solução é usar o gene genômico completo",
+        "o código genético bacteriano lê os códons humanos de outra forma; a solução é trocar todos os códons do gene",
+        "a bactéria não reconheceu o promotor; a solução é retirar o promotor do plasmídeo",
+        "bactérias não possuem retículo endoplasmático nem complexo golgiense e não fazem essa modificação; a solução é expressar o gene em células eucarióticas, como leveduras ou células de mamíferos em cultura",
+        "a proteína foi digerida pela DNA ligase; a solução é cultivar as bactérias sem ligase"
+      ],
+      "correta": 3,
+      "explicacao": "O enunciado confirma transcrição e tradução, então o problema está depois da tradução: procariontes não têm sistema de endomembranas e não fazem a glicosilação típica dos eucariontes. Por isso, proteínas que exigem essas modificações são produzidas em leveduras ou células animais em cultura. O cDNA não tem íntrons, e o gene genômico pioraria o problema; o código é praticamente universal; o promotor funcionou, já que houve transcrição; a ligase atua sobre DNA, não sobre proteínas.",
+      "habilidade": "Integrar citologia, expressão gênica e biotecnologia para resolver um problema experimental.",
+      "tags": [
+        "proteína recombinante",
+        "glicosilação",
+        "procariontes x eucariontes",
+        "integração"
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "engenharia-genetica-ferramentas-f01",
+      "frente": "O que é DNA recombinante?",
+      "verso": "Uma molécula de DNA formada pela união de trechos de origens diferentes, como um gene humano inserido em um plasmídeo bacteriano."
+    },
+    {
+      "id": "engenharia-genetica-ferramentas-f02",
+      "frente": "Por que uma bactéria consegue produzir uma proteína humana?",
+      "verso": "Porque o código genético é praticamente universal: os mesmos códons especificam os mesmos aminoácidos."
+    },
+    {
+      "id": "engenharia-genetica-ferramentas-f03",
+      "frente": "Função das enzimas de restrição",
+      "verso": "Cortar o DNA em sequências específicas (sítios de restrição), muitas vezes palindrômicas."
+    },
+    {
+      "id": "engenharia-genetica-ferramentas-f04",
+      "frente": "Papel natural das enzimas de restrição nas bactérias",
+      "verso": "Defesa contra bacteriófagos: picotam o DNA viral. O DNA da própria bactéria é protegido por metilação."
+    },
+    {
+      "id": "engenharia-genetica-ferramentas-f05",
+      "frente": "O que são extremidades coesivas?",
+      "verso": "Pontas de fita simples complementares geradas por cortes deslocados nas duas fitas; pareiam com pontas cortadas pela mesma enzima."
+    },
+    {
+      "id": "engenharia-genetica-ferramentas-f06",
+      "frente": "Função da DNA ligase",
+      "verso": "Formar ligações fosfodiéster entre nucleotídeos, selando os fragmentos de DNA."
+    },
+    {
+      "id": "engenharia-genetica-ferramentas-f07",
+      "frente": "Três elementos de um plasmídeo usado como vetor",
+      "verso": "Origem de replicação, sítio de clonagem e gene marcador (por exemplo, de resistência a antibiótico)."
+    },
+    {
+      "id": "engenharia-genetica-ferramentas-f08",
+      "frente": "O que é transformação bacteriana?",
+      "verso": "A absorção de DNA do meio (como um plasmídeo) por uma bactéria."
+    },
+    {
+      "id": "engenharia-genetica-ferramentas-f09",
+      "frente": "Para que serve o gene de resistência a antibiótico no plasmídeo?",
+      "verso": "É um marcador: em meio com o antibiótico só crescem as bactérias que receberam o plasmídeo."
+    },
+    {
+      "id": "engenharia-genetica-ferramentas-f10",
+      "frente": "O que faz a transcriptase reversa?",
+      "verso": "Produz DNA a partir de um molde de RNA. Vem de retrovírus."
+    },
+    {
+      "id": "engenharia-genetica-ferramentas-f11",
+      "frente": "Por que se usa cDNA para produzir insulina em bactérias?",
+      "verso": "O cDNA vem do RNAm maduro e não tem íntrons; bactérias não fazem splicing."
+    },
+    {
+      "id": "engenharia-genetica-ferramentas-f12",
+      "frente": "Biblioteca genômica x biblioteca de cDNA",
+      "verso": "Genômica: todo o genoma, com íntrons e regiões não codificantes. cDNA: só os genes expressos em um tecido, sem íntrons."
+    },
+    {
+      "id": "engenharia-genetica-ferramentas-f13",
+      "frente": "Princípio do sequenciamento de Sanger",
+      "verso": "Didesoxinucleotídeos (sem o OH do carbono 3') interrompem a síntese; os fragmentos, separados por tamanho, revelam a sequência pela base final de cada um."
+    },
+    {
+      "id": "engenharia-genetica-ferramentas-f14",
+      "frente": "Fragmentos gerados por n cortes em DNA linear e em DNA circular",
+      "verso": "Linear: n + 1 fragmentos. Circular: n fragmentos."
+    },
+    {
+      "id": "engenharia-genetica-ferramentas-f15",
+      "frente": "Que genoma foi sequenciado por uma rede de laboratórios paulistas, marco da ciência brasileira?",
+      "verso": "O da bactéria Xylella fastidiosa, causadora do amarelinho (clorose variegada) dos citros."
+    }
+  ],
+  "minijogos": {
+    "pares": [
+      {
+        "a": "Enzima de restrição",
+        "b": "Corta o DNA em sequência específica"
+      },
+      {
+        "a": "DNA ligase",
+        "b": "Sela fragmentos com ligações fosfodiéster"
+      },
+      {
+        "a": "Plasmídeo",
+        "b": "DNA circular extracromossômico usado como vetor"
+      },
+      {
+        "a": "Transcriptase reversa",
+        "b": "Produz DNA a partir de RNA"
+      },
+      {
+        "a": "cDNA",
+        "b": "Cópia do gene sem íntrons"
+      },
+      {
+        "a": "Gene marcador",
+        "b": "Permite selecionar bactérias transformadas"
+      },
+      {
+        "a": "Transformação",
+        "b": "Entrada de DNA externo na bactéria"
+      },
+      {
+        "a": "Didesoxinucleotídeo",
+        "b": "Interrompe a síntese no método de Sanger"
+      }
+    ],
+    "sequencia": {
+      "instrucao": "Ordene as etapas da produção de insulina humana por bactérias.",
+      "itens": [
+        "Extrair o RNAm maduro da insulina de células do pâncreas",
+        "Produzir o cDNA com a transcriptase reversa",
+        "Cortar o cDNA e o plasmídeo com a mesma enzima de restrição",
+        "Unir o cDNA ao plasmídeo com a DNA ligase",
+        "Introduzir o plasmídeo recombinante nas bactérias (transformação)",
+        "Selecionar as bactérias transformadas em meio com antibiótico",
+        "Cultivar as bactérias em biorreatores, purificar a proteína e convertê-la em insulina ativa"
+      ]
+    },
+    "classificacao": {
+      "instrucao": "Classifique cada item de acordo com o tipo de ferramenta da engenharia genética.",
+      "categorias": [
+        "Corta DNA",
+        "Une ou copia DNA",
+        "Vetor (transporta o gene)"
+      ],
+      "itens": [
+        {
+          "texto": "EcoRI",
+          "categoria": "Corta DNA"
+        },
+        {
+          "texto": "Endonuclease de restrição",
+          "categoria": "Corta DNA"
+        },
+        {
+          "texto": "Enzima que gera extremidades coesivas",
+          "categoria": "Corta DNA"
+        },
+        {
+          "texto": "DNA ligase",
+          "categoria": "Une ou copia DNA"
+        },
+        {
+          "texto": "Transcriptase reversa",
+          "categoria": "Une ou copia DNA"
+        },
+        {
+          "texto": "DNA polimerase do sequenciamento",
+          "categoria": "Une ou copia DNA"
+        },
+        {
+          "texto": "Plasmídeo bacteriano",
+          "categoria": "Vetor (transporta o gene)"
+        },
+        {
+          "texto": "Bacteriófago modificado",
+          "categoria": "Vetor (transporta o gene)"
+        },
+        {
+          "texto": "Plasmídeo Ti de Agrobacterium",
+          "categoria": "Vetor (transporta o gene)"
+        },
+        {
+          "texto": "Cromossomo artificial de levedura",
+          "categoria": "Vetor (transporta o gene)"
+        }
+      ]
+    },
+    "verdadeiro_falso": [
+      {
+        "afirmacao": "Cada enzima de restrição reconhece uma sequência específica de bases.",
+        "valor": true,
+        "explicacao": "Esses locais são os sítios de restrição, muitas vezes palindrômicos."
+      },
+      {
+        "afirmacao": "A DNA ligase forma pontes de hidrogênio entre as duas fitas do DNA.",
+        "valor": false,
+        "explicacao": "A ligase forma ligações fosfodiéster no esqueleto de cada fita."
+      },
+      {
+        "afirmacao": "Plasmídeos são moléculas de DNA circular que se replicam independentemente do cromossomo bacteriano.",
+        "valor": true,
+        "explicacao": "Por isso servem de vetor: o gene inserido é copiado junto."
+      },
+      {
+        "afirmacao": "Para unir um gene a um plasmídeo, o ideal é cortá-los com enzimas de restrição diferentes.",
+        "valor": false,
+        "explicacao": "Com a mesma enzima as extremidades coesivas ficam complementares."
+      },
+      {
+        "afirmacao": "Bactérias removem íntrons de genes humanos normalmente.",
+        "valor": false,
+        "explicacao": "Bactérias não fazem splicing; por isso se usa cDNA."
+      },
+      {
+        "afirmacao": "A transcriptase reversa sintetiza DNA usando RNA como molde.",
+        "valor": true,
+        "explicacao": "É assim que se obtém o cDNA a partir do RNAm maduro."
+      },
+      {
+        "afirmacao": "Uma biblioteca de cDNA do fígado é igual a uma biblioteca de cDNA do pâncreas do mesmo indivíduo.",
+        "valor": false,
+        "explicacao": "Cada tecido expressa genes diferentes, e o cDNA reflete só os genes expressos."
+      },
+      {
+        "afirmacao": "A insulina humana recombinante tem a mesma sequência de aminoácidos da insulina produzida pelo pâncreas humano.",
+        "valor": true,
+        "explicacao": "Ela é codificada pelo gene humano, o que reduz reações imunológicas em relação à insulina animal."
+      },
+      {
+        "afirmacao": "No método de Sanger, os didesoxinucleotídeos interrompem a síntese da nova fita.",
+        "valor": true,
+        "explicacao": "Sem o grupo OH do carbono 3', nenhum nucleotídeo pode ser ligado depois deles."
+      },
+      {
+        "afirmacao": "O gene de resistência a antibiótico do plasmídeo é a proteína que se deseja produzir.",
+        "valor": false,
+        "explicacao": "Ele é apenas um marcador para selecionar as bactérias transformadas."
+      }
+    ]
+  },
+  "missao_mundo_aberto": {
+    "titulo": "A Fábrica de Insulina de Nova Hélice",
+    "regiao": "Nova Hélice, a Cidade-Laboratório",
+    "npc": "Doutora Ligia Ligase, chefe do Biorreator Central",
+    "narrativa": "Os estoques de insulina da cidade-plataforma estão acabando, e o último navio com pâncreas de animais naufragou na tempestade. A Doutora Ligia propõe uma solução: transformar bactérias em fábricas de insulina humana. Mas o laboratório foi bagunçado, as enzimas estão sem rótulo e as bactérias certas precisam ser encontradas antes que a maré suba.",
+    "objetivo": "Montar um plasmídeo recombinante com o cDNA da insulina, transformar bactérias, selecionar as colônias corretas e colocar o Biorreator Central em funcionamento.",
+    "mecanica": "construcao",
+    "etapas": [
+      "Recuperar o RNAm maduro da insulina no Arquivo do Pâncreas e convertê-lo em cDNA com a transcriptase reversa",
+      "Identificar, entre frascos sem rótulo, a enzima de restrição que gera extremidades compatíveis no gene e no plasmídeo",
+      "Unir o gene ao plasmídeo com a DNA ligase no Ateliê das Pontas Coesivas",
+      "Transformar as bactérias e semeá-las na placa com antibiótico, escolhendo apenas as colônias que cresceram",
+      "Ligar o Biorreator Central e entregar a insulina purificada ao Conselho de Bioética da cidade"
+    ],
+    "recompensa_xp": 150,
+    "item_recompensa": "Tesoura Palindrômica"
+  }
+}

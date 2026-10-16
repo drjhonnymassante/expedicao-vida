@@ -1,0 +1,464 @@
+{
+  "topico": "protozoarios",
+  "versao": 1,
+  "questoes": [
+    {
+      "id": "protozoarios-q01",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "O paramécio é um protozoário de água doce que nada rapidamente. Sua locomoção é feita por:",
+      "alternativas": [
+        "pseudópodes, expansões temporárias do citoplasma",
+        "um único flagelo longo na extremidade da célula",
+        "numerosos cílios curtos que batem de forma coordenada",
+        "um complexo apical que perfura o substrato",
+        "contrações de fibras musculares sob a membrana"
+      ],
+      "correta": 2,
+      "explicacao": "O paramécio é um ciliado: centenas de cílios curtos batem coordenadamente. Pseudópodes são das amebas, flagelos dos flagelados e o complexo apical dos apicomplexos, usado para invadir células. Protozoários não têm músculos.",
+      "habilidade": "Associar estruturas de locomoção aos grupos de protozoários.",
+      "tags": [
+        "locomoção",
+        "ciliados"
+      ]
+    },
+    {
+      "id": "protozoarios-q02",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Qual característica é compartilhada por todos os protozoários?",
+      "alternativas": [
+        "São eucariontes, com núcleo delimitado por carioteca",
+        "São procariontes, como as bactérias",
+        "Realizam fotossíntese em cloroplastos",
+        "Possuem parede celular de quitina",
+        "São pluricelulares e formam tecidos verdadeiros"
+      ],
+      "correta": 0,
+      "explicacao": "Protozoários são protistas eucariontes. São heterótrofos (a fotossíntese é das algas), não têm parede de quitina (típica dos fungos) e não formam tecidos.",
+      "habilidade": "Reconhecer as características gerais dos protozoários.",
+      "tags": [
+        "características gerais",
+        "protistas"
+      ]
+    },
+    {
+      "id": "protozoarios-q03",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Em protozoários de água doce, a principal função do vacúolo contrátil é:",
+      "alternativas": [
+        "digerir partículas de alimento capturadas por fagocitose",
+        "armazenar amido como reserva de energia",
+        "produzir os cílios usados na locomoção",
+        "realizar as trocas gasosas com o meio",
+        "eliminar o excesso de água que entra por osmose"
+      ],
+      "correta": 4,
+      "explicacao": "Em água doce o meio é hipotônico e a água entra por osmose; o vacúolo contrátil a expulsa, evitando a lise. A digestão ocorre nos vacúolos digestivos e as trocas gasosas, por difusão.",
+      "habilidade": "Identificar a função do vacúolo contrátil.",
+      "tags": [
+        "vacúolo contrátil",
+        "osmorregulação"
+      ]
+    },
+    {
+      "id": "protozoarios-q04",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Paramécios de uma lagoa foram transferidos para soluções salinas de concentração crescente, todas ainda hipotônicas em relação ao citoplasma. Com o aumento da concentração, a frequência de contração dos vacúolos contráteis deve:",
+      "alternativas": [
+        "aumentar, porque mais sal entra na célula e precisa ser expulso",
+        "diminuir, porque a diferença de concentração fica menor e entra menos água por osmose",
+        "permanecer igual, pois o vacúolo pulsa em ritmo fixo",
+        "aumentar, porque a célula passa a perder água para o meio",
+        "cair a zero já na primeira solução, pois qualquer sal paralisa o vacúolo"
+      ],
+      "correta": 1,
+      "explicacao": "A entrada de água por osmose depende da diferença de concentração entre citoplasma e meio. Com o meio mais concentrado (ainda hipotônico), entra menos água e o vacúolo pulsa menos. Ele elimina água, não sal, e só deixaria de ser necessário perto da isotonia.",
+      "habilidade": "Prever o efeito da concentração do meio sobre a osmorregulação.",
+      "tags": [
+        "vacúolo contrátil",
+        "osmose",
+        "experimento"
+      ]
+    },
+    {
+      "id": "protozoarios-q05",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Sobre a conjugação em paramécios, é correto afirmar que:",
+      "alternativas": [
+        "os paramécios trocam seus macronúcleos, que passam a controlar a nova célula",
+        "é um processo assexuado, pois não há formação de gametas típicos",
+        "dois paramécios se fundem definitivamente e originam um único indivíduo diploide",
+        "envolve meiose do micronúcleo e troca de núcleos haploides, gerando variabilidade sem aumentar o número de indivíduos",
+        "dobra imediatamente o número de paramécios na cultura"
+      ],
+      "correta": 3,
+      "explicacao": "O macronúcleo se desintegra, o micronúcleo sofre meiose e cada célula troca um núcleo haploide migratório com a parceira, que se funde ao estacionário. É sexuado (meiose e recombinação), mas entram dois e saem dois indivíduos.",
+      "habilidade": "Descrever a conjugação e relacioná-la à variabilidade genética.",
+      "tags": [
+        "conjugação",
+        "reprodução",
+        "paramécio"
+      ]
+    },
+    {
+      "id": "protozoarios-q06",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "O plasmódio (malária) e o toxoplasma (toxoplasmose) pertencem ao mesmo grupo de protozoários. Uma característica desse grupo é:",
+      "alternativas": [
+        "deslocar-se por pseudópodes e capturar presas por fagocitose",
+        "possuir dois tipos de núcleo, o macronúcleo e o micronúcleo",
+        "não ter estruturas locomotoras nas formas adultas e apresentar complexo apical, usado para invadir células do hospedeiro",
+        "realizar fotossíntese nas fases de vida livre",
+        "viver exclusivamente em água doce, onde forma cistos"
+      ],
+      "correta": 2,
+      "explicacao": "Plasmódio e toxoplasma são apicomplexos: parasitas, sem pseudópodes, cílios ou flagelos nas formas adultas, com complexo apical para penetrar células. Macronúcleo e micronúcleo são dos ciliados; pseudópodes, das amebas.",
+      "habilidade": "Caracterizar os apicomplexos.",
+      "tags": [
+        "apicomplexos",
+        "malária",
+        "toxoplasmose"
+      ]
+    },
+    {
+      "id": "protozoarios-q07",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Após uma enchente em um bairro sem rede de esgoto, aumentaram os casos de diarreia em crianças. Exames de fezes identificaram cistos de Giardia e de Entamoeba. Muitas famílias bebiam água de poço raso, próximo a fossas, sem tratamento. A medida mais eficaz para interromper a transmissão é:",
+      "alternativas": [
+        "garantir água tratada (fervida, filtrada ou clorada), higiene dos alimentos e saneamento básico, pois os cistos resistem no ambiente e são ingeridos com água e alimentos",
+        "aplicar inseticida nas casas para eliminar os mosquitos transmissores",
+        "vacinar as crianças contra giardíase e amebíase",
+        "administrar antibióticos a toda a população de forma preventiva",
+        "evitar o contato com gatos, principais hospedeiros desses protozoários"
+      ],
+      "correta": 0,
+      "explicacao": "Giardia e Entamoeba têm transmissão fecal-oral: cistos eliminados nas fezes contaminam água e alimentos. Tratar a água, higienizar alimentos e ter saneamento interrompem o ciclo. Não há mosquito vetor nem vacina para essas parasitoses, antibiótico em massa não é prevenção, e o gato é hospedeiro do toxoplasma.",
+      "habilidade": "Propor medidas de prevenção a partir do modo de transmissão de protozoários.",
+      "tags": [
+        "cistos",
+        "saneamento",
+        "saúde pública",
+        "giardíase",
+        "amebíase"
+      ]
+    },
+    {
+      "id": "protozoarios-q08",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Em municípios da Amazônia, surtos de doença de Chagas foram associados ao consumo de polpa de açaí processada sem cuidados, em locais onde barbeiros infectados podiam ser triturados com os frutos. Órgãos de saúde recomendam boas práticas no processamento, incluindo tratamento térmico da polpa. Conclui-se que:",
+      "alternativas": [
+        "o açaí é o hospedeiro definitivo do Trypanosoma cruzi, que se reproduz dentro do fruto",
+        "a doença de Chagas é causada por uma bactéria presente na casca do açaí",
+        "a transmissão oral é impossível, pois o protozoário só infecta pela picada",
+        "o barbeiro é o agente causador da doença e por isso deve ser cozido",
+        "o Trypanosoma cruzi, protozoário flagelado, pode ser transmitido pela ingestão de alimento contaminado com o inseto ou suas fezes, e o aquecimento adequado reduz esse risco"
+      ],
+      "correta": 4,
+      "explicacao": "O agente é o Trypanosoma cruzi, um flagelado; o barbeiro é o vetor, não o causador. Além da via clássica (fezes do inseto em contato com pele lesionada ou mucosas), há transmissão oral por alimentos contaminados, e o aquecimento ajuda a inativar o parasita. Plantas não são hospedeiras e a doença não é bacteriana.",
+      "habilidade": "Interpretar informações sobre transmissão de doenças causadas por protozoários.",
+      "tags": [
+        "flagelados",
+        "doença de Chagas",
+        "saúde pública"
+      ]
+    },
+    {
+      "id": "protozoarios-q09",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Uma equipe coletou protozoários em três ambientes: (I) lagoa de água doce no Pantanal, (II) água do mar em Fernando de Noronha e (III) sangue de um paciente com malária, e comparou a atividade dos vacúolos contráteis. A previsão mais coerente é:",
+      "alternativas": [
+        "vacúolos mais ativos em II, pois o sal do mar entra na célula e precisa ser bombeado para fora",
+        "vacúolos mais ativos em III, pois o sangue é muito hipertônico e a célula ganha água",
+        "atividade igual nos três ambientes, já que todo protozoário possui vacúolo contrátil com ritmo constante",
+        "vacúolos mais ativos em I, porque o meio é hipotônico e a água entra continuamente por osmose",
+        "ausência de vacúolos em I, pois em água doce a célula perde água e precisa armazená-la"
+      ],
+      "correta": 3,
+      "explicacao": "Na água doce o citoplasma é mais concentrado que o meio e a água entra por osmose, exigindo vacúolo muito ativo. Água do mar e plasma são aproximadamente isotônicos para os protozoários que vivem neles, então o vacúolo é ausente ou pouco ativo. Em meio hipertônico a célula perderia água, não ganharia.",
+      "habilidade": "Relacionar tonicidade do meio à osmorregulação em diferentes habitats.",
+      "tags": [
+        "osmose",
+        "vacúolo contrátil",
+        "habitat"
+      ]
+    },
+    {
+      "id": "protozoarios-q10",
+      "nivel": "diamante",
+      "tipo": "multipla_escolha",
+      "enunciado": "No ciclo do Plasmodium, as formas injetadas pelo Anopheles no ser humano são haploides e se multiplicam por divisão múltipla no fígado e nas hemácias. Algumas formas sanguíneas originam gametócitos, ingeridos por outro mosquito; no intestino do inseto ocorre fecundação, e o zigoto, ainda no mosquito, origina novas formas infectantes. Os acessos de febre coincidem com o rompimento simultâneo de grupos de hemácias. Sobre esse ciclo, é correto afirmar que:",
+      "alternativas": [
+        "os gametócitos formam-se por meiose dentro das hemácias, o que explica por que são haploides e aptos à fecundação no mosquito",
+        "a única fase diploide é o zigoto (e a forma que dele deriva), no mosquito, onde ocorre a meiose; no ser humano, as mitoses da esquizogonia geram células geneticamente idênticas, e a ruptura sincronizada das hemácias explica a febre periódica",
+        "o ser humano é o hospedeiro definitivo, pois nele ocorre a maior parte da multiplicação do parasita e se formam os gametócitos",
+        "a esquizogonia nas hemácias envolve meiose, o que gera a variabilidade genética responsável pelos sucessivos acessos de febre",
+        "o mosquito é hospedeiro intermediário, pois nele o parasita apenas se multiplica de forma assexuada antes de voltar ao ser humano"
+      ],
+      "correta": 1,
+      "explicacao": "No plasmódio, a única fase diploide é o zigoto (e a forma que dele deriva), no mosquito, e é ali que ocorre a meiose, restaurando a haploidia. Por isso os gametócitos, formados no sangue humano a partir de células já haploides, surgem por mitose e não por meiose. A esquizogonia no fígado e nas hemácias também é feita por mitoses, gerando clones; não há meiose no ser humano. Como a fecundação (reprodução sexuada) ocorre no mosquito, ele é o hospedeiro definitivo, e o ser humano, onde só há multiplicação assexuada, é o intermediário, mesmo que nele a multiplicação seja mais intensa. A ruptura simultânea de grupos de hemácias libera os parasitas e substâncias que desencadeiam a febre periódica.",
+      "habilidade": "Integrar ciclo de vida, divisão celular, reprodução e fisiopatologia na análise de um parasita.",
+      "tags": [
+        "apicomplexos",
+        "malária",
+        "meiose",
+        "integração"
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "protozoarios-f01",
+      "frente": "O que são protistas?",
+      "verso": "Eucariontes que não são animais, plantas nem fungos; sem tecidos verdadeiros."
+    },
+    {
+      "id": "protozoarios-f02",
+      "frente": "Por que o Reino Protista é considerado artificial?",
+      "verso": "Porque não é monofilético: não reúne um ancestral comum e todos os seus descendentes."
+    },
+    {
+      "id": "protozoarios-f03",
+      "frente": "Protozoários x algas",
+      "verso": "Protozoários são protistas heterótrofos; algas são protistas fotossintetizantes."
+    },
+    {
+      "id": "protozoarios-f04",
+      "frente": "Estrutura de locomoção dos amebozoários",
+      "verso": "Pseudópodes, que também capturam alimento por fagocitose."
+    },
+    {
+      "id": "protozoarios-f05",
+      "frente": "Estrutura de locomoção dos ciliados",
+      "verso": "Numerosos cílios curtos que batem de forma coordenada."
+    },
+    {
+      "id": "protozoarios-f06",
+      "frente": "Locomoção dos apicomplexos",
+      "verso": "Não têm estrutura locomotora nas formas adultas; dependem do hospedeiro e do vetor."
+    },
+    {
+      "id": "protozoarios-f07",
+      "frente": "O que é o complexo apical?",
+      "verso": "Conjunto de organelas na extremidade dos apicomplexos que ajuda a invadir células do hospedeiro."
+    },
+    {
+      "id": "protozoarios-f08",
+      "frente": "Agente da doença de Chagas e seu grupo",
+      "verso": "Trypanosoma cruzi, protozoário flagelado; o barbeiro é o vetor."
+    },
+    {
+      "id": "protozoarios-f09",
+      "frente": "Agente da malária e seu vetor",
+      "verso": "Plasmodium (apicomplexo), transmitido pela fêmea do mosquito Anopheles."
+    },
+    {
+      "id": "protozoarios-f10",
+      "frente": "O que é um cisto de protozoário?",
+      "verso": "Forma de resistência com parede protetora; forma infectante de Giardia e Entamoeba."
+    },
+    {
+      "id": "protozoarios-f11",
+      "frente": "Função do vacúolo contrátil",
+      "verso": "Expulsar o excesso de água que entra por osmose em meio hipotônico (osmorregulação), com gasto de ATP."
+    },
+    {
+      "id": "protozoarios-f12",
+      "frente": "Onde o vacúolo contrátil é mais ativo?",
+      "verso": "Em protozoários de água doce, cujo meio é hipotônico; em marinhos e parasitas é ausente ou pouco ativo."
+    },
+    {
+      "id": "protozoarios-f13",
+      "frente": "Macronúcleo x micronúcleo nos ciliados",
+      "verso": "Macronúcleo: metabolismo. Micronúcleo (diploide): reprodução sexuada."
+    },
+    {
+      "id": "protozoarios-f14",
+      "frente": "Divisão binária x divisão múltipla",
+      "verso": "Binária: uma célula vira duas. Múltipla (esquizogonia): muitas células-filhas de uma vez."
+    }
+  ],
+  "minijogos": {
+    "pares": [
+      {
+        "a": "Amoeba proteus",
+        "b": "Pseudópodes"
+      },
+      {
+        "a": "Paramecium",
+        "b": "Cílios"
+      },
+      {
+        "a": "Trypanosoma cruzi",
+        "b": "Doença de Chagas"
+      },
+      {
+        "a": "Plasmodium",
+        "b": "Malária"
+      },
+      {
+        "a": "Giardia lamblia",
+        "b": "Giardíase"
+      },
+      {
+        "a": "Entamoeba histolytica",
+        "b": "Amebíase"
+      },
+      {
+        "a": "Toxoplasma gondii",
+        "b": "Toxoplasmose"
+      },
+      {
+        "a": "Vacúolo contrátil",
+        "b": "Eliminação do excesso de água"
+      }
+    ],
+    "sequencia": {
+      "instrucao": "Coloque em ordem as etapas da conjugação em paramécios.",
+      "itens": [
+        "Dois paramécios compatíveis se unem pela região oral",
+        "O macronúcleo de cada célula se desintegra",
+        "O micronúcleo sofre meiose e três núcleos haploides degeneram",
+        "O núcleo restante se divide em núcleo estacionário e migratório",
+        "Os núcleos migratórios são trocados entre as células",
+        "O núcleo recebido se funde ao estacionário, formando novo micronúcleo diploide",
+        "As células se separam e reconstroem o macronúcleo"
+      ]
+    },
+    "classificacao": {
+      "instrucao": "Classifique cada protozoário no seu grupo.",
+      "categorias": [
+        "Amebozoários (pseudópodes)",
+        "Flagelados (flagelos)",
+        "Ciliados (cílios)",
+        "Apicomplexos (sem estrutura locomotora)"
+      ],
+      "itens": [
+        {
+          "texto": "Amoeba proteus",
+          "categoria": "Amebozoários (pseudópodes)"
+        },
+        {
+          "texto": "Entamoeba histolytica",
+          "categoria": "Amebozoários (pseudópodes)"
+        },
+        {
+          "texto": "Acanthamoeba (ameba de vida livre)",
+          "categoria": "Amebozoários (pseudópodes)"
+        },
+        {
+          "texto": "Trypanosoma cruzi",
+          "categoria": "Flagelados (flagelos)"
+        },
+        {
+          "texto": "Leishmania",
+          "categoria": "Flagelados (flagelos)"
+        },
+        {
+          "texto": "Giardia lamblia",
+          "categoria": "Flagelados (flagelos)"
+        },
+        {
+          "texto": "Trichomonas vaginalis",
+          "categoria": "Flagelados (flagelos)"
+        },
+        {
+          "texto": "Paramecium",
+          "categoria": "Ciliados (cílios)"
+        },
+        {
+          "texto": "Balantidium coli",
+          "categoria": "Ciliados (cílios)"
+        },
+        {
+          "texto": "Stentor",
+          "categoria": "Ciliados (cílios)"
+        },
+        {
+          "texto": "Plasmodium",
+          "categoria": "Apicomplexos (sem estrutura locomotora)"
+        },
+        {
+          "texto": "Toxoplasma gondii",
+          "categoria": "Apicomplexos (sem estrutura locomotora)"
+        }
+      ]
+    },
+    "verdadeiro_falso": [
+      {
+        "afirmacao": "Protozoários são animais unicelulares.",
+        "valor": false,
+        "explicacao": "São protistas eucariontes unicelulares; animais são sempre pluricelulares e têm desenvolvimento embrionário."
+      },
+      {
+        "afirmacao": "Todos os protozoários são eucariontes.",
+        "valor": true,
+        "explicacao": "Têm núcleo delimitado por carioteca e organelas membranosas."
+      },
+      {
+        "afirmacao": "O vacúolo contrátil é responsável pela digestão dos alimentos.",
+        "valor": false,
+        "explicacao": "Ele elimina o excesso de água. A digestão ocorre nos vacúolos digestivos."
+      },
+      {
+        "afirmacao": "Protozoários de água doce recebem água continuamente por osmose.",
+        "valor": true,
+        "explicacao": "O meio é hipotônico em relação ao citoplasma, então a água tende a entrar."
+      },
+      {
+        "afirmacao": "Protozoários marinhos costumam ter vacúolos contráteis mais ativos que os de água doce.",
+        "valor": false,
+        "explicacao": "A água do mar é aproximadamente isotônica para eles."
+      },
+      {
+        "afirmacao": "Os apicomplexos são todos parasitas.",
+        "valor": true,
+        "explicacao": "Plasmódio, toxoplasma e demais apicomplexos dependem de hospedeiros."
+      },
+      {
+        "afirmacao": "Na conjugação, os paramécios trocam seus macronúcleos.",
+        "valor": false,
+        "explicacao": "O macronúcleo se desintegra; trocam-se núcleos haploides vindos do micronúcleo."
+      },
+      {
+        "afirmacao": "A conjugação aumenta a variabilidade genética dos paramécios.",
+        "valor": true,
+        "explicacao": "Envolve meiose e combinação de núcleos de dois indivíduos."
+      },
+      {
+        "afirmacao": "O barbeiro é o agente causador da doença de Chagas.",
+        "valor": false,
+        "explicacao": "O barbeiro é o vetor; o causador é o protozoário Trypanosoma cruzi."
+      },
+      {
+        "afirmacao": "Cistos de Giardia podem ser ingeridos com água não tratada.",
+        "valor": true,
+        "explicacao": "A transmissão é fecal-oral, por água e alimentos contaminados."
+      }
+    ]
+  },
+  "missao_mundo_aberto": {
+    "titulo": "As Poças que Pulsam",
+    "regiao": "Brejo dos Esporos",
+    "npc": "Barqueira Cília, guardiã das poças",
+    "narrativa": "As poças do Brejo dos Esporos estão em alvoroço: criaturas minúsculas incham até estourar, outras se escondem em cascas duras, e os ribeirinhos adoecem ao beber a água parada. A Barqueira Cília precisa de alguém com olho de microscópio para descobrir quem é quem e o que desequilibra o brejo.",
+    "objetivo": "Identificar os quatro grupos de protozoários pela locomoção, restaurar o equilíbrio osmótico das poças e rastrear a origem dos cistos que contaminam a água do vilarejo.",
+    "mecanica": "investigacao",
+    "etapas": [
+      "Poça dos Andarilhos: identificar quem rasteja com pseudópodes, quem nada de flagelo, quem rema com cílios e quem só viaja de carona",
+      "Poça Doce: ajustar a concentração da água e observar a pulsação dos vacúolos contráteis até que nenhuma célula estoure",
+      "Margem dos Cistos: seguir as cascas resistentes até a fossa que contamina o poço do vilarejo e propor como tratar a água",
+      "Lagoa do Encontro: ordenar as etapas da conjugação de dois paramécios para liberar a passagem",
+      "Ponte dos Mosquitos: explicar à Barqueira Cília por que o mosquito é o hospedeiro definitivo do plasmódio"
+    ],
+    "recompensa_xp": 130,
+    "item_recompensa": "Lente da Gota d'Água"
+  }
+}

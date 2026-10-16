@@ -1,0 +1,194 @@
+{
+  "topico": "primeira-lei-mendel",
+  "versao": 1,
+  "questoes": [
+    {
+      "id": "primeira-lei-mendel-q01",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Alelos são definidos corretamente como:",
+      "alternativas": ["genes localizados em cromossomos diferentes que determinam características diferentes", "o conjunto de todas as características observáveis de um indivíduo", "formas alternativas de um mesmo gene, que ocupam o mesmo lócus em cromossomos homólogos", "os dois cromossomos de um par de homólogos", "segmentos de DNA que nunca sofrem mutação"],
+      "correta": 2,
+      "explicacao": "Alelos são versões de um mesmo gene e ficam no mesmo lócus de cromossomos homólogos. Genes em cromossomos diferentes não são alelos entre si, o conjunto de características é o fenótipo e os alelos surgem justamente por mutação.",
+      "habilidade": "Reconhecer conceitos básicos de genética.",
+      "tags": ["alelo", "lócus", "conceitos"]
+    },
+    {
+      "id": "primeira-lei-mendel-q02",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "Um indivíduo de genótipo Bb, em que B é dominante sobre b, é classificado como:",
+      "alternativas": ["heterozigoto, com fenótipo determinado pelo alelo B", "homozigoto dominante, com fenótipo determinado pelo alelo B", "homozigoto recessivo, com fenótipo determinado pelo alelo b", "heterozigoto, com fenótipo intermediário obrigatório entre B e b", "portador de dois alelos idênticos"],
+      "correta": 0,
+      "explicacao": "Bb tem alelos diferentes, portanto é heterozigoto. Com dominância completa, o fenótipo é o do alelo dominante B. Fenótipo intermediário ocorre em casos de dominância incompleta, que não é a situação descrita.",
+      "habilidade": "Classificar genótipos e prever fenótipos.",
+      "tags": ["heterozigoto", "dominância"]
+    },
+    {
+      "id": "primeira-lei-mendel-q03",
+      "nivel": "bronze",
+      "tipo": "multipla_escolha",
+      "enunciado": "No cruzamento entre dois heterozigotos (Aa × Aa), com dominância completa, as proporções genotípica e fenotípica esperadas na descendência são, respectivamente:",
+      "alternativas": ["3:1 e 1:2:1", "1:1 e 3:1", "1:2:1 e 1:1", "100% Aa e 100% dominante", "1:2:1 e 3:1"],
+      "correta": 4,
+      "explicacao": "O quadro de Punnett dá 1 AA : 2 Aa : 1 aa (1:2:1). Como AA e Aa têm o mesmo fenótipo dominante, a proporção fenotípica é 3:1. A proporção 1:1 é típica do cruzamento-teste com heterozigoto.",
+      "habilidade": "Resolver cruzamentos de monoibridismo.",
+      "tags": ["monoibridismo", "proporções"]
+    },
+    {
+      "id": "primeira-lei-mendel-q04",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Entre as razões que tornaram a ervilha (Pisum sativum) um material adequado aos experimentos de Mendel, está o fato de que ela:",
+      "alternativas": ["não realiza autofecundação, o que obriga a ocorrência de cruzamentos naturais entre plantas diferentes", "realiza autofecundação naturalmente, permitindo obter linhagens puras, e aceita fecundação cruzada artificial", "apresenta apenas características com muitas formas intermediárias", "tem ciclo de vida muito longo, o que permitia observar cada planta por décadas", "reproduz-se apenas de forma assexuada, gerando clones"],
+      "correta": 1,
+      "explicacao": "A flor da ervilha se autofecunda, o que permite obter linhagens puras, e Mendel podia remover as anteras e polinizar artificialmente. Além disso, a planta tem ciclo curto e caracteres contrastantes, sem intermediários. Reprodução assexuada não permitiria estudar cruzamentos.",
+      "habilidade": "Compreender o método experimental de Mendel.",
+      "tags": ["Mendel", "ervilha", "método científico"]
+    },
+    {
+      "id": "primeira-lei-mendel-q05",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Um cão de pelagem preta (característica dominante) foi cruzado com uma fêmea de pelagem marrom (recessiva). Nasceram filhotes pretos e marrons em proporção próxima de 1:1. Conclui-se que o cão é:",
+      "alternativas": ["homozigoto dominante, pois tem fenótipo dominante", "homozigoto recessivo, pois gerou filhotes marrons", "de genótipo impossível de determinar com esse cruzamento", "heterozigoto, pois transmitiu o alelo recessivo a parte dos filhotes", "heterozigoto somente se todos os filhotes fossem pretos"],
+      "correta": 3,
+      "explicacao": "Trata-se de um cruzamento-teste: a fêmea marrom é homozigota recessiva e só forma gametas recessivos. Os filhotes marrons receberam um alelo recessivo também do pai, que é, portanto, heterozigoto. Um pai homozigoto dominante geraria apenas filhotes pretos, e um pai recessivo seria marrom.",
+      "habilidade": "Interpretar o resultado de um cruzamento-teste.",
+      "tags": ["cruzamento-teste", "genótipo"]
+    },
+    {
+      "id": "primeira-lei-mendel-q06",
+      "nivel": "prata",
+      "tipo": "multipla_escolha",
+      "enunciado": "Na geração F2 de um cruzamento de ervilhas, obtida pela autofecundação de plantas F1 heterozigotas de semente amarela (dominante), escolhe-se ao acaso uma planta de semente amarela. A probabilidade de ela ser heterozigota é:",
+      "alternativas": ["1/4", "1/2", "2/3", "3/4", "1/3"],
+      "correta": 2,
+      "explicacao": "A F2 tem 1 VV : 2 Vv : 1 vv. Como a planta escolhida é amarela, as verdes (vv) estão excluídas: sobram 3 partes, das quais 2 são Vv. Logo, 2/3. O valor 1/2 seria a chance de heterozigose considerando toda a F2, sem a informação do fenótipo.",
+      "habilidade": "Aplicar probabilidade condicional ao monoibridismo.",
+      "tags": ["F2", "probabilidade", "2/3"]
+    },
+    {
+      "id": "primeira-lei-mendel-q07",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "O teste do pezinho, oferecido pelo SUS a recém-nascidos, permite identificar precocemente a fenilcetonúria, doença de herança autossômica recessiva em que o organismo não metaboliza adequadamente o aminoácido fenilalanina. Com dieta controlada desde os primeiros dias, a criança pode se desenvolver normalmente. Um casal sem a doença teve o primeiro filho diagnosticado com fenilcetonúria pelo teste. Sobre esse casal, é correto afirmar:",
+      "alternativas": ["Ao menos um dos pais deve ter a doença sem diagnóstico, pois um alelo recessivo não pode ser transmitido por pessoas saudáveis.", "Como já tiveram um filho afetado, os próximos filhos certamente não terão a doença.", "A doença surgiu porque o filho foi exposto à fenilalanina durante a gestação, sem participação de alelos dos pais.", "A dieta controlada corrige o genótipo da criança, que deixa de transmitir o alelo à descendência.", "Os dois são heterozigotos, e a cada nova gestação a probabilidade de nascer uma criança afetada é de 1/4."],
+      "correta": 4,
+      "explicacao": "Para ter fenilcetonúria, o filho precisa ser homozigoto recessivo e recebeu um alelo de cada genitor; como os pais não têm a doença, ambos são heterozigotos (Aa). Em Aa × Aa, cada gestação tem 1/4 de chance de gerar aa, independentemente dos nascimentos anteriores. A dieta altera o fenótipo, não o genótipo.",
+      "habilidade": "Aplicar a Primeira Lei a um problema de saúde pública.",
+      "tags": ["fenilcetonúria", "teste do pezinho", "herança recessiva", "saúde"]
+    },
+    {
+      "id": "primeira-lei-mendel-q08",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Em bovinos, o caráter mocho (ausência de chifres) é condicionado por um alelo dominante, e a presença de chifres, pelo alelo recessivo. Um pecuarista do Centro-Oeste pretende vender sêmen de um touro mocho com a garantia de que ele é homozigoto. Para isso, cruzou o touro com 20 vacas com chifres, e nasceram 20 bezerros, todos mochos. A interpretação mais adequada do resultado é:",
+      "alternativas": ["O resultado é compatível com o touro ser homozigoto e torna essa hipótese muito provável, embora não a prove com certeza absoluta.", "O touro é certamente heterozigoto, pois as vacas tinham chifres.", "O cruzamento não fornece nenhuma informação, pois deveria ter sido feito com vacas mochas.", "O touro é certamente homozigoto, porque um heterozigoto nunca geraria 20 bezerros mochos seguidos.", "Os bezerros são homozigotos dominantes e podem ser usados como reprodutores puros."],
+      "correta": 0,
+      "explicacao": "No cruzamento-teste, as vacas com chifres (homozigotas recessivas) só transmitem o alelo recessivo. Se o touro fosse heterozigoto, cada bezerro teria 1/2 de chance de ter chifres; 20 mochos seguidos seriam muito improváveis, mas não impossíveis. Os bezerros são obrigatoriamente heterozigotos, pois receberam o alelo recessivo das mães.",
+      "habilidade": "Avaliar conclusões de um cruzamento-teste no melhoramento animal.",
+      "tags": ["cruzamento-teste", "pecuária", "probabilidade"]
+    },
+    {
+      "id": "primeira-lei-mendel-q09",
+      "nivel": "ouro",
+      "tipo": "multipla_escolha",
+      "enunciado": "Em cidades turísticas da Serra Gaúcha, é comum ver hortênsias com flores azuis em alguns jardins e rosadas em outros. Um jardineiro fez mudas por estaquia a partir de uma única planta e as plantou em dois canteiros: um de solo ácido e outro de solo corrigido com calcário, mais alcalino. As mudas do primeiro canteiro deram flores azuladas e as do segundo, flores rosadas. Esse resultado demonstra que:",
+      "alternativas": ["o solo ácido provocou mutações que alteraram o genótipo das mudas", "o fenótipo resulta da interação entre o genótipo e o ambiente, pois plantas geneticamente iguais apresentaram flores diferentes", "a cor azul é dominante e a rosa é recessiva", "as mudas tinham genótipos diferentes, já que exibiram fenótipos diferentes", "as sementes das plantas de flores rosadas darão obrigatoriamente plantas de flores rosadas, em qualquer solo"],
+      "correta": 1,
+      "explicacao": "A estaquia produz clones, portanto as mudas têm o mesmo genótipo. A diferença de cor se deve ao ambiente: o pH do solo altera a disponibilidade de alumínio para os pigmentos. Não houve mutação nem há relação de dominância envolvida, e características causadas pelo ambiente não são herdadas.",
+      "habilidade": "Relacionar genótipo, fenótipo e ambiente.",
+      "tags": ["fenótipo", "ambiente", "genótipo"]
+    },
+    {
+      "id": "primeira-lei-mendel-q10",
+      "nivel": "diamante",
+      "tipo": "multipla_escolha",
+      "enunciado": "Em uma planta diploide, o alelo A (flor púrpura) é dominante sobre a (flor branca). Uma planta Aa foi autofecundada. Entre os descendentes de flor púrpura, sorteou-se um, que foi cruzado com uma planta de flor branca. Considere também o processo celular que garante que cada gameta da planta Aa receba apenas um dos alelos. Assinale a alternativa que identifica corretamente esse processo e a probabilidade de o cruzamento final gerar um descendente de flor branca.",
+      "alternativas": ["Separação das cromátides-irmãs na anáfase da mitose; 1/4", "Separação dos cromossomos homólogos na anáfase I da meiose; 1/2", "Duplicação do DNA na interfase; 2/3", "Separação dos cromossomos homólogos na anáfase I da meiose; 1/3", "Formação do fuso na prófase I da meiose; 1/6"],
+      "correta": 3,
+      "explicacao": "A segregação dos alelos (Primeira Lei) tem base física na separação dos homólogos na anáfase I da meiose; a mitose não forma gametas nem separa homólogos. Entre os descendentes púrpura de Aa × Aa, 2/3 são Aa e 1/3 AA. Só o Aa, cruzado com aa, pode gerar flor branca, com chance de 1/2. Logo, 2/3 × 1/2 = 1/3. O valor 1/2 ignora a chance de o sorteado ser AA.",
+      "habilidade": "Integrar meiose, Primeira Lei e probabilidade condicional.",
+      "tags": ["meiose", "segregação", "probabilidade", "integração"]
+    }
+  ],
+  "flashcards": [
+    { "id": "primeira-lei-mendel-f01", "frente": "O que é um gene?", "verso": "Um trecho de DNA que contém a informação para produzir um RNA funcional, em geral traduzido em proteína. É a unidade da herança." },
+    { "id": "primeira-lei-mendel-f02", "frente": "O que é lócus?", "verso": "A posição (endereço) de um gene no cromossomo." },
+    { "id": "primeira-lei-mendel-f03", "frente": "O que são alelos?", "verso": "Versões diferentes de um mesmo gene, que ocupam o mesmo lócus em cromossomos homólogos." },
+    { "id": "primeira-lei-mendel-f04", "frente": "Genótipo x fenótipo", "verso": "Genótipo é a constituição genética (ex.: Aa). Fenótipo é a característica observável, resultado do genótipo em interação com o ambiente." },
+    { "id": "primeira-lei-mendel-f05", "frente": "Homozigoto x heterozigoto", "verso": "Homozigoto tem dois alelos iguais (AA ou aa). Heterozigoto tem dois alelos diferentes (Aa)." },
+    { "id": "primeira-lei-mendel-f06", "frente": "Alelo recessivo: quando se manifesta?", "verso": "Apenas em dose dupla, ou seja, no homozigoto recessivo (aa)." },
+    { "id": "primeira-lei-mendel-f07", "frente": "Por que a ervilha foi boa para Mendel?", "verso": "Ciclo curto, muitos descendentes, autofecundação natural (linhagens puras), possibilidade de cruzamento artificial e caracteres contrastantes." },
+    { "id": "primeira-lei-mendel-f08", "frente": "Resultado de F1 no cruzamento de amarelas puras com verdes puras", "verso": "100% de sementes amarelas, todas heterozigotas (Vv)." },
+    { "id": "primeira-lei-mendel-f09", "frente": "Enunciado da Primeira Lei de Mendel", "verso": "Cada caráter é determinado por um par de fatores que se separam na formação dos gametas; cada gameta recebe só um fator do par." },
+    { "id": "primeira-lei-mendel-f10", "frente": "Base celular da Primeira Lei", "verso": "A separação dos cromossomos homólogos na anáfase I da meiose." },
+    { "id": "primeira-lei-mendel-f11", "frente": "Aa × Aa: proporções", "verso": "Genotípica 1 AA : 2 Aa : 1 aa (1:2:1). Fenotípica 3 dominantes : 1 recessivo (3:1)." },
+    { "id": "primeira-lei-mendel-f12", "frente": "Entre os descendentes dominantes de Aa × Aa, qual fração é heterozigota?", "verso": "2/3." },
+    { "id": "primeira-lei-mendel-f13", "frente": "O que é cruzamento-teste?", "verso": "Cruzamento de um indivíduo de fenótipo dominante e genótipo desconhecido com um homozigoto recessivo." },
+    { "id": "primeira-lei-mendel-f14", "frente": "Cruzamento-teste: resultado se o testado for Aa", "verso": "Descendência 1:1, metade dominante e metade recessiva." },
+    { "id": "primeira-lei-mendel-f15", "frente": "O que é retrocruzamento?", "verso": "Cruzamento de um indivíduo da F1 com um dos genitores (ou com genótipo igual ao de um deles)." }
+  ],
+  "minijogos": {
+    "pares": [
+      { "a": "Lócus", "b": "Endereço do gene no cromossomo" },
+      { "a": "Alelos", "b": "Versões de um mesmo gene" },
+      { "a": "Genótipo", "b": "Constituição genética, como Aa" },
+      { "a": "Fenótipo", "b": "Característica observável" },
+      { "a": "Heterozigoto", "b": "Dois alelos diferentes" },
+      { "a": "Aa × Aa", "b": "Fenótipos 3:1" },
+      { "a": "Aa × aa", "b": "Fenótipos 1:1" },
+      { "a": "Cruzamento-teste", "b": "Cruzar com homozigoto recessivo" },
+      { "a": "Segregação dos alelos", "b": "Anáfase I da meiose" }
+    ],
+    "sequencia": {
+      "instrucao": "Coloque em ordem as etapas do experimento de monoibridismo de Mendel.",
+      "itens": ["Obter linhagens puras por várias gerações de autofecundação", "Remover as anteras de flores de uma linhagem para impedir a autofecundação", "Polinizar artificialmente com pólen da linhagem contrastante (geração P)", "Observar a F1: 100% com o caráter dominante", "Deixar as plantas F1 se autofecundarem", "Contar a F2 e encontrar a proporção próxima de 3:1"]
+    },
+    "classificacao": {
+      "instrucao": "Classifique cada genótipo ou indivíduo de acordo com sua constituição para o gene em questão.",
+      "categorias": ["Homozigoto dominante", "Heterozigoto", "Homozigoto recessivo"],
+      "itens": [
+        { "texto": "AA", "categoria": "Homozigoto dominante" },
+        { "texto": "Aa", "categoria": "Heterozigoto" },
+        { "texto": "aa", "categoria": "Homozigoto recessivo" },
+        { "texto": "Ervilha de semente verde (caráter recessivo)", "categoria": "Homozigoto recessivo" },
+        { "texto": "Planta da F1 de amarela pura × verde pura", "categoria": "Heterozigoto" },
+        { "texto": "Pessoa albina (herança recessiva)", "categoria": "Homozigoto recessivo" },
+        { "texto": "Pais sem albinismo que tiveram um filho albino", "categoria": "Heterozigoto" },
+        { "texto": "Linhagem pura de ervilha de semente amarela", "categoria": "Homozigoto dominante" },
+        { "texto": "Bezerro mocho, filho de vaca com chifres", "categoria": "Heterozigoto" },
+        { "texto": "Planta da geração P que só forma gametas V", "categoria": "Homozigoto dominante" }
+      ]
+    },
+    "verdadeiro_falso": [
+      { "afirmacao": "Alelos ocupam o mesmo lócus em cromossomos homólogos.", "valor": true, "explicacao": "São versões de um mesmo gene, no mesmo endereço dos homólogos." },
+      { "afirmacao": "O alelo dominante é sempre o mais comum na população.", "valor": false, "explicacao": "Dominância descreve a relação entre alelos no heterozigoto, não a frequência." },
+      { "afirmacao": "Um indivíduo com fenótipo recessivo é obrigatoriamente homozigoto.", "valor": true, "explicacao": "O caráter recessivo só aparece em dose dupla (aa)." },
+      { "afirmacao": "Na F1 de Mendel, metade das sementes era amarela e metade verde.", "valor": false, "explicacao": "Toda a F1 tinha semente amarela; o verde reapareceu só na F2." },
+      { "afirmacao": "A proporção genotípica de Aa × Aa é 1:2:1.", "valor": true, "explicacao": "1 AA : 2 Aa : 1 aa." },
+      { "afirmacao": "Mendel explicou a segregação dos fatores com base na meiose.", "valor": false, "explicacao": "Ele não conhecia a meiose; a relação foi estabelecida depois da redescoberta de seu trabalho, em 1900." },
+      { "afirmacao": "O bronzeado adquirido ao sol é transmitido aos filhos.", "valor": false, "explicacao": "O ambiente altera o fenótipo, mas não o genótipo dos gametas." },
+      { "afirmacao": "No cruzamento-teste, o aparecimento de um descendente recessivo prova que o indivíduo testado é heterozigoto.", "valor": true, "explicacao": "O descendente aa recebeu um alelo recessivo de cada genitor." },
+      { "afirmacao": "Se um casal Aa × Aa teve um filho aa, o próximo filho tem chance zero de ser aa.", "valor": false, "explicacao": "Cada gestação é independente: a chance continua sendo 1/4." }
+    ]
+  },
+  "missao_mundo_aberto": {
+    "titulo": "As Sementes que Sumiram",
+    "regiao": "Mosteiro das Ervilhas",
+    "npc": "Irmão Gregório, o hortelão contador",
+    "narrativa": "Nas hortas do Mosteiro das Ervilhas, as sementes verdes desapareceram de um canteiro inteiro e, um ano depois, voltaram a brotar no canteiro vizinho. Os aldeões falam em feitiço. Irmão Gregório desconfia de outra coisa: fatores escondidos que se separam a cada geração. Ele precisa de alguém paciente para cruzar, contar e provar.",
+    "objetivo": "Reproduzir o experimento de monoibridismo, explicar o retorno das sementes verdes com a Primeira Lei e descobrir, por cruzamento-teste, qual das plantas amarelas do mosteiro é, muito provavelmente, pura.",
+    "mecanica": "investigacao",
+    "etapas": [
+      "Selecionar linhagens puras de ervilha amarela e verde nos canteiros do mosteiro",
+      "Retirar as anteras das flores e fazer a polinização cruzada com um pincel",
+      "Colher a F1 e registrar no livro do mosteiro que todas as sementes são amarelas",
+      "Deixar a F1 se autofecundar, contar a F2 e montar o quadro de Punnett que explica o 3:1",
+      "Cruzar três plantas amarelas suspeitas com plantas verdes, descartar as que gerarem alguma semente verde (heterozigotas) e apontar a provável homozigota pela ausência de verdes em muitas sementes"
+    ],
+    "recompensa_xp": 150,
+    "item_recompensa": "Pinça do Hortelão"
+  }
+}
