@@ -107,6 +107,9 @@ select.inp option { color: #111; }
 
 @media (max-width: 600px) { nav.topo .links { gap: 10px; } .logo { font-size: 18px; } nav.topo .bt.peq { padding: 8px 11px; font-size: 13px; } #navSessao { white-space: nowrap; } }
 @media (max-width: 900px) {
+  #quem .card { grid-template-columns: 1fr !important; text-align: center; }
+  #quem .card #fotoQuem { margin: 0 auto; }
+  #quem .card p { text-align: left; }
   .hero .cont, .grade3, .planos { grid-template-columns: 1fr; }
   .palco { max-width: 380px; margin: 0 auto; }
   nav.topo .links a.so-desk { display: none; }

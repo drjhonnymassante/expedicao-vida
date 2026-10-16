@@ -18,6 +18,7 @@
   <div class="links">
     <a class="so-desk" href="#como">Como funciona</a>
     <a class="so-desk" href="#gratis">Grátis</a>
+    <a class="so-desk" href="sobre.html">Quem sou</a>
     <a class="so-desk" href="#planos">Planos</a>
     <span id="navSessao"><a href="entrar.html">Entrar</a> <a class="bt prim peq" href="entrar.html?modo=cadastro">Começar grátis</a></span>
   </div>
@@ -55,6 +56,26 @@
     <div class="card"><div class="ic">🗺️</div><h3>Explore o arquipélago</h3><p>Do Vale da Sopa Primordial ao Continente dos Biomas. Cada ilha tem cenário, personagens e segredos próprios, e as próximas só abrem quando você domina a atual.</p></div>
     <div class="card"><div class="ic">🧬</div><h3>Evolua o seu avatar</h3><p>Bactéria, ameba, água-viva, peixe, anfíbio, réptil, ave… até cientista. Cada nível conquistado com XP de verdade, missão após missão.</p></div>
     <div class="card"><div class="ic">🧠</div><h3>Revise sem perceber</h3><p>Fragmentos de memória, desafios do dia e ligas com dificuldade real (bronze a diamante) trazem de volta o que você estudou no momento certo.</p></div>
+  </div>
+</div></section>
+
+<section id="quem" style="padding-top:10px"><div class="cont">
+  <div class="card" style="display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;padding:30px">
+    <div id="fotoQuem" style="width:150px;height:150px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%, rgba(124,255,178,.55), rgba(110,200,255,.25) 60%, rgba(179,136,255,.25));border:3px solid rgba(124,255,178,.5);font-family:Fredoka;font-size:50px;font-weight:700;overflow:hidden">JM</div>
+    <div>
+      <div class="etq">Quem está por trás</div>
+      <h2 style="font-size:32px;margin:6px 0 2px">Dr. Jhonny Capichoni Massante</h2>
+      <div style="color:var(--sub);font-size:16px">Doutor em Ecologia Vegetal, pesquisador e professor de Biologia desde 2010</div>
+      <p style="font-family:Fredoka;font-size:19px;margin:14px 0;border-left:4px solid var(--neon);padding-left:14px">“Criei a Expedição Vida para transformar a maneira como se aprende Biologia no ensino médio: menos decoreba, mais curiosidade e entusiasmo.”</p>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;font-size:13.5px;font-weight:700">
+        <span style="background:var(--vidro);border:1px solid var(--borda);border-radius:12px;padding:7px 11px">🎓 Licenciado pela UERJ · Mestre pela UFF</span>
+        <span style="background:var(--vidro);border:1px solid var(--borda);border-radius:12px;padding:7px 11px">🔬 Doutor pela Universidade de Tartu (Estônia)</span>
+        <span style="background:var(--vidro);border:1px solid var(--borda);border-radius:12px;padding:7px 11px">🌎 Pós-doutorados na USP e no Instituto Tecnológico Vale</span>
+        <span style="background:var(--vidro);border:1px solid var(--borda);border-radius:12px;padding:7px 11px">📰 Publicações em Nature, Journal of Ecology e Scientific Reports</span>
+      </div>
+      <p style="color:var(--sub);margin:12px 0 0">É ele quem conduz as mentorias em grupo e individual da plataforma.</p>
+      <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap"><a class="bt" href="sobre.html">Conheça a trajetória →</a><a class="bt ouro" href="#planos">⭐ Mentorias com o Dr. Jhonny</a></div>
+    </div>
   </div>
 </div></section>
 
@@ -98,6 +119,7 @@
 <script src="app/compartilhado/avatar2d.js"></script>
 <script>
 const { cfg, sb, PLANOS, esc } = Vida;
+{ const img = new Image(); img.alt = 'Dr. Jhonny Capichoni Massante'; img.style.cssText = 'width:100%;height:100%;object-fit:cover'; img.onload = () => { const f = document.getElementById('fotoQuem'); f.textContent = ''; f.appendChild(img); }; img.src = 'img/jhonny.jpg'; }
 document.getElementById('rodResp').textContent = cfg.responsavel;
 document.getElementById('rodCnpj').textContent = cfg.cnpj;
 const rc = document.getElementById('rodContato'); rc.href = 'mailto:' + cfg.contato; rc.textContent = cfg.contato;
@@ -118,8 +140,8 @@ sb.auth.getSession().then(({ data: { session } }) => {
 // planos com contadores reais
 const DETALHES = {
   digital: { selo: '', itens: ['As 127 aulas do currículo completo', '1.270 questões em 4 ligas (bronze a diamante)', 'Todas as missões das 26 ilhas', 'Ligas semanais e revisão espaçada ilimitada', 'Simulados e relatório de desempenho'] },
-  grupo: { selo: 'Recomendado', itens: ['Tudo da Plataforma Completa', 'Encontros semanais ao vivo por objetivo (ENEM, Medicina…)', 'Plano de estudos da turma', 'Plantão de dúvidas e comunidade', 'Liga de equipe com a sua turma'] },
-  individual: { selo: '', itens: ['Tudo da Plataforma Completa', 'Sessões individuais com mentor', 'Plano de estudos personalizado', 'Missões criadas pelo mentor no seu mapa', 'Acompanhamento próximo do desempenho'] },
+  grupo: { selo: 'Recomendado', itens: ['Tudo da Plataforma Completa', 'Encontros semanais ao vivo com o Dr. Jhonny, por objetivo (ENEM, Medicina…)', 'Plano de estudos da turma', 'Plantão de dúvidas e comunidade', 'Liga de equipe com a sua turma'] },
+  individual: { selo: '', itens: ['Tudo da Plataforma Completa', 'Sessões individuais com o Dr. Jhonny', 'Plano de estudos personalizado', 'Missões criadas por ele no seu mapa', 'Acompanhamento próximo do desempenho'] },
 };
 let CONTAGENS = null;
 async function renderPlanos() {
