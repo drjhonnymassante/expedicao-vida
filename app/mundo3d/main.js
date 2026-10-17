@@ -106,7 +106,9 @@ scene.add(new THREE.Mesh(new THREE.SphereGeometry(600, 32, 16), new THREE.Shader
 
 scene.add(new THREE.HemisphereLight('#d8f0ff', '#4c6b3c', 1.05));
 const sol = new THREE.DirectionalLight('#fff1d6', 2.3);
-sol.castShadow = true; sol.shadow.mapSize.set(2048, 2048);
+const TOQUE = matchMedia('(pointer: coarse)').matches || 'ontouchstart' in window;
+if (TOQUE) document.body.classList.add('toque');
+sol.castShadow = true; sol.shadow.mapSize.set(TOQUE ? 1024 : 2048, TOQUE ? 1024 : 2048);
 Object.assign(sol.shadow.camera, { left: -48, right: 48, top: 48, bottom: -48, near: 1, far: 220 });
 sol.shadow.bias = -.0006; sol.shadow.normalBias = .03;
 scene.add(sol, sol.target);
@@ -797,10 +799,19 @@ addEventListener('keydown', e => {
 addEventListener('keyup', e => { const k = e.key.length === 1 ? e.key.toLowerCase() : e.key; teclas[k] = false; });
 addEventListener('blur', () => { for (const k in teclas) teclas[k] = false; });
 let arrastando = false, moveu = 0;
-canvas.addEventListener('pointerdown', e => { arrastando = true; moveu = 0; canvas.setPointerCapture(e.pointerId); });
-canvas.addEventListener('pointermove', e => { if (!arrastando || !emJogo) return; moveu += Math.abs(e.movementX) + Math.abs(e.movementY); camCtl.yaw -= e.movementX * .005; camCtl.pitch = Math.min(1.25, Math.max(.18, camCtl.pitch + e.movementY * .004)); });
+const dedos = new Map(); let pinca = 0;
+canvas.addEventListener('pointerdown', e => { arrastando = true; moveu = 0; dedos.set(e.pointerId, { x: e.clientX, y: e.clientY }); try { canvas.setPointerCapture(e.pointerId); } catch { } if (dedos.size === 2) { const [a, b] = [...dedos.values()]; pinca = Math.hypot(a.x - b.x, a.y - b.y); } });
+canvas.addEventListener('pointermove', e => {
+  const ant = dedos.get(e.pointerId); if (!ant || !emJogo) return;
+  const dx = e.clientX - ant.x, dy = e.clientY - ant.y; ant.x = e.clientX; ant.y = e.clientY;
+  if (dedos.size >= 2) { const [a, b] = [...dedos.values()], d = Math.hypot(a.x - b.x, a.y - b.y); if (pinca) camCtl.alvoDist = Math.min(30, Math.max(6, camCtl.alvoDist * pinca / d)); pinca = d; moveu += 10; return; }
+  moveu += Math.abs(dx) + Math.abs(dy); const sens = e.pointerType === 'touch' ? .008 : .005;
+  camCtl.yaw -= dx * sens; camCtl.pitch = Math.min(1.25, Math.max(.18, camCtl.pitch + dy * sens * .8));
+});
+const soltar = e => { dedos.delete(e.pointerId); if (dedos.size < 2) pinca = 0; };
+canvas.addEventListener('pointercancel', e => { soltar(e); arrastando = false; });
 canvas.addEventListener('pointerup', e => {
-  arrastando = false; if (!emJogo || pausado || moveu > 6) return;
+  soltar(e); arrastando = false; if (!emJogo || pausado || moveu > 6) return;
   // clique em NPC próximo abre a missão
   const ray = new THREE.Raycaster(), m = new THREE.Vector2(e.clientX / innerWidth * 2 - 1, -(e.clientY / innerHeight) * 2 + 1); ray.setFromCamera(m, camera);
   const alvos = ESTACOES.filter(s => s.grupo.visible).map(s => s.grupo);
@@ -808,6 +819,21 @@ canvas.addEventListener('pointerup', e => {
   if (hit) { const s = ESTACOES.find(s => s.grupo === hit.object.parent || s.grupo === hit.object); if (s) { if (Math.hypot(s.x - jog.x, s.z - jog.z) < 6) abrirEstacao(s); else toast('🚶', 'Aproxime-se do personagem', s.topico.titulo); } }
 });
 canvas.addEventListener('wheel', e => { camCtl.alvoDist = Math.min(30, Math.max(6, camCtl.alvoDist * (1 + e.deltaY * .001))); e.preventDefault(); }, { passive: false });
+
+const joy = { x: 0, y: 0, ativo: false, id: null };
+(function controlesToque() {
+  const base = $('joy'), pino = base.querySelector('.pino'), R = 55;
+  const mover = e => { const r = base.getBoundingClientRect(), cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+    let dx = e.clientX - cx, dy = e.clientY - cy; const d = Math.hypot(dx, dy); if (d > R) { dx = dx / d * R; dy = dy / d * R; }
+    joy.x = dx / R; joy.y = -dy / R; pino.style.transform = 'translate(' + dx + 'px,' + dy + 'px)'; base.classList.toggle('correndo', Math.hypot(joy.x, joy.y) > .92); };
+  base.addEventListener('pointerdown', e => { joy.ativo = true; joy.id = e.pointerId; try { base.setPointerCapture(e.pointerId); } catch { } mover(e); e.preventDefault(); });
+  base.addEventListener('pointermove', e => { if (joy.ativo && e.pointerId === joy.id) mover(e); });
+  const fim = e => { if (e.pointerId !== joy.id) return; joy.ativo = false; joy.x = joy.y = 0; pino.style.transform = ''; base.classList.remove('correndo'); };
+  base.addEventListener('pointerup', fim); base.addEventListener('pointercancel', fim);
+  $('btPular').addEventListener('pointerdown', e => { e.preventDefault(); if (emJogo && !pausado && jog.chao) { jog.vy = 8.5; jog.chao = false; SFX.pulo(); } });
+  $('btFalar').addEventListener('pointerdown', e => { e.preventDefault(); const st = estacaoProxima(); if (emJogo && !pausado && st) abrirEstacao(st); });
+  $('prompt').addEventListener('click', () => { const st = estacaoProxima(); if (emJogo && !pausado && st) abrirEstacao(st); });
+})();
 
 function estacaoProxima() { let m = null, d = 3.4; for (const e of ESTACOES) { if (!livre(e.ilha)) continue; const dd = Math.hypot(e.x - jog.x, e.z - jog.z); if (dd < d) { d = dd; m = e; } } return m; }
 
@@ -821,12 +847,14 @@ function atualizarJogador(dt) {
   if (teclas.w || teclas.ArrowUp) iz += 1; if (teclas.s || teclas.ArrowDown) iz -= 1;
   if (teclas.a || teclas.ArrowLeft) ix -= 1; if (teclas.d || teclas.ArrowRight) ix += 1;
   if (teclas.q) camCtl.yaw += dt * 2;
+  if (joy.ativo) { ix += joy.x; iz += joy.y; }
   const n = Math.hypot(ix, iz), fx = -Math.sin(camCtl.yaw), fz = -Math.cos(camCtl.yaw), rx = -fz, rz = fx;
   let mx = 0, mz = 0;
   if (n) { mx = (fx * iz + rx * ix) / n; mz = (fz * iz + rz * ix) / n; }
-  const alvoVel = n ? (teclas.Shift ? 11 : 6.8) : 0;
+  const correr = teclas.Shift || (joy.ativo && n > .92);
+  const alvoVel = n > .08 ? (correr ? 11 : 6.8) * Math.min(1, Math.max(.45, n)) : 0;
   jog.vel = lerp(jog.vel, alvoVel, Math.min(1, dt * 10));
-  if (n) {
+  if (n > .08) {
     const nx = jog.x + mx * jog.vel * dt, nz = jog.z + mz * jog.vel * dt;
     if (pode(nx, nz)) { jog.x = nx; jog.z = nz; } else if (pode(nx, jog.z)) jog.x = nx; else if (pode(jog.x, nz)) jog.z = nz;
     const alvoRot = Math.atan2(mx, mz); let dr = alvoRot - jog.rot; dr = Math.atan2(Math.sin(dr), Math.cos(dr)); jog.rot += dr * Math.min(1, dt * 12);
@@ -845,7 +873,8 @@ function atualizarJogador(dt) {
   for (const fr of FRAGS) if (fr.mesh && (fr.espera || 0) < tempo && (fr.x - jog.x) ** 2 + (fr.z - jog.z) ** 2 < 1.8) { fr.espera = tempo + 4; abrirFragmento(fr); break; }
   // prompt
   const s = estacaoProxima(), pr = $('prompt');
-  if (s && !pausado) { pr.innerHTML = `<span class="tecla">E</span> ${s.premium ? '💎 Baú premium · ' + esc(s.topico.titulo) : s.pronto ? (est.feitas[s.topico.id] ? '✅ ' : '💬 ') + esc(s.topico.titulo) : '🚧 Estação em construção'}`; pr.classList.remove('oculto'); }
+  $('btFalar').classList.toggle('oculto', !(s && !pausado));
+  if (s && !pausado) { pr.innerHTML = `<span class="tecla">${TOQUE ? '👆' : 'E'}</span> ${s.premium ? '💎 Baú premium · ' + esc(s.topico.titulo) : s.pronto ? (est.feitas[s.topico.id] ? '✅ ' : '💬 ') + esc(s.topico.titulo) : '🚧 Estação em construção'}`; pr.classList.remove('oculto'); }
   else pr.classList.add('oculto');
   // NPCs olham para o jogador
   for (const e of ESTACOES) if (e.cabeca && e.grupo.visible && Math.hypot(e.x - jog.x, e.z - jog.z) < 7) e.grupo.rotation.y = lerp(e.grupo.rotation.y, Math.atan2(jog.x - e.x, jog.z - e.z), .1);
@@ -929,7 +958,7 @@ function comecar(novo) {
   ['perfil', 'acoes', 'diarias', 'minimapa', 'dica'].forEach(id => $(id).classList.remove('oculto'));
   $('dicaDemo').innerHTML = demo ? '<br><b style="color:var(--ouro)">Demo:</b> <b>P</b> +XP/evoluir · <b>U</b> desbloquear ilha · <b>T</b> teletransporte' : '';
   atualizarHud(); verificarConquistas(); salvar(); setInterval(salvar, 4000);
-  setTimeout(() => toast('🧬', `Bem-vindo(a), ${est.nome}!`, 'Fale com os personagens com ❗ para receber missões'), 1200);
+  setTimeout(() => toast('🧬', `Bem-vindo(a), ${est.nome}!`, TOQUE ? 'Use o joystick para andar e arraste a tela para girar a câmera' : 'Fale com os personagens com ❗ para receber missões'), 1200);
 }
 addEventListener('progresso-sincronizado', () => { if (!emJogo) telaInicial(EV.carregar()); });
 addEventListener('storage', e => { if (e.key === EV.CHAVE && est) { const novo = EV.carregar(); if (novo && novo.xp !== est.xp) { const a = nivelDe(est.xp); est.xp = novo.xp; est.aulas = novo.aulas; atualizarHud(); if (nivelDe(est.xp) > a) evoluir(formaDe(a), formaDe(nivelDe(est.xp)), nivelDe(est.xp)); } } });

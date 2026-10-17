@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
 <title>Evonauta | Expedição Vida</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@500;700;800&display=swap">
@@ -10,7 +10,27 @@
   :root { --vidro: rgba(16, 24, 40, .55); --vidro-borda: rgba(255,255,255,.16); --neon: #7CFFB2; --neon2: #6EC8FF; --roxo: #B388FF; --ouro: #FFD166; --txt: #F2F7FF; --sub: #B9C6DA; }
   * { box-sizing: border-box; }
   html, body { margin: 0; height: 100%; overflow: hidden; background: #0b1424; color: var(--txt); font-family: Nunito, system-ui, sans-serif; }
-  canvas#cena { position: fixed; inset: 0; width: 100vw; height: 100vh; display: block; }
+  canvas#cena { position: fixed; inset: 0; width: 100vw; height: 100vh; display: block; touch-action: none; }
+  html, body { overscroll-behavior: none; -webkit-user-select: none; user-select: none; -webkit-tap-highlight-color: transparent; }
+  /* controles de toque */
+  #toque { display: none; }
+  body.toque #toque { display: block; }
+  body.toque #dica, body.toque #bussola { display: none !important; }
+  #joy { position: fixed; left: 22px; bottom: calc(26px + env(safe-area-inset-bottom)); width: 150px; height: 150px; border-radius: 50%; background: rgba(255,255,255,.10); border: 2px solid rgba(255,255,255,.28); backdrop-filter: blur(6px); touch-action: none; z-index: 15; }
+  #joy .pino { position: absolute; left: 50%; top: 50%; width: 64px; height: 64px; margin: -32px 0 0 -32px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #ffffff, #b6ffd7 60%, #36D399); box-shadow: 0 6px 20px rgba(0,0,0,.35); transition: transform .06s; }
+  #joy.correndo { border-color: rgba(255,209,102,.8); }
+  .btt { position: fixed; z-index: 15; width: 74px; height: 74px; border-radius: 50%; border: 2px solid rgba(255,255,255,.35); background: rgba(16,24,40,.55); backdrop-filter: blur(8px); color: #fff; font-family: Fredoka, sans-serif; font-weight: 700; font-size: 13px; display: grid; place-items: center; text-align: center; line-height: 1.1; touch-action: none; }
+  .btt span { font-size: 26px; display: block; }
+  .btt:active { transform: scale(.92); background: rgba(255,255,255,.2); }
+  #btPular { right: 22px; bottom: calc(30px + env(safe-area-inset-bottom)); }
+  #btFalar { right: 108px; bottom: calc(66px + env(safe-area-inset-bottom)); background: linear-gradient(135deg, #fbbf24, #f59e0b); color: #2b1d00; border: none; }
+  #btFalar.oculto { display: none; }
+  body.toque #minimapa { top: 76px; bottom: auto; right: 12px; width: 112px; height: 112px; }
+  body.toque #prompt { bottom: calc(196px + env(safe-area-inset-bottom)); max-width: 86vw; font-size: 14px; pointer-events: auto; }
+  body.toque #perfil { transform: scale(.86); transform-origin: top left; }
+  body.toque #regiao { top: 196px; }
+  body.toque #regiao .r2 { font-size: 26px; }
+  body.toque #toasts { top: auto; bottom: calc(190px + env(safe-area-inset-bottom)); }
   .oculto { display: none !important; }
   .vidro { background: var(--vidro); backdrop-filter: blur(14px) saturate(140%); -webkit-backdrop-filter: blur(14px) saturate(140%); border: 1px solid var(--vidro-borda); border-radius: 18px; box-shadow: 0 10px 40px rgba(0,0,0,.35); }
   .titulo { font-family: Fredoka, Nunito, sans-serif; }
@@ -165,6 +185,11 @@
 <div id="prompt" class="vidro oculto"></div>
 <div id="dica" class="vidro oculto"><b>WASD</b> andar · <b>Shift</b> correr · <b>Espaço</b> pular · <b>arrastar o mouse</b> girar câmera · <b>roda</b> zoom · <b>E</b> interagir · <b>M</b> mapa<span id="dicaDemo"></span></div>
 <div id="toasts"></div>
+<div id="toque">
+  <div id="joy"><div class="pino"></div></div>
+  <button class="btt" id="btPular" aria-label="Pular"><div><span>⤒</span>Pular</div></button>
+  <button class="btt oculto" id="btFalar" aria-label="Falar"><div><span>💬</span>Falar</div></button>
+</div>
 <div id="combo"></div>
 <div id="veu" class="oculto"><div class="painel" id="painel"></div></div>
 <div id="evolucao" class="oculto"><div><div class="t1" id="ev1">EVOLUÇÃO!</div><div class="t2" id="ev2"></div></div></div>
