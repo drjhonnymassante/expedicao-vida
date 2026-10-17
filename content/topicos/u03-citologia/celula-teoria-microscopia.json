@@ -20,7 +20,7 @@
       "enunciado": "Ao comparar uma bactéria com uma célula do fígado humano, qual estrutura está presente APENAS na célula do fígado?",
       "alternativas": ["Carioteca (envelope nuclear)", "Ribossomos", "Membrana plasmática", "DNA", "Citoplasma"],
       "correta": 0,
-      "explicacao": "A carioteca delimita o núcleo, ausente nos procariontes, cujo DNA fica no nucleoide. Ribossomos, membrana plasmática, DNA e citoplasma existem em todas as células, procarióticas ou eucarióticas.",
+      "explicacao": "A carioteca (envelope nuclear) é a membrana dupla que delimita o núcleo, ausente nos procariontes, cujo DNA fica no nucleoide, região sem membrana. Ribossomos, membrana plasmática, DNA e citoplasma existem em todas as células, procarióticas ou eucarióticas.",
       "habilidade": "Diferenciar células procarióticas e eucarióticas.",
       "tags": ["procarionte", "eucarionte", "núcleo"]
     },
@@ -75,7 +75,7 @@
       "enunciado": "Durante a investigação de um surto, um laboratório de saúde pública precisa observar a forma e a estrutura de partículas virais com cerca de 100 nm de diâmetro. O laboratório dispõe de um microscópio óptico de boa qualidade, com resolução de aproximadamente 0,2 µm, e pode enviar amostras a um centro de pesquisa com microscópio eletrônico de transmissão. A decisão mais adequada é:",
       "alternativas": ["usar o microscópio óptico com a objetiva de maior aumento, pois o problema está apenas no aumento da imagem", "usar o microscópio óptico com corantes, pois a coloração permite separar estruturas menores que o limite de resolução", "enviar a amostra ao microscópio eletrônico, pois o vírus é menor que o limite de resolução do microscópio óptico", "usar o microscópio óptico, pois 100 nm equivalem a 100 µm, tamanho visível com lentes de vidro", "dispensar a microscopia, pois vírus não possuem estrutura definida"],
       "correta": 2,
-      "explicacao": "0,2 µm = 200 nm; uma partícula de 100 nm está abaixo do limite de resolução do microscópio óptico, que depende do comprimento de onda da luz. Aumentar a imagem ou usar corantes não supera esse limite. O feixe de elétrons tem resolução nanométrica. Além disso, 100 nm equivalem a 0,1 µm, e vírus têm estrutura definida (capsídeo, às vezes envelope).",
+      "explicacao": "0,2 µm = 200 nm; uma partícula de 100 nm está abaixo do limite de resolução do microscópio óptico comum, que depende do comprimento de onda da luz. Aumentar a imagem não supera esse limite, e os corantes aumentam o contraste, não a resolução. O microscópio eletrônico, que usa elétrons de comprimento de onda muito menor, distingue estruturas de cerca de 2 nm. Além disso, 100 nm equivalem a 0,1 µm (e não a 100 µm), e vírus têm estrutura definida (capsídeo, às vezes envelope).",
       "habilidade": "Selecionar o instrumento adequado com base em resolução e escala.",
       "tags": ["microscópio eletrônico", "resolução", "vírus", "unidades de medida"]
     },
@@ -108,7 +108,7 @@
       "enunciado": "Alguns antibióticos atuam ligando-se aos ribossomos bacterianos e bloqueando a síntese de proteínas, sem afetar os ribossomos do citoplasma das células humanas, que são maiores e estruturalmente diferentes. Ainda assim, o uso prolongado ou em doses elevadas de certos fármacos desse grupo pode prejudicar a síntese de proteínas em uma organela das células humanas. Essa organela e a explicação biológica para o efeito são:",
       "alternativas": ["o núcleo, porque é nele que os ribossomos citoplasmáticos são montados por completo e passam a funcionar", "o complexo golgiense, porque ele empacota as proteínas produzidas pelos ribossomos bacterianos", "os lisossomos, porque suas enzimas digestivas são produzidas por ribossomos semelhantes aos das bactérias", "as mitocôndrias, que têm DNA e ribossomos próprios semelhantes aos bacterianos, uma evidência da teoria endossimbiótica", "o retículo endoplasmático rugoso, porque seus ribossomos aderidos são idênticos aos bacterianos"],
       "correta": 3,
-      "explicacao": "Mitocôndrias têm DNA próprio e ribossomos parecidos com os de bactérias, coerentes com a hipótese de que se originaram de bactérias englobadas por uma célula ancestral (endossimbiose). Por isso podem ser afetadas por antibióticos que agem em ribossomos bacterianos. Os ribossomos aderidos ao retículo são do mesmo tipo dos ribossomos citoplasmáticos, e as enzimas lisossômicas são produzidas por eles. O complexo golgiense não recebe proteínas de ribossomos bacterianos, e o núcleo não é local de síntese proteica (as subunidades ribossômicas são montadas no nucléolo, mas funcionam no citoplasma).",
+      "explicacao": "Mitocôndrias têm duas membranas, DNA circular e ribossomos próprios parecidos com os de procariontes, coerentes com a teoria endossimbiótica: elas se originaram de procariontes englobados por uma célula ancestral. Por isso podem ser afetadas por antibióticos que agem em ribossomos bacterianos. Os ribossomos aderidos ao retículo são do mesmo tipo dos ribossomos citoplasmáticos, e as enzimas lisossômicas são produzidas por eles. O complexo golgiense não recebe proteínas de ribossomos bacterianos, e o núcleo não é local de síntese proteica (as subunidades ribossômicas são montadas no nucléolo, mas funcionam no citoplasma).",
       "habilidade": "Integrar diferenças entre procariontes e eucariontes, endossimbiose e farmacologia.",
       "tags": ["ribossomos", "mitocôndrias", "endossimbiose", "antibióticos", "integração"]
     }
@@ -121,14 +121,15 @@
     { "id": "celula-teoria-microscopia-f05", "frente": "Quantos nanômetros há em 1 micrômetro? E quantos micrômetros em 1 milímetro?", "verso": "1 µm = 1.000 nm; 1 mm = 1.000 µm." },
     { "id": "celula-teoria-microscopia-f06", "frente": "Como se calcula o aumento total de um microscópio óptico?", "verso": "Multiplicando o aumento da ocular pelo da objetiva (ex.: 10× × 40× = 400×)." },
     { "id": "celula-teoria-microscopia-f07", "frente": "O que é poder de resolução?", "verso": "A menor distância entre dois pontos que ainda aparecem separados na imagem." },
-    { "id": "celula-teoria-microscopia-f08", "frente": "Limite de resolução aproximado do microscópio óptico", "verso": "Cerca de 0,2 µm (200 nm), imposto pelo comprimento de onda da luz visível." },
+    { "id": "celula-teoria-microscopia-f08", "frente": "Limite de resolução aproximado do microscópio óptico", "verso": "Cerca de 0,2 µm (200 nm), imposto pelo comprimento de onda da luz visível. O eletrônico chega a cerca de 2 nm na prática." },
     { "id": "celula-teoria-microscopia-f09", "frente": "MET x MEV", "verso": "MET (transmissão): cortes ultrafinos, mostra o interior da célula. MEV (varredura): mostra a superfície com aspecto tridimensional." },
-    { "id": "celula-teoria-microscopia-f10", "frente": "Por que o microscópio eletrônico não observa células vivas?", "verso": "A amostra precisa ser fixada e colocada em vácuo para o feixe de elétrons, o que mata as células." },
+    { "id": "celula-teoria-microscopia-f10", "frente": "Por que o microscópio eletrônico não observa células vivas?", "verso": "Porque a preparação da amostra (fixação, cortes, metais pesados) e o vácuo necessário ao feixe de elétrons destroem as células." },
     { "id": "celula-teoria-microscopia-f11", "frente": "Onde fica o DNA de uma bactéria?", "verso": "No nucleoide, região do citoplasma sem membrana; pode haver também plasmídeos." },
-    { "id": "celula-teoria-microscopia-f12", "frente": "Quatro componentes presentes em TODAS as células", "verso": "Membrana plasmática, citoplasma, ribossomos e DNA." },
+    { "id": "celula-teoria-microscopia-f12", "frente": "Quatro componentes presentes em TODAS as células", "verso": "Membrana plasmática, citoplasma (citosol), ribossomos e DNA (em cromossomos)." },
     { "id": "celula-teoria-microscopia-f13", "frente": "Três estruturas típicas da célula vegetal ausentes na animal", "verso": "Parede de celulose, plastos (cloroplastos) e vacúolo central grande." },
     { "id": "celula-teoria-microscopia-f14", "frente": "Reserva energética típica de plantas e de animais", "verso": "Plantas armazenam amido; animais (e fungos) armazenam glicogênio." },
-    { "id": "celula-teoria-microscopia-f15", "frente": "O que acontece com a razão superfície/volume quando uma célula cresce?", "verso": "Diminui, porque o volume cresce mais rápido (ao cubo) que a superfície (ao quadrado)." }
+    { "id": "celula-teoria-microscopia-f15", "frente": "O que acontece com a razão superfície/volume quando uma célula cresce?", "verso": "Diminui, porque o volume cresce mais rápido (ao cubo) que a superfície (ao quadrado)." },
+    { "id": "celula-teoria-microscopia-f16", "frente": "Corar uma lâmina melhora a resolução do microscópio?", "verso": "Não. O corante aumenta o contraste (diferença entre áreas claras e escuras); a resolução depende do comprimento de onda usado." }
   ],
   "minijogos": {
     "pares": [
@@ -150,7 +151,7 @@
       "categorias": ["Só em procariontes", "Só em eucariontes", "Em procariontes e eucariontes"],
       "itens": [
         { "texto": "Nucleoide", "categoria": "Só em procariontes" },
-        { "texto": "Parede de peptidoglicano", "categoria": "Só em procariontes" },
+        { "texto": "Parede de peptidoglicano (bactérias)","categoria": "Só em procariontes" },
         { "texto": "Carioteca", "categoria": "Só em eucariontes" },
         { "texto": "Mitocôndrias", "categoria": "Só em eucariontes" },
         { "texto": "Retículo endoplasmático", "categoria": "Só em eucariontes" },
@@ -167,10 +168,10 @@
       { "afirmacao": "Hooke observou células vivas na cortiça.", "valor": false, "explicacao": "A cortiça é formada por células mortas; Hooke viu apenas as paredes celulares." },
       { "afirmacao": "Segundo a teoria celular, toda célula se origina de outra célula.", "valor": true, "explicacao": "É o postulado popularizado por Virchow: omnis cellula e cellula." },
       { "afirmacao": "Um vírus de 100 nm pode ser visto em detalhes no microscópio óptico comum.", "valor": false, "explicacao": "100 nm está abaixo do limite de resolução do microscópio óptico (cerca de 200 nm)." },
-      { "afirmacao": "As cores das imagens de microscopia eletrônica são acrescentadas artificialmente.", "valor": true, "explicacao": "O microscópio eletrônico gera imagens em tons de cinza; as cores são colorização." },
+      { "afirmacao": "As cores das imagens de microscopia eletrônica são acrescentadas artificialmente.", "valor": true, "explicacao": "O microscópio eletrônico gera imagens em preto e branco; as cores são acrescentadas depois para destacar estruturas." },
       { "afirmacao": "Bactérias não possuem ribossomos.", "valor": false, "explicacao": "Todas as células têm ribossomos; os bacterianos são menores que os eucarióticos." },
       { "afirmacao": "Células vegetais possuem mitocôndrias e realizam respiração celular.", "valor": true, "explicacao": "Plantas têm cloroplastos e mitocôndrias; respiram de dia e de noite." },
-      { "afirmacao": "A parede celular é uma estrutura exclusiva das plantas.", "valor": false, "explicacao": "Fungos (quitina) e bactérias (peptidoglicano) também têm parede celular." },
+      { "afirmacao": "A parede celular é uma estrutura exclusiva das plantas.", "valor": false, "explicacao": "Fungos (quitina) e a maioria das bactérias (peptidoglicano) também têm parede celular; as arqueas têm parede sem peptidoglicano." },
       { "afirmacao": "1 milímetro equivale a 1.000 micrômetros.", "valor": true, "explicacao": "Cada unidade (mm, µm, nm) é mil vezes maior que a seguinte." },
       { "afirmacao": "Quanto maior a célula, maior a sua razão superfície/volume.", "valor": false, "explicacao": "É o contrário: o volume cresce mais depressa que a superfície, e a razão diminui." },
       { "afirmacao": "Animais grandes, como bois, costumam ter mais células, e não células muito maiores, que animais pequenos.", "valor": true, "explicacao": "O tamanho das células é limitado pela razão superfície/volume; o organismo cresce aumentando o número de células." }

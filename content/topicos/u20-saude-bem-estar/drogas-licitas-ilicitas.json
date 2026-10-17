@@ -34,7 +34,7 @@
         "é o principal componente cancerígeno do alcatrão"
       ],
       "correta": 0,
-      "explicacao": "O CO forma carboxiemoglobina, ocupando o lugar do oxigênio na hemoglobina. A dependência é causada pela nicotina, os cancerígenos estão no alcatrão e a fumaça prejudica, e não estimula, os cílios.",
+      "explicacao": "O CO forma carboxi-hemoglobina, ocupando o lugar do oxigênio na hemoglobina. A dependência é causada pela nicotina, os cancerígenos estão no alcatrão e a fumaça prejudica, e não estimula, os cílios.",
       "habilidade": "Relacionar componentes do tabaco a seus efeitos.",
       "tags": [
         "tabaco",
@@ -54,7 +54,7 @@
         "dependência psicológica"
       ],
       "correta": 2,
-      "explicacao": "Tolerância é a adaptação do organismo que reduz o efeito de uma mesma dose. Abstinência são os sintomas na falta da droga; dependência psicológica é o desejo intenso de usar; redução de danos é uma estratégia de saúde pública.",
+      "explicacao": "Tolerância é a adaptação do organismo que reduz o efeito de uma mesma dose; um exemplo é o aumento do retículo endoplasmático liso e de suas enzimas de desintoxicação no fígado, que passa a eliminar a droga mais rápido. Abstinência são os sintomas na falta da droga; dependência psicológica é o desejo intenso de usar; redução de danos é uma estratégia de saúde pública.",
       "habilidade": "Diferenciar tolerância, dependência e abstinência.",
       "tags": [
         "tolerância",
@@ -194,10 +194,10 @@
         "O CO do cigarro prejudica o feto porque oxida o ferro da hemoglobina, formando metemoglobina, enquanto o etanol fica retido na placenta.",
         "A nicotina dilata os vasos da placenta e aumenta o fluxo de sangue ao feto, o que explica o maior risco de bebês muito grandes ao nascer.",
         "A hemoglobina fetal, por ter maior afinidade pelo O₂ que a materna, torna o feto imune aos efeitos do monóxido de carbono.",
-        "O etanol atravessa a placenta e pode causar a síndrome alcoólica fetal, enquanto o CO forma carboxiemoglobina e reduz a oferta de O₂ ao feto, e a nicotina contrai vasos, contribuindo para baixo peso ao nascer."
+        "O etanol atravessa a placenta e pode causar a síndrome alcoólica fetal, enquanto o CO forma carboxi-hemoglobina e reduz a oferta de O₂ ao feto, e a nicotina contrai vasos, contribuindo para baixo peso ao nascer."
       ],
       "correta": 4,
-      "explicacao": "A placenta não barra moléculas pequenas como etanol, CO e nicotina. O fígado fetal tem pouca capacidade de metabolizar o etanol, que pode lesar o desenvolvimento, sobretudo do sistema nervoso, em qualquer fase da gestação (síndrome alcoólica fetal); não existe dose segura. O CO forma carboxiemoglobina (não metemoglobina) também no sangue fetal, e a hemoglobina fetal não protege contra ele. A nicotina causa vasoconstrição, e não vasodilatação, reduzindo oxigênio e nutrientes e favorecendo o baixo peso ao nascer.",
+      "explicacao": "A placenta não barra moléculas pequenas como etanol, CO e nicotina. O fígado fetal tem pouca capacidade de metabolizar o etanol, que pode lesar o desenvolvimento, sobretudo do sistema nervoso (síndrome alcoólica fetal). O risco é maior no primeiro trimestre, durante a organogênese, e não se restringe a ele: não existe fase nem dose segura. O CO forma carboxi-hemoglobina (não metemoglobina) também no sangue fetal, e a hemoglobina fetal não protege contra ele. A nicotina causa vasoconstrição, e não vasodilatação, reduzindo oxigênio e nutrientes e favorecendo o baixo peso ao nascer.",
       "habilidade": "Integrar placenta, transporte de gases e efeitos de drogas no desenvolvimento.",
       "tags": [
         "gestação",
@@ -266,7 +266,7 @@
     {
       "id": "drogas-licitas-ilicitas-f12",
       "frente": "Sistema de recompensa",
-      "verso": "Via que leva dopamina da área tegmentar ventral ao núcleo accumbens, gerando prazer e motivação."
+      "verso": "Circuito em que neurônios da área tegmentar ventral liberam dopamina em regiões como o núcleo accumbens, dando motivação para ações ligadas à sobrevivência e à reprodução."
     },
     {
       "id": "drogas-licitas-ilicitas-f13",
@@ -282,6 +282,11 @@
       "id": "drogas-licitas-ilicitas-f15",
       "frente": "O que é redução de danos?",
       "verso": "Estratégia de saúde pública que diminui prejuízos do uso de drogas sem exigir abstinência imediata."
+    },
+    {
+      "id": "drogas-licitas-ilicitas-f16",
+      "frente": "Como nicotina e opioides aumentam a dopamina no sistema de recompensa?",
+      "verso": "Nicotina: estimula os neurônios da área tegmentar ventral a liberarem dopamina. Opioides: imitam as endorfinas e reduzem a atividade de neurônios inibidores desse circuito."
     }
   ],
   "minijogos": {
@@ -296,7 +301,7 @@
       },
       {
         "a": "Monóxido de carbono",
-        "b": "Carboxiemoglobina"
+        "b": "Carboxi-hemoglobina"
       },
       {
         "a": "Cocaína",
@@ -397,7 +402,7 @@
       {
         "afirmacao": "A nicotina é a principal responsável pela dependência do cigarro.",
         "valor": true,
-        "explicacao": "Ela estimula a liberação de dopamina no sistema de recompensa."
+        "explicacao": "Ela se liga a receptores de acetilcolina e estimula a liberação de dopamina no sistema de recompensa."
       },
       {
         "afirmacao": "Cigarros eletrônicos liberam apenas vapor de água.",

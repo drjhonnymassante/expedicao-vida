@@ -7,170 +7,448 @@
       "nivel": "bronze",
       "tipo": "multipla_escolha",
       "enunciado": "Os meristemas são tecidos vegetais caracterizados por células:",
-      "alternativas": ["mortas, com parede espessa e lignificada", "grandes, com um vacúolo central que ocupa quase todo o citoplasma", "pequenas, indiferenciadas, de parede fina e com alta taxa de divisão celular", "anucleadas, ligadas por placas crivadas", "achatadas, revestidas por uma cutícula de cutina"],
+      "alternativas": [
+        "mortas, com parede espessa e lignificada",
+        "grandes, com um vacúolo central que ocupa quase todo o citoplasma",
+        "pequenas, indiferenciadas, de parede fina e com alta taxa de divisão celular",
+        "anucleadas, ligadas por placas crivadas",
+        "achatadas, revestidas por uma cutícula de cutina"
+      ],
       "correta": 2,
       "explicacao": "Células meristemáticas são pequenas, de núcleo grande, parede fina e poucos vacúolos, e se dividem muito por mitose. Parede lignificada é do esclerênquima e do xilema; vacúolo grande é típico do parênquima; placas crivadas são do floema; cutícula é produzida pela epiderme.",
       "habilidade": "Reconhecer as características dos meristemas.",
-      "tags": ["meristemas"]
+      "tags": [
+        "meristemas"
+      ]
     },
     {
       "id": "histologia-vegetal-q02",
       "nivel": "bronze",
       "tipo": "multipla_escolha",
       "enunciado": "O tecido responsável por conduzir água e sais minerais da raiz até as folhas é o:",
-      "alternativas": ["xilema", "floema", "colênquima", "parênquima aerífero", "felogênio"],
+      "alternativas": [
+        "xilema",
+        "floema",
+        "colênquima",
+        "parênquima aerífero",
+        "felogênio"
+      ],
       "correta": 0,
       "explicacao": "O xilema conduz a seiva bruta (água e sais minerais) em sentido ascendente. O floema conduz a seiva elaborada (açúcares). Colênquima sustenta, o aerênquima armazena ar e o felogênio é um meristema que forma a periderme.",
       "habilidade": "Identificar a função dos tecidos condutores.",
-      "tags": ["xilema", "seiva bruta"]
+      "tags": [
+        "xilema",
+        "seiva bruta"
+      ]
     },
     {
       "id": "histologia-vegetal-q03",
       "nivel": "bronze",
       "tipo": "multipla_escolha",
       "enunciado": "Na folha, o tecido rico em cloroplastos que forma o mesofilo e realiza a maior parte da fotossíntese é o:",
-      "alternativas": ["súber", "esclerênquima", "parênquima amilífero", "xilema secundário", "parênquima clorofiliano"],
+      "alternativas": [
+        "súber",
+        "esclerênquima",
+        "parênquima amilífero",
+        "xilema secundário",
+        "parênquima clorofiliano"
+      ],
       "correta": 4,
       "explicacao": "O parênquima clorofiliano (paliçádico e lacunoso) forma o mesofilo e concentra os cloroplastos. O súber e o esclerênquima são formados por células mortas; o parênquima amilífero armazena amido; o xilema conduz seiva bruta.",
       "habilidade": "Associar o parênquima clorofiliano à fotossíntese.",
-      "tags": ["parênquima", "folha", "fotossíntese"]
+      "tags": [
+        "parênquima",
+        "folha",
+        "fotossíntese"
+      ]
     },
     {
       "id": "histologia-vegetal-q04",
       "nivel": "prata",
       "tipo": "multipla_escolha",
       "enunciado": "Ao quebrar um talo de salsão, é possível puxar \"fiapos\" resistentes, mas flexíveis. Já o caroço do pêssego é extremamente duro. Esses dois exemplos correspondem, respectivamente, a:",
-      "alternativas": ["esclerênquima com fibras vivas e colênquima com células mortas", "colênquima, de células vivas com parede de celulose e pectina, e esclerênquima, de células mortas com parede lignificada", "parênquima aquífero e parênquima amilífero", "xilema primário e floema primário", "epiderme com cutícula e periderme com súber"],
+      "alternativas": [
+        "esclerênquima com fibras vivas e colênquima com células mortas",
+        "colênquima, de células vivas com parede de celulose e pectina, e esclerênquima, de células mortas com parede lignificada",
+        "parênquima aquífero e parênquima amilífero",
+        "xilema primário e floema primário",
+        "epiderme com cutícula e periderme com súber"
+      ],
       "correta": 1,
       "explicacao": "O colênquima tem células vivas com parede primária espessada por celulose e pectina, o que dá resistência com flexibilidade. O caroço do pêssego é formado por esclereídes, células de esclerênquima mortas com parede secundária lignificada. A primeira alternativa inverte as características dos dois tecidos.",
       "habilidade": "Diferenciar colênquima e esclerênquima.",
-      "tags": ["sustentação", "colênquima", "esclerênquima"]
+      "tags": [
+        "sustentação",
+        "colênquima",
+        "esclerênquima"
+      ]
     },
     {
       "id": "histologia-vegetal-q05",
       "nivel": "prata",
       "tipo": "multipla_escolha",
       "enunciado": "Os elementos de tubo crivado do floema das angiospermas perdem o núcleo durante a diferenciação, mas permanecem vivos e funcionais. Isso é possível porque:",
-      "alternativas": ["recebem seiva bruta diretamente do xilema, que os mantém vivos", "possuem parede lignificada que dispensa o metabolismo celular", "realizam fotossíntese intensa durante o transporte", "estão associados a células companheiras nucleadas, que controlam seu metabolismo e o carregamento de açúcares", "são renovados a cada hora pelo felogênio"],
+      "alternativas": [
+        "recebem seiva bruta diretamente do xilema, que os mantém vivos",
+        "possuem parede lignificada que dispensa o metabolismo celular",
+        "realizam fotossíntese intensa durante o transporte",
+        "estão associados a células companheiras nucleadas, que controlam seu metabolismo e o carregamento de açúcares",
+        "são renovados a cada hora pelo felogênio"
+      ],
       "correta": 3,
-      "explicacao": "As células companheiras, nucleadas e ricas em mitocôndrias, assumem funções que o elemento crivado não realiza sem núcleo. Elementos crivados não são lignificados nem fotossintetizantes, e o felogênio forma a periderme, não o floema.",
+      "explicacao": "As células companheiras, nucleadas e ligadas ao elemento crivado por numerosos plasmodesmos, têm núcleo e ribossomos que atendem também o elemento crivado vizinho e, nas folhas, ajudam a carregar açúcares para dentro do tubo. Elementos crivados não são lignificados nem fotossintetizantes, não são mantidos pela seiva do xilema, e o felogênio forma a periderme, não o floema.",
       "habilidade": "Relacionar a estrutura do floema à sua função.",
-      "tags": ["floema", "células companheiras"]
+      "tags": [
+        "floema",
+        "células companheiras"
+      ]
     },
     {
       "id": "histologia-vegetal-q06",
       "nivel": "prata",
       "tipo": "multipla_escolha",
       "enunciado": "O tronco de uma árvore de ipê fica mais grosso a cada ano. O meristema responsável pela formação da madeira e o local onde ela é produzida são:",
-      "alternativas": ["o câmbio vascular, que produz xilema secundário para o lado interno", "o felogênio, que produz súber para o lado interno", "o meristema apical, que produz floema primário para o lado externo", "o câmbio vascular, que produz floema secundário para o lado interno", "a protoderme, que produz epiderme para o lado externo"],
+      "alternativas": [
+        "o câmbio vascular, que produz xilema secundário para o lado interno",
+        "o felogênio, que produz súber para o lado interno",
+        "o meristema apical, que produz floema primário para o lado externo",
+        "o câmbio vascular, que produz floema secundário para o lado interno",
+        "a protoderme, que produz epiderme para o lado externo"
+      ],
       "correta": 0,
-      "explicacao": "A madeira é o xilema secundário, produzido pelo câmbio vascular para dentro; o floema secundário é produzido para fora. O felogênio forma súber para fora (e feloderme para dentro). Meristemas apicais e protoderme atuam no crescimento primário, em comprimento.",
+      "explicacao": "A madeira é o xilema secundário, produzido pelo câmbio vascular (um meristema lateral) para dentro; o floema secundário é produzido para fora. O felogênio forma súber para fora (e feloderme para dentro). Meristemas apicais e protoderme atuam no crescimento primário, em comprimento.",
       "habilidade": "Relacionar meristemas secundários ao crescimento em espessura.",
-      "tags": ["câmbio vascular", "crescimento secundário", "madeira"]
+      "tags": [
+        "câmbio vascular",
+        "crescimento secundário",
+        "madeira"
+      ]
     },
     {
       "id": "histologia-vegetal-q07",
       "nivel": "ouro",
       "tipo": "multipla_escolha",
       "enunciado": "No Cerrado, incêndios no período seco são frequentes. Após uma queimada, muitas árvores nativas, como o pau-santo, têm a superfície da casca chamuscada, mas logo voltam a brotar. Nesses troncos, a casca é muito espessa, leve e esponjosa, e suas células externas estão mortas e impregnadas de uma substância impermeável. A característica descrita contribui para a sobrevivência dessas árvores porque:",
-      "alternativas": ["a epiderme espessa, rica em cloroplastos, reinicia rapidamente a fotossíntese após o fogo", "o colênquima da casca, formado por células vivas, regenera os tecidos queimados", "o súber, produzido pelo felogênio e formado por células mortas suberificadas, funciona como isolante térmico e protege o câmbio vascular e as gemas", "o xilema da casca armazena água, que apaga o fogo ao evaporar", "o parênquima aerífero da casca impede a entrada de oxigênio e abafa as chamas"],
+      "alternativas": [
+        "a epiderme espessa, rica em cloroplastos, reinicia rapidamente a fotossíntese após o fogo",
+        "o colênquima da casca, formado por células vivas, regenera os tecidos queimados",
+        "o súber, produzido pelo felogênio e formado por células mortas suberificadas, funciona como isolante térmico e protege o câmbio vascular e as gemas",
+        "o xilema da casca armazena água, que apaga o fogo ao evaporar",
+        "o parênquima aerífero da casca impede a entrada de oxigênio e abafa as chamas"
+      ],
       "correta": 2,
       "explicacao": "A casca espessa descrita é o súber (cortiça), parte da periderme formada pelo felogênio. Suas células mortas, cheias de ar e com suberina, conduzem mal o calor e protegem os tecidos vivos internos, como o câmbio. Em troncos grossos a epiderme já foi substituída pela periderme; colênquima não forma casca; o xilema fica dentro do câmbio; aerênquima é típico de plantas aquáticas.",
       "habilidade": "Interpretar adaptação de plantas do Cerrado com base nos tecidos de revestimento.",
-      "tags": ["periderme", "súber", "Cerrado", "fogo"]
+      "tags": [
+        "periderme",
+        "súber",
+        "Cerrado",
+        "fogo"
+      ]
     },
     {
       "id": "histologia-vegetal-q08",
       "nivel": "ouro",
       "tipo": "multipla_escolha",
       "enunciado": "Em áreas de várzea da Amazônia e no Pantanal, o solo permanece encharcado durante meses, e a água parada contém pouco oxigênio dissolvido. Plantas como o aguapé e muitas espécies de várzea apresentam, em caules, pecíolos e raízes, um tecido com grandes espaços intercelulares interligados. A vantagem adaptativa desse tecido é:",
-      "alternativas": ["armazenar amido para a planta sobreviver sem fotossíntese durante a cheia", "acumular água para os períodos de seca prolongada", "impedir a entrada de água nas raízes, evitando o encharcamento das células", "aumentar a rigidez do caule pela deposição de lignina", "permitir a circulação de gases, levando oxigênio às partes submersas e favorecendo a flutuação"],
+      "alternativas": [
+        "armazenar amido para a planta sobreviver sem fotossíntese durante a cheia",
+        "acumular água para os períodos de seca prolongada",
+        "impedir a entrada de água nas raízes, evitando o encharcamento das células",
+        "aumentar a rigidez do caule pela deposição de lignina",
+        "permitir a circulação de gases, levando oxigênio às partes submersas e favorecendo a flutuação"
+      ],
       "correta": 4,
       "explicacao": "O tecido é o aerênquima. Seus espaços com ar levam oxigênio às partes submersas, permitindo a respiração celular das raízes, e ajudam a planta a flutuar. Amido é guardado no parênquima amilífero; água, no aquífero; lignina é do esclerênquima; o tecido não impede a absorção de água.",
       "habilidade": "Relacionar o parênquima aerífero à adaptação a ambientes alagados.",
-      "tags": ["aerênquima", "parênquima", "ambientes alagados"]
+      "tags": [
+        "aerênquima",
+        "parênquima",
+        "ambientes alagados"
+      ]
     },
     {
       "id": "histologia-vegetal-q09",
       "nivel": "ouro",
       "tipo": "multipla_escolha",
       "enunciado": "O sisal é cultivado no semiárido baiano, onde suas folhas são processadas para extrair fibras usadas em cordas, tapetes e artesanato. Essas fibras são longas, muito resistentes à tração e não apodrecem com facilidade. Do ponto de vista histológico, as fibras de sisal são:",
-      "alternativas": ["células de parênquima clorofiliano, ricas em cloroplastos", "células de esclerênquima, mortas na maturidade e com parede secundária espessa e lignificada", "células de colênquima, vivas e com parede de pectina", "elementos de tubo crivado, vivos e anucleados", "células-guarda dos estômatos, alongadas para reduzir a transpiração"],
+      "alternativas": [
+        "células de parênquima clorofiliano, ricas em cloroplastos",
+        "células de esclerênquima, mortas na maturidade e com parede secundária espessa e lignificada",
+        "células de colênquima, vivas e com parede de pectina",
+        "elementos de tubo crivado, vivos e anucleados",
+        "células-guarda dos estômatos, alongadas para reduzir a transpiração"
+      ],
       "correta": 1,
-      "explicacao": "Fibras são células do esclerênquima: alongadas, mortas na maturidade e com parede secundária lignificada, daí a resistência e a durabilidade. O colênquima tem células vivas e sem lignina; parênquima clorofiliano, tubos crivados e células-guarda não formam fibras de uso têxtil.",
+      "explicacao": "Fibras são células do esclerênquima: longas, afiladas, mortas na maturidade e com parede secundária espessa e rica em lignina, polímero resistente e difícil de degradar, daí a resistência e a durabilidade. O colênquima tem células vivas e sem lignina; parênquima clorofiliano, tubos crivados e células-guarda não formam fibras de uso têxtil.",
       "habilidade": "Associar uso econômico de um produto vegetal ao tecido de origem.",
-      "tags": ["esclerênquima", "fibras", "economia"]
+      "tags": [
+        "esclerênquima",
+        "fibras",
+        "economia"
+      ]
     },
     {
       "id": "histologia-vegetal-q10",
       "nivel": "diamante",
       "tipo": "multipla_escolha",
       "enunciado": "Um agricultor retirou um anel completo de casca, com cerca de 3 cm de largura, do tronco de uma mangueira adulta (eudicotiledônea), sem atingir a madeira. Semanas depois, formou-se um inchaço na borda superior do corte, e a árvore, após alguns meses, morreu. Em outro terreno, um corte superficial de mesma largura em volta do estipe de um coqueiro (monocotiledônea) não matou a planta. A explicação que integra corretamente a anatomia e a fisiologia dessas plantas é:",
-      "alternativas": ["Na mangueira, a retirada da casca eliminou o xilema, interrompendo a subida de água; as folhas murcharam em poucas horas e a fotossíntese parou", "Na mangueira, o felogênio passou a produzir xilema no lugar do súber; no coqueiro, o câmbio vascular regenerou o anel", "Na mangueira, a casca removida continha o floema secundário; a seiva elaborada acumulou-se acima do anel e as raízes, sem açúcares para a respiração celular, perderam a capacidade de produzir ATP e de absorver nutrientes; no coqueiro, os feixes vasculares ficam dispersos pelo estipe, e o corte superficial não interrompeu todo o floema", "As duas plantas têm a mesma organização dos tecidos condutores; o coqueiro sobreviveu porque faz fotossíntese no estipe", "Na mangueira, o corte expôs o cerne, que passou a perder água por transpiração; no coqueiro, a cutícula do estipe impediu essa perda"],
+      "alternativas": [
+        "Na mangueira, a retirada da casca eliminou o xilema, interrompendo a subida de água; as folhas murcharam em poucas horas e a planta morreu por desidratação",
+        "Na mangueira, o felogênio passou a produzir xilema no lugar do súber; no coqueiro, o câmbio vascular regenerou o anel",
+        "Na mangueira, a casca removida continha o floema secundário; a seiva elaborada acumulou-se acima do anel e as raízes, sem açúcares para a respiração celular, perderam a capacidade de produzir ATP e de absorver nutrientes; no coqueiro, os feixes vasculares ficam dispersos pelo estipe, e o corte superficial não interrompeu todo o floema",
+        "As duas plantas têm a mesma organização dos tecidos condutores; o coqueiro sobreviveu porque faz fotossíntese no estipe",
+        "Na mangueira, o corte expôs o cerne, que passou a perder água por transpiração; no coqueiro, a cutícula do estipe impediu essa perda"
+      ],
       "correta": 2,
-      "explicacao": "Em eudicotiledôneas lenhosas, o floema secundário fica na casca, por fora do câmbio; o xilema (madeira), por dentro. O anelamento interrompe só a seiva elaborada: os açúcares se acumulam acima do corte (inchaço) e as raízes, sem energia para a respiração e para o transporte ativo de íons, morrem, levando a planta à morte, enquanto a água continua subindo por algum tempo. Em monocotiledôneas como o coqueiro, os feixes com xilema e floema estão espalhados pelo estipe, e um corte superficial não remove todo o floema. As demais erram: o xilema não foi retirado, coqueiros não têm câmbio típico, a organização dos tecidos difere entre os grupos e o cerne não transpira.",
+      "explicacao": "Em eudicotiledôneas lenhosas, a casca é tudo o que fica por fora do câmbio vascular, incluindo o floema secundário; o xilema (madeira) fica por dentro. O anelamento interrompe só a seiva elaborada: os açúcares se acumulam acima do corte (inchaço) e as raízes, sem açúcar novo, consomem suas reservas; depois de semanas, sem energia para a respiração e para o transporte ativo de íons, morrem, e a planta morre lentamente, enquanto a água continua subindo. Em monocotiledôneas como o coqueiro, os feixes com xilema e floema estão espalhados pelo estipe, e um corte superficial não remove todo o floema. As demais erram: o xilema não foi retirado (por isso a morte não foi rápida), coqueiros não têm câmbio típico, a organização dos tecidos difere entre os grupos e o cerne não transpira.",
       "habilidade": "Integrar histologia vegetal, transporte de seivas e respiração celular para explicar um experimento.",
-      "tags": ["anel de Malpighi", "floema", "monocotiledôneas", "respiração celular", "integração"]
+      "tags": [
+        "anel de Malpighi",
+        "floema",
+        "monocotiledôneas",
+        "respiração celular",
+        "integração"
+      ]
     }
   ],
   "flashcards": [
-    { "id": "histologia-vegetal-f01", "frente": "Características das células meristemáticas", "verso": "Pequenas, indiferenciadas, de parede fina, núcleo grande, poucos vacúolos e alta taxa de mitose." },
-    { "id": "histologia-vegetal-f02", "frente": "Meristemas primários: onde estão e o que fazem?", "verso": "Nos ápices do caule e da raiz; promovem o crescimento em comprimento (crescimento primário)." },
-    { "id": "histologia-vegetal-f03", "frente": "Quais são os dois meristemas secundários?", "verso": "Câmbio vascular e felogênio. Ambos promovem o crescimento em espessura." },
-    { "id": "histologia-vegetal-f04", "frente": "O que o câmbio vascular produz?", "verso": "Xilema secundário para dentro (madeira) e floema secundário para fora." },
-    { "id": "histologia-vegetal-f05", "frente": "O que o felogênio produz?", "verso": "Súber para fora e feloderme para dentro. O conjunto forma a periderme." },
-    { "id": "histologia-vegetal-f06", "frente": "Função da cutícula", "verso": "Película de cutina secretada pela epiderme que reduz a perda de água." },
-    { "id": "histologia-vegetal-f07", "frente": "Estrutura de um estômato", "verso": "Duas células-guarda, com cloroplastos, que delimitam uma abertura chamada ostíolo." },
-    { "id": "histologia-vegetal-f08", "frente": "Parênquima paliçádico x lacunoso", "verso": "Paliçádico: células alongadas e unidas, sob a epiderme superior. Lacunoso: células irregulares com espaços para circulação de gases." },
-    { "id": "histologia-vegetal-f09", "frente": "Exemplos de parênquima de reserva", "verso": "Amilífero (mandioca, batata), aquífero (mandacaru, cactos) e reserva de sacarose (cana-de-açúcar)." },
-    { "id": "histologia-vegetal-f10", "frente": "Parênquima aerífero (aerênquima)", "verso": "Tem grandes espaços com ar; garante flutuação e oxigenação de partes submersas. Ex.: aguapé, vitória-régia." },
-    { "id": "histologia-vegetal-f11", "frente": "Colênquima", "verso": "Células vivas, parede primária espessada com celulose e pectina; resistente e flexível. Ex.: fiapos do salsão." },
-    { "id": "histologia-vegetal-f12", "frente": "Esclerênquima", "verso": "Células geralmente mortas, parede secundária lignificada e rígida. Tipos: fibras e esclereídes." },
-    { "id": "histologia-vegetal-f13", "frente": "Células condutoras do xilema", "verso": "Traqueídes e elementos de vaso: mortos, ocos e lignificados. Conduzem seiva bruta da raiz às folhas." },
-    { "id": "histologia-vegetal-f14", "frente": "Células do floema das angiospermas", "verso": "Elementos de tubo crivado (vivos, sem núcleo, com placas crivadas) e células companheiras (nucleadas)." }
+    {
+      "id": "histologia-vegetal-f01",
+      "frente": "Características das células meristemáticas",
+      "verso": "Pequenas, indiferenciadas, de parede fina, núcleo grande, poucos vacúolos e alta taxa de mitose."
+    },
+    {
+      "id": "histologia-vegetal-f02",
+      "frente": "Meristemas primários: onde estão e o que fazem?",
+      "verso": "Também chamados de meristemas apicais: ficam nos ápices do caule e da raiz e promovem o crescimento em comprimento (crescimento primário)."
+    },
+    {
+      "id": "histologia-vegetal-f03",
+      "frente": "Quais são os dois meristemas secundários?",
+      "verso": "Câmbio vascular e felogênio (meristemas laterais). Ambos promovem o crescimento em espessura."
+    },
+    {
+      "id": "histologia-vegetal-f04",
+      "frente": "O que o câmbio vascular produz?",
+      "verso": "Xilema secundário para dentro (madeira) e floema secundário para fora."
+    },
+    {
+      "id": "histologia-vegetal-f05",
+      "frente": "O que o felogênio produz?",
+      "verso": "Súber para fora e feloderme para dentro. O conjunto forma a periderme."
+    },
+    {
+      "id": "histologia-vegetal-f06",
+      "frente": "Função da cutícula",
+      "verso": "Película de cutina secretada pela epiderme que reduz a perda de água."
+    },
+    {
+      "id": "histologia-vegetal-f07",
+      "frente": "Estrutura de um estômato",
+      "verso": "Duas células-guarda, com cloroplastos, que delimitam uma abertura chamada ostíolo."
+    },
+    {
+      "id": "histologia-vegetal-f08",
+      "frente": "Parênquima paliçádico x lacunoso",
+      "verso": "Paliçádico: células alongadas e unidas, sob a epiderme superior. Lacunoso (ou esponjoso): células frouxas, com espaços de ar para a circulação de CO₂ e O₂."
+    },
+    {
+      "id": "histologia-vegetal-f09",
+      "frente": "Exemplos de parênquima de reserva",
+      "verso": "Amilífero (mandioca, batata), aquífero (mandacaru, cactos) e reserva de sacarose (cana-de-açúcar)."
+    },
+    {
+      "id": "histologia-vegetal-f10",
+      "frente": "Parênquima aerífero (aerênquima)",
+      "verso": "Tem grandes espaços com ar; garante flutuação e oxigenação de partes submersas. Ex.: aguapé, vitória-régia."
+    },
+    {
+      "id": "histologia-vegetal-f11",
+      "frente": "Colênquima",
+      "verso": "Células vivas, parede primária espessada com celulose e pectina; resistente e flexível. Ex.: fiapos do salsão."
+    },
+    {
+      "id": "histologia-vegetal-f12",
+      "frente": "Esclerênquima",
+      "verso": "Células geralmente mortas, parede secundária lignificada e rígida. Tipos: fibras e esclereídes."
+    },
+    {
+      "id": "histologia-vegetal-f13",
+      "frente": "Células condutoras do xilema",
+      "verso": "Traqueídes (em todas as plantas vasculares) e elementos de vaso (na maioria das angiospermas): mortos, ocos e lignificados. Conduzem seiva bruta da raiz às folhas."
+    },
+    {
+      "id": "histologia-vegetal-f14",
+      "frente": "Células do floema das angiospermas",
+      "verso": "Elementos de tubo crivado (vivos, sem núcleo, com placas crivadas) e células companheiras (nucleadas)."
+    },
+    {
+      "id": "histologia-vegetal-f15",
+      "frente": "Lenticelas",
+      "verso": "Regiões da periderme com espaços entre as células que permitem trocas gasosas no tronco. Ao contrário dos estômatos, não se fecham."
+    },
+    {
+      "id": "histologia-vegetal-f16",
+      "frente": "O que é a casca, na botânica?",
+      "verso": "Todos os tecidos por fora do câmbio vascular: floema secundário e periderme. Por isso o anelamento interrompe a seiva elaborada."
+    }
   ],
   "minijogos": {
     "pares": [
-      { "a": "Câmbio vascular", "b": "Produz xilema e floema secundários" },
-      { "a": "Felogênio", "b": "Produz súber e feloderme" },
-      { "a": "Estômato", "b": "Trocas gasosas pela epiderme" },
-      { "a": "Parênquima amilífero", "b": "Reserva de amido na mandioca" },
-      { "a": "Aerênquima", "b": "Flutuação do aguapé" },
-      { "a": "Colênquima", "b": "Fiapos flexíveis do salsão" },
-      { "a": "Xilema", "b": "Seiva bruta" },
-      { "a": "Floema", "b": "Seiva elaborada" }
+      {
+        "a": "Câmbio vascular",
+        "b": "Produz xilema e floema secundários"
+      },
+      {
+        "a": "Felogênio",
+        "b": "Produz súber e feloderme"
+      },
+      {
+        "a": "Estômato",
+        "b": "Trocas gasosas pela epiderme"
+      },
+      {
+        "a": "Parênquima amilífero",
+        "b": "Reserva de amido na mandioca"
+      },
+      {
+        "a": "Aerênquima",
+        "b": "Flutuação do aguapé"
+      },
+      {
+        "a": "Colênquima",
+        "b": "Fiapos flexíveis do salsão"
+      },
+      {
+        "a": "Xilema",
+        "b": "Seiva bruta"
+      },
+      {
+        "a": "Floema",
+        "b": "Seiva elaborada"
+      }
     ],
     "sequencia": {
       "instrucao": "Em um esquema simplificado do tronco de uma eudicotiledônea com crescimento secundário, ordene as camadas do centro para a superfície.",
-      "itens": ["Medula", "Cerne (xilema secundário que não conduz mais)", "Alburno (xilema secundário funcional)", "Câmbio vascular", "Floema secundário", "Feloderme", "Felogênio", "Súber"]
+      "itens": [
+        "Medula",
+        "Cerne (xilema secundário que não conduz mais)",
+        "Alburno (xilema secundário funcional)",
+        "Câmbio vascular",
+        "Floema secundário",
+        "Feloderme",
+        "Felogênio",
+        "Súber"
+      ]
     },
     "classificacao": {
       "instrucao": "Classifique cada estrutura de acordo com o grupo de tecidos a que pertence.",
-      "categorias": ["Meristema", "Revestimento", "Parênquima", "Sustentação", "Condução"],
+      "categorias": [
+        "Meristema",
+        "Revestimento",
+        "Parênquima",
+        "Sustentação",
+        "Condução"
+      ],
       "itens": [
-        { "texto": "Câmbio vascular", "categoria": "Meristema" },
-        { "texto": "Meristema apical da raiz", "categoria": "Meristema" },
-        { "texto": "Epiderme com cutícula", "categoria": "Revestimento" },
-        { "texto": "Súber", "categoria": "Revestimento" },
-        { "texto": "Parênquima paliçádico", "categoria": "Parênquima" },
-        { "texto": "Parênquima aquífero", "categoria": "Parênquima" },
-        { "texto": "Aerênquima", "categoria": "Parênquima" },
-        { "texto": "Colênquima", "categoria": "Sustentação" },
-        { "texto": "Fibras de sisal", "categoria": "Sustentação" },
-        { "texto": "Elementos de vaso", "categoria": "Condução" },
-        { "texto": "Elementos de tubo crivado", "categoria": "Condução" }
+        {
+          "texto": "Câmbio vascular",
+          "categoria": "Meristema"
+        },
+        {
+          "texto": "Meristema apical da raiz",
+          "categoria": "Meristema"
+        },
+        {
+          "texto": "Epiderme com cutícula",
+          "categoria": "Revestimento"
+        },
+        {
+          "texto": "Súber",
+          "categoria": "Revestimento"
+        },
+        {
+          "texto": "Parênquima paliçádico",
+          "categoria": "Parênquima"
+        },
+        {
+          "texto": "Parênquima aquífero",
+          "categoria": "Parênquima"
+        },
+        {
+          "texto": "Aerênquima",
+          "categoria": "Parênquima"
+        },
+        {
+          "texto": "Colênquima",
+          "categoria": "Sustentação"
+        },
+        {
+          "texto": "Fibras de sisal",
+          "categoria": "Sustentação"
+        },
+        {
+          "texto": "Elementos de vaso",
+          "categoria": "Condução"
+        },
+        {
+          "texto": "Elementos de tubo crivado",
+          "categoria": "Condução"
+        }
       ]
     },
     "verdadeiro_falso": [
-      { "afirmacao": "Os meristemas primários promovem o crescimento da planta em comprimento.", "valor": true, "explicacao": "Ficam nos ápices do caule e da raiz e alongam esses órgãos." },
-      { "afirmacao": "O câmbio vascular produz floema secundário para dentro e xilema secundário para fora.", "valor": false, "explicacao": "É o contrário: xilema para dentro (madeira) e floema para fora." },
-      { "afirmacao": "As células do súber são mortas e impregnadas de suberina.", "valor": true, "explicacao": "Isso torna o súber impermeável e um bom isolante térmico." },
-      { "afirmacao": "Todas as células da epiderme foliar são ricas em cloroplastos.", "valor": false, "explicacao": "Em geral, só as células-guarda dos estômatos têm cloroplastos." },
-      { "afirmacao": "A parede das células do esclerênquima é rica em lignina.", "valor": true, "explicacao": "A lignina dá rigidez às fibras e esclereídes." },
-      { "afirmacao": "Os vasos do xilema são formados por células vivas e nucleadas.", "valor": false, "explicacao": "Os elementos traqueais são mortos e ocos na maturidade." },
-      { "afirmacao": "A seiva elaborada pode subir ou descer, conforme a localização dos órgãos consumidores.", "valor": true, "explicacao": "Ela vai das fontes (folhas) para raízes, frutos, brotos e órgãos de reserva." },
-      { "afirmacao": "O parênquima aerífero é típico de plantas de ambientes secos.", "valor": false, "explicacao": "É típico de plantas aquáticas e de solos alagados; plantas de ambientes secos têm parênquima aquífero." },
-      { "afirmacao": "Os espinhos da roseira são acúleos de origem epidérmica.", "valor": true, "explicacao": "Acúleos são saliências da epiderme e se destacam facilmente, ao contrário dos espinhos verdadeiros." }
+      {
+        "afirmacao": "Os meristemas primários promovem o crescimento da planta em comprimento.",
+        "valor": true,
+        "explicacao": "Ficam nos ápices do caule e da raiz e alongam esses órgãos."
+      },
+      {
+        "afirmacao": "O câmbio vascular produz floema secundário para dentro e xilema secundário para fora.",
+        "valor": false,
+        "explicacao": "É o contrário: xilema para dentro (madeira) e floema para fora."
+      },
+      {
+        "afirmacao": "As células do súber são mortas e impregnadas de suberina.",
+        "valor": true,
+        "explicacao": "Isso torna o súber impermeável e um bom isolante térmico."
+      },
+      {
+        "afirmacao": "Todas as células da epiderme foliar são ricas em cloroplastos.",
+        "valor": false,
+        "explicacao": "Em geral, só as células-guarda dos estômatos têm cloroplastos."
+      },
+      {
+        "afirmacao": "A parede das células do esclerênquima é rica em lignina.",
+        "valor": true,
+        "explicacao": "A lignina dá rigidez às fibras e esclereídes."
+      },
+      {
+        "afirmacao": "Os vasos do xilema são formados por células vivas e nucleadas.",
+        "valor": false,
+        "explicacao": "Os elementos traqueais são mortos e ocos na maturidade."
+      },
+      {
+        "afirmacao": "A seiva elaborada pode subir ou descer, conforme a localização dos órgãos consumidores.",
+        "valor": true,
+        "explicacao": "Ela vai das fontes (folhas) para raízes, frutos, brotos e órgãos de reserva."
+      },
+      {
+        "afirmacao": "O parênquima aerífero é típico de plantas de ambientes secos.",
+        "valor": false,
+        "explicacao": "É típico de plantas aquáticas e de solos alagados; plantas de ambientes secos têm parênquima aquífero."
+      },
+      {
+        "afirmacao": "Os espinhos da roseira são acúleos de origem epidérmica.",
+        "valor": true,
+        "explicacao": "Acúleos são saliências da epiderme e se destacam facilmente, ao contrário dos espinhos verdadeiros."
+      },
+      {
+        "afirmacao": "Após o anelamento de um tronco, a árvore morre em poucas horas por falta de água.",
+        "valor": false,
+        "explicacao": "O xilema fica intacto. A árvore morre lentamente, em semanas, quando as raízes esgotam as reservas de açúcar."
+      }
     ]
   },
   "missao_mundo_aberto": {

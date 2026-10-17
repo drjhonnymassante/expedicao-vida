@@ -15,7 +15,7 @@
         "no fígado, pela ação da bile"
       ],
       "correta": 1,
-      "explicacao": "A amilase salivar (ptialina) inicia a hidrólise do amido (em maltose e dextrinas) ainda na boca. A pepsina age sobre proteínas, o peristaltismo é digestão mecânica, a bile não contém enzimas e as bactérias do intestino grosso só fermentam o que chega até lá sem ser digerido, como as fibras.",
+      "explicacao": "A amilase salivar (ptialina) inicia ainda na boca a hidrólise do amido em maltose e polissacarídeos menores (dextrinas). A pepsina age sobre proteínas, o peristaltismo é digestão mecânica, a bile não contém enzimas e as bactérias do intestino grosso só fermentam o que chega até lá sem ser digerido, como as fibras.",
       "habilidade": "Identificar o local de início da digestão de cada nutriente.",
       "tags": [
         "digestão química",
@@ -57,7 +57,7 @@
         "absorver água e sais minerais e formar as fezes"
       ],
       "correta": 4,
-      "explicacao": "O intestino grosso absorve água e sais e forma as fezes. Glicose e aminoácidos são absorvidos no delgado, as proteínas começam a ser digeridas no estômago e não produzimos celulase.",
+      "explicacao": "O cólon completa a reabsorção de água e sais que começou no intestino delgado e forma as fezes. Glicose e aminoácidos são absorvidos no delgado, as proteínas começam a ser digeridas no estômago, a bile vem do fígado e o suco pancreático do pâncreas, e não produzimos celulase.",
       "habilidade": "Associar cada órgão do tubo digestório à sua função.",
       "tags": [
         "intestino grosso",
@@ -98,7 +98,7 @@
         "pepsina, produzida pelo estômago"
       ],
       "correta": 0,
-      "explicacao": "A CCK é liberada pelo duodeno diante de gorduras e proteínas e contrai a vesícula, além de estimular as enzimas pancreáticas. A secretina também é duodenal, mas estimula sobretudo o bicarbonato pancreático. Gastrina atua no estômago, insulina regula a glicemia e pepsina é enzima.",
+      "explicacao": "A CCK é liberada pelo duodeno quando o quimo traz ácidos graxos e aminoácidos; ela contrai a vesícula biliar e estimula a liberação de enzimas pancreáticas. A secretina também é duodenal (não vem da vesícula) e estimula sobretudo o bicarbonato pancreático. Gastrina atua no estômago, insulina regula a glicemia e pepsina é enzima, não hormônio.",
       "habilidade": "Associar hormônios digestivos a estímulos e efeitos.",
       "tags": [
         "hormônios",
@@ -119,7 +119,7 @@
         "pelo intestino grosso, onde são absorvidos com a água"
       ],
       "correta": 3,
-      "explicacao": "Nas células intestinais os lipídios são remontados em triglicerídeos e empacotados em quilomícrons, grandes demais para os capilares. Eles entram nos vasos lácteos (linfáticos) e só depois chegam ao sangue. Açúcares e aminoácidos, sim, seguem pelos capilares e pela veia porta-hepática.",
+      "explicacao": "Nas células intestinais os lipídios são remontados em triglicerídeos e envolvidos por fosfolipídios, colesterol e proteínas, formando os quilomícrons. Eles saem das células por exocitose e entram nos vasos lácteos (lacteais), que pertencem ao sistema linfático; só depois chegam ao sangue, em grandes veias. Açúcares e aminoácidos, sim, seguem pelos capilares e pela veia porta-hepática.",
       "habilidade": "Descrever as vias de absorção dos nutrientes.",
       "tags": [
         "absorção",
@@ -285,12 +285,17 @@
     {
       "id": "sistema-digestorio-f14",
       "frente": "Três funções da microbiota intestinal",
-      "verso": "Fermentar fibras, produzir vitaminas (como a K) e competir com microrganismos patogênicos. Também ajuda a amadurecer o sistema imunitário."
+      "verso": "Fermentar fibras, produzir vitaminas (como a K, a biotina e o ácido fólico) e competir com microrganismos patogênicos. Também regula o desenvolvimento do epitélio intestinal e o sistema imunitário."
     },
     {
       "id": "sistema-digestorio-f15",
       "frente": "Probiótico x prebiótico",
       "verso": "Probiótico: microrganismo vivo benéfico. Prebiótico: fibra que alimenta as bactérias benéficas."
+    },
+    {
+      "id": "sistema-digestorio-f16",
+      "frente": "Por que a maioria das úlceras gástricas pode ser tratada com antibióticos?",
+      "verso": "Porque a maioria é causada pela bactéria Helicobacter pylori, resistente ao ácido, e não pelo estresse, como se pensava."
     }
   ],
   "minijogos": {
@@ -433,7 +438,7 @@
       {
         "afirmacao": "A maior parte da absorção de nutrientes ocorre no intestino grosso.",
         "valor": false,
-        "explicacao": "A absorção de nutrientes ocorre principalmente no intestino delgado; o grosso absorve sobretudo água e sais."
+        "explicacao": "A absorção de nutrientes ocorre principalmente no intestino delgado (jejuno e íleo); o grosso completa a reabsorção de água e sais e forma as fezes."
       },
       {
         "afirmacao": "A secretina é liberada pelo duodeno em resposta à chegada do quimo ácido.",
@@ -453,7 +458,7 @@
       {
         "afirmacao": "Bactérias da microbiota intestinal produzem vitamina K.",
         "valor": true,
-        "explicacao": "Elas fornecem parte da vitamina K e de algumas vitaminas do complexo B."
+        "explicacao": "Elas fornecem parte da vitamina K e de vitaminas do complexo B, como a biotina e o ácido fólico."
       },
       {
         "afirmacao": "Intolerância à lactose e alergia ao leite são a mesma coisa.",

@@ -15,7 +15,7 @@
         "apenas plantas e animais são formados por células"
       ],
       "correta": 2,
-      "explicacao": "A teoria celular afirma que todos os seres vivos são formados por células, que a célula é a unidade básica da vida e que toda célula vem de outra preexistente. Há seres unicelulares, as células não surgem espontaneamente, os vírus são acelulares e bactérias, fungos e protozoários também são formados por células.",
+      "explicacao": "A teoria celular afirma que todos os seres vivos são formados por células, que a célula é a menor unidade capaz de realizar todas as atividades da vida e que toda célula vem de outra preexistente (\"Omnis cellula e cellula\", de Virchow). Há seres unicelulares, as células não surgem espontaneamente, os vírus são acelulares e bactérias, fungos e protozoários também são formados por células.",
       "habilidade": "Reconhecer os postulados da teoria celular.",
       "tags": [
         "teoria celular",
@@ -35,7 +35,7 @@
         "evolução"
       ],
       "correta": 0,
-      "explicacao": "Metabolismo é o conjunto das reações químicas do organismo: anabolismo (síntese) mais catabolismo (degradação). Homeostase é a manutenção do meio interno, hereditariedade é a transmissão de características e irritabilidade é a resposta a estímulos.",
+      "explicacao": "Metabolismo é o conjunto de todas as reações químicas do organismo, quase todas catalisadas por enzimas: anabolismo (síntese) mais catabolismo (degradação). Homeostase é a manutenção do meio interno, hereditariedade é a transmissão de características, irritabilidade é a resposta a estímulos e evolução é a mudança das populações ao longo das gerações.",
       "habilidade": "Identificar o conceito de metabolismo.",
       "tags": [
         "metabolismo",
@@ -96,7 +96,7 @@
         "hereditariedade, pois o suor é transmitido aos descendentes"
       ],
       "correta": 3,
-      "explicacao": "O aumento da temperatura dispara respostas (suor e vasodilatação) que a reduzem: é a retroalimentação negativa mantendo a homeostase. Adaptação evolutiva ocorre em populações ao longo de gerações, não em um indivíduo durante uma corrida; as demais alternativas não descrevem o fenômeno.",
+      "explicacao": "O aumento da temperatura dispara respostas (suor e vasodilatação) que a reduzem: é a retroalimentação negativa, em que a resposta anula o estímulo, mantendo a homeostase. Adaptação evolutiva ocorre em populações ao longo de gerações, não em um indivíduo durante uma corrida; o suor não é reação de síntese, não há reprodução das células da pele envolvida e a resposta não é transmitida aos descendentes.",
       "habilidade": "Reconhecer mecanismos homeostáticos no cotidiano.",
       "tags": [
         "homeostase",
@@ -138,7 +138,7 @@
         "possuem material genético que sofre mutações e é transmitido às novas partículas, o que permite sua evolução"
       ],
       "correta": 4,
-      "explicacao": "A presença de material genético que é copiado, transmitido e sofre mutações permite que os vírus evoluam, como mostram os diferentes sorotipos da dengue. Vírus não têm ribossomos nem metabolismo próprio, são acelulares e não são combatidos por antibióticos.",
+      "explicacao": "A presença de material genético que é copiado, transmitido e sofre mutações permite que os vírus evoluam por seleção natural, como mostram os diferentes sorotipos da dengue. Vírus não têm ribossomos nem metabolismo próprio, são acelulares e não são combatidos por antibióticos, que agem sobre enzimas e estruturas exclusivas das bactérias. Por isso, a maioria dos biólogos não os considera vivos, mas reconhece que compartilham propriedades da vida: um caso limítrofe.",
       "habilidade": "Avaliar argumentos sobre a natureza dos vírus com base em um texto.",
       "tags": [
         "vírus",
@@ -160,7 +160,7 @@
         "biosfera, organismo e população"
       ],
       "correta": 2,
-      "explicacao": "O projeto I relaciona um fator abiótico (oxigênio dissolvido) a seres de várias espécies: nível de ecossistema. O II estuda a densidade de uma única espécie: população. O III analisa interações entre espécies diferentes, sem fatores abióticos: comunidade. Comunidade não inclui fatores abióticos, e densidade é propriedade de população.",
+      "explicacao": "O projeto I relaciona um fator abiótico (oxigênio dissolvido) a seres de várias espécies: nível de ecossistema, que reúne os seres vivos de uma área e os componentes não vivos com que interagem. O II estuda a densidade de uma única espécie: população. O III analisa interações entre espécies diferentes, sem fatores abióticos: comunidade. Comunidade não inclui fatores abióticos, e densidade é propriedade emergente da população.",
       "habilidade": "Identificar níveis de organização em situações de pesquisa ecológica.",
       "tags": [
         "níveis de organização",
@@ -217,8 +217,8 @@
   "flashcards": [
     {
       "id": "caracteristicas-seres-vivos-f01",
-      "frente": "Quais elementos formam a sigla CHONPS?",
-      "verso": "Carbono, hidrogênio, oxigênio, nitrogênio, fósforo e enxofre, os principais elementos da matéria viva."
+      "frente": "Quais elementos formam a sigla CHONPS? Quais somam cerca de 96% da matéria viva?",
+      "verso": "Carbono, hidrogênio, oxigênio, nitrogênio, fósforo e enxofre. Apenas O, C, H e N já somam cerca de 96% da matéria viva."
     },
     {
       "id": "caracteristicas-seres-vivos-f02",
@@ -228,12 +228,12 @@
     {
       "id": "caracteristicas-seres-vivos-f03",
       "frente": "Três ideias da teoria celular",
-      "verso": "Todo ser vivo é formado por células; a célula é a unidade básica da vida; toda célula vem de outra preexistente."
+      "verso": "Todo ser vivo é formado por células; a célula é a menor unidade capaz de realizar todas as atividades da vida; toda célula vem de outra preexistente."
     },
     {
       "id": "caracteristicas-seres-vivos-f04",
       "frente": "Diferença entre procarionte e eucarionte",
-      "verso": "Procarionte não tem núcleo delimitado por carioteca; eucarionte tem núcleo e organelas membranosas."
+      "verso": "Procarionte (procarioto) não tem núcleo delimitado nem organelas membranosas; eucarionte (eucarioto) tem núcleo envolto por membrana e organelas membranosas."
     },
     {
       "id": "caracteristicas-seres-vivos-f05",
@@ -248,7 +248,7 @@
     {
       "id": "caracteristicas-seres-vivos-f07",
       "frente": "Como funciona a retroalimentação negativa?",
-      "verso": "Uma alteração dispara uma resposta que a corrige, como o suor quando a temperatura corporal sobe."
+      "verso": "A resposta reduz ou anula o estímulo que a provocou, como o suor quando a temperatura corporal sobe. Na retroalimentação positiva, mais rara, o produto acelera o processo (coagulação)."
     },
     {
       "id": "caracteristicas-seres-vivos-f08",
@@ -283,12 +283,12 @@
     {
       "id": "caracteristicas-seres-vivos-f14",
       "frente": "O que são propriedades emergentes?",
-      "verso": "Características que surgem da interação entre as partes de um nível e não existem nas partes isoladas."
+      "verso": "Características que surgem do arranjo e da interação entre as partes de um nível e não existem nas partes isoladas. Ex.: a fotossíntese só ocorre no cloroplasto organizado."
     },
     {
       "id": "caracteristicas-seres-vivos-f15",
       "frente": "Dois argumentos para considerar os vírus não vivos",
-      "verso": "São acelulares e não têm metabolismo próprio (só se multiplicam dentro de células)."
+      "verso": "São acelulares e não têm metabolismo próprio (só se reproduzem dentro de células). Por isso a maioria dos biólogos não os considera vivos."
     },
     {
       "id": "caracteristicas-seres-vivos-f16",
@@ -335,6 +335,7 @@
       "instrucao": "Ordene os níveis de organização do mais simples ao mais abrangente.",
       "itens": [
         "Molécula",
+        "Organela",
         "Célula",
         "Tecido",
         "Órgão",
@@ -459,6 +460,21 @@
         "afirmacao": "Vírus sofrem mutações e podem evoluir.",
         "valor": true,
         "explicacao": "Seu material genético muda, como mostram os sorotipos da dengue e as variantes da gripe."
+      },
+      {
+        "afirmacao": "Na coagulação do sangue, as plaquetas acumuladas atraem ainda mais plaquetas, um exemplo de retroalimentação positiva.",
+        "valor": true,
+        "explicacao": "Na retroalimentação positiva o produto acelera o próprio processo; a negativa, mais comum, reduz o estímulo."
+      },
+      {
+        "afirmacao": "Propriedades emergentes existem apenas nos seres vivos.",
+        "valor": false,
+        "explicacao": "Uma bicicleta montada também tem propriedades que as peças soltas não têm; nos seres vivos esses sistemas são muito mais complexos."
+      },
+      {
+        "afirmacao": "Antibióticos são eficazes contra infecções virais.",
+        "valor": false,
+        "explicacao": "Antibióticos agem sobre enzimas e estruturas exclusivas de bactérias, que os vírus não têm."
       }
     ]
   },

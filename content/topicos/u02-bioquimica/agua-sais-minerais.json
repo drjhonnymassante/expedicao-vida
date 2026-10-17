@@ -75,7 +75,7 @@
       "enunciado": "O soro de reidratação oral, recomendado em casos de diarreia, é preparado com água, cloreto de sódio e glicose em proporções definidas. Sobre o papel da glicose nessa mistura, é correto afirmar que ela:",
       "alternativas": ["fornece energia suficiente para substituir uma refeição completa", "impede a multiplicação de microrganismos no intestino", "favorece a absorção intestinal de sódio, por cotransporte, e assim também a absorção de água por osmose", "neutraliza a acidez do suco gástrico", "aumenta a eliminação de água pela urina"],
       "correta": 2,
-      "explicacao": "As células intestinais absorvem glicose e Na⁺ juntas por cotransporte. Com mais soluto absorvido, a água acompanha por osmose e o organismo se reidrata. A glicose não tem ação antimicrobiana e não serve para substituir refeições.",
+      "explicacao": "Proteínas de membrana das células intestinais absorvem glicose e Na⁺ juntos por cotransporte, e esses solutos seguem para o sangue. Com mais soluto absorvido, a água acompanha por osmose e o organismo se reidrata. A glicose não tem ação antimicrobiana e não serve para substituir refeições.",
       "habilidade": "Interpretar intervenção de saúde com base em transporte celular.",
       "tags": ["soro caseiro", "sódio", "osmose", "saúde pública"]
     },
@@ -97,7 +97,7 @@
       "enunciado": "Em regiões de inverno rigoroso, lagos congelam apenas na superfície, e peixes e outros organismos sobrevivem na água líquida abaixo do gelo. Qual explicação é correta?",
       "alternativas": ["O gelo é mais denso que a água líquida, afunda e libera espaço na superfície", "A água atinge densidade máxima por volta de 4 °C; o gelo, menos denso, flutua e isola termicamente a água abaixo dele", "Os sais dissolvidos nos lagos impedem qualquer congelamento", "Os peixes produzem calor metabólico suficiente para manter o lago líquido", "No gelo, todas as pontes de hidrogênio se rompem, o que o torna mais leve"],
       "correta": 1,
-      "explicacao": "A água mais densa (cerca de 4 °C) fica no fundo. O gelo flutua por ser menos denso: no estado sólido, as pontes de hidrogênio formam uma rede organizada e espaçada, e não se rompem. A camada de gelo funciona como isolante térmico.",
+      "explicacao": "A água mais densa (cerca de 4 °C) fica no fundo. O gelo flutua por ser cerca de 10% menos denso: no estado sólido, cada molécula se prende a outras quatro por pontes de hidrogênio estáveis, numa rede organizada e espaçada (as pontes não se rompem). A camada de gelo funciona como isolante térmico.",
       "habilidade": "Explicar adaptação ambiental com base na densidade da água.",
       "tags": ["densidade", "pontes de hidrogênio", "ecossistemas aquáticos"]
     },
@@ -115,11 +115,11 @@
   ],
   "flashcards": [
     { "id": "agua-sais-minerais-f01", "frente": "Por que a molécula de água é polar?", "verso": "O oxigênio, mais eletronegativo, atrai os elétrons das ligações, e a molécula tem formato angular. Surgem cargas parciais negativa (O) e positivas (H)." },
-    { "id": "agua-sais-minerais-f02", "frente": "Que ligação une moléculas de água vizinhas?", "verso": "Pontes (ligações) de hidrogênio." },
+    { "id": "agua-sais-minerais-f02", "frente": "Que ligação une moléculas de água vizinhas?", "verso": "Pontes de hidrogênio (chamadas de ligações de hidrogênio no Campbell e na Química): o H levemente positivo de uma molécula atrai o O levemente negativo da vizinha." },
     { "id": "agua-sais-minerais-f03", "frente": "Que propriedade da água estabiliza a temperatura de organismos e oceanos?", "verso": "O alto calor específico." },
     { "id": "agua-sais-minerais-f04", "frente": "Por que o suor resfria o corpo?", "verso": "A água tem alto calor de vaporização: ao evaporar, retira muito calor da pele." },
     { "id": "agua-sais-minerais-f05", "frente": "O que explica a tensão superficial da água?", "verso": "A coesão entre as moléculas, causada pelas pontes de hidrogênio." },
-    { "id": "agua-sais-minerais-f06", "frente": "Por que o gelo flutua?", "verso": "No estado sólido a água forma uma rede espaçada e fica menos densa que a água líquida (densidade máxima por volta de 4 °C)." },
+    { "id": "agua-sais-minerais-f06", "frente": "Por que o gelo flutua?", "verso": "No gelo, cada molécula fica presa a outras quatro por pontes de hidrogênio estáveis, numa rede espaçada. Por isso o gelo é cerca de 10% menos denso que a água líquida (mais densa por volta de 4 °C)." },
     { "id": "agua-sais-minerais-f07", "frente": "Três fatores que alteram o teor de água de um organismo ou tecido", "verso": "Espécie, idade (diminui com o envelhecimento) e atividade metabólica do tecido." },
     { "id": "agua-sais-minerais-f08", "frente": "Hidrólise e síntese por desidratação: qual consome e qual libera água?", "verso": "A hidrólise consome água (quebra moléculas); a síntese por desidratação libera água (une monômeros)." },
     { "id": "agua-sais-minerais-f09", "frente": "Ferro: função e carência", "verso": "Compõe o grupo heme da hemoglobina. A carência causa anemia ferropriva." },
@@ -127,7 +127,8 @@
     { "id": "agua-sais-minerais-f11", "frente": "Cálcio: três funções", "verso": "Ossos e dentes, contração muscular e coagulação do sangue (também atua na liberação de neurotransmissores)." },
     { "id": "agua-sais-minerais-f12", "frente": "Qual mineral fica no centro da molécula de clorofila?", "verso": "Magnésio." },
     { "id": "agua-sais-minerais-f13", "frente": "Por que o soro de reidratação oral tem açúcar?", "verso": "A glicose é absorvida junto com o sódio (cotransporte), e a água acompanha por osmose." },
-    { "id": "agua-sais-minerais-f14", "frente": "Como aumentar a absorção do ferro do feijão?", "verso": "Consumir uma fonte de vitamina C na mesma refeição e evitar café ou chá logo depois." }
+    { "id": "agua-sais-minerais-f14", "frente": "Como aumentar a absorção do ferro do feijão?", "verso": "Consumir uma fonte de vitamina C na mesma refeição e evitar café ou chá logo depois." },
+    { "id": "agua-sais-minerais-f15", "frente": "O que são elementos-traço (oligoelementos)? Dê dois exemplos.", "verso": "Elementos essenciais exigidos em quantidades mínimas (menos de 0,01% da massa corporal), como o ferro e o iodo." }
   ],
   "minijogos": {
     "pares": [
@@ -167,7 +168,7 @@
       { "afirmacao": "O gelo é mais denso que a água líquida.", "valor": false, "explicacao": "O gelo é menos denso e por isso flutua." },
       { "afirmacao": "A hidrólise é uma reação que consome água.", "valor": true, "explicacao": "Na hidrólise, a água entra na reação para quebrar ligações entre monômeros." },
       { "afirmacao": "O bócio endêmico é causado pelo excesso de iodo na alimentação.", "valor": false, "explicacao": "O bócio endêmico clássico é causado pela carência de iodo." },
-      { "afirmacao": "O magnésio é o átomo central da molécula de clorofila.", "valor": true, "explicacao": "Sem magnésio a planta produz menos clorofila e as folhas amarelam." },
+      { "afirmacao": "O magnésio é o átomo central da molécula de clorofila.", "valor": true, "explicacao": "Sem magnésio a planta produz menos clorofila e as folhas amarelam (clorose)." },
       { "afirmacao": "No soro caseiro, a glicose ajuda o intestino a absorver sódio e água.", "valor": true, "explicacao": "Glicose e sódio são absorvidos juntos (cotransporte), e a água segue por osmose." },
       { "afirmacao": "Tecidos com alta atividade metabólica costumam ter menos água.", "valor": false, "explicacao": "É o contrário: quanto maior a atividade metabólica, maior o teor de água." }
     ]

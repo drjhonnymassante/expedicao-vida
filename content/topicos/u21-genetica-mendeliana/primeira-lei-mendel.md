@@ -37,11 +37,13 @@ Antes de cruzar qualquer coisa, é preciso falar a mesma língua.
 
 - **Gene:** trecho de DNA que contém a informação para produzir um RNA funcional, em geral um RNA que será traduzido em proteína. É a unidade da herança.
 - **Lócus** (plural: *loci*): o **endereço** do gene no cromossomo. Cromossomos homólogos têm os mesmos loci, na mesma ordem.
-- **Alelos:** **versões diferentes de um mesmo gene**, que ocupam o mesmo lócus em cromossomos homólogos. Surgem por mutação. Exemplo: o gene para a cor da semente da ervilha tem um alelo para amarela e outro para verde.
+- **Alelos:** **versões diferentes de um mesmo gene**, que ocupam o mesmo lócus em cromossomos homólogos. Os alelos diferem por pequenas variações na sequência de nucleotídeos do DNA, que surgem por mutação e podem mudar a proteína produzida. Exemplo: o gene para a cor da flor da ervilha tem um alelo que permite fabricar pigmento roxo e outro que não permite (flor branca).
 - **Genótipo:** a **constituição genética** do indivíduo para uma característica, representada por letras (AA, Aa, aa).
-- **Fenótipo:** a **característica observável ou detectável**: cor, forma, tipo sanguíneo, presença de uma doença, atividade de uma enzima.
+- **Fenótipo:** a **característica observável ou detectável**. Inclui a aparência (cor, forma) e também características fisiológicas: tipo sanguíneo, presença de uma doença, atividade de uma enzima.
 
-O fenótipo resulta da **interação entre o genótipo e o ambiente**. As hortênsias das serras gaúchas são um bom exemplo: plantas geneticamente iguais podem dar flores azuladas em solo ácido e rosadas em solo mais alcalino, porque o pH altera a disponibilidade de alumínio para os pigmentos. Outro exemplo é a pele: o genótipo define a capacidade de produzir melanina, mas a exposição ao sol altera o bronzeado. O ambiente muda o fenótipo, **não o genótipo**, e por isso o bronzeado não é herdado.
+> 📘 **Caráter e característica:** no *Biologia de Campbell*, **caractere** (ou caráter) é o traço herdável que varia, como "cor da flor", e **característica** é cada variante dele, como "roxa" ou "branca". Nos livros brasileiros e no ENEM essas palavras costumam ser usadas quase como sinônimos, mas a distinção ajuda a ler enunciados com atenção.
+
+O fenótipo resulta da **interação entre o genótipo e o ambiente**. As hortênsias das serras gaúchas são um bom exemplo: plantas geneticamente iguais podem dar flores azul-violeta em solo ácido e rosadas em solo básico (alcalino), porque a acidez do solo controla a quantidade de alumínio livre, necessário para as cores mais azuis. A faixa de fenótipos que um mesmo genótipo pode produzir em ambientes diferentes é chamada de **norma de reação**. Outro exemplo é a pele: o genótipo define a capacidade de produzir melanina, mas a exposição ao sol altera o bronzeado. O ambiente muda o fenótipo, **não o genótipo**, e por isso o bronzeado não é herdado.
 
 > 💡 **Dica de memorização:** **GEnótipo** lembra **GEnes**: é o que está escrito no DNA. **FEnótipo** vem do grego *phainein*, "mostrar": é o que se vê. Fenótipo = genótipo + ambiente.
 
@@ -61,44 +63,57 @@ Quando os alelos são diferentes, nem sempre os dois aparecem no fenótipo:
 
 Na ervilha, o alelo para semente amarela (V) domina o alelo para semente verde (v). Assim, VV e Vv são amarelas, e só vv é verde. Repare que **o mesmo fenótipo pode corresponder a genótipos diferentes**, enquanto o fenótipo recessivo revela o genótipo na hora: quem mostra o caráter recessivo é obrigatoriamente homozigoto recessivo.
 
-Em termos moleculares, muitas vezes o alelo recessivo produz uma proteína sem função. No **albinismo** mais comum, o alelo recessivo não produz uma enzima ativa necessária para fabricar melanina. O heterozigoto tem um alelo funcional, que já fabrica enzima suficiente para pigmentar a pele. Por isso ele tem pigmentação normal, mas é **portador** e pode transmitir o alelo.
+Em termos moleculares, muitas vezes o alelo recessivo produz uma proteína sem função (ou nenhuma proteína). Na flor da ervilha, por exemplo, o alelo para roxo leva à produção de uma enzima que ajuda a fabricar o pigmento; o alelo para branco não gera enzima funcional. Uma única cópia do alelo para roxo já produz pigmento suficiente, e por isso PP e Pp têm flores igualmente roxas. No **albinismo**, a lógica é a mesma: o alelo recessivo não produz uma enzima ativa necessária para fabricar melanina, e o heterozigoto, com um alelo funcional, fabrica enzima suficiente. Por isso ele tem pigmentação normal, mas é **portador** e pode transmitir o alelo.
 
-Atenção: "dominante" não significa "mais comum" nem "melhor". A doença de Huntington, por exemplo, é causada por um alelo dominante e é rara. E a polidactilia (dedos extras), também dominante, não é a condição mais frequente na população.
+Atenção: "dominante" não significa "mais comum" nem "melhor". A doença de Huntington, por exemplo, é causada por um alelo dominante e é rara. E alguns casos de polidactilia (dedos extras) são causados por um alelo dominante, mas a condição é pouco frequente: nos Estados Unidos, cerca de 1 bebê em 400 nasce com dedos a mais. Isso mostra que o alelo recessivo (cinco dedos) é muito mais comum na população.
 
 ## Os experimentos de Mendel com ervilhas
 
-Gregor Mendel era um monge agostiniano que trabalhava no mosteiro de Brno, na região onde hoje fica a República Tcheca. Por volta de 1856 a 1863, ele cultivou milhares de pés de ervilha (*Pisum sativum*) e publicou seus resultados em 1866. Na época, a ideia mais aceita era a da **herança por mistura**, em que as características dos pais se fundiriam como tintas. Mendel mostrou que isso não acontece.
+Gregor Mendel era um monge agostiniano que vivia no mosteiro de Brno (Brünn, em alemão), na região da antiga Áustria que hoje faz parte da República Tcheca. Antes das pesquisas, estudou física e química na Universidade de Viena, onde aprendeu a fazer experimentos e a usar a matemática para explicar fenômenos naturais. Por volta de 1857, começou a cruzar ervilhas (*Pisum sativum*) na horta do mosteiro e publicou seus resultados em 1866.
+
+Na época, a ideia mais aceita era a da **herança por mistura**: o material hereditário dos pais se misturaria como tinta azul e amarela formando verde. Esse modelo tem dois problemas: preveria populações cada vez mais uniformes ao longo das gerações (o que não se observa) e não explica por que uma característica some em uma geração e reaparece depois. Mendel propôs uma **herança particulada**: os pais transmitem unidades separadas (hoje, genes) que mantêm sua identidade nos descendentes. Os genes se parecem mais com cartas de um baralho, que são embaralhadas e passadas adiante sem se diluir, do que com tinta em um balde.
 
 **Por que a ervilha foi uma ótima escolha?**
 
 - É fácil de cultivar e tem **ciclo de vida curto**, com muitos descendentes por geração.
 - Sua flor faz **autofecundação** naturalmente, o que permitia obter **linhagens puras** depois de algumas gerações.
-- Também era possível fazer **fecundação cruzada artificial**: Mendel removia as anteras de uma flor ainda imatura (para impedir a autofecundação) e depositava sobre o estigma o pólen de outra planta.
-- Apresentava **características contrastantes e bem definidas**, sem intermediários. Ele estudou sete delas, como cor e forma da semente, cor da vagem e altura da planta.
+- Também era possível fazer **fecundação cruzada artificial**: Mendel removia os estames (com as anteras) de uma flor ainda imatura, antes de produzirem pólen, para impedir a autofecundação, e depositava sobre o carpelo (no estigma) o pólen de outra planta.
+- Existiam muitas variedades, com **características contrastantes e bem definidas**, sem intermediários. Ele escolheu sete caracteres com duas formas distintas cada: cor da flor, cor e forma da semente, forma e cor da vagem, posição da flor e comprimento do caule.
 
-**O método foi o grande diferencial.** Mendel estudava **uma característica de cada vez**, partia de linhagens puras, contava todos os descendentes e analisava os números com **matemática e probabilidade**, algo raro na Biologia da época.
+Uma linhagem é **pura** quando, depois de muitas gerações de autofecundação, só produz descendentes iguais aos pais para aquele caráter.
+
+**O método foi o grande diferencial.** Mendel estudava **um caráter de cada vez**, partia de linhagens puras, acompanhava pelo menos três gerações (P, F1 e F2), contava milhares de descendentes e analisava os números com **matemática e probabilidade**, algo raro na Biologia da época. Se tivesse parado na F1, o padrão teria passado despercebido.
 
 **O experimento clássico (monoibridismo):**
 
-1. **Geração parental (P):** cruzou plantas puras de semente amarela com plantas puras de semente verde.
-2. **Geração F1:** **100% das sementes eram amarelas**. A característica verde parecia ter sumido.
-3. **Geração F2:** deixou as plantas F1 se autofecundarem. O verde **reapareceu** em cerca de **1/4** dos descendentes. Em números redondos, para cada 3 amarelas surgia 1 verde.
+1. **Geração parental (P):** cruzou plantas puras de semente amarela com plantas puras de semente verde. O cruzamento entre duas variedades puras diferentes é chamado de **hibridização**.
+2. **Geração F1 (primeira geração filial):** **100% das sementes eram amarelas**, tão amarelas quanto as do genitor amarelo (e não um tom intermediário, como a mistura preveria). A característica verde parecia ter sumido.
+3. **Geração F2 (segunda geração filial):** deixou as plantas F1 se autofecundarem. O verde **reapareceu** em cerca de **1/4** dos descendentes. Mendel contou 6.022 sementes amarelas e 2.001 verdes, uma proporção de cerca de **3:1**.
 
-A reaparição do verde em F2 derrubou a herança por mistura: o "fator" para verde esteve presente na F1, escondido, sem se diluir. O mesmo padrão de 3:1 apareceu nas sete características estudadas.
+A reaparição do verde em F2 derrubou a herança por mistura: o "fator" para verde esteve presente na F1, mascarado pelo fator para amarelo, sem se diluir nem se perder. Mendel chamou de **dominante** a característica que aparece na F1 e de **recessiva** a que fica escondida. O mesmo padrão de 3:1 apareceu nos sete caracteres estudados; para a cor da flor, por exemplo, foram 705 plantas roxas e 224 brancas.
 
 > 🖼️ **Figura sugerida:** esquema em três andares (P, F1 e F2) com sementes de ervilha: no topo, amarela VV × verde vv; no meio, só amarelas Vv; embaixo, três amarelas e uma verde, com os genótipos VV, Vv, Vv e vv. Ao lado, o desenho de uma flor de ervilha tendo as anteras removidas com uma pinça.
 
 ## A Primeira Lei e o monoibridismo
 
-A partir dos resultados, Mendel propôs que cada característica é determinada por um **par de fatores** (hoje chamados alelos) e que esses fatores **se separam** na formação dos gametas. Esse é o enunciado da **Primeira Lei de Mendel**, ou **Lei da Segregação dos Fatores**:
+Para explicar o 3:1, Mendel montou um modelo que, em linguagem atual, tem quatro ideias:
+
+1. **Versões alternativas dos genes** (os alelos) explicam as variações de um caráter, como semente amarela ou verde.
+2. Para cada caráter, o organismo herda **dois alelos**, um da mãe e um do pai. Eles podem ser iguais (como nas linhagens puras) ou diferentes (como nos híbridos da F1).
+3. Se os dois alelos forem diferentes, o **dominante** determina a aparência e o **recessivo** não tem efeito visível.
+4. Os dois alelos **se separam** na formação dos gametas e vão para gametas diferentes. Essa é a **lei da segregação**.
+
+A quarta ideia é a **Primeira Lei de Mendel**, também chamada **Lei da Segregação** ou **Lei da Segregação dos Fatores**:
 
 > Cada caráter é determinado por um par de fatores que se segregam (separam) na formação dos gametas, de modo que cada gameta recebe apenas um fator do par.
+
+Consequência: um indivíduo homozigoto (AA) forma só um tipo de gameta (A), enquanto um heterozigoto (Aa) forma 50% de gametas A e 50% de gametas a.
 
 Mendel não conhecia cromossomos nem meiose. Hoje sabemos que a segregação acontece porque os **cromossomos homólogos se separam na anáfase I da meiose**, levando cada um alelo para uma célula diferente. (Se houver permutação entre o gene e o centrômero, os alelos só se separam de vez na anáfase II, mas o resultado é o mesmo: um alelo por gameta.) É por isso que os gametas são "puros": carregam um único alelo de cada gene.
 
 **Resolvendo o cruzamento F1 × F1 (Vv × Vv):**
 
-Cada genitor forma dois tipos de gameta, V e v, na mesma proporção (1/2 cada). O quadro de Punnett combina os gametas:
+Cada genitor forma dois tipos de gameta, V e v, na mesma proporção (1/2 cada). Na fecundação, os gametas se unem ao acaso: um óvulo V tem a mesma chance de ser fecundado por um espermatozoide V ou v. O **quadro de Punnett** (no Campbell, "quadrado de Punnett") mostra as quatro combinações igualmente prováveis:
 
 | Gametas | V | v |
 |---|---|---|
@@ -107,6 +122,8 @@ Cada genitor forma dois tipos de gameta, V e v, na mesma proporção (1/2 cada).
 
 - **Proporção genotípica:** 1 VV : 2 Vv : 1 vv, ou seja, **1:2:1** (25% : 50% : 25%).
 - **Proporção fenotípica:** 3 amarelas : 1 verde, ou seja, **3:1** (75% : 25%).
+
+Os indivíduos da F1, heterozigotos para um caráter, são chamados de **mono-híbridos**, e o cruzamento entre eles é o **cruzamento mono-híbrido** (termo do Campbell; no Brasil se fala em **monoibridismo**).
 
 Uma consequência importante: entre as plantas de **fenótipo dominante** da F2, **2/3 são heterozigotas** e só 1/3 é homozigota. Esse "2/3" aparece muito em questões de vestibular.
 
@@ -121,7 +138,7 @@ Se o fenótipo dominante pode esconder dois genótipos (AA ou Aa), como descobri
 - Se **todos** os descendentes tiverem fenótipo dominante, o indivíduo provavelmente é **AA**.
 - Se aparecer **algum** descendente recessivo, o indivíduo é **certamente Aa**. A proporção esperada é **1:1** (metade dominante, metade recessiva).
 
-A lógica é que o genitor aa "não interfere": o fenótipo de cada filho revela qual alelo veio do indivíduo testado. Note a assimetria: um único filhote recessivo já prova a heterozigose, mas muitos filhotes dominantes só tornam a homozigose **cada vez mais provável**.
+A lógica é que o genitor aa "não interfere": o fenótipo de cada filho revela qual alelo veio do indivíduo testado. O cruzamento-teste foi criado pelo próprio Mendel e continua sendo uma ferramenta importante dos geneticistas. Note a assimetria: um único filhote recessivo já prova a heterozigose, mas muitos filhotes dominantes só tornam a homozigose **cada vez mais provável**.
 
 Exemplo de campo: no gado bovino, o caráter **mocho** (sem chifres) é dominante sobre a presença de chifres. Um pecuarista que queira um touro mocho puro pode cruzá-lo com várias vacas com chifres (homozigotas recessivas). Se nascer um bezerro com chifres, o touro é heterozigoto.
 
@@ -166,3 +183,7 @@ O **retrocruzamento** é o cruzamento de um indivíduo da F1 com **um dos genito
 - [[variacoes-monoibridismo]]: dominância incompleta, codominância e alelos letais.
 - [[segunda-lei-mendel]]: dois genes ao mesmo tempo e a segregação independente.
 - [[mutacoes-sindromes]]: a origem de novos alelos.
+
+## Referência
+
+- Urry, L. A. et al. *Biologia de Campbell*. 10. ed. Porto Alegre: Artmed, 2015. Capítulo 14 (conceitos 14.1, 14.2, 14.3 e 14.4).

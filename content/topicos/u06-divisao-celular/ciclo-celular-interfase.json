@@ -35,7 +35,7 @@
         "perde o envoltório nuclear e forma o fuso mitótico"
       ],
       "correta": 3,
-      "explicacao": "A interfase é a fase de maior atividade metabólica: crescimento, transcrição, síntese de proteínas e organelas e replicação do DNA. Os cromossomos estão descondensados (e não visíveis individualmente); a divisão do citoplasma, a desorganização do envoltório nuclear e a formação do fuso pertencem à divisão celular.",
+      "explicacao": "Durante toda a interfase a célula está em intensa atividade metabólica e crescimento: transcrição, síntese de proteínas e organelas e, na fase S, replicação do DNA. Os cromossomos estão descondensados (e não visíveis individualmente); a divisão do citoplasma, a fragmentação do envelope nuclear e a formação do fuso pertencem à fase M.",
       "habilidade": "Caracterizar a interfase como fase metabolicamente ativa.",
       "tags": [
         "interfase",
@@ -162,7 +162,7 @@
         "a fase S dura cerca de 6 horas, e a interfase ocupa cerca de 18 das 20 horas do ciclo"
       ],
       "correta": 4,
-      "explicacao": "30% das células estão em S: 0,30 × 20 h = 6 h. A mitose (10%) dura cerca de 2 h, logo a interfase dura cerca de 18 h. G1 (45%) dura cerca de 9 h e é a fase mais longa. A primeira alternativa confunde porcentagem com horas; as demais erram as proporções.",
+      "explicacao": "30% das células estão em S: 0,30 × 20 h = 6 h. A mitose (10%) dura cerca de 2 h, logo a interfase dura cerca de 18 h (90% do ciclo). G1 (45%) dura cerca de 9 h e, nesta cultura, é a fase mais longa; G2 (15%) dura cerca de 3 h. A primeira alternativa confunde porcentagem com horas; as demais erram as proporções.",
       "habilidade": "Estimar a duração das fases do ciclo a partir de dados populacionais.",
       "tags": [
         "duração das fases",
@@ -183,7 +183,7 @@
         "os hepatócitos não possuem fase S e, por isso, se dividem sem precisar duplicar o DNA"
       ],
       "correta": 2,
-      "explicacao": "Em um fígado saudável, a maioria dos hepatócitos está em G0, mas esse estado é reversível: diante da perda de massa, eles retornam a G1, passam pela fase S e se dividem por mitose. Eles não se dividem continuamente; a meiose ocorre só na formação de gametas; nenhuma célula se divide por mitose sem antes replicar o DNA.",
+      "explicacao": "Em um fígado saudável, a maioria dos hepatócitos está em G0, mas esse estado é reversível: diante da perda de massa, sinais externos como fatores de crescimento os \"chamam de volta\" ao ciclo, e eles retornam a G1, passam pela fase S e se dividem por mitose. Eles não se dividem continuamente; a meiose ocorre só na formação de gametas; neurônios maduros não se dividem nem migram para outros órgãos; nenhuma célula se divide por mitose sem antes replicar o DNA.",
       "habilidade": "Relacionar o estado G0 reversível à regeneração de órgãos.",
       "tags": [
         "G0",
@@ -235,7 +235,7 @@
     {
       "id": "ciclo-celular-interfase-f04",
       "frente": "Qual fase do ciclo tem a duração mais variável?",
-      "verso": "G1."
+      "verso": "G1. Ser a mais variável não significa ser sempre a mais longa: em uma célula humana de 24 horas, a fase S pode ocupar cerca de metade do ciclo."
     },
     {
       "id": "ciclo-celular-interfase-f05",
@@ -265,12 +265,12 @@
     {
       "id": "ciclo-celular-interfase-f10",
       "frente": "O que é G0?",
-      "verso": "Estado em que a célula sai do ciclo (a partir de G1): continua viva e ativa, mas não se prepara para dividir."
+      "verso": "Estado de não divisão em que a célula entra quando não recebe o sinal de continuar no ponto de checagem de G1: ela continua viva e ativa, mas não se divide."
     },
     {
       "id": "ciclo-celular-interfase-f11",
       "frente": "Exemplo de célula em G0 reversível e de célula em G0 praticamente permanente",
-      "verso": "Reversível: hepatócito (fígado). Praticamente permanente: neurônio maduro ou célula muscular cardíaca."
+      "verso": "Reversível: hepatócito (fígado), que volta ao ciclo estimulado por fatores de crescimento após uma lesão. Praticamente permanente: neurônio maduro ou célula muscular cardíaca."
     },
     {
       "id": "ciclo-celular-interfase-f12",
@@ -286,13 +286,18 @@
       "id": "ciclo-celular-interfase-f14",
       "frente": "Como estimar a duração de uma fase a partir da porcentagem de células nela?",
       "verso": "Multiplicar a fração de células na fase pela duração total do ciclo (em populações não sincronizadas)."
+    },
+    {
+      "id": "ciclo-celular-interfase-f15",
+      "frente": "Que fração do ciclo celular a interfase costuma ocupar?",
+      "verso": "Cerca de 90%. A fase M (mitose e citocinese) costuma ser a etapa mais curta, com menos de 1 hora em um ciclo humano de 24 horas."
     }
   ],
   "minijogos": {
     "pares": [
       {
         "a": "G1",
-        "b": "Crescimento e síntese de proteínas e organelas"
+        "b": "Crescimento, síntese de proteínas e principal ponto de checagem"
       },
       {
         "a": "Fase S",

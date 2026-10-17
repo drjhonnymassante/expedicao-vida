@@ -53,7 +53,7 @@
       "enunciado": "Durante uma maratona de mais de duas horas, os músculos de um atleta consomem uma quantidade enorme de ATP. Como a quantidade de ATP armazenada nas células é pequena, a energia para manter a corrida vem principalmente:",
       "alternativas": ["de grandes estoques de ATP guardados no tecido adiposo", "da hidrólise de proteínas musculares, que é a principal fonte em qualquer esforço", "da oxidação de glicose (inclusive do glicogênio) e de ácidos graxos, que regenera o ATP continuamente", "da fosfocreatina, suficiente para sustentar horas de exercício", "da absorção direta de ATP pela pele durante a transpiração"],
       "correta": 2,
-      "explicacao": "O ATP é constantemente regenerado a partir de ADP + Pi com a energia liberada pela oxidação de glicose (vinda do glicogênio) e de gorduras. Não existem grandes estoques de ATP; a fosfocreatina sustenta apenas os primeiros segundos de esforço intenso; proteínas não são a fonte principal.",
+      "explicacao": "O ATP é constantemente regenerado a partir de ADP + Pi com a energia liberada pela oxidação de glicose (vinda do glicogênio) e de gorduras. Não existem grandes estoques de ATP; a fosfocreatina sustenta apenas cerca de 15 segundos de esforço intenso; proteínas não são a fonte principal.",
       "habilidade": "Relacionar o ciclo ATP–ADP às reservas energéticas do corpo.",
       "tags": ["ATP", "reserva de energia", "exercício"]
     },
@@ -121,14 +121,15 @@
     { "id": "atp-metabolismo-f05", "frente": "O que acontece na hidrólise do ATP?", "verso": "ATP + H₂O → ADP + Pi, com liberação de energia usada em trabalho celular." },
     { "id": "atp-metabolismo-f06", "frente": "De onde vem a energia para regenerar ATP a partir de ADP + Pi?", "verso": "Do catabolismo (respiração ou fermentação) e, nos fotossintetizantes, também da luz." },
     { "id": "atp-metabolismo-f07", "frente": "O ATP é reserva de energia?", "verso": "Não. É moeda de uso imediato; as reservas são glicogênio, gorduras e, nas plantas, amido." },
-    { "id": "atp-metabolismo-f08", "frente": "Três tipos de trabalho celular que gastam ATP", "verso": "Mecânico (contração muscular), de transporte (bomba de sódio e potássio) e químico (síntese de moléculas)." },
+    { "id": "atp-metabolismo-f08", "frente": "Três tipos de trabalho celular que gastam ATP", "verso": "Mecânico (contração muscular), de transporte (bomba de sódio e potássio) e químico (síntese de moléculas que não se formariam espontaneamente)." },
     { "id": "atp-metabolismo-f09", "frente": "Oxidação e redução, em termos de elétrons", "verso": "Oxidação é perda de elétrons; redução é ganho. Uma não ocorre sem a outra." },
     { "id": "atp-metabolismo-f10", "frente": "Formas oxidada e reduzida do NAD e do FAD", "verso": "NAD⁺ → NADH; FAD → FADH₂ (as formas reduzidas carregam elétrons e hidrogênios)." },
     { "id": "atp-metabolismo-f11", "frente": "Qual transportador de elétrons é típico da fotossíntese?", "verso": "NADP⁺, que se reduz a NADPH." },
     { "id": "atp-metabolismo-f12", "frente": "De quais vitaminas derivam o NAD e o FAD?", "verso": "NAD da niacina (B3); FAD da riboflavina (B2)." },
     { "id": "atp-metabolismo-f13", "frente": "Fotoautótrofos x quimioautótrofos", "verso": "Ambos fixam CO₂; os primeiros usam energia da luz, os segundos usam energia da oxidação de compostos inorgânicos." },
     { "id": "atp-metabolismo-f14", "frente": "Rendimento de ATP por glicose: respiração aeróbica x fermentação", "verso": "Cerca de 30 a 32 ATP na respiração; 2 ATP na fermentação." },
-    { "id": "atp-metabolismo-f15", "frente": "Energia e matéria nos ecossistemas", "verso": "A energia flui em um sentido e se perde como calor; a matéria circula em ciclos." }
+    { "id": "atp-metabolismo-f15", "frente": "Energia e matéria nos ecossistemas", "verso": "A energia flui em um sentido e se perde como calor; a matéria circula em ciclos." },
+    { "id": "atp-metabolismo-f16", "frente": "Por que se diz que as plantas transformam, e não produzem, energia?", "verso": "Pela primeira lei da termodinâmica, energia não é criada nem destruída: a fotossíntese converte energia luminosa em energia química." }
   ],
   "minijogos": {
     "pares": [

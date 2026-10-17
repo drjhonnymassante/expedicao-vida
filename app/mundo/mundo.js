@@ -12,7 +12,7 @@ const FORMAS = [
   { nome: 'Bactéria', cor: '#7cb342' }, { nome: 'Ameba (eucarionte)', cor: '#9575cd' },
   { nome: 'Água-viva', cor: '#4fc3f7' }, { nome: 'Peixe', cor: '#ff8a65' },
   { nome: 'Anfíbio', cor: '#66bb6a' }, { nome: 'Réptil', cor: '#8d6e63' },
-  { nome: 'Ave', cor: '#ffca28' }, { nome: 'Explorador(a) cientista', cor: '#ffffff' },
+  { nome: 'Ave', cor: '#ffca28' }, { nome: 'Evonauta cientista', cor: '#ffffff' },
 ];
 
 // Temas visuais por unidade: chão, borda, decoração, folhagem, água, densidade de decoração e de lagos.
@@ -697,7 +697,7 @@ function animarInicio() {
   })(ini);
 }
 function comecar(novo) {
-  const nome = document.getElementById('nomeInput').value.trim() || 'Explorador(a)';
+  const nome = document.getElementById('nomeInput').value.trim() || 'Evonauta';
   demo = document.getElementById('chkDemo').checked;
   const salvo = carregarSalvo();
   est = (!novo && salvo) ? salvo : { nome, xp: 0, feitas: {}, livres: REG.map((_, i) => i === 0), itens: [], pos: null };

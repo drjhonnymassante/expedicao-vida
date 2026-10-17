@@ -32,14 +32,14 @@ Esses conceitos são a base de toda a unidade de parasitologia. Quem os domina c
 
 ## Parasitismo e os tipos de hospedeiro
 
-**Parasitismo** é uma relação ecológica entre indivíduos de espécies diferentes em que um deles, o **parasita**, vive à custa do outro, o **hospedeiro**, retirando dele alimento ou abrigo e causando prejuízo. É uma relação **interespecífica desarmônica**: um lado ganha e o outro perde.
+**Parasitismo** é uma relação ecológica entre indivíduos de espécies diferentes em que um deles, o **parasita**, obtém alimento (e muitas vezes abrigo) do outro, o **hospedeiro**, que é prejudicado no processo. É uma relação **interespecífica desarmônica**: um lado ganha e o outro perde. Os ecólogos costumam representá-la como uma interação **+/–** (+ para o parasita, – para o hospedeiro). O livro *Biologia de Campbell* usa a forma **parasito**, sinônimo de parasita, que é a mais comum no ENEM.
 
-Os parasitas podem ser classificados pelo local onde vivem:
+O parasitismo é extremamente comum na natureza: estima-se que pelo menos um terço das espécies da Terra sejam parasitas. Eles podem ser classificados pelo local onde vivem:
 
-- **Ectoparasitas:** ficam na superfície do corpo, como piolhos, carrapatos e pulgas.
-- **Endoparasitas:** vivem dentro do corpo, em órgãos, tecidos ou células, como a lombriga no intestino ou o protozoário da malária nas hemácias.
+- **Ectoparasitas:** alimentam-se na superfície do corpo, como piolhos, carrapatos e pulgas.
+- **Endoparasitas:** vivem dentro do corpo, em órgãos, tecidos ou células, como a tênia (solitária) e a lombriga no intestino ou o protozoário da malária nas hemácias.
 
-Em geral, o parasita depende do hospedeiro vivo. Muitas parasitoses são crônicas: a pessoa convive anos com o parasita, com perda de nutrientes, anemia ou lesões em órgãos. Algumas, porém, matam quando não tratadas.
+Em geral, o parasita depende do hospedeiro vivo. Muitas parasitoses são crônicas: a pessoa convive anos com o parasita, com perda de nutrientes, anemia ou lesões em órgãos. O esquistossomo, por exemplo, consegue "despistar" o sistema imune e sobreviver décadas no corpo humano. Algumas parasitoses, porém, matam quando não tratadas.
 
 ### Hospedeiro definitivo e hospedeiro intermediário
 
@@ -50,12 +50,18 @@ Muitos parasitas passam por mais de um hospedeiro ao longo da vida. Para organiz
 
 | Parasita (doença) | Hospedeiro definitivo | Hospedeiro intermediário |
 |---|---|---|
-| *Schistosoma mansoni* (esquistossomose) | Ser humano (vermes adultos nas veias do intestino) | Caramujo *Biomphalaria* |
-| *Taenia solium* (teníase) | Ser humano (tênia adulta no intestino) | Porco (larvas, os cisticercos, na carne); o ser humano também pode abrigá-las (cisticercose) |
+| *Schistosoma mansoni* (esquistossomose) | Ser humano (vermes adultos nos vasos sanguíneos do intestino, onde se reproduzem sexuadamente) | Caramujo *Biomphalaria* (larvas se multiplicam assexuadamente) |
+| *Taenia solium* e *Taenia saginata* (teníase) | Ser humano (tênia adulta no intestino) | Porco (*T. solium*) ou boi (*T. saginata*): larvas encistadas nos músculos, os cisticercos; o ser humano também pode abrigar larvas de *T. solium* (cisticercose) |
 | *Plasmodium* (malária) | Mosquito *Anopheles* (reprodução sexuada) | Ser humano (reprodução assexuada no fígado e nas hemácias) |
 | *Toxoplasma gondii* (toxoplasmose) | Gato e outros felinos | Ser humano, aves, roedores e outros mamíferos |
 
-Repare na malária: o ser humano é hospedeiro **intermediário**, porque a reprodução sexuada do *Plasmodium* acontece no mosquito. Essa é uma das perguntas favoritas dos vestibulares.
+Repare na malária: o ser humano é hospedeiro **intermediário**, porque a reprodução sexuada do *Plasmodium* acontece no mosquito. Essa é uma das perguntas favoritas dos vestibulares. Em resumo, o ciclo funciona assim:
+
+1. O *Anopheles* infectado pica uma pessoa e injeta, com a saliva, formas do parasita chamadas **esporozoítos**.
+2. Os esporozoítos vão para o **fígado**, onde se dividem várias vezes e originam os **merozoítos**.
+3. Os merozoítos invadem as **hemácias** e se multiplicam assexuadamente. Quando muitas hemácias se rompem ao mesmo tempo, a cada 48 ou 72 horas (conforme a espécie), surgem os **calafrios e febres periódicas** típicos da malária.
+4. Alguns merozoítos viram **gametócitos**. Um novo mosquito os ingere ao picar a pessoa doente.
+5. No tubo digestório do mosquito ocorre a **fecundação**; o zigoto origina milhares de esporozoítos, que migram para as glândulas salivares, e o ciclo recomeça.
 
 Quando o parasita completa o ciclo em **um único hospedeiro**, o ciclo é **monoxeno** (a lombriga, *Ascaris lumbricoides*, é o exemplo clássico). Quando precisa de **dois ou mais hospedeiros**, o ciclo é **heteroxeno**, como nos exemplos da tabela.
 
@@ -63,7 +69,7 @@ Quando o parasita completa o ciclo em **um único hospedeiro**, o ciclo é **mon
 
 ## Vetores mecânicos e biológicos
 
-Um **vetor** é um ser vivo, geralmente um artrópode, que **transporta o agente infeccioso** de uma fonte até um novo hospedeiro. A diferença entre os dois tipos está no que acontece com o parasita durante a viagem.
+Um **vetor** é um ser vivo, geralmente um artrópode, que **transporta o agente infeccioso** de uma fonte (uma pessoa ou um animal infectado) até um novo hospedeiro. Muitos vetores são, eles mesmos, parasitas que se alimentam de sangue, como mosquitos, carrapatos e piolhos. A diferença entre os dois tipos de vetor está no que acontece com o parasita durante a viagem.
 
 - **Vetor mecânico:** apenas carrega o agente nas patas, na boca ou no corpo, sem que ele se desenvolva ou se multiplique ali. A mosca doméstica e a barata que pousam em fezes e depois nos alimentos levam ovos de vermes, cistos de protozoários e bactérias. O agente também pode chegar à pessoa por água ou mãos contaminadas.
 - **Vetor biológico:** o agente **cumpre uma etapa obrigatória do ciclo** dentro dele, multiplicando-se ou mudando de forma. Sem o vetor, o ciclo não se completa. Exemplos brasileiros:
@@ -78,6 +84,12 @@ E o caramujo da esquistossomose? Ele é **hospedeiro intermediário**, mas não 
 
 > 💡 **Dica de memorização:** vetor mecânico é **carona**: o parasita só pega o transporte. Vetor biológico é **escola**: o parasita precisa "passar de ano" dentro dele.
 
+### Zoonoses e reservatórios
+
+**Zoonoses** são doenças cujo agente passa de outros animais para o ser humano, seja por contato direto com o animal infectado, seja por meio de um vetor. Elas formam o maior grupo de doenças humanas **emergentes**: cerca de três quartos das doenças novas em seres humanos têm essa origem. Exemplos: a leishmaniose visceral (o cão é fonte do parasita), a doença de Lyme (bactéria transmitida por carrapatos que vivem em roedores e cervos) e a gripe aviária.
+
+Um animal que abriga e transmite o agente, muitas vezes sem adoecer, é chamado de **reservatório natural**. Repare na diferença: o **reservatório** mantém o agente na natureza; o **vetor** leva o agente de um hospedeiro a outro. Conhecer os reservatórios e os vetores de uma doença ajuda a decidir onde agir para preveni-la.
+
 ## Endemia, epidemia, pandemia e surto
 
 A **epidemiologia** estuda como as doenças se distribuem nas populações e quais fatores influenciam essa distribuição. Os termos abaixo descrevem o **comportamento de uma doença no tempo e no espaço**, e não a gravidade dela.
@@ -85,9 +97,19 @@ A **epidemiologia** estuda como as doenças se distribuem nas populações e qua
 - **Endemia:** a doença ocorre de forma **habitual** em uma região, com número de casos relativamente **constante** ao longo dos anos. A malária na região amazônica, que concentra a imensa maioria dos casos do país, e a esquistossomose em áreas do Nordeste e de Minas Gerais são exemplos.
 - **Epidemia:** aumento do número de casos **acima do esperado** para aquela região e período. O critério é a comparação com o histórico, e não um número fixo. A epidemia de zika de 2015–2016, que se espalhou por vários estados e foi associada a casos de microcefalia, é um exemplo marcante.
 - **Surto:** epidemia **localizada**, restrita a um grupo ou espaço pequeno, como dezenas de convidados de um casamento com diarreia após o mesmo bufê ou casos de sarampo em uma creche.
-- **Pandemia:** epidemia que se espalha por **vários países e continentes**, com transmissão sustentada entre pessoas. Exemplos: a gripe H1N1 em 2009 e a covid-19, declarada pandemia pela Organização Mundial da Saúde em 2020.
+- **Pandemia:** uma **epidemia global**, que se espalha por **vários países e continentes**, com transmissão sustentada entre pessoas. Exemplos: a gripe espanhola de 1918–1919, que matou dezenas de milhões de pessoas; a gripe H1N1 de 2009, que surgiu no México e nos Estados Unidos e em cerca de seis meses já tinha chegado a mais de 200 países; e a covid-19, declarada pandemia pela Organização Mundial da Saúde em 2020.
 
 Uma mesma doença pode mudar de categoria. A dengue é endêmica em muitas cidades brasileiras e, em alguns verões, ultrapassa o esperado e vira epidemia.
+
+### Doenças emergentes
+
+Chamamos de **doenças emergentes** aquelas que surgem de repente ou que eram desconhecidas, como a aids, o ebola, a gripe H1N1 e a covid-19. Em geral, o agente não é totalmente novo: é um microrganismo que já existia e passou por mudanças ou ganhou novas oportunidades de se espalhar. Três processos explicam a maioria dos casos:
+
+1. **Mutação** de agentes já existentes. Vírus de RNA, como o da gripe, mudam muito rápido; novas variedades (cepas) podem infectar até quem já tinha imunidade contra a anterior. Por isso há epidemias de gripe todos os anos.
+2. **Saída de uma população isolada.** Uma doença rara e restrita a um pequeno grupo pode se espalhar pelo mundo graças a viagens aéreas baratas, transfusões de sangue e outros fatores sociais, como aconteceu com a aids.
+3. **Passagem de animais para o ser humano** (zoonose). O vírus H1N1 de 2009, por exemplo, provavelmente veio dos porcos, daí o apelido "gripe suína".
+
+A globalização acelera esse processo: pessoas, animais e mercadorias transportam agentes infecciosos pelo planeta em poucas horas.
 
 > 🖼️ **Figura sugerida:** gráfico de casos semanais de dengue em uma cidade fictícia, com uma faixa sombreada representando o número esperado (média histórica) e uma linha do ano atual que ultrapassa o limite superior da faixa; rótulos "nível endêmico" e "epidemia".
 
@@ -98,7 +120,7 @@ Uma mesma doença pode mudar de categoria. A dengue é endêmica em muitas cidad
 - **Mortalidade:** óbitos pela doença em relação à **população total**.
 - **Letalidade:** óbitos pela doença em relação ao **número de doentes**. Mede o quanto a doença é mortal para quem a contrai.
 
-Pense em uma doença rara, mas muito grave: ela tem **mortalidade baixa** (poucas pessoas da população morrem dela) e **letalidade alta** (boa parte dos doentes morre).
+Pense em uma doença rara, mas muito grave: ela tem **mortalidade baixa** (poucas pessoas da população morrem dela) e **letalidade alta** (boa parte dos doentes morre). A gripe aviária (vírus H5N1) é um bom exemplo: poucas pessoas foram infectadas, mas mais da metade delas morreu. Atenção: alguns textos, inclusive traduções de livros, chamam esse índice de "taxa de mortalidade"; pela definição usada no Brasil, o nome correto é **letalidade**.
 
 ## Profilaxia e saneamento básico
 
@@ -107,6 +129,10 @@ Pense em uma doença rara, mas muito grave: ela tem **mortalidade baixa** (pouca
 - **Agir sobre a fonte de infecção:** diagnosticar e tratar doentes, controlar reservatórios animais (como o cão na leishmaniose visceral).
 - **Agir sobre a via de transmissão:** combater vetores, eliminar criadouros, tratar a água, cozinhar bem as carnes, lavar as mãos e os alimentos.
 - **Proteger o suscetível:** usar calçados, mosquiteiros e repelentes, vacinar quando houver vacina disponível, informar a população.
+
+A **vacina** é uma forma inofensiva do agente (ou uma parte dele) que estimula o sistema imune a se preparar contra o agente verdadeiro. Ela é a principal arma contra as viroses, já que os **antibióticos não funcionam contra vírus** (eles atacam estruturas exclusivas das bactérias). A varíola foi erradicada do planeta por uma campanha mundial de vacinação coordenada pela OMS; ajudou muito o fato de o vírus infectar apenas seres humanos, sem reservatórios animais. Contra parasitas que vivem escondidos dentro das células e trocam com frequência suas proteínas de superfície, como o *Plasmodium*, criar vacinas é muito mais difícil.
+
+As medidas também podem perder eficácia com o tempo. Na década de 1960, inseticidas contra o *Anopheles* e remédios contra o *Plasmodium* reduziram bastante a malária. Porém, a **seleção natural** favoreceu mosquitos resistentes aos inseticidas e parasitas resistentes aos remédios, e a doença voltou a crescer. Por isso, os programas de controle combinam várias estratégias e acompanham os resultados.
 
 O **saneamento básico** é a medida com maior impacto coletivo, porque interrompe ao mesmo tempo a transmissão de dezenas de doenças ligadas a fezes e à água contaminada: amebíase, giardíase, ascaridíase, esquistossomose, cólera, hepatite A e muitas outras. No Brasil, a Lei do Saneamento Básico (Lei nº 11.445, de 2007, atualizada pelo novo marco legal de 2020) define quatro componentes:
 
@@ -149,6 +175,8 @@ No dia a dia, quem leva a vigilância até a casa das pessoas são os **agentes 
 - **"O barbeiro transmite Chagas pela picada."** A transmissão vetorial ocorre pelas **fezes** do inseto, que contaminam a lesão ou as mucosas.
 - **"Mosca doméstica é vetor biológico."** Ela é o exemplo clássico de **vetor mecânico**: os agentes não se desenvolvem no seu corpo.
 - **"Letalidade e mortalidade são sinônimos."** Letalidade usa como base os **doentes**; mortalidade usa a **população total**.
+- **"Reservatório e vetor são a mesma coisa."** O reservatório **mantém** o agente na natureza (muitas vezes sem adoecer); o vetor **transporta** o agente até um novo hospedeiro.
+- **"Antibiótico combate gripe e dengue."** Antibióticos agem só sobre bactérias. Contra vírus, a prevenção mais eficaz é a vacina.
 
 ## Resumo relâmpago
 
@@ -156,7 +184,9 @@ No dia a dia, quem leva a vigilância até a casa das pessoas são os **agentes 
 - **Hospedeiro definitivo:** fase adulta ou reprodução sexuada. **Intermediário:** larvas ou reprodução assexuada.
 - Ciclo **monoxeno** tem um hospedeiro; **heteroxeno** tem dois ou mais.
 - **Vetor mecânico** só transporta; no **vetor biológico** o agente cumpre parte do ciclo.
-- **Endemia** é habitual; **epidemia** supera o esperado; **surto** é localizado; **pandemia** atinge vários continentes.
+- **Zoonoses** vêm de outros animais; **reservatórios** mantêm o agente na natureza. Cerca de três quartos das doenças emergentes são zoonoses.
+- **Endemia** é habitual; **epidemia** supera o esperado; **surto** é localizado; **pandemia** é uma epidemia global.
+- **Doenças emergentes** surgem por mutação de agentes, saída de populações isoladas ou passagem de animais para humanos.
 - **Incidência** = casos novos; **prevalência** = casos existentes; **letalidade** = óbitos entre os doentes.
 - **Profilaxia** quebra elos da cadeia de transmissão; o **saneamento básico** age sobre muitas doenças ao mesmo tempo.
 - A **vigilância epidemiológica** do SUS depende da **notificação compulsória**, da investigação e da ação rápida.
@@ -171,3 +201,7 @@ No dia a dia, quem leva a vigilância até a casa das pessoas são os **agentes 
 - [[viroses-humanas]]: dengue, zika e covid-19 ilustram endemia, epidemia e pandemia.
 - [[vacinas-soros]]: a vacinação é uma forma de profilaxia que protege o hospedeiro suscetível.
 - [[artropodes]]: mosquitos, barbeiros e carrapatos são os principais vetores.
+
+## Referência
+
+- Urry, L. A. et al. *Biologia de Campbell*. 10. ed. Porto Alegre: Artmed, 2015. Capítulos 19 (conceito 19.3), 27 (conceito 27.6), 28 (ciclo do *Plasmodium*), 33 (esquistossomo e solitárias) e 54 (parasitismo e doenças zoonóticas).

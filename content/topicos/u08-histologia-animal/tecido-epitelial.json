@@ -7,168 +7,430 @@
       "nivel": "bronze",
       "tipo": "multipla_escolha",
       "enunciado": "Qual característica é típica do tecido epitelial?",
-      "alternativas": ["Grande quantidade de substância intercelular", "Rica vascularização sanguínea entre as células", "Células dispersas em uma matriz de fibras", "Células justapostas, com pouca substância intercelular", "Incapacidade de renovação celular"],
+      "alternativas": [
+        "Grande quantidade de substância intercelular",
+        "Rica vascularização sanguínea entre as células",
+        "Células dispersas em uma matriz de fibras",
+        "Células justapostas, com pouca substância intercelular",
+        "Incapacidade de renovação celular"
+      ],
       "correta": 3,
-      "explicacao": "No epitélio as células ficam muito próximas, unidas por junções, com pouca substância intercelular. Ele é avascular e costuma se renovar intensamente. Matriz abundante com fibras é característica do tecido conjuntivo.",
+      "explicacao": "No epitélio as células ficam muito próximas e compactadas, unidas por junções, com pouca substância intercelular. Ele é avascular e costuma se renovar intensamente. Células espalhadas em uma matriz extracelular com fibras são características do tecido conjuntivo.",
       "habilidade": "Reconhecer características gerais do tecido epitelial.",
-      "tags": ["características gerais"]
+      "tags": [
+        "características gerais"
+      ]
     },
     {
       "id": "tecido-epitelial-q02",
       "nivel": "bronze",
       "tipo": "multipla_escolha",
       "enunciado": "O epitélio que reveste os alvéolos pulmonares, por onde ocorrem as trocas gasosas, é do tipo:",
-      "alternativas": ["estratificado pavimentoso queratinizado", "simples pavimentoso", "pseudoestratificado prismático ciliado", "de transição", "estratificado prismático"],
+      "alternativas": [
+        "estratificado pavimentoso queratinizado",
+        "simples pavimentoso",
+        "pseudoestratificado prismático ciliado",
+        "de transição",
+        "estratificado prismático"
+      ],
       "correta": 1,
-      "explicacao": "Uma única camada de células achatadas forma uma barreira muito fina, ideal para a difusão de O₂ e CO₂. Epitélios estratificados ou altos dificultariam as trocas.",
+      "explicacao": "Uma única camada de células achatadas (epitélio simples pavimentoso, chamado de escamoso no Campbell) forma uma barreira muito fina, ideal para a difusão de O₂ e CO₂. O mesmo tipo reveste os vasos sanguíneos. Epitélios estratificados ou altos dificultariam as trocas.",
       "habilidade": "Relacionar tipo de epitélio à função do órgão.",
-      "tags": ["classificação", "respiração"]
+      "tags": [
+        "classificação",
+        "respiração"
+      ]
     },
     {
       "id": "tecido-epitelial-q03",
       "nivel": "bronze",
       "tipo": "multipla_escolha",
       "enunciado": "Uma glândula endócrina caracteriza-se por:",
-      "alternativas": ["não possuir ducto e lançar sua secreção diretamente no sangue", "possuir ducto que conduz a secreção para a superfície do corpo", "existir apenas no tubo digestório", "produzir exclusivamente suor e sebo", "ser sempre uma glândula mista"],
+      "alternativas": [
+        "não possuir ducto e lançar sua secreção diretamente no sangue",
+        "possuir ducto que conduz a secreção para a superfície do corpo",
+        "existir apenas no tubo digestório",
+        "produzir exclusivamente suor e sebo",
+        "ser sempre uma glândula mista"
+      ],
       "correta": 0,
-      "explicacao": "Glândulas endócrinas perdem a ligação com o epitélio de origem (não têm ducto) e liberam hormônios no sangue. Ductos são característicos das exócrinas, como as sudoríparas e sebáceas.",
+      "explicacao": "Glândulas endócrinas não têm ducto: liberam hormônios no líquido que as envolve, de onde eles passam para o sangue. Ductos que levam a secreção a superfícies ou cavidades são característicos das exócrinas, como as sudoríparas, sebáceas e salivares.",
       "habilidade": "Diferenciar glândulas exócrinas e endócrinas.",
-      "tags": ["glândulas"]
+      "tags": [
+        "glândulas"
+      ]
     },
     {
       "id": "tecido-epitelial-q04",
       "nivel": "prata",
       "tipo": "multipla_escolha",
       "enunciado": "Os epitélios não possuem vasos sanguíneos. Como, então, suas células recebem oxigênio e nutrientes?",
-      "alternativas": ["Realizando fotossíntese nas camadas superficiais", "Por capilares que atravessam o epitélio até a superfície", "Usando reservas acumuladas durante o desenvolvimento embrionário", "Pela linfa que circula livremente entre as células epiteliais", "Por difusão a partir do tecido conjuntivo subjacente, através da lâmina basal"],
+      "alternativas": [
+        "Realizando fotossíntese nas camadas superficiais",
+        "Por capilares que atravessam o epitélio até a superfície",
+        "Usando reservas acumuladas durante o desenvolvimento embrionário",
+        "Pela linfa que circula livremente entre as células epiteliais",
+        "Por difusão a partir do tecido conjuntivo subjacente, através da lâmina basal"
+      ],
       "correta": 4,
       "explicacao": "O tecido conjuntivo abaixo do epitélio é vascularizado. Oxigênio e nutrientes difundem-se dos capilares, atravessam a lâmina basal e chegam às células epiteliais.",
       "habilidade": "Explicar a nutrição de um tecido avascular.",
-      "tags": ["lâmina basal", "difusão"]
+      "tags": [
+        "lâmina basal",
+        "difusão"
+      ]
     },
     {
       "id": "tecido-epitelial-q05",
       "nivel": "prata",
       "tipo": "multipla_escolha",
       "enunciado": "Fumantes frequentemente apresentam tosse persistente com acúmulo de muco nas vias aéreas. Uma explicação para esse quadro é que:",
-      "alternativas": ["a fumaça destrói os alvéolos, que são os principais produtores de muco", "a fumaça estimula a produção de queratina nos alvéolos pulmonares", "componentes da fumaça prejudicam o batimento dos cílios do epitélio pseudoestratificado das vias aéreas, dificultando a remoção do muco", "o tabaco ativa as glândulas sudoríparas do tórax", "a nicotina transforma o epitélio da traqueia em epitélio de transição"],
+      "alternativas": [
+        "a fumaça destrói os alvéolos, que são os principais produtores de muco",
+        "a fumaça estimula a produção de queratina nos alvéolos pulmonares",
+        "componentes da fumaça prejudicam o batimento dos cílios do epitélio pseudoestratificado das vias aéreas, dificultando a remoção do muco",
+        "o tabaco ativa as glândulas sudoríparas do tórax",
+        "a nicotina transforma o epitélio da traqueia em epitélio de transição"
+      ],
       "correta": 2,
-      "explicacao": "No epitélio da traqueia e dos brônquios, as células caliciformes produzem muco e os cílios o transportam para fora. Com os cílios prejudicados, o muco se acumula e a tosse vira o principal mecanismo de limpeza. Alvéolos não produzem muco nem queratina.",
+      "explicacao": "No epitélio da traqueia e dos brônquios, as células caliciformes produzem muco e os cílios o levam até a faringe (a \"escada rolante do muco\"). Com os cílios prejudicados, o muco se acumula e a tosse vira o principal mecanismo de limpeza. Alvéolos não têm cílios, não produzem muco e não são queratinizados.",
       "habilidade": "Aplicar a relação estrutura-função a um problema de saúde.",
-      "tags": ["cílios", "tabagismo", "saúde"]
+      "tags": [
+        "cílios",
+        "tabagismo",
+        "saúde"
+      ]
     },
     {
       "id": "tecido-epitelial-q06",
       "nivel": "prata",
       "tipo": "multipla_escolha",
       "enunciado": "O pâncreas é classificado como glândula mista porque:",
-      "alternativas": ["produz suor e sebo ao mesmo tempo", "secreta o suco pancreático por ductos e libera insulina e glucagon diretamente no sangue", "é formado por tecido epitelial e muscular", "libera hormônios tanto no sangue quanto na urina", "possui células com e sem núcleo"],
+      "alternativas": [
+        "produz suor e sebo ao mesmo tempo",
+        "secreta o suco pancreático por ductos e libera insulina e glucagon diretamente no sangue",
+        "é formado por tecido epitelial e muscular",
+        "libera hormônios tanto no sangue quanto na urina",
+        "possui células com e sem núcleo"
+      ],
       "correta": 1,
-      "explicacao": "A porção exócrina do pâncreas produz o suco pancreático, levado ao duodeno por ductos. A porção endócrina (ilhotas pancreáticas) produz insulina e glucagon, lançados no sangue.",
+      "explicacao": "A porção do pâncreas com ductos produz o suco pancreático (enzimas digestivas e bicarbonato), levado ao intestino delgado. A porção sem ductos (ilhotas pancreáticas) produz insulina e glucagon, lançados no sangue. Por isso o pâncreas participa dos sistemas digestório e endócrino.",
       "habilidade": "Identificar glândulas mistas.",
-      "tags": ["glândulas", "pâncreas"]
+      "tags": [
+        "glândulas",
+        "pâncreas"
+      ]
     },
     {
       "id": "tecido-epitelial-q07",
       "nivel": "ouro",
       "tipo": "multipla_escolha",
       "enunciado": "Campanhas de saúde recomendam protetor solar para todas as pessoas, independentemente do tom de pele. Considerando a biologia da epiderme, a afirmação correta é:",
-      "alternativas": ["A melanina, produzida por melanócitos da epiderme, absorve parte da radiação UV e protege o DNA; mesmo assim, a exposição excessiva pode causar mutações e câncer de pele em qualquer tom de pele", "A melanina é produzida por células da derme e não tem relação com a proteção contra radiação", "Pessoas de pele escura não desenvolvem câncer de pele, pois não têm melanócitos expostos", "O protetor solar age aumentando o número de melanócitos na pele", "A radiação ultravioleta não é capaz de alterar o DNA das células epiteliais"],
+      "alternativas": [
+        "A melanina, produzida por melanócitos da epiderme, absorve parte da radiação UV e protege o DNA; mesmo assim, a exposição excessiva pode causar mutações e câncer de pele em qualquer tom de pele",
+        "A melanina é produzida por células da derme e não tem relação com a proteção contra radiação",
+        "Pessoas de pele escura não desenvolvem câncer de pele, pois não têm melanócitos expostos",
+        "O protetor solar age aumentando o número de melanócitos na pele",
+        "A radiação ultravioleta não é capaz de alterar o DNA das células epiteliais"
+      ],
       "correta": 0,
-      "explicacao": "Os melanócitos ficam na camada basal da epiderme e transferem melanina às células vizinhas. A melanina reduz, mas não elimina, o dano da radiação UV ao DNA, por isso a proteção vale para todos os tons de pele.",
+      "explicacao": "Os melanócitos ficam na camada basal da epiderme e transferem melanina às células vizinhas. A melanina reduz, mas não elimina, o dano da radiação UV ao DNA (como a união de timinas vizinhas). As enzimas de reparo também não corrigem tudo, por isso a proteção vale para todos os tons de pele.",
       "habilidade": "Avaliar medidas de prevenção em saúde com base na estrutura da pele.",
-      "tags": ["pele", "melanina", "câncer", "saúde pública"]
+      "tags": [
+        "pele",
+        "melanina",
+        "câncer",
+        "saúde pública"
+      ]
     },
     {
       "id": "tecido-epitelial-q08",
       "nivel": "ouro",
       "tipo": "multipla_escolha",
       "enunciado": "A bexiga urinária pode armazenar volumes variáveis de urina, distendendo-se bastante quando cheia e voltando ao tamanho original após a micção. A característica do seu revestimento interno que permite isso é a presença de:",
-      "alternativas": ["epitélio simples pavimentoso, que é o mais fino do corpo", "epitélio estratificado pavimentoso queratinizado, impermeável à urina", "células com microvilosidades que absorvem o excesso de urina", "epitélio de transição, cujas células mudam de forma conforme o grau de distensão", "glândulas holócrinas que se desfazem quando a bexiga enche"],
+      "alternativas": [
+        "epitélio simples pavimentoso, que é o mais fino do corpo",
+        "epitélio estratificado pavimentoso queratinizado, impermeável à urina",
+        "células com microvilosidades que absorvem o excesso de urina",
+        "epitélio de transição, cujas células mudam de forma conforme o grau de distensão",
+        "glândulas holócrinas que se desfazem quando a bexiga enche"
+      ],
       "correta": 3,
       "explicacao": "O urotélio (epitélio de transição) tem células que ficam arredondadas com a bexiga vazia e achatadas quando ela está cheia, permitindo a distensão sem ruptura. A bexiga não absorve urina e não é revestida por epitélio queratinizado.",
       "habilidade": "Relacionar especialização do epitélio à função do órgão.",
-      "tags": ["epitélio de transição", "sistema urinário"]
+      "tags": [
+        "epitélio de transição",
+        "sistema urinário"
+      ]
     },
     {
       "id": "tecido-epitelial-q09",
       "nivel": "ouro",
       "tipo": "multipla_escolha",
       "enunciado": "Os carcinomas, tumores de origem epitelial, correspondem à maioria dos cânceres diagnosticados em seres humanos. Uma explicação biológica plausível para essa frequência é que os epitélios:",
-      "alternativas": ["são avasculares, o que faz os tumores crescerem mais depressa", "não possuem junções celulares, o que facilita a separação das células", "são os únicos tecidos cujas células possuem DNA nuclear", "não realizam mitose e, por isso, não corrigem erros no DNA", "têm alta taxa de renovação por mitoses e ficam expostos a agentes externos, o que aumenta a chance de acumular mutações"],
+      "alternativas": [
+        "são avasculares, o que faz os tumores crescerem mais depressa",
+        "não possuem junções celulares, o que facilita a separação das células",
+        "são os únicos tecidos cujas células possuem DNA nuclear",
+        "não realizam mitose e, por isso, não corrigem erros no DNA",
+        "têm alta taxa de renovação por mitoses e ficam expostos a agentes externos, o que aumenta a chance de acumular mutações"
+      ],
       "correta": 4,
       "explicacao": "Cada divisão celular é uma oportunidade de erro na duplicação do DNA, e os epitélios se dividem muito. Além disso, pele, vias aéreas e tubo digestório ficam expostos à radiação UV, à fumaça e a substâncias químicas. Epitélios têm junções, todas as células nucleadas têm DNA e os epitélios realizam muitas mitoses.",
       "habilidade": "Relacionar renovação celular, mutação e câncer.",
-      "tags": ["câncer", "mitose", "integração"]
+      "tags": [
+        "câncer",
+        "mitose",
+        "integração"
+      ]
     },
     {
       "id": "tecido-epitelial-q10",
       "nivel": "diamante",
       "tipo": "multipla_escolha",
       "enunciado": "Na doença celíaca, uma resposta imune desencadeada pelo glúten lesa a mucosa do intestino delgado e provoca o achatamento das vilosidades e a redução das microvilosidades do epitélio. Pacientes não tratados podem apresentar diarreia, perda de peso, anemia e baixa densidade óssea. Esse conjunto de sintomas é explicado principalmente pela:",
-      "alternativas": ["ampliação da área de absorção, que leva ao excesso de nutrientes no sangue", "interrupção total da produção de suco pancreático pelo pâncreas exócrino", "redução da área de absorção do epitélio simples prismático intestinal, que prejudica a absorção de nutrientes como ferro e cálcio", "substituição do epitélio intestinal por epitélio de transição", "destruição das glândulas sudoríparas, que causa desidratação e perda óssea"],
+      "alternativas": [
+        "ampliação da área de absorção, que leva ao excesso de nutrientes no sangue",
+        "interrupção total da produção de suco pancreático pelo pâncreas exócrino",
+        "redução da área de absorção do epitélio simples prismático intestinal, que prejudica a absorção de nutrientes como ferro e cálcio",
+        "substituição do epitélio intestinal por epitélio de transição",
+        "destruição das glândulas sudoríparas, que causa desidratação e perda óssea"
+      ],
       "correta": 2,
       "explicacao": "Vilosidades e microvilosidades ampliam a superfície absortiva do epitélio simples prismático. Com a lesão, a área de absorção diminui e ocorre má absorção: falta de ferro (anemia), de cálcio e vitamina D (perda de massa óssea) e de outros nutrientes. A doença não interrompe o pâncreas nem altera o tipo de epitélio para transição.",
       "habilidade": "Integrar histologia, digestão, imunologia e nutrição na análise de um caso.",
-      "tags": ["intestino", "microvilosidades", "doença celíaca", "integração"]
+      "tags": [
+        "intestino",
+        "microvilosidades",
+        "doença celíaca",
+        "integração"
+      ]
     }
   ],
   "flashcards": [
-    { "id": "tecido-epitelial-f01", "frente": "Quatro características gerais do tecido epitelial", "verso": "Células justapostas, pouca substância intercelular, ausência de vasos (avascular) e apoio sobre a lâmina basal. Também tem alta capacidade de renovação." },
-    { "id": "tecido-epitelial-f02", "frente": "Como o epitélio se nutre?", "verso": "Por difusão a partir do tecido conjuntivo vascularizado que fica abaixo dele." },
-    { "id": "tecido-epitelial-f03", "frente": "O que é a lâmina basal?", "verso": "Uma camada fina de proteínas e glicoproteínas que separa o epitélio do tecido conjuntivo e sustenta as células." },
-    { "id": "tecido-epitelial-f04", "frente": "Critérios de classificação dos epitélios de revestimento", "verso": "Número de camadas (simples, estratificado, pseudoestratificado) e forma das células (pavimentoso, cúbico, prismático)." },
-    { "id": "tecido-epitelial-f05", "frente": "Pseudoestratificado: quantas camadas?", "verso": "Uma só. Os núcleos ficam em alturas diferentes e dão a falsa impressão de várias camadas." },
-    { "id": "tecido-epitelial-f06", "frente": "Epitélio dos alvéolos pulmonares", "verso": "Simples pavimentoso: fino, facilita as trocas gasosas." },
-    { "id": "tecido-epitelial-f07", "frente": "Epitélio da traqueia", "verso": "Pseudoestratificado prismático ciliado, com células caliciformes produtoras de muco." },
-    { "id": "tecido-epitelial-f08", "frente": "Epitélio da bexiga", "verso": "De transição (urotélio): as células mudam de forma e permitem a distensão." },
-    { "id": "tecido-epitelial-f09", "frente": "Tipo de epitélio da epiderme", "verso": "Estratificado pavimentoso queratinizado." },
-    { "id": "tecido-epitelial-f10", "frente": "Função da melanina", "verso": "Absorver parte da radiação ultravioleta e proteger o DNA das células da pele." },
-    { "id": "tecido-epitelial-f11", "frente": "Glândula exócrina x endócrina", "verso": "A exócrina tem ducto e lança a secreção em superfície ou cavidade. A endócrina não tem ducto e lança hormônios no sangue." },
-    { "id": "tecido-epitelial-f12", "frente": "Exemplo clássico de glândula mista", "verso": "Pâncreas: suco pancreático (exócrino) e insulina e glucagon (endócrino)." },
-    { "id": "tecido-epitelial-f13", "frente": "Merócrina, apócrina e holócrina: exemplos", "verso": "Merócrina: salivares. Apócrina: mamárias. Holócrina: sebáceas." },
-    { "id": "tecido-epitelial-f14", "frente": "O que são carcinomas?", "verso": "Cânceres de origem epitelial, os mais frequentes em seres humanos." }
+    {
+      "id": "tecido-epitelial-f01",
+      "frente": "Quatro características gerais do tecido epitelial",
+      "verso": "Células justapostas, pouca substância intercelular, ausência de vasos (avascular) e apoio sobre a lâmina basal. Também tem alta capacidade de renovação."
+    },
+    {
+      "id": "tecido-epitelial-f02",
+      "frente": "Como o epitélio se nutre?",
+      "verso": "Por difusão a partir do tecido conjuntivo vascularizado que fica abaixo dele."
+    },
+    {
+      "id": "tecido-epitelial-f03",
+      "frente": "O que é a lâmina basal?",
+      "verso": "Uma camada fina de proteínas e glicoproteínas que separa o epitélio do tecido conjuntivo e sustenta as células."
+    },
+    {
+      "id": "tecido-epitelial-f04",
+      "frente": "Critérios de classificação dos epitélios de revestimento",
+      "verso": "Número de camadas (simples, estratificado, pseudoestratificado) e forma das células (pavimentoso ou escamoso, cúbico, prismático ou colunar)."
+    },
+    {
+      "id": "tecido-epitelial-f05",
+      "frente": "Pseudoestratificado: quantas camadas?",
+      "verso": "Uma só. Os núcleos ficam em alturas diferentes e dão a falsa impressão de várias camadas."
+    },
+    {
+      "id": "tecido-epitelial-f06",
+      "frente": "Epitélio dos alvéolos pulmonares",
+      "verso": "Simples pavimentoso: fino, facilita as trocas gasosas."
+    },
+    {
+      "id": "tecido-epitelial-f07",
+      "frente": "Epitélio da traqueia",
+      "verso": "Pseudoestratificado prismático ciliado, com células caliciformes produtoras de muco."
+    },
+    {
+      "id": "tecido-epitelial-f08",
+      "frente": "Epitélio da bexiga",
+      "verso": "De transição (urotélio): as células mudam de forma e permitem a distensão."
+    },
+    {
+      "id": "tecido-epitelial-f09",
+      "frente": "Tipo de epitélio da epiderme",
+      "verso": "Estratificado pavimentoso queratinizado."
+    },
+    {
+      "id": "tecido-epitelial-f10",
+      "frente": "Função da melanina",
+      "verso": "Absorver parte da radiação ultravioleta e proteger o DNA das células da pele."
+    },
+    {
+      "id": "tecido-epitelial-f11",
+      "frente": "Glândula exócrina x endócrina",
+      "verso": "A exócrina tem ducto e lança a secreção em superfície ou cavidade. A endócrina não tem ducto e lança hormônios no sangue."
+    },
+    {
+      "id": "tecido-epitelial-f12",
+      "frente": "Exemplo clássico de glândula mista",
+      "verso": "Pâncreas: suco pancreático com enzimas e bicarbonato, por ductos (exócrino), e insulina e glucagon no sangue (endócrino)."
+    },
+    {
+      "id": "tecido-epitelial-f13",
+      "frente": "Merócrina, apócrina e holócrina: exemplos",
+      "verso": "Merócrina: salivares. Apócrina: mamárias. Holócrina: sebáceas."
+    },
+    {
+      "id": "tecido-epitelial-f14",
+      "frente": "O que são carcinomas?",
+      "verso": "Cânceres de origem epitelial, os mais frequentes em seres humanos."
+    },
+    {
+      "id": "tecido-epitelial-f15",
+      "frente": "Polaridade do epitélio: o que são as faces apical e basal?",
+      "verso": "A apical fica voltada para fora ou para a cavidade do órgão (onde ficam microvilosidades e cílios). A basal fica do lado oposto, apoiada na lâmina basal."
+    },
+    {
+      "id": "tecido-epitelial-f16",
+      "frente": "Três tipos de junções celulares do epitélio",
+      "verso": "Zônulas de oclusão (vedam a passagem entre as células), desmossomos (prendem as células como rebites) e junções comunicantes (canais entre os citoplasmas)."
+    }
   ],
   "minijogos": {
     "pares": [
-      { "a": "Alvéolo pulmonar", "b": "Simples pavimentoso" },
-      { "a": "Traqueia", "b": "Pseudoestratificado prismático ciliado" },
-      { "a": "Epiderme", "b": "Estratificado pavimentoso queratinizado" },
-      { "a": "Bexiga urinária", "b": "Epitélio de transição" },
-      { "a": "Intestino delgado", "b": "Simples prismático com microvilosidades" },
-      { "a": "Túbulos renais", "b": "Simples cúbico" },
-      { "a": "Esôfago", "b": "Estratificado pavimentoso não queratinizado" },
-      { "a": "Revestimento interno dos vasos", "b": "Endotélio (simples pavimentoso)" }
+      {
+        "a": "Alvéolo pulmonar",
+        "b": "Simples pavimentoso"
+      },
+      {
+        "a": "Traqueia",
+        "b": "Pseudoestratificado prismático ciliado"
+      },
+      {
+        "a": "Epiderme",
+        "b": "Estratificado pavimentoso queratinizado"
+      },
+      {
+        "a": "Bexiga urinária",
+        "b": "Epitélio de transição"
+      },
+      {
+        "a": "Intestino delgado",
+        "b": "Simples prismático com microvilosidades"
+      },
+      {
+        "a": "Túbulos renais",
+        "b": "Simples cúbico"
+      },
+      {
+        "a": "Esôfago",
+        "b": "Estratificado pavimentoso não queratinizado"
+      },
+      {
+        "a": "Revestimento interno dos vasos",
+        "b": "Endotélio (simples pavimentoso)"
+      }
     ],
     "sequencia": {
       "instrucao": "Coloque em ordem o caminho de uma célula da epiderme, do nascimento à descamação.",
-      "itens": ["Divisão por mitose na camada basal", "Deslocamento para camadas mais superficiais", "Acúmulo de queratina no citoplasma", "Morte da célula, que fica achatada e queratinizada", "Descamação na superfície da pele"]
+      "itens": [
+        "Divisão por mitose na camada basal",
+        "Deslocamento para camadas mais superficiais",
+        "Acúmulo de queratina no citoplasma",
+        "Morte da célula, que fica achatada e queratinizada",
+        "Descamação na superfície da pele"
+      ]
     },
     "classificacao": {
       "instrucao": "Classifique cada glândula de acordo com o destino de sua secreção.",
-      "categorias": ["Exócrina", "Endócrina", "Mista"],
+      "categorias": [
+        "Exócrina",
+        "Endócrina",
+        "Mista"
+      ],
       "itens": [
-        { "texto": "Glândula sudorípara", "categoria": "Exócrina" },
-        { "texto": "Glândula sebácea", "categoria": "Exócrina" },
-        { "texto": "Glândula salivar", "categoria": "Exócrina" },
-        { "texto": "Glândula mamária", "categoria": "Exócrina" },
-        { "texto": "Glândula lacrimal", "categoria": "Exócrina" },
-        { "texto": "Tireoide", "categoria": "Endócrina" },
-        { "texto": "Hipófise", "categoria": "Endócrina" },
-        { "texto": "Adrenal (suprarrenal)", "categoria": "Endócrina" },
-        { "texto": "Pâncreas", "categoria": "Mista" }
+        {
+          "texto": "Glândula sudorípara",
+          "categoria": "Exócrina"
+        },
+        {
+          "texto": "Glândula sebácea",
+          "categoria": "Exócrina"
+        },
+        {
+          "texto": "Glândula salivar",
+          "categoria": "Exócrina"
+        },
+        {
+          "texto": "Glândula mamária",
+          "categoria": "Exócrina"
+        },
+        {
+          "texto": "Glândula lacrimal",
+          "categoria": "Exócrina"
+        },
+        {
+          "texto": "Tireoide",
+          "categoria": "Endócrina"
+        },
+        {
+          "texto": "Hipófise",
+          "categoria": "Endócrina"
+        },
+        {
+          "texto": "Adrenal (suprarrenal)",
+          "categoria": "Endócrina"
+        },
+        {
+          "texto": "Pâncreas",
+          "categoria": "Mista"
+        }
       ]
     },
     "verdadeiro_falso": [
-      { "afirmacao": "O tecido epitelial é ricamente vascularizado.", "valor": false, "explicacao": "O epitélio é avascular e se nutre por difusão a partir do conjuntivo." },
-      { "afirmacao": "No epitélio pseudoestratificado, todas as células tocam a lâmina basal.", "valor": true, "explicacao": "É uma camada única; apenas os núcleos ficam em alturas diferentes." },
-      { "afirmacao": "A derme é formada por tecido epitelial.", "valor": false, "explicacao": "A derme é tecido conjuntivo. A epiderme é que é epitelial." },
-      { "afirmacao": "Glândulas endócrinas lançam seus produtos no sangue.", "valor": true, "explicacao": "Elas não têm ducto e liberam hormônios na corrente sanguínea." },
-      { "afirmacao": "As microvilosidades aumentam a superfície de absorção das células intestinais.", "valor": true, "explicacao": "Elas são dobras da membrana que ampliam muito a área de contato com o alimento digerido." },
-      { "afirmacao": "A cor da pele depende principalmente do número de melanócitos.", "valor": false, "explicacao": "Depende principalmente da quantidade e do tipo de melanina produzida." },
-      { "afirmacao": "Os epitélios podem se originar dos três folhetos embrionários.", "valor": true, "explicacao": "Epiderme (ectoderma), revestimento digestório (endoderma) e endotélio (mesoderma)." },
-      { "afirmacao": "As glândulas sebáceas são do tipo holócrino.", "valor": true, "explicacao": "Nelas a célula inteira se desintegra e passa a fazer parte da secreção." },
-      { "afirmacao": "Pessoas de pele escura não precisam de nenhuma proteção contra a radiação UV.", "valor": false, "explicacao": "A melanina reduz, mas não elimina, o dano causado pela radiação UV." }
+      {
+        "afirmacao": "O tecido epitelial é ricamente vascularizado.",
+        "valor": false,
+        "explicacao": "O epitélio é avascular e se nutre por difusão a partir do conjuntivo."
+      },
+      {
+        "afirmacao": "No epitélio pseudoestratificado, todas as células tocam a lâmina basal.",
+        "valor": true,
+        "explicacao": "É uma camada única; apenas os núcleos ficam em alturas diferentes."
+      },
+      {
+        "afirmacao": "A derme é formada por tecido epitelial.",
+        "valor": false,
+        "explicacao": "A derme é tecido conjuntivo. A epiderme é que é epitelial."
+      },
+      {
+        "afirmacao": "Glândulas endócrinas lançam seus produtos no sangue.",
+        "valor": true,
+        "explicacao": "Elas não têm ducto e liberam hormônios nos líquidos do corpo, de onde eles chegam à corrente sanguínea."
+      },
+      {
+        "afirmacao": "As microvilosidades aumentam a superfície de absorção das células intestinais.",
+        "valor": true,
+        "explicacao": "Elas são projeções microscópicas da membrana na face apical que ampliam muito a área de contato com o alimento digerido."
+      },
+      {
+        "afirmacao": "A cor da pele depende principalmente do número de melanócitos.",
+        "valor": false,
+        "explicacao": "Depende principalmente da quantidade e do tipo de melanina produzida."
+      },
+      {
+        "afirmacao": "Os epitélios podem se originar dos três folhetos embrionários.",
+        "valor": true,
+        "explicacao": "Epiderme (ectoderma), revestimento digestório (endoderma) e endotélio (mesoderma)."
+      },
+      {
+        "afirmacao": "As glândulas sebáceas são do tipo holócrino.",
+        "valor": true,
+        "explicacao": "Nelas a célula inteira se desintegra e passa a fazer parte da secreção."
+      },
+      {
+        "afirmacao": "Pessoas de pele escura não precisam de nenhuma proteção contra a radiação UV.",
+        "valor": false,
+        "explicacao": "A melanina reduz, mas não elimina, o dano causado pela radiação UV."
+      },
+      {
+        "afirmacao": "Epitélio escamoso e epitélio pavimentoso são nomes diferentes para o mesmo tipo de células achatadas.",
+        "valor": true,
+        "explicacao": "O Campbell usa \"escamoso\"; a maioria dos livros brasileiros usa \"pavimentoso\"."
+      }
     ]
   },
   "missao_mundo_aberto": {

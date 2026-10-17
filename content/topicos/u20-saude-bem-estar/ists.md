@@ -30,15 +30,17 @@ Esse tema é uma das maiores intersecções entre Biologia e cidadania. Ele exig
 
 ## HIV e aids: transmissão, sistema imune e tratamento
 
-O **HIV** (vírus da imunodeficiência humana) é um **retrovírus**: tem **RNA** como material genético e a enzima **transcriptase reversa**, que produz DNA a partir desse RNA. Esse DNA é inserido no genoma da célula hospedeira pela enzima **integrase**, e a célula passa a fabricar novos vírus.
+O **HIV** (vírus da imunodeficiência humana) é um **retrovírus**: um vírus envelopado que carrega duas cópias de **RNA** de fita simples e a enzima **transcriptase reversa**, que produz DNA usando o RNA como molde. A informação "anda ao contrário" (RNA → DNA), daí o nome *retro*vírus. Esse DNA entra no núcleo e é inserido no DNA da célula hospedeira (com a ajuda da enzima **integrase**); integrado, ele recebe o nome de **provírus** e nunca mais sai do genoma da célula. A partir daí, a própria célula transcreve os genes virais e fabrica novos vírus, que saem por **brotamento** levando um pedaço da membrana celular como envelope.
 
-O alvo principal são os **linfócitos T auxiliares (T CD4)**, que coordenam a resposta imune ativando linfócitos B (produção de anticorpos) e linfócitos T citotóxicos. O vírus se liga à proteína **CD4** da membrana e a um correceptor. Com o tempo, a destruição dos T CD4 enfraquece toda a defesa do organismo.
+O alvo principal são os **linfócitos T auxiliares (T CD4)**, que coordenam a resposta imune ativando linfócitos B (produção de anticorpos) e linfócitos T citotóxicos. As glicoproteínas do envelope viral se ligam à proteína **CD4** da membrana e a um **correceptor** (na maioria das células, a proteína CCR5). O HIV também infecta, em menor grau, macrófagos e células do cérebro. Com o tempo, a destruição dos T CD4 enfraquece tanto a produção de anticorpos quanto a ação dos linfócitos T citotóxicos.
 
-A infecção evolui em fases: uma **fase aguda** (às vezes com febre e manchas, parecida com uma gripe), um longo **período assintomático** em que o vírus continua se multiplicando e, sem tratamento, a **aids** (síndrome da imunodeficiência adquirida), quando surgem **infecções oportunistas**, como tuberculose, pneumonia por *Pneumocystis*, candidíase e toxoplasmose, e cânceres como o sarcoma de Kaposi. **HIV é o vírus; aids é a síndrome** que pode surgir quando a infecção não é tratada.
+O HIV persiste no corpo por dois motivos: tem **taxa de mutação muito alta** (as formas mutantes escapam dos anticorpos e das células de defesa) e pode ficar **latente** como provírus, escondido do sistema imune e dos remédios.
 
-**Transmissão:** relações sexuais sem preservativo, compartilhamento de seringas e agulhas, transfusão de sangue contaminado (rara, pelo controle dos bancos de sangue) e **transmissão vertical**, da mãe para o bebê na gestação, no parto ou na amamentação. **Não** se transmite por abraço, beijo no rosto, suor, talheres, piscina ou picada de mosquito.
+A infecção não tratada evolui em fases: uma **fase aguda** (às vezes com febre e manchas, parecida com uma gripe), um longo **período de latência clínica**, quase sem sintomas, que dura anos, em que o vírus continua se multiplicando e os T CD4 vão caindo, e, por fim, a **aids** (síndrome da imunodeficiência adquirida). Na aids, a concentração de T CD4 fica muito baixa (por volta de 200 células por mm³ de sangue ou menos) e surgem **infecções oportunistas**, causadas por agentes que um sistema imune saudável controlaria, como tuberculose, pneumonia pelo fungo *Pneumocystis*, candidíase e toxoplasmose, e cânceres como o sarcoma de Kaposi. São essas doenças, e não o vírus diretamente, as principais causas de morte. **HIV é o vírus; aids é a síndrome** que pode surgir quando a infecção não é tratada.
 
-**Tratamento:** a **terapia antirretroviral (TARV)** combina medicamentos que atacam etapas diferentes do ciclo viral (por exemplo, inibidores da transcriptase reversa, da integrase e da protease). Ela não elimina o vírus escondido nas células, mas reduz sua multiplicação até a **carga viral ficar indetectável**. Uma pessoa com carga viral indetectável de forma sustentada **não transmite o HIV por via sexual**: é o princípio **indetectável = intransmissível (I = I)**. O SUS distribui a TARV gratuitamente há décadas.
+**Transmissão:** exige a passagem de vírus ou de células infectadas por **líquidos corporais**, como sêmen, secreções vaginais, sangue e leite materno. As principais vias são relações sexuais sem preservativo (vaginal, anal ou oral) e o compartilhamento de seringas e agulhas; há também a transfusão de sangue contaminado (rara, pelo controle dos bancos de sangue) e a **transmissão vertical**, da mãe para o bebê na gestação, no parto ou na amamentação. Uma pessoa recém-infectada já pode transmitir o vírus nas primeiras semanas, antes mesmo de ter anticorpos detectáveis no teste. **Não** se transmite por abraço, beijo no rosto, suor, talheres, piscina ou picada de mosquito.
+
+**Tratamento:** não existe cura, mas a **terapia antirretroviral (TARV)**, o antigo "coquetel", combina medicamentos que atacam etapas diferentes do ciclo viral (por exemplo, inibidores da transcriptase reversa, como o AZT, da integrase e da protease, enzima necessária para formar novos vírus). Os remédios só atingem o vírus que está se replicando; por isso, não eliminam o provírus escondido nas células, mas reduzem a multiplicação até a **carga viral ficar indetectável**. Uma pessoa com carga viral indetectável de forma sustentada **não transmite o HIV por via sexual**: é o princípio **indetectável = intransmissível (I = I)**. O SUS distribui a TARV gratuitamente há décadas.
 
 > 🖼️ **Figura sugerida:** ciclo do HIV em um linfócito T CD4, em etapas numeradas: ligação ao CD4 e ao correceptor, entrada, transcrição reversa (RNA → DNA), integração no DNA da célula, produção de proteínas virais, montagem e brotamento; marcar com ícones de comprimido as etapas bloqueadas pelos antirretrovirais.
 
@@ -59,7 +61,7 @@ Por serem causadas por **bactérias**, essas ISTs são tratadas e **curadas com 
 
 ### Sífilis adquirida
 
-Causada pela bactéria espiralada (espiroqueta) ***Treponema pallidum***. Evolui em estágios:
+Causada pela bactéria espiralada ***Treponema pallidum***, do grupo das **espiroquetas** (bactérias em forma de espiral que se deslocam girando um filamento interno parecido com um flagelo). Evolui em estágios:
 
 1. **Primária:** surge o **cancro duro**, uma ferida geralmente **única e indolor** no local de entrada, que some sozinha. Por não doer e desaparecer, muitas vezes passa despercebida.
 2. **Secundária:** semanas depois, aparecem manchas pelo corpo, inclusive nas **palmas das mãos e plantas dos pés**, além de febre e ínguas. Também regridem sem tratamento.
@@ -74,18 +76,20 @@ O *T. pallidum* **atravessa a placenta** e infecta o feto. Pode causar aborto, n
 
 ### Gonorreia e clamídia
 
-- **Gonorreia:** causada por ***Neisseria gonorrhoeae***. Nos homens costuma causar **corrimento purulento** pela uretra e ardência ao urinar; nas mulheres pode ser assintomática. A bactéria tem desenvolvido **resistência** a vários antibióticos, por isso a automedicação é perigosa.
-- **Clamídia:** causada por ***Chlamydia trachomatis***, bactéria intracelular obrigatória. É frequentemente **silenciosa**, sobretudo em mulheres.
+- **Gonorreia:** causada por ***Neisseria gonorrhoeae***, bactéria que se prende às mucosas do hospedeiro por meio de **fímbrias** (apêndices curtos parecidos com pelos). Nos homens costuma causar **corrimento purulento** pela uretra e ardência ao urinar; nas mulheres pode ser assintomática. A bactéria tem desenvolvido **resistência** a vários antibióticos, por isso a automedicação é perigosa.
+- **Clamídia:** causada por ***Chlamydia trachomatis***, bactéria **parasita intracelular obrigatória**: só sobrevive dentro de células animais, das quais depende até para obter ATP. É uma das ISTs bacterianas mais comuns do mundo e é frequentemente **silenciosa**, sobretudo em mulheres. A mesma espécie causa o **tracoma**, infecção dos olhos que é uma importante causa de cegueira.
 
-Sem tratamento, ambas podem subir pelo trato reprodutor e causar **doença inflamatória pélvica (DIP)**, com risco de **infertilidade** e gravidez ectópica, além de infectar os olhos do bebê no parto.
+Como a maioria das mulheres infectadas por gonorreia ou clamídia não tem sintomas, muitas não sabem que estão doentes. Sem tratamento, as bactérias podem subir pelo trato reprodutor e causar **doença inflamatória pélvica (DIP)**, com risco de **infertilidade** e de complicações graves na gravidez, como a gravidez ectópica. Também podem infectar os olhos do bebê no parto.
 
 ## HPV, herpes genital e hepatite B: as ISTs virais crônicas
 
-Antibióticos não agem sobre vírus. Algumas são controladas com antivirais; outras são prevenidas com **vacinas**.
+Antibióticos matam bactérias porque bloqueiam enzimas e estruturas exclusivas delas; os vírus não têm essas estruturas, por isso **antibióticos não agem sobre vírus**. Algumas ISTs virais são controladas com **antivirais**, que em geral atrapalham a síntese do material genético do vírus; outras são prevenidas com **vacinas**.
 
-- **HPV (papilomavírus humano):** vírus de **DNA**, provavelmente a IST mais comum. Muitas infecções são eliminadas pelo sistema imune sem sintomas. Alguns tipos causam **verrugas genitais** (condilomas); outros, de **alto risco oncogênico**, podem causar **câncer do colo do útero**, além de câncer de ânus, pênis e orofaringe. Prevenção: **vacina** oferecida no SUS a meninas e meninos de 9 a 14 anos (e a alguns grupos prioritários em outras idades), idealmente antes do início da vida sexual, e o **rastreamento do câncer do colo do útero** (exame preventivo de Papanicolau ou teste de DNA do HPV), que detecta lesões precoces antes que virem câncer.
-- **Herpes genital:** causado pelo **herpes-vírus simples** (HSV, principalmente o tipo 2, mas também o tipo 1). Provoca **vesículas dolorosas** que se rompem e viram feridas. O vírus fica em **latência nos gânglios nervosos** e pode reativar em situações como estresse, febre ou baixa imunidade. Antivirais como o **aciclovir** controlam as crises, mas **não eliminam** o vírus.
-- **Hepatite B:** causada pelo **HBV**, vírus de DNA (que, curiosamente, também usa uma transcriptase reversa em seu ciclo) transmitido por sangue, relações sexuais e da mãe para o bebê. Pode cronificar e levar a **cirrose** e **câncer de fígado**. Tem **vacina** segura no calendário do SUS, com a primeira dose aplicada logo ao nascer.
+- **HPV (papilomavírus humano):** vírus de **DNA** de dupla-fita, sem envelope, provavelmente a IST mais comum. Muitas infecções são eliminadas pelo sistema imune sem sintomas. Alguns tipos causam **verrugas genitais** (condilomas); outros, de **alto risco oncogênico**, podem causar **câncer do colo do útero**, além de câncer de ânus, pênis e orofaringe. Prevenção: **vacina** oferecida no SUS a meninas e meninos de 9 a 14 anos (e a alguns grupos prioritários em outras idades), idealmente antes do início da vida sexual, e o **rastreamento do câncer do colo do útero** (exame preventivo de Papanicolau ou teste de DNA do HPV), que detecta lesões precoces antes que virem câncer. A vacina, lançada em 2006, foi um marco contra o câncer do colo do útero.
+- **Herpes genital:** causado pelo **herpes-vírus simples** (HSV), um vírus de DNA envelopado. O tipo 1 causa a maioria dos casos de herpes labial, e o tipo 2, a maioria dos casos de herpes genital, mas os dois podem infectar as duas regiões. Provoca **vesículas (bolhas) dolorosas** que se rompem e viram feridas, embora muitas pessoas infectadas não tenham sintomas. O DNA do vírus fica **latente no núcleo de neurônios sensoriais** (nos gânglios nervosos) e pode reativar com febre, estresse emocional ou menstruação, causando novas crises ao longo da vida. Antivirais como o **aciclovir**, que bloqueia a enzima que copia o DNA viral, controlam as crises, mas **não eliminam** o vírus. O herpes genital é perigoso para bebês de mães infectadas e facilita a transmissão do HIV.
+- **Hepatite B:** causada pelo **HBV**, vírus de DNA (que, curiosamente, também usa uma transcriptase reversa em seu ciclo) transmitido por sangue, relações sexuais e da mãe para o bebê. Pode cronificar e levar a **cirrose** e **câncer de fígado**. Sua vacina, de 1986, foi a primeira a comprovadamente prevenir um câncer humano. No Brasil, faz parte do calendário do SUS, com a primeira dose aplicada logo ao nascer.
+
+Esses exemplos mostram que alguns vírus podem causar câncer: estima-se que vírus participem de cerca de 15% a 20% dos cânceres humanos. Por isso, vacinas contra vírus também podem prevenir câncer.
 
 > 🖼️ **Figura sugerida:** quadro com quatro colunas (agente, tipo de agente, sinal típico e prevenção ou tratamento) para sífilis, gonorreia, clamídia, HPV, herpes, hepatite B e HIV, usando ícone de bactéria ou vírus e destacando em verde as ISTs que têm vacina.
 
@@ -93,7 +97,7 @@ Antibióticos não agem sobre vírus. Algumas são controladas com antivirais; o
 
 Nenhum método isolado resolve tudo. A **prevenção combinada** reúne várias estratégias e permite que cada pessoa escolha as mais adequadas ao seu momento:
 
-- **Preservativos externo** ("masculino") e **interno** ("feminino"): são a única forma que protege ao mesmo tempo contra **várias ISTs e a gravidez**. Gratuitos nos postos de saúde.
+- **Preservativos externo** ("masculino") e **interno** ("feminino"): entre os métodos contraceptivos, os preservativos de látex são os únicos que também protegem com alta eficiência contra o HIV e outras ISTs, ou seja, previnem ao mesmo tempo **ISTs e gravidez** (a "dupla proteção"). A proteção é alta, mas não absoluta. Gratuitos nos postos de saúde.
 - **Testagem regular** e tratamento das ISTs diagnosticadas, inclusive das parcerias.
 - **PrEP** e **PEP** para o HIV.
 - **TARV** para pessoas vivendo com HIV (I = I).
@@ -144,3 +148,7 @@ Nenhum método isolado resolve tudo. A **prevenção combinada** reúne várias 
 - [[metodos-contraceptivos]]: dupla proteção com o preservativo.
 - [[sexualidade-adolescencia]]: consentimento e relações saudáveis.
 - [[controle-ciclo-cancer]]: HPV e câncer do colo do útero.
+
+## Referência
+
+- Urry, L. A. et al. *Biologia de Campbell*. 10. ed. Porto Alegre: Artmed, 2015. Capítulos 19 (vírus e retrovírus), 27 (bactérias patogênicas), 43 (imunodeficiência e aids) e 46 (contracepção e infertilidade).

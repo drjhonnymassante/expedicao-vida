@@ -31,7 +31,7 @@
       "enunciado": "O evento celular que explica a Segunda Lei de Mendel é a:",
       "alternativas": ["separação das cromátides-irmãs na anáfase da mitose", "duplicação do DNA na interfase", "permutação (crossing-over) entre cromátides de cromossomos homólogos", "fusão dos gametas na fecundação", "disposição aleatória dos pares de homólogos na metáfase I e sua separação independente na anáfase I"],
       "correta": 4,
-      "explicacao": "A orientação de cada par de homólogos na placa equatorial da metáfase I não depende da dos outros pares; na anáfase I os homólogos se separam, gerando combinações independentes de alelos de genes em cromossomos diferentes. Mitose não forma gametas, e o crossing-over recombina alelos de genes situados no mesmo cromossomo, não explica a independência entre cromossomos diferentes.",
+      "explicacao": "A orientação de cada par de homólogos na placa equatorial da metáfase I não depende da dos outros pares; na anáfase I os homólogos se separam, gerando combinações independentes de alelos de genes em cromossomos diferentes. Na mitose não há pareamento nem separação de homólogos (as cromátides-irmãs se separam), e o crossing-over recombina alelos de genes situados no mesmo cromossomo, não explica a independência entre cromossomos diferentes.",
       "habilidade": "Relacionar a segregação independente ao comportamento dos cromossomos na meiose.",
       "tags": ["meiose", "metáfase I", "base citológica"]
     },
@@ -108,7 +108,7 @@
       "enunciado": "Analise as afirmativas a seguir, que relacionam meiose e herança de vários genes.\nI. Desconsiderando o crossing-over, a orientação independente dos 23 pares de homólogos na metáfase I permite que uma pessoa forme 2²³ combinações cromossômicas diferentes de gametas.\nII. No cruzamento AaBbDd × AaBbdd, com genes em cromossomos diferentes, a probabilidade de nascer um descendente AaBbDd é 1/8.\nIII. No mesmo cruzamento AaBbDd × AaBbdd, o número de genótipos diferentes possíveis na prole é 27.\nIV. Se os genes A e B estivessem muito próximos em um mesmo cromossomo, um indivíduo AaBb não formaria necessariamente os quatro tipos de gametas em frequências iguais.\nEstão corretas apenas:",
       "alternativas": ["I e II", "II e III", "I, III e IV", "I, II e IV", "I, II, III e IV"],
       "correta": 3,
-      "explicacao": "I: correta, cada par tem duas orientações possíveis, logo 2²³. II: correta, P(Aa) = 1/2, P(Bb) = 1/2 e P(Dd) = 1/2 (Dd × dd), totalizando 1/8. III: incorreta, pois Aa × Aa e Bb × Bb geram 3 genótipos cada, mas Dd × dd gera apenas 2 (Dd, dd): 3 × 3 × 2 = 18; o valor 27 (3³) só valeria se os dois pais fossem heterozigotos para os três genes. IV: correta, genes ligados tendem a ser herdados juntos, e os gametas recombinantes ficam menos frequentes, o que é a principal exceção à Segunda Lei.",
+      "explicacao": "I: correta, cada par tem duas orientações possíveis, logo 2²³ (cerca de 8,4 milhões). II: correta, P(Aa) = 1/2, P(Bb) = 1/2 e P(Dd) = 1/2 (Dd × dd), totalizando 1/8. III: incorreta, pois Aa × Aa e Bb × Bb geram 3 genótipos cada, mas Dd × dd gera apenas 2 (Dd, dd): 3 × 3 × 2 = 18; o valor 27 (3³) só valeria se os dois pais fossem heterozigotos para os três genes. IV: correta, genes ligados tendem a ser herdados juntos, e os gametas recombinantes ficam menos frequentes, o que é a principal exceção à Segunda Lei.",
       "habilidade": "Integrar meiose, poliibridismo e ligação gênica na análise de afirmativas.",
       "tags": ["integração", "meiose", "poliibridismo", "linkage"]
     }
@@ -183,6 +183,11 @@
       "id": "segunda-lei-mendel-f14",
       "frente": "Proporção fenotípica de AaBb × Aabb",
       "verso": "3:3:1:1, produto de (3:1) × (1:1)."
+    },
+    {
+      "id": "segunda-lei-mendel-f15",
+      "frente": "Teoria cromossômica da herança",
+      "verso": "Proposta por volta de 1902 (Sutton, Boveri e outros): os genes ocupam loci nos cromossomos, e o comportamento dos cromossomos na meiose explica as leis de Mendel."
     }
   ],
   "minijogos": {

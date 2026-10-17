@@ -5,7 +5,7 @@ const FORMAS = [
   { nome: 'Bactéria', cor: '#7cb342' }, { nome: 'Ameba (eucarionte)', cor: '#9575cd' },
   { nome: 'Água-viva', cor: '#4fc3f7' }, { nome: 'Peixe', cor: '#ff8a65' },
   { nome: 'Anfíbio', cor: '#66bb6a' }, { nome: 'Réptil', cor: '#8d6e63' },
-  { nome: 'Ave', cor: '#ffca28' }, { nome: 'Explorador(a) cientista', cor: '#ffffff' },
+  { nome: 'Ave', cor: '#ffca28' }, { nome: 'Evonauta cientista', cor: '#ffffff' },
 ];
 function sombrear(hex, f) {
   const n = parseInt(hex.slice(1), 16), r = n >> 16, g = (n >> 8) & 255, b = n & 255;

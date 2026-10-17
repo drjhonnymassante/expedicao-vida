@@ -28,15 +28,15 @@ No Norte e no Nordeste ela se chama **macaxeira**; no Sul e no Rio de Janeiro, *
 
 Por isso a ciência criou um sistema universal de nomes: para um cientista do Japão ou do Pará, *Manihot esculenta* é a mandioca e *Aedes aegypti* é o mosquito da dengue. Num país megadiverso como o Brasil, saber nomear e classificar é a base para estudar, proteger e até combater doenças.
 
-Dois termos aparecem o tempo todo. **Taxonomia** é a parte da Biologia que descreve, nomeia e classifica os organismos. **Sistemática** é mais ampla: estuda a diversidade e as relações de parentesco evolutivo entre os grupos.
+Dois termos aparecem o tempo todo. **Taxonomia** é a parte da Biologia que descreve, nomeia e classifica os organismos. **Sistemática** é mais ampla: além de classificar, busca reconstruir as relações de parentesco evolutivo entre os grupos, representadas em **árvores filogenéticas**.
 
 ## Categorias taxonômicas: do domínio à espécie
 
-No século XVIII, o naturalista sueco **Carlos Lineu** (Carl von Linné) organizou os seres vivos em categorias encaixadas umas dentro das outras, como caixas dentro de caixas. Cada grupo formado nessas categorias é chamado de **táxon** (plural: táxons). Lineu usava menos níveis; filo e família foram acrescentados depois, e o domínio só surgiu em 1990. Hoje usamos oito categorias principais, da mais abrangente para a mais restrita:
+No século XVIII, o naturalista sueco **Carlos Lineu** (Carl von Linné, ou *Carolus Linnaeus* em latim) organizou os seres vivos em categorias encaixadas umas dentro das outras, como caixas dentro de caixas. Cada grupo formado nessas categorias é chamado de **táxon** (plural: táxons). Por isso o esquema é chamado de **classificação lineana**. Lineu usava menos níveis; filo e família foram acrescentados depois, e o domínio, a categoria mais recente, só surgiu em 1990. Hoje usamos oito categorias principais, da mais abrangente para a mais restrita:
 
 **Domínio → Reino → Filo → Classe → Ordem → Família → Gênero → Espécie**
 
-O sistema é uma **hierarquia inclusiva**: cada categoria contém as que estão abaixo dela. Quanto mais para baixo, menos organismos o grupo reúne e mais características eles têm em comum. Dois animais da mesma família obrigatoriamente pertencem à mesma ordem, à mesma classe, ao mesmo filo, ao mesmo reino e ao mesmo domínio. O contrário não vale: estar na mesma classe não garante estar na mesma família.
+O sistema é uma **hierarquia inclusiva**: cada categoria contém as que estão abaixo dela. Quanto mais para baixo, menos organismos o grupo reúne e mais características eles têm em comum. Dois animais da mesma família obrigatoriamente pertencem à mesma ordem, à mesma classe, ao mesmo filo, ao mesmo reino e ao mesmo domínio. O contrário não vale: estar na mesma classe não garante estar na mesma família. Uma boa comparação é um endereço: o apartamento fica num prédio, o prédio numa rua, a rua numa cidade, e assim por diante.
 
 Veja três mamíferos brasileiros:
 
@@ -53,6 +53,8 @@ Veja três mamíferos brasileiros:
 
 A onça e o gato compartilham categorias até a família; com o lobo-guará, a onça compartilha até a ordem. Isso indica que a onça é mais aparentada com o gato do que com o lobo-guará.
 
+Um cuidado: as categorias acima de gênero são definidas por características escolhidas pelos taxonomistas e nem sempre refletem a história evolutiva. Uma ordem de caramujos, por exemplo, não tem a mesma diversidade de uma ordem de mamíferos. Quando dados de DNA mostram que um organismo foi colocado no grupo errado, ele é **reclassificado**. Por isso muitos sistematas preferem nomear apenas grupos formados por um ancestral comum e todos os seus descendentes: nessa visão, as aves passam a ser um subgrupo dos répteis.
+
 Em Botânica, livros mais antigos usam **divisão** no lugar de filo. Os nomes de família têm terminação padronizada: **-idae** em animais (Felidae, Hominidae) e, em geral, **-aceae** em plantas (Euphorbiaceae, a família da mandioca).
 
 > 💡 **Dica de memorização:** **D**ona **R**ita **F**az **C**omida **Ó**tima: **F**eijão, **G**alinha e **E**sfiha. **D**omínio, **R**eino, **F**ilo, **C**lasse, **O**rdem, **F**amília, **G**ênero e **E**spécie.
@@ -61,11 +63,11 @@ Em Botânica, livros mais antigos usam **divisão** no lugar de filo. Os nomes d
 
 ## Regras da nomenclatura binomial
 
-Lineu também popularizou a **nomenclatura binomial**: o nome científico de uma espécie é formado por **duas palavras**. Hoje as regras são definidas por códigos internacionais de nomenclatura. As principais são:
+Lineu também instituiu a **nomenclatura binomial**: o nome científico de uma espécie é formado por **duas palavras**. Muitos dos mais de 11 mil binômios que ele criou ainda são usados, como *Homo sapiens* ("homem sábio"). Hoje as regras são definidas por códigos internacionais de nomenclatura. As principais são:
 
-1. **Idioma:** latim ou palavras latinizadas, mesmo vindas do tupi ou do nome de uma pessoa.
+1. **Idioma:** latim ou palavras latinizadas, mesmo vindas do tupi ou do nome de uma pessoa (nesse caso, recebem uma terminação latina).
 2. **Primeira palavra = gênero**, sempre com **inicial maiúscula**.
-3. **Segunda palavra = epíteto específico**, sempre com **inicial minúscula**, mesmo que homenageie uma pessoa ou um lugar.
+3. **Segunda palavra = epíteto específico**, sempre com **inicial minúscula**, mesmo que homenageie uma pessoa ou um lugar. O epíteto é exclusivo de cada espécie dentro do gênero: *Panthera onca* (onça), *Panthera leo* (leão) e *Panthera tigris* (tigre).
 4. **Destaque gráfico:** o binômio é escrito em *itálico* ou, à mão, **sublinhado** (cada palavra separadamente).
 5. **O nome da espécie é o binômio inteiro.** "*sapiens*" sozinho não é espécie; *Homo sapiens* é.
 6. **Abreviação:** após a primeira menção, o gênero pode virar inicial: *A. aegypti*.
@@ -84,9 +86,11 @@ Outros detalhes que aparecem em provas:
 
 ## Conceito biológico de espécie e híbridos estéreis
 
-A definição mais usada no ensino médio é o **conceito biológico de espécie**, proposto pelo biólogo Ernst Mayr: espécie é um grupo de populações cujos indivíduos **podem se cruzar na natureza e gerar descendentes férteis**, e que estão **reprodutivamente isoladas** de outros grupos.
+A definição mais usada no ensino médio é o **conceito biológico de espécie**, proposto pelo biólogo Ernst Mayr: espécie é um grupo de populações cujos indivíduos **têm o potencial de se cruzar na natureza e gerar descendentes viáveis e férteis**, mas não conseguem fazer isso com membros de outros grupos. Ou seja, o que define a espécie é a compatibilidade reprodutiva, e não a aparência: pessoas de qualquer lugar do mundo são todas *Homo sapiens*, enquanto duas aves quase idênticas podem ser espécies diferentes porque têm cantos distintos e não se acasalam.
 
-O detalhe decisivo é a palavra **férteis**. O exemplo clássico é a **mula** (o macho é chamado de burro), filha de uma **égua** (*Equus caballus*, 64 cromossomos) com um **jumento** (*Equus asinus*, 62 cromossomos). O gameta da égua leva 32 cromossomos, o do jumento leva 31, e o híbrido fica com **63 cromossomos**. A mula é saudável e forte, mas **estéril** (casos de mulas férteis são raríssimos): na **meiose**, os cromossomos vindos de cada pai não formam pares homólogos corretamente, e a formação de gametas falha. Como o cruzamento não gera descendentes férteis, cavalo e jumento são **espécies diferentes**, embora do mesmo gênero.
+O que separa as espécies é o **isolamento reprodutivo**: barreiras biológicas que impedem a troca de genes (fluxo gênico) entre elas. As **barreiras pré-zigóticas** atuam antes da fecundação (por exemplo, cantos ou rituais de acasalamento diferentes). As **barreiras pós-zigóticas** atuam depois que o zigoto híbrido se forma: o embrião pode não se desenvolver ou o híbrido pode nascer estéril.
+
+O detalhe decisivo é a expressão **viáveis e férteis**. O exemplo clássico é a **mula** (o macho é chamado de burro), filha de uma **égua** (*Equus caballus*, 64 cromossomos) com um **jumento** (*Equus asinus*, 62 cromossomos). O gameta da égua leva 32 cromossomos, o do jumento leva 31, e o híbrido fica com **63 cromossomos**. A mula é saudável e forte, mas **estéril** (casos de mulas férteis são raríssimos): na **meiose**, os cromossomos vindos de cada pai não formam pares homólogos corretamente, e a formação de gametas falha. Como o cruzamento não gera descendentes férteis, cavalo e jumento são **espécies diferentes**, embora do mesmo gênero.
 
 Já o cão doméstico e o lobo produzem filhotes férteis entre si, por isso costumam ser tratados como a mesma espécie.
 
@@ -94,15 +98,16 @@ O conceito biológico tem limites importantes:
 
 - **Não se aplica a organismos de reprodução assexuada**, como bactérias, pois não há cruzamento.
 - **Não se aplica a fósseis**, cujo comportamento reprodutivo não pode ser testado.
-- Em **populações separadas geograficamente**, nem sempre dá para saber se elas se cruzariam.
+- Há espécies claramente distintas que, mesmo assim, às vezes trocam genes. O urso-polar e o urso-pardo, por exemplo, podem gerar híbridos na natureza.
+- Em **populações separadas geograficamente**, nem sempre dá para testar se elas se cruzariam.
 
-Nesses casos, os cientistas usam outros critérios, como semelhanças morfológicas e dados de DNA.
+Por isso existem outros conceitos de espécie: o **morfológico** (forma do corpo e estruturas, o mais usado na prática de campo), o **ecológico** (papel no ambiente, ou nicho) e o **filogenético** (o menor grupo que forma um ramo próprio na árvore da vida, identificado, por exemplo, com dados de DNA).
 
 ## Cinco reinos de Whittaker e três domínios de Woese
 
 Por muito tempo os seres vivos foram divididos apenas em animais e vegetais, divisão em que bactérias, protozoários e fungos não cabiam bem.
 
-Em 1969, o ecólogo **Robert Whittaker** propôs o sistema de **cinco reinos**, baseado em três critérios: **tipo de célula** (procariótica ou eucariótica), **número de células** (unicelular ou pluricelular) e **modo de nutrição** (autotrófica, heterotrófica por absorção ou por ingestão).
+Em 1969, o ecólogo **Robert Whittaker** propôs o sistema de **cinco reinos**, que se tornou amplamente aceito. Ele destacava a diferença fundamental entre células procarióticas e eucarióticas e era baseado em três critérios: **tipo de célula** (procariótica ou eucariótica), **número de células** (unicelular ou pluricelular) e **modo de nutrição** (autotrófica, heterotrófica por absorção ou por ingestão).
 
 | Reino | Célula | Organização | Nutrição | Exemplos |
 |---|---|---|---|---|
@@ -114,13 +119,17 @@ Em 1969, o ecólogo **Robert Whittaker** propôs o sistema de **cinco reinos**, 
 
 Separar os **fungos** das plantas foi um avanço: fungos não fazem fotossíntese, têm parede de **quitina** e armazenam **glicogênio**, como os animais.
 
-Nos anos 1970, o microbiologista **Carl Woese** comparou sequências do **RNA ribossômico** de muitos organismos. Ele descobriu que os procariontes formavam, na verdade, dois grupos muito diferentes entre si. Em 1990, Woese e colaboradores propuseram uma categoria acima de reino, o **domínio**, com três ramos:
+Nos anos 1970, o microbiologista **Carl Woese** comparou sequências do **RNA ribossômico** (RNAr, que forma parte dos ribossomos) de muitos organismos. Ele descobriu que os procariontes (o Campbell usa o termo *procariotos*) formavam, na verdade, dois grupos tão distintos que alguns procariontes diferem de outros procariontes tanto quanto diferem dos eucariontes. Em 1990, Woese e colaboradores propuseram uma categoria acima de reino, o **domínio**, com três ramos:
 
 - **Bacteria:** as bactérias "verdadeiras", incluindo as cianobactérias e as que causam doenças.
 - **Archaea:** procariontes com membranas formadas por lipídios diferentes e parede sem peptidoglicano. Muitas vivem em ambientes extremos (fontes termais, salinas), mas também há arqueias comuns no solo, no mar e no rúmen de bois, onde as **metanogênicas** produzem gás metano.
-- **Eukarya:** todos os eucariontes (protistas, fungos, plantas e animais).
+- **Eukarya:** todos os organismos com núcleo verdadeiro (protistas, fungos, plantas e animais).
 
-A grande surpresa foi que, em vários aspectos moleculares, as **arqueias são mais aparentadas com os eucariontes do que com as bactérias**. Por isso o antigo reino Monera, que juntava todos os procariontes, deixou de refletir o parentesco real. O reino Protista também é problemático, pois reúne organismos de linhagens diferentes só porque "não são fungos, plantas nem animais".
+Esse sistema mostra que boa parte da história da vida é feita de seres unicelulares: Bacteria e Archaea são inteiramente unicelulares, e mesmo em Eukarya só plantas, fungos e animais são dominados por organismos pluricelulares.
+
+A grande surpresa foi que, na árvore baseada no RNA ribossômico, as **arqueias são mais aparentadas com os eucariontes do que com as bactérias**: a primeira grande separação da vida teria sido a das bactérias. (Alguns outros genes contam uma história diferente, porque genes também podem passar de um organismo para outro sem ser por reprodução, a chamada **transferência gênica horizontal**. Ainda assim, os três domínios são sustentados por muitos estudos.)
+
+Com isso, dos cinco reinos, a maioria dos biólogos mantém **Plantae, Fungi e Animalia**, mas não Monera nem Protista. O reino **Monera** ficou obsoleto porque seus membros pertencem a dois domínios diferentes. O reino **Protista** também se desfez, pois alguns protistas são mais aparentados com plantas, fungos ou animais do que com outros protistas.
 
 Os **vírus** não aparecem em nenhum desses sistemas: não têm célula e só se reproduzem dentro de células hospedeiras.
 
@@ -157,6 +166,7 @@ Repare que cada organismo é identificado por um caminho único. Uma chave com *
 - **"Organismos da mesma ordem são da mesma família."** Não necessariamente: onça e lobo-guará são Carnivora, mas de famílias diferentes. Só vale o contrário: mesma família implica mesma ordem.
 - **"Se dois animais cruzam e têm filhotes, são da mesma espécie."** Falta a palavra-chave: os filhotes precisam ser **férteis**. A mula prova isso.
 - **"Archaea são bactérias primitivas."** Arqueias formam um domínio próprio e são até mais próximas dos eucariontes.
+- **"Espécies são definidas pela aparência."** No conceito biológico, o critério é reprodutivo: espécies quase idênticas podem ser distintas, e indivíduos muito diferentes (como raças de cães) podem ser da mesma espécie.
 - **"Fungos são plantas sem clorofila."** Fungos formam um reino próprio, com parede de quitina, reserva de glicogênio e nutrição por absorção.
 - **"Vírus pertencem ao reino Monera."** Vírus são acelulares e não entram nos cinco reinos nem nos três domínios.
 
@@ -165,10 +175,10 @@ Repare que cada organismo é identificado por um caminho único. Uma chave com *
 - Taxonomia descreve, nomeia e classifica; sistemática estuda também o parentesco evolutivo.
 - Categorias: Domínio, Reino, Filo, Classe, Ordem, Família, Gênero e Espécie, numa hierarquia inclusiva.
 - Nome científico: binômio em latim, gênero com maiúscula, epíteto com minúscula, em itálico ou sublinhado.
-- Conceito biológico de espécie: cruzamento natural com descendentes férteis e isolamento reprodutivo.
+- Conceito biológico de espécie: potencial de cruzamento natural com descendentes viáveis e férteis; espécies são separadas por barreiras pré e pós-zigóticas.
 - A mula (63 cromossomos) é estéril porque a meiose falha; cavalo e jumento são espécies diferentes.
 - Whittaker: cinco reinos (Monera, Protista, Fungi, Plantae, Animalia), por tipo de célula, organização e nutrição.
-- Woese: três domínios (Bacteria, Archaea, Eukarya), com base no RNA ribossômico; arqueias são mais próximas dos eucariontes.
+- Woese: três domínios (Bacteria, Archaea, Eukarya), com base no RNA ribossômico; arqueias são mais próximas dos eucariontes. Monera e Protista deixaram de ser aceitos como reinos.
 - Chaves dicotômicas identificam organismos por escolhas sucessivas entre duas alternativas.
 
 ## Conexões
@@ -181,3 +191,7 @@ Repare que cada organismo é identificado por um caminho único. Uma chave com *
 - [[protozoarios]]: exemplos do antigo reino Protista, como *Trypanosoma cruzi*.
 - [[fungos]]: o reino Fungi e suas diferenças em relação às plantas.
 - [[biomas-brasileiros]]: a biodiversidade que a taxonomia ajuda a descrever.
+
+## Referência
+
+- Urry, L. A. et al. *Biologia de Campbell*. 10. ed. Porto Alegre: Artmed, 2015. Capítulos 24 (conceito 24.1), 26 (conceitos 26.1 e 26.6) e 27.

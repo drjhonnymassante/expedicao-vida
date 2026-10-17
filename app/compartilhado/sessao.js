@@ -19,7 +19,7 @@
     const remoto = perfil && perfil.progresso && Object.keys(perfil.progresso).length ? perfil.progresso : null;
     const final = (remoto && (!local || (remoto.xp || 0) >= (local.xp || 0))) ? remoto : EstadoVida.completar(local || EstadoVida.novo(perfil && perfil.apelido));
     final.uid = uid;
-    if (perfil && perfil.apelido && (!final.nome || final.nome === 'Explorador(a)')) final.nome = perfil.apelido;
+    if (perfil && perfil.apelido && (!final.nome || final.nome === 'Explorador(a)' || final.nome === 'Evonauta')) final.nome = perfil.apelido;
     EstadoVida.salvar(final);
     dispatchEvent(new CustomEvent('progresso-sincronizado'));
 

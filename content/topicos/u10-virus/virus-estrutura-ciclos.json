@@ -15,7 +15,7 @@
         "produzem energia apenas por fermentação, que só ocorre no interior de células"
       ],
       "correta": 2,
-      "explicacao": "Os vírus são acelulares: sem ribossomos nem metabolismo, usam ribossomos, ATP e matéria-prima da célula hospedeira. Não têm parede celular, não fazem fotossíntese nem fermentação e não são procariontes.",
+      "explicacao": "Os vírus são acelulares: sem ribossomos nem enzimas metabólicas, usam ribossomos, ATP e matéria-prima da célula hospedeira. Não têm parede celular, não fazem fotossíntese nem fermentação e não são procariontes.",
       "habilidade": "Reconhecer as características gerais dos vírus.",
       "tags": [
         "parasitismo intracelular",
@@ -132,12 +132,12 @@
       "alternativas": [
         "o vírus da gripe é uma bactéria resistente a todos os antibióticos conhecidos",
         "antibióticos só funcionam contra vírus quando aplicados por via injetável",
-        "antibióticos atuam sobre estruturas e processos de bactérias, como parede celular e ribossomos próprios, que os vírus não possuem; além disso, o uso desnecessário favorece a seleção de bactérias resistentes",
+        "antibióticos inibem estruturas e enzimas exclusivas das bactérias, como a parede celular e os ribossomos bacterianos, que os vírus não possuem; além disso, o uso desnecessário favorece a seleção de bactérias resistentes",
         "o antibiótico eliminaria a gripe, mas destruiria todas as células do sistema imune",
         "a gripe é causada por um príon, que é resistente a medicamentos"
       ],
       "correta": 2,
-      "explicacao": "Antibióticos atacam alvos bacterianos (parede de peptidoglicano, ribossomos e enzimas próprias), ausentes no vírus influenza, que é acelular. O uso desnecessário seleciona bactérias resistentes. Influenza não é bactéria nem príon, e mudar a via de aplicação não cria um alvo.",
+      "explicacao": "Antibióticos inibem alvos exclusivos das bactérias (parede de peptidoglicano, ribossomos e enzimas bacterianas), ausentes no vírus influenza, que é acelular. O uso desnecessário seleciona bactérias resistentes. Influenza não é bactéria nem príon, e mudar a via de aplicação não cria um alvo.",
       "habilidade": "Avaliar o uso de medicamentos com base nas características dos vírus.",
       "tags": [
         "antibióticos",
@@ -158,7 +158,7 @@
         "A atuação da transcriptase reversa, que comete muitos erros ao copiar o RNA em DNA e não os corrige, gerando mutações frequentes"
       ],
       "correta": 4,
-      "explicacao": "A transcriptase reversa não corrige seus erros; cada ciclo introduz mutações, algumas nas glicoproteínas reconhecidas pelos anticorpos, o que dificulta a vacina. O HIV é envelopado, tem genoma de RNA, infecta linfócitos T CD4 (não bactérias) e sai por brotamento.",
+      "explicacao": "A transcriptase reversa, como as enzimas que copiam genomas de RNA em geral, erra muito e não corrige os erros; cada ciclo introduz mutações, algumas nas glicoproteínas reconhecidas pelos anticorpos, o que dificulta a vacina. O HIV é envelopado, tem genoma de RNA, infecta linfócitos T CD4 (não bactérias) e sai por brotamento.",
       "habilidade": "Relacionar a biologia do retrovírus à dificuldade de produção de vacinas.",
       "tags": [
         "HIV",
@@ -180,7 +180,7 @@
         "a radiação ativou a transcriptase reversa dos fagos, que converteu o RNA bacteriano em DNA viral"
       ],
       "correta": 1,
-      "explicacao": "As bactérias eram lisogênicas (prófago integrado). A radiação UV induz o prófago a iniciar o ciclo lítico, e a lise clareia o meio. Não há geração espontânea, bactérias não viram vírus, o ciclo lisogênico não causaria lise e fagos de DNA não usam transcriptase reversa.",
+      "explicacao": "As bactérias eram lisogênicas (prófago integrado). A radiação UV, um sinal ambiental de alta energia, induz o prófago a sair do cromossomo e iniciar o ciclo lítico, e a lise clareia o meio. Não há geração espontânea, bactérias não viram vírus, o ciclo lisogênico não causaria lise e fagos de DNA não usam transcriptase reversa.",
       "habilidade": "Interpretar um experimento envolvendo os ciclos dos bacteriófagos.",
       "tags": [
         "indução",
@@ -232,7 +232,7 @@
     {
       "id": "virus-estrutura-ciclos-f04",
       "frente": "Por que vírus são parasitas intracelulares obrigatórios?",
-      "verso": "Não têm ribossomos nem produzem energia; só se multiplicam usando a maquinaria de uma célula hospedeira."
+      "verso": "Não têm ribossomos nem enzimas metabólicas (não produzem ATP); só se multiplicam usando a maquinaria de uma célula hospedeira."
     },
     {
       "id": "virus-estrutura-ciclos-f05",
@@ -242,12 +242,12 @@
     {
       "id": "virus-estrutura-ciclos-f06",
       "frente": "Etapas gerais da replicação viral",
-      "verso": "Adsorção, penetração, desnudamento, síntese, montagem e liberação (lise ou brotamento)."
+      "verso": "Adsorção (adesão), penetração, desnudamento, síntese, montagem e liberação (lise ou brotamento)."
     },
     {
       "id": "virus-estrutura-ciclos-f07",
       "frente": "Ciclo lítico",
-      "verso": "O DNA do fago comanda a bactéria, novos fagos são produzidos imediatamente e a célula se rompe (lise)."
+      "verso": "O DNA do fago comanda a bactéria, novos fagos (cerca de 100 a 200, no T4) são produzidos imediatamente e a célula se rompe (lise)."
     },
     {
       "id": "virus-estrutura-ciclos-f08",
@@ -272,12 +272,22 @@
     {
       "id": "virus-estrutura-ciclos-f12",
       "frente": "O que são príons?",
-      "verso": "Proteínas com dobramento alterado, sem ácido nucleico, que induzem proteínas normais a mudar de forma. Causam encefalopatias espongiformes."
+      "verso": "Proteínas maldobradas, sem ácido nucleico, que induzem as proteínas normais a mudar de forma. Causam encefalopatias espongiformes, como a doença da vaca louca."
     },
     {
       "id": "virus-estrutura-ciclos-f13",
       "frente": "O que são viroides?",
-      "verso": "Pequenas moléculas de RNA circular de fita simples, sem capsídeo, que infectam plantas."
+      "verso": "Pequenas moléculas de RNA circular, sem capsídeo e que não codificam proteínas; infectam plantas."
+    },
+    {
+      "id": "virus-estrutura-ciclos-f14",
+      "frente": "Fago virulento x fago temperado",
+      "verso": "O virulento (ex.: T4) só faz o ciclo lítico; o temperado (ex.: lambda) pode fazer o ciclo lítico ou o lisogênico."
+    },
+    {
+      "id": "virus-estrutura-ciclos-f15",
+      "frente": "Diferença entre prófago e provírus",
+      "verso": "Ambos são DNA viral integrado ao cromossomo, mas o prófago (de fago) pode sair na indução, enquanto o provírus (de retrovírus) nunca deixa o genoma da célula."
     }
   ],
   "minijogos": {
@@ -389,7 +399,7 @@
       {
         "afirmacao": "O envelope viral é fabricado inteiramente a partir de genes do vírus.",
         "valor": false,
-        "explicacao": "Os lipídios do envelope vêm da membrana da célula hospedeira; o vírus contribui com as glicoproteínas."
+        "explicacao": "A membrana do envelope vem da célula hospedeira, com os lipídios dela; o vírus contribui com as glicoproteínas."
       },
       {
         "afirmacao": "No ciclo lisogênico, o vírus se espalha para as células-filhas sem destruir a bactéria.",
@@ -414,12 +424,17 @@
       {
         "afirmacao": "Viroides infectam principalmente plantas.",
         "valor": true,
-        "explicacao": "São RNAs circulares sem capsídeo que causam doenças em vegetais como batata e citros."
+        "explicacao": "São RNAs circulares sem capsídeo, que não codificam proteínas e causam doenças em vegetais como coqueiro, batata e citros."
       },
       {
         "afirmacao": "Sabão e álcool 70% inativam com facilidade os vírus envelopados.",
         "valor": true,
         "explicacao": "Eles desorganizam o envelope lipídico, eliminando as proteínas de ligação às células."
+      },
+      {
+        "afirmacao": "Os príons são destruídos pelo calor do cozimento comum.",
+        "valor": false,
+        "explicacao": "Os príons resistem às temperaturas normais de cozimento, por isso podem ser transmitidos por carne contaminada."
       }
     ]
   },

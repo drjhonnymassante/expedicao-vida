@@ -29,17 +29,25 @@ A resposta está na **Segunda Lei de Mendel**, que explica como dois ou mais car
 
 ## O experimento do diibridismo
 
-Depois de estudar um caráter por vez, Mendel passou a acompanhar **dois caracteres simultaneamente** nas ervilhas. Um caso clássico envolve a cor e a textura da semente:
+Depois de estudar um caráter por vez (cruzamentos entre **monoíbridos**, heterozigotos para um só gene), Mendel passou a acompanhar **dois caracteres simultaneamente** nas ervilhas. Um caso clássico envolve a cor e a forma da semente:
 
-- **Cor:** amarela (alelo dominante **V**) ou verde (alelo recessivo **v**).
-- **Textura:** lisa (alelo dominante **R**) ou rugosa (alelo recessivo **r**).
+- **Cor:** amarela (alelo dominante **V**) ou verde (alelo recessivo **v**). O livro *Biologia de Campbell* usa as letras **Y/y** (do inglês *yellow*); nos livros brasileiros é comum V/v. O significado é o mesmo.
+- **Forma:** lisa, também chamada de redonda (alelo dominante **R**), ou rugosa (alelo recessivo **r**).
 
 Ele cruzou plantas puras de sementes **amarelas e lisas** (VVRR) com plantas puras de sementes **verdes e rugosas** (vvrr).
 
-- **Geração F1:** 100% das sementes eram amarelas e lisas. Todas tinham genótipo **VvRr**, ou seja, eram **diíbridas** (heterozigotas para os dois genes).
+- **Geração F1:** 100% das sementes eram amarelas e lisas. Todas tinham genótipo **VvRr**, ou seja, eram **diíbridas** (heterozigotas para os dois genes; o Campbell escreve "di-híbridas").
+
+Até aqui, a F1 não decide nada: ela seria amarela e lisa qualquer que fosse o modo de herança. A pergunta de Mendel era outra: os alelos V e R, que vieram juntos de um dos pais, **continuam sempre juntos** nos gametas, ou cada gene é distribuído por conta própria? Ele comparou duas hipóteses:
+
+- **Segregação dependente:** a F1 formaria só dois tipos de gametas (VR e vr), iguais aos que recebeu dos pais. A F2 teria apenas os fenótipos parentais, na proporção **3:1**.
+- **Segregação independente:** a F1 formaria quatro tipos de gametas em quantidades iguais (VR, Vr, vR e vr). A F2 teria quatro fenótipos, na proporção **9:3:3:1**.
+
+O resultado decidiu a questão:
+
 - **Geração F2:** a autofecundação da F1 produziu quatro tipos de semente. Nos dados clássicos de Mendel, foram 315 amarelas lisas, 108 verdes lisas, 101 amarelas rugosas e 32 verdes rugosas, valores muito próximos da proporção **9:3:3:1**.
 
-Dois detalhes chamaram a atenção. Primeiro, surgiram combinações que **não existiam nos pais**: amarela rugosa e verde lisa. Segundo, quando cada caráter é analisado isoladamente, a proporção 3:1 da Primeira Lei continua lá. Amarelas: 315 + 101 = 416; verdes: 108 + 32 = 140. A razão 416:140 é aproximadamente 3:1. O mesmo vale para lisas e rugosas.
+Dois detalhes chamaram a atenção. Primeiro, surgiram combinações que **não existiam nos pais**: amarela rugosa e verde lisa. Só a hipótese da segregação independente prevê essas classes, por isso a hipótese dependente foi descartada. Segundo, quando cada caráter é analisado isoladamente, a proporção 3:1 da Primeira Lei continua lá. Amarelas: 315 + 101 = 416; verdes: 108 + 32 = 140. A razão 416:140 é aproximadamente 3:1. O mesmo vale para lisas e rugosas. Ou seja, dentro do diibridismo, cada gene continua segregando como em um cruzamento entre monoíbridos. Mendel combinou, dois a dois, os sete caracteres de ervilha que estudou e sempre obteve resultados próximos de 9:3:3:1.
 
 A conclusão de Mendel, hoje chamada de **Segunda Lei** ou **Lei da Segregação Independente**, pode ser enunciada assim:
 
@@ -47,7 +55,7 @@ A conclusão de Mendel, hoje chamada de **Segunda Lei** ou **Lei da Segregação
 
 ## A base meiótica da segregação independente
 
-Mendel não conhecia cromossomos nem meiose. Décadas depois, os citologistas perceberam que os "fatores" de Mendel se comportavam exatamente como os cromossomos durante a [[meiose]].
+Mendel propôs seus "fatores" na década de 1860, quando ninguém conhecia cromossomos nem meiose (a meiose só foi descrita nos anos 1890). Por volta de 1902, pesquisadores como **Walter Sutton** e **Theodor Boveri** notaram que os fatores de Mendel se comportavam exatamente como os cromossomos durante a [[meiose]]: ambos existem aos pares nas células diploides, separam-se na formação dos gametas e voltam a formar pares na fecundação. Nascia a **teoria cromossômica da herança**: os genes ocupam posições definidas (*loci*) nos cromossomos, e é o comportamento dos cromossomos que explica as leis de Mendel.
 
 O ponto-chave está na **metáfase I**. Nela, os pares de cromossomos homólogos se alinham no plano equatorial, e a orientação de cada par (qual homólogo fica voltado para cada polo) é **aleatória e independente** da orientação dos outros pares. Na **anáfase I**, os homólogos se separam.
 
@@ -60,7 +68,7 @@ Como os dois arranjos são igualmente prováveis, considerando muitas meioses, o
 
 > 🖼️ **Figura sugerida:** duas células em metáfase I lado a lado, cada uma com dois pares de homólogos (um longo com V/v e um curto com R/r), mostrando os dois arranjos possíveis; abaixo, setas levando aos quatro tipos de gametas (VR, vr, Vr, vR), cada um com 1/4.
 
-Atenção a uma condição importante: a segregação independente vale para genes localizados em **cromossomos diferentes** (não homólogos), ou muito distantes no mesmo cromossomo. Genes próximos no mesmo cromossomo tendem a ser herdados juntos, fenômeno estudado em [[linkage-mapas]].
+Atenção a uma condição importante: a segregação independente vale para genes localizados em **cromossomos diferentes** (não homólogos), ou muito distantes no mesmo cromossomo. Genes próximos no mesmo cromossomo tendem a ser herdados juntos, fenômeno estudado em [[linkage-mapas]]. Todos os caracteres que Mendel analisou atendiam a essa condição, o que deixou seus resultados tão claros.
 
 ## A proporção 9:3:3:1 e o cruzamento-teste
 
@@ -88,7 +96,7 @@ São **4 fenótipos** e **9 genótipos** diferentes. Dentro do quadro, apenas 4 
 
 ### O atalho: multiplicar proporções
 
-O 9:3:3:1 nada mais é que o produto de duas proporções 3:1 independentes:
+Um cruzamento entre diíbridos equivale a **dois cruzamentos entre monoíbridos acontecendo ao mesmo tempo**, de forma independente. Por isso, o 9:3:3:1 nada mais é que o produto de duas proporções 3:1:
 
 (3/4 amarela + 1/4 verde) × (3/4 lisa + 1/4 rugosa)
 
@@ -97,13 +105,13 @@ O 9:3:3:1 nada mais é que o produto de duas proporções 3:1 independentes:
 - Verde e lisa: 1/4 × 3/4 = 3/16
 - Verde e rugosa: 1/4 × 1/4 = 1/16
 
-> 💡 **Dica de memorização:** "Segunda Lei = Primeira Lei vezes Primeira Lei". Resolva cada gene separadamente e **multiplique** (regra do "E"). O 9:3:3:1 é só o (3:1)².
+> 💡 **Dica de memorização:** "Segunda Lei = Primeira Lei vezes Primeira Lei". Resolva cada gene separadamente e **multiplique** (regra do "E", que o Campbell chama de **regra da multiplicação**; a regra do "OU" aparece no livro como **regra da adição**). O 9:3:3:1 é só o (3:1)².
 
 ### Cruzamento-teste do diíbrido
 
-Para descobrir se uma planta amarela e lisa é VVRR, VvRR, VVRr ou VvRr, cruza-se com o **duplo recessivo** (vvrr). Como o recessivo só produz gametas vr, os fenótipos dos filhos revelam diretamente os gametas do indivíduo testado.
+O **cruzamento-teste**, criado pelo próprio Mendel, consiste em cruzar um indivíduo de genótipo desconhecido com um homozigoto recessivo. Para descobrir se uma planta amarela e lisa é VVRR, VvRR, VVRr ou VvRr, cruza-se com o **duplo recessivo** (vvrr). Como o recessivo só produz gametas vr, os fenótipos dos filhos revelam diretamente os gametas do indivíduo testado.
 
-- Se o testado for **VvRr**, os descendentes aparecem na proporção **1:1:1:1** (amarela lisa, amarela rugosa, verde lisa, verde rugosa).
+- Se o testado for **VvRr**, os descendentes aparecem na proporção **1:1:1:1** (amarela lisa, amarela rugosa, verde lisa, verde rugosa). Esse resultado também confirma a segregação independente: se os genes fossem herdados "em pacote", só apareceriam duas classes (amarela lisa e verde rugosa), na proporção 1:1.
 - Se for **VVRr**, todos serão amarelos, metade lisos e metade rugosos (1:1).
 - Se for **VvRR**, todos serão lisos, metade amarelos e metade verdes (1:1).
 - Se for **VVRR**, 100% serão amarelos e lisos.
@@ -132,7 +140,7 @@ Cada gameta tem frequência 1/4. Em um gene homozigoto (CC), o galho não se div
 
 > 💡 **Dica de memorização:** "Só o **hetero** ramifica". Conte os pares heterozigotos, eleve 2 a esse número, e você terá os tipos de gametas.
 
-Um exemplo humano impressiona: nossas células têm 23 pares de cromossomos. Só pela orientação independente dos pares na metáfase I, uma pessoa pode formar 2²³ (mais de 8 milhões) combinações cromossômicas diferentes de gametas, sem contar o crossing-over. É uma das razões pelas quais irmãos (exceto gêmeos idênticos) são tão diferentes.
+A mesma lógica vale para cromossomos inteiros: o número de combinações cromossômicas possíveis nos gametas é 2^n, sendo n o número haploide da espécie. Um exemplo humano impressiona: nossas células têm 23 pares de cromossomos (n = 23). Só pela orientação independente dos pares na metáfase I, cada pessoa pode formar 2²³, ou cerca de **8,4 milhões**, combinações cromossômicas diferentes de gametas, sem contar o crossing-over. Somando a fecundação ao acaso (um gameta entre 8,4 milhões encontrando outro entre 8,4 milhões), um casal pode gerar cerca de 70 trilhões de combinações cromossômicas no zigoto. É uma das razões pelas quais irmãos (exceto gêmeos idênticos) são tão diferentes.
 
 ## Poliibridismo e cálculo de genótipos
 
@@ -185,7 +193,7 @@ O melhorista do início cruza duas plantas duplo-heterozigotas (PpRr), em que P 
 
 - **"Todo diibridismo dá 9:3:3:1."** Errado. O 9:3:3:1 aparece apenas no cruzamento de **dois duplo-heterozigotos** com dominância completa e genes independentes. AaBb × aabb dá 1:1:1:1; AaBb × Aabb dá 3:3:1:1.
 - **Contar genes homozigotos na fórmula 2^n.** AaBBCc forma 2² = 4 tipos de gametas, não 8.
-- **Confundir 9/16 com "nove plantas".** As proporções são **probabilidades**: em 16 descendentes reais, o resultado pode fugir do esperado. Quanto maior a amostra, mais próximo da proporção teórica.
+- **Confundir 9/16 com "nove plantas".** As proporções são **probabilidades**: em 16 descendentes reais, o resultado pode fugir do esperado. Quanto maior a amostra, mais próximo da proporção teórica. Foi por isso que Mendel contou centenas de sementes em cada experimento.
 - **Achar que um gameta carrega os dois alelos de um gene.** Pela Primeira Lei, cada gameta leva **um** alelo de cada gene: VvRr forma VR, Vr, vR e vr, nunca "Vv".
 - **Esquecer a condição da independência.** A Segunda Lei vale para genes em cromossomos diferentes. Genes ligados (no mesmo cromossomo e próximos) não seguem essas proporções.
 - **Somar em vez de multiplicar.** Para "ter A e ter B", multiplique; some apenas quando houver caminhos alternativos ("ou"), como em Aa × Aa: P(Aa) = P(A do pai e a da mãe) + P(a do pai e A da mãe) = 1/4 + 1/4 = 1/2.
@@ -209,3 +217,7 @@ O melhorista do início cruza duas plantas duplo-heterozigotas (PpRr), em que P 
 - [[interacoes-genicas]]: quando dois genes atuam no mesmo caráter, o 9:3:3:1 se transforma em 9:7, 12:3:1, 9:3:4...
 - [[linkage-mapas]]: genes no mesmo cromossomo são a principal exceção à segregação independente.
 - [[variacoes-monoibridismo]]: dominância incompleta e codominância alteram as proporções de cada gene e, portanto, o produto final.
+
+## Referência
+
+- Urry, L. A. et al. *Biologia de Campbell*. 10. ed. Porto Alegre: Artmed, 2015. Capítulos 14 (conceitos 14.1 e 14.2), 13 (conceito 13.4) e 15 (introdução e conceito 15.1).

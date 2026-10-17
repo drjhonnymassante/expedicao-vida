@@ -31,7 +31,7 @@
       "enunciado": "Uma doença infecciosa que se dissemina por vários países de diferentes continentes, com transmissão sustentada entre pessoas, caracteriza um(a):",
       "alternativas": ["pandemia", "endemia", "surto", "zoonose", "doença de notificação dispensável"],
       "correta": 0,
-      "explicacao": "Pandemia é uma epidemia que atinge vários continentes. Endemia é a ocorrência habitual em uma região, surto é um aumento localizado e zoonose é doença transmitida entre animais e seres humanos.",
+      "explicacao": "Pandemia é uma epidemia global, que atinge vários continentes. Endemia é a ocorrência habitual em uma região, surto é um aumento localizado e zoonose é doença transmitida entre animais e seres humanos.",
       "habilidade": "Diferenciar endemia, epidemia, surto e pandemia.",
       "tags": ["pandemia", "epidemiologia"]
     },
@@ -114,7 +114,7 @@
     }
   ],
   "flashcards": [
-    { "id": "epidemiologia-conceitos-f01", "frente": "O que é parasitismo?", "verso": "Relação interespecífica desarmônica em que o parasita vive à custa do hospedeiro, retirando dele alimento ou abrigo e causando prejuízo." },
+    { "id": "epidemiologia-conceitos-f01", "frente": "O que é parasitismo?", "verso": "Relação interespecífica desarmônica (+/–): o parasita (ou parasito) obtém alimento do hospedeiro, que é prejudicado." },
     { "id": "epidemiologia-conceitos-f02", "frente": "Ectoparasita x endoparasita", "verso": "Ectoparasita vive na superfície do corpo (piolho, carrapato); endoparasita vive dentro do corpo (lombriga, Plasmodium)." },
     { "id": "epidemiologia-conceitos-f03", "frente": "Hospedeiro definitivo", "verso": "Abriga a fase adulta do parasita ou aquela em que ocorre a reprodução sexuada." },
     { "id": "epidemiologia-conceitos-f04", "frente": "Hospedeiro intermediário", "verso": "Abriga as fases larvais ou aquelas em que ocorre apenas reprodução assexuada." },
@@ -128,7 +128,8 @@
     { "id": "epidemiologia-conceitos-f12", "frente": "Incidência x prevalência", "verso": "Incidência: casos novos em um período. Prevalência: total de casos existentes em um momento." },
     { "id": "epidemiologia-conceitos-f13", "frente": "Letalidade x mortalidade", "verso": "Letalidade: óbitos em relação aos doentes. Mortalidade: óbitos em relação à população total." },
     { "id": "epidemiologia-conceitos-f14", "frente": "Quatro componentes do saneamento básico (Lei nº 11.445/2007)", "verso": "Água potável, esgotamento sanitário, limpeza urbana e manejo de resíduos sólidos, drenagem das águas pluviais." },
-    { "id": "epidemiologia-conceitos-f15", "frente": "O que é notificação compulsória?", "verso": "Comunicação obrigatória às autoridades sanitárias de casos suspeitos ou confirmados de doenças da lista nacional (ex.: dengue, malária)." }
+    { "id": "epidemiologia-conceitos-f15", "frente": "O que é notificação compulsória?", "verso": "Comunicação obrigatória às autoridades sanitárias de casos suspeitos ou confirmados de doenças da lista nacional (ex.: dengue, malária)." },
+    { "id": "epidemiologia-conceitos-f16", "frente": "Zoonose x reservatório natural", "verso": "Zoonose: doença cujo agente passa de outros animais para o ser humano (cerca de 3/4 das doenças emergentes). Reservatório: animal que abriga e transmite o agente, muitas vezes sem adoecer." }
   ],
   "minijogos": {
     "pares": [
@@ -158,7 +159,7 @@
         { "texto": "Vários alunos de uma mesma escola passam mal após a merenda do dia", "categoria": "Surto" },
         { "texto": "Casos de sarampo concentrados em uma única creche", "categoria": "Surto" },
         { "texto": "Covid-19 com transmissão sustentada em todos os continentes", "categoria": "Pandemia" },
-        { "texto": "Gripe H1N1 disseminada por mais de cem países, em todos os continentes habitados, em 2009", "categoria": "Pandemia" }
+        { "texto": "Gripe H1N1 que, surgida no México e nos Estados Unidos em 2009, chegou a mais de 200 países em cerca de seis meses", "categoria": "Pandemia" }
       ]
     },
     "verdadeiro_falso": [
@@ -171,6 +172,7 @@
       { "afirmacao": "Pandemia significa uma epidemia de alta gravidade, mesmo que restrita a um país.", "valor": false, "explicacao": "Pandemia se refere à extensão geográfica, com disseminação por vários continentes, e não à gravidade." },
       { "afirmacao": "Prevalência é o número de casos novos de uma doença em um período.", "valor": false, "explicacao": "Isso é incidência. Prevalência é o total de casos existentes em um momento." },
       { "afirmacao": "Drenagem e manejo das águas pluviais fazem parte do saneamento básico.", "valor": true, "explicacao": "A lei brasileira inclui água potável, esgoto, resíduos sólidos e drenagem urbana." },
+      { "afirmacao": "Antibióticos são eficazes para tratar infecções causadas por vírus, como a gripe.", "valor": false, "explicacao": "Antibióticos atacam estruturas exclusivas das bactérias e não agem sobre vírus. Contra viroses, a principal prevenção é a vacina." },
       { "afirmacao": "Casos suspeitos de doenças de notificação compulsória só devem ser comunicados após confirmação laboratorial.", "valor": false, "explicacao": "A notificação deve ser feita já na suspeita, para que a investigação e o controle comecem rapidamente." }
     ]
   },

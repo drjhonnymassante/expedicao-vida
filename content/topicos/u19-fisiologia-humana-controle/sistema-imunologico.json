@@ -76,7 +76,7 @@
         "à destruição dos linfonodos próximos ao ferimento"
       ],
       "correta": 1,
-      "explicacao": "Mediadores como a histamina dilatam os vasos (rubor e calor) e aumentam a permeabilidade dos capilares, de modo que plasma passa para o tecido e forma o edema. Na inflamação há vasodilatação, e não vasoconstrição; IgE está ligada a alergias, e os linfonodos não são destruídos.",
+      "explicacao": "Mediadores como a histamina (liberada por mastócitos) e citocinas dilatam os vasos (rubor e calor) e aumentam a permeabilidade dos capilares, de modo que plasma passa para o tecido e forma o edema. Na inflamação há vasodilatação, e não vasoconstrição; IgE está ligada a alergias, e os linfonodos não são destruídos.",
       "habilidade": "Explicar os sinais da inflamação.",
       "tags": [
         "inflamação",
@@ -182,7 +182,7 @@
         "transforma linfócitos B em células tumorais"
       ],
       "correta": 1,
-      "explicacao": "O HIV infecta principalmente os linfócitos T CD4, que liberam citocinas e ativam linfócitos B e T CD8. Com a queda dessas células, toda a defesa adaptativa enfraquece e surgem doenças oportunistas. O vírus não age primariamente nos pulmões, não causa alergias por IgE e não destrói a pele.",
+      "explicacao": "O HIV infecta principalmente os linfócitos T auxiliares, ligando-se à proteína CD4 da sua superfície. Essas células liberam citocinas e ativam linfócitos B e T CD8. Com a queda dessas células, toda a defesa adaptativa enfraquece e surgem doenças oportunistas. O vírus não age primariamente nos pulmões, não causa alergias por IgE e não destrói a pele.",
       "habilidade": "Relacionar a imunodeficiência causada pelo HIV às doenças oportunistas.",
       "tags": [
         "HIV",
@@ -249,7 +249,7 @@
     {
       "id": "sistema-imunologico-f07",
       "frente": "Células NK",
-      "verso": "Linfócitos da imunidade inata que destroem células infectadas por vírus e células tumorais."
+      "verso": "Linfócitos da imunidade inata que reconhecem células infectadas por vírus e algumas células tumorais e as levam à morte, sem fagocitá-las."
     },
     {
       "id": "sistema-imunologico-f08",
@@ -289,7 +289,7 @@
     {
       "id": "sistema-imunologico-f15",
       "frente": "Doença autoimune",
-      "verso": "Falha da tolerância imunológica: o sistema ataca moléculas do próprio corpo. Ex.: diabetes tipo 1, lúpus."
+      "verso": "Falha da autotolerância (tolerância imunológica): o sistema ataca moléculas do próprio corpo. Ex.: diabetes tipo 1, lúpus."
     },
     {
       "id": "sistema-imunologico-f16",
@@ -338,7 +338,7 @@
         "Bactéria atravessa a pele lesionada",
         "Célula dendrítica captura e processa o antígeno",
         "Antígeno é apresentado no MHC II a um linfócito T CD4 no linfonodo",
-        "Linfócito T CD4 libera citocinas que ativam o linfócito B específico",
+        "Linfócito T CD4 ativado reconhece o linfócito B que exibe o mesmo antígeno e o ativa com citocinas",
         "Linfócito B se multiplica e se diferencia em plasmócitos e células de memória",
         "Plasmócitos secretam anticorpos que marcam e neutralizam a bactéria"
       ]

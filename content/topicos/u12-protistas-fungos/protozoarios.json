@@ -35,7 +35,7 @@
         "São pluricelulares e formam tecidos verdadeiros"
       ],
       "correta": 0,
-      "explicacao": "Protozoários são protistas eucariontes. São heterótrofos (a fotossíntese é das algas), não têm parede de quitina (típica dos fungos) e não formam tecidos.",
+      "explicacao": "Protozoários são protistas eucariontes, com núcleo e organelas membranosas. São heterótrofos (a fotossíntese é típica das algas e de alguns mixótrofos), não têm parede de quitina (típica dos fungos) e não formam tecidos.",
       "habilidade": "Reconhecer as características gerais dos protozoários.",
       "tags": [
         "características gerais",
@@ -55,7 +55,7 @@
         "eliminar o excesso de água que entra por osmose"
       ],
       "correta": 4,
-      "explicacao": "Em água doce o meio é hipotônico e a água entra por osmose; o vacúolo contrátil a expulsa, evitando a lise. A digestão ocorre nos vacúolos digestivos e as trocas gasosas, por difusão.",
+      "explicacao": "Em água doce o meio é hipotônico e a água entra por osmose; o vacúolo contrátil coleta essa água por canais e a expulsa tão rápido quanto ela entra, evitando a lise. A digestão ocorre nos vacúolos digestivos e as trocas gasosas, por difusão.",
       "habilidade": "Identificar a função do vacúolo contrátil.",
       "tags": [
         "vacúolo contrátil",
@@ -117,7 +117,7 @@
         "viver exclusivamente em água doce, onde forma cistos"
       ],
       "correta": 2,
-      "explicacao": "Plasmódio e toxoplasma são apicomplexos: parasitas, sem pseudópodes, cílios ou flagelos nas formas adultas, com complexo apical para penetrar células. Macronúcleo e micronúcleo são dos ciliados; pseudópodes, das amebas.",
+      "explicacao": "Plasmódio e toxoplasma são apicomplexos: parasitas de animais, sem pseudópodes, cílios ou flagelos nas formas adultas, com complexo apical (na extremidade da célula) para penetrar células e tecidos do hospedeiro. Macronúcleo e micronúcleo são dos ciliados; pseudópodes, das amebas.",
       "habilidade": "Caracterizar os apicomplexos.",
       "tags": [
         "apicomplexos",
@@ -203,7 +203,7 @@
         "o mosquito é hospedeiro intermediário, pois nele o parasita apenas se multiplica de forma assexuada antes de voltar ao ser humano"
       ],
       "correta": 1,
-      "explicacao": "No plasmódio, a única fase diploide é o zigoto (e a forma que dele deriva), no mosquito, e é ali que ocorre a meiose, restaurando a haploidia. Por isso os gametócitos, formados no sangue humano a partir de células já haploides, surgem por mitose e não por meiose. A esquizogonia no fígado e nas hemácias também é feita por mitoses, gerando clones; não há meiose no ser humano. Como a fecundação (reprodução sexuada) ocorre no mosquito, ele é o hospedeiro definitivo, e o ser humano, onde só há multiplicação assexuada, é o intermediário, mesmo que nele a multiplicação seja mais intensa. A ruptura simultânea de grupos de hemácias libera os parasitas e substâncias que desencadeiam a febre periódica.",
+      "explicacao": "No plasmódio, a única fase diploide é o zigoto (e a forma que dele deriva), no mosquito, e é ali que ocorre a meiose, restaurando a haploidia. Por isso os gametócitos, formados no sangue humano a partir de células já haploides, surgem por mitose e não por meiose. A esquizogonia no fígado e nas hemácias também é feita por mitoses, gerando clones; não há meiose no ser humano. Como a fecundação (reprodução sexuada) ocorre no mosquito, ele é o hospedeiro definitivo, e o ser humano, onde só há multiplicação assexuada, é o intermediário, mesmo que nele a multiplicação seja mais intensa. A ruptura simultânea de grupos de hemácias, a cada 48 ou 72 horas conforme a espécie, libera os parasitas e substâncias que desencadeiam a febre periódica.",
       "habilidade": "Integrar ciclo de vida, divisão celular, reprodução e fisiopatologia na análise de um parasita.",
       "tags": [
         "apicomplexos",
@@ -217,12 +217,12 @@
     {
       "id": "protozoarios-f01",
       "frente": "O que são protistas?",
-      "verso": "Eucariontes que não são animais, plantas nem fungos; sem tecidos verdadeiros."
+      "verso": "Eucariontes que não são animais, plantas nem fungos; a maioria é unicelular e não há tecidos verdadeiros."
     },
     {
       "id": "protozoarios-f02",
       "frente": "Por que o Reino Protista é considerado artificial?",
-      "verso": "Porque não é monofilético: não reúne um ancestral comum e todos os seus descendentes."
+      "verso": "Porque não é monofilético: alguns protistas são mais aparentados com animais ou fungos do que com outros protistas."
     },
     {
       "id": "protozoarios-f03",
@@ -232,7 +232,7 @@
     {
       "id": "protozoarios-f04",
       "frente": "Estrutura de locomoção dos amebozoários",
-      "verso": "Pseudópodes, que também capturam alimento por fagocitose."
+      "verso": "Pseudópodes, movidos por actina e miosina, que também capturam alimento por fagocitose."
     },
     {
       "id": "protozoarios-f05",
@@ -277,12 +277,22 @@
     {
       "id": "protozoarios-f13",
       "frente": "Macronúcleo x micronúcleo nos ciliados",
-      "verso": "Macronúcleo: metabolismo. Micronúcleo (diploide): reprodução sexuada."
+      "verso": "Macronúcleo: atividades do dia a dia (nutrição, eliminação de resíduos, equilíbrio de água). Micronúcleo (diploide): reprodução sexuada."
     },
     {
       "id": "protozoarios-f14",
       "frente": "Divisão binária x divisão múltipla",
       "verso": "Binária: uma célula vira duas. Múltipla (esquizogonia): muitas células-filhas de uma vez."
+    },
+    {
+      "id": "protozoarios-f15",
+      "frente": "O que é um protista mixótrofo?",
+      "verso": "Aquele que combina fotossíntese e nutrição heterotrófica, como a Euglena."
+    },
+    {
+      "id": "protozoarios-f16",
+      "frente": "O que causa os acessos periódicos de febre na malária?",
+      "verso": "O rompimento simultâneo de grupos de hemácias, a cada 48 ou 72 horas, liberando novos merozoítos do plasmódio."
     }
   ],
   "minijogos": {
@@ -418,9 +428,9 @@
         "explicacao": "A água do mar é aproximadamente isotônica para eles."
       },
       {
-        "afirmacao": "Os apicomplexos são todos parasitas.",
+        "afirmacao": "Praticamente todos os apicomplexos são parasitas de animais.",
         "valor": true,
-        "explicacao": "Plasmódio, toxoplasma e demais apicomplexos dependem de hospedeiros."
+        "explicacao": "Plasmódio, toxoplasma e demais apicomplexos dependem de hospedeiros e usam o complexo apical para invadir suas células."
       },
       {
         "afirmacao": "Na conjugação, os paramécios trocam seus macronúcleos.",

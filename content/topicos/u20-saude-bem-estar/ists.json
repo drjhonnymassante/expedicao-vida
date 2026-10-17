@@ -15,7 +15,7 @@
         "linfócitos B, que deixam de existir logo após a infecção"
       ],
       "correta": 1,
-      "explicacao": "O HIV se liga à proteína CD4 e a um correceptor, infectando e destruindo os linfócitos T auxiliares, que ativam linfócitos B e T citotóxicos. Neutrófilos, hemácias e plaquetas não são o alvo principal do vírus, e os linfócitos B não desaparecem logo após a infecção; perdem eficiência por falta do comando dos T CD4.",
+      "explicacao": "O HIV usa as glicoproteínas do envelope para se ligar à proteína CD4 e a um correceptor (geralmente o CCR5), infectando e destruindo os linfócitos T auxiliares, que ativam linfócitos B e T citotóxicos. O vírus também infecta, em menor grau, macrófagos e células do cérebro. Neutrófilos, hemácias e plaquetas não são o alvo principal, e os linfócitos B não desaparecem logo após a infecção; perdem eficiência por falta do comando dos T CD4.",
       "habilidade": "Identificar a célula-alvo do HIV.",
       "tags": [
         "HIV",
@@ -78,7 +78,7 @@
         "a produção excessiva de anticorpos contra o HIV destrói as defesas contra fungos e bactérias"
       ],
       "correta": 2,
-      "explicacao": "Sem tratamento, o HIV destrói os T CD4 e surge a aids, quando agentes que normalmente seriam controlados causam infecções oportunistas. O HIV não é o agente dessas doenças, os T CD4 diminuem (e não aumentam) e o problema é falta de resposta imune, não excesso de anticorpos. O quadro decorre justamente da falta de tratamento.",
+      "explicacao": "Sem tratamento, o HIV destrói os T CD4 e surge a aids, quando agentes que um sistema imune saudável controlaria (como o fungo Pneumocystis) causam infecções oportunistas; são elas, e não o vírus diretamente, as principais causas de morte. O HIV não é o agente dessas doenças, os T CD4 diminuem (e não aumentam) e o problema é falta de resposta imune, não excesso de anticorpos. O quadro decorre justamente da falta de tratamento.",
       "habilidade": "Relacionar imunodeficiência a infecções oportunistas.",
       "tags": [
         "aids",
@@ -141,7 +141,7 @@
         "os novos vírus brotem da membrana da célula infectada"
       ],
       "correta": 2,
-      "explicacao": "A transcriptase reversa produz DNA a partir do RNA viral; sem ela, não há DNA para ser integrado ao genoma da célula. A ligação ao CD4 ocorre antes, o corte das proteínas é função da protease, DNA não é traduzido (é transcrito em RNA, e o RNA é traduzido) e o brotamento é a etapa final.",
+      "explicacao": "A transcriptase reversa produz DNA a partir do RNA viral (é o alvo do AZT, por exemplo); sem ela, não há DNA para ser integrado ao genoma da célula como provírus. A ligação ao CD4 ocorre antes, o corte das proteínas é função da protease, DNA não é traduzido (é transcrito em RNA, e o RNA é traduzido) e o brotamento é a etapa final.",
       "habilidade": "Interpretar o modo de ação de um medicamento a partir do ciclo viral.",
       "tags": [
         "transcriptase reversa",
@@ -204,7 +204,7 @@
         "As três são virais e, por isso, a prevenção depende exclusivamente de vacinas, já disponíveis no SUS contra as três."
       ],
       "correta": 2,
-      "explicacao": "O HIV tem RNA, usa transcriptase reversa e integrase para inserir DNA no genoma dos T CD4, e a TARV controla a replicação. O HSV fica latente nos gânglios e reativa; o aciclovir controla as crises, mas não elimina o vírus. O HBV pode causar hepatite crônica, cirrose e câncer de fígado, é transmitido também por via sexual e da mãe para o bebê (daí a dose da vacina ao nascer). Não há vacina contra HIV nem herpes, e o preservativo continua essencial na prevenção.",
+      "explicacao": "O HIV tem RNA, usa transcriptase reversa e integrase para inserir DNA (provírus) no genoma dos T CD4, e a TARV controla a replicação. O HSV fica latente no núcleo de neurônios sensoriais (gânglios nervosos) e reativa; o aciclovir controla as crises, mas não elimina o vírus. O HBV pode causar hepatite crônica, cirrose e câncer de fígado, é transmitido também por via sexual e da mãe para o bebê (daí a dose da vacina ao nascer). Não há vacina contra HIV nem herpes, e o preservativo continua essencial na prevenção.",
       "habilidade": "Integrar virologia, imunologia e saúde pública na comparação de ISTs virais.",
       "tags": [
         "HIV",
@@ -223,7 +223,7 @@
     {
       "id": "ists-f02",
       "frente": "Que tipo de vírus é o HIV?",
-      "verso": "Um retrovírus: tem RNA e usa a transcriptase reversa para produzir DNA, que é integrado ao genoma da célula pela integrase."
+      "verso": "Um retrovírus envelopado: tem RNA e usa a transcriptase reversa para produzir DNA, que é integrado ao genoma da célula (provírus) pela integrase."
     },
     {
       "id": "ists-f03",
@@ -283,7 +283,7 @@
     {
       "id": "ists-f14",
       "frente": "Onde o vírus do herpes fica latente?",
-      "verso": "Nos gânglios nervosos, podendo reativar com estresse, febre ou baixa imunidade."
+      "verso": "No núcleo de neurônios sensoriais (gânglios nervosos), podendo reativar com febre, estresse emocional ou menstruação."
     },
     {
       "id": "ists-f15",
@@ -334,10 +334,10 @@
     "sequencia": {
       "instrucao": "Ordene as etapas do ciclo do HIV em um linfócito T CD4.",
       "itens": [
-        "Ligação do vírus à proteína CD4 e a um correceptor",
-        "Entrada do material genético viral na célula",
+        "Ligação das glicoproteínas do envelope à proteína CD4 e a um correceptor",
+        "Fusão do envelope com a membrana e liberação do RNA viral e da transcriptase reversa",
         "Transcrição reversa: síntese de DNA a partir do RNA viral",
-        "Integração do DNA viral ao DNA da célula pela integrase",
+        "Integração do DNA viral ao DNA da célula (provírus)",
         "Produção de RNA e proteínas virais pela célula",
         "Montagem e brotamento de novos vírus"
       ]

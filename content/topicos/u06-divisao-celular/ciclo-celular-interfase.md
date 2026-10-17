@@ -36,15 +36,24 @@ O ciclo celular tem duas grandes etapas:
 - **Interfase:** o período entre duas divisões. A célula cresce, trabalha normalmente e **duplica o seu DNA**.
 - **Fase M (divisão):** a **mitose** (divisão do núcleo) seguida da **citocinese** (divisão do citoplasma), que produz duas células-filhas.
 
-A interfase ocupa a maior parte do tempo. Em uma célula humana cultivada em laboratório que completa o ciclo em cerca de 24 horas, a mitose dura aproximadamente 1 hora; todo o resto é interfase. Por isso, quando observamos um tecido ao microscópio, a grande maioria das células está em interfase, com o núcleo bem delimitado, o nucléolo visível e a cromatina **descondensada**, espalhada como fios finos que não dá para distinguir um a um.
+A interfase ocupa a maior parte do tempo, muitas vezes cerca de **90% do ciclo**. A fase M costuma ser a etapa mais curta. Veja um exemplo de célula humana que completa o ciclo em cerca de 24 horas:
 
-A interfase já foi chamada de "fase de repouso", mas o nome é enganoso: ela é a fase de **maior atividade metabólica** da célula. Com a cromatina descondensada, o DNA fica mais acessível às enzimas que o transcrevem e o replicam.
+| Fase | Duração aproximada |
+|---|---|
+| G1 | 5 a 6 horas |
+| S | 10 a 12 horas (cerca de metade do ciclo) |
+| G2 | 4 a 6 horas |
+| M (mitose + citocinese) | menos de 1 hora |
 
-> 🖼️ **Figura sugerida:** círculo dividido em setores proporcionais à duração de cada fase (G1 maior, S, G2 e um setor estreito para M), com uma seta de saída de G1 para G0 e a indicação "interfase" abrangendo G1, S e G2.
+Esses números mudam bastante de um tipo de célula para outro, mas a ideia geral vale sempre: a divisão é rápida e a interfase é longa. Por isso, quando observamos um tecido ao microscópio, a grande maioria das células está em interfase, com o núcleo envolvido pelo envelope nuclear (ou carioteca), um ou mais nucléolos visíveis e a cromatina **descondensada**, espalhada como fios finos que não dá para distinguir um a um.
+
+A interfase já foi chamada de "fase de repouso", e as fases G receberam o nome de "intervalo" porque, nas primeiras observações, a célula parecia apenas crescer, sem fazer nada de especial. Hoje sabemos que o nome é enganoso: durante **toda** a interfase a célula está em **intensa atividade metabólica e crescimento**. Com a cromatina descondensada, o DNA fica mais acessível às enzimas que o transcrevem e o replicam.
+
+> 🖼️ **Figura sugerida:** círculo dividido em setores proporcionais à duração de cada fase no exemplo de 24 horas (S ocupando cerca de metade, G1 e G2 com setores médios e um setor bem estreito para M), com uma seta de saída de G1 para G0 e a indicação "interfase" abrangendo G1, S e G2.
 
 ## As fases G1, S e G2
 
-A interfase é dividida em três fases. A letra **G** vem do inglês *gap* (intervalo) e a letra **S**, de síntese (de DNA).
+A interfase é dividida em três fases. A letra **G** vem do inglês *gap* (intervalo) e a letra **S**, de síntese (de DNA). Em todas as três a célula cresce, produzindo proteínas e organelas citoplasmáticas, como mitocôndrias e retículo endoplasmático. O que muda é o que acontece com os cromossomos: eles só são duplicados na fase S. Em resumo, a célula **cresce (G1)**, **continua crescendo enquanto copia os cromossomos (S)**, **cresce mais enquanto termina os preparativos para a divisão (G2)** e então **se divide (M)**.
 
 ### G1: crescer e decidir
 
@@ -52,16 +61,16 @@ Logo depois de formada, a célula-filha é menor que a célula-mãe. Em **G1**, 
 
 - **cresce** e aumenta o volume do citoplasma;
 - **sintetiza RNA e proteínas** em ritmo intenso, inclusive enzimas que serão usadas na replicação;
-- **produz organelas**, como mitocôndrias e ribossomos;
-- executa a sua função no tecido (secretar, absorver, contrair).
+- **produz organelas**, como mitocôndrias e retículo endoplasmático;
+- executa a sua função no tecido (secretar, absorver, contrair, conduzir impulsos).
 
-G1 é a fase de **duração mais variável**: pode levar poucas horas em células de rápida renovação ou se estender por muito tempo. No fim de G1 existe um **ponto de checagem**: a célula "avalia" se tem tamanho, nutrientes, sinais externos e DNA íntegro para seguir adiante. Se as condições não forem favoráveis, ela não entra em S. Os detalhes desse controle serão vistos em [[controle-ciclo-cancer]].
+G1 é a fase de **duração mais variável** entre os diferentes tipos de célula: pode levar poucas horas em células de rápida renovação ou se estender por muito tempo. Em G1 existe um **ponto de checagem** (o Campbell usa o nome **ponto de verificação**), considerado o mais importante para muitas células e chamado de **ponto de restrição** nos mamíferos. Ali a célula "avalia" sinais internos (tamanho, DNA íntegro) e externos (nutrientes, **fatores de crescimento**). Se receber o sinal de continuar, ela segue para S, G2 e M e se divide; se não receber, **sai do ciclo e entra em G0**. Os detalhes desse controle serão vistos em [[controle-ciclo-cancer]].
 
 ### S: duplicar o DNA
 
-Na **fase S** ocorre a **replicação semiconservativa do DNA**, estudada em [[duplicacao-dna]]. Cada molécula de DNA serve de molde para uma nova, e o resultado é que cada cromossomo passa a ser formado por **duas cromátides-irmãs**, idênticas e unidas pelo **centrômero**.
+Na **fase S** ocorre a **replicação semiconservativa do DNA**, estudada em [[duplicacao-dna]]. Cada molécula de DNA serve de molde para uma nova, e o resultado é que cada cromossomo passa a ser formado por **duas cromátides-irmãs**: cópias idênticas, cada uma com uma molécula de DNA, mantidas unidas ao longo do comprimento e, de forma mais estreita, na região do **centrômero**. Mesmo duplicados, os cromossomos continuam na forma de fios longos e finos de cromatina; eles só se condensam e ficam visíveis ao microscópio óptico durante a divisão.
 
-Também em S, a célula produz grande quantidade de **histonas**, as proteínas que organizam o DNA recém-sintetizado em cromatina. Em células animais, o **centrossomo** (com seu par de centríolos) começa a se duplicar nessa fase; mais tarde, cada centrossomo vai organizar um polo do fuso mitótico.
+Também em S, a célula produz grande quantidade de **histonas**, as proteínas que organizam o DNA recém-sintetizado em cromatina. Em células animais, durante a interfase, o **centrossomo** (região que organiza os microtúbulos e que tem um par de centríolos no centro) se duplica. Os dois centrossomos ficam juntos perto do núcleo até o início da mitose, quando se afastam e cada um passa a organizar um polo do fuso mitótico. Células vegetais não têm centríolos e, mesmo assim, formam o fuso.
 
 ### G2: conferir e preparar
 
@@ -71,7 +80,9 @@ Em **G2**, a célula:
 - sintetiza componentes necessários à divisão, como a **tubulina**, que formará os microtúbulos do fuso;
 - passa por outro **ponto de checagem**, que verifica se toda a replicação terminou e se há danos no DNA antes de liberar a entrada em mitose.
 
-> 💡 **Dica de memorização:** **G1 = Ganha** tamanho; **S = Síntese** (duplica o DNA); **G2 = Garante** que está tudo pronto. Na ordem, a célula **cresce, copia e confere**.
+No fim de G2, o núcleo ainda está envolvido pelo envelope nuclear, com nucléolo visível, dois centrossomos já formados e cromossomos duplicados, mas ainda descondensados. Há ainda um terceiro ponto de checagem importante, já dentro da mitose (ponto M), estudado em [[mitose]] e [[controle-ciclo-cancer]].
+
+> 💡 **Dica de memorização:** **G1 = Ganha** tamanho e decide se segue; **S = Síntese** (duplica o DNA); **G2 = Garante** que está tudo pronto. Na ordem, a célula **cresce, copia e confere**.
 
 ## Quanto DNA existe em cada fase?
 
@@ -96,14 +107,14 @@ Note que a **fase S dobra a quantidade de DNA, mas não muda o número de cromos
 
 ## Fase G0 e células que não se dividem
 
-Nem toda célula fica girando no ciclo. Muitas saem dele a partir de G1 e entram em **G0**, um estado em que a célula está **viva e funcionando normalmente**, mas não se prepara para dividir. G0 não é "morte" nem "dormência": um neurônio em G0 conduz impulsos nervosos o tempo todo.
+Nem toda célula fica girando no ciclo. Quando não recebe o sinal de continuar no ponto de checagem de G1, a célula sai do ciclo e entra em **G0**, um estado em que ela está **viva e funcionando normalmente**, mas não se divide. Na verdade, **muitas das células do corpo humano estão em G0**. G0 não é "morte" nem "dormência": um neurônio em G0 conduz impulsos nervosos o tempo todo.
 
 Podemos agrupar as células do corpo humano em três situações:
 
 | Comportamento | Exemplos | Consequência |
 |---|---|---|
 | **Divisão frequente** | Células da camada basal da epiderme, epitélio que reveste o intestino, células da medula óssea que originam o sangue, células dos folículos pilosos | Renovação constante; esses tecidos são os mais afetados pela quimioterapia (queda de cabelo, feridas na boca, queda das células do sangue) |
-| **G0 reversível** | Hepatócitos (células do fígado), linfócitos à espera de um antígeno, fibroblastos da derme | Voltam ao ciclo quando estimulados: regeneração do fígado, resposta imune, cicatrização |
+| **G0 reversível** | Hepatócitos (células do fígado), linfócitos à espera de um antígeno, fibroblastos da derme | Voltam ao ciclo quando recebem sinais externos, como **fatores de crescimento** liberados em uma lesão: regeneração do fígado, resposta imune, cicatrização (as plaquetas liberam um fator de crescimento que estimula a divisão dos fibroblastos no ferimento) |
 | **G0 praticamente permanente** | Neurônios maduros, células musculares cardíacas, fibras musculares esqueléticas | Pouca ou nenhuma reposição por divisão; lesões tendem a deixar sequelas ou cicatriz |
 
 Algumas observações importantes:
@@ -112,7 +123,7 @@ Algumas observações importantes:
 - O músculo esquelético se recupera de pequenas lesões graças a **células-satélite**, uma reserva de células que se dividem e se fundem às fibras. As fibras musculares em si não fazem mitose.
 - Após um infarto, a área de músculo cardíaco morta é substituída por **cicatriz de tecido conjuntivo**, que não contrai.
 
-Isso explica o caso do começo: os hepatócitos estão em G0, mas **voltam ao ciclo** quando o fígado perde massa; os neurônios da medula espinal, não.
+Isso explica o caso do começo: os hepatócitos estão em G0, mas **são "chamados de volta" ao ciclo** por fatores de crescimento quando o fígado perde massa; os neurônios maduros da medula espinal, não.
 
 ## Interpretação de gráficos de DNA por célula
 
@@ -142,7 +153,9 @@ Em laboratórios de pesquisa e de diagnóstico, um equipamento chamado **citôme
 
 Em uma população que se divide de forma não sincronizada, **a proporção de células em cada fase é aproximadamente proporcional à duração dessa fase**. Se 10% das células de uma cultura estão em G2 e o ciclo dura 20 horas, G2 dura cerca de 2 horas. É o mesmo raciocínio do **índice mitótico**: a porcentagem de células em divisão em uma lâmina indica quanto tempo do ciclo é gasto em mitose e quanto aquele tecido está proliferando. Tumores costumam ter índice mitótico mais alto que o tecido normal de origem.
 
-Substâncias que interferem no ciclo mudam o histograma. A **colchicina**, que impede a formação do fuso, acumula células em mitose, portanto com 4C. Um inibidor da síntese de DNA faz o contrário: as células ficam retidas no fim de G1 ou ao longo da fase S, e o pico de 4C diminui.
+Substâncias que interferem no ciclo mudam o histograma, e é assim que pesquisadores descobrem em que fase um possível remédio contra o câncer bloqueia a divisão. A **colchicina**, que impede a formação do fuso, e o quimioterápico **taxol**, que "congela" o fuso e impede a célula de passar da metáfase, acumulam células em mitose, portanto com 4C. Um inibidor da síntese de DNA faz o contrário: as células ficam retidas no fim de G1 ou ao longo da fase S, e o pico de 4C diminui.
+
+Os quimioterápicos atacam células em divisão ativa. Por isso, os efeitos colaterais aparecem nos tecidos normais que se dividem muito: queda de cabelo (folículos pilosos), náuseas e feridas na mucosa (epitélio digestivo) e maior risco de infecções e anemia (medula óssea e células de defesa).
 
 ## Como cai no ENEM e nos vestibulares
 
@@ -156,17 +169,19 @@ Substâncias que interferem no ciclo mudam o histograma. A **colchicina**, que i
 - **"A interfase é a fase de repouso da célula."** Errado. É a fase de maior atividade metabólica, com crescimento, síntese de proteínas e replicação do DNA.
 - **"Na fase S o número de cromossomos dobra."** Errado. Dobram a quantidade de DNA e o número de cromátides; o número de cromossomos (centrômeros) continua o mesmo.
 - **"Uma célula em G2 é tetraploide."** Errado. Ela tem 4C de DNA, mas continua diploide (2n): os cromossomos ainda estão aos pares de homólogos, cada um com duas cromátides-irmãs.
+- **"G1 é sempre a fase mais longa do ciclo."** Cuidado: G1 é a fase de duração **mais variável**, não necessariamente a mais longa. No exemplo de célula humana de 24 horas, a fase S ocupa cerca de metade do ciclo.
 - **"Células em G0 estão mortas ou inativas."** Errado. Estão vivas e exercendo suas funções; apenas não estão se preparando para dividir.
 - **"A quantidade de DNA cai na anáfase."** Cuidado: na anáfase as cromátides se separam, mas ainda estão na mesma célula. A quantidade de DNA **por célula** só cai para 2C com a citocinese.
 
 ## Resumo relâmpago
 
-- Ciclo celular = **interfase (G1, S, G2)** + **fase M (mitose e citocinese)**; a interfase ocupa a maior parte do tempo.
-- **G1:** crescimento, síntese de RNA, proteínas e organelas; fase de duração mais variável e com ponto de checagem.
+- Ciclo celular = **interfase (G1, S, G2)** + **fase M (mitose e citocinese)**; a interfase ocupa cerca de 90% do tempo e a fase M é a etapa mais curta.
+- A célula cresce nas três subfases da interfase; os cromossomos só são duplicados em S.
+- **G1:** crescimento, síntese de RNA, proteínas e organelas; fase de duração mais variável e com o principal ponto de checagem (sem sinal de continuar, a célula vai para G0).
 - **S:** replicação semiconservativa do DNA e síntese de histonas; cada cromossomo passa a ter duas cromátides-irmãs.
 - **G2:** síntese de proteínas para a divisão (como a tubulina) e checagem da replicação.
 - O DNA vai de **2C (G1)** para **4C (G2)** e volta a **2C** em cada célula-filha após a citocinese; o número de cromossomos não muda na interfase.
-- **G0:** a célula sai do ciclo, mas continua viva e ativa. Hepatócitos podem voltar a se dividir; neurônios e células cardíacas praticamente não.
+- **G0:** a célula sai do ciclo, mas continua viva e ativa. Hepatócitos podem voltar a se dividir quando estimulados por fatores de crescimento; neurônios maduros e células musculares praticamente não.
 - No gráfico DNA × tempo, a **rampa** é a fase S e a **queda vertical** é a citocinese.
 - Em uma população, a fração de células em cada fase é proporcional à duração da fase.
 
@@ -180,3 +195,7 @@ Substâncias que interferem no ciclo mudam o histograma. A **colchicina**, que i
 - [[tecido-epitelial]]: a camada basal da epiderme e o epitélio intestinal, exemplos de renovação intensa.
 - [[tecido-nervoso-impulso]]: neurônios, células que praticamente não se dividem.
 - [[clonagem-celulas-tronco]]: células-tronco, a fonte de reposição de tecidos cujas células não se dividem.
+
+## Referência
+
+- Urry, L. A. et al. *Biologia de Campbell*. 10. ed. Porto Alegre: Artmed, 2015. Capítulo 12 (conceitos 12.1 a 12.3).

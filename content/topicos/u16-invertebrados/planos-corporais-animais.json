@@ -31,7 +31,7 @@
       "enunciado": "Nos animais deuterostômios, como os equinodermos e os cordados, o blastóporo dá origem:",
       "alternativas": ["à boca", "ao celoma", "à notocorda", "ao mesoderma", "ao ânus"],
       "correta": 4,
-      "explicacao": "Em deuterostômios (do grego deuteros, segundo, e stoma, boca), o blastóporo origina o ânus e a boca se forma depois, em outro ponto do embrião. Nos protostômios, em geral, o blastóporo origina a boca. Celoma, notocorda e mesoderma não derivam do blastóporo.",
+      "explicacao": "Em deuterostômios (do grego deuteros, segundo, e stoma, boca), o blastóporo geralmente origina o ânus e a boca se forma a partir de uma segunda abertura, na extremidade oposta do embrião. Nos protostômios, em geral, o blastóporo origina a boca. Celoma, notocorda e mesoderma não derivam do blastóporo.",
       "habilidade": "Diferenciar protostômios e deuterostômios pelo destino do blastóporo.",
       "tags": ["deuterostômios", "blastóporo"]
     },
@@ -42,7 +42,7 @@
       "enunciado": "A lombriga (Ascaris lumbricoides) apresenta uma cavidade corporal chamada pseudoceloma. O que diferencia essa cavidade de um celoma verdadeiro?",
       "alternativas": ["O pseudoceloma é totalmente revestido por mesoderma, e o celoma não", "O pseudoceloma é revestido por mesoderma apenas do lado da parede do corpo, e o intestino fica sem revestimento mesodérmico", "O pseudoceloma se origina do ectoderma, enquanto o celoma se origina do endoderma", "O pseudoceloma só ocorre em animais de simetria radial", "O pseudoceloma é preenchido por tecido maciço, sem espaço livre"],
       "correta": 1,
-      "explicacao": "No pseudoceloma, o mesoderma forra apenas a face interna da parede do corpo; o intestino (endoderma) fica em contato direto com a cavidade. No celoma verdadeiro, o mesoderma reveste os dois lados. A origem não é ectodérmica nem endodérmica, nematódeos são bilaterais e o corpo maciço é dos acelomados.",
+      "explicacao": "O pseudoceloma é delimitado por mesoderma do lado da parede do corpo e por endoderma do lado do intestino, que fica em contato direto com a cavidade. Apesar do nome, é uma cavidade real e funcional. No celoma verdadeiro, o mesoderma reveste os dois lados. A origem não é ectodérmica nem endodérmica, nematódeos são bilaterais e o corpo maciço é dos acelomados.",
       "habilidade": "Distinguir os tipos de cavidade corporal dos triblásticos.",
       "tags": ["pseudoceloma", "celoma", "nematódeos"]
     },
@@ -122,13 +122,14 @@
     { "id": "planos-corporais-animais-f06", "frente": "Diblástico x triblástico", "verso": "Diblástico: só ectoderma e endoderma (cnidários). Triblástico: também mesoderma (todos os bilatérios)." },
     { "id": "planos-corporais-animais-f07", "frente": "O que é a mesogleia?", "verso": "Camada gelatinosa entre ectoderma e endoderma dos cnidários. Não é um folheto embrionário." },
     { "id": "planos-corporais-animais-f08", "frente": "Acelomado", "verso": "Triblástico sem cavidade corporal; o espaço é preenchido por tecido mesodérmico maciço. Ex.: platelmintos." },
-    { "id": "planos-corporais-animais-f09", "frente": "Pseudocelomado", "verso": "Cavidade revestida por mesoderma só do lado da parede do corpo. Ex.: nematódeos, como a lombriga." },
+    { "id": "planos-corporais-animais-f09", "frente": "Pseudocelomado", "verso": "Cavidade delimitada por mesoderma (lado da parede do corpo) e por endoderma (lado do intestino). É uma cavidade funcional. Ex.: nematódeos, como a lombriga." },
     { "id": "planos-corporais-animais-f10", "frente": "Celomado", "verso": "Cavidade totalmente revestida por mesoderma. Ex.: anelídeos, moluscos, artrópodes, equinodermos e cordados." },
     { "id": "planos-corporais-animais-f11", "frente": "Protostômio", "verso": "Blastóporo origina a boca. Em geral, clivagem espiral e determinada e celoma por esquizocelia. Ex.: moluscos, anelídeos, artrópodes." },
     { "id": "planos-corporais-animais-f12", "frente": "Deuterostômio", "verso": "Blastóporo origina o ânus. Em geral, clivagem radial e indeterminada e celoma por enterocelia. Ex.: equinodermos e cordados." },
     { "id": "planos-corporais-animais-f13", "frente": "Tubo digestório incompleto x completo", "verso": "Incompleto: uma só abertura (cnidários, platelmintos). Completo: boca e ânus, fluxo em sentido único (nematódeos, moluscos, anelídeos, artrópodes, equinodermos e cordados)." },
-    { "id": "planos-corporais-animais-f14", "frente": "Ecdisozoários e lofotrocozoários", "verso": "Ecdisozoários: protostômios que fazem muda (nematódeos, artrópodes). Lofotrocozoários: incluem platelmintos, moluscos e anelídeos." },
-    { "id": "planos-corporais-animais-f15", "frente": "Como medir parentesco em um cladograma?", "verso": "Pelo ancestral comum mais recente, e não pela semelhança aparente. Nenhum grupo atual é mais evoluído que outro." }
+    { "id": "planos-corporais-animais-f14", "frente": "Ecdisozoários e lofotrocozoários", "verso": "Dois dos três clados de bilatérios (o terceiro é o dos deuterostômios), definidos sobretudo por dados moleculares. Ecdisozoários: fazem muda (nematódeos, artrópodes). Lofotrocozoários: incluem platelmintos, moluscos e anelídeos." },
+    { "id": "planos-corporais-animais-f15", "frente": "Como medir parentesco em um cladograma?", "verso": "Pelo ancestral comum mais recente, e não pela semelhança aparente. Nenhum grupo atual é mais evoluído que outro." },
+    { "id": "planos-corporais-animais-f16", "frente": "Grado x clado", "verso": "Grado: grupo com plano corporal parecido (ex.: celomados, pseudocelomados). Clado: um ancestral e todos os seus descendentes (ex.: bilatérios, deuterostômios)." }
   ],
   "minijogos": {
     "pares": [

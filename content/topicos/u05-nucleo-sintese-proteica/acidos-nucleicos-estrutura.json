@@ -31,7 +31,7 @@
       "enunciado": "Na dupla-hélice do DNA, as bases nitrogenadas de uma fita se unem às bases complementares da outra fita por meio de:",
       "alternativas": ["ligações peptídicas", "ligações fosfodiéster", "ligações glicosídicas entre hexoses", "pontes dissulfeto", "pontes de hidrogênio"],
       "correta": 4,
-      "explicacao": "As fitas são mantidas unidas por pontes de hidrogênio entre bases complementares: duas entre A e T, três entre G e C. As ligações fosfodiéster unem nucleotídeos dentro da mesma fita; ligações peptídicas unem aminoácidos e pontes dissulfeto aparecem em proteínas.",
+      "explicacao": "As fitas são mantidas unidas por pontes (ligações) de hidrogênio entre bases complementares: duas entre A e T, três entre G e C. As ligações fosfodiéster unem nucleotídeos dentro da mesma fita; ligações peptídicas unem aminoácidos e pontes dissulfeto aparecem em proteínas.",
       "habilidade": "Reconhecer o tipo de ligação entre as fitas do DNA.",
       "tags": ["pontes de hidrogênio", "dupla-hélice"]
     },
@@ -64,7 +64,7 @@
       "enunciado": "Durante a síntese de proteínas, um tipo de RNA tem uma região chamada anticódon e um local onde se liga um aminoácido específico. Esse RNA e sua função são, respectivamente:",
       "alternativas": ["RNA mensageiro; levar a informação do DNA até o núcleo", "RNA ribossômico; formar o envoltório nuclear", "RNA transportador; levar aminoácidos até o ribossomo e reconhecer o códon do RNA mensageiro", "RNA mensageiro; formar as subunidades do ribossomo", "RNA transportador; armazenar a informação genética no núcleo"],
       "correta": 2,
-      "explicacao": "O RNA transportador tem o anticódon, que pareia com o códon do RNA mensageiro, e carrega o aminoácido correspondente até o ribossomo. O RNA mensageiro leva a mensagem do núcleo ao citoplasma, o RNA ribossômico forma ribossomos (não o envoltório nuclear) e quem armazena a informação genética é o DNA.",
+      "explicacao": "O RNA transportador (ou de transferência) tem o anticódon, que pareia com o códon do RNA mensageiro, e carrega o aminoácido correspondente até o ribossomo. O RNA mensageiro leva a mensagem do núcleo ao citoplasma, o RNA ribossômico forma ribossomos (não o envoltório nuclear) e quem armazena a informação genética é o DNA.",
       "habilidade": "Associar cada tipo de RNA à sua função.",
       "tags": ["RNA transportador", "anticódon", "tipos de RNA"]
     },
@@ -126,8 +126,9 @@
     { "id": "acidos-nucleicos-estrutura-f10", "frente": "Por que DNA rico em G + C precisa de mais calor para se desnaturar?", "verso": "Pares G-C têm três pontes de hidrogênio, contra duas dos pares A-T." },
     { "id": "acidos-nucleicos-estrutura-f11", "frente": "Que cientista obteve as imagens de raios X decisivas para o modelo da dupla-hélice?", "verso": "Rosalind Franklin." },
     { "id": "acidos-nucleicos-estrutura-f12", "frente": "Função do RNA mensageiro", "verso": "Levar a informação de um gene até os ribossomos, em trincas chamadas códons." },
-    { "id": "acidos-nucleicos-estrutura-f13", "frente": "Função do RNA transportador", "verso": "Carregar aminoácidos até o ribossomo; seu anticódon reconhece o códon do RNAm." },
-    { "id": "acidos-nucleicos-estrutura-f14", "frente": "Função do RNA ribossômico", "verso": "Formar os ribossomos com proteínas e participar da formação das ligações peptídicas." }
+    { "id": "acidos-nucleicos-estrutura-f13", "frente": "Função do RNA transportador", "verso": "Carregar aminoácidos até o ribossomo; seu anticódon reconhece o códon do RNAm. Também é chamado de RNA de transferência e, no espaço, tem forma de L." },
+    { "id": "acidos-nucleicos-estrutura-f14", "frente": "Função do RNA ribossômico", "verso": "Formar os ribossomos com proteínas e catalisar a formação das ligações peptídicas." },
+    { "id": "acidos-nucleicos-estrutura-f15", "frente": "Por que, na dupla-hélice, uma purina sempre pareia com uma pirimidina?", "verso": "Porque um par purina + pirimidina tem sempre a mesma largura, o que mantém constante o diâmetro da hélice (cerca de 2 nm)." }
   ],
   "minijogos": {
     "pares": [

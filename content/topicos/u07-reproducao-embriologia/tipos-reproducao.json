@@ -78,7 +78,7 @@
         "originam-se de óvulos não fecundados, por partenogênese, e são haploides"
       ],
       "correta": 4,
-      "explicacao": "Zangões vêm de óvulos não fecundados (partenogênese) e por isso são haploides. Óvulos fecundados geram fêmeas diploides, operárias ou rainhas conforme a alimentação. Como os óvulos da rainha são produzidos por meiose, os zangões não são clones dela.",
+      "explicacao": "Zangões vêm de óvulos não fecundados (partenogênese) e por isso são haploides. Óvulos fecundados geram fêmeas diploides, operárias ou rainhas conforme a alimentação da larva. Como os óvulos da rainha são produzidos por meiose, os zangões não são clones dela, e nenhum zangão vem de fecundação.",
       "habilidade": "Explicar a partenogênese e suas consequências genéticas.",
       "tags": [
         "partenogênese",
@@ -231,7 +231,7 @@
     {
       "id": "tipos-reproducao-f03",
       "frente": "A divisão binária das bactérias é uma mitose?",
-      "verso": "Não. Bactérias não têm núcleo nem fuso mitótico; o cromossomo circular se duplica e a célula se divide."
+      "verso": "Não. Bactérias não têm núcleo; o cromossomo circular se duplica, cada cópia vai para uma célula-filha e a célula se divide. Em amebas e paramécios, a divisão binária envolve mitose."
     },
     {
       "id": "tipos-reproducao-f04",
@@ -246,7 +246,7 @@
     {
       "id": "tipos-reproducao-f06",
       "frente": "O que é partenogênese?",
-      "verso": "Desenvolvimento de um novo indivíduo a partir de um gameta feminino não fecundado."
+      "verso": "Desenvolvimento de um novo indivíduo a partir de um óvulo não fecundado. Como não há fecundação, o Campbell a classifica como reprodução assexuada."
     },
     {
       "id": "tipos-reproducao-f07",
@@ -256,7 +256,7 @@
     {
       "id": "tipos-reproducao-f08",
       "frente": "Três fontes de variabilidade na reprodução sexuada",
-      "verso": "Crossing-over, segregação independente dos cromossomos na meiose e fecundação ao acaso."
+      "verso": "Segregação independente dos cromossomos na meiose, crossing-over e fecundação ao acaso."
     },
     {
       "id": "tipos-reproducao-f09",
@@ -286,7 +286,12 @@
     {
       "id": "tipos-reproducao-f14",
       "frente": "Hermafrodita sempre se autofecunda?",
-      "verso": "Não. A minhoca é hermafrodita e faz fecundação cruzada; tênia e Biomphalaria podem se autofecundar."
+      "verso": "Não. Minhoca e planária são hermafroditas e fazem fecundação cruzada; tênia e Biomphalaria podem se autofecundar."
+    },
+    {
+      "id": "tipos-reproducao-f15",
+      "frente": "O que é o \"custo duplo\" da reprodução sexuada?",
+      "verso": "Metade da prole sexuada são machos, que não geram filhos sozinhos; por isso uma população assexuada cresce mais rápido. A vantagem do sexo é a variabilidade, útil quando o ambiente muda."
     }
   ],
   "minijogos": {
@@ -325,7 +330,7 @@
       },
       {
         "a": "Hermafroditismo sequencial",
-        "b": "Peixe-palhaço muda de sexo ao longo da vida"
+        "b": "Maior fêmea de um harém de bodião vira macho quando o macho morre"
       }
     ],
     "sequencia": {
@@ -446,7 +451,7 @@
       {
         "afirmacao": "Todo animal hermafrodita realiza autofecundação.",
         "valor": false,
-        "explicacao": "A minhoca é hermafrodita e realiza fecundação cruzada."
+        "explicacao": "A minhoca e a planária são hermafroditas e realizam fecundação cruzada; a autofecundação só ocorre em algumas espécies, como a tênia."
       },
       {
         "afirmacao": "O gafanhoto apresenta metamorfose completa, com fase de pupa.",

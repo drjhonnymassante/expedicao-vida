@@ -913,7 +913,7 @@ function telaInicial(salvo) {
   if (salvo) { $('btCont').classList.remove('oculto'); $('btCont').classList.add('prim'); $('btNovo').classList.remove('prim'); $('btNovo').textContent = '↺ Recomeçar do zero'; $('nome').value = salvo.nome || ''; corSel = salvo.cor || 0; telaInicial(); }
 }
 function comecar(novo) {
-  const salvo = EV.carregar(), nome = $('nome').value.trim() || 'Explorador(a)';
+  const salvo = EV.carregar(), nome = $('nome').value.trim() || 'Evonauta';
   demo = $('demo').checked;
   est = EV.completar(!novo && salvo ? salvo : EV.novo(nome));
   if (novo) { est.nome = nome; if (salvo && salvo.uid) est.uid = salvo.uid; } est.cor = corSel;
