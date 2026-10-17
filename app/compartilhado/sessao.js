@@ -38,7 +38,7 @@
 
     const acoes = document.getElementById('acoes');
     if (acoes) {
-      const b = document.createElement('button'); b.className = 'bt'; b.textContent = 'Sair'; b.title = 'Sair da conta';
+      const b = document.createElement('button'); b.className = 'bt'; b.textContent = document.body.classList.contains('toque') ? '🚪' : 'Sair'; b.title = 'Sair da conta';
       b.onclick = async () => { await enviar(); await sb.auth.signOut(); location.href = RAIZ; };
       acoes.appendChild(b);
     }

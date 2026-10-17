@@ -25,10 +25,19 @@
   #btPular { right: 22px; bottom: calc(30px + env(safe-area-inset-bottom)); }
   #btFalar { right: 108px; bottom: calc(66px + env(safe-area-inset-bottom)); background: linear-gradient(135deg, #fbbf24, #f59e0b); color: #2b1d00; border: none; }
   #btFalar.oculto { display: none; }
-  body.toque #minimapa { top: 76px; bottom: auto; right: 12px; width: 112px; height: 112px; }
+  body.toque #perfil { left: 10px; right: 10px; top: calc(8px + env(safe-area-inset-top)); transform: none; padding: 8px 12px 8px 8px; }
+  body.toque #perfil > div:last-child { flex: 1; min-width: 0; }
+  body.toque #retrato { width: 52px; height: 52px; }
+  body.toque #nivelBadge { left: 44px; top: 44px; }
+  body.toque .xp { width: 100%; }
+  body.toque #perfil .xptxt { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  body.toque #minimapa { top: calc(114px + env(safe-area-inset-top)); bottom: auto; right: 10px; width: 108px; height: 108px; }
+  body.toque #acoes { top: calc(234px + env(safe-area-inset-top)); right: 10px; flex-direction: column; gap: 10px; align-items: flex-end; }
+  body.toque #acoes .bt { width: 48px; height: 48px; padding: 0; border-radius: 50%; display: grid; place-items: center; font-size: 22px; }
+  body.toque #acoes .bt .tecla { display: none; }
   body.toque #prompt { bottom: calc(196px + env(safe-area-inset-bottom)); max-width: 86vw; font-size: 14px; pointer-events: auto; }
-  body.toque #perfil { transform: scale(.86); transform-origin: top left; }
-  body.toque #regiao { top: 196px; }
+  body.toque #regiao { top: calc(118px + env(safe-area-inset-top)); left: 12px; right: 130px; transform: none; text-align: left; }
+  body.toque #regiao.on { transform: none; }
   body.toque #regiao .r2 { font-size: 26px; }
   body.toque #toasts { top: auto; bottom: calc(190px + env(safe-area-inset-bottom)); }
   .oculto { display: none !important; }

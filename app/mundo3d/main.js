@@ -108,6 +108,7 @@ scene.add(new THREE.HemisphereLight('#d8f0ff', '#4c6b3c', 1.05));
 const sol = new THREE.DirectionalLight('#fff1d6', 2.3);
 const TOQUE = matchMedia('(pointer: coarse)').matches || 'ontouchstart' in window;
 if (TOQUE) document.body.classList.add('toque');
+if (TOQUE) { const bm = document.getElementById('btMapa'); bm.textContent = '🗺️'; bm.title = 'Mapa'; const la = document.querySelector('#acoes a'); if (la) { la.textContent = '📖'; la.title = 'Aulas'; } }
 sol.castShadow = true; sol.shadow.mapSize.set(TOQUE ? 1024 : 2048, TOQUE ? 1024 : 2048);
 Object.assign(sol.shadow.camera, { left: -48, right: 48, top: 48, bottom: -48, near: 1, far: 220 });
 sol.shadow.bias = -.0006; sol.shadow.normalBias = .03;
