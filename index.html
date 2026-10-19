@@ -6,6 +6,9 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  // Consent Mode: estatísticas só depois do aceite no aviso de cookies
+  var escolhaCookies = null; try { escolhaCookies = localStorage.getItem('evonauta_cookies'); } catch (e) {}
+  gtag('consent', 'default', { analytics_storage: escolhaCookies === 'aceito' ? 'granted' : 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
   gtag('js', new Date());
 
   gtag('config', 'G-0LQKSFPGVL');
@@ -118,8 +121,13 @@
 
 <footer><div class="cont">
   <div>© 2026 <span id="rodResp"></span> · CNPJ <span id="rodCnpj"></span></div>
-  <div><a href="privacidade.html">Privacidade</a> · <a href="termos.html">Termos de uso</a> · <a id="rodContato" href="#">Contato</a></div>
+  <div><a href="privacidade.html">Privacidade</a> · <a href="termos.html">Termos de uso</a> · <a href="#" id="prefCookies">Preferências de cookies</a> · <a id="rodContato" href="#">Contato</a></div>
 </div></footer>
+
+<div id="avisoCookies" class="oculto" role="dialog" aria-live="polite" aria-label="Aviso de cookies">
+  <div><b>🍪 Cookies de estatística</b><br>Usamos o Google Analytics para entender como o site é usado e melhorá-lo. Ele só é ativado se você aceitar. <a href="privacidade.html">Saiba mais</a></div>
+  <div class="botoes"><button class="bt peq" id="ckRecusar">Recusar</button><button class="bt prim peq" id="ckAceitar">Aceitar</button></div>
+</div>
 
 <div class="veu oculto" id="veu"><div class="modal" id="modal"></div></div>
 
@@ -129,6 +137,16 @@
 <script src="app/compartilhado/avatar2d.js"></script>
 <script>
 const { cfg, sb, PLANOS, esc } = Vida;
+// aviso de cookies (Consent Mode)
+(function () {
+  const aviso = document.getElementById('avisoCookies');
+  let escolha = null; try { escolha = localStorage.getItem('evonauta_cookies'); } catch { }
+  const decidir = v => { try { localStorage.setItem('evonauta_cookies', v); } catch { } gtag('consent', 'update', { analytics_storage: v === 'aceito' ? 'granted' : 'denied' }); aviso.classList.add('oculto'); };
+  if (!escolha) aviso.classList.remove('oculto');
+  document.getElementById('ckAceitar').onclick = () => decidir('aceito');
+  document.getElementById('ckRecusar').onclick = () => decidir('recusado');
+  document.getElementById('prefCookies').onclick = e => { e.preventDefault(); aviso.classList.remove('oculto'); };
+})();
 { const img = new Image(); img.alt = 'Dr. Jhonny Capichoni Massante'; img.style.cssText = 'width:100%;height:100%;object-fit:cover'; img.onload = () => { const f = document.getElementById('fotoQuem'); f.textContent = ''; f.appendChild(img); }; img.src = 'img/jhonny.jpg'; }
 document.getElementById('rodResp').textContent = cfg.responsavel;
 document.getElementById('rodCnpj').textContent = cfg.cnpj;
