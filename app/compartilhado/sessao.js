@@ -17,7 +17,10 @@
     let local = EstadoVida.carregar();
     if (local && local.uid && local.uid !== uid) local = null;          // outra conta neste navegador: não mistura
     const remoto = perfil && perfil.progresso && Object.keys(perfil.progresso).length ? perfil.progresso : null;
-    const final = (remoto && (!local || (remoto.xp || 0) >= (local.xp || 0))) ? remoto : EstadoVida.completar(local || EstadoVida.novo(perfil && perfil.apelido));
+    // a versão mais recente vence (assim "recomeçar do zero" não é desfeito); sem data, vale a de mais XP
+    const tr = remoto && remoto.atualizadoEm || 0, tl = local && local.atualizadoEm || 0;
+    const usarRemoto = remoto && (!local || (tr || tl ? tr > tl : (remoto.xp || 0) >= (local.xp || 0)));
+    const final = usarRemoto ? remoto : EstadoVida.completar(local || EstadoVida.novo(perfil && perfil.apelido));
     final.uid = uid;
     if (perfil && perfil.apelido && (!final.nome || final.nome === 'Explorador(a)' || final.nome === 'Evonauta')) final.nome = perfil.apelido;
     EstadoVida.salvar(final);

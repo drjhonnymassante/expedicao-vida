@@ -1016,15 +1016,20 @@ function loop() {
 // ---------- início ----------
 let corSel = 0;
 function telaInicial(salvo) {
+  const tem = EV.temProgresso(salvo);
+  if (salvo) { corSel = salvo.cor || 0; if (salvo.nome && salvo.nome !== 'Evonauta' && !$('nome').value) $('nome').value = salvo.nome; }
   $('cores').innerHTML = CORES_JOGADOR.map((c, k) => `<button style="background:${c}" data-k="${k}" class="${k === corSel ? 'sel' : ''}" title="Cor do avatar"></button>`).join('');
   $('cores').querySelectorAll('button').forEach(b => b.onclick = () => { corSel = +b.dataset.k; $('cores').querySelectorAll('button').forEach(x => x.classList.toggle('sel', x === b)); });
-  if (salvo) { $('btCont').classList.remove('oculto'); $('btCont').classList.add('prim'); $('btNovo').classList.remove('prim'); $('btNovo').textContent = '↺ Recomeçar do zero'; $('nome').value = salvo.nome || ''; corSel = salvo.cor || 0; telaInicial(); }
+  $('btCont').classList.toggle('oculto', !tem);
+  $('btCont').classList.toggle('prim', tem); $('btNovo').classList.toggle('prim', !tem);
+  $('btNovo').textContent = tem ? '↺ Recomeçar do zero' : '▶ Começar expedição';
 }
 function comecar(novo) {
   const salvo = EV.carregar(), nome = $('nome').value.trim() || 'Evonauta';
   demo = $('demo').checked;
   est = EV.completar(!novo && salvo ? salvo : EV.novo(nome));
-  if (novo) { est.nome = nome; if (salvo && salvo.uid) est.uid = salvo.uid; } est.cor = corSel;
+  est.nome = nome; if (novo && salvo && salvo.uid) est.uid = salvo.uid; est.cor = corSel;
+  if (novo) { est.pos3d = null; combo = 0; }
   if (!Array.isArray(est.livres) || !est.livres.length) est.livres = [true];
   est.livres = ILHAS.map((_, i) => !!est.livres[i] || i === 0);
   verificarDesbloqueios(false);
@@ -1040,7 +1045,7 @@ function comecar(novo) {
   $('inicio').classList.add('oculto');
   ['perfil', 'acoes', 'diarias', 'minimapa', 'dica'].forEach(id => $(id).classList.remove('oculto'));
   $('dicaDemo').innerHTML = demo ? '<br><b style="color:var(--ouro)">Demo:</b> <b>P</b> +XP/evoluir · <b>U</b> desbloquear ilha · <b>T</b> teletransporte' : '';
-  atualizarHud(); verificarConquistas(); salvar(); setInterval(salvar, 4000);
+  atualizarHud(); verificarConquistas(); salvar(); if (window.salvarNaNuvem) window.salvarNaNuvem(); setInterval(salvar, 4000);
   setTimeout(() => toast('🧬', `Bem-vindo(a), ${est.nome}!`, TOQUE ? 'Use o joystick para andar e arraste a tela para girar a câmera' : 'Fale com os personagens com ❗ para receber missões'), 1200);
 }
 addEventListener('progresso-sincronizado', () => { if (!emJogo) telaInicial(EV.carregar()); });
@@ -1054,8 +1059,8 @@ addEventListener('storage', e => { if (e.key === EV.CHAVE && est) { const novo =
   const prontas = ESTACOES.filter(e => e.pronto).length;
   $('carga').textContent = `${ILHAS.length} ilhas · ${ESTACOES.length} estações · ${prontas} missões disponíveis · ${ORBES.length} biocristais escondidos`;
   telaInicial(EV.carregar());
-  $('btNovo').onclick = () => { const s = EV.carregar(); if (s && s.xp > 0 && !confirm('Começar do zero apaga o progresso atual (' + s.xp + ' XP). Deseja mesmo recomeçar?')) return; comecar(true); }; $('btCont').onclick = () => comecar(false);
-  $('nome').addEventListener('keydown', e => { if (e.key === 'Enter') comecar(!EV.carregar()); });
+  $('btNovo').onclick = () => { const s = EV.carregar(); if (!EV.temProgresso(s)) return comecar(false); if (!confirm('Começar do zero apaga o progresso atual (' + (s.xp || 0) + ' XP). Deseja mesmo recomeçar?')) return; comecar(true); }; $('btCont').onclick = () => comecar(false);
+  $('nome').addEventListener('keydown', e => { if (e.key === 'Enter') comecar(false); });
   est = EV.completar(null); est.livres = ILHAS.map((_, i) => i < 3); aplicarVisualBloqueio(); est = null;
   loop();
 })();
