@@ -70,7 +70,9 @@ const SFX = {
 };
 
 // ---------- estado ----------
-let CUR, ILHAS = [], PONTES = [], ESTACOES = [], ORBES = [], FRAGS = [];
+let CUR, ILHAS = [], PONTES = [], ESTACOES = [], ORBES = [], FRAGS = [], PILULAS = [];
+const REPOE_CRISTAL = 10 * 60e3, REPOE_PILULA = 30 * 60e3;
+let sondaAte = 0, feixes = [], modoSalto = false, mapaInfo = null;
 let est = null, demo = false, pausado = true, emJogo = false;
 const jog = { x: 0, y: 1, z: 0, vy: 0, chao: true, rot: 0, vel: 0 };
 const camCtl = { yaw: .6, pitch: .55, dist: 15, alvoDist: 15 };
@@ -292,7 +294,7 @@ function construirIlha(ilha) {
     criarNPC(e); ilha.estacoes.push(e); ESTACOES.push(e); ilha.obst.push({ x, z, r: .9 });
   });
   // decoração
-  const qtd = Math.round(26 + tema.denso * 160);
+  const qtd = Math.round((26 + tema.denso * 160) / 2);   // metade da decoração: ilhas mais livres para andar
   for (let k = 0, tent = 0; k < qtd && tent < qtd * 6; tent++) {
     const a = R0() * Math.PI * 2, rr = 3.5 + Math.sqrt(R0()) * (R - 4.6), x = cx + Math.cos(a) * rr, z = cz + Math.sin(a) * rr;
     if (rr > R - 6 && !longeDasPontes(a)) continue;
@@ -301,7 +303,7 @@ function construirIlha(ilha) {
     if (!PARTES[tipo]) continue;
     const s = .75 + R0() * .6;
     (instancias[tipo] ||= []).push({ x, z, s, r: R0() * 6.3, ilha: i });
-    if (tipo !== 'flor' && tipo !== 'bolha') ilha.obst.push({ x, z, r: tipo === 'casa' || tipo === 'sebe' ? 1.4 * s : .75 * s });
+    if (tipo !== 'flor' && tipo !== 'bolha') ilha.obst.push({ x, z, r: tipo === 'casa' || tipo === 'sebe' ? 1.3 * s : .62 * s });
     k++;
   }
   // biocristais (coletáveis) e fragmentos de memória
@@ -312,6 +314,10 @@ function construirIlha(ilha) {
   if (ilha.estacoes.some(e => e.pronto)) for (let k = 0; k < 2; k++) {
     const a = R0() * Math.PI * 2, rr = 6 + R0() * (R - 8);
     FRAGS.push({ id: `f${i}_${k}`, ilha: i, x: cx + Math.cos(a) * rr, z: cz + Math.sin(a) * rr, fase: R0() * 6 });
+  }
+  if (ilha.estacoes.some(e => e.pronto)) for (let k = 0; k < 4; k++) {
+    const a = R0() * Math.PI * 2, rr = 5 + R0() * (R - 7);
+    PILULAS.push({ id: `p${i}_${k}`, ilha: i, x: cx + Math.cos(a) * rr, z: cz + Math.sin(a) * rr, fase: R0() * 6 });
   }
 }
 
@@ -362,9 +368,55 @@ function construirPonte(p) {
 // coletáveis renderizados como malhas individuais leves
 const orbeGeo = new THREE.IcosahedronGeometry(.32, 0), orbeMat = new THREE.MeshBasicMaterial({ color: '#7DF9FF' });
 const fragGeo = new THREE.BoxGeometry(.62, .82, .06), fragMat = new THREE.MeshBasicMaterial({ color: '#C9A7FF' });
+const pilGeo = new THREE.CapsuleGeometry(.17, .36, 4, 10), pilMat = new THREE.MeshBasicMaterial({ color: '#FF8FAB' });
+const disponivel = (v, prazo) => !v || v === true || (typeof v === 'number' && Date.now() - v > prazo);
 function criarColetaveis() {
-  for (const o of ORBES) { if (est.orbes[o.id]) continue; o.mesh = new THREE.Mesh(orbeGeo, orbeMat); o.glow = brilho('#7DF9FF', 1.6); scene.add(o.mesh, o.glow); }
-  for (const f of FRAGS) { if (est.frags[f.id]) continue; f.mesh = new THREE.Mesh(fragGeo, fragMat); f.glow = brilho('#B388FF', 2.2); scene.add(f.mesh, f.glow); }
+  for (const o of ORBES) { if (o.mesh || !disponivel(est.orbes[o.id], REPOE_CRISTAL)) continue; o.mesh = new THREE.Mesh(orbeGeo, orbeMat); o.glow = brilho('#7DF9FF', 1.6); scene.add(o.mesh, o.glow); }
+  for (const f of FRAGS) { if (f.mesh || est.frags[f.id]) continue; f.mesh = new THREE.Mesh(fragGeo, fragMat); f.glow = brilho('#B388FF', 2.2); scene.add(f.mesh, f.glow); }
+  for (const p of PILULAS) { if (p.mesh || !disponivel(est.pilulasCol[p.id], REPOE_PILULA)) continue; p.mesh = new THREE.Mesh(pilGeo, pilMat); p.glow = brilho('#FF8FAB', 1.8); scene.add(p.mesh, p.glow); }
+}
+const totalPilulas = ilha => (est.pilulas[ilha] || 0) + (est.pilulas[ilha - 1] || 0);
+function gastarPilula(ilha) { for (const k of [ilha - 1, ilha]) if ((est.pilulas[k] || 0) > 0) { est.pilulas[k]--; return true; } return false; }
+async function fatoDaIlha(il) {
+  const prontas = il.estacoes.filter(e => e.pronto); if (!prontas.length) return null;
+  const e = prontas[Math.floor(Math.random() * prontas.length)];
+  try { const j = await jsonTopico(e.topico); const c = j.flashcards[Math.floor(Math.random() * j.flashcards.length)]; return { titulo: e.topico.titulo, texto: c.frente + ' → ' + c.verso }; } catch { return null; }
+}
+function toastLongo(ic, titulo, texto) {
+  const d = document.createElement('div'); d.className = 'toast vidro longo'; d.innerHTML = '<span class="ic">' + ic + '</span><div>' + esc(titulo) + '<small>' + esc(texto) + '</small></div>';
+  $('toasts').appendChild(d); setTimeout(() => d.remove(), 8200);
+}
+// ---------- poderes dos biocristais ----------
+function atualizarPoderes() {
+  if (!est) return;
+  $('carteira').innerHTML = '<span title="Biocristais: energia para os poderes">💎 ' + (est.cristais || 0) + '</span><span title="Pílulas de conhecimento guardadas">💊 ' + Object.values(est.pilulas).reduce((a, b) => a + b, 0) + '</span>';
+  $('pdSonda').disabled = (est.cristais || 0) < 5 || tempo < sondaAte; $('pdSalto').disabled = (est.cristais || 0) < 10;
+}
+function usarSonda() {
+  if (!emJogo || pausado) return;
+  if ((est.cristais || 0) < 5) return toast('💎', 'Faltam biocristais', 'A sonda custa 5 💎');
+  const il = ilhaPerto(jog.x, jog.z) || ILHAS[ilhaAtual]; if (!il) return;
+  est.cristais -= 5; sondaAte = tempo + 45; salvar(); atualizarPoderes(); SFX.desbloqueio();
+  feixes.forEach(f => scene.remove(f)); feixes = [];
+  const alvos = [...PILULAS.filter(p => p.ilha === il.i && p.mesh), ...FRAGS.filter(f => f.ilha === il.i && f.mesh), ...il.estacoes.filter(e => e.pronto && !est.feitas[e.topico.id])];
+  for (const a of alvos) {
+    const cor = PILULAS.includes(a) ? '#FF8FAB' : FRAGS.includes(a) ? '#B388FF' : '#FFD166';
+    const f = new THREE.Mesh(new THREE.CylinderGeometry(.35, .35, 26, 10, 1, true), new THREE.MeshBasicMaterial({ color: cor, transparent: true, opacity: .45, depthWrite: false, blending: THREE.AdditiveBlending, side: THREE.DoubleSide }));
+    f.position.set(a.x, 14, a.z); scene.add(f); feixes.push(f);
+  }
+  toast('🛰️', 'Sonda de reconhecimento ativada', alvos.length + ' sinais nesta ilha por 45 s');
+}
+function usarSalto() {
+  if (!emJogo || pausado) return;
+  if ((est.cristais || 0) < 10) return toast('💎', 'Faltam biocristais', 'O salto de dobra custa 10 💎');
+  modoSalto = true; abrirMapa(); toast('🌀', 'Salto de dobra pronto', 'Toque numa ilha desbloqueada para saltar');
+}
+function saltarPara(il) {
+  est.cristais -= 10; modoSalto = false; salvar(); atualizarPoderes();
+  explosao(jog.x, jog.y + 1, jog.z, ['#6EC8FF', '#B388FF', '#ffffff'], 80, 9); SFX.evolucao();
+  jog.x = il.cx; jog.z = il.cz + 5; jog.y = 4; jog.vy = 0;
+  setTimeout(() => explosao(jog.x, 2, jog.z, ['#6EC8FF', '#B388FF', '#ffffff'], 90, 9), 120);
+  toast('🌀', 'Salto concluído', il.u.regiao_mundo.nome);
 }
 
 // ---------- avatar 3D (8 formas) ----------
@@ -609,8 +661,8 @@ function renderDiarias() {
 // conquistas
 const CONQUISTAS = [
   { id: 'primeira', ic: '🥇', nome: 'Primeira missão', ok: () => Object.keys(est.feitas).length >= 1 },
-  { id: 'cristais10', ic: '💎', nome: 'Garimpeiro de cristais', ok: () => Object.keys(est.orbes).length >= 10 },
-  { id: 'cristais40', ic: '👑', nome: 'Tesouro do arquipélago', ok: () => Object.keys(est.orbes).length >= 40 },
+  { id: 'cristais10', ic: '💎', nome: 'Garimpeiro de cristais', ok: () => (est.cristaisTotal || 0) >= 10 },
+  { id: 'cristais40', ic: '👑', nome: 'Tesouro do arquipélago', ok: () => (est.cristaisTotal || 0) >= 40 },
   { id: 'ilhas3', ic: '🧭', nome: 'Navegador(a): 3 ilhas', ok: () => est.livres.filter(Boolean).length >= 3 },
   { id: 'ilhas10', ic: '🌍', nome: 'Desbravador(a): 10 ilhas', ok: () => est.livres.filter(Boolean).length >= 10 },
   { id: 'peixe', ic: '🐟', nome: 'Saiu da sopa primordial', ok: () => formaDe(nivelDe(est.xp)) >= 3 },
@@ -674,11 +726,15 @@ function desafio(e, j, m) {
   const BASEXP = { bronze: 10, prata: 15, ouro: 20, diamante: 30 };
   const passo = () => {
     if (i >= qs.length) return fim();
-    const q = qs[i], limite = 30; let resta = limite, respondeu = false;
+    const q = qs[i], limite = 30; let resta = limite, respondeu = false, protegido = false, ajuda = 1;
     abrirPainel(`<div style="display:flex;justify-content:space-between;align-items:center"><span class="etq">Desafio ${i + 1}/${qs.length}</span><span class="liga l-${q.nivel}">Liga ${q.nivel}</span></div>
       <div class="timer"><div id="tm" style="width:100%"></div></div>
       <div class="questao">${esc(q.enunciado)}</div>
-      ${q.alternativas.map((a, n) => `<button class="alt" data-n="${n}"><span class="let">${'ABCDE'[n]}</span><span>${esc(a)}</span></button>`).join('')}<div id="fb"></div>`);
+      ${q.alternativas.map((a, n) => `<button class="alt" data-n="${n}"><span class="let">${'ABCDE'[n]}</span><span>${esc(a)}</span></button>`).join('')}
+      <div class="ajudas"><button class="bt" id="usarPilula" ${totalPilulas(e.ilha) ? '' : 'disabled'}>💊 Pílula (${totalPilulas(e.ilha)}) <small>elimina 2</small></button><button class="bt roxo" id="usarMsg" ${(est.cristais || 0) >= 15 ? '' : 'disabled'}>⏳ Mensagem do futuro <small>15 💎</small></button></div><div id="fb"></div>`);
+    const eliminar = n => { const erradas = [...document.querySelectorAll('.alt')].filter(b => +b.dataset.n !== q.correta && !b.classList.contains('eliminada')); erradas.sort(() => Math.random() - .5).slice(0, n).forEach(b => { b.classList.add('eliminada'); b.disabled = true; }); };
+    $('usarPilula').onclick = () => { if (respondeu || !gastarPilula(e.ilha)) return; eliminar(2); ajuda = Math.min(ajuda, .75); $('usarPilula').disabled = true; SFX.coleta(); salvar(); atualizarPoderes(); };
+    $('usarMsg').onclick = () => { if (respondeu || (est.cristais || 0) < 15) return; est.cristais -= 15; eliminar([...document.querySelectorAll('.alt')].filter(b => +b.dataset.n !== q.correta && !b.classList.contains('eliminada')).length - 1); protegido = true; ajuda = .5; $('usarMsg').disabled = true; $('usarPilula').disabled = true; SFX.evolucao(); salvar(); atualizarPoderes(); toast('⏳', 'Mensagem do futuro recebida', 'Sobraram 2 alternativas e seu combo está protegido'); };
     clearInterval(timer);
     timer = setInterval(() => { resta -= .1; const el = $('tm'); if (el) el.style.width = Math.max(0, resta / limite * 100) + '%'; if (resta <= 0) clearInterval(timer); }, 100);
     document.querySelectorAll('.alt').forEach(b => b.onclick = () => {
@@ -688,10 +744,11 @@ function desafio(e, j, m) {
       let extra = '';
       if (ok) {
         acertos++; combo++; est.maxCombo = Math.max(est.maxCombo || 0, combo);
-        const rapido = resta > limite - 12, mult = 1 + .25 * (Math.min(combo, 5) - 1), v = Math.round(BASEXP[q.nivel] * mult + (rapido ? 5 : 0));
+        const rapido = resta > limite - 12, mult = 1 + .25 * (Math.min(combo, 5) - 1), v = Math.round((BASEXP[q.nivel] * mult + (rapido ? 5 : 0)) * ajuda);
         xpGanho += v; extra = ` <b style="color:var(--ouro)">+${v} XP</b>${rapido ? ' ⚡ resposta rápida' : ''}${combo > 1 ? ` · combo ×${combo}` : ''}`;
         SFX.certo(); mostrarCombo();
-      } else { b.classList.add('errada'); combo = 0; SFX.errado(); }
+      } else { b.classList.add('errada'); if (!protegido) combo = 0; SFX.errado(); }
+      document.querySelectorAll('.ajudas .bt').forEach(x => x.disabled = true);
       $('fb').innerHTML = `<div class="exp">${ok ? '✅ <b>Isso!</b>' : '❌ <b>Quase.</b>'}${extra}<br>${esc(q.explicacao)}</div><div class="acoesP"><button class="bt prim" id="prox">Continuar →</button></div>`;
       $('prox').onclick = () => { i++; passo(); };
     });
@@ -750,6 +807,7 @@ function desenharMinimapa() {
   }
   g.fillStyle = '#7DF9FF'; for (const o of ORBES) if (o.mesh) { g.beginPath(); g.arc(px(o.x), pz(o.z), 2.5, 0, 7); g.fill(); }
   g.fillStyle = '#C9A7FF'; for (const f of FRAGS) if (f.mesh) { g.fillRect(px(f.x) - 3, pz(f.z) - 4, 6, 8); }
+  g.fillStyle = '#FF8FAB'; for (const p of PILULAS) if (p.mesh) { g.beginPath(); g.ellipse(px(p.x), pz(p.z), 4.5, 2.5, .9, 0, 7); g.fill(); }
   g.translate(W / 2, W / 2); g.rotate(-jog.rot + Math.PI); g.fillStyle = '#fff'; g.strokeStyle = '#ff2d55'; g.lineWidth = 3;
   g.beginPath(); g.moveTo(0, -14); g.lineTo(10, 10); g.lineTo(0, 5); g.lineTo(-10, 10); g.closePath(); g.fill(); g.stroke();
   g.restore();
@@ -774,10 +832,19 @@ function abrirMapa() {
     g.fillText(`${il.u.serie}ª série · ${feitasNa(il)}/${il.estacoes.filter(e => e.pronto).length} missões`, x, z + r * .3, r * 2.2);
   }
   g.fillStyle = '#ff2d55'; g.strokeStyle = '#fff'; g.lineWidth = 3; g.beginPath(); g.arc(px(jog.x), pz(jog.z), 7, 0, 7); g.fill(); g.stroke();
+  mapaInfo = { L, k };
+  document.querySelector('#mapa .leg').textContent = modoSalto ? '🌀 Salto de dobra: toque numa ilha desbloqueada (10 💎) · toque fora para cancelar' : 'Clique ou tecle M para fechar · ilhas com névoa ainda estão bloqueadas';
   $('mapa').classList.remove('oculto'); pausado = true;
 }
 function fecharMapa() { $('mapa').classList.add('oculto'); pausado = !!evo || !$('veu').classList.contains('oculto'); }
-$('mapa').onclick = fecharMapa; $('btMapa').onclick = abrirMapa;
+$('mapa').onclick = ev => {
+  if (modoSalto && mapaInfo && ev.target.id === 'mapaCanvas') {
+    const r = ev.target.getBoundingClientRect(), wx = mapaInfo.L.x0 + (ev.clientX - r.left) / mapaInfo.k, wz = mapaInfo.L.z0 + (ev.clientY - r.top) / mapaInfo.k;
+    const il = ILHAS.find(x => livre(x.i) && Math.hypot(x.cx - wx, x.cz - wz) < x.R * 1.15);
+    if (il) { fecharMapa(); saltarPara(il); return; }
+  }
+  modoSalto = false; fecharMapa();
+}; $('btMapa').onclick = abrirMapa;
 $('btSom').onclick = () => { mudo = !mudo; $('btSom').textContent = mudo ? '🔇' : '🔊'; };
 
 // ---------- entrada ----------
@@ -789,6 +856,8 @@ addEventListener('keydown', e => {
   if (k === 'm') $('mapa').classList.contains('oculto') ? abrirMapa() : fecharMapa();
   if (pausado) return;
   if (k === 'e' || k === 'Enter') { const s = estacaoProxima(); if (s) abrirEstacao(s); }
+  if (k === '1') usarSonda();
+  if (k === '2') usarSalto();
   if (k === ' ' && jog.chao) { jog.vy = 8.5; jog.chao = false; SFX.pulo(); e.preventDefault(); }
   if (demo) {
     if (k === 'p') ganharXp(250, 'modo demonstração');
@@ -840,7 +909,7 @@ function estacaoProxima() { let m = null, d = 3.4; for (const e of ESTACOES) { i
 
 // ---------- loop ----------
 const relogio = new THREE.Clock();
-let tempo = 0, acc = 0, intro = 0;
+let tempo = 0, acc = 0, accRepoe = 0, intro = 0;
 const camPos = new THREE.Vector3(), camAlvo = new THREE.Vector3(), tmp = new THREE.Vector3();
 
 function atualizarJogador(dt) {
@@ -869,7 +938,13 @@ function atualizarJogador(dt) {
   if (il && Math.hypot(jog.x - il.cx, jog.z - il.cz) < il.R && il.i !== ilhaAtual) { ilhaAtual = il.i; banner(`${il.u.serie}ª série · Unidade ${il.i + 1}`, il.u.regiao_mundo.nome, il.u.titulo); }
   // coletáveis
   for (const o of ORBES) if (o.mesh && (o.x - jog.x) ** 2 + (o.z - jog.z) ** 2 < 1.7) {
-    est.orbes[o.id] = true; removerColetavel(o); SFX.coleta(); explosao(o.x, 1.8, o.z, ['#7DF9FF', '#ffffff'], 30, 4); ganharXp(5, 'biocristal'); diaria('orbes'); verificarConquistas();
+    est.orbes[o.id] = Date.now(); est.cristais = (est.cristais || 0) + 1; est.cristaisTotal = (est.cristaisTotal || 0) + 1;
+    removerColetavel(o); SFX.coleta(); explosao(o.x, 1.8, o.z, ['#7DF9FF', '#ffffff'], 30, 4); ganharXp(5, 'biocristal +1 💎'); diaria('orbes'); verificarConquistas(); atualizarPoderes();
+  }
+  for (const p of PILULAS) if (p.mesh && (p.x - jog.x) ** 2 + (p.z - jog.z) ** 2 < 1.7) {
+    est.pilulasCol[p.id] = Date.now(); est.pilulas[p.ilha] = (est.pilulas[p.ilha] || 0) + 1;
+    removerColetavel(p); SFX.coleta(); explosao(p.x, 1.6, p.z, ['#FF8FAB', '#ffffff'], 30, 4); atualizarPoderes(); salvar();
+    fatoDaIlha(ILHAS[p.ilha]).then(f => toastLongo('💊', 'Pílula de conhecimento: guardada para os desafios desta ilha e da próxima', f ? f.titulo + ': ' + f.texto : 'Use-a num desafio para eliminar 2 alternativas erradas.'));
   }
   for (const fr of FRAGS) if (fr.mesh && (fr.espera || 0) < tempo && (fr.x - jog.x) ** 2 + (fr.z - jog.z) ** 2 < 1.8) { fr.espera = tempo + 4; abrirFragmento(fr); break; }
   // prompt
@@ -903,6 +978,8 @@ function animarMundo(dt) {
   }
   for (const o of ORBES) if (o.mesh) { if (!livre(o.ilha)) { o.mesh.visible = o.glow.visible = false; continue; } o.mesh.visible = o.glow.visible = true; o.mesh.position.set(o.x, 1.8 + Math.sin(tempo * 2.5 + o.fase) * .25, o.z); o.mesh.rotation.y += dt * 2; o.mesh.rotation.x += dt; o.glow.position.copy(o.mesh.position); }
   for (const f of FRAGS) if (f.mesh) { if (!livre(f.ilha)) { f.mesh.visible = f.glow.visible = false; continue; } f.mesh.visible = f.glow.visible = true; f.mesh.position.set(f.x, 2 + Math.sin(tempo * 1.8 + f.fase) * .3, f.z); f.mesh.rotation.y += dt * 1.4; f.glow.position.copy(f.mesh.position); }
+  for (const p of PILULAS) if (p.mesh) { if (!livre(p.ilha)) { p.mesh.visible = p.glow.visible = false; continue; } p.mesh.visible = p.glow.visible = true; p.mesh.position.set(p.x, 1.6 + Math.sin(tempo * 2.2 + p.fase) * .22, p.z); p.mesh.rotation.z = .9; p.mesh.rotation.y += dt * 1.8; p.glow.position.copy(p.mesh.position); }
+  if (feixes.length) { if (tempo > sondaAte) { feixes.forEach(f => scene.remove(f)); feixes = []; atualizarPoderes(); } else feixes.forEach((f, k) => { f.material.opacity = .3 + Math.sin(tempo * 5 + k) * .15; f.rotation.y += dt; }); }
   for (const p of PONTES) if (p.barreira.visible) p.barreira.material.opacity = .35 + Math.sin(tempo * 4) * .15;
   // nuvens das ilhas recém-desbloqueadas se dissipam
   if (desbloqueando.length) {
@@ -932,6 +1009,7 @@ function loop() {
   if (evo) { const f = formas[formaVisivel]; if (f) f.upd(tempo, false); }
   animarMundo(dt); atualizarParticulas(dt); atualizarCamera(dt); atualizarFlutuantes(dt);
   if (emJogo && (acc += dt) > .12) { acc = 0; desenharMinimapa(); retrato(tempo); }
+  if (emJogo && (accRepoe += dt) > 5) { accRepoe = 0; criarColetaveis(); atualizarPoderes(); }
   renderer.render(scene, camera);
 }
 
@@ -951,7 +1029,11 @@ function comecar(novo) {
   est.livres = ILHAS.map((_, i) => !!est.livres[i] || i === 0);
   verificarDesbloqueios(false);
   montarFormas(CORES_JOGADOR[est.cor] || CORES_JOGADOR[0]);
+  est.pilulas ||= {}; est.pilulasCol ||= {};
+  if (est.cristais == null) { est.cristais = Object.keys(est.orbes || {}).length; est.cristaisTotal = est.cristais; }
   criarColetaveis(); aplicarVisualBloqueio();
+  $('poderes').classList.remove('oculto'); atualizarPoderes();
+  if (!est.vistoPoderes) { est.vistoPoderes = true; setTimeout(() => toastLongo('🚀', 'Novidade a bordo', 'Colete 💊 pílulas de conhecimento para usar nos desafios e 💎 biocristais para ativar a sonda (tecla 1) e o salto de dobra (tecla 2).'), 3500); }
   const p = est.pos3d; if (p && noChao(p.x, p.z)) { jog.x = p.x; jog.z = p.z; } else { jog.x = ILHAS[0].cx; jog.z = ILHAS[0].cz + 5; }
   jog.rot = Math.PI; camCtl.yaw = 0; camPos.copy(camera.position); transicao = 1.6;
   emJogo = true; pausado = false;
@@ -979,4 +1061,7 @@ addEventListener('storage', e => { if (e.key === EV.CHAVE && est) { const novo =
 })();
 
 // acesso de depuração pelo console (útil para testes e demonstrações)
-window.EXP = { jog, ILHAS, PONTES, ESTACOES, ORBES, get est() { return est; }, abrirEstacao, ganharXp, noChao, pode };
+window.EXP = { jog, ILHAS, PONTES, ESTACOES, ORBES, PILULAS, get est() { return est; }, abrirEstacao, ganharXp, noChao, pode, usarSonda, usarSalto, saltarPara, get feixes() { return feixes; } };
+
+// botões dos poderes
+$('pdSonda').onclick = usarSonda; $('pdSalto').onclick = usarSalto;

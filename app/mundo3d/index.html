@@ -39,7 +39,7 @@
   body.toque #regiao { top: calc(118px + env(safe-area-inset-top)); left: 12px; right: 130px; transform: none; text-align: left; }
   body.toque #regiao.on { transform: none; }
   body.toque #regiao .r2 { font-size: 26px; }
-  body.toque #toasts { top: auto; bottom: calc(190px + env(safe-area-inset-bottom)); }
+  body.toque #toasts { top: auto; bottom: calc(252px + env(safe-area-inset-bottom)); }
   .oculto { display: none !important; }
   .vidro { background: var(--vidro); backdrop-filter: blur(14px) saturate(140%); -webkit-backdrop-filter: blur(14px) saturate(140%); border: 1px solid var(--vidro-borda); border-radius: 18px; box-shadow: 0 10px 40px rgba(0,0,0,.35); }
   .titulo { font-family: Fredoka, Nunito, sans-serif; }
@@ -90,6 +90,18 @@
 
   /* Toasts e combo */
   #toasts { position: fixed; top: 96px; left: 16px; display: flex; flex-direction: column; gap: 8px; }
+  #poderes { position: fixed; left: 16px; bottom: 96px; display: flex; flex-direction: row; align-items: center; gap: 8px; padding: 10px; z-index: 5; }
+  #carteira { display: flex; gap: 10px; justify-content: center; font-family: Fredoka; font-weight: 700; font-size: 16px; }
+  #poderes .bt { padding: 8px 10px; font-size: 13px; text-align: left; }
+  #poderes .bt small, .ajudas .bt small { display: block; font-size: 11px; opacity: .8; }
+  #poderes .bt:disabled, .ajudas .bt:disabled { opacity: .45; cursor: not-allowed; transform: none; }
+  .ajudas { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+  .ajudas .bt { padding: 8px 12px; font-size: 13px; }
+  .alt.eliminada { opacity: .28; text-decoration: line-through; }
+  .toast.longo { max-width: 380px; animation: entra .4s cubic-bezier(.2,.9,.3,1.3), sai .5s 7.6s forwards; }
+  .toast { max-width: 360px; }
+  body.toque #poderes { left: 10px; top: auto; bottom: calc(188px + env(safe-area-inset-bottom)); padding: 6px 8px; }
+  body.toque #poderes .bt { font-size: 12px; padding: 6px 8px; }
   .toast { padding: 10px 14px; font-weight: 800; font-size: 14px; animation: entra .4s cubic-bezier(.2,.9,.3,1.3), sai .5s 2.6s forwards; display: flex; gap: 10px; align-items: center; }
   .toast .ic { font-size: 22px; }
   .toast small { display: block; font-weight: 600; color: var(--sub); font-size: 12px; }
@@ -192,10 +204,15 @@
   <a class="bt prim" href="../index.html" target="_blank" rel="noopener">📖 Aulas</a>
 </div>
 <div id="diarias" class="vidro oculto"></div>
+<div id="poderes" class="vidro oculto">
+  <div id="carteira"></div>
+  <button class="bt" id="pdSonda" title="Sonda de reconhecimento (tecla 1): revela pílulas, fragmentos e missões da ilha por 45 s">🛰️ Sonda <small>5 💎</small></button>
+  <button class="bt" id="pdSalto" title="Salto de dobra (tecla 2): viaje para qualquer ilha desbloqueada">🌀 Salto <small>10 💎</small></button>
+</div>
 <canvas id="minimapa" class="oculto" width="380" height="380"></canvas>
 <div id="regiao"><div class="r1" id="rg1"></div><div class="r2" id="rg2"></div><div class="r3" id="rg3"></div></div>
 <div id="prompt" class="vidro oculto"></div>
-<div id="dica" class="vidro oculto"><b>WASD</b> andar · <b>Shift</b> correr · <b>Espaço</b> pular · <b>arrastar o mouse</b> girar câmera · <b>roda</b> zoom · <b>E</b> interagir · <b>M</b> mapa<span id="dicaDemo"></span></div>
+<div id="dica" class="vidro oculto"><b>WASD</b> andar · <b>Shift</b> correr · <b>Espaço</b> pular · <b>arrastar o mouse</b> girar câmera · <b>roda</b> zoom · <b>E</b> interagir · <b>1</b> sonda · <b>2</b> salto · <b>M</b> mapa<span id="dicaDemo"></span></div>
 <div id="toasts"></div>
 <div id="toque">
   <div id="joy"><div class="pino"></div></div>
