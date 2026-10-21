@@ -145,7 +145,11 @@
   .flashcard { perspective: 1000px; height: 200px; margin: 14px 0; cursor: pointer; }
   .flashcard .in { position: relative; width: 100%; height: 100%; transition: transform .6s; transform-style: preserve-3d; }
   .flashcard.virado .in { transform: rotateY(180deg); }
-  .flashcard .face { position: absolute; inset: 0; backface-visibility: hidden; border-radius: 18px; display: grid; place-items: center; padding: 20px; text-align: center; font-size: 18px; line-height: 1.45; }
+  /* a face escondida some no meio do giro: backface-visibility falha sob backdrop-filter */
+  .flashcard .frente, .flashcard .verso { transition: visibility 0s .3s; }
+  .flashcard .verso, .flashcard.virado .frente { visibility: hidden; }
+  .flashcard.virado .verso { visibility: visible; }
+  .flashcard .face { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; border-radius: 18px; display: grid; place-items: center; padding: 20px; text-align: center; font-size: 18px; line-height: 1.45; }
   .flashcard .frente { background: linear-gradient(135deg, rgba(139,92,246,.35), rgba(99,102,241,.25)); border: 1px solid rgba(179,136,255,.5); }
   .flashcard .verso { background: linear-gradient(135deg, rgba(54,211,153,.3), rgba(16,185,129,.2)); border: 1px solid rgba(124,255,178,.5); transform: rotateY(180deg); }
 
@@ -182,9 +186,9 @@
 <link rel="icon" href="../compartilhado/marca/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="../compartilhado/marca/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="../compartilhado/marca/apple-touch-icon.png">
-<script src="../vendor/supabase.js?v=mvi8csxb"></script>
-<script src="../../config.js?v=mvi8csxb"></script>
-<script src="../compartilhado/sessao.js?v=mvi8csxb"></script>
+<script src="../vendor/supabase.js?v=mvi8fvri"></script>
+<script src="../../config.js?v=mvi8fvri"></script>
+<script src="../compartilhado/sessao.js?v=mvi8fvri"></script>
 </head>
 <body>
 <canvas id="cena"></canvas>
@@ -244,8 +248,8 @@
   </div>
 </div>
 
-<script src="../compartilhado/avatar2d.js?v=mvi8csxb"></script>
-<script src="../compartilhado/estado.js?v=mvi8csxb"></script>
-<script type="module" src="main.js?v=mvi8csxb"></script>
+<script src="../compartilhado/avatar2d.js?v=mvi8fvri"></script>
+<script src="../compartilhado/estado.js?v=mvi8fvri"></script>
+<script type="module" src="main.js?v=mvi8fvri"></script>
 </body>
 </html>
