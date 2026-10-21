@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Aulas | Evonauta</title>
 <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
-<script src="compartilhado/avatar2d.js?v=mvia15qz"></script>
-<script src="compartilhado/estado.js?v=mvia15qz"></script>
+<script src="compartilhado/avatar2d.js?v=mvics4m7"></script>
+<script src="compartilhado/estado.js?v=mvics4m7"></script>
 <style>
   :root { --verde:#2E7D32; --verde-claro:#E8F5E9; --roxo:#6A1B9A; --fundo:#F6F8F6; --texto:#1f2a1f; --cinza:#6b746b; --borda:#dfe6df; --ouro:#C9A227; }
   * { box-sizing:border-box; }
@@ -79,14 +79,14 @@
 <link rel="icon" href="compartilhado/marca/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="compartilhado/marca/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="compartilhado/marca/apple-touch-icon.png">
-<script src="vendor/supabase.js?v=mvia15qz"></script>
-<script src="../config.js?v=mvia15qz"></script>
-<script src="compartilhado/sessao.js?v=mvia15qz"></script>
+<script src="vendor/supabase.js?v=mvics4m7"></script>
+<script src="../config.js?v=mvics4m7"></script>
+<script src="compartilhado/sessao.js?v=mvics4m7"></script>
 </head>
 <body>
 <header>
   <h1 style="margin:0;display:flex;align-items:center;gap:10px"><img src="compartilhado/marca/logo-evonauta-claro.svg" alt="Evonauta Educação" style="height:38px;width:auto;display:block"><small style="color:var(--cinza);font-weight:400;font-size:14px">aulas</small></h1>
-  <a href="mundo3d/" style="margin-left:16px;background:#6A1B9A;color:#fff;padding:7px 12px;border-radius:10px;font-size:13px;font-weight:600;text-decoration:none;white-space:nowrap">🗺️ Mundo aberto</a>
+  <a id="lkMundo" href="mundo3d/?continuar" style="margin-left:16px;background:#6A1B9A;color:#fff;padding:7px 12px;border-radius:10px;font-size:13px;font-weight:600;text-decoration:none;white-space:nowrap">🗺️ Mundo aberto</a>
   <div class="hud" title="HUD de demonstração (XP salvo só neste navegador)">
     <canvas class="avatar" id="avatar" width="76" height="76"></canvas>
     <div><div><b id="nivel">Nível 1</b> · <span id="forma"></span> · <span id="xp">0 XP</span></div><div class="xpbar"><div id="xpfill" style="width:0"></div></div></div>
@@ -237,6 +237,9 @@ function vf(p, vs, i, ac) {
     p.querySelectorAll('[data-v]').forEach(x=>x.disabled=true); p.querySelector('#prox').onclick = () => vf(p, vs, i+1, ac+(ok?1:0)); });
 }
 iniciar().catch(e => { document.getElementById('nav').innerHTML = '<div class="stats">Erro ao carregar o conteúdo: '+esc(e.message)+'. Abra pelo servidor de prévia (node scripts/preview-conteudo.js).</div>'; });
+
+// veio de um desafio do mundo aberto: o botão leva de volta à mesma estação
+(function () { const v = new URLSearchParams(location.search).get('volta'), l = document.getElementById('lkMundo'); if (v && l) { l.href = 'mundo3d/?continuar&estacao=' + encodeURIComponent(v); l.textContent = '⚔️ Voltar ao desafio'; } })();
 </script>
 </body>
 </html>

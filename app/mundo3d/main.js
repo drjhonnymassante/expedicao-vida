@@ -81,6 +81,8 @@ const cacheJson = {};
 let ilhaAtual = -1, combo = 0;
 
 function salvar() { if (!est) return; est.pos3d = { x: jog.x, z: jog.z }; EV.salvar(est); }
+window.salvarJogo = () => { salvar(); if (window.salvarNaNuvem) window.salvarNaNuvem(); };
+addEventListener('pagehide', () => salvar());
 
 // ---------- renderização ----------
 const canvas = $('cena');
@@ -380,7 +382,16 @@ function gastarPilula(ilha) { for (const k of [ilha - 1, ilha]) if ((est.pilulas
 async function fatoDaIlha(il) {
   const prontas = il.estacoes.filter(e => e.pronto); if (!prontas.length) return null;
   const e = prontas[Math.floor(Math.random() * prontas.length)];
-  try { const j = await jsonTopico(e.topico); const c = j.flashcards[Math.floor(Math.random() * j.flashcards.length)]; return { titulo: e.topico.titulo, texto: c.frente + ' → ' + c.verso }; } catch { return null; }
+  try {
+    const md = await textoAula(e.topico), itens = [];
+    for (const [secao, rotulo] of [['Pegadinhas', 'Pegadinha'], ['Resumo relâmpago', 'Resumo']]) {
+      const ini = md.indexOf('## ' + secao); if (ini < 0) continue;
+      const fim = md.indexOf('\n## ', ini + 4), bloco = md.slice(ini, fim < 0 ? undefined : fim);
+      for (const l of bloco.split('\n')) if (l.startsWith('- ')) itens.push(rotulo + ': ' + l.slice(2).replace(/\*\*/g, '').replace(/\*/g, '').trim());
+    }
+    if (!itens.length) return null;
+    return { titulo: e.topico.titulo, texto: itens[Math.floor(Math.random() * itens.length)] };
+  } catch { return null; }
 }
 function toastLongo(ic, titulo, texto) {
   const d = document.createElement('div'); d.className = 'toast vidro longo'; d.innerHTML = '<span class="ic">' + ic + '</span><div>' + esc(titulo) + '<small>' + esc(texto) + '</small></div>';
@@ -678,12 +689,14 @@ function verificarConquistas() {
 function abrirPainel(html) { $('painel').innerHTML = html; $('veu').classList.remove('oculto'); pausado = true; SFX.abrir(); }
 function fecharPainel() { $('veu').classList.add('oculto'); pausado = !!evo; }
 $('veu').addEventListener('click', e => { if (e.target.id === 'veu') fecharPainel(); });
+const cacheMd = {};
+async function textoAula(tp) { return cacheMd[tp.id] ||= await fetch(BASE + tp.arquivo_md).then(r => r.text()); }
 async function jsonTopico(tp) { return cacheJson[tp.id] ||= await fetch(BASE + tp.arquivo_json).then(r => r.json()); }
 const iniciais = s => (s || '?').replace(/,.*/, '').split(/\s+/).filter(w => w.length > 2).slice(0, 2).map(w => w[0].toUpperCase()).join('') || '★';
 function escrever(el, texto, vel = 14) { el.textContent = ''; let k = 0; const it = setInterval(() => { el.textContent = texto.slice(0, ++k); if (k >= texto.length) clearInterval(it); }, vel); el.onclick = () => { clearInterval(it); el.textContent = texto; }; }
 
 async function abrirEstacao(e) {
-  const tp = e.topico, il = ILHAS[e.ilha], aula = `../index.html#${tp.id}`;
+  const tp = e.topico, il = ILHAS[e.ilha], aula = `../index.html?volta=${encodeURIComponent(tp.id)}#${tp.id}`;
   if (e.premium) return painelPremium(e);
   if (!e.pronto) {
     abrirPainel(`<div class="etq">${esc(il.u.regiao_mundo.nome)}</div><h2>🚧 Estação em construção</h2><p style="color:var(--sub)">A missão de <b style="color:#fff">${esc(tp.titulo)}</b> está sendo preparada pela equipe pedagógica e chega em breve.</p><div class="acoesP"><button class="bt prim" id="ok">Continuar explorando</button></div>`);
@@ -698,7 +711,7 @@ async function abrirEstacao(e) {
     <div style="font-size:14.5px"><b style="color:var(--neon)">Objetivo:</b> ${esc(m.objetivo)}</div>
     <ol class="etapas">${(m.etapas || []).map((x, k) => `<li data-n="${k + 1}">${esc(x)}</li>`).join('')}</ol>
     <div class="premio"><span>✨ ${m.recompensa_xp} XP</span>${m.item_recompensa ? `<span>🎒 ${esc(m.item_recompensa)}</span>` : ''}<span>${tp.acesso === 'gratuito' ? '🔓 Gratuito' : '💎 Premium'}</span></div>
-    <div class="acoesP"><button class="bt ouro" id="aceitar">${feito ? '⟳ Revisar o desafio' : '⚔️ Aceitar desafio'}</button><a class="bt roxo" href="${aula}" target="_blank" rel="noopener">📖 Estudar a aula</a><button class="bt" id="sair">Depois</button></div>`);
+    <div class="acoesP"><button class="bt ouro" id="aceitar">${feito ? '⟳ Revisar o desafio' : '⚔️ Aceitar desafio'}</button><a class="bt roxo" href="${aula}" onclick="window.salvarJogo && salvarJogo()">📖 Estudar a aula</a><button class="bt" id="sair">Depois</button></div>`);
   escrever($('fala'), m.narrativa);
   $('sair').onclick = fecharPainel; $('aceitar').onclick = () => desafio(e, j, m);
 }
@@ -762,7 +775,7 @@ function desafio(e, j, m) {
       <p style="text-align:center;color:var(--sub)">Você acertou <b style="color:#fff">${acertos} de ${qs.length}</b>.</p>
       ${venceu && !jaFeito ? `<div class="premio" style="justify-content:center"><span>✨ ${m.recompensa_xp} XP da missão</span><span>⚔️ ${xpGanho} XP das respostas</span>${m.item_recompensa ? `<span>🎒 ${esc(m.item_recompensa)}</span>` : ''}</div>` : ''}
       ${!venceu ? '<p style="text-align:center">Estude a aula e volte: são necessárias 2 respostas certas.</p>' : ''}
-      <div class="acoesP" style="justify-content:center"><button class="bt prim" id="ok">Voltar à expedição</button>${!venceu ? `<a class="bt roxo" href="../index.html#${e.topico.id}" target="_blank" rel="noopener">📖 Estudar a aula</a>` : ''}</div>`);
+      <div class="acoesP" style="justify-content:center"><button class="bt prim" id="ok">Voltar à expedição</button>${!venceu ? `<a class="bt roxo" href="../index.html?volta=${encodeURIComponent(e.topico.id)}#${e.topico.id}" onclick="window.salvarJogo && salvarJogo()">📖 Estudar a aula</a>` : ''}</div>`);
     $('ok').onclick = () => {
       fecharPainel();
       if (venceu) {
@@ -1095,6 +1108,14 @@ $('btNovo').onclick = () => {
 }; $('btCont').onclick = () => comecar(false);
   $('nome').addEventListener('keydown', e => { if (e.key === 'Enter') comecar(false); });
   est = EV.completar(null); est.livres = ILHAS.map((_, i) => i < 3); aplicarVisualBloqueio(); est = null;
+  // ao voltar da aula (?continuar), entra direto no jogo e reabre a estação de onde saiu
+  const qs = new URLSearchParams(location.search);
+  if (qs.has('continuar') && EV.temProgresso(EV.carregar())) {
+    comecar(false);
+    const alvo = qs.get('estacao') && ESTACOES.find(e => e.topico.id === qs.get('estacao'));
+    if (alvo && livre(alvo.ilha)) { jog.x = alvo.x; jog.z = alvo.z + 2.6; setTimeout(() => abrirEstacao(alvo), 900); }
+    history.replaceState(null, '', location.pathname);
+  }
   loop();
 })();
 
