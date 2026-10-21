@@ -781,10 +781,15 @@ async function abrirFragmento(f) {
   let j; try { j = await jsonTopico(e.topico); } catch { return; }
   const card = j.flashcards[Math.floor(Math.random() * j.flashcards.length)];
   abrirPainel(`<div class="etq">🧠 Fragmento de memória · ${esc(e.topico.titulo)}</div><h2>Você se lembra?</h2>
-    <div class="flashcard" id="fc"><div class="in"><div class="face frente">${esc(card.frente)}</div><div class="face verso">${esc(card.verso)}</div></div></div>
+    <div class="flashcard" id="fc"><div class="face frente" id="fcFace">${esc(card.frente)}</div></div>
     <p style="text-align:center;color:var(--sub);font-size:13px" id="dicaFc">Pense na resposta e toque no cartão para virar</p>
     <div class="acoesP oculto" id="resp" style="justify-content:center"><button class="bt" id="esq">😅 Esqueci</button><button class="bt prim" id="lem">😎 Lembrei!</button></div>`);
-  $('fc').onclick = () => { $('fc').classList.add('virado'); $('resp').classList.remove('oculto'); $('dicaFc').textContent = 'Seja sincero(a): isso ajuda a revisão espaçada a acertar o momento certo.'; };
+  // uma face só: gira até 90°, troca o texto pelo verso e completa o giro (nunca há dois textos empilhados)
+  $('fc').onclick = () => {
+    if ($('fc').dataset.virado) return; $('fc').dataset.virado = 1;
+    const fa = $('fcFace'); fa.style.transition = 'transform .25s ease-in'; fa.style.transform = 'rotateY(90deg)';
+    setTimeout(() => { fa.textContent = card.verso; fa.className = 'face verso'; fa.style.transition = 'transform .25s ease-out'; fa.style.transform = 'rotateY(0deg)'; }, 250);
+    $('resp').classList.remove('oculto'); $('dicaFc').textContent = 'Seja sincero(a): isso ajuda a revisão espaçada a acertar o momento certo.'; };
   const fechar = v => { est.frags[f.id] = true; fecharPainel(); removerColetavel(f); ganharXp(v, 'fragmento revisado'); diaria('frag'); SFX.coleta(); explosao(f.x, 2, f.z, ['#B388FF', '#ffffff'], 40, 5); };
   $('esq').onclick = () => fechar(2); $('lem').onclick = () => fechar(6);
 }
@@ -1093,7 +1098,7 @@ $('btNovo').onclick = () => {
 })();
 
 // acesso de depuração pelo console (útil para testes e demonstrações)
-window.EXP = { jog, ILHAS, PONTES, ESTACOES, ORBES, PILULAS, get est() { return est; }, abrirEstacao, ganharXp, noChao, pode, usarSonda, usarSalto, saltarPara, get feixes() { return feixes; } };
+window.EXP = { jog, ILHAS, PONTES, ESTACOES, ORBES, PILULAS, get est() { return est; }, abrirEstacao, ganharXp, noChao, pode, usarSonda, usarSalto, saltarPara, get feixes() { return feixes; }, abrirFragmento };
 
 // botões dos poderes
 $('pdSonda').onclick = usarSonda; $('pdSalto').onclick = usarSalto;
