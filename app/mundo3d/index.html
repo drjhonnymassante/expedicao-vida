@@ -41,6 +41,9 @@
   body.toque #regiao .r2 { font-size: 26px; }
   body.toque #toasts { top: auto; bottom: calc(252px + env(safe-area-inset-bottom)); }
   .oculto { display: none !important; }
+  #demoBts { position: fixed; left: 50%; transform: translateX(-50%); bottom: 14px; z-index: 6; display: flex; gap: 8px; }
+  #demoBts .bt { padding: 7px 11px; font-size: 12.5px; }
+  body.toque #demoBts { bottom: auto; top: 64px; }
   .bt.perigo { background: #b3261e !important; color: #fff !important; border-color: #ff6b5e !important; }
   .vidro { background: var(--vidro); backdrop-filter: blur(14px) saturate(140%); -webkit-backdrop-filter: blur(14px) saturate(140%); border: 1px solid var(--vidro-borda); border-radius: 18px; box-shadow: 0 10px 40px rgba(0,0,0,.35); }
   .titulo { font-family: Fredoka, Nunito, sans-serif; }
@@ -186,9 +189,9 @@
 <link rel="icon" href="../compartilhado/marca/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="../compartilhado/marca/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="../compartilhado/marca/apple-touch-icon.png">
-<script src="../vendor/supabase.js?v=mvi8fvri"></script>
-<script src="../../config.js?v=mvi8fvri"></script>
-<script src="../compartilhado/sessao.js?v=mvi8fvri"></script>
+<script src="../vendor/supabase.js?v=mvi8no8c"></script>
+<script src="../../config.js?v=mvi8no8c"></script>
+<script src="../compartilhado/sessao.js?v=mvi8no8c"></script>
 </head>
 <body>
 <canvas id="cena"></canvas>
@@ -208,6 +211,7 @@
   <button class="bt" id="btMapa">🗺️ Mapa <span class="tecla" style="height:20px;min-width:20px;font-size:11px">M</span></button>
   <a class="bt prim" href="../index.html" target="_blank" rel="noopener">📖 Aulas</a>
 </div>
+<div id="demoBts" class="oculto"><button class="bt ouro" id="dmXp" title="Demonstração: +250 XP (tecla P)">⭐ +XP</button><button class="bt ouro" id="dmIlha" title="Demonstração: desbloquear próxima ilha (tecla U)">🔓 Ilha</button><button class="bt ouro" id="dmTele" title="Demonstração: teletransporte para a ilha seguinte (tecla T)">🌀 Teletransporte</button></div>
 <div id="diarias" class="vidro oculto"></div>
 <div id="poderes" class="vidro oculto">
   <div id="carteira"></div>
@@ -248,8 +252,8 @@
   </div>
 </div>
 
-<script src="../compartilhado/avatar2d.js?v=mvi8fvri"></script>
-<script src="../compartilhado/estado.js?v=mvi8fvri"></script>
-<script type="module" src="main.js?v=mvi8fvri"></script>
+<script src="../compartilhado/avatar2d.js?v=mvi8no8c"></script>
+<script src="../compartilhado/estado.js?v=mvi8no8c"></script>
+<script type="module" src="main.js?v=mvi8no8c"></script>
 </body>
 </html>

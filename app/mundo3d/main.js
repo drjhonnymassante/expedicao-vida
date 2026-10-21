@@ -847,6 +847,21 @@ $('mapa').onclick = ev => {
 }; $('btMapa').onclick = abrirMapa;
 $('btSom').onclick = () => { mudo = !mudo; $('btSom').textContent = mudo ? '🔇' : '🔊'; };
 
+// ---------- modo demonstração ----------
+// T leva à ilha seguinte (de 1 a 26, voltando ao início); se estiver trancada, a demonstração a destranca
+function teletransporteDemo() {
+  const al = ILHAS[(ilhaAtual + 1) % ILHAS.length];
+  if (!livre(al.i)) { est.livres[al.i] = true; aplicarVisualBloqueio(); }
+  explosao(jog.x, jog.y + 1, jog.z, ['#6EC8FF', '#B388FF', '#ffffff'], 60, 8); SFX.evolucao();
+  jog.x = al.cx; jog.z = al.cz + 5; jog.y = 4; jog.vy = 0;
+  salvar();
+  toast('🌀', 'Teletransporte', al.u.regiao_mundo.nome);
+}
+function desbloquearDemo() { const prox = ILHAS.find(il => !livre(il.i)); if (prox) { est.livres[prox.i] = true; aplicarVisualBloqueio(); animarDesbloqueio(prox); salvar(); } }
+$('dmXp').onclick = () => ganharXp(250, 'modo demonstração');
+$('dmIlha').onclick = desbloquearDemo;
+$('dmTele').onclick = teletransporteDemo;
+
 // ---------- entrada ----------
 addEventListener('keydown', e => {
   if (e.target.tagName === 'INPUT') return;
@@ -861,8 +876,8 @@ addEventListener('keydown', e => {
   if (k === ' ' && jog.chao) { jog.vy = 8.5; jog.chao = false; SFX.pulo(); e.preventDefault(); }
   if (demo) {
     if (k === 'p') ganharXp(250, 'modo demonstração');
-    if (k === 'u') { const prox = ILHAS.find(il => !livre(il.i)); if (prox) { est.livres[prox.i] = true; aplicarVisualBloqueio(); animarDesbloqueio(prox); salvar(); } }
-    if (k === 't') { const livres = ILHAS.filter(il => livre(il.i)), al = livres[(livres.findIndex(il => il.i === ilhaAtual) + 1) % livres.length]; jog.x = al.cx; jog.z = al.cz + 5; }
+    if (k === 'u') desbloquearDemo();
+    if (k === 't') teletransporteDemo();
   }
   if (k.startsWith('Arrow')) e.preventDefault();
 });
@@ -1044,6 +1059,7 @@ function comecar(novo) {
   emJogo = true; pausado = false;
   $('inicio').classList.add('oculto');
   ['perfil', 'acoes', 'diarias', 'minimapa', 'dica'].forEach(id => $(id).classList.remove('oculto'));
+  $('demoBts').classList.toggle('oculto', !demo);
   $('dicaDemo').innerHTML = demo ? '<br><b style="color:var(--ouro)">Demo:</b> <b>P</b> +XP/evoluir · <b>U</b> desbloquear ilha · <b>T</b> teletransporte' : '';
   atualizarHud(); verificarConquistas(); salvar(); if (window.salvarNaNuvem) window.salvarNaNuvem(); setInterval(salvar, 4000);
   setTimeout(() => toast('🧬', `Bem-vindo(a), ${est.nome}!`, TOQUE ? 'Use o joystick para andar e arraste a tela para girar a câmera' : 'Fale com os personagens com ❗ para receber missões'), 1200);
