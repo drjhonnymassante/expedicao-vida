@@ -727,6 +727,7 @@ function desafio(e, j, m) {
   const passo = () => {
     if (i >= qs.length) return fim();
     const q = qs[i], limite = 30; let resta = limite, respondeu = false, protegido = false, ajuda = 1;
+    if (window.EXP) window.EXP.questaoAtual = q;
     abrirPainel(`<div style="display:flex;justify-content:space-between;align-items:center"><span class="etq">Desafio ${i + 1}/${qs.length}</span><span class="liga l-${q.nivel}">Liga ${q.nivel}</span></div>
       <div class="timer"><div id="tm" style="width:100%"></div></div>
       <div class="questao">${esc(q.enunciado)}</div>
@@ -1098,7 +1099,7 @@ $('btNovo').onclick = () => {
 })();
 
 // acesso de depuração pelo console (útil para testes e demonstrações)
-window.EXP = { jog, ILHAS, PONTES, ESTACOES, ORBES, PILULAS, get est() { return est; }, abrirEstacao, ganharXp, noChao, pode, usarSonda, usarSalto, saltarPara, get feixes() { return feixes; }, abrirFragmento };
+window.EXP = { jog, ILHAS, PONTES, ESTACOES, ORBES, PILULAS, get est() { return est; }, abrirEstacao, ganharXp, noChao, pode, usarSonda, usarSalto, saltarPara, get feixes() { return feixes; }, abrirFragmento, camCtl, teclas, FRAGS, abrirMapa, fecharMapa, get emJogo() { return emJogo; } };
 
 // botões dos poderes
 $('pdSonda').onclick = usarSonda; $('pdSalto').onclick = usarSalto;
