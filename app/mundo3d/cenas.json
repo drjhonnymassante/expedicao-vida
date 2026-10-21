@@ -1,0 +1,211 @@
+{
+  "caracteristicas-seres-vivos": { "fundo": ["#2b2f5a", "#141830"], "chao": "#5b4a3a",
+    "etapas": [
+      { "tipo": "separar", "r": "Vivo ou não vivo?", "itens": ["🔥", "💎", "🌱", "🐴"], "grupos": ["Não vivo", "Vivo"], "destino": [0, 0, 1, 1] },
+      { "tipo": "transformar", "r": "Semente desperta", "antes": "🌰", "depois": "🌱" },
+      { "tipo": "montar", "forma": "escada", "r": "Níveis de organização", "itens": ["⚛️", "🦠", "🫀", "🐒", "🌳", "🌍"] }
+    ], "final": { "e": "⚖️", "texto": "O tribunal reconheceu a vida!" } },
+
+  "agua-sais-minerais": { "fundo": ["#283d5c", "#10202f"], "chao": "#4a5a6a",
+    "etapas": [
+      { "tipo": "montar", "r": "Ponte sobre o Rio Polar", "itens": ["💧", "💧", "💧", "💧", "💧"] },
+      { "tipo": "coletar", "r": "Cristais Fe, I e Ca", "itens": ["🔴", "🟣", "⚪"], "recipiente": "🎒" },
+      { "tipo": "entregar", "r": "Moradores curados", "itens": ["🔴", "🟣", "⚪"], "alvos": ["😩", "😣", "🤕"], "depois": ["😊", "😄", "💪"] }
+    ], "final": { "e": "🏮", "texto": "A Vila Cansada recuperou a cor!" } },
+
+  "celula-teoria-microscopia": { "fundo": ["#24384f", "#0e1b2a"], "chao": "#3a4f5f",
+    "etapas": [
+      { "tipo": "coletar", "r": "Pergaminhos da teoria", "itens": ["📜", "📜", "📜", "📜"], "recipiente": "📚" },
+      { "tipo": "transformar", "r": "Foco ajustado", "antes": "🌫️", "depois": "🔬" },
+      { "tipo": "separar", "r": "Barcos-célula", "itens": ["🦠", "🔵", "🟩", "🦠", "🔵"], "grupos": ["Procar.", "Animal", "Vegetal"], "destino": [0, 1, 2, 0, 1] }
+    ], "final": { "e": "🔍", "texto": "O mapa das células está completo!" } },
+
+  "atp-metabolismo": { "fundo": ["#3a2f4f", "#1a1426"], "chao": "#4f4a3a",
+    "etapas": [
+      { "tipo": "montar", "r": "ATP montado", "itens": ["🅰️", "🍬", "🟡", "🟡", "🟡"] },
+      { "tipo": "separar", "r": "Construir ou desmontar", "itens": ["🏗️", "🔨", "🏗️", "🔨"], "grupos": ["Anabolismo", "Catabolismo"], "destino": [0, 1, 0, 1] },
+      { "tipo": "ligar", "r": "Esteira religada", "itens": ["🍞", "🔥", "🔋", "⚙️"] }
+    ], "final": { "e": "🔋", "texto": "As esteiras voltaram a girar!" } },
+
+  "fotossintese-etapa-fotoquimica": { "fundo": ["#2f4a3a", "#122219"], "chao": "#3f6a3a",
+    "etapas": [
+      { "tipo": "coletar", "r": "Pigmentos da folha", "itens": ["🟢", "🟩", "🟠"], "recipiente": "🍃" },
+      { "tipo": "encher", "r": "Bolhas de O₂", "itens": ["💧", "☀️"], "cor": "#9be7ff", "icone": "🫧" },
+      { "tipo": "ligar", "r": "Elétrons até o NADPH", "itens": ["☀️", "⚡", "🔗", "🚚"] }
+    ], "final": { "e": "🍀", "texto": "A folha recuperou a cor!" } },
+
+  "acidos-nucleicos-estrutura": { "fundo": ["#2c2f55", "#12142b"], "chao": "#3a3f6a",
+    "etapas": [
+      { "tipo": "montar", "r": "Nucleotídeo", "itens": ["🟡", "🍬", "🔷"] },
+      { "tipo": "montar", "forma": "coluna", "r": "A=T e G≡C", "itens": ["🅰️", "🇹", "🇬", "🇨", "🅰️"] },
+      { "tipo": "separar", "r": "Cartas de RNA", "itens": ["✉️", "🚚", "🏭", "✉️"], "grupos": ["RNAm", "RNAt", "RNAr"], "destino": [0, 1, 2, 0] }
+    ], "final": { "e": "🧬", "texto": "A biblioteca da dupla hélice reabriu!" } },
+
+  "ciclo-celular-interfase": { "fundo": ["#3a2f52", "#181227"], "chao": "#4a3f5f",
+    "etapas": [
+      { "tipo": "montar", "forma": "anel", "r": "Relógio G1-S-G2-M", "itens": ["🟢", "🔵", "🟡", "🔴"] },
+      { "tipo": "encher", "r": "DNA de 2C a 4C", "itens": ["🧬", "🧬"], "cor": "#b388ff", "icone": "📈" },
+      { "tipo": "separar", "r": "Bosque Silencioso", "itens": ["🧑‍🔬", "🧠", "🫀", "🦴"], "grupos": ["G0 reversível", "Não divide"], "destino": [0, 1, 1, 0] }
+    ], "final": { "e": "⏳", "texto": "O relógio voltou a marcar as fases!" } },
+
+  "tipos-reproducao": { "fundo": ["#2f4a35", "#12221a"], "chao": "#4a6a3a",
+    "etapas": [
+      { "tipo": "separar", "r": "Clones ou variação?", "itens": ["🍌", "🍌", "🌻", "🐣"], "grupos": ["Assexuada", "Sexuada"], "destino": [0, 0, 1, 1] },
+      { "tipo": "separar", "r": "Ovos da colmeia", "itens": ["🥚", "🥚", "🥚", "🥚"], "grupos": ["Zangão", "Operária"], "destino": [0, 1, 1, 0] },
+      { "tipo": "transformar", "r": "Pneus sem água", "antes": "🦟", "depois": "🛞" }
+    ], "final": { "e": "🌰", "texto": "O viveiro está protegido pela variabilidade!" } },
+
+  "tecido-epitelial": { "fundo": ["#4a2f3a", "#22121a"], "chao": "#6a4a4a",
+    "etapas": [
+      { "tipo": "montar", "r": "Muralha dos alvéolos", "itens": ["🧱", "🧱", "🧱", "🧱"] },
+      { "tipo": "ligar", "r": "Tapete de cílios", "itens": ["💨", "〰️", "〰️", "🌬️"] },
+      { "tipo": "montar", "forma": "coluna", "r": "Camadas da epiderme", "itens": ["🟫", "🟧", "🟨", "🛡️"] }
+    ], "final": { "e": "🪡", "texto": "A muralha voltou a proteger e respirar!" } },
+
+  "taxonomia-nomenclatura": { "fundo": ["#2f453a", "#13211a"], "chao": "#4a5f3a",
+    "etapas": [
+      { "tipo": "transformar", "r": "Binômio corrigido", "antes": "🏷️", "depois": "✍️" },
+      { "tipo": "montar", "forma": "escada", "r": "Da espécie ao domínio", "itens": ["🐆", "🐾", "🦁", "🐄", "🦴", "🌐"] },
+      { "tipo": "separar", "r": "Bacteria ou Archaea", "itens": ["🦠", "♨️", "🦠", "🧂"], "grupos": ["Bacteria", "Archaea"], "destino": [0, 1, 0, 1] }
+    ], "final": { "e": "🪶", "texto": "A árvore recuperou seus nomes!" } },
+
+  "virus-estrutura-ciclos": { "fundo": ["#3a2f45", "#181220"], "chao": "#4a3f55",
+    "etapas": [
+      { "tipo": "montar", "forma": "anel", "r": "Cápsula rotulada", "itens": ["🧬", "🔷", "🔷", "🔷", "🔷"] },
+      { "tipo": "entregar", "r": "Sabão nos invasores", "itens": ["🧼", "🧼"], "alvos": ["🦠", "🦠"], "depois": ["💥", "💥"] },
+      { "tipo": "transformar", "r": "Transcriptase bloqueada", "antes": "🔓", "depois": "🔒" }
+    ], "final": { "e": "🔎", "texto": "As cápsulas foram desvendadas!" } },
+
+  "bacterias-estrutura-reproducao": { "fundo": ["#2f3f52", "#121a26"], "chao": "#3f4f5f",
+    "etapas": [
+      { "tipo": "montar", "forma": "anel", "r": "Modelo da bactéria", "itens": ["🧱", "🫧", "🧬", "⭕", "〰️"] },
+      { "tipo": "transformar", "r": "Coloração de Gram", "antes": "⚪", "depois": "🟣" },
+      { "tipo": "encher", "r": "Divisão binária", "itens": ["🦠", "🦠", "🦠"], "cor": "#ffcc80", "icone": "✖️" }
+    ], "final": { "e": "🧫", "texto": "O laboratório identificou a suspeita!" } },
+
+  "protozoarios": { "fundo": ["#24423f", "#0f1f1d"], "chao": "#2f5a52",
+    "etapas": [
+      { "tipo": "separar", "r": "Como se movem?", "itens": ["🫠", "〰️", "🪶"], "grupos": ["Pseudóp.", "Flagelo", "Cílios"], "destino": [0, 1, 2] },
+      { "tipo": "transformar", "r": "Vacúolo pulsando", "antes": "🎈", "depois": "💧" },
+      { "tipo": "transformar", "r": "Poço protegido", "antes": "🚱", "depois": "🚰" }
+    ], "final": { "e": "💧", "texto": "As poças voltaram ao equilíbrio!" } },
+
+  "epidemiologia-conceitos": { "fundo": ["#3f3a2f", "#1d1a12"], "chao": "#5a4f3a",
+    "etapas": [
+      { "tipo": "coletar", "r": "Fichas de notificação", "itens": ["📄", "📄", "📄"], "recipiente": "📊" },
+      { "tipo": "separar", "r": "Vetores e hospedeiros", "itens": ["🦟", "🪰", "🐌"], "grupos": ["Biológico", "Mecânico", "Hospedeiro"], "destino": [0, 1, 2] },
+      { "tipo": "transformar", "r": "Casos em queda", "antes": "📈", "depois": "📉" }
+    ], "final": { "e": "🗺️", "texto": "A febre recuou no pântano!" } },
+
+  "plantas-evolucao-alternancia": { "fundo": ["#2f4a3f", "#13221c"], "chao": "#5a6a3a",
+    "etapas": [
+      { "tipo": "transformar", "r": "Cutícula e estômatos", "antes": "🥀", "depois": "🌿" },
+      { "tipo": "montar", "forma": "anel", "r": "Roda das gerações", "itens": ["🌿", "✳️", "🌱", "🔹"] },
+      { "tipo": "montar", "forma": "escada", "r": "Escadaria das plantas", "itens": ["🍀", "🌿", "🌲", "🌸"] }
+    ], "final": { "e": "🌱", "texto": "As plantas subiram para a terra firme!" } },
+
+  "histologia-vegetal": { "fundo": ["#3f3a2a", "#1c1a10"], "chao": "#5a4a2f",
+    "etapas": [
+      { "tipo": "separar", "r": "Xilema e floema", "itens": ["💧", "🍬", "💧", "🍬"], "grupos": ["Xilema", "Floema"], "destino": [0, 1, 0, 1] },
+      { "tipo": "montar", "forma": "anel", "r": "Súber e lenticelas", "itens": ["🟫", "🟫", "🟫", "🟫", "🟫", "🕳️"] },
+      { "tipo": "transformar", "r": "Copa hidratada", "antes": "🍂", "depois": "🌳" }
+    ], "final": { "e": "🪵", "texto": "O tronco lembrou de suas camadas!" } },
+
+  "planos-corporais-animais": { "fundo": ["#24384a", "#0f1a24"], "chao": "#3a4a5a",
+    "etapas": [
+      { "tipo": "separar", "r": "Tipos de simetria", "itens": ["🪼", "🐛", "⭐", "🦋"], "grupos": ["Radial", "Bilateral"], "destino": [0, 1, 0, 1] },
+      { "tipo": "montar", "forma": "coluna", "r": "Folhetos embrionários", "itens": ["🟦", "🟥", "🟨"] },
+      { "tipo": "ligar", "r": "Cladograma montado", "itens": ["🧽", "🪼", "🐛", "⭐"] }
+    ], "final": { "e": "🧭", "texto": "As plantas-baixas dos animais estão no mapa!" } },
+
+  "peixes": { "fundo": ["#1f3f5a", "#0b1b2a"], "chao": "#2f4a5f",
+    "etapas": [
+      { "tipo": "separar", "r": "Com ou sem mandíbula", "itens": ["🐍", "🦈", "🐟"], "grupos": ["Agnatos", "Gnatostom."], "destino": [0, 1, 1] },
+      { "tipo": "encher", "r": "Bexiga natatória", "itens": ["🫧", "🫧"], "cor": "#80deea", "icone": "🐟" },
+      { "tipo": "montar", "forma": "escada", "r": "Escada de peixes", "itens": ["🐟", "🐟", "🐟", "🐟", "🐟"] }
+    ], "final": { "e": "🎣", "texto": "O cardume venceu a correnteza!" } },
+
+  "sistema-digestorio": { "fundo": ["#4a2f2f", "#221212"], "chao": "#6a3f3a",
+    "etapas": [
+      { "tipo": "entregar", "r": "Amilase na boca", "itens": ["🧪"], "alvos": ["🍞"], "depois": ["🍬"] },
+      { "tipo": "ligar", "r": "Bile e bicarbonato", "itens": ["🫃", "🟢", "🧂", "🌀"] },
+      { "tipo": "separar", "r": "Para onde vai?", "itens": ["🍬", "🥩", "🧈"], "grupos": ["Sangue", "Linfa"], "destino": [0, 0, 1] }
+    ], "final": { "e": "🔑", "texto": "A usina desmontou tudo na ordem certa!" } },
+
+  "sistema-imunologico": { "fundo": ["#2f2f4a", "#121224"], "chao": "#4a4a5f",
+    "etapas": [
+      { "tipo": "montar", "r": "Muralha selada", "itens": ["🧱", "🧱", "🧱", "🧱"] },
+      { "tipo": "entregar", "r": "Neutrófilos no foco", "itens": ["⚪", "⚪"], "alvos": ["🦠", "🦠"], "depois": ["✨", "✨"] },
+      { "tipo": "montar", "forma": "escada", "r": "Memória nas torres", "itens": ["🏰", "🧠", "🧠", "🧠"] }
+    ], "final": { "e": "🛡️", "texto": "As passagens estão guardadas!" } },
+
+  "drogas-licitas-ilicitas": { "fundo": ["#3a2f4a", "#1a1224"], "chao": "#4f3f5a",
+    "etapas": [
+      { "tipo": "separar", "r": "Mural das substâncias", "itens": ["🍺", "☕", "🍄"], "grupos": ["Depress.", "Estimul.", "Perturb."], "destino": [0, 1, 2] },
+      { "tipo": "transformar", "r": "Boatos corrigidos", "antes": "💬", "depois": "✅" },
+      { "tipo": "coletar", "r": "Redução de danos", "itens": ["💧", "🚗", "🏥"], "recipiente": "🎪" }
+    ], "final": { "e": "🧭", "texto": "A festa da praça ficou segura!" } },
+
+  "ists": { "fundo": ["#3a2f45", "#181220"], "chao": "#4f3f5a",
+    "etapas": [
+      { "tipo": "separar", "r": "Bactéria ou vírus", "itens": ["🦠", "👾", "🦠", "👾"], "grupos": ["Bacteriana", "Viral"], "destino": [0, 1, 0, 1] },
+      { "tipo": "transformar", "r": "PEP em até 72 h", "antes": "⏰", "depois": "💊" },
+      { "tipo": "entregar", "r": "Casal testado", "itens": ["🧪", "🧪"], "alvos": ["🤰", "🧑"], "depois": ["😊", "😊"] }
+    ], "final": { "e": "🛡️", "texto": "O mutirão protegeu a comunidade!" } },
+
+  "primeira-lei-mendel": { "fundo": ["#3a4a2f", "#1a2212"], "chao": "#5a6a3a",
+    "etapas": [
+      { "tipo": "entregar", "r": "Polinização cruzada", "itens": ["🖌️"], "alvos": ["🌸"], "depois": ["🌺"] },
+      { "tipo": "coletar", "r": "F1: só amarelas", "itens": ["🟡", "🟡", "🟡", "🟡"], "recipiente": "🧺" },
+      { "tipo": "separar", "r": "F2 em 3:1", "itens": ["🟡", "🟡", "🟡", "🟢"], "grupos": ["Amarelas", "Verdes"], "destino": [0, 0, 0, 1] }
+    ], "final": { "e": "🌿", "texto": "As sementes sumidas reapareceram!" } },
+
+  "segunda-lei-mendel": { "fundo": ["#2f4a42", "#12221e"], "chao": "#3f6a5a",
+    "etapas": [
+      { "tipo": "coletar", "r": "Quatro gametas", "itens": ["🅰️", "🅱️", "🔤", "🔡"], "recipiente": "🧺" },
+      { "tipo": "separar", "r": "Classes 9:3:3:1", "itens": ["🟡", "🟡", "🟡", "🟢", "🟤"], "grupos": ["9", "3", "3", "1"], "destino": [0, 0, 1, 2, 3] },
+      { "tipo": "transformar", "r": "Genótipo revelado", "antes": "❓", "depois": "🐹" }
+    ], "final": { "e": "🗝️", "texto": "As portas da segregação se abriram!" } },
+
+  "engenharia-genetica-ferramentas": { "fundo": ["#23304f", "#0e1428"], "chao": "#3a4a6a",
+    "etapas": [
+      { "tipo": "transformar", "r": "Gene recortado", "antes": "🧬", "depois": "✂️" },
+      { "tipo": "montar", "forma": "anel", "r": "Gene no plasmídeo", "itens": ["⭕", "⭕", "🧬", "⭕", "⭕"] },
+      { "tipo": "encher", "r": "Biorreator ligado", "itens": ["🦠", "🦠"], "cor": "#a5d6a7", "icone": "💉" }
+    ], "final": { "e": "✂️", "texto": "Nova Hélice produz sua insulina!" } },
+
+  "evidencias-evolucao": { "fundo": ["#4a3f2f", "#221c12"], "chao": "#6a5a3a",
+    "etapas": [
+      { "tipo": "montar", "forma": "coluna", "r": "Estratos ordenados", "itens": ["🟫", "🟧", "⬛", "🟨"] },
+      { "tipo": "separar", "r": "Homólogos e análogos", "itens": ["🦇", "🐋", "🦋", "🐦"], "grupos": ["Homólogos", "Análogos"], "destino": [0, 0, 1, 1] },
+      { "tipo": "montar", "r": "Pangeia encaixada", "itens": ["🌎", "🦎", "🌍"] }
+    ], "final": { "e": "🔨", "texto": "Os cinco selos do tempo foram abertos!" } },
+
+  "conceitos-ecologia": { "fundo": ["#4a3f24", "#221c0e"], "chao": "#7a6a3a",
+    "etapas": [
+      { "tipo": "coletar", "r": "Censo da população", "itens": ["🦓", "🦓", "🦓", "🦓"], "recipiente": "📋" },
+      { "tipo": "separar", "r": "Biótopo e biocenose", "itens": ["💧", "🐸", "☀️", "🌾"], "grupos": ["Biótopo", "Biocenose"], "destino": [0, 1, 0, 1] },
+      { "tipo": "separar", "r": "Nichos diferentes", "itens": ["🦅", "🦉"], "grupos": ["☀️ Dia", "🌙 Noite"], "destino": [0, 1] }
+    ], "final": { "e": "🔭", "texto": "O censo da savana foi concluído!" } },
+
+  "cadeias-teias-alimentares": { "fundo": ["#24423a", "#0e1f1a"], "chao": "#2f5a4a",
+    "etapas": [
+      { "tipo": "ligar", "r": "Cadeia montada", "itens": ["🌿", "🦐", "🐟", "🐊"] },
+      { "tipo": "encher", "r": "Mercúrio acumula", "itens": ["⚫", "⚫", "⚫"], "cor": "#b0bec5", "icone": "📈" },
+      { "tipo": "entregar", "r": "Peixes seguros", "itens": ["🐟"], "alvos": ["🤰"], "depois": ["😊"] }
+    ], "final": { "e": "🕸️", "texto": "A aldeia entendeu o rastro do mercúrio!" } },
+
+  "sucessao-ecologica": { "fundo": ["#3a3f3f", "#191c1c"], "chao": "#5a5a4a",
+    "etapas": [
+      { "tipo": "transformar", "r": "Liquens na rocha", "antes": "🪨", "depois": "🟢" },
+      { "tipo": "montar", "r": "Pioneiras e não pioneiras", "itens": ["🌱", "🌳", "🌱", "🌳", "🌱"] },
+      { "tipo": "transformar", "r": "Floresta clímax", "antes": "🌾", "depois": "🌳" }
+    ], "final": { "e": "🌰", "texto": "A pedreira virou floresta!" } },
+
+  "biomas-brasileiros": { "fundo": ["#2f4a2f", "#122212"], "chao": "#4a6a3a",
+    "etapas": [
+      { "tipo": "transformar", "r": "Rios voadores", "antes": "🪵", "depois": "🌧️" },
+      { "tipo": "ligar", "r": "Corredor do mico", "itens": ["🌳", "🐒", "🌳"] },
+      { "tipo": "transformar", "r": "Manguezal devolvido", "antes": "🚧", "depois": "🦀" }
+    ], "final": { "e": "🗺️", "texto": "Os seis biomas voltaram a pulsar!" } }
+}

@@ -44,6 +44,8 @@
   #demoBts { position: fixed; left: 50%; transform: translateX(-50%); bottom: 14px; z-index: 6; display: flex; gap: 8px; }
   #demoBts .bt { padding: 7px 11px; font-size: 12.5px; }
   body.toque #demoBts { bottom: auto; top: 64px; }
+  .cena { border-radius: 14px; overflow: hidden; margin: 0 0 12px; border: 1px solid rgba(255,255,255,.12); min-height: 150px; background: #141a2a; }
+  .cena canvas { display: block; }
   .bt.perigo { background: #b3261e !important; color: #fff !important; border-color: #ff6b5e !important; }
   .vidro { background: var(--vidro); backdrop-filter: blur(14px) saturate(140%); -webkit-backdrop-filter: blur(14px) saturate(140%); border: 1px solid var(--vidro-borda); border-radius: 18px; box-shadow: 0 10px 40px rgba(0,0,0,.35); }
   .titulo { font-family: Fredoka, Nunito, sans-serif; }
@@ -183,9 +185,9 @@
 <link rel="icon" href="../compartilhado/marca/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="../compartilhado/marca/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="../compartilhado/marca/apple-touch-icon.png">
-<script src="../vendor/supabase.js?v=mvid6p6q"></script>
-<script src="../../config.js?v=mvid6p6q"></script>
-<script src="../compartilhado/sessao.js?v=mvid6p6q"></script>
+<script src="../vendor/supabase.js?v=mvidqayw"></script>
+<script src="../../config.js?v=mvidqayw"></script>
+<script src="../compartilhado/sessao.js?v=mvidqayw"></script>
 </head>
 <body>
 <canvas id="cena"></canvas>
@@ -246,9 +248,10 @@
   </div>
 </div>
 
-<script src="../compartilhado/avatar2d.js?v=mvid6p6q"></script>
-<script src="../compartilhado/estado.js?v=mvid6p6q"></script>
-<script type="module" src="main.js?v=mvid6p6q"></script>
-<script src="tour.js?v=mvid6p6q"></script>
+<script src="../compartilhado/avatar2d.js?v=mvidqayw"></script>
+<script src="../compartilhado/estado.js?v=mvidqayw"></script>
+<script src="cena.js?v=mvidqayw"></script>
+<script type="module" src="main.js?v=mvidqayw"></script>
+<script src="tour.js?v=mvidqayw"></script>
 </body>
 </html>

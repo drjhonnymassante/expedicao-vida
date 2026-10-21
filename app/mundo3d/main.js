@@ -733,8 +733,21 @@ async function painelPremium(e) {
   $('sair').onclick = fecharPainel;
 }
 
-function desafio(e, j, m) {
+// cena animada da missão (cena.js + cenas.json): cada resposta certa realiza uma etapa diante do jogador
+let cenas = null, cenaAtual = null;
+const carregarCenas = () => cenas ||= fetch('cenas.json').then(r => r.json()).catch(() => ({}));
+async function prepararCena(tp, m) {
+  if (cenaAtual) { cenaAtual.obj.destruir(); cenaAtual = null; }
+  const spec = (await carregarCenas())[tp.id]; if (!spec || !window.CenaMissao) return null;
+  const div = document.createElement('div'); div.className = 'cena';
+  cenaAtual = { div, obj: CenaMissao.criar(div, spec, m.item_recompensa) };
+  return cenaAtual;
+}
+const encaixarCena = () => { if (cenaAtual) $('painel').prepend(cenaAtual.div); };
+
+async function desafio(e, j, m) {
   const qs = ['bronze', 'prata', 'ouro'].map(n => j.questoes.find(q => q.nivel === n)).filter(Boolean);
+  await prepararCena(e.topico, m);
   let i = 0, acertos = 0, xpGanho = 0, timer = null;
   const BASEXP = { bronze: 10, prata: 15, ouro: 20, diamante: 30 };
   const passo = () => {
@@ -746,6 +759,7 @@ function desafio(e, j, m) {
       <div class="questao">${esc(q.enunciado)}</div>
       ${q.alternativas.map((a, n) => `<button class="alt" data-n="${n}"><span class="let">${'ABCDE'[n]}</span><span>${esc(a)}</span></button>`).join('')}
       <div class="ajudas"><button class="bt" id="usarPilula" ${totalPilulas(e.ilha) ? '' : 'disabled'}>💊 Pílula (${totalPilulas(e.ilha)}) <small>elimina 2</small></button><button class="bt roxo" id="usarMsg" ${(est.cristais || 0) >= 15 ? '' : 'disabled'}>⏳ Mensagem do futuro <small>15 💎</small></button></div><div id="fb"></div>`);
+    encaixarCena();
     const eliminar = n => { const erradas = [...document.querySelectorAll('.alt')].filter(b => +b.dataset.n !== q.correta && !b.classList.contains('eliminada')); erradas.sort(() => Math.random() - .5).slice(0, n).forEach(b => { b.classList.add('eliminada'); b.disabled = true; }); };
     $('usarPilula').onclick = () => { if (respondeu || !gastarPilula(e.ilha)) return; eliminar(2); ajuda = Math.min(ajuda, .75); $('usarPilula').disabled = true; SFX.coleta(); salvar(); atualizarPoderes(); };
     $('usarMsg').onclick = () => { if (respondeu || (est.cristais || 0) < 15) return; est.cristais -= 15; eliminar([...document.querySelectorAll('.alt')].filter(b => +b.dataset.n !== q.correta && !b.classList.contains('eliminada')).length - 1); protegido = true; ajuda = .5; $('usarMsg').disabled = true; $('usarPilula').disabled = true; SFX.evolucao(); salvar(); atualizarPoderes(); toast('⏳', 'Mensagem do futuro recebida', 'Sobraram 2 alternativas e seu combo está protegido'); };
@@ -754,6 +768,7 @@ function desafio(e, j, m) {
     document.querySelectorAll('.alt').forEach(b => b.onclick = () => {
       if (respondeu) return; respondeu = true; clearInterval(timer);
       const ok = +b.dataset.n === q.correta;
+      if (cenaAtual) cenaAtual.obj.etapa(i, ok);
       document.querySelectorAll('.alt').forEach(x => { x.disabled = true; if (+x.dataset.n === q.correta) x.classList.add('certa'); });
       let extra = '';
       if (ok) {
@@ -776,7 +791,9 @@ function desafio(e, j, m) {
       ${venceu && !jaFeito ? `<div class="premio" style="justify-content:center"><span>✨ ${m.recompensa_xp} XP da missão</span><span>⚔️ ${xpGanho} XP das respostas</span>${m.item_recompensa ? `<span>🎒 ${esc(m.item_recompensa)}</span>` : ''}</div>` : ''}
       ${!venceu ? '<p style="text-align:center">Estude a aula e volte: são necessárias 2 respostas certas.</p>' : ''}
       <div class="acoesP" style="justify-content:center"><button class="bt prim" id="ok">Voltar à expedição</button>${!venceu ? `<a class="bt roxo" href="../index.html?volta=${encodeURIComponent(e.topico.id)}#${e.topico.id}" onclick="window.salvarJogo && salvarJogo()">📖 Estudar a aula</a>` : ''}</div>`);
+    encaixarCena(); if (cenaAtual) cenaAtual.obj.final(venceu);
     $('ok').onclick = () => {
+      if (cenaAtual) { cenaAtual.obj.destruir(); cenaAtual = null; }
       fecharPainel();
       if (venceu) {
         explosao(e.x, 3, e.z, ['#FFD166', '#7CFFB2', '#FF8FAB', '#6EC8FF'], 120, 9);
