@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Aulas | Evonauta</title>
 <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
-<script src="compartilhado/avatar2d.js?v=mvidqayw"></script>
-<script src="compartilhado/estado.js?v=mvidqayw"></script>
+<script src="compartilhado/avatar2d.js?v=mviojzc8"></script>
+<script src="compartilhado/estado.js?v=mviojzc8"></script>
 <style>
   :root { --verde:#2E7D32; --verde-claro:#E8F5E9; --roxo:#6A1B9A; --fundo:#F6F8F6; --texto:#1f2a1f; --cinza:#6b746b; --borda:#dfe6df; --ouro:#C9A227; }
   * { box-sizing:border-box; }
@@ -79,9 +79,9 @@
 <link rel="icon" href="compartilhado/marca/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="compartilhado/marca/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="compartilhado/marca/apple-touch-icon.png">
-<script src="vendor/supabase.js?v=mvidqayw"></script>
-<script src="../config.js?v=mvidqayw"></script>
-<script src="compartilhado/sessao.js?v=mvidqayw"></script>
+<script src="vendor/supabase.js?v=mviojzc8"></script>
+<script src="../config.js?v=mviojzc8"></script>
+<script src="compartilhado/sessao.js?v=mviojzc8"></script>
 </head>
 <body>
 <header>
@@ -137,16 +137,24 @@ async function iniciar() {
   }).join('');
   const e = CUR.estatisticas || {};
   document.getElementById('nav').innerHTML = `<div class="stats"><b>${ok}</b> de ${tot} tópicos prontos · ${e.questoes??'?'} questões · ${e.flashcards??'?'} flashcards</div>` + html;
-  document.querySelectorAll('.t').forEach(el => el.onclick = () => { if (el.classList.contains('prem')) { location.href = (window.RAIZ_SITE || '../') + 'index.html#lista-digital'; return; } if (!el.classList.contains('off')) abrir(el.dataset.id); });
+  document.querySelectorAll('.t').forEach(el => el.onclick = () => { if (liberado(IDX[el.dataset.id])) return abrir(el.dataset.id); if (el.classList.contains('prem')) { location.href = (window.RAIZ_SITE || '../') + 'index.html#lista-digital'; return; } if (!el.classList.contains('off')) abrir(el.dataset.id); });
   hud();
   const h = location.hash.slice(1); if (h && IDX[h]) abrir(h);
 }
 
+// assinante: tópicos premium já escritos vêm do bucket privado do Supabase
+const liberado = t => !!t && t.status==='premium' && t.premium_pronto && window.Premium && window.Premium.ativo;
+addEventListener('premium', ev => {
+  if (!ev.detail) return;
+  document.querySelectorAll('.t.prem').forEach(el => { if (!liberado(IDX[el.dataset.id])) return; el.classList.remove('prem'); el.querySelector('.dot').classList.add('pronto'); const s = el.querySelector('.free'); if (s) s.textContent = '💎 premium'; });
+  const h = location.hash.slice(1); if (h && liberado(IDX[h])) abrir(h);
+});
+
 async function abrir(id) {
-  const t = IDX[id]; if (!t || t.status!=='pronto') return;
+  const t = IDX[id]; if (!t || (t.status!=='pronto' && !liberado(t))) return;
   document.querySelectorAll('.t').forEach(el => el.classList.toggle('ativo', el.dataset.id===id));
   location.hash = id;
-  const [md, js] = await Promise.all([fetch(BASE+t.arquivo_md).then(r=>r.text()), fetch(BASE+t.arquivo_json).then(r=>r.json())]);
+  const [md, js] = liberado(t) ? await Promise.all([Premium.baixar(t.arquivo_md), Premium.baixar(t.arquivo_json).then(JSON.parse)]) : await Promise.all([fetch(BASE+t.arquivo_md).then(r=>r.text()), fetch(BASE+t.arquivo_json).then(r=>r.json())]);
   ATUAL = t; DADOS = { md: md.replace(/^---[\s\S]*?\n---\s*/, ''), js };
   document.getElementById('main').innerHTML = `
     <div class="meta"><span>${esc(t.unidade.titulo)}</span><span>Região: ${esc(t.unidade.regiao_mundo.nome)}</span><span>${t.acesso==='gratuito'?'🔓 Gratuito':'🔒 Premium'}</span><span>ENEM: ${t.incidencia_enem}</span><span>BNCC: ${t.bncc.join(', ')}</span></div>
@@ -162,7 +170,7 @@ function aba(k) {
   if (k==='aula') {
     const html = marked.parse(DADOS.md).replace(/\[\[([a-z0-9-]+)\]\]/g, (m,id) => IDX[id] ? `<a class="lk" data-id="${id}">${esc(IDX[id].titulo)}</a>` : id);
     p.innerHTML = `<div class="card aula">${html}<p><button class="btn" id="concluir">✔ Concluir aula (+50 XP)</button></p></div>`;
-    p.querySelectorAll('a.lk').forEach(a => a.onclick = () => IDX[a.dataset.id].status==='pronto' ? abrir(a.dataset.id) : IDX[a.dataset.id].status==='premium' ? (confirm('Este tópico faz parte dos planos premium. Quer entrar na lista de espera?') && (location.href = (window.RAIZ_SITE || '../') + 'index.html#lista-digital')) : alert('Este tópico ainda está sendo escrito.'));
+    p.querySelectorAll('a.lk').forEach(a => a.onclick = () => (IDX[a.dataset.id].status==='pronto' || liberado(IDX[a.dataset.id])) ? abrir(a.dataset.id) : IDX[a.dataset.id].status==='premium' ? (confirm('Este tópico faz parte dos planos premium. Quer entrar na lista de espera?') && (location.href = (window.RAIZ_SITE || '../') + 'index.html#lista-digital')) : alert('Este tópico ainda está sendo escrito.'));
     p.querySelector('#concluir').onclick = () => ganhar(50, 'aula concluída', 'aula:' + ATUAL.id);
   }
   if (k==='quiz') quiz(p, j.questoes, 0, 0);

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pagamento | Evonauta</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@500;700;800&display=swap">
+<link rel="stylesheet" href="estilo.css?v=mviojzc8">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<nav class="topo"><div class="cont"><a class="logo" href="./" aria-label="Evonauta Educação, página inicial"><img src="img/logo-evonauta.svg" alt="Evonauta Educação" width="196" height="42"></a></div></nav>
+<main class="cont legal" style="text-align:center;max-width:560px">
+  <div id="ic" style="font-size:60px;margin-top:20px">⏳</div>
+  <h1 id="tit">Confirmando seu pagamento…</h1>
+  <p id="txt" style="color:var(--sub)">Isso costuma levar poucos segundos. No Pix, a confirmação chega assim que o pagamento é feito.</p>
+  <div id="acoes" style="margin-top:20px"></div>
+</main>
+<script src="app/vendor/supabase.js?v=mviojzc8"></script>
+<script src="config.js?v=mviojzc8"></script>
+<script src="vida.js?v=mviojzc8"></script>
+<script>
+// acompanha a assinatura até o webhook do Mercado Pago confirmar e libera a entrada na plataforma
+const { sb, esc } = Vida, id = new URLSearchParams(location.search).get('a');
+const $ = i => document.getElementById(i);
+const mostrar = (ic, tit, txt, botoes) => { $('ic').textContent = ic; $('tit').textContent = tit; $('txt').textContent = txt; $('acoes').innerHTML = botoes || ''; };
+let tentativas = 0;
+async function verificar() {
+  const { data: { session } } = await sb.auth.getSession();
+  if (!session) return mostrar('🔑', 'Entre na sua conta', 'Faça login com o mesmo e-mail usado na compra para ver o status do pagamento.', `<a class="bt prim" href="entrar.html?volta=${encodeURIComponent(location.pathname + location.search)}">Entrar</a>`);
+  if (!id) return mostrar('❓', 'Pagamento não encontrado', 'Volte à página inicial e tente novamente.', '<a class="bt" href="./">Voltar</a>');
+  const { data } = await sb.from('assinaturas').select('status, plano, periodo, valido_ate').eq('id', id).maybeSingle();
+  if (data && (data.status === 'ativa')) {
+    const ate = new Date(data.valido_ate).toLocaleDateString('pt-BR');
+    return mostrar('🎉', 'Acesso liberado!', `Bem-vindo(a) à expedição completa, evonauta. Seu acesso vale até ${ate}${data.periodo === 'mes' ? ' e renova automaticamente todo mês' : ''}.`, '<a class="bt ouro" href="app/mundo3d/?continuar">▶ Entrar na expedição</a> <a class="bt roxo" href="app/">📖 Ver as aulas</a>');
+  }
+  if (data && data.status === 'recusada') return mostrar('⚠️', 'Pagamento não aprovado', 'Nada foi cobrado. Você pode tentar de novo com outra forma de pagamento.', '<a class="bt prim" href="./#planos">Tentar novamente</a>');
+  if (++tentativas > 60) return mostrar('🕐', 'Ainda aguardando a confirmação', 'Se você pagou com Pix ou cartão, a liberação acontece sozinha assim que o Mercado Pago confirmar. Você pode fechar esta página; o acesso aparece na sua conta.', '<a class="bt" href="app/mundo3d/">Ir para a expedição</a>');
+  setTimeout(verificar, 3000);
+}
+verificar();
+</script>
+</body>
+</html>

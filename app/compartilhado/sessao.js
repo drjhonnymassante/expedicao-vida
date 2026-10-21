@@ -13,6 +13,14 @@
     if (!session) { location.replace(RAIZ + 'entrar.html?volta=' + encodeURIComponent(location.pathname + location.hash)); return; }
     const uid = session.user.id;
     window.USUARIO = session.user;
+    // assinatura ativa? o banco só entrega o conteúdo premium a quem tem (regra no Storage)
+    sb.rpc('tem_acesso_premium').then(({ data }) => {
+      window.Premium = {
+        ativo: !!data,
+        baixar: async caminho => { const { data: arq, error } = await sb.storage.from('conteudo-premium').download(caminho); if (error) throw error; return arq.text(); },
+      };
+      dispatchEvent(new CustomEvent('premium', { detail: !!data }));
+    });
     const { data: perfil } = await sb.from('profiles').select('apelido, progresso').eq('id', uid).maybeSingle();
     let local = EstadoVida.carregar();
     if (local && local.uid && local.uid !== uid) local = null;          // outra conta neste navegador: não mistura

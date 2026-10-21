@@ -27,7 +27,7 @@
 <meta property="og:description" content="26 ilhas, 127 aulas e missões para dominar a Biologia do ENEM. Comece grátis e garanta seu lugar na turma fundadora.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@500;700;800&display=swap">
-<link rel="stylesheet" href="estilo.css?v=mvidqayw">
+<link rel="stylesheet" href="estilo.css?v=mviojzc8">
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
@@ -138,10 +138,10 @@
 
 <div class="veu oculto" id="veu"><div class="modal" id="modal"></div></div>
 
-<script src="app/vendor/supabase.js?v=mvidqayw"></script>
-<script src="config.js?v=mvidqayw"></script>
-<script src="vida.js?v=mvidqayw"></script>
-<script src="app/compartilhado/avatar2d.js?v=mvidqayw"></script>
+<script src="app/vendor/supabase.js?v=mviojzc8"></script>
+<script src="config.js?v=mviojzc8"></script>
+<script src="vida.js?v=mviojzc8"></script>
+<script src="app/compartilhado/avatar2d.js?v=mviojzc8"></script>
 <script>
 const { cfg, sb, PLANOS, esc } = Vida;
 // aviso de cookies (Consent Mode)
@@ -179,6 +179,8 @@ const DETALHES = {
   grupo: { selo: 'Recomendado', itens: ['Tudo da Plataforma Completa', 'Encontros semanais ao vivo com o Dr. Jhonny, por objetivo (ENEM, Medicina…)', 'Plano de estudos da turma', 'Plantão de dúvidas e comunidade', 'Liga de equipe com a sua turma'] },
   individual: { selo: '', itens: ['Tudo da Plataforma Completa', 'Sessões individuais com o Dr. Jhonny', 'Plano de estudos personalizado', 'Missões criadas por ele no seu mapa', 'Acompanhamento próximo do desempenho'] },
 };
+// vendas: abertas pela configuração; ?vendas=teste mostra o checkout para testes (o servidor só aceita em modo de teste)
+const VENDAS = cfg.vendasAbertas || new URLSearchParams(location.search).get('vendas') === 'teste';
 let CONTAGENS = null;
 async function renderPlanos() {
   CONTAGENS = await Vida.contagens();
@@ -192,13 +194,40 @@ async function renderPlanos() {
       <ul>${d.itens.map(i => `<li>${esc(i)}</li>`).join('')}</ul>
       <div class="vagas"><div class="barra"><div data-w="${pct}"></div></div>
         <div class="info"><span>${c && c.inscritos >= 5 ? `<b>${c.inscritos}</b> na lista` : '🚀 Seja um(a) dos primeiros'}</span><span>${c ? (cheio ? '🔥 turma fundadora completa' : `<b>${c.vagas}</b> ${legenda}`) : ''}</span></div></div>
-      <button class="bt ${d.selo ? 'ouro' : 'roxo'}" data-plano="${p}">${cheio ? 'Entrar na lista da próxima turma' : 'Quero entrar na lista'}</button></div>`;
+      <button class="bt ${d.selo ? 'ouro' : 'roxo'}" data-plano="${p}">${VENDAS ? 'Assinar agora' : cheio ? 'Entrar na lista da próxima turma' : 'Quero entrar na lista'}</button></div>`;
   }).join('');
   const hi = document.getElementById('hInscritos'); if (CONTAGENS && total >= 10) hi.textContent = total; else { hi.textContent = '20'; hi.parentElement.lastChild.textContent = 'vagas de mentoria individual'; }
   requestAnimationFrame(() => document.querySelectorAll('.vagas .barra div').forEach(b => b.style.width = Math.max(2, +b.dataset.w) + '%'));
-  document.querySelectorAll('[data-plano]').forEach(b => b.onclick = () => abrirLista(b.dataset.plano));
+  document.querySelectorAll('[data-plano]').forEach(b => b.onclick = () => VENDAS ? abrirCompra(b.dataset.plano) : abrirLista(b.dataset.plano));
 }
 renderPlanos();
+
+// compra: escolhe mensal ou anual e segue para o checkout do Mercado Pago
+const VALOR = { digital: { mes: 19.9, ano: 191 }, grupo: { mes: 147, ano: 1411 }, individual: { mes: 697, ano: 6691 } };
+const reais = v => v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+function abrirCompra(plano) {
+  const v = VALOR[plano], economia = Math.round((1 - v.ano / (v.mes * 12)) * 100);
+  modal.innerHTML = `<div class="etq">Assinatura</div><h3>${PLANOS[plano].ic} ${PLANOS[plano].nome}</h3>
+    <p style="color:var(--sub);margin:0 0 12px">Escolha como prefere pagar. O pagamento é feito no ambiente seguro do Mercado Pago.</p>
+    <button class="bt ouro opcao" data-per="ano" style="width:100%;display:block;text-align:left;margin:0 0 10px;padding:14px 16px"><b style="font-size:16px">Anual · ${reais(v.ano)}</b> <span class="off">${economia}% off</span><br><small style="opacity:.85">Pix à vista ou cartão em até 12x · 12 meses de acesso</small></button>
+    <button class="bt roxo opcao" data-per="mes" style="width:100%;display:block;text-align:left;padding:14px 16px"><b style="font-size:16px">Mensal · ${reais(v.mes)}/mês</b><br><small style="opacity:.85">Cobrança automática no cartão · cancele quando quiser</small></button>
+    <div id="cMsg" style="margin-top:12px"></div>`;
+  veu.classList.remove('oculto');
+  modal.querySelectorAll('.opcao').forEach(b => b.onclick = () => comprar(plano, b.dataset.per));
+}
+async function comprar(plano, periodo) {
+  const { data: { session } } = await sb.auth.getSession();
+  if (!session) { location.href = 'entrar.html?modo=cadastro&volta=' + encodeURIComponent('/?' + (VENDAS && !cfg.vendasAbertas ? 'vendas=teste&' : '') + 'assinar=' + plano + '-' + periodo); return; }
+  const msg = document.getElementById('cMsg');
+  if (msg) msg.innerHTML = '<div class="msg">Abrindo o pagamento seguro…</div>';
+  modal.querySelectorAll('.opcao').forEach(b => b.disabled = true);
+  const r = await Vida.assinar(plano, periodo);
+  if (r && r.link) { location.href = r.link; return; }
+  if (msg) msg.innerHTML = `<div class="msg erro">${esc((r && r.erro) || 'Não foi possível abrir o pagamento agora.')}</div>`;
+  modal.querySelectorAll('.opcao').forEach(b => b.disabled = false);
+}
+// voltou do cadastro com a compra escolhida: segue direto para o checkout
+{ const a = new URLSearchParams(location.search).get('assinar'); if (a && VENDAS) { const [p, per] = a.split('-'); if (VALOR[p] && (per === 'mes' || per === 'ano')) { abrirCompra(p); comprar(p, per); } } }
 
 // formulário da lista de espera
 const veu = document.getElementById('veu'), modal = document.getElementById('modal');

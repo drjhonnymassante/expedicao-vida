@@ -6,4 +6,6 @@ window.CONFIG_VIDA = {
   responsavel: 'Dr. Jhonny Capichoni Massante',
   cnpj: '59.390.713/0001-51',
   contato: 'contato.evonauta@gmail.com',
+  // vendas pelo Mercado Pago: fica false até as 127 aulas estarem prontas (o servidor também bloqueia)
+  vendasAbertas: false,
 };

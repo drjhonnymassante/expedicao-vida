@@ -21,6 +21,12 @@
     if (error) return { erro: error.message };
     return { ok: true };
   }
+  // checkout: cria a cobrança no servidor (preço definido lá) e devolve o link do Mercado Pago
+  async function assinar(plano, periodo) {
+    const { data, error } = await sb.functions.invoke('criar-pagamento', { body: { plano, periodo } });
+    if (error) { let m = 'Não foi possível abrir o pagamento agora.'; try { m = (await error.context.json()).erro || m; } catch { } return { erro: m }; }
+    return data;
+  }
   const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-  window.Vida = { sb, cfg, PLANOS, contagens, entrarNaLista, esc };
+  window.Vida = { sb, cfg, PLANOS, contagens, entrarNaLista, assinar, esc };
 })();

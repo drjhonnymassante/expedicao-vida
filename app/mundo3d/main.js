@@ -689,16 +689,18 @@ function verificarConquistas() {
 function abrirPainel(html) { $('painel').innerHTML = html; $('veu').classList.remove('oculto'); pausado = true; SFX.abrir(); }
 function fecharPainel() { $('veu').classList.add('oculto'); pausado = !!evo; }
 $('veu').addEventListener('click', e => { if (e.target.id === 'veu') fecharPainel(); });
+// assinante com acesso a um tópico premium já escrito: o conteúdo vem do bucket privado
+const liberado = tp => tp.status === 'premium' && tp.premium_pronto && window.Premium && window.Premium.ativo;
 const cacheMd = {};
-async function textoAula(tp) { return cacheMd[tp.id] ||= await fetch(BASE + tp.arquivo_md).then(r => r.text()); }
-async function jsonTopico(tp) { return cacheJson[tp.id] ||= await fetch(BASE + tp.arquivo_json).then(r => r.json()); }
+async function textoAula(tp) { return cacheMd[tp.id] ||= liberado(tp) ? await Premium.baixar(tp.arquivo_md) : await fetch(BASE + tp.arquivo_md).then(r => r.text()); }
+async function jsonTopico(tp) { return cacheJson[tp.id] ||= liberado(tp) ? JSON.parse(await Premium.baixar(tp.arquivo_json)) : await fetch(BASE + tp.arquivo_json).then(r => r.json()); }
 const iniciais = s => (s || '?').replace(/,.*/, '').split(/\s+/).filter(w => w.length > 2).slice(0, 2).map(w => w[0].toUpperCase()).join('') || '★';
 function escrever(el, texto, vel = 14) { el.textContent = ''; let k = 0; const it = setInterval(() => { el.textContent = texto.slice(0, ++k); if (k >= texto.length) clearInterval(it); }, vel); el.onclick = () => { clearInterval(it); el.textContent = texto; }; }
 
 async function abrirEstacao(e) {
   const tp = e.topico, il = ILHAS[e.ilha], aula = `../index.html?volta=${encodeURIComponent(tp.id)}#${tp.id}`;
-  if (e.premium) return painelPremium(e);
-  if (!e.pronto) {
+  if (e.premium && !liberado(tp)) return painelPremium(e);
+  if (!e.pronto && !liberado(tp)) {
     abrirPainel(`<div class="etq">${esc(il.u.regiao_mundo.nome)}</div><h2>🚧 Estação em construção</h2><p style="color:var(--sub)">A missão de <b style="color:#fff">${esc(tp.titulo)}</b> está sendo preparada pela equipe pedagógica e chega em breve.</p><div class="acoesP"><button class="bt prim" id="ok">Continuar explorando</button></div>`);
     $('ok').onclick = fecharPainel; return;
   }
@@ -1001,7 +1003,7 @@ function atualizarJogador(dt) {
   // prompt
   const s = estacaoProxima(), pr = $('prompt');
   $('btFalar').classList.toggle('oculto', !(s && !pausado));
-  if (s && !pausado) { pr.innerHTML = `<span class="tecla">${TOQUE ? '👆' : 'E'}</span> ${s.premium ? '💎 Baú premium · ' + esc(s.topico.titulo) : s.pronto ? (est.feitas[s.topico.id] ? '✅ ' : '💬 ') + esc(s.topico.titulo) : '🚧 Estação em construção'}`; pr.classList.remove('oculto'); }
+  if (s && !pausado) { pr.innerHTML = `<span class="tecla">${TOQUE ? '👆' : 'E'}</span> ${s.premium ? (liberado(s.topico) ? '💎 Missão premium · ' : '💎 Baú premium · ') + esc(s.topico.titulo) : s.pronto ? (est.feitas[s.topico.id] ? '✅ ' : '💬 ') + esc(s.topico.titulo) : '🚧 Estação em construção'}`; pr.classList.remove('oculto'); }
   else pr.classList.add('oculto');
   // NPCs olham para o jogador
   for (const e of ESTACOES) if (e.cabeca && e.grupo.visible && Math.hypot(e.x - jog.x, e.z - jog.z) < 7) e.grupo.rotation.y = lerp(e.grupo.rotation.y, Math.atan2(jog.x - e.x, jog.z - e.z), .1);
