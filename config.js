@@ -5,5 +5,5 @@ window.CONFIG_VIDA = {
   marca: 'Evonauta',
   responsavel: 'Dr. Jhonny Capichoni Massante',
   cnpj: '59.390.713/0001-51',
-  contato: 'dr.jhonny.massante@gmail.com',
+  contato: 'contato.evonauta@gmail.com',
 };
