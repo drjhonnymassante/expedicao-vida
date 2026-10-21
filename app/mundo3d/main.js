@@ -1059,7 +1059,18 @@ addEventListener('storage', e => { if (e.key === EV.CHAVE && est) { const novo =
   const prontas = ESTACOES.filter(e => e.pronto).length;
   $('carga').textContent = `${ILHAS.length} ilhas · ${ESTACOES.length} estações · ${prontas} missões disponíveis · ${ORBES.length} biocristais escondidos`;
   telaInicial(EV.carregar());
-  $('btNovo').onclick = () => { const s = EV.carregar(); if (!EV.temProgresso(s)) return comecar(false); if (!confirm('Começar do zero apaga o progresso atual (' + (s.xp || 0) + ' XP). Deseja mesmo recomeçar?')) return; comecar(true); }; $('btCont').onclick = () => comecar(false);
+  let confirmaReset = 0;
+$('btNovo').onclick = () => {
+  const s = EV.carregar(), bt = $('btNovo');
+  if (!EV.temProgresso(s)) return comecar(false);
+  // confirmação na própria tela (confirm() pode estar bloqueado pelo navegador)
+  if (Date.now() - confirmaReset > 5000) {
+    confirmaReset = Date.now(); bt.classList.add('perigo'); bt.textContent = '⚠ Apagar ' + (s.xp || 0) + ' XP? Toque de novo';
+    setTimeout(() => { if (!emJogo && Date.now() - confirmaReset >= 5000) { bt.classList.remove('perigo'); telaInicial(EV.carregar()); } }, 5100);
+    return;
+  }
+  confirmaReset = 0; bt.classList.remove('perigo'); comecar(true);
+}; $('btCont').onclick = () => comecar(false);
   $('nome').addEventListener('keydown', e => { if (e.key === 'Enter') comecar(false); });
   est = EV.completar(null); est.livres = ILHAS.map((_, i) => i < 3); aplicarVisualBloqueio(); est = null;
   loop();
