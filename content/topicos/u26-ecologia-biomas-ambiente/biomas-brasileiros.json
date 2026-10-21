@@ -56,7 +56,7 @@
         "alta concentração de espécies endêmicas e grande perda da vegetação original"
       ],
       "correta": 4,
-      "explicacao": "O conceito de hotspot combina dois critérios: muitas espécies endêmicas (sobretudo plantas) e alto grau de ameaça, medido pela perda da vegetação original. Por isso Mata Atlântica e Cerrado são hotspots e a Amazônia, que preserva a maior parte da cobertura, não é. Tamanho, clima, solo ou riqueza sem endemismo não definem um hotspot.",
+      "explicacao": "O conceito de hotspot combina dois critérios: muitas espécies endêmicas (sobretudo plantas) e alto grau de ameaça, com muitas espécies em perigo, o que na lista mais usada é medido pela perda da vegetação original. Por isso Mata Atlântica e Cerrado são hotspots e a Amazônia, que preserva a maior parte da cobertura, não é. Tamanho, clima, solo ou riqueza sem endemismo não definem um hotspot.",
       "habilidade": "Aplicar os critérios que definem um hotspot.",
       "tags": [
         "hotspot",
@@ -94,11 +94,11 @@
         "as chuvas da região são escassas e não irrigam as plantações",
         "o solo amazônico é rico em alumínio, que só se torna tóxico depois do desmatamento",
         "as cinzas da queimada tornam o solo permanentemente salino",
-        "a maior parte dos nutrientes está na biomassa e na serrapilheira, e não no solo, que é pobre",
+        "a maior parte dos nutrientes está na biomassa das plantas, e não no solo, que é pobre porque a ciclagem é muito rápida",
         "a temperatura cai muito após a retirada da floresta"
       ],
       "correta": 3,
-      "explicacao": "Na floresta, os nutrientes circulam rápido entre a serrapilheira e as raízes. Desmatado, o solo é fertilizado pelas cinzas por pouco tempo, e as chuvas lavam o restante. A região é muito chuvosa, as cinzas não salinizam o solo e a temperatura não cai.",
+      "explicacao": "Na floresta pluvial tropical, cerca de três quartos dos nutrientes ficam nos troncos das árvores e só cerca de 10% no solo; a serrapilheira é decomposta em pouco tempo e os nutrientes voltam logo às raízes. Desmatado, o solo é fertilizado pelas cinzas por pouco tempo, e as chuvas lavam o restante. A região é muito chuvosa, as cinzas não salinizam o solo e a temperatura não cai.",
       "habilidade": "Relacionar ciclagem de nutrientes à fertilidade do solo amazônico.",
       "tags": [
         "Amazônia",
@@ -219,7 +219,7 @@
     {
       "id": "biomas-brasileiros-f01",
       "frente": "O que é um bioma?",
-      "verso": "Conjunto de ecossistemas com vegetação de aspecto semelhante, condicionado sobretudo por clima e solo, com fauna e flora características."
+      "verso": "Grande zona de vida reconhecida pelo tipo de vegetação predominante, determinada sobretudo pelo clima (temperatura e chuvas, incluindo sua distribuição no ano), com influência do solo e de perturbações como o fogo."
     },
     {
       "id": "biomas-brasileiros-f02",
@@ -234,7 +234,7 @@
     {
       "id": "biomas-brasileiros-f04",
       "frente": "Por que o solo amazônico perde a fertilidade após o desmatamento?",
-      "verso": "É pobre: os nutrientes estão na biomassa e na serrapilheira. Sem a floresta, as chuvas lavam o pouco que resta."
+      "verso": "É pobre: a maior parte dos nutrientes está na biomassa das árvores, e a serrapilheira é decomposta e reabsorvida rapidamente. Sem a floresta, as cinzas fertilizam por pouco tempo e as chuvas lavam o resto."
     },
     {
       "id": "biomas-brasileiros-f05",
@@ -290,6 +290,11 @@
       "id": "biomas-brasileiros-f15",
       "frente": "Quais biomas brasileiros são hotspots e por quê?",
       "verso": "Mata Atlântica e Cerrado: têm muitas espécies endêmicas e já perderam grande parte da vegetação original."
+    },
+    {
+      "id": "biomas-brasileiros-f16",
+      "frente": "Como o fogo ajuda a manter o Cerrado como savana?",
+      "verso": "O fogo é uma perturbação natural: mata plântulas e árvores jovens, mantém a vegetação aberta e libera nutrientes. Sem ele, partes da savana poderiam virar floresta."
     }
   ],
   "minijogos": {
@@ -401,7 +406,7 @@
       {
         "afirmacao": "O solo da maior parte da Amazônia é muito fértil.",
         "valor": false,
-        "explicacao": "Ele é pobre; a fertilidade está na biomassa e na ciclagem rápida da serrapilheira."
+        "explicacao": "Ele é pobre; a maior parte dos nutrientes está na biomassa das árvores, e a ciclagem é muito rápida."
       },
       {
         "afirmacao": "A Caatinga é um bioma exclusivamente brasileiro.",
@@ -436,7 +441,7 @@
       {
         "afirmacao": "A viviparidade das árvores de mangue permite que o propágulo caia já desenvolvido e se fixe no lodo.",
         "valor": true,
-        "explicacao": "O embrião começa a crescer ainda preso à planta-mãe."
+        "explicacao": "No mangue-vermelho, a semente tem pouco ácido abscísico (ABA) e germina ainda presa à planta-mãe."
       },
       {
         "afirmacao": "O juazeiro é uma árvore da Caatinga que mantém as folhas na seca graças a raízes profundas.",

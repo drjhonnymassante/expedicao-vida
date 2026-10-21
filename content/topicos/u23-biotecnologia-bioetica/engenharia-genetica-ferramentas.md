@@ -110,9 +110,9 @@ As vantagens em relação à insulina animal são grandes: produção em escala 
 
 ### Quando a bactéria não serve
 
-Muitas proteínas eucarióticas só funcionam depois de **modificadas após a tradução**, por exemplo recebendo cadeias de açúcar (**glicosilação**) no retículo endoplasmático e no complexo golgiense. Bactérias não têm esse sistema de membranas internas e não fazem essas modificações. Nesses casos, usam-se células **eucarióticas** como hospedeiras:
+Muitas proteínas eucarióticas só funcionam depois de **modificadas após a tradução**, por exemplo recebendo cadeias de açúcar (**glicosilação**) no retículo endoplasmático e no complexo golgiense (chamado de aparelho de Golgi no Campbell). Bactérias não têm esse sistema de membranas internas e não fazem essas modificações. Nesses casos, usam-se células **eucarióticas** como hospedeiras:
 
-- **Leveduras:** fungos unicelulares tão fáceis de cultivar quanto bactérias e que, raridade entre os eucariontes, também têm plasmídeos. Porém, nem sempre modificam corretamente proteínas de mamíferos.
+- **Leveduras:** fungos unicelulares tão fáceis de cultivar quanto bactérias e que, raridade entre os eucariontes (eucariotos, no Campbell), também têm plasmídeos. Porém, nem sempre modificam corretamente proteínas de mamíferos.
 - **Células de mamíferos cultivadas:** usadas quando a proteína humana exige modificações que nem as leveduras fazem direito.
 
 > 💡 **Dica de memorização:** "**Bactéria não corta íntron, então damos o gene já cortado.**" RNAm maduro + transcriptase reversa = cDNA, só com éxons.

@@ -31,9 +31,11 @@ Conhecer os biomas é entender de onde vem a água das cidades, por que o fogo �
 
 ## O que é um bioma
 
-**Bioma** é um conjunto de ecossistemas com vegetação de aspecto semelhante, condicionado principalmente pelo **clima** (temperatura e regime de chuvas) e pelo **solo**, e com fauna e flora características. O IBGE reconhece **seis biomas terrestres** no Brasil: Amazônia, Cerrado, Mata Atlântica, Caatinga, Pampa e Pantanal. Além deles, há o **Sistema Costeiro-Marinho**, que inclui manguezais, restingas, praias, costões rochosos e recifes.
+**Bioma** é uma grande zona de vida reconhecida pelo **tipo de vegetação predominante**, com fauna, fungos e microrganismos adaptados a ela. Quem define onde cada bioma aparece é sobretudo o **clima**: a temperatura média e a quantidade de chuva, mas também a **distribuição das chuvas ao longo do ano** (chuva bem distribuída ou estações seca e chuvosa marcadas). O **solo** e as **perturbações**, como o fogo, também pesam: queimadas frequentes, por exemplo, matam plantas lenhosas jovens e podem manter uma savana onde o clima permitiria uma floresta. Um gráfico que cruza temperatura e precipitação médias anuais de uma região, chamado **climograma** (ou gráfico climático), ajuda a prever o bioma esperado.
 
-A Amazônia ocupa quase metade do território, e o Cerrado, cerca de um quarto; Pampa e Pantanal são os menores. Entre biomas há **ecótonos**, zonas de transição com espécies dos dois lados, como a Mata dos Cocais (babaçu e carnaúba), no Maranhão e no Piauí, na transição entre Amazônia, Cerrado e Caatinga.
+O IBGE reconhece **seis biomas terrestres** no Brasil: Amazônia, Cerrado, Mata Atlântica, Caatinga, Pampa e Pantanal. Além deles, há o **Sistema Costeiro-Marinho**, que inclui manguezais, restingas, praias, costões rochosos e recifes.
+
+A Amazônia ocupa quase metade do território, e o Cerrado, cerca de um quarto; Pampa e Pantanal são os menores. Os limites entre biomas raramente são linhas nítidas: um bioma costuma penetrar no vizinho, formando **ecótonos**, zonas de transição (largas ou estreitas) com espécies dos dois lados, como a Mata dos Cocais (babaçu e carnaúba), no Maranhão e no Piauí, na transição entre Amazônia, Cerrado e Caatinga.
 
 > 🖼️ **Figura sugerida:** mapa do Brasil com os seis biomas terrestres em cores diferentes, a faixa costeira destacada e, para cada bioma, um ícone de espécie típica (castanheira, mico-leão-dourado, lobo-guará, mandacaru, tuiuiú, quero-quero).
 
@@ -42,8 +44,8 @@ A Amazônia ocupa quase metade do território, e o Cerrado, cerca de um quarto; 
 ### Amazônia
 
 - **Clima:** equatorial, quente e úmido o ano todo, com chuvas abundantes.
-- **Vegetação:** floresta ombrófila ("amiga da chuva") densa, com árvores altas, folhas largas e perenes, muitas epífitas e cipós. Distinguem-se a **mata de terra firme** (nunca alaga), a **mata de várzea** (alaga periodicamente com rios de água barrenta, ricos em sedimentos) e a **mata de igapó** (alagada boa parte do ano por rios de água escura, como o Negro).
-- **Solo:** **pobre** em nutrientes na maior parte da área. A riqueza está na própria biomassa: folhas e galhos que caem formam a **serrapilheira**, decomposta rapidamente pelo calor e pela umidade, e os nutrientes são logo reabsorvidos pelas raízes. Desmatado e queimado, o solo fica fértil por pouco tempo e logo se esgota.
+- **Vegetação:** floresta ombrófila ("amiga da chuva") densa, o tipo que a classificação mundial chama de **floresta pluvial tropical**. Tem árvores altas, folhas largas e perenes, muitas epífitas e cipós e é **estratificada**: árvores emergentes acima do dossel, o dossel fechado, estratos de árvores menores, arbustos e ervas. A competição por luz é intensa, e essa estratificação cria muitos hábitats, o que ajuda a explicar a enorme diversidade animal. Distinguem-se a **mata de terra firme** (nunca alaga), a **mata de várzea** (alaga periodicamente com rios de água barrenta, ricos em sedimentos) e a **mata de igapó** (alagada boa parte do ano por rios de água escura, como o Negro).
+- **Solo:** **pobre** em nutrientes na maior parte da área. A riqueza está na própria biomassa: em florestas pluviais tropicais, cerca de três quartos dos nutrientes do ecossistema ficam nos troncos das árvores e só cerca de 10% no solo. Folhas e galhos que caem formam a **serrapilheira** (grafada "serapilheira" no Campbell), mas ela quase não se acumula, porque o calor e a umidade fazem os decompositores agirem rápido (meses a poucos anos), e os nutrientes liberados são logo reabsorvidos pelas raízes. Ou seja, o solo é pobre porque a ciclagem é muito rápida, e não porque faltem nutrientes no ecossistema. Desmatado e queimado, o solo fica fértil por pouco tempo (graças às cinzas) e logo se esgota.
 - **Espécies típicas:** castanheira, seringueira, vitória-régia, açaí, onça-pintada, boto-cor-de-rosa, peixe-boi-amazônico, pirarucu, harpia.
 - **Papel no clima:** a enorme transpiração da floresta lança vapor de água na atmosfera, e parte dele é levada pelos ventos ao Centro-Oeste, Sudeste e Sul, nos chamados **rios voadores**, contribuindo para as chuvas dessas regiões.
 - **Ameaças:** desmatamento para pecuária e agricultura, queimadas, grilagem e garimpo ilegal, que contamina os rios com mercúrio.
@@ -66,7 +68,7 @@ A Amazônia ocupa quase metade do território, e o Cerrado, cerca de um quarto; 
 - **Vegetação:** é uma **savana**. Há um gradiente de formas, do **campo limpo** (só gramíneas) ao **campo sujo**, ao **cerrado típico** (árvores esparsas) e ao **cerradão** (formação mais fechada). Nas áreas com água aflorando aparecem as **veredas**, marcadas pelo buriti, e ao longo dos rios, as matas de galeria.
 - **Adaptações das plantas:** troncos **tortuosos**, casca grossa e **suberosa** (cortiça), folhas duras e coriáceas e raízes muito profundas que alcançam a água do subsolo mesmo na seca. Muitas plantas têm órgãos subterrâneos que rebrotam após o fogo.
 - **Por que as árvores são tortas?** O solo do Cerrado é **ácido**, pobre em nutrientes e rico em **alumínio**, que é tóxico para muitas plantas. Esse quadro gera o **escleromorfismo oligotrófico**: o aspecto "seco" das folhas e a tortuosidade estão ligados sobretudo à **pobreza do solo** e ao fogo, e não à falta de água, já que as raízes profundas garantem abastecimento.
-- **Fogo:** queimadas naturais, causadas por raios, fazem parte da dinâmica do Cerrado, e muitas espécies florescem ou dispersam sementes após o fogo. O problema são as queimadas humanas fora de época e em excesso.
+- **Fogo:** em ecologia, o fogo é uma **perturbação**, um evento que altera a comunidade ao remover organismos e liberar recursos. Queimadas naturais, causadas por raios, fazem parte da dinâmica das savanas: matam plântulas de árvores, ajudam a manter a vegetação aberta e liberam nutrientes, e muitas espécies florescem, rebrotam ou dispersam sementes após o fogo. O problema são as queimadas humanas fora de época e em excesso, que impedem a regeneração das árvores.
 - **"Berço das águas":** no Cerrado nascem rios que alimentam grandes bacias, como a do São Francisco, a do Tocantins-Araguaia e a do Paraná.
 - **Espécies típicas:** pequizeiro, ipê, buriti, barbatimão, lobo-guará, tamanduá-bandeira, ema, seriema.
 - **Ameaças:** a conversão em lavouras (principalmente soja e milho) e pastagens já eliminou cerca de metade da vegetação original.
@@ -75,10 +77,10 @@ A Amazônia ocupa quase metade do território, e o Cerrado, cerca de um quarto; 
 
 - **Bioma exclusivamente brasileiro**, no semiárido do Nordeste e do norte de Minas Gerais.
 - **Clima:** semiárido, quente, com chuvas **escassas e irregulares**, concentradas em poucos meses. Os rios costumam ser **intermitentes** (secam em parte do ano).
-- **Vegetação:** **xerófila** (adaptada à seca). O nome, de origem tupi, significa "mata branca", aspecto que a vegetação assume na seca, quando a maioria das árvores perde as folhas.
+- **Vegetação:** **xerófila** (adaptada à seca). O nome, de origem tupi, significa "mata branca", aspecto que a vegetação assume na seca, quando a maioria das árvores perde as folhas. Na classificação mundial dos biomas, lembra as **florestas secas tropicais**, em que muitas árvores perdem as folhas na estação seca e arbustos espinhosos e plantas suculentas são comuns. Não é um deserto: chove mais do que nos desertos, que costumam receber menos de 300 mm por ano.
 - **Adaptações:**
   - **Caducifolia:** perder as folhas na seca reduz a perda de água por transpiração.
-  - **Folhas transformadas em espinhos** e caules suculentos que armazenam água nas cactáceas (mandacaru, xique-xique, facheiro); o caule verde faz a fotossíntese.
+  - **Folhas transformadas em espinhos** e caules suculentos que armazenam água nas cactáceas (mandacaru, xique-xique, facheiro); o caule verde faz a fotossíntese. Muitas suculentas fazem **fotossíntese MAC** (CAM): abrem os estômatos à noite, quando perdem menos água. Curiosidade: euforbiáceas de desertos africanos são muito parecidas com cactos sem serem parentes próximos, um caso de **evolução convergente** causada por ambientes semelhantes.
   - **Órgãos subterrâneos de reserva**, como as batatas do umbuzeiro, que acumulam água e nutrientes.
 - **Espécies típicas:** mandacaru, juazeiro (que mantém as folhas mesmo na seca, graças a raízes profundas), umbuzeiro, aroeira, asa-branca, tatu-bola, ararinha-azul.
 - **Ameaças:** desmatamento para lenha e carvão, pastoreio excessivo e **desertificação** em núcleos onde o solo exposto se degrada.
@@ -108,14 +110,14 @@ A Amazônia ocupa quase metade do território, e o Cerrado, cerca de um quarto; 
 
 ### Manguezais
 
-Ocorrem em **estuários**, onde a água do rio encontra o mar, do Amapá a Santa Catarina. A água é **salobra**, o solo é **lodoso**, pobre em oxigênio e encharcado, e as marés sobem e descem diariamente. Poucas espécies de árvores toleram essas condições, e elas exibem adaptações marcantes:
+Ocorrem em **estuários**, zonas de transição onde a água do rio encontra o mar e a salinidade varia com o local e com as marés, do Amapá a Santa Catarina. A água é **salobra**, o solo é **lodoso**, pobre em oxigênio e encharcado, e as marés sobem e descem diariamente. Poucas espécies de árvores toleram essas condições, e elas exibem adaptações marcantes:
 
 - **Rizóforos** (raízes-escora), no mangue-vermelho (*Rhizophora*), sustentam a planta no lodo instável.
-- **Pneumatóforos**, raízes que crescem para cima e saem do lodo, no mangue-preto (*Avicennia*), facilitam a troca de gases em solo com pouco oxigênio.
+- **Pneumatóforos** (raízes respiratórias), raízes que crescem para cima e saem do lodo, no mangue-preto (*Avicennia*): expostos na maré baixa, permitem que o sistema de raízes obtenha o oxigênio que falta na lama encharcada.
 - **Glândulas de sal** nas folhas de algumas espécies eliminam o excesso de sal.
-- **Viviparidade:** o embrião começa a se desenvolver ainda preso à planta-mãe, e o propágulo cai pronto para se fixar no lodo.
+- **Viviparidade:** no mangue-vermelho, a semente tem pouco ácido abscísico (ABA, o hormônio que mantém a semente dormente) e germina ainda presa à planta-mãe; o propágulo cai já desenvolvido, pronto para se fixar no lodo macio.
 
-O manguezal é um **berçário**: muitos peixes e crustáceos marinhos passam ali a fase jovem, protegidos e bem alimentados pela matéria orgânica abundante. O caranguejo-uçá sustenta comunidades tradicionais. Os manguezais também protegem a costa contra a erosão e estocam muito carbono. São Áreas de Preservação Permanente, mas sofrem com aterros, esgoto e criação de camarão.
+Os estuários estão entre os ambientes mais produtivos do planeta, graças aos nutrientes trazidos pelos rios. O manguezal é um **berçário**: muitos peixes e crustáceos marinhos se reproduzem ou passam ali a fase jovem, protegidos e bem alimentados pela matéria orgânica abundante. O caranguejo-uçá sustenta comunidades tradicionais. Os manguezais também protegem a costa contra a erosão e estocam muito carbono. São Áreas de Preservação Permanente, mas sofrem com aterros, esgoto e criação de camarão.
 
 ### Restingas
 
@@ -127,10 +129,12 @@ São formações sobre **planícies arenosas** litorâneas. A vegetação vai de
 
 Uma **espécie endêmica** é aquela que vive **naturalmente apenas em uma determinada região**. O mico-leão-dourado é endêmico da Mata Atlântica do Rio de Janeiro; a ararinha-azul, da Caatinga. Se uma área rica em endemismos for destruída, essas espécies desaparecem do planeta.
 
-**Hotspots de biodiversidade** são regiões que reúnem dois critérios ao mesmo tempo:
+**Hotspots de biodiversidade** são áreas relativamente pequenas que reúnem dois critérios ao mesmo tempo:
 
 1. **Alta concentração de espécies endêmicas**, especialmente de plantas;
-2. **Grande perda da vegetação original**, ou seja, elevado grau de ameaça.
+2. **Alto grau de ameaça**: muitas espécies em perigo de extinção, o que, na lista mais usada (da ONG Conservação Internacional), é medido pela **grande perda da vegetação original** (pelo menos 70%).
+
+Os hotspots terrestres ocupam uma fração mínima das terras do planeta, mas abrigam uma parcela enorme das espécies de plantas e vertebrados; por isso são escolhas prioritárias para criar unidades de conservação. Existem também hotspots aquáticos, como recifes de coral.
 
 No Brasil, dois biomas são reconhecidos como hotspots: a **Mata Atlântica** e o **Cerrado**. A Amazônia, apesar de riquíssima, **não** é hotspot porque ainda mantém a maior parte de sua cobertura original. Isso não quer dizer que esteja segura: o conceito serve para priorizar a conservação onde a ameaça é mais urgente.
 
@@ -147,7 +151,8 @@ No Brasil, dois biomas são reconhecidos como hotspots: a **Mata Atlântica** e 
 - **"A Amazônia é o pulmão do mundo."** Impreciso. A floresta madura consome, na respiração, quase todo o oxigênio que produz; sua importância está na biodiversidade, no estoque de carbono e no ciclo da água.
 - **"As árvores do Cerrado são tortas por falta de água."** O principal fator é o solo pobre e rico em alumínio, além do fogo.
 - **"A Caatinga é um deserto."** Não. É uma vegetação semiárida, com alta biodiversidade e muitas espécies endêmicas.
-- **"Hotspot é qualquer lugar com muitas espécies."** Hotspot exige endemismo alto **e** grande perda da vegetação original.
+- **"Hotspot é qualquer lugar com muitas espécies."** Hotspot exige endemismo alto **e** alto grau de ameaça (grande perda da vegetação original).
+- **"Plantas parecidas em regiões secas de continentes diferentes são sempre parentes."** Nem sempre: cactos americanos e euforbiáceas africanas se parecem por evolução convergente, não por parentesco.
 - **"Pampa e Cerrado são florestas degradadas."** Não. Campos e savanas são comunidades naturais, adaptadas a seus climas e solos.
 
 ## Resumo relâmpago
@@ -171,3 +176,7 @@ No Brasil, dois biomas são reconhecidos como hotspots: a **Mata Atlântica** e 
 - [[conservacao-sustentabilidade]]: unidades de conservação, corredores ecológicos e espécies ameaçadas.
 - [[poluicao-agua-solo]]: desmatamento, queimadas, erosão e desertificação.
 - [[raiz-caule-folha]]: raízes respiratórias, raízes-escora e outras adaptações dos órgãos vegetais.
+
+## Referência
+
+- Urry, L. A. et al. *Biologia de Campbell*. 10. ed. Porto Alegre: Artmed, 2015. Capítulos 52 (clima e biomas terrestres e aquáticos), 55 (ciclagem de nutrientes) e 56 (hotspots de biodiversidade); apoio nos capítulos 35 (pneumatóforos) e 39 (germinação precoce do mangue-vermelho).

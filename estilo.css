@@ -11,6 +11,8 @@ a { color: var(--neon); }
 nav.topo { position: sticky; top: 0; z-index: 20; backdrop-filter: blur(14px); background: rgba(11,20,36,.7); border-bottom: 1px solid var(--borda); }
 nav.topo .cont { display: flex; align-items: center; gap: 18px; height: 64px; }
 .logo { font-family: Fredoka; font-weight: 700; font-size: 21px; color: #fff; text-decoration: none; display: flex; align-items: center; gap: 8px; }
+.logo img { height: 42px; width: auto; display: block; }
+@media (max-width: 600px) { .logo img { height: 34px; } }
 .logo span { background: linear-gradient(90deg, var(--neon), var(--azul)); -webkit-background-clip: text; background-clip: text; color: transparent; }
 nav.topo .links { margin-left: auto; display: flex; gap: 18px; align-items: center; }
 nav.topo .links a { color: var(--sub); text-decoration: none; font-weight: 700; font-size: 14.5px; }

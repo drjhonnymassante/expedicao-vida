@@ -191,3 +191,7 @@ Espécies-chave nem sempre são predadores. Dispersores de sementes também pode
 - [[fermentacao-quimiossintese]]: a quimiossíntese sustenta cadeias sem luz.
 - [[relacoes-ecologicas]]: predação, herbivoria e controle biológico de pragas.
 - [[poluicao-agua-solo]]: mercúrio, agrotóxicos e contaminação dos ambientes.
+
+## Referência
+
+- Urry, L. A. et al. *Biologia de Campbell*. 10. ed. Porto Alegre: Artmed, 2015. Capítulos 54 (conceito 54.2), 55 (conceitos 55.1 a 55.3) e 56 (toxinas no ambiente).

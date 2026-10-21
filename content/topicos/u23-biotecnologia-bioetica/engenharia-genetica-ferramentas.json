@@ -192,7 +192,7 @@
       "id": "engenharia-genetica-ferramentas-q10",
       "nivel": "diamante",
       "tipo": "multipla_escolha",
-      "enunciado": "Um laboratório pretende produzir em bactérias uma proteína humana de 120 aminoácidos. A equipe inseriu em um plasmídeo o cDNA correspondente, ao lado de um promotor bacteriano, e confirmou que as bactérias transformadas transcrevem e traduzem esse gene. Ainda assim, a proteína obtida não tem atividade biológica. Em células humanas, essa proteína recebe cadeias de açúcar (glicosilação) no retículo endoplasmático e no complexo golgiense antes de se tornar funcional. Considerando essas informações, a hipótese mais coerente e a alternativa mais adequada são:",
+      "enunciado": "Um laboratório pretende produzir em bactérias uma proteína humana de 120 aminoácidos. A equipe inseriu em um plasmídeo o cDNA correspondente, ao lado de um promotor bacteriano, e confirmou que as bactérias transformadas transcrevem e traduzem esse gene. Ainda assim, a proteína obtida não tem atividade biológica. Em células humanas, essa proteína recebe cadeias de açúcar (glicosilação) no retículo endoplasmático e no complexo golgiense antes de se tornar funcional. Considerando essas informações, a hipótese mais coerente e a solução mais adequada são:",
       "alternativas": [
         "o cDNA ainda contém íntrons; a solução é usar o gene genômico completo",
         "o código genético bacteriano lê os códons humanos de outra forma; a solução é trocar todos os códons do gene",

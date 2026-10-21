@@ -35,7 +35,7 @@
         "cogumelos de chapéu"
       ],
       "correta": 3,
-      "explicacao": "Os liquens (associação mutualística entre fungo e alga ou cianobactéria) suportam secura e falta de nutrientes, fixam-se na rocha e liberam ácidos que ajudam a desagregá-la, iniciando a formação do solo. Fetos arborescentes (samambaias), cactos e capins precisam de algum solo para se estabelecer, e cogumelos de chapéu são decompositores que dependem de matéria orgânica.",
+      "explicacao": "Os liquens (associação mutualística entre fungo e alga ou cianobactéria) suportam secura e falta de nutrientes, penetram na rocha e a atacam quimicamente, retêm poeira trazida pelo vento e, em alguns casos, fixam nitrogênio, iniciando a formação do solo. Junto com os musgos, são em geral os primeiros fotossintetizantes visíveis a colonizar a rocha (antes deles, há apenas microrganismos). Fetos arborescentes (samambaias), cactos e capins precisam de algum solo para se estabelecer, e cogumelos de chapéu são decompositores que dependem de matéria orgânica.",
       "habilidade": "Identificar espécies pioneiras e seu papel.",
       "tags": [
         "pioneiras",
@@ -116,7 +116,7 @@
         "regressão da comunidade a um estágio anterior"
       ],
       "correta": 1,
-      "explicacao": "As pioneiras criam sombra, umidade e matéria orgânica, o que favorece espécies tolerantes à sombra e desfavorece as próprias pioneiras, exigentes em luz. Uma clareira tem solo (sucessão secundária), não há predação entre árvores e a comunidade avança, em vez de regredir.",
+      "explicacao": "As pioneiras criam sombra, umidade e matéria orgânica, o que favorece espécies tolerantes à sombra e desfavorece as próprias pioneiras, exigentes em luz: é a facilitação, um dos três processos (com a inibição e a tolerância) que podem ligar pioneiras e espécies tardias. Uma clareira tem solo (sucessão secundária), não há predação entre árvores e a comunidade avança, em vez de regredir.",
       "habilidade": "Aplicar o conceito de facilitação a um exemplo brasileiro.",
       "tags": [
         "facilitação",
@@ -137,7 +137,7 @@
         "A área A só emite carbono, porque suas árvores já não fazem fotossíntese"
       ],
       "correta": 3,
-      "explicacao": "Comunidades em crescimento têm produção maior que a respiração total (P/R > 1) e acumulam biomassa, funcionando como sumidouro de carbono. No clímax, a produção é quase toda consumida pela respiração da comunidade, e o balanço líquido tende a zero. Muita biomassa não significa absorção líquida alta; árvores maduras continuam fazendo fotossíntese; e a floresta jovem não é emissora líquida.",
+      "explicacao": "Comunidades em crescimento têm produção maior que a respiração total (P/R > 1) e acumulam biomassa, funcionando como sumidouro de carbono: a produção líquida do ecossistema (PLE = PPB menos a respiração de todos os organismos) é positiva. No clímax, a produção é quase toda consumida pela respiração da comunidade, e a PLE tende a zero. Muita biomassa não significa absorção líquida alta; árvores maduras continuam fazendo fotossíntese; e a floresta jovem não é emissora líquida.",
       "habilidade": "Interpretar dados de balanço de carbono à luz das fases da sucessão.",
       "tags": [
         "produtividade líquida",
@@ -214,7 +214,7 @@
     {
       "id": "sucessao-ecologica-f01",
       "frente": "O que é sucessão ecológica?",
-      "verso": "A substituição gradual e ordenada de comunidades em um local ao longo do tempo, até um estado relativamente estável (clímax)."
+      "verso": "A substituição gradual de espécies em um local ao longo do tempo, após uma perturbação (distúrbio), até um estado relativamente estável (clímax)."
     },
     {
       "id": "sucessao-ecologica-f02",
@@ -229,12 +229,12 @@
     {
       "id": "sucessao-ecologica-f04",
       "frente": "Quem são os pioneiros clássicos em rocha nua?",
-      "verso": "Os liquens (associação mutualística de fungo com alga ou cianobactéria), seguidos por musgos."
+      "verso": "Depois dos microrganismos (bactérias e protistas), os liquens (associação mutualística de fungo com alga ou cianobactéria) e os musgos, que nascem de esporos trazidos pelo vento."
     },
     {
       "id": "sucessao-ecologica-f05",
       "frente": "Como os liquens iniciam a formação do solo?",
-      "verso": "Liberam ácidos que desagregam a rocha, e seus restos orgânicos se misturam às partículas minerais."
+      "verso": "Penetram na rocha e a atacam quimicamente, retêm poeira trazida pelo vento e alguns fixam nitrogênio; seus restos decompostos se misturam às partículas minerais."
     },
     {
       "id": "sucessao-ecologica-f06",
@@ -264,7 +264,7 @@
     {
       "id": "sucessao-ecologica-f11",
       "frente": "Como fica a produtividade líquida da comunidade no clímax?",
-      "verso": "Tende a zero: a respiração de produtores, consumidores e decompositores consome quase toda a produção (P/R ≈ 1)."
+      "verso": "Tende a zero: a respiração de produtores, consumidores e decompositores consome quase toda a produção (P/R ≈ 1). O Campbell chama essa sobra de produção líquida do ecossistema (PLE = PPB − R total)."
     },
     {
       "id": "sucessao-ecologica-f12",
@@ -280,6 +280,16 @@
       "id": "sucessao-ecologica-f14",
       "frente": "Por que plantar pioneiras junto com não pioneiras na restauração?",
       "verso": "As pioneiras crescem rápido, sombreiam e controlam o capim; as não pioneiras crescem à sombra e formam a mata madura."
+    },
+    {
+      "id": "sucessao-ecologica-f15",
+      "frente": "Facilitação, inibição e tolerância",
+      "verso": "Formas pelas quais as pioneiras afetam as espécies tardias: ajudam (facilitação), atrapalham (inibição) ou não interferem (tolerância)."
+    },
+    {
+      "id": "sucessao-ecologica-f16",
+      "frente": "O que diz a hipótese do distúrbio intermediário?",
+      "verso": "Perturbações de intensidade e frequência moderadas mantêm mais espécies do que perturbações muito fortes ou muito raras."
     }
   ],
   "minijogos": {
@@ -422,6 +432,11 @@
         "afirmacao": "Na restauração ecológica, plantar espécies exóticas é tão eficaz quanto plantar nativas da região.",
         "valor": false,
         "explicacao": "Exóticas não reconstroem a comunidade original nem oferecem os mesmos recursos à fauna local."
+      },
+      {
+        "afirmacao": "Na sucessão, as espécies pioneiras sempre facilitam a chegada das espécies seguintes.",
+        "valor": false,
+        "explicacao": "Além da facilitação, as pioneiras podem inibir as tardias ou simplesmente não interferir (tolerância)."
       }
     ]
   },

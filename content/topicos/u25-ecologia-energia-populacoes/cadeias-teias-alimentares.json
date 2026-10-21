@@ -254,8 +254,8 @@
     },
     {
       "id": "cadeias-teias-alimentares-f09",
-      "frente": "Por que as cadeias raramente passam de 4 ou 5 níveis?",
-      "verso": "Porque a energia disponível diminui muito a cada nível e não sustenta muitos degraus."
+      "frente": "Por que as cadeias alimentares costumam ser curtas (em geral, cinco ligações ou menos)?",
+      "verso": "Pela hipótese energética: só cerca de 10% da energia passa de um nível ao seguinte, e logo não sobra energia para sustentar mais degraus."
     },
     {
       "id": "cadeias-teias-alimentares-f10",
@@ -440,7 +440,7 @@
       {
         "afirmacao": "O DDT foi associado a ovos de casca fina em aves predadoras.",
         "valor": true,
-        "explicacao": "O DDT e seus derivados alteram o metabolismo do cálcio nessas aves."
+        "explicacao": "O DDT e seu produto de degradação (DDE), acumulados nas aves do topo da teia, atrapalhavam a deposição de cálcio na casca dos ovos, que se quebravam durante a incubação."
       },
       {
         "afirmacao": "Comer em níveis tróficos mais altos aproveita melhor a energia do ecossistema.",

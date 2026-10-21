@@ -76,13 +76,16 @@
   .vazio { color:var(--cinza); text-align:center; padding:60px 20px; }
   @media (max-width: 800px) { .layout { grid-template-columns:1fr; } nav { position:static; max-height:45vh; } .xpbar { width:70px; } header h1 { font-size:14px; } }
 </style>
+<link rel="icon" href="compartilhado/marca/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="compartilhado/marca/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="compartilhado/marca/apple-touch-icon.png">
 <script src="vendor/supabase.js"></script>
 <script src="../config.js"></script>
 <script src="compartilhado/sessao.js"></script>
 </head>
 <body>
 <header>
-  <h1>🧬 Evonauta <small style="color:var(--cinza);font-weight:400">· prévia do conteúdo</small></h1>
+  <h1 style="margin:0;display:flex;align-items:center;gap:10px"><img src="compartilhado/marca/logo-evonauta-claro.svg" alt="Evonauta Educação" style="height:38px;width:auto;display:block"><small style="color:var(--cinza);font-weight:400;font-size:14px">aulas</small></h1>
   <a href="mundo3d/" style="margin-left:16px;background:#6A1B9A;color:#fff;padding:7px 12px;border-radius:10px;font-size:13px;font-weight:600;text-decoration:none;white-space:nowrap">🗺️ Mundo aberto</a>
   <div class="hud" title="HUD de demonstração (XP salvo só neste navegador)">
     <canvas class="avatar" id="avatar" width="76" height="76"></canvas>

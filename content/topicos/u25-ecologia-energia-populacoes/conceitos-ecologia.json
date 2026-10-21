@@ -94,7 +94,7 @@
         "faz com que uma das espécies seja necessariamente extinta pela outra"
       ],
       "correta": 3,
-      "explicacao": "As aves dividem o mesmo hábitat, mas o horário de atividade é uma dimensão do nicho. Explorar as presas em horários diferentes diminui a sobreposição de nichos e a competição. São espécies diferentes (não formam uma população) e a exclusão competitiva só tende a ocorrer com sobreposição intensa.",
+      "explicacao": "As aves dividem o mesmo hábitat, mas o horário de atividade é uma dimensão do nicho. Explorar as presas em horários diferentes é um caso de partição de recursos: diminui a sobreposição de nichos e a competição. São espécies diferentes (não formam uma população), e a exclusão competitiva só é esperada quando os nichos são idênticos.",
       "habilidade": "Relacionar sobreposição de nichos à competição.",
       "tags": [
         "nicho",
@@ -114,7 +114,7 @@
         "um fator que só afeta animais"
       ],
       "correta": 2,
-      "explicacao": "O fósforo é o recurso disponível em menor quantidade em relação à necessidade da planta; por isso, aumentar a água não aumenta a produção: ele é o fator limitante (lei do mínimo). O fósforo é abiótico, vem do solo e não do ar, e é essencial para as plantas (ATP, DNA, fosfolipídios).",
+      "explicacao": "O fósforo é o recurso disponível em menor quantidade em relação à necessidade da planta; por isso, aumentar a água (que não é limitante) não aumenta a produção. Ele é o fator limitante: é o nutriente que precisa ser adicionado para a produção crescer. O fósforo é abiótico, vem do solo e não do ar, e é essencial para as plantas (ATP, DNA, fosfolipídios).",
       "habilidade": "Identificar fatores limitantes.",
       "tags": [
         "fator limitante",
@@ -198,7 +198,7 @@
         "o nicho efetivo da espécie A é menor que o seu nicho fundamental por causa da competição com B, enquanto a espécie B é limitada na faixa superior por um fator abiótico (a dessecação)"
       ],
       "correta": 4,
-      "explicacao": "A espécie A consegue viver na faixa inferior quando B está ausente; logo, seu nicho fundamental é maior que o efetivo, reduzido pela competição com B (fator biótico). Já B não ocupa a faixa superior nem sem A, porque não tolera a dessecação (fator abiótico). As duas espécies competem onde suas faixas se encontram, e não há predação entre cracas.",
+      "explicacao": "A espécie A consegue viver na faixa inferior quando B está ausente; logo, seu nicho fundamental é maior que o efetivo (realizado), reduzido pela competição com B (fator biótico). Já B não ocupa a faixa superior nem sem A, porque não tolera a dessecação (fator abiótico); assim, o nicho realizado de B fica praticamente igual ao seu nicho fundamental. As duas espécies competem onde suas faixas se encontram, e não há predação entre cracas. Esse é o experimento clássico de Joseph Connell com cracas na costa da Escócia.",
       "habilidade": "Integrar nicho fundamental e efetivo, competição e fatores abióticos na análise de um experimento.",
       "tags": [
         "nicho fundamental",
@@ -253,12 +253,12 @@
     {
       "id": "conceitos-ecologia-f09",
       "frente": "O que acontece quando os nichos de duas espécies se sobrepõem muito?",
-      "verso": "A competição entre elas se intensifica; pode haver exclusão competitiva (princípio de Gause)."
+      "verso": "A competição entre elas se intensifica; se os nichos forem idênticos, uma delas tende a ser eliminada do local (exclusão competitiva, princípio de Gause)."
     },
     {
       "id": "conceitos-ecologia-f10",
-      "frente": "Nicho fundamental x nicho efetivo",
-      "verso": "Fundamental: tudo o que a espécie poderia ocupar sem competidores nem predadores. Efetivo: o que ela de fato ocupa, em geral menor."
+      "frente": "Nicho fundamental x nicho efetivo (realizado)",
+      "verso": "Fundamental: o nicho potencial, tudo o que a espécie poderia ocupar sem competidores. Efetivo ou realizado: a parte que ela de fato ocupa, em geral menor por causa das interações com outras espécies."
     },
     {
       "id": "conceitos-ecologia-f11",
@@ -268,17 +268,27 @@
     {
       "id": "conceitos-ecologia-f12",
       "frente": "O que é fator limitante?",
-      "verso": "O fator mais próximo do limite de tolerância da espécie (por falta ou por excesso), que restringe seu crescimento ou sobrevivência."
+      "verso": "O fator mais próximo do limite de tolerância da espécie (por falta ou por excesso), que restringe seu crescimento ou sobrevivência. Um nutriente limitante é aquele que precisa ser adicionado para a produção aumentar."
     },
     {
       "id": "conceitos-ecologia-f13",
       "frente": "O que é ecótono?",
-      "verso": "Zona de transição entre duas comunidades vizinhas, como a faixa entre Cerrado e Amazônia."
+      "verso": "Zona de transição entre dois tipos de hábitat, comunidades ou ecossistemas vizinhos, como a faixa entre Cerrado e Amazônia."
     },
     {
       "id": "conceitos-ecologia-f14",
       "frente": "Efeito de borda na fragmentação florestal",
-      "verso": "Bordas recebem mais luz, vento e calor e perdem umidade; árvores grandes morrem e espécies de interior declinam."
+      "verso": "Bordas recebem mais luz, vento e calor e perdem umidade; árvores grandes morrem, espécies generalistas de borda aumentam e espécies de interior declinam."
+    },
+    {
+      "id": "conceitos-ecologia-f15",
+      "frente": "O que é partição de recursos?",
+      "verso": "A divisão dos recursos entre espécies parecidas (alimento, local ou horário diferentes), que reduz a competição e permite que coexistam."
+    },
+    {
+      "id": "conceitos-ecologia-f16",
+      "frente": "Para que servem os corredores ecológicos?",
+      "verso": "Ligam fragmentos de hábitat isolados (ex.: matas ciliares), permitindo a troca de indivíduos entre populações e reduzindo o endocruzamento."
     }
   ],
   "minijogos": {
@@ -424,6 +434,11 @@
         "afirmacao": "O nicho efetivo de uma espécie costuma ser maior que o seu nicho fundamental.",
         "valor": false,
         "explicacao": "É o contrário: as interações com outras espécies reduzem o nicho efetivo."
+      },
+      {
+        "afirmacao": "Pelo princípio da exclusão competitiva, duas espécies com nichos idênticos não coexistem permanentemente no mesmo local.",
+        "valor": true,
+        "explicacao": "Mesmo uma pequena vantagem leva à eliminação local da competidora mais fraca, como Gause observou com paramécios."
       }
     ]
   },
