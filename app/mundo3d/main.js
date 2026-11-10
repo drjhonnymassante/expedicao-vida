@@ -1,6 +1,7 @@
 // Expedição Vida 3D — arquipélago explorável em Three.js.
 // Cada unidade do currículo é uma ilha; cada tópico, uma estação com NPC, missão e desafio.
 import * as THREE from 'three';
+import { criarVisual, toon } from './visual.js';
 
 const { FORMAS, nivelDe, formaDe } = window.Avatar2D;
 const EV = window.EstadoVida;
@@ -10,31 +11,31 @@ const COLS = 7, ESPACO = 64;
 
 // Temas visuais por unidade (mesmos da versão leve).
 const TEMAS = {
-  'u01-origem-da-vida':            { chao: ['#5d8a7f', '#527d72'], borda: '#3b4a4f', dec: ['rocha', 'fumarola', 'estromatolito'], folha: '#2e7d6b', agua: '#2b6f8f', denso: .08, lago: .58 },
-  'u02-bioquimica':                { chao: ['#8a8f99', '#7d828c'], borda: '#4a4e57', dec: ['cristal', 'rocha', 'cristal'], cristal: '#4dd0e1', agua: '#3f6f9a', denso: .10, lago: .74 },
+  'u01-origem-da-vida':            { chao: ['#5d8a7f', '#527d72'], borda: '#3b4a4f', dec: ['rocha', 'fumarola', 'estromatolito'], folha: '#2e7d6b', agua: '#2b6f8f', denso: .08, lago: .58, ambiente: '#9fc3b5', gramaDens: .5 },
+  'u02-bioquimica':                { chao: ['#8a8f99', '#7d828c'], borda: '#4a4e57', dec: ['cristal', 'rocha', 'cristal'], cristal: '#4dd0e1', agua: '#3f6f9a', denso: .10, lago: .74, ambiente: '#9aa3b4' },
   'u03-citologia':                 { chao: ['#cfe8c8', '#c2deba'], borda: '#6d9f71', dec: ['bolha', 'arbusto', 'bolha'], folha: '#66bb6a', agua: '#4fa8d8', denso: .07, lago: .5 },
   'u04-metabolismo-energetico':    { chao: ['#d9c46a', '#cdb85f'], borda: '#8a7a2c', dec: ['painel', 'arvore', 'rocha'], folha: '#7cb342', agua: '#3d8fb5', denso: .08, lago: .72 },
   'u05-nucleo-sintese-proteica':   { chao: ['#9b86c4', '#8e79b8'], borda: '#4e3d78', dec: ['torre', 'cristal', 'arbusto'], cristal: '#f48fb1', folha: '#7e57c2', agua: '#5c6bc0', denso: .07, lago: .74 },
-  'u06-divisao-celular':           { chao: ['#bfe3ef', '#b2d8e6'], borda: '#5f8fa3', dec: ['cristal', 'bolha', 'rocha'], cristal: '#b3e5fc', agua: '#4a90c2', denso: .08, lago: .66 },
+  'u06-divisao-celular':           { chao: ['#bfe3ef', '#b2d8e6'], borda: '#5f8fa3', dec: ['cristal', 'bolha', 'rocha'], cristal: '#b3e5fc', agua: '#4a90c2', denso: .08, lago: .66, grama: '#9fdbe9', gramaDens: .35 },
   'u07-reproducao-embriologia':    { chao: ['#7fb06a', '#73a35f'], borda: '#3f6b35', dec: ['arvore', 'ninho', 'flor', 'arvore'], folha: '#388e3c', agua: '#3b86b0', denso: .14, lago: .7 },
   'u08-histologia-animal':         { chao: ['#e3cfb0', '#d8c3a3'], borda: '#8d6e52', dec: ['casa', 'arbusto', 'flor'], folha: '#8bc34a', agua: '#4a8fbf', denso: .07, lago: .78 },
   'u09-classificacao-sistematica': { chao: ['#6f9e58', '#64924f'], borda: '#3b5e2c', dec: ['arvore', 'arvore', 'pinheiro'], folha: '#2e7d32', agua: '#3b86b0', denso: .17, lago: .76 },
-  'u10-virus':                     { chao: ['#a98f8f', '#9c8282'], borda: '#5d4545', dec: ['ruina', 'rocha', 'cristal'], cristal: '#ef5350', agua: '#5a7a96', denso: .09, lago: .76 },
+  'u10-virus':                     { chao: ['#a98f8f', '#9c8282'], borda: '#5d4545', dec: ['ruina', 'rocha', 'cristal'], cristal: '#ef5350', agua: '#5a7a96', denso: .09, lago: .76, ambiente: '#b59a9a', grama: '#8a6f6f', gramaDens: .3 },
   'u11-procariontes':              { chao: ['#b99a6b', '#ad8e60'], borda: '#6b5232', dec: ['estromatolito', 'rocha', 'arbusto'], folha: '#9e9d24', agua: '#3f88a8', denso: .09, lago: .6 },
   'u12-protistas-fungos':          { chao: ['#557a4b', '#4b6e42'], borda: '#2f4a2a', dec: ['cogumelo', 'arbusto', 'cogumelo', 'arvore'], folha: '#33691e', agua: '#466f6a', denso: .14, lago: .56 },
-  'u13-parasitologia':             { chao: ['#6f6a80', '#655f75'], borda: '#3a3548', dec: ['cogumelo', 'arvore', 'rocha'], folha: '#4a4f3a', agua: '#4f5f63', denso: .12, lago: .52 },
+  'u13-parasitologia':             { chao: ['#6f6a80', '#655f75'], borda: '#3a3548', dec: ['cogumelo', 'arvore', 'rocha'], folha: '#4a4f3a', agua: '#4f5f63', denso: .12, lago: .52, ambiente: '#5e6a6e', gramaDens: .8 },
   'u14-botanica-diversidade':      { chao: ['#8cc56d', '#80b862'], borda: '#4b7a36', dec: ['flor', 'pinheiro', 'arvore', 'flor', 'samambaia'], folha: '#43a047', agua: '#3b9bc4', denso: .14, lago: .74 },
   'u15-botanica-fisiologia':       { chao: ['#5f9a4e', '#558d45'], borda: '#2f5a26', dec: ['arvore', 'arvore', 'samambaia'], folha: '#1b5e20', agua: '#3b86b0', denso: .19, lago: .78 },
-  'u16-invertebrados':             { chao: ['#ecd9a8', '#e2cd99'], borda: '#a38b52', dec: ['coral', 'concha', 'coral', 'rocha'], agua: '#26a6c9', denso: .1, lago: .46 },
+  'u16-invertebrados':             { chao: ['#ecd9a8', '#e2cd99'], borda: '#a38b52', dec: ['coral', 'concha', 'coral', 'rocha'], agua: '#26a6c9', denso: .1, lago: .46, grama: '#7fc9b0', gramaDens: .4 },
   'u17-vertebrados':               { chao: ['#a7c46b', '#9bb860'], borda: '#5f7a34', dec: ['arvore', 'rocha', 'arbusto'], folha: '#558b2f', agua: '#3b92bd', denso: .09, lago: .62 },
-  'u18-fisiologia-humana-manutencao': { chao: ['#e9b7b7', '#e0a9a9'], borda: '#a05a5a', dec: ['celula', 'bolha', 'celula'], agua: '#c45b6a', denso: .09, lago: .7 },
-  'u19-fisiologia-humana-controle': { chao: ['#d9dfe6', '#cbd3dc'], borda: '#6d7885', dec: ['pinheiro', 'rocha', 'pinheiro'], folha: '#2e5e4e', neve: true, agua: '#5c8fb8', denso: .12, lago: .78 },
+  'u18-fisiologia-humana-manutencao': { chao: ['#e9b7b7', '#e0a9a9'], borda: '#a05a5a', dec: ['celula', 'bolha', 'celula'], agua: '#c45b6a', denso: .09, lago: .7, ambiente: '#e9b7b7' },
+  'u19-fisiologia-humana-controle': { chao: ['#d9dfe6', '#cbd3dc'], borda: '#6d7885', dec: ['pinheiro', 'rocha', 'pinheiro'], folha: '#2e5e4e', neve: true, agua: '#5c8fb8', denso: .12, lago: .78, ambiente: '#dfe9f2', grama: '#e6eef5', gramaDens: .45 },
   'u20-saude-bem-estar':           { chao: ['#a5cf7f', '#99c374'], borda: '#5d8a3e', dec: ['casa', 'arvore', 'flor', 'casa'], folha: '#43a047', agua: '#4aa0cf', denso: .08, lago: .76 },
   'u21-genetica-mendeliana':       { chao: ['#b6d68e', '#aacb82'], borda: '#6e8f4a', dec: ['ervilha', 'flor', 'arvore'], folha: '#689f38', agua: '#4a9cc8', denso: .12, lago: .78 },
   'u22-genetica-pos-mendeliana':   { chao: ['#8fbf7a', '#84b36f'], borda: '#3c6a2e', dec: ['sebe', 'sebe', 'flor'], folha: '#2e7d32', agua: '#3b86b0', denso: .2, lago: .82 },
-  'u23-biotecnologia-bioetica':    { chao: ['#b9d8e0', '#acccd5'], borda: '#4f7380', dec: ['torre', 'painel', 'casa'], cristal: '#26c6da', agua: '#3a8fb8', denso: .07, lago: .78 },
-  'u24-evolucao':                  { chao: ['#e6d29c', '#dbc68f'], borda: '#6b5a3a', dec: ['palmeira', 'rocha', 'cacto'], folha: '#558b2f', agua: '#1ea0c8', denso: .08, lago: .5 },
-  'u25-ecologia-energia-populacoes': { chao: ['#d6c470', '#cab865'], borda: '#7a6a2c', dec: ['acacia', 'arbusto', 'rocha'], folha: '#827717', agua: '#3d8fb5', denso: .08, lago: .74 },
+  'u23-biotecnologia-bioetica':    { chao: ['#b9d8e0', '#acccd5'], borda: '#4f7380', dec: ['torre', 'painel', 'casa'], cristal: '#26c6da', agua: '#3a8fb8', denso: .07, lago: .78, grama: '#9fd4c8', gramaDens: .5 },
+  'u24-evolucao':                  { chao: ['#e6d29c', '#dbc68f'], borda: '#6b5a3a', dec: ['palmeira', 'rocha', 'cacto'], folha: '#558b2f', agua: '#1ea0c8', denso: .08, lago: .5, gramaDens: .6 },
+  'u25-ecologia-energia-populacoes': { chao: ['#d6c470', '#cab865'], borda: '#7a6a2c', dec: ['acacia', 'arbusto', 'rocha'], folha: '#827717', agua: '#3d8fb5', denso: .08, lago: .74, grama: '#c9b85a', gramaDens: 1.2 },
   'u26-ecologia-biomas-ambiente':  { chao: ['#7fae5e', '#c9b46a'], borda: '#4a6a33', dec: ['arvore', 'cacto', 'palmeira', 'acacia'], folha: '#2e7d32', agua: '#3b8fbd', denso: .12, lago: .7 },
 };
 
@@ -87,48 +88,21 @@ addEventListener('pagehide', () => salvar());
 // ---------- renderização ----------
 const canvas = $('cena');
 let renderer;
-try { renderer = new THREE.WebGLRenderer({ canvas, antialias: true, powerPreference: 'high-performance' }); }
+try { renderer = new THREE.WebGLRenderer({ canvas, antialias: false, powerPreference: 'high-performance' }); }
 catch { location.href = '../mundo/'; throw new Error('sem WebGL'); }
 renderer.setPixelRatio(Math.min(devicePixelRatio, 1.5));
-renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-renderer.outputColorSpace = THREE.SRGBColorSpace;
-renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.05;
 
 const scene = new THREE.Scene();
-scene.fog = new THREE.Fog('#bfe3f7', 110, 380);
 const camera = new THREE.PerspectiveCamera(55, 1, .1, 900);
-function redimensionar() { renderer.setSize(innerWidth, innerHeight, false); camera.aspect = innerWidth / innerHeight; camera.updateProjectionMatrix(); }
-addEventListener('resize', redimensionar); redimensionar();
-
-// céu em gradiente
-scene.add(new THREE.Mesh(new THREE.SphereGeometry(600, 32, 16), new THREE.ShaderMaterial({
-  side: THREE.BackSide, depthWrite: false, fog: false,
-  uniforms: { topo: { value: new THREE.Color('#2f7fd1') }, hor: { value: new THREE.Color('#cfeeff') }, sol: { value: new THREE.Vector3(.5, .45, .3).normalize() } },
-  vertexShader: 'varying vec3 vP; void main(){ vP = normalize(position); gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.); }',
-  fragmentShader: 'uniform vec3 topo; uniform vec3 hor; uniform vec3 sol; varying vec3 vP; void main(){ float h = clamp(vP.y*1.6+.15,0.,1.); vec3 c = mix(hor, topo, pow(h,.7)); float s = pow(max(dot(vP, sol),0.), 220.); c += vec3(1.,.93,.75)*s*1.4 + vec3(1.,.85,.6)*pow(max(dot(vP,sol),0.),8.)*.18; gl_FragColor = vec4(c,1.); }',
-})));
-
-scene.add(new THREE.HemisphereLight('#d8f0ff', '#4c6b3c', 1.05));
-const sol = new THREE.DirectionalLight('#fff1d6', 2.3);
 const TOQUE = matchMedia('(pointer: coarse)').matches || 'ontouchstart' in window;
 if (TOQUE) document.body.classList.add('toque');
 if (TOQUE) { const bm = document.getElementById('btMapa'); bm.textContent = '🗺️'; bm.title = 'Mapa'; const la = document.querySelector('#acoes a'); if (la) { la.textContent = '📖'; la.title = 'Aulas'; } }
-sol.castShadow = true; sol.shadow.mapSize.set(TOQUE ? 1024 : 2048, TOQUE ? 1024 : 2048);
-Object.assign(sol.shadow.camera, { left: -48, right: 48, top: 48, bottom: -48, near: 1, far: 220 });
-sol.shadow.bias = -.0006; sol.shadow.normalBias = .03;
-scene.add(sol, sol.target);
-
-// oceano low-poly animado
-const tempoU = { value: 0 };
-const aguaMat = new THREE.MeshPhongMaterial({ color: '#1f93cf', specular: '#d9f6ff', shininess: 90, flatShading: true, transparent: true, opacity: .93 });
-aguaMat.onBeforeCompile = sh => {
-  sh.uniforms.uTempo = tempoU;
-  sh.vertexShader = 'uniform float uTempo;\n' + sh.vertexShader.replace('#include <begin_vertex>',
-    '#include <begin_vertex>\n transformed.z += sin(position.x*.09 + uTempo*1.1)*.32 + cos(position.y*.11 + uTempo*.9)*.26 + sin((position.x+position.y)*.05 + uTempo*.6)*.2;');
-};
-const agua = new THREE.Mesh(new THREE.PlaneGeometry(1400, 1000, 180, 130), aguaMat);
-agua.rotation.x = -Math.PI / 2; agua.position.y = -.15; agua.receiveShadow = true;
-scene.add(agua);
+const QUALIDADE = TOQUE ? 'media' : 'alta';
+// céu, ciclo de dia e noite, água, grama, luzes e pós-processamento (visual.js)
+const visual = criarVisual({ renderer, scene, camera, qualidade: QUALIDADE, toque: TOQUE });
+const { sol, tempoU } = visual;
+function redimensionar() { visual.redimensionar(); }
+addEventListener('resize', redimensionar); redimensionar();
 
 // texturas utilitárias
 function texPonto() {
@@ -155,7 +129,7 @@ function spriteEmoji(emoji, tam = 2.2) {
   const s = new THREE.Sprite(new THREE.SpriteMaterial({ map: tex, transparent: true, depthWrite: false })); s.scale.set(tam, tam, 1); return s;
 }
 const brilho = (cor, tam) => { const s = new THREE.Sprite(new THREE.SpriteMaterial({ map: TEX_PONTO, color: cor, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending })); s.scale.set(tam, tam, 1); return s; };
-const mat = (cor, extra = {}) => new THREE.MeshStandardMaterial({ color: cor, roughness: .82, metalness: 0, flatShading: true, ...extra });
+const mat = (cor, extra = {}) => toon(cor, { flatShading: true, ...extra });
 
 // ---------- decoração instanciada ----------
 const GEO = {
@@ -165,19 +139,22 @@ const GEO = {
   telhado: new THREE.ConeGeometry(1.55, 1.1, 4), arbusto: new THREE.IcosahedronGeometry(.75, 0), flor: new THREE.SphereGeometry(.14, 6, 4), coral: new THREE.ConeGeometry(.24, 1.5, 5),
   bolha: new THREE.SphereGeometry(.65, 16, 12), celula: new THREE.TorusGeometry(.5, .26, 8, 18), torre: new THREE.BoxGeometry(.65, 3.4, .65), painel: new THREE.BoxGeometry(1.7, .08, 1.1),
   sebe: new THREE.BoxGeometry(1.7, 1.3, 1.7), acacia: new THREE.CylinderGeometry(1.7, 1.5, .45, 8), palmaFolha: new THREE.ConeGeometry(1.8, .55, 7),
+  // variantes (sorteadas por instância)
+  copa2: new THREE.SphereGeometry(1.15, 7, 5), copa3: new THREE.DodecahedronGeometry(1.1, 0), rocha2: new THREE.IcosahedronGeometry(.85, 0), rocha3: new THREE.DodecahedronGeometry(.72, 1),
+  arbusto2: new THREE.SphereGeometry(.78, 7, 5), cone2: new THREE.ConeGeometry(1.2, 2.5, 5),
 };
 const PARTES = {
-  arvore: [{ g: 'tronco', y: .75, cor: '#7a5434', sombra: true }, { g: 'copa', y: 2.3, cor: 'folha', sombra: true, var: .25 }],
-  pinheiro: [{ g: 'tronco', y: .6, cor: '#5d4037', sombra: true }, { g: 'cone', y: 2.4, cor: 'folha', sombra: true, var: .2 }],
+  arvore: [{ g: 'tronco', y: .75, cor: '#7a5434', sombra: true, tilt: .06 }, { g: 'copa', gv: ['copa', 'copa2', 'copa3'], y: 2.3, cor: 'folha', sombra: true, var: .3, tilt: .12 }],
+  pinheiro: [{ g: 'tronco', y: .6, cor: '#5d4037', sombra: true }, { g: 'cone', gv: ['cone', 'cone2'], y: 2.4, cor: 'folha', sombra: true, var: .25, tilt: .06 }],
   palmeira: [{ g: 'tronco', y: 1.3, cor: '#9c7a4f', sy: 1.8, sombra: true }, { g: 'palmaFolha', y: 2.9, cor: 'folha', sombra: true }],
   acacia: [{ g: 'tronco', y: 1.1, cor: '#6d4c2f', sy: 1.4, sombra: true }, { g: 'acacia', y: 2.25, cor: 'folha', sombra: true }],
-  rocha: [{ g: 'rocha', y: .45, cor: '#8d939b', sombra: true, var: .15 }],
-  pedraMarrom: [{ g: 'rocha', y: .4, cor: '#a1887f', sombra: true, var: .15 }],
+  rocha: [{ g: 'rocha', gv: ['rocha', 'rocha2', 'rocha3'], y: .45, cor: '#8d939b', sombra: true, var: .2, tilt: .4 }],
+  pedraMarrom: [{ g: 'rocha', gv: ['rocha', 'rocha2', 'rocha3'], y: .4, cor: '#a1887f', sombra: true, var: .2, tilt: .4 }],
   cristal: [{ g: 'cristal', y: 1.1, cor: 'acento', sy: 2.2, basico: true }],
   cogumelo: [{ g: 'caule', y: .45, cor: '#efe7da', sombra: true }, { g: 'chapeu', y: .88, cor: '#e53935', sombra: true, alt: '#8e24aa' }],
   cacto: [{ g: 'cacto', y: 1.05, cor: '#5b8c32', sombra: true }],
   casa: [{ g: 'casa', y: .7, cor: '#f3e6cf', sombra: true }, { g: 'telhado', y: 1.95, cor: '#c0392b', sombra: true, alt: '#8e5a3c', rot45: true }],
-  arbusto: [{ g: 'arbusto', y: .5, cor: 'folha', sy: .8, sombra: true, var: .25 }],
+  arbusto: [{ g: 'arbusto', gv: ['arbusto', 'arbusto2'], y: .5, cor: 'folha', sy: .8, sombra: true, var: .3, tilt: .15 }],
   sebe: [{ g: 'sebe', y: .65, cor: 'folha', sombra: true, var: .1 }],
   flor: [{ g: 'flor', y: .15, cor: '#f06292', alt: '#ffd54f', cacho: 5 }],
   coral: [{ g: 'coral', y: .75, cor: '#ff7043', alt: '#ec407a', cacho: 3, sombra: true }],
@@ -193,18 +170,21 @@ function montarDecoracao() {
   const dummy = new THREE.Object3D(), cor = new THREE.Color();
   for (const [tipo, lista] of Object.entries(instancias)) {
     const partes = PARTES[tipo]; if (!partes) continue;
-    for (const p of partes) {
-      const n = lista.length * (p.cacho || 1);
-      const m = p.basico ? new THREE.MeshBasicMaterial({ color: '#fff' }) : p.transparente ? new THREE.MeshStandardMaterial({ color: '#fff', transparent: true, opacity: .45, roughness: .1 }) : mat('#ffffff');
-      const im = new THREE.InstancedMesh(GEO[p.g], m, n);
+    for (const p of partes) for (const [gi, gk] of (p.gv || [p.g]).entries()) {
+      // cada variante de geometria vira um InstancedMesh próprio; a instância escolhe a variante pelo hash
+      const nv = (p.gv || [p.g]).length, sub = lista.filter((d, idx) => nv === 1 || Math.floor(hash(idx, 21, d.ilha) * nv) === gi);
+      if (!sub.length) continue;
+      const n = sub.length * (p.cacho || 1);
+      const m = p.basico ? new THREE.MeshBasicMaterial({ color: '#fff' }) : p.transparente ? toon('#ffffff', { transparent: true, opacity: .45 }) : mat('#ffffff');
+      const im = new THREE.InstancedMesh(GEO[gk], m, n);
       im.castShadow = !!p.sombra; im.receiveShadow = true;
       let k = 0;
-      for (const d of lista) {
-        const tema = ILHAS[d.ilha].tema;
+      for (const d of sub) {
+        const tema = ILHAS[d.ilha].tema, tx = p.tilt ? (hash(k, 31, d.ilha) - .5) * p.tilt : 0, tz = p.tilt ? (hash(k, 32, d.ilha) - .5) * p.tilt : 0;
         for (let c = 0; c < (p.cacho || 1); c++) {
           const ox = p.cacho ? (hash(k, c, 7) - .5) * 1.4 : 0, oz = p.cacho ? (hash(c, k, 8) - .5) * 1.4 : 0;
           dummy.position.set(d.x + ox, 1 + p.y * d.s, d.z + oz);
-          dummy.rotation.set(p.deitado ? Math.PI / 2.4 : 0, d.r + (p.rot45 ? Math.PI / 4 : 0), p.inclina ? .45 : 0);
+          dummy.rotation.set((p.deitado ? Math.PI / 2.4 : 0) + tx, d.r + (p.rot45 ? Math.PI / 4 : 0), (p.inclina ? .45 : 0) + tz);
           dummy.scale.set(d.s, d.s * (p.sy || 1), d.s);
           dummy.updateMatrix(); im.setMatrixAt(k, dummy.matrix);
           let base = p.cor === 'folha' ? (tema.folha || '#43a047') : p.cor === 'acento' ? (tema.cristal || '#7CFFB2') : p.cor;
@@ -223,6 +203,20 @@ function montarDecoracao() {
 const nuvemGeo = new THREE.IcosahedronGeometry(1, 1);
 let nuvens = null, nuvemDados = [];
 
+function gerarTufos() {
+  const tufos = [], cor = new THREE.Color();
+  for (const il of ILHAS) {
+    const t = il.tema, base = t.grama || (t.folha ? cor.set(t.folha).offsetHSL(.02, .06, .12).getHexString() && '#' + cor.getHexString() : null);
+    if (!base) continue;
+    const n = Math.round((QUALIDADE === 'alta' ? 230 : 95) * (t.gramaDens || 1)), R0 = rng(il.i * 131 + 7);
+    for (let k = 0, tent = 0; k < n && tent < n * 3; tent++) {
+      const a = R0() * Math.PI * 2, rr = 2.5 + Math.sqrt(R0()) * (il.R - 4.2), x = il.cx + Math.cos(a) * rr, z = il.cz + Math.sin(a) * rr;
+      if (rr < 3.4 || il.estacoes.some(e => Math.hypot(e.x - x, e.z - z) < 2.1)) continue;
+      tufos.push({ x, z, r: R0() * 6.3, s: .42 + R0() * .4, h: R0(), cor: base }); k++;
+    }
+  }
+  return tufos;
+}
 function gerarMundo() {
   const linhas = Math.ceil(CUR.unidades.length / COLS);
   CUR.unidades.forEach((u, i) => {
@@ -240,7 +234,7 @@ function gerarMundo() {
   for (const p of PONTES) construirPonte(p);
   montarDecoracao();
   // nuvens instanciadas sobre ilhas bloqueadas
-  nuvens = new THREE.InstancedMesh(nuvemGeo, new THREE.MeshStandardMaterial({ color: '#f4f8ff', roughness: 1, transparent: true, opacity: .92, flatShading: true }), ILHAS.length * 14);
+  nuvens = new THREE.InstancedMesh(nuvemGeo, toon('#f4f8ff', { transparent: true, opacity: .92, flatShading: true }), ILHAS.length * 14);
   const dm = new THREE.Object3D(); let k = 0;
   for (const ilha of ILHAS) for (let n = 0; n < 14; n++) {
     const a = hash(ilha.i, n, 4) * Math.PI * 2, rr = hash(n, ilha.i, 5) * ilha.R * .9, s = 3.5 + hash(n, n, ilha.i) * 4;
@@ -249,6 +243,7 @@ function gerarMundo() {
     dm.position.set(dado.x, dado.y, dado.z); dm.scale.set(s * 1.3, s * .75, s); dm.updateMatrix(); nuvens.setMatrixAt(k++, dm.matrix);
   }
   nuvens.castShadow = true; scene.add(nuvens);
+  visual.registrarIlhas(ILHAS); visual.criarGrama(gerarTufos());
 }
 
 function construirIlha(ilha) {
@@ -275,7 +270,7 @@ function construirIlha(ilha) {
   const base = new THREE.Mesh(new THREE.CylinderGeometry(1.6, 2, 1.2, 8), mat('#d9d2c3')); base.position.set(cx, 1.6, cz); base.castShadow = true; base.receiveShadow = true; scene.add(base);
   const pilar = new THREE.Mesh(new THREE.CylinderGeometry(.55, .8, 3.2, 6), mat('#efe9dc')); pilar.position.set(cx, 3.8, cz); pilar.castShadow = true; scene.add(pilar);
   const acento = tema.cristal || tema.folha || '#7CFFB2';
-  const icone = new THREE.Mesh(new THREE.IcosahedronGeometry(1.15, 0), new THREE.MeshStandardMaterial({ color: acento, emissive: acento, emissiveIntensity: .55, flatShading: true, roughness: .3 }));
+  const icone = new THREE.Mesh(new THREE.IcosahedronGeometry(1.15, 0), toon(acento, { emissive: acento, emissiveIntensity: .7, flatShading: true }));
   icone.position.set(cx, 6.6, cz); icone.castShadow = true; scene.add(icone);
   const halo = brilho(acento, 6); halo.position.copy(icone.position); scene.add(halo);
   ilha.icone = icone; ilha.halo = halo;
@@ -435,14 +430,14 @@ const avatar = new THREE.Group(); scene.add(avatar);
 let formas = [], formaVisivel = -1;
 function olhos(g, y, z, sep, r = .11) {
   for (const s of [-1, 1]) {
-    const b = new THREE.Mesh(new THREE.SphereGeometry(r, 10, 8), new THREE.MeshStandardMaterial({ color: '#fff', roughness: .3 })); b.position.set(s * sep, y, z);
+    const b = new THREE.Mesh(new THREE.SphereGeometry(r, 10, 8), toon('#fff')); b.position.set(s * sep, y, z);
     const p = new THREE.Mesh(new THREE.SphereGeometry(r * .55, 8, 6), new THREE.MeshBasicMaterial({ color: '#111' })); p.position.set(s * sep, y, z + r * .65);
     g.add(b, p);
   }
 }
 function montarFormas(corHex) {
   formas.forEach(f => avatar.remove(f.g)); formas = [];
-  const cor = new THREE.Color(corHex), escura = cor.clone().offsetHSL(0, 0, -.18), suave = (c, e = {}) => new THREE.MeshStandardMaterial({ color: c, roughness: .45, ...e });
+  const cor = new THREE.Color(corHex), escura = cor.clone().offsetHSL(0, 0, -.18), suave = (c, e = {}) => toon(c, e);
   const add = (g, m, ...meshes) => { meshes.forEach(x => { x.castShadow = true; g.add(x); }); };
   // 0 bactéria
   { const g = new THREE.Group(), corpo = new THREE.Mesh(new THREE.CapsuleGeometry(.42, .8, 8, 16), suave(cor)); corpo.rotation.x = Math.PI / 2; corpo.position.y = .55;
@@ -1023,7 +1018,7 @@ function atualizarCamera(dt) {
 let transicao = 0;
 
 function animarMundo(dt) {
-  tempoU.value = tempo;
+  visual.atualizar(dt, { x: emJogo ? jog.x : 0, z: emJogo ? jog.z : 0 }, ilhaAtual >= 0 ? ILHAS[ilhaAtual].tema : (ilhaPerto(jog.x, jog.z) || {}).tema);
   for (const il of ILHAS) { il.icone.rotation.y += dt * .8; il.icone.position.y = 6.6 + Math.sin(tempo * 1.5 + il.i) * .35; il.halo.position.y = il.icone.position.y; il.halo.material.opacity = .55 + Math.sin(tempo * 2 + il.i) * .2; }
   for (const e of ESTACOES) if (e.gema && e.grupo.visible) {
     const feito = est && est.feitas[e.topico.id]; e.gema.material.color.set(feito ? '#36D399' : '#FFD166'); e.halo.material.color.set(feito ? '#36D399' : '#FFD166');
@@ -1048,8 +1043,6 @@ function animarMundo(dt) {
   const cx = emJogo ? jog.x : 0, cz = emJogo ? jog.z : 0;
   for (let k = 0; k < NV; k++) { const b = vbase[k]; vpos[k * 3] = cx + b[0] + Math.sin(tempo * .4 + b[3]) * 2; vpos[k * 3 + 1] = b[1] + Math.sin(tempo * .9 + b[3] * 2) * .6; vpos[k * 3 + 2] = cz + b[2] + Math.cos(tempo * .35 + b[3]) * 2; }
   vgeo.attributes.position.needsUpdate = true;
-  // sol acompanha o jogador para manter sombras nítidas por perto
-  const sx = emJogo ? jog.x : 0, sz = emJogo ? jog.z : 0; sol.position.set(sx + 40, 80, sz + 28); sol.target.position.set(sx, 0, sz);
 }
 
 function loop() {
@@ -1063,7 +1056,7 @@ function loop() {
   animarMundo(dt); atualizarParticulas(dt); atualizarCamera(dt); atualizarFlutuantes(dt);
   if (emJogo && (acc += dt) > .12) { acc = 0; desenharMinimapa(); retrato(tempo); }
   if (emJogo && (accRepoe += dt) > 5) { accRepoe = 0; criarColetaveis(); atualizarPoderes(); }
-  renderer.render(scene, camera);
+  visual.render();
 }
 
 // ---------- início ----------
@@ -1139,7 +1132,7 @@ $('btNovo').onclick = () => {
 })();
 
 // acesso de depuração pelo console (útil para testes e demonstrações)
-window.EXP = { jog, ILHAS, PONTES, ESTACOES, ORBES, PILULAS, get est() { return est; }, abrirEstacao, ganharXp, noChao, pode, usarSonda, usarSalto, saltarPara, get feixes() { return feixes; }, abrirFragmento, camCtl, teclas, FRAGS, abrirMapa, fecharMapa, get emJogo() { return emJogo; } };
+window.EXP = { jog, ILHAS, PONTES, ESTACOES, ORBES, PILULAS, get est() { return est; }, abrirEstacao, ganharXp, noChao, pode, usarSonda, usarSalto, saltarPara, get feixes() { return feixes; }, abrirFragmento, camCtl, teclas, FRAGS, abrirMapa, fecharMapa, get emJogo() { return emJogo; }, visual };
 
 // botões dos poderes
 $('pdSonda').onclick = usarSonda; $('pdSalto').onclick = usarSalto;
