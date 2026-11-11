@@ -277,5 +277,23 @@ export function criarVisual({ renderer, scene, camera, qualidade = 'alta', toque
 
   function render() { if (composer) composer.render(); else renderer.render(scene, camera); }
 
-  return { sol, hemi, agua, aguaU, tempoU, registrarIlhas, criarGrama, redimensionar, atualizar, render, set hora(h) { hora = h; }, get hora() { return hora; }, get composer() { return composer; } };
+  // foto de cima do arquipélago para o mapa: renderiza o mundo real com câmera ortográfica
+  const camFoto = new THREE.OrthographicCamera(-1, 1, 1, -1, 1, 600);
+  let rtFoto = null;
+  function fotoDeCima(L, w, h) {
+    if (!rtFoto || rtFoto.width !== w || rtFoto.height !== h) { if (rtFoto) rtFoto.dispose(); rtFoto = new THREE.WebGLRenderTarget(w, h, { colorSpace: THREE.SRGBColorSpace }); }
+    const cx = (L.x0 + L.x1) / 2, cz = (L.z0 + L.z1) / 2;
+    camFoto.left = -(L.x1 - L.x0) / 2; camFoto.right = (L.x1 - L.x0) / 2; camFoto.top = (L.z1 - L.z0) / 2; camFoto.bottom = -(L.z1 - L.z0) / 2;
+    camFoto.position.set(cx, 300, cz); camFoto.up.set(0, 0, -1); camFoto.lookAt(cx, 0, cz); camFoto.updateProjectionMatrix();
+    const fog = scene.fog; scene.fog = null; ceu.visible = false; nuvens.forEach(n => n.visible = false);
+    const alvoAntes = renderer.getRenderTarget();
+    renderer.setRenderTarget(rtFoto); renderer.render(scene, camFoto);
+    const px = new Uint8Array(w * h * 4); renderer.readRenderTargetPixels(rtFoto, 0, 0, w, h, px); renderer.setRenderTarget(alvoAntes);
+    scene.fog = fog; ceu.visible = true; nuvens.forEach(n => n.visible = true);
+    const c = document.createElement('canvas'); c.width = w; c.height = h; const g = c.getContext('2d'), img = g.createImageData(w, h);
+    for (let y = 0; y < h; y++) img.data.set(px.subarray((h - 1 - y) * w * 4, (h - y) * w * 4), y * w * 4);
+    g.putImageData(img, 0, 0); return c;
+  }
+
+  return { sol, hemi, agua, aguaU, tempoU, registrarIlhas, criarGrama, redimensionar, atualizar, render, fotoDeCima, set hora(h) { hora = h; }, get hora() { return hora; }, get composer() { return composer; } };
 }

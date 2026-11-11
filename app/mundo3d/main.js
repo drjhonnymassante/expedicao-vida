@@ -362,6 +362,12 @@ function construirPonte(p) {
   barreira.position.set(p.sx + p.ux * 3, 2.1, p.sz + p.uz * 3); barreira.rotation.y = p.ang; scene.add(barreira);
   const cad = spriteEmoji('🔒', 1.4); cad.position.set(barreira.position.x, 3.6, barreira.position.z); scene.add(cad);
   p.barreira = barreira; p.cadeado = cad;
+  // guardião da ponte: aparece quando as missões da ilha foram cumpridas; vencê-lo libera a ponte
+  const chefe = new THREE.Group(); chefe.position.set(barreira.position.x, 2.3, barreira.position.z);
+  const corpoC = new THREE.Mesh(new THREE.IcosahedronGeometry(1.15, 1), toon('#5b3d8a', { emissive: '#7c4dff', emissiveIntensity: .35, flatShading: true })); corpoC.castShadow = true;
+  const cristaC = new THREE.Mesh(new THREE.ConeGeometry(.35, .9, 5), toon('#ffb300', { emissive: '#ffb300', emissiveIntensity: .5 })); cristaC.position.y = 1.35;
+  for (const sx of [-1, 1]) { const o = new THREE.Mesh(new THREE.SphereGeometry(.2, 10, 8), toon('#fff')); o.position.set(sx * .4, .25, .95); const pu = new THREE.Mesh(new THREE.SphereGeometry(.1, 8, 6), new THREE.MeshBasicMaterial({ color: '#111' })); pu.position.set(sx * .4, .25, 1.12); chefe.add(o, pu); }
+  chefe.add(corpoC, cristaC, brilho('#b388ff', 6)); chefe.visible = false; scene.add(chefe); p.chefe = chefe;
 }
 
 // coletáveis renderizados como malhas individuais leves
@@ -422,6 +428,45 @@ function atualizarPoderes() {
   const s = est.seq || {}; $('seq').innerHTML = ic('fogo') + ' ' + (s.dias || 0); $('seq').title = (s.dias || 0) + ' dia(s) seguidos · escudos: ' + (s.escudos || 0);
   $('pdEscudo').disabled = (est.cristais || 0) < 20 || (s.escudos || 0) >= 2; $('pdEscudo').innerHTML = ic('escudo') + ' Escudo <small>20 💎 · ' + (s.escudos || 0) + '/2</small>';
   $('pdSonda').disabled = (est.cristais || 0) < 5 || tempo < sondaAte; $('pdSalto').disabled = (est.cristais || 0) < 10;
+}
+function abrirPerfil() {
+  const n = nivelDe(est.xp), ini = 50 * (n - 1) * n, fim = 50 * n * (n + 1), pct = Math.round((est.xp - ini) / (fim - ini) * 100);
+  const pers = PERSONAGENS.find(p => p.id === est.avatar) || PERSONAGENS[0];
+  const conq = CONQUISTAS.map(c => `<div class="dq ${est.conquistas[c.id] ? 'ok' : ''}"><span class="ic">${c.ic}</span><span class="tx">${esc(c.nome)}</span></div>`).join('');
+  abrirPainel(`<div class="etq">Seu evonauta</div><h2>${esc(est.nome)} <small style="font-family:Nunito;font-size:14px;color:var(--sub)">· ${esc(pers.nome)}</small></h2>
+    <div class="premio"><span>⭐ Nível ${n} · ${patente(n)}</span><span>✨ ${est.xp} XP · ${pct}% do nível</span><span>🎖️ ${Math.min(7, n - 1)} insígnias</span></div>
+    <div class="premio"><span>⚔️ ${Object.keys(est.feitas).length} missões</span><span>🗺️ ${est.livres.filter(Boolean).length}/${ILHAS.length} ilhas</span><span>🛡️ ${Object.keys(est.chefes || {}).length} guardiões</span><span>💎 ${est.cristaisTotal || 0} cristais no total</span></div>
+    <h3 style="font-family:Fredoka;margin:14px 0 6px">Conquistas · ${Object.keys(est.conquistas).length}/${CONQUISTAS.length}</h3>${conq}
+    <p style="color:var(--sub);font-size:13px;margin-top:12px">Próxima patente: <b style="color:#fff">${patente(n + 1)}</b> em ${fim - est.xp} XP. Para trocar de personagem, volte à tela inicial e toque em Continuar.</p>
+    <div class="acoesP"><button class="bt prim" id="fecharPerfil">Voltar à expedição</button></div>`);
+  $('fecharPerfil').onclick = fecharPainel;
+}
+function abrirSequencia() {
+  const s = est.seq || { dias: 0, historico: [], escudos: 0 }, hist = new Set(s.historico || []); if (s.ultimo === hoje()) hist.add(hoje());
+  const metas = [3, 7, 14, 30, 60, 100], meta = metas.find(x => x > (s.dias || 0)) || 365;
+  const hd = new Date(), ano = hd.getFullYear(), mes = hd.getMonth(), nDias = new Date(ano, mes + 1, 0).getDate(), ini = new Date(ano, mes, 1).getDay();
+  const chave = d => `${ano}-${String(mes + 1).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
+  let grade = ['D', 'S', 'T', 'Q', 'Q', 'S', 'S'].map(l => `<span class="cal l">${l}</span>`).join('');
+  for (let k = 0; k < ini; k++) grade += '<span class="cal vazio"></span>';
+  for (let d = 1; d <= nDias; d++) { const k = chave(d); grade += `<span class="cal ${hist.has(k) ? 'on' : ''} ${k === hoje() ? 'hoje' : ''}">${d}</span>`; }
+  const nomeMes = hd.toLocaleDateString('pt-BR', { month: 'long', year: 'numeric' });
+  abrirPainel(`<div class="etq">Sequência de dias</div><div style="text-align:center"><div style="font-size:64px;line-height:1">🔥</div><h2 style="margin:4px 0">${s.dias || 0} ${s.dias === 1 ? 'dia seguido' : 'dias seguidos'}</h2><p style="color:var(--sub);margin:0 0 10px">Próxima meta: ${meta} dias · faltam ${meta - (s.dias || 0)}</p></div>
+    <div class="premio" style="justify-content:center"><span>🏅 Recorde: ${Math.max(s.recorde || 0, s.dias || 0)} dias</span><span>🛡️ Escudos: ${s.escudos || 0}/2</span><span>📅 ${hist.size} dias jogados</span></div>
+    <h3 style="font-family:Fredoka;margin:14px 0 6px;text-transform:capitalize">${nomeMes}</h3><div class="calend">${grade}</div>
+    <p style="color:var(--sub);font-size:13px">Jogue um pouco todo dia para manter a chama. Um escudo (20 💎) protege a sequência num dia sem jogar.</p>
+    <div class="acoesP"><button class="bt roxo" id="seqEscudo" ${(est.cristais || 0) < 20 || (s.escudos || 0) >= 2 ? 'disabled' : ''}>🛡️ Comprar escudo (20 💎)</button><button class="bt prim" id="fecharSeq">Voltar</button></div>`);
+  $('fecharSeq').onclick = fecharPainel; $('seqEscudo').onclick = () => { comprarEscudo(); abrirSequencia(); };
+}
+function abrirBau() {
+  const lista = (est.pilulasTexto || []).slice().reverse(), porIlha = new Map();
+  for (const p of lista) { if (!porIlha.has(p.i)) porIlha.set(p.i, []); porIlha.get(p.i).push(p); }
+  const totalPil = Object.values(est.pilulas || {}).reduce((a, b) => a + b, 0);
+  let html = `<div class="etq">Baú de conhecimento</div><h2>${ic('bau')} Suas pílulas</h2>
+    <div class="premio"><span>💊 ${totalPil} disponíveis para desafios</span><span>🧠 ${Object.keys(est.frags || {}).length} fragmentos revisados</span><span>💎 ${est.cristais || 0} biocristais</span></div>`;
+  if (!lista.length) html += '<p style="color:var(--sub)">Ainda não há pílulas guardadas. Elas ficam espalhadas pelas ilhas: ao pegar uma, o texto fica aqui para reler quando quiser.</p>';
+  for (const [i, ps] of porIlha) html += `<h3 style="font-family:Fredoka;margin:14px 0 6px">${esc(ILHAS[i].u.regiao_mundo.nome)} <small style="color:var(--sub);font-family:Nunito;font-weight:600">· ${ps.length}</small></h3>` + ps.map(p => `<div class="exp" style="margin-top:6px"><b style="color:var(--ouro)">${esc(p.t)}</b><br>${esc(p.x)}</div>`).join('');
+  html += '<div class="acoesP"><button class="bt prim" id="fecharBau">Voltar à expedição</button></div>';
+  abrirPainel(html); $('fecharBau').onclick = fecharPainel;
 }
 function comprarEscudo() {
   const s = est.seq || (est.seq = { dias: 0, ultimo: hoje(), escudos: 0 });
@@ -515,12 +560,68 @@ function ilhaPerto(x, z) { let m = null, d = 1e9; for (const il of ILHAS) { cons
 function bate(x, z) { const il = ilhaPerto(x, z); if (!il) return false; return il.obst.some(o => (x - o.x) ** 2 + (z - o.z) ** 2 < (o.r + .45) ** 2); }
 const pode = (x, z) => noChao(x, z) && !bate(x, z);
 
+// a ponte só abre depois do desafio-chefe: cumprir as missões faz o guardião aparecer
 function verificarDesbloqueios(anunciar) {
   for (const il of ILHAS) {
-    const prox = ILHAS[il.i + 1];
-    if (!livre(il.i) || !prox || livre(prox.i)) continue;
-    if (feitasNa(il) >= precisa(il)) { est.livres[prox.i] = true; if (anunciar) animarDesbloqueio(prox); }
+    const prox = ILHAS[il.i + 1], p = PONTES[il.i];
+    if (!livre(il.i) || !prox || livre(prox.i) || !p) continue;
+    const pronto = feitasNa(il) >= precisa(il);
+    if (pronto && !p.chefePronto && anunciar) toast('⚔️', 'O Guardião da ponte apareceu', 'Vença o desafio-chefe para liberar ' + prox.u.regiao_mundo.nome);
+    p.chefePronto = pronto;
   }
+  aplicarVisualChefes();
+}
+function aplicarVisualChefes() { for (const p of PONTES) if (p.chefe) p.chefe.visible = !!p.chefePronto && livre(p.a) && !livre(p.b); }
+function chefePerto() { for (const p of PONTES) if (p.chefe && p.chefe.visible && Math.hypot(p.chefe.position.x - jog.x, p.chefe.position.z - jog.z) < 4.2) return p; return null; }
+function abrirChefe(p) {
+  const prox = ILHAS[p.b];
+  if (p.chefe) av.interagir();
+  abrirPainel(`<div class="etq">Desafio-chefe</div><h2>⚔️ Guardião de ${esc(prox.u.regiao_mundo.nome)}</h2>
+    <div class="npc"><div class="rosto" style="background:#5b3d8a">👁️</div><div class="fala"><b>Guardião:</b> Ninguém atravessa sem provar o que aprendeu em ${esc(ILHAS[p.a].u.regiao_mundo.nome)}. Cinco perguntas, uma atrás da outra. O tempo corre.</div></div>
+    <div class="premio"><span>⏱️ 75 segundos no total</span><span>❌ erro custa 10 s</span><span>🏆 4 de 5 para vencer</span><span>✨ 150 XP + ponte liberada</span></div>
+    <div class="acoesP"><button class="bt ouro" id="lutar">⚔️ Enfrentar o guardião</button><button class="bt" id="sairC">Depois</button></div>`);
+  $('sairC').onclick = fecharPainel; $('lutar').onclick = () => desafioChefe(p);
+}
+async function desafioChefe(p) {
+  const il = ILHAS[p.a], prox = ILHAS[p.b], tops = il.estacoes.filter(e => e.pronto && (!e.premium || liberado(e.topico)));
+  let banco = [];
+  for (const e of tops) { try { const j = await jsonTopico(e.topico); banco.push(...j.questoes.filter(q => q.nivel !== 'diamante').map(q => ({ ...q, titulo: e.topico.titulo }))); } catch { } }
+  if (banco.length < 5) return toast('⚔️', 'O guardião ainda dorme', 'Faltam missões disponíveis nesta ilha');
+  banco.sort(() => Math.random() - .5); const qs = banco.slice(0, 5);
+  let i = 0, acertos = 0, resta = 75, timer = null, acabou = false;
+  const cab = () => `<div style="display:flex;justify-content:space-between;align-items:center"><span class="etq">⚔️ Guardião · pergunta ${i + 1}/5</span><span class="liga l-ouro">${acertos} certas</span></div><div class="timer chefe"><div id="tmc" style="width:${Math.max(0, resta / 75 * 100)}%"></div></div>`;
+  const fim = () => {
+    clearInterval(timer); acabou = true;
+    const venceu = acertos >= 4;
+    abrirPainel(`<div class="estrelas">${venceu ? '🏆' : '💀'}</div><h2 style="text-align:center">${venceu ? 'Guardião derrotado!' : 'O guardião resistiu'}</h2>
+      <p style="text-align:center;color:var(--sub)">${acertos} de 5 certas${venceu ? '' : ' · são necessárias 4'}${resta <= 0 ? ' · o tempo acabou' : ''}</p>
+      <div class="acoesP" style="justify-content:center"><button class="bt prim" id="okC">${venceu ? '🌉 Atravessar a ponte' : '⚔️ Tentar de novo'}</button>${venceu ? '' : '<button class="bt" id="dpC">Depois</button>'}</div>`);
+    $('okC').onclick = () => { fecharPainel(); if (venceu) vitoriaChefe(p); else setTimeout(() => desafioChefe(p), 260); };
+    if ($('dpC')) $('dpC').onclick = fecharPainel;
+  };
+  const passo = () => {
+    if (acabou) return; if (i >= 5) return fim();
+    const q = qs[i]; let respondeu = false; if (window.EXP) window.EXP.questaoAtual = q;
+    abrirPainel(`${cab()}<div class="questao"><small style="color:var(--sub)">${esc(q.titulo)}</small><br>${esc(q.enunciado)}</div>${q.alternativas.map((a, n) => `<button class="alt" data-n="${n}"><span class="let">${'ABCDE'[n]}</span><span>${esc(a)}</span></button>`).join('')}`);
+    document.querySelectorAll('.alt').forEach(b => b.onclick = () => {
+      if (respondeu || acabou) return; respondeu = true;
+      const ok = +b.dataset.n === q.correta;
+      document.querySelectorAll('.alt').forEach(x => { x.disabled = true; if (+x.dataset.n === q.correta) x.classList.add('certa'); });
+      if (ok) { acertos++; SFX.certo(); tremer(.2); } else { b.classList.add('errada'); SFX.errado(); tremer(.35); resta -= 10; }
+      setTimeout(() => { i++; passo(); }, ok ? 600 : 1000);
+    });
+  };
+  timer = setInterval(() => { if (acabou) return; resta -= .1; const el = $('tmc'); if (el) el.style.width = Math.max(0, resta / 75 * 100) + '%'; if (resta <= 0) fim(); }, 100);
+  passo();
+}
+function vitoriaChefe(p) {
+  const prox = ILHAS[p.b];
+  (est.chefes ||= {})[prox.i] = true; est.livres[prox.i] = true; p.chefePronto = false;
+  av.comemorar(); tremer(.6); document.body.classList.add('clarao'); setTimeout(() => document.body.classList.remove('clarao'), 500);
+  if (p.chefe) { explosao(p.chefe.position.x, p.chefe.position.y, p.chefe.position.z, ['#b388ff', '#ffb300', '#ffffff', '#7CFFB2'], 260, 12); p.chefe.visible = false; }
+  SFX.evolucao(); ganharXp(150, 'guardião derrotado');
+  setTimeout(() => animarDesbloqueio(prox), 500);
+  aplicarVisualBloqueio(); verificarConquistas();
 }
 let desbloqueando = [];
 function animarDesbloqueio(il) {
@@ -646,6 +747,9 @@ const CONQUISTAS = [
   { id: 'peixe', ic: '🐟', nome: 'Saiu da sopa primordial', ok: () => formaDe(nivelDe(est.xp)) >= 3 },
   { id: 'cientista', ic: '🔬', nome: 'Evolução completa', ok: () => formaDe(nivelDe(est.xp)) >= 7 },
   { id: 'combo5', ic: '🔥', nome: 'Combo ×5', ok: () => (est.maxCombo || 0) >= 5 },
+  { id: 'chefe1', ic: '⚔️', nome: 'Primeiro guardião derrotado', ok: () => Object.keys(est.chefes || {}).length >= 1 },
+  { id: 'chefe5', ic: '🛡️', nome: 'Cinco guardiões derrotados', ok: () => Object.keys(est.chefes || {}).length >= 5 },
+  { id: 'seq7', ic: '📅', nome: 'Uma semana seguida', ok: () => ((est.seq || {}).recorde || 0) >= 7 },
 ];
 function verificarConquistas() {
   for (const c of CONQUISTAS) if (!est.conquistas[c.id] && c.ok()) { est.conquistas[c.id] = true; setTimeout(() => { toast(c.ic, 'Conquista desbloqueada!', c.nome); SFX.conquista(); }, 300); }
@@ -828,27 +932,57 @@ function desenharMinimapa() {
 }
 function abrirMapa() {
   const c = $('mapaCanvas'), g = c.getContext('2d'), L = limitesMundo();
-  const k = Math.min(innerWidth * .9 / (L.x1 - L.x0), innerHeight * .8 / (L.z1 - L.z0)), d = Math.min(2, devicePixelRatio || 1);
-  c.width = (L.x1 - L.x0) * k * d; c.height = (L.z1 - L.z0) * k * d; c.style.width = (L.x1 - L.x0) * k + 'px'; g.scale(d, d);
+  // em telas estreitas o mapa fica maior que a tela e rola, centrado no jogador
+  const estreito = innerWidth < 700;
+  const k = estreito ? innerWidth * 2.1 / (L.x1 - L.x0) : Math.min(innerWidth * .9 / (L.x1 - L.x0), innerHeight * .8 / (L.z1 - L.z0)), d = Math.min(2, devicePixelRatio || 1);
+  const W = (L.x1 - L.x0) * k, H = (L.z1 - L.z0) * k;
+  c.width = W * d; c.height = H * d; c.style.width = W + 'px'; c.style.maxWidth = estreito ? 'none' : ''; c.style.maxHeight = estreito ? 'none' : ''; g.scale(d, d);
   const px = x => (x - L.x0) * k, pz = z => (z - L.z0) * k;
-  const gr = g.createLinearGradient(0, 0, 0, c.height); gr.addColorStop(0, '#0f4d7a'); gr.addColorStop(1, '#0a2f52'); g.fillStyle = gr; g.fillRect(0, 0, c.width, c.height);
-  g.strokeStyle = '#c49a6c'; g.lineWidth = 3 * k;
-  for (const p of PONTES) { g.globalAlpha = livre(p.a) && livre(p.b) ? 1 : .3; g.beginPath(); g.moveTo(px(p.sx), pz(p.sz)); g.lineTo(px(p.sx + p.ux * p.len), pz(p.sz + p.uz * p.len)); g.stroke(); }
-  g.globalAlpha = 1;
+  // 1) o próprio arquipélago, fotografado de cima (rótulos e cadeados 3D escondidos durante a foto)
+  for (const il of ILHAS) { il.rotulo.visible = false; il.cadeado.visible = false; }
+  const fw = Math.min(1800, Math.round(W * 2)), fh = Math.round(fw * H / W);
+  let foto = null; try { foto = visual.fotoDeCima(L, fw, fh); } catch (e) { console.warn('foto do mapa', e); }
+  aplicarVisualBloqueio();
+  if (foto) { g.save(); g.filter = 'saturate(1.18) contrast(1.06)'; g.drawImage(foto, 0, 0, W, H); g.restore(); }
+  else { const gr = g.createLinearGradient(0, 0, 0, H); gr.addColorStop(0, '#0f4d7a'); gr.addColorStop(1, '#0a2f52'); g.fillStyle = gr; g.fillRect(0, 0, W, H); }
+  // vinheta e véu sobre as ilhas bloqueadas
+  const vg = g.createRadialGradient(W / 2, H / 2, Math.min(W, H) * .35, W / 2, H / 2, Math.max(W, H) * .75); vg.addColorStop(0, 'rgba(0,0,0,0)'); vg.addColorStop(1, 'rgba(4,10,20,.55)'); g.fillStyle = vg; g.fillRect(0, 0, W, H);
+  for (const il of ILHAS) if (!livre(il.i)) { g.fillStyle = 'rgba(10,18,30,.45)'; g.beginPath(); g.arc(px(il.cx), pz(il.cz), (il.R + 4) * k, 0, 7); g.fill(); }
+  // 2) rotas: tracejado dourado nas pontes abertas, apagado nas fechadas
+  g.lineCap = 'round';
+  for (const p of PONTES) {
+    const ok = livre(p.a) && livre(p.b); g.setLineDash(ok ? [6, 7] : [2, 8]); g.lineWidth = ok ? 3 : 2; g.strokeStyle = ok ? 'rgba(255,209,102,.9)' : 'rgba(255,255,255,.28)';
+    g.beginPath(); g.moveTo(px(p.sx), pz(p.sz)); g.lineTo(px(p.sx + p.ux * p.len), pz(p.sz + p.uz * p.len)); g.stroke();
+  }
+  g.setLineDash([]);
+  // 3) rótulos em pílulas, com progresso; destaque da ilha atual e da missão do dia
+  const pilula = (x, y, titulo, sub, ok, atual) => {
+    g.font = `700 ${Math.max(10, Math.min(14, 6.5 * k))}px Fredoka, sans-serif`; const tw = g.measureText(titulo).width;
+    g.font = `600 ${Math.max(9, Math.min(11, 5 * k))}px Nunito, sans-serif`; const sw = g.measureText(sub).width;
+    const w = Math.max(tw, sw) + 22, h = 32;
+    g.fillStyle = atual ? 'rgba(255,209,102,.95)' : ok ? 'rgba(10,16,28,.78)' : 'rgba(10,16,28,.55)';
+    g.beginPath(); g.roundRect(x - w / 2, y, w, h, 10); g.fill();
+    if (ok && !atual) { g.strokeStyle = 'rgba(124,255,178,.45)'; g.lineWidth = 1; g.stroke(); }
+    g.textAlign = 'center'; g.fillStyle = atual ? '#2b1d00' : ok ? '#fff' : 'rgba(255,255,255,.7)';
+    g.font = `700 ${Math.max(10, Math.min(14, 6.5 * k))}px Fredoka, sans-serif`; g.fillText(titulo, x, y + 13);
+    g.font = `600 ${Math.max(9, Math.min(11, 5 * k))}px Nunito, sans-serif`; g.fillStyle = atual ? '#3b2a00' : 'rgba(255,255,255,.8)'; g.fillText(sub, x, y + 26);
+  };
   for (const il of ILHAS) {
     const x = px(il.cx), z = pz(il.cz), r = il.R * k, ok = livre(il.i);
-    g.fillStyle = '#f0dfae'; g.beginPath(); g.arc(x, z, r * 1.12, 0, 7); g.fill();
-    g.fillStyle = ok ? il.tema.chao[0] : '#4a5666'; g.beginPath(); g.arc(x, z, r, 0, 7); g.fill();
-    if (il.i === ilhaAtual) { g.strokeStyle = '#FFD166'; g.lineWidth = 3; g.stroke(); }
-    g.textAlign = 'center'; g.fillStyle = '#fff'; g.font = `700 ${Math.max(9, r * .26)}px Fredoka, sans-serif`;
-    g.fillText((ok ? '' : '🔒 ') + il.u.regiao_mundo.nome, x, z - 2, r * 2.2);
-    g.font = `600 ${Math.max(8, r * .19)}px Nunito, sans-serif`; g.fillStyle = 'rgba(255,255,255,.85)';
-    g.fillText(`${il.u.serie}ª série · ${feitasNa(il)}/${il.estacoes.filter(e => e.pronto).length} missões`, x, z + r * .3, r * 2.2);
+    if (il.i === ilhaAtual) { g.strokeStyle = '#FFD166'; g.lineWidth = 3; g.setLineDash([5, 5]); g.beginPath(); g.arc(x, z, r + 3, 0, 7); g.stroke(); g.setLineDash([]); }
+    if (!ok) { g.fillStyle = 'rgba(0,0,0,.35)'; g.beginPath(); g.arc(x, z - 8, 13, 0, 7); g.fill(); g.font = '15px sans-serif'; g.textAlign = 'center'; g.fillStyle = '#fff'; g.fillText('🔒', x, z - 3); }
+    const prontas = il.estacoes.filter(e => e.pronto).length;
+    pilula(x, z + r * .55, il.u.regiao_mundo.nome, estreito ? `${feitasNa(il)}/${prontas}` : `${il.u.serie}ª série · ${feitasNa(il)}/${prontas} missões`, ok, il.i === ilhaAtual);
   }
-  g.fillStyle = '#ff2d55'; g.strokeStyle = '#fff'; g.lineWidth = 3; g.beginPath(); g.arc(px(jog.x), pz(jog.z), 7, 0, 7); g.fill(); g.stroke();
+  // missão do dia e jogador
+  if (alvo) { const x = px(alvo.x), z = pz(alvo.z); g.strokeStyle = '#FFD166'; g.lineWidth = 3; g.beginPath(); g.arc(x, z, 9, 0, 7); g.stroke(); g.fillStyle = '#FFD166'; g.beginPath(); g.arc(x, z, 3.5, 0, 7); g.fill(); }
+  { const x = px(jog.x), z = pz(jog.z); g.fillStyle = 'rgba(124,255,178,.35)'; g.beginPath(); g.arc(x, z, 18, 0, 7); g.fill();
+    g.save(); g.beginPath(); g.arc(x, z, 13, 0, 7); g.clip(); g.drawImage($('retrato'), x - 13, z - 13, 26, 26); g.restore();
+    g.strokeStyle = '#fff'; g.lineWidth = 2.5; g.beginPath(); g.arc(x, z, 13, 0, 7); g.stroke(); }
   mapaInfo = { L, k };
-  document.querySelector('#mapa .leg').textContent = modoSalto ? '🌀 Salto de dobra: toque numa ilha desbloqueada (10 💎) · toque fora para cancelar' : 'Clique ou tecle M para fechar · ilhas com névoa ainda estão bloqueadas';
+  document.querySelector('#mapa .leg').textContent = modoSalto ? '🌀 Salto de dobra: toque numa ilha desbloqueada (10 💎) · toque fora para cancelar' : 'Tecle M ou toque fora para fechar · ilhas sob névoa ainda estão bloqueadas';
   $('mapa').classList.remove('oculto'); pausado = true;
+  if (estreito) { const cx = document.querySelector('#mapa .mapaCx'); cx.scrollLeft = px(jog.x) - innerWidth / 2; cx.scrollTop = pz(jog.z) - innerHeight * .35; }
 }
 function fecharMapa() { $('mapa').classList.add('oculto'); pausado = !!evo || !$('veu').classList.contains('oculto'); }
 $('mapa').onclick = ev => {
@@ -860,6 +994,9 @@ $('mapa').onclick = ev => {
   modoSalto = false; fecharMapa();
 }; $('btMapa').onclick = abrirMapa;
 $('pdEscudo').onclick = comprarEscudo;
+$('anelXp').onclick = () => { if (emJogo && $('veu').classList.contains('oculto')) abrirPerfil(); };
+$('seq').onclick = () => { if (emJogo && $('veu').classList.contains('oculto')) abrirSequencia(); };
+$('pdBau').onclick = () => { if (emJogo && $('veu').classList.contains('oculto')) abrirBau(); };
 $('btDiarias').onclick = () => { $('diarias').classList.toggle('oculto'); $('btDiarias').classList.toggle('on', !$('diarias').classList.contains('oculto')); };
 addEventListener('keydown', e => { if (e.key === 'h' && emJogo) $('dica').classList.toggle('oculto'); });
 $('btSom').onclick = () => { mudo = !mudo; $('btSom').innerHTML = ic(mudo ? 'mudo' : 'som'); };
@@ -887,8 +1024,9 @@ addEventListener('keydown', e => {
   if (k === 'Escape') { fecharPainel(); fecharMapa(); }
   if (!emJogo) return;
   if (k === 'm') $('mapa').classList.contains('oculto') ? abrirMapa() : fecharMapa();
+  if (k === 'b' && $('veu').classList.contains('oculto')) abrirBau();
   if (pausado) return;
-  if (k === 'e' || k === 'Enter') { const s = estacaoProxima(); if (s) abrirEstacao(s); }
+  if (k === 'e' || k === 'Enter') { const s = estacaoProxima(); if (s) abrirEstacao(s); else { const ch = chefePerto(); if (ch) abrirChefe(ch); } }
   if (k === '1') usarSonda();
   if (k === '2') usarSalto();
   if (k === ' ' && jog.chao) { jog.vy = 8.5; jog.chao = false; SFX.pulo(); e.preventDefault(); }
@@ -935,7 +1073,7 @@ const gpBotoes = [];
   const fim = e => { if (e.pointerId !== joy.id) return; joy.ativo = false; joy.x = joy.y = 0; pino.style.transform = ''; base.classList.remove('correndo'); };
   base.addEventListener('pointerup', fim); base.addEventListener('pointercancel', fim);
   $('btPular').addEventListener('pointerdown', e => { e.preventDefault(); if (emJogo && !pausado && jog.chao) { jog.vy = 8.5; jog.chao = false; SFX.pulo(); } });
-  $('btFalar').addEventListener('pointerdown', e => { e.preventDefault(); const st = estacaoProxima(); if (emJogo && !pausado && st) abrirEstacao(st); });
+  $('btFalar').addEventListener('pointerdown', e => { e.preventDefault(); const st = estacaoProxima(); if (emJogo && !pausado && st) abrirEstacao(st); else if (emJogo && !pausado) { const ch = chefePerto(); if (ch) abrirChefe(ch); } });
   $('prompt').addEventListener('click', () => { const st = estacaoProxima(); if (emJogo && !pausado && st) abrirEstacao(st); });
 })();
 
@@ -991,13 +1129,14 @@ function atualizarJogador(dt) {
   for (const p of PILULAS) if (p.mesh && (p.x - jog.x) ** 2 + (p.z - jog.z) ** 2 < 1.7) {
     est.pilulasCol[p.id] = Date.now(); est.pilulas[p.ilha] = (est.pilulas[p.ilha] || 0) + 1;
     removerColetavel(p); SFX.coleta(); explosao(p.x, 1.6, p.z, ['#FF8FAB', '#ffffff'], 30, 4); atualizarPoderes(); salvar();
-    fatoDaIlha(ILHAS[p.ilha]).then(f => toastLongo('💊', 'Pílula de conhecimento: guardada para os desafios desta ilha e da próxima', f ? f.titulo + ': ' + f.texto : 'Use-a num desafio para eliminar 2 alternativas erradas.'));
+    fatoDaIlha(ILHAS[p.ilha]).then(f => { if (f) { (est.pilulasTexto ||= []).push({ i: p.ilha, t: f.titulo, x: f.texto, d: Date.now() }); if (est.pilulasTexto.length > 90) est.pilulasTexto.shift(); salvar(); } toastLongo('💊', 'Pílula de conhecimento guardada no baú (tecla B)', f ? f.titulo + ': ' + f.texto : 'Use-a num desafio para eliminar 2 alternativas erradas.'); });
   }
   for (const fr of FRAGS) if (fr.mesh && (fr.espera || 0) < tempo && (fr.x - jog.x) ** 2 + (fr.z - jog.z) ** 2 < 1.8) { fr.espera = tempo + 4; abrirFragmento(fr); break; }
   // prompt
-  const s = estacaoProxima(), pr = $('prompt');
-  $('btFalar').classList.toggle('oculto', !(s && !pausado));
-  if (s && !pausado) { pr.innerHTML = `<span class="tecla">${TOQUE ? '👆' : 'E'}</span> ${s.premium ? (liberado(s.topico) ? '💎 Missão premium · ' : '💎 Baú premium · ') + esc(s.topico.titulo) : s.pronto ? (est.feitas[s.topico.id] ? '✅ ' : '💬 ') + esc(s.topico.titulo) : '🚧 Estação em construção'}`; pr.classList.remove('oculto'); }
+  const s = estacaoProxima(), ch = s ? null : chefePerto(), pr = $('prompt');
+  $('btFalar').classList.toggle('oculto', !((s || ch) && !pausado));
+  if (ch && !pausado) { pr.innerHTML = `<span class="tecla">${TOQUE ? '👆' : 'E'}</span> ⚔️ Enfrentar o Guardião de ${esc(ILHAS[ch.b].u.regiao_mundo.nome)}`; pr.classList.remove('oculto'); }
+  else if (s && !pausado) { pr.innerHTML = `<span class="tecla">${TOQUE ? '👆' : 'E'}</span> ${s.premium ? (liberado(s.topico) ? '💎 Missão premium · ' : '💎 Baú premium · ') + esc(s.topico.titulo) : s.pronto ? (est.feitas[s.topico.id] ? '✅ ' : '💬 ') + esc(s.topico.titulo) : '🚧 Estação em construção'}`; pr.classList.remove('oculto'); }
   else pr.classList.add('oculto');
   // NPCs olham para o jogador
   for (const e of ESTACOES) if (e.cabeca && e.grupo.visible && Math.hypot(e.x - jog.x, e.z - jog.z) < 7) e.grupo.rotation.y = lerp(e.grupo.rotation.y, Math.atan2(jog.x - e.x, jog.z - e.z), .1);
@@ -1018,6 +1157,7 @@ function atualizarCamera(dt) {
 let transicao = 0;
 
 function animarMundo(dt) {
+  for (const p of PONTES) if (p.chefe && p.chefe.visible) { p.chefe.position.y = 2.3 + Math.sin(tempo * 2 + p.a) * .3; p.chefe.rotation.y = Math.atan2(jog.x - p.chefe.position.x, jog.z - p.chefe.position.z); }
   visual.atualizar(dt, { x: emJogo ? jog.x : 0, z: emJogo ? jog.z : 0 }, ilhaAtual >= 0 ? ILHAS[ilhaAtual].tema : (ilhaPerto(jog.x, jog.z) || {}).tema);
   for (const il of ILHAS) { il.icone.rotation.y += dt * .8; il.icone.position.y = 6.6 + Math.sin(tempo * 1.5 + il.i) * .35; il.halo.position.y = il.icone.position.y; il.halo.material.opacity = .55 + Math.sin(tempo * 2 + il.i) * .2; }
   for (const e of ESTACOES) if (e.gema && e.grupo.visible) {
@@ -1094,7 +1234,7 @@ function comecar(novo) {
       if (!s.ultimo || s.ultimo === ontem()) s.dias = (s.dias || 0) + 1;
       else if (s.escudos > 0) { s.escudos--; s.dias = (s.dias || 0) + 1; setTimeout(() => toast('🛡️', 'Escudo usado', 'Sua sequência de ' + s.dias + ' dias continua'), 2600); }
       else { if (s.dias > 1) setTimeout(() => toast('🔥', 'Sequência perdida', 'Comece outra hoje mesmo'), 2600); s.dias = 1; }
-      s.ultimo = hoje();
+      s.ultimo = hoje(); (s.historico ||= []).push(hoje()); if (s.historico.length > 120) s.historico.shift(); s.recorde = Math.max(s.recorde || 0, s.dias);
       if (s.dias > 1 && s.dias % 1 === 0) setTimeout(() => { toast('🔥', s.dias + ' dias seguidos!', 'Continue amanhã para manter'); SFX.conquista(); }, 1800);
     }
   }
@@ -1150,7 +1290,7 @@ $('btNovo').onclick = () => {
 })();
 
 // acesso de depuração pelo console (útil para testes e demonstrações)
-window.EXP = { jog, ILHAS, PONTES, ESTACOES, ORBES, PILULAS, get est() { return est; }, abrirEstacao, ganharXp, noChao, pode, usarSonda, usarSalto, saltarPara, get feixes() { return feixes; }, abrirFragmento, camCtl, teclas, FRAGS, abrirMapa, fecharMapa, get emJogo() { return emJogo; }, visual, avatar: av };
+window.EXP = { jog, ILHAS, PONTES, ESTACOES, ORBES, PILULAS, get est() { return est; }, abrirEstacao, ganharXp, noChao, pode, usarSonda, usarSalto, saltarPara, get feixes() { return feixes; }, abrirFragmento, camCtl, teclas, FRAGS, abrirMapa, fecharMapa, get emJogo() { return emJogo; }, visual, avatar: av, abrirChefe, abrirPerfil, abrirSequencia, PONTES };
 
 // botões dos poderes
 $('pdSonda').onclick = usarSonda; $('pdSalto').onclick = usarSalto;

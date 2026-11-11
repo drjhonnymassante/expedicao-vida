@@ -79,9 +79,17 @@
   .passos { display: inline-flex; gap: 5px; margin-left: 8px; vertical-align: middle; }
   .passos i { width: 9px; height: 9px; border-radius: 50%; background: rgba(255,255,255,.18); }
   .passos i.ok { background: var(--neon); } .passos i.atual { background: var(--ouro); box-shadow: 0 0 8px var(--ouro); }
-  .mapaCx { animation: abre .35s cubic-bezier(.2,.9,.3,1.2); }
+  .mapaCx { animation: abre .35s cubic-bezier(.2,.9,.3,1.2); max-width: 96vw; max-height: 90vh; overflow: auto; -webkit-overflow-scrolling: touch; }
+  body.toque .mapaTopo { position: sticky; left: 0; }
   .mapaTopo { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 10px; }
   .mapaTopo .etq { font-size: 14px; }
+  .timer.chefe { height: 11px; } .timer.chefe div { background: linear-gradient(90deg, #ffb300, #ff3d71); transition: width .1s linear; }
+  #anelXp, #seq { cursor: pointer; }
+  .calend { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; }
+  .cal { aspect-ratio: 1; display: grid; place-items: center; border-radius: 10px; background: rgba(255,255,255,.06); font-weight: 800; font-size: 13px; }
+  .cal.l { background: none; color: var(--sub); font-size: 11px; } .cal.vazio { background: none; }
+  .cal.on { background: rgba(255,209,102,.25); color: var(--ouro); border: 1px solid rgba(255,209,102,.5); }
+  .cal.hoje { outline: 2px solid var(--neon); outline-offset: -2px; }
   .vermais { background: none; border: none; color: var(--neon2); font-family: Nunito; font-weight: 800; font-size: 13px; cursor: pointer; padding: 6px 0; min-height: 32px; text-decoration: underline; }
   #demoBts { position: fixed; left: 50%; transform: translateX(-50%); bottom: 14px; z-index: 6; display: flex; gap: 8px; }
   #demoBts .bt { padding: 7px 11px; font-size: 12.5px; }
@@ -233,9 +241,9 @@
 <link rel="icon" href="../compartilhado/marca/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="../compartilhado/marca/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="../compartilhado/marca/apple-touch-icon.png">
-<script src="../vendor/supabase.js?v=mwc1p37m"></script>
-<script src="../../config.js?v=mwc1p37m"></script>
-<script src="../compartilhado/sessao.js?v=mwc1p37m"></script>
+<script src="../vendor/supabase.js?v=mwccqwv5"></script>
+<script src="../../config.js?v=mwccqwv5"></script>
+<script src="../compartilhado/sessao.js?v=mwccqwv5"></script>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
@@ -254,6 +262,7 @@
 <symbol id="i-fogo" viewBox="0 0 24 24"><path d="M12 2c1 4 5 5 5 10a5 5 0 0 1-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-3-1-6 1-9z" fill="currentColor"/></symbol>
 <symbol id="i-seta" viewBox="0 0 24 24"><path d="M12 3l7 18-7-4-7 4 7-18z" fill="currentColor"/></symbol>
 <symbol id="i-fechar" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/></symbol>
+<symbol id="i-bau" viewBox="0 0 24 24"><path d="M3 10a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v9H3v-9z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M3 12h18M12 11v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
 </defs></svg>
 <canvas id="cena"></canvas>
 
@@ -281,6 +290,7 @@
   <button class="bt" id="pdSonda" title="Sonda de reconhecimento (tecla 1): revela pílulas, fragmentos e missões da ilha por 45 s"><svg class="ic" aria-hidden="true"><use href="#i-sonda"/></svg> Sonda <small>5 💎</small></button>
   <button class="bt" id="pdSalto" title="Salto de dobra (tecla 2): viaje para qualquer ilha desbloqueada"><svg class="ic" aria-hidden="true"><use href="#i-salto"/></svg> Salto <small>10 💎</small></button>
   <button class="bt" id="pdEscudo" title="Escudo de sequência: um dia sem jogar não zera seus dias seguidos"><svg class="ic" aria-hidden="true"><use href="#i-escudo"/></svg> Escudo <small>20 💎</small></button>
+  <button class="bt" id="pdBau" title="Baú de conhecimento (tecla B): releia as pílulas coletadas"><svg class="ic" aria-hidden="true"><use href="#i-bau"/></svg> Baú</button>
 </div>
 <canvas id="minimapa" class="oculto" width="380" height="380"></canvas>
 <div id="regiao"><div class="r1" id="rg1"></div><div class="r2" id="rg2"></div><div class="r3" id="rg3"></div></div>
@@ -320,10 +330,10 @@
   </div>
 </div>
 
-<script src="../compartilhado/avatar2d.js?v=mwc1p37m"></script>
-<script src="../compartilhado/estado.js?v=mwc1p37m"></script>
-<script src="cena.js?v=mwc1p37m"></script>
-<script type="module" src="main.js?v=mwc1p37m"></script>
-<script src="tour.js?v=mwc1p37m"></script>
+<script src="../compartilhado/avatar2d.js?v=mwccqwv5"></script>
+<script src="../compartilhado/estado.js?v=mwccqwv5"></script>
+<script src="cena.js?v=mwccqwv5"></script>
+<script type="module" src="main.js?v=mwccqwv5"></script>
+<script src="tour.js?v=mwccqwv5"></script>
 </body>
 </html>
