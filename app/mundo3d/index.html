@@ -33,7 +33,7 @@
   body.toque #perfil .xptxt { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   body.toque #minimapa { top: calc(114px + env(safe-area-inset-top)); bottom: auto; right: 10px; width: 108px; height: 108px; }
   body.toque #acoes { top: calc(234px + env(safe-area-inset-top)); right: 10px; flex-direction: column; gap: 10px; align-items: flex-end; }
-  body.toque #acoes .bt { width: 48px; height: 48px; padding: 0; border-radius: 50%; display: grid; place-items: center; font-size: 22px; }
+  body.toque #acoes .bt { width: 52px; height: 52px; padding: 0; border-radius: 50%; display: grid; place-items: center; font-size: 22px; }
   body.toque #acoes .bt .tecla { display: none; }
   body.toque #prompt { bottom: calc(196px + env(safe-area-inset-bottom)); max-width: 86vw; font-size: 14px; pointer-events: auto; }
   body.toque #regiao { top: calc(118px + env(safe-area-inset-top)); left: 12px; right: 130px; transform: none; text-align: left; }
@@ -41,6 +41,26 @@
   body.toque #regiao .r2 { font-size: 26px; }
   body.toque #toasts { top: auto; bottom: calc(252px + env(safe-area-inset-bottom)); }
   .oculto { display: none !important; }
+  /* resposta imediata: botões que apertam, XP voando, pulso no perfil, clarão na evolução */
+  .bt, .btt, .alt, .personagens button, .cores button { -webkit-tap-highlight-color: transparent; }
+  .bt:active:not(:disabled), .personagens button:active, .cores button:active { transform: scale(.94) !important; transition: transform .06s; }
+  .alt:active:not(:disabled) { transform: scale(.985) translateX(4px); }
+  .xpvoa { position: fixed; z-index: 60; pointer-events: none; font-family: Fredoka, sans-serif; font-weight: 700; font-size: 30px; color: var(--ouro); text-shadow: 0 0 18px rgba(255,209,102,.9), 0 2px 10px rgba(0,0,0,.7); transform: translate(-50%, -50%); }
+  #perfil.pulso { animation: pulsoPerfil .55s cubic-bezier(.2,.9,.3,1.3); }
+  #perfil.pulso .xp div { box-shadow: 0 0 26px rgba(124,255,178,1); }
+  @keyframes pulsoPerfil { 30% { transform: scale(1.06); } }
+  body.toque #perfil.pulso { animation-name: pulsoPerfilToque; } @keyframes pulsoPerfilToque { 30% { transform: scale(1.03); } }
+  body.clarao::after { content: ''; position: fixed; inset: 0; z-index: 70; pointer-events: none; background: #fff7d1; animation: clarao .5s ease-out forwards; }
+  @keyframes clarao { from { opacity: .85; } to { opacity: 0; } }
+  .seq { position: absolute; right: 10px; top: 6px; font-size: 12.5px; font-weight: 800; color: var(--ouro); background: rgba(255,209,102,.14); border: 1px solid rgba(255,209,102,.35); border-radius: 10px; padding: 1px 7px; }
+  #alvo { position: fixed; top: 16px; left: 50%; transform: translateX(-50%); display: flex; gap: 10px; align-items: center; padding: 7px 14px 7px 10px; font-size: 13.5px; font-weight: 800; z-index: 5; pointer-events: none; transition: border-color .3s; }
+  #alvo small { display: block; font-size: 10.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--neon); }
+  #alvoSeta { display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: rgba(255,209,102,.18); color: var(--ouro); font-size: 16px; transition: transform .25s; }
+  #alvo.perto { border-color: var(--ouro); } #alvo.perto #alvoSeta { background: var(--ouro); color: #3b2a00; }
+  body.toque #alvo { top: calc(66px + env(safe-area-inset-top)); max-width: 80vw; font-size: 12.5px; }
+  #btDiarias.on { background: rgba(255,209,102,.25); border-color: var(--ouro); }
+  body.toque #diarias { top: calc(120px + env(safe-area-inset-top)); right: 70px; width: min(270px, 70vw); }
+  .vermais { background: none; border: none; color: var(--neon2); font-family: Nunito; font-weight: 800; font-size: 13px; cursor: pointer; padding: 6px 0; min-height: 32px; text-decoration: underline; }
   #demoBts { position: fixed; left: 50%; transform: translateX(-50%); bottom: 14px; z-index: 6; display: flex; gap: 8px; }
   #demoBts .bt { padding: 7px 11px; font-size: 12.5px; }
   body.toque #demoBts { bottom: auto; top: 64px; }
@@ -62,7 +82,7 @@
 
   /* Barra superior direita */
   #acoes { position: fixed; top: 16px; right: 16px; display: flex; gap: 8px; }
-  .bt { font-family: Nunito; font-weight: 800; font-size: 13.5px; color: var(--txt); background: var(--vidro); border: 1px solid var(--vidro-borda); backdrop-filter: blur(12px); border-radius: 14px; padding: 10px 14px; cursor: pointer; text-decoration: none; transition: transform .15s, background .15s; }
+  .bt { min-height: 44px; font-family: Nunito; font-weight: 800; font-size: 14px; color: var(--txt); background: var(--vidro); border: 1px solid var(--vidro-borda); backdrop-filter: blur(12px); border-radius: 14px; padding: 10px 14px; cursor: pointer; text-decoration: none; transition: transform .15s, background .15s; }
   .bt:hover { transform: translateY(-2px); background: rgba(255,255,255,.18); }
   .bt.prim { background: linear-gradient(135deg, #22c55e, #10b981); border: none; box-shadow: 0 6px 24px rgba(34,197,94,.45); }
   .bt.roxo { background: linear-gradient(135deg, #8b5cf6, #6366f1); border: none; box-shadow: 0 6px 24px rgba(139,92,246,.45); }
@@ -98,7 +118,7 @@
   #toasts { position: fixed; top: 96px; left: 16px; display: flex; flex-direction: column; gap: 8px; }
   #poderes { position: fixed; left: 16px; bottom: 96px; display: flex; flex-direction: row; align-items: center; gap: 8px; padding: 10px; z-index: 5; }
   #carteira { display: flex; gap: 10px; justify-content: center; font-family: Fredoka; font-weight: 700; font-size: 16px; }
-  #poderes .bt { padding: 8px 10px; font-size: 13px; text-align: left; }
+  #poderes .bt { padding: 8px 12px; font-size: 13.5px; text-align: left; }
   #poderes .bt small, .ajudas .bt small { display: block; font-size: 11px; opacity: .8; }
   #poderes .bt:disabled, .ajudas .bt:disabled { opacity: .45; cursor: not-allowed; transform: none; }
   .ajudas { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
@@ -133,7 +153,7 @@
   .premio span { background: rgba(255,209,102,.14); color: var(--ouro); border: 1px solid rgba(255,209,102,.3); padding: 6px 12px; border-radius: 12px; font-weight: 800; font-size: 13.5px; }
   .acoesP { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
   .questao { font-size: 17px; line-height: 1.55; margin: 12px 0 14px; }
-  .alt { display: flex; gap: 12px; align-items: center; width: 100%; text-align: left; border: 1px solid rgba(255,255,255,.14); background: rgba(255,255,255,.05); color: var(--txt); padding: 12px 14px; border-radius: 14px; margin: 8px 0; cursor: pointer; font-size: 14.5px; font-family: Nunito; transition: transform .12s, background .12s, border-color .12s; }
+  .alt { min-height: 48px; display: flex; gap: 12px; align-items: center; width: 100%; text-align: left; border: 1px solid rgba(255,255,255,.14); background: rgba(255,255,255,.05); color: var(--txt); padding: 12px 14px; border-radius: 14px; margin: 8px 0; cursor: pointer; font-size: 14.5px; font-family: Nunito; transition: transform .12s, background .12s, border-color .12s; }
   .alt:hover:not(:disabled) { transform: translateX(4px); border-color: var(--neon2); background: rgba(110,200,255,.1); }
   .alt .let { flex: none; width: 28px; height: 28px; border-radius: 9px; background: rgba(255,255,255,.1); display: grid; place-items: center; font-family: Fredoka; font-weight: 700; }
   .alt.certa { border-color: #36D399; background: rgba(54,211,153,.18); }
@@ -168,7 +188,7 @@
   .personagens button.sel { border-color: #fff; background: rgba(124,255,178,.22); transform: scale(1.04); }
   @media (max-height: 760px), (max-width: 480px) { #previa { width: 150px; height: 162px; margin-top: 2px; } .personagens { gap: 6px; margin: 6px 0 2px; } .personagens button { padding: 4px 8px; min-height: 44px; } .personagens button b { font-size: 13px; } #inicio .caixa > img { width: 72px; height: 72px; } #inicio .sub { font-size: 14px; margin: 8px 0 12px; } #inicio .form { padding: 12px; } }
   .cores { display: flex; gap: 10px; justify-content: center; margin: 10px 0; }
-  .cores button { width: 34px; height: 34px; border-radius: 50%; border: 3px solid transparent; cursor: pointer; transition: transform .15s; }
+  .cores button { width: 44px; height: 44px; border-radius: 50%; border: 3px solid transparent; cursor: pointer; transition: transform .15s; }
   .cores button.sel { border-color: #fff; transform: scale(1.15); }
   #inicio .linha { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 6px; }
   #inicio .bt { font-size: 16px; padding: 14px 24px; }
@@ -185,15 +205,15 @@
   #mapa { position: fixed; inset: 0; z-index: 35; display: grid; place-items: center; background: rgba(5,10,20,.85); backdrop-filter: blur(6px); }
   #mapa canvas { max-width: 94vw; max-height: 84vh; border-radius: 22px; box-shadow: 0 20px 80px rgba(0,0,0,.6); }
   #mapa .leg { text-align: center; color: var(--sub); margin-top: 12px; }
-  @media (max-width: 820px) { #diarias, #dica, #bussola { display: none; } #minimapa { width: 130px; height: 130px; } .xp { width: 130px; } #regiao .r2 { font-size: 26px; } }
+  @media (max-width: 820px) { #dica, #bussola { display: none; } #minimapa { width: 130px; height: 130px; } .xp { width: 130px; } #regiao .r2 { font-size: 26px; } }
 </style>
 <script type="importmap">{ "imports": { "three": "../vendor/three/three.module.min.js", "three/addons/": "../vendor/three/addons/" } }</script>
 <link rel="icon" href="../compartilhado/marca/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="../compartilhado/marca/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="../compartilhado/marca/apple-touch-icon.png">
-<script src="../vendor/supabase.js?v=mwbhqbys"></script>
-<script src="../../config.js?v=mwbhqbys"></script>
-<script src="../compartilhado/sessao.js?v=mwbhqbys"></script>
+<script src="../vendor/supabase.js?v=mwbk3l99"></script>
+<script src="../../config.js?v=mwbk3l99"></script>
+<script src="../compartilhado/sessao.js?v=mwbk3l99"></script>
 </head>
 <body>
 <canvas id="cena"></canvas>
@@ -201,6 +221,7 @@
 <div id="perfil" class="vidro oculto" style="position:fixed">
   <canvas id="retrato" width="128" height="128"></canvas>
   <span id="nivelBadge">1</span>
+  <span id="seq" class="seq" title="dias seguidos">🔥 0</span>
   <div>
     <div class="nome titulo" id="pNome">Explorador(a)</div>
     <div class="forma" id="pForma">Bactéria</div>
@@ -210,6 +231,7 @@
 </div>
 <div id="acoes" class="oculto">
   <button class="bt" id="btSom" title="Som">🔊</button>
+  <button class="bt" id="btDiarias" title="Desafios de hoje">📋</button>
   <button class="bt" id="btMapa">🗺️ Mapa <span class="tecla" style="height:20px;min-width:20px;font-size:11px">M</span></button>
   <a class="bt prim" href="../index.html" target="_blank" rel="noopener">📖 Aulas</a>
 </div>
@@ -219,10 +241,12 @@
   <div id="carteira"></div>
   <button class="bt" id="pdSonda" title="Sonda de reconhecimento (tecla 1): revela pílulas, fragmentos e missões da ilha por 45 s">🛰️ Sonda <small>5 💎</small></button>
   <button class="bt" id="pdSalto" title="Salto de dobra (tecla 2): viaje para qualquer ilha desbloqueada">🌀 Salto <small>10 💎</small></button>
+  <button class="bt" id="pdEscudo" title="Escudo de sequência: um dia sem jogar não zera seus dias seguidos">🛡️ Escudo <small>20 💎</small></button>
 </div>
 <canvas id="minimapa" class="oculto" width="380" height="380"></canvas>
 <div id="regiao"><div class="r1" id="rg1"></div><div class="r2" id="rg2"></div><div class="r3" id="rg3"></div></div>
 <div id="prompt" class="vidro oculto"></div>
+<div id="alvo" class="vidro oculto"><span id="alvoSeta">➤</span><span><small>Missão do dia</small><span id="alvoTxt"></span></span></div>
 <div id="dica" class="vidro oculto"><b>WASD</b> andar · <b>Shift</b> correr · <b>Espaço</b> pular · <b>arrastar o mouse</b> girar câmera · <b>roda</b> zoom · <b>E</b> interagir · <b>1</b> sonda · <b>2</b> salto · <b>M</b> mapa<span id="dicaDemo"></span></div>
 <div id="toasts"></div>
 <div id="toque">
@@ -250,16 +274,17 @@
         <button class="bt oculto" id="btCont">⟳ Continuar</button>
       </div>
       <label><input type="checkbox" id="demo"> Modo demonstração (atalhos para apresentações)</label>
+      <div id="avisoSeq" class="oculto" style="margin-top:10px;font-size:13px;color:var(--ouro);font-weight:800"></div>
       <div id="carga">Carregando o arquipélago…</div>
     </div>
     <div style="margin-top:12px;font-size:12px;color:var(--sub)">Computador antigo? <a href="../mundo/" style="color:var(--neon)">Use a versão leve</a></div>
   </div>
 </div>
 
-<script src="../compartilhado/avatar2d.js?v=mwbhqbys"></script>
-<script src="../compartilhado/estado.js?v=mwbhqbys"></script>
-<script src="cena.js?v=mwbhqbys"></script>
-<script type="module" src="main.js?v=mwbhqbys"></script>
-<script src="tour.js?v=mwbhqbys"></script>
+<script src="../compartilhado/avatar2d.js?v=mwbk3l99"></script>
+<script src="../compartilhado/estado.js?v=mwbk3l99"></script>
+<script src="cena.js?v=mwbk3l99"></script>
+<script type="module" src="main.js?v=mwbk3l99"></script>
+<script src="tour.js?v=mwbk3l99"></script>
 </body>
 </html>

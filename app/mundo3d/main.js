@@ -394,10 +394,39 @@ function toastLongo(ic, titulo, texto) {
   $('toasts').appendChild(d); setTimeout(() => d.remove(), 8200);
 }
 // ---------- poderes dos biocristais ----------
+let alvo = null, accAlvo = 9;
+const ontem = () => new Date(Date.now() - 864e5).toISOString().slice(0, 10);
+function escolherAlvo() {
+  const livres = ESTACOES.filter(e => e.pronto && !e.premium && livre(e.ilha) && !est.feitas[e.topico.id]);
+  if (!livres.length) return null;
+  const atual = livres.filter(e => e.ilha === ilhaAtual);
+  const lista = atual.length ? atual : livres;
+  return lista.sort((a, b) => Math.hypot(a.x - jog.x, a.z - jog.z) - Math.hypot(b.x - jog.x, b.z - jog.z))[0];
+}
+function atualizarAlvo(dt) {
+  if ((accAlvo += dt) < .25) return; accAlvo = 0;
+  if (!alvo || est.feitas[alvo.topico.id]) alvo = escolherAlvo();
+  const el = $('alvo'); if (!alvo) { el.classList.add('oculto'); return; }
+  el.classList.remove('oculto');
+  const dx = alvo.x - jog.x, dz = alvo.z - jog.z, dist = Math.hypot(dx, dz);
+  // ângulo do alvo em relação à câmera (frente da câmera = -z girado por yaw)
+  const ang = Math.atan2(dx, dz) - camCtl.yaw;
+  $('alvoSeta').style.transform = `rotate(${-ang * 180 / Math.PI + 180}deg)`;
+  $('alvoTxt').textContent = `${alvo.topico.titulo} · ${Math.round(dist)} m`;
+  el.classList.toggle('perto', dist < 6);
+}
 function atualizarPoderes() {
   if (!est) return;
   $('carteira').innerHTML = '<span title="Biocristais: energia para os poderes">💎 ' + (est.cristais || 0) + '</span><span title="Pílulas de conhecimento guardadas">💊 ' + Object.values(est.pilulas).reduce((a, b) => a + b, 0) + '</span>';
+  const s = est.seq || {}; $('seq').textContent = '🔥 ' + (s.dias || 0); $('seq').title = (s.dias || 0) + ' dia(s) seguidos · escudos: ' + (s.escudos || 0);
+  $('pdEscudo').disabled = (est.cristais || 0) < 20 || (s.escudos || 0) >= 2; $('pdEscudo').innerHTML = '🛡️ Escudo <small>20 💎 · ' + (s.escudos || 0) + '/2</small>';
   $('pdSonda').disabled = (est.cristais || 0) < 5 || tempo < sondaAte; $('pdSalto').disabled = (est.cristais || 0) < 10;
+}
+function comprarEscudo() {
+  const s = est.seq || (est.seq = { dias: 0, ultimo: hoje(), escudos: 0 });
+  if ((est.cristais || 0) < 20 || s.escudos >= 2) return toast('🛡️', 'Escudo de sequência', s.escudos >= 2 ? 'Você já tem 2 escudos' : 'Custa 20 💎');
+  est.cristais -= 20; s.escudos++; salvar(); atualizarPoderes(); SFX.coleta();
+  toast('🛡️', 'Escudo comprado', 'Um dia sem jogar não zera sua sequência');
 }
 function usarSonda() {
   if (!emJogo || pausado) return;
@@ -516,6 +545,7 @@ function aplicarVisualBloqueio() {
 function ganharXp(v, motivo) {
   const antes = nivelDe(est.xp); est.xp += v; const depois = nivelDe(est.xp);
   textoFlutuante(`+${v} XP`, motivo);
+  if (v >= 15) xpVoando(v);
   atualizarHud(); salvar();
   if (depois > antes) setTimeout(() => evoluir(formaDe(antes), formaDe(depois), depois), 600);
 }
@@ -535,7 +565,7 @@ function atualizarEvolucao(dt) {
   avatar.rotation.y += dt * (6 + t * 6); avatar.position.y = jog.y + Math.min(1.6, t * 1.4) * (t < 2.2 ? 1 : Math.max(0, 1 - (t - 2.2) * 2));
   const pulso = 1 + Math.sin(t * 20) * .08 * (t < 1.3 ? 1 : 0); avatar.scale.setScalar(pulso);
   if (t < 1.3 && Math.random() < .5) explosao(jog.x, jog.y + 1, jog.z, ['#FFD166', '#fff59d'], 4, 3);
-  if (t > 1.3 && !evo.trocou) { evo.trocou = true; mostrarForma(evo.fd); av.comemorar(); explosao(jog.x, jog.y + 1.5, jog.z, ['#FFD166', '#7CFFB2', '#6EC8FF', '#ffffff', '#FF8FAB'], 220, 11); }
+  if (t > 1.3 && !evo.trocou) { evo.trocou = true; mostrarForma(evo.fd); av.comemorar(); tremer(.5); document.body.classList.add('clarao'); setTimeout(() => document.body.classList.remove('clarao'), 500); explosao(jog.x, jog.y + 1.5, jog.z, ['#FFD166', '#7CFFB2', '#6EC8FF', '#ffffff', '#FF8FAB'], 220, 11); }
   if (t > 3.2) { evo = null; feixe.visible = false; avatar.scale.setScalar(1); $('evolucao').classList.add('oculto'); pausado = !!document.querySelector('#veu:not(.oculto)'); camCtl.alvoDist = 15; verificarConquistas(); }
 }
 
@@ -556,6 +586,17 @@ function toast(ic, titulo, sub) {
   $('toasts').appendChild(d); setTimeout(() => d.remove(), 3200);
 }
 const flutuantes = [];
+let tremor = 0;
+function tremer(f) { tremor = Math.max(tremor, f); }
+// XP voando do centro da tela até a barra do HUD, que dá um pulso ao receber
+function xpVoando(v) {
+  const alvo = $('pXp').getBoundingClientRect(), el = document.createElement('div');
+  el.className = 'xpvoa'; el.textContent = '+' + v + ' XP';
+  el.style.left = innerWidth / 2 + 'px'; el.style.top = innerHeight * .42 + 'px';
+  document.body.appendChild(el);
+  const anim = el.animate([{ transform: 'translate(-50%,-50%) scale(1.3)', opacity: 1 }, { transform: `translate(${alvo.left + 40 - innerWidth / 2}px, ${alvo.top - innerHeight * .42}px) scale(.6)`, opacity: .9 }], { duration: 700, easing: 'cubic-bezier(.4,0,.6,1)', delay: 250 });
+  anim.onfinish = () => { el.remove(); $('perfil').classList.remove('pulso'); void $('perfil').offsetWidth; $('perfil').classList.add('pulso'); };
+}
 function textoFlutuante(txt, sub) {
   const el = document.createElement('div'); el.style.cssText = 'position:fixed;pointer-events:none;font-family:Fredoka;font-weight:700;font-size:26px;color:#FFD166;text-shadow:0 2px 10px rgba(0,0,0,.7);z-index:20;white-space:nowrap;text-align:center';
   el.innerHTML = `${esc(txt)}${sub ? `<div style="font-size:13px;color:#fff;font-family:Nunito">${esc(sub)}</div>` : ''}`;
@@ -702,11 +743,13 @@ async function desafio(e, j, m) {
         acertos++; combo++; est.maxCombo = Math.max(est.maxCombo || 0, combo);
         const rapido = resta > limite - 12, mult = 1 + .25 * (Math.min(combo, 5) - 1), v = Math.round((BASEXP[q.nivel] * mult + (rapido ? 5 : 0)) * ajuda);
         xpGanho += v; extra = ` <b style="color:var(--ouro)">+${v} XP</b>${rapido ? ' ⚡ resposta rápida' : ''}${combo > 1 ? ` · combo ×${combo}` : ''}`;
-        SFX.certo(); mostrarCombo();
-      } else { b.classList.add('errada'); if (!protegido) combo = 0; SFX.errado(); }
+        SFX.certo(); mostrarCombo(); tremer(.18);
+      } else { b.classList.add('errada'); if (!protegido) combo = 0; SFX.errado(); tremer(.3); }
       document.querySelectorAll('.ajudas .bt').forEach(x => x.disabled = true);
-      $('fb').innerHTML = `<div class="exp">${ok ? '✅ <b>Isso!</b>' : '❌ <b>Quase.</b>'}${extra}<br>${esc(q.explicacao)}</div><div class="acoesP"><button class="bt prim" id="prox">Continuar →</button></div>`;
+      const frases = String(q.explicacao || '').split(/(?<=[.!?])\s+/), curta = frases.slice(0, 2).join(' '), temMais = frases.length > 2;
+      $('fb').innerHTML = `<div class="exp">${ok ? '✅ <b>Isso!</b>' : '❌ <b>Quase!</b>'}${extra}<br><span id="expTxt">${esc(curta)}</span>${temMais ? ' <button class="vermais" id="verMais">ver explicação completa</button>' : ''}</div><div class="acoesP"><button class="bt prim" id="prox">Continuar →</button></div>`;
       $('prox').onclick = () => { i++; passo(); };
+      if ($('verMais')) $('verMais').onclick = () => { $('expTxt').textContent = q.explicacao; $('verMais').remove(); };
     });
   };
   const fim = () => {
@@ -723,7 +766,7 @@ async function desafio(e, j, m) {
       if (cenaAtual) { cenaAtual.obj.destruir(); cenaAtual = null; }
       fecharPainel();
       if (venceu) {
-        av.comemorar();
+        av.comemorar(); tremer(.35);
         explosao(e.x, 3, e.z, ['#FFD166', '#7CFFB2', '#FF8FAB', '#6EC8FF'], 120, 9);
         ganharXp((jaFeito ? 0 : (m.recompensa_xp || 100)) + xpGanho, jaFeito ? 'revisão' : 'missão cumprida');
         if (!jaFeito) { diaria('missao'); }
@@ -764,6 +807,7 @@ function desenharMinimapa() {
   g.strokeStyle = '#c49a6c'; g.lineWidth = 6;
   for (const p of PONTES) { if (!livre(p.a)) continue; g.globalAlpha = livre(p.b) ? 1 : .4; g.beginPath(); g.moveTo(px(p.sx), pz(p.sz)); g.lineTo(px(p.sx + p.ux * p.len), pz(p.sz + p.uz * p.len)); g.stroke(); }
   g.globalAlpha = 1;
+  if (alvo) { const r = 7 + Math.sin(tempo * 5) * 3; g.strokeStyle = '#FFD166'; g.lineWidth = 3; g.beginPath(); g.arc(px(alvo.x), pz(alvo.z), r, 0, 7); g.stroke(); }
   for (const il of ILHAS) {
     g.fillStyle = livre(il.i) ? il.tema.chao[0] : '#5b6878'; g.beginPath(); g.arc(px(il.cx), pz(il.cz), il.R * k, 0, 7); g.fill();
     if (!livre(il.i)) continue;
@@ -809,6 +853,9 @@ $('mapa').onclick = ev => {
   }
   modoSalto = false; fecharMapa();
 }; $('btMapa').onclick = abrirMapa;
+$('pdEscudo').onclick = comprarEscudo;
+$('btDiarias').onclick = () => { $('diarias').classList.toggle('oculto'); $('btDiarias').classList.toggle('on', !$('diarias').classList.contains('oculto')); };
+addEventListener('keydown', e => { if (e.key === 'h' && emJogo) $('dica').classList.toggle('oculto'); });
 $('btSom').onclick = () => { mudo = !mudo; $('btSom').textContent = mudo ? '🔇' : '🔊'; };
 
 // ---------- modo demonstração ----------
@@ -870,6 +917,7 @@ canvas.addEventListener('pointerup', e => {
 canvas.addEventListener('wheel', e => { camCtl.alvoDist = Math.min(30, Math.max(6, camCtl.alvoDist * (1 + e.deltaY * .001))); e.preventDefault(); }, { passive: false });
 
 const joy = { x: 0, y: 0, ativo: false, id: null };
+const gpBotoes = [];
 (function controlesToque() {
   const base = $('joy'), pino = base.querySelector('.pino'), R = 55;
   const mover = e => { const r = base.getBoundingClientRect(), cx = r.left + r.width / 2, cy = r.top + r.height / 2;
@@ -897,10 +945,23 @@ function atualizarJogador(dt) {
   if (teclas.a || teclas.ArrowLeft) ix -= 1; if (teclas.d || teclas.ArrowRight) ix += 1;
   if (teclas.q) camCtl.yaw += dt * 2;
   if (joy.ativo) { ix += joy.x; iz += joy.y; }
+  let gpCorrer = false;
+  const gp = navigator.getGamepads ? [...navigator.getGamepads()].find(g => g && g.connected) : null;
+  if (gp) {
+    const zm = v => Math.abs(v) < .18 ? 0 : v;
+    ix += zm(gp.axes[0] || 0); iz -= zm(gp.axes[1] || 0);
+    camCtl.yaw -= zm(gp.axes[2] || 0) * dt * 2.6; camCtl.pitch = Math.min(1.25, Math.max(.18, camCtl.pitch + zm(gp.axes[3] || 0) * dt * 1.6));
+    gpCorrer = !!(gp.buttons[5] && gp.buttons[5].pressed);
+    const ap = i => !!(gp.buttons[i] && gp.buttons[i].pressed);
+    if (ap(0) && !gpBotoes[0] && jog.chao) { jog.vy = 8.5; jog.chao = false; SFX.pulo(); }
+    if ((ap(1) || ap(2)) && !(gpBotoes[1] || gpBotoes[2])) { const s = estacaoProxima(); if (s) abrirEstacao(s); }
+    if (ap(3) && !gpBotoes[3]) abrirMapa();
+    for (let i = 0; i < 6; i++) gpBotoes[i] = ap(i);
+  }
   const n = Math.hypot(ix, iz), fx = -Math.sin(camCtl.yaw), fz = -Math.cos(camCtl.yaw), rx = -fz, rz = fx;
   let mx = 0, mz = 0;
   if (n) { mx = (fx * iz + rx * ix) / n; mz = (fz * iz + rz * ix) / n; }
-  const correr = teclas.Shift || (joy.ativo && n > .92);
+  const correr = teclas.Shift || gpCorrer || (joy.ativo && n > .92);
   const alvoVel = n > .08 ? (correr ? 11 : 6.8) * Math.min(1, Math.max(.45, n)) : 0;
   jog.vel = lerp(jog.vel, alvoVel, Math.min(1, dt * 10));
   if (n > .08) {
@@ -909,7 +970,7 @@ function atualizarJogador(dt) {
     const alvoRot = Math.atan2(mx, mz); let dr = alvoRot - jog.rot; dr = Math.atan2(Math.sin(dr), Math.cos(dr)); jog.rot += dr * Math.min(1, dt * 12);
   }
   // pulo
-  jog.vy -= 22 * dt; jog.y += jog.vy * dt; if (jog.y <= 1) { if (!jog.chao && jog.vy < -6) explosao(jog.x, 1.1, jog.z, ['#ffffff', '#e0f2f1'], 10, 2); jog.y = 1; jog.vy = 0; jog.chao = true; }
+  jog.vy -= 22 * dt; jog.y += jog.vy * dt; if (jog.y <= 1) { if (!jog.chao && jog.vy < -6) { tremer(.12); } if (!jog.chao && jog.vy < -6) explosao(jog.x, 1.1, jog.z, ['#ffffff', '#e0f2f1'], 10, 2); jog.y = 1; jog.vy = 0; jog.chao = true; }
   if (!evo) { avatar.position.set(jog.x, jog.y, jog.z); avatar.rotation.y = jog.rot; }
   av.atualizar(dt, { vel: jog.vel, chao: jog.chao });
   // ilha atual
@@ -917,7 +978,7 @@ function atualizarJogador(dt) {
   if (il && Math.hypot(jog.x - il.cx, jog.z - il.cz) < il.R && il.i !== ilhaAtual) { ilhaAtual = il.i; banner(`${il.u.serie}ª série · Unidade ${il.i + 1}`, il.u.regiao_mundo.nome, il.u.titulo); }
   // coletáveis
   for (const o of ORBES) if (o.mesh && (o.x - jog.x) ** 2 + (o.z - jog.z) ** 2 < 1.7) {
-    est.orbes[o.id] = Date.now(); est.cristais = (est.cristais || 0) + 1; est.cristaisTotal = (est.cristaisTotal || 0) + 1;
+    tremer(.06); est.orbes[o.id] = Date.now(); est.cristais = (est.cristais || 0) + 1; est.cristaisTotal = (est.cristaisTotal || 0) + 1;
     removerColetavel(o); SFX.coleta(); explosao(o.x, 1.8, o.z, ['#7DF9FF', '#ffffff'], 30, 4); ganharXp(5, 'biocristal +1 💎'); diaria('orbes'); verificarConquistas(); atualizarPoderes();
   }
   for (const p of PILULAS) if (p.mesh && (p.x - jog.x) ** 2 + (p.z - jog.z) ** 2 < 1.7) {
@@ -945,6 +1006,7 @@ function atualizarCamera(dt) {
   tmp.set(Math.sin(camCtl.yaw) * Math.cos(camCtl.pitch), Math.sin(camCtl.pitch), Math.cos(camCtl.yaw) * Math.cos(camCtl.pitch)).multiplyScalar(camCtl.dist).add(camAlvo);
   camPos.lerp(tmp, Math.min(1, dt * (transicao > 0 ? 1.6 : 7))); if (transicao > 0) transicao -= dt;
   camera.position.copy(camPos); camera.lookAt(camAlvo);
+  if (tremor > .001) { camera.position.x += (Math.random() - .5) * tremor; camera.position.y += (Math.random() - .5) * tremor * .6; tremor *= Math.pow(.02, dt); }
 }
 let transicao = 0;
 
@@ -985,6 +1047,7 @@ function loop() {
   atualizarEvolucao(dt);
   if (evo) av.atualizar(dt, { vel: 0, chao: true });
   animarMundo(dt); atualizarParticulas(dt); atualizarCamera(dt); atualizarFlutuantes(dt);
+  if (emJogo) atualizarAlvo(dt);
   if (emJogo && (acc += dt) > .12) { acc = 0; desenharMinimapa(); retrato(acc + .12); }
   if (emJogo && (accRepoe += dt) > 5) { accRepoe = 0; criarColetaveis(); atualizarPoderes(); }
   visual.render();
@@ -995,6 +1058,7 @@ let corSel = 0;
 function telaInicial(salvo) {
   const tem = EV.temProgresso(salvo);
   if (salvo && salvo.avatar) personagemSel = salvo.avatar;
+  const sq = salvo && salvo.seq; $('avisoSeq').classList.toggle('oculto', !(sq && sq.dias > 1 && sq.ultimo === ontem())); if (sq) $('avisoSeq').textContent = `🔥 Sua sequência de ${sq.dias} dias termina hoje. Jogue para mantê-la.`;
   if (salvo) { corSel = salvo.cor || 0; if (salvo.nome && salvo.nome !== 'Evonauta' && !$('nome').value) $('nome').value = salvo.nome; }
   $('cores').innerHTML = CORES_JOGADOR.map((c, k) => `<button style="background:${c}" data-k="${k}" class="${k === corSel ? 'sel' : ''}" title="Cor do avatar"></button>`).join('');
   $('cores').querySelectorAll('button').forEach(b => b.onclick = () => { corSel = +b.dataset.k; $('cores').querySelectorAll('button').forEach(x => x.classList.toggle('sel', x === b)); if (previa) previa.cor(CORES_JOGADOR[corSel]); });
@@ -1016,6 +1080,17 @@ function comecar(novo) {
   verificarDesbloqueios(false);
   montarFormas(CORES_JOGADOR[est.cor] || CORES_JOGADOR[0]);
   est.pilulas ||= {}; est.pilulasCol ||= {};
+  // sequência de dias: conta ao entrar; um dia perdido gasta um escudo ou zera
+  {
+    const s = est.seq || (est.seq = { dias: 0, ultimo: null, escudos: 0 });
+    if (s.ultimo !== hoje()) {
+      if (!s.ultimo || s.ultimo === ontem()) s.dias = (s.dias || 0) + 1;
+      else if (s.escudos > 0) { s.escudos--; s.dias = (s.dias || 0) + 1; setTimeout(() => toast('🛡️', 'Escudo usado', 'Sua sequência de ' + s.dias + ' dias continua'), 2600); }
+      else { if (s.dias > 1) setTimeout(() => toast('🔥', 'Sequência perdida', 'Comece outra hoje mesmo'), 2600); s.dias = 1; }
+      s.ultimo = hoje();
+      if (s.dias > 1 && s.dias % 1 === 0) setTimeout(() => { toast('🔥', s.dias + ' dias seguidos!', 'Continue amanhã para manter'); SFX.conquista(); }, 1800);
+    }
+  }
   if (est.cristais == null) { est.cristais = Object.keys(est.orbes || {}).length; est.cristaisTotal = est.cristais; }
   criarColetaveis(); aplicarVisualBloqueio();
   $('poderes').classList.remove('oculto'); atualizarPoderes();
@@ -1024,7 +1099,8 @@ function comecar(novo) {
   jog.rot = Math.PI; camCtl.yaw = 0; camPos.copy(camera.position); transicao = 1.6;
   emJogo = true; pausado = false;
   $('inicio').classList.add('oculto');
-  ['perfil', 'acoes', 'diarias', 'minimapa', 'dica'].forEach(id => $(id).classList.remove('oculto'));
+  ['perfil', 'acoes', 'minimapa', 'dica'].forEach(id => $(id).classList.remove('oculto'));
+  setTimeout(() => { if (emJogo) $('dica').classList.add('oculto'); }, 25000);
   $('demoBts').classList.toggle('oculto', !demo);
   $('dicaDemo').innerHTML = demo ? '<br><b style="color:var(--ouro)">Demo:</b> <b>P</b> +XP/evoluir · <b>U</b> desbloquear ilha · <b>T</b> teletransporte' : '';
   atualizarHud(); verificarConquistas(); salvar(); if (window.salvarNaNuvem) window.salvarNaNuvem(); setInterval(salvar, 4000);
