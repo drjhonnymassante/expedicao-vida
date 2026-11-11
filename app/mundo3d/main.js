@@ -956,23 +956,30 @@ function abrirMapa() {
   }
   g.setLineDash([]);
   // 3) rótulos em pílulas, com progresso; destaque da ilha atual e da missão do dia
+  // rótulo em pílula limitado à largura da coluna; nomes longos quebram em até 2 linhas
+  const maxW = ESPACO * k - 10;
   const pilula = (x, y, titulo, sub, ok, atual) => {
-    g.font = `700 ${Math.max(10, Math.min(14, 6.5 * k))}px Fredoka, sans-serif`; const tw = g.measureText(titulo).width;
-    g.font = `600 ${Math.max(9, Math.min(11, 5 * k))}px Nunito, sans-serif`; const sw = g.measureText(sub).width;
-    const w = Math.max(tw, sw) + 22, h = 32;
-    g.fillStyle = atual ? 'rgba(255,209,102,.95)' : ok ? 'rgba(10,16,28,.78)' : 'rgba(10,16,28,.55)';
-    g.beginPath(); g.roundRect(x - w / 2, y, w, h, 10); g.fill();
+    const ft = Math.max(9.5, Math.min(13, 6 * k)), fs2 = Math.max(8.5, Math.min(10.5, 4.6 * k));
+    g.font = '700 ' + ft + 'px Fredoka, sans-serif';
+    const linhas = []; let atualL = '';
+    for (const w of titulo.split(' ')) { const t = atualL ? atualL + ' ' + w : w; if (g.measureText(t).width > maxW - 16 && atualL) { linhas.push(atualL); atualL = w; } else atualL = t; }
+    if (atualL) linhas.push(atualL); if (linhas.length > 2) { linhas.length = 2; linhas[1] += '…'; }
+    const tw = Math.max(...linhas.map(l => g.measureText(l).width));
+    g.font = '600 ' + fs2 + 'px Nunito, sans-serif'; const sw = sub ? g.measureText(sub).width : 0;
+    const w = Math.min(maxW, Math.max(tw, sw) + 18), h = 6 + linhas.length * (ft + 3) + (sub ? fs2 + 5 : 2);
+    g.fillStyle = atual ? 'rgba(255,209,102,.95)' : ok ? 'rgba(10,16,28,.8)' : 'rgba(10,16,28,.58)';
+    g.beginPath(); g.roundRect(x - w / 2, y, w, h, 9); g.fill();
     if (ok && !atual) { g.strokeStyle = 'rgba(124,255,178,.45)'; g.lineWidth = 1; g.stroke(); }
-    g.textAlign = 'center'; g.fillStyle = atual ? '#2b1d00' : ok ? '#fff' : 'rgba(255,255,255,.7)';
-    g.font = `700 ${Math.max(10, Math.min(14, 6.5 * k))}px Fredoka, sans-serif`; g.fillText(titulo, x, y + 13);
-    g.font = `600 ${Math.max(9, Math.min(11, 5 * k))}px Nunito, sans-serif`; g.fillStyle = atual ? '#3b2a00' : 'rgba(255,255,255,.8)'; g.fillText(sub, x, y + 26);
+    g.textAlign = 'center'; g.fillStyle = atual ? '#2b1d00' : ok ? '#fff' : 'rgba(255,255,255,.72)';
+    g.font = '700 ' + ft + 'px Fredoka, sans-serif'; linhas.forEach((l, i) => g.fillText(l, x, y + 5 + ft + i * (ft + 3), maxW - 10));
+    if (sub) { g.font = '600 ' + fs2 + 'px Nunito, sans-serif'; g.fillStyle = atual ? '#3b2a00' : 'rgba(255,255,255,.8)'; g.fillText(sub, x, y + h - 5, maxW - 10); }
   };
   for (const il of ILHAS) {
     const x = px(il.cx), z = pz(il.cz), r = il.R * k, ok = livre(il.i);
     if (il.i === ilhaAtual) { g.strokeStyle = '#FFD166'; g.lineWidth = 3; g.setLineDash([5, 5]); g.beginPath(); g.arc(x, z, r + 3, 0, 7); g.stroke(); g.setLineDash([]); }
     if (!ok) { g.fillStyle = 'rgba(0,0,0,.35)'; g.beginPath(); g.arc(x, z - 8, 13, 0, 7); g.fill(); g.font = '15px sans-serif'; g.textAlign = 'center'; g.fillStyle = '#fff'; g.fillText('🔒', x, z - 3); }
     const prontas = il.estacoes.filter(e => e.pronto).length;
-    pilula(x, z + r * .55, il.u.regiao_mundo.nome, estreito ? `${feitasNa(il)}/${prontas}` : `${il.u.serie}ª série · ${feitasNa(il)}/${prontas} missões`, ok, il.i === ilhaAtual);
+    pilula(x, z + r * .55 + (gradePos(il.i).col % 2 ? 14 : 0), il.u.regiao_mundo.nome, estreito ? `${feitasNa(il)}/${prontas}` : `${il.u.serie}ª série · ${feitasNa(il)}/${prontas} missões`, ok, il.i === ilhaAtual);
   }
   // missão do dia e jogador
   if (alvo) { const x = px(alvo.x), z = pz(alvo.z); g.strokeStyle = '#FFD166'; g.lineWidth = 3; g.beginPath(); g.arc(x, z, 9, 0, 7); g.stroke(); g.fillStyle = '#FFD166'; g.beginPath(); g.arc(x, z, 3.5, 0, 7); g.fill(); }
