@@ -42,6 +42,7 @@ const TEMAS = {
 
 // ---------- utilidades ----------
 const $ = id => document.getElementById(id);
+const ic = n => `<svg class="ic" aria-hidden="true"><use href="#i-${n}"/></svg>`;
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 function hash(a, b, c = 0) { let h = (a * 374761393 + b * 668265263 + c * 2147483647) >>> 0; h = Math.imul(h ^ (h >>> 13), 1274126177) >>> 0; return ((h ^ (h >>> 16)) >>> 0) / 4294967296; }
 function rng(seed) { let s = seed >>> 0 || 1; return () => (s = (Math.imul(s, 1664525) + 1013904223) >>> 0) / 4294967296; }
@@ -97,7 +98,7 @@ const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(55, 1, .1, 900);
 const TOQUE = matchMedia('(pointer: coarse)').matches || 'ontouchstart' in window;
 if (TOQUE) document.body.classList.add('toque');
-if (TOQUE) { const bm = document.getElementById('btMapa'); bm.textContent = '🗺️'; bm.title = 'Mapa'; const la = document.querySelector('#acoes a'); if (la) { la.textContent = '📖'; la.title = 'Aulas'; } }
+if (TOQUE) { const bm = document.getElementById('btMapa'); bm.innerHTML = ic('mapa'); bm.title = 'Mapa'; const la = document.querySelector('#acoes a'); if (la) { la.innerHTML = ic('livro'); la.title = 'Aulas'; } }
 const QUALIDADE = TOQUE ? 'media' : 'alta';
 // céu, ciclo de dia e noite, água, grama, luzes e pós-processamento (visual.js)
 const visual = criarVisual({ renderer, scene, camera, qualidade: QUALIDADE, toque: TOQUE });
@@ -417,9 +418,9 @@ function atualizarAlvo(dt) {
 }
 function atualizarPoderes() {
   if (!est) return;
-  $('carteira').innerHTML = '<span title="Biocristais: energia para os poderes">💎 ' + (est.cristais || 0) + '</span><span title="Pílulas de conhecimento guardadas">💊 ' + Object.values(est.pilulas).reduce((a, b) => a + b, 0) + '</span>';
-  const s = est.seq || {}; $('seq').textContent = '🔥 ' + (s.dias || 0); $('seq').title = (s.dias || 0) + ' dia(s) seguidos · escudos: ' + (s.escudos || 0);
-  $('pdEscudo').disabled = (est.cristais || 0) < 20 || (s.escudos || 0) >= 2; $('pdEscudo').innerHTML = '🛡️ Escudo <small>20 💎 · ' + (s.escudos || 0) + '/2</small>';
+  $('carteira').innerHTML = '<span title="Biocristais: energia para os poderes">' + ic('cristal') + ' ' + (est.cristais || 0) + '</span><span title="Pílulas de conhecimento guardadas">' + ic('pilula') + ' ' + Object.values(est.pilulas).reduce((a, b) => a + b, 0) + '</span>';
+  const s = est.seq || {}; $('seq').innerHTML = ic('fogo') + ' ' + (s.dias || 0); $('seq').title = (s.dias || 0) + ' dia(s) seguidos · escudos: ' + (s.escudos || 0);
+  $('pdEscudo').disabled = (est.cristais || 0) < 20 || (s.escudos || 0) >= 2; $('pdEscudo').innerHTML = ic('escudo') + ' Escudo <small>20 💎 · ' + (s.escudos || 0) + '/2</small>';
   $('pdSonda').disabled = (est.cristais || 0) < 5 || tempo < sondaAte; $('pdSalto').disabled = (est.cristais || 0) < 10;
 }
 function comprarEscudo() {
@@ -574,6 +575,7 @@ function atualizarHud() {
   const n = nivelDe(est.xp), ini = 50 * (n - 1) * n, fim = 50 * n * (n + 1), f = formaDe(n);
   $('pNome').textContent = est.nome; $('pForma').textContent = patente(n); $('nivelBadge').textContent = n;
   $('pXp').style.width = Math.round((est.xp - ini) / (fim - ini) * 100) + '%';
+  $('anelXp').style.setProperty('--xp', Math.round((est.xp - ini) / (fim - ini) * 100) + '%');
   $('pXpTxt').textContent = `${est.xp} XP · faltam ${fim - est.xp} para o nível ${n + 1}`;
   renderDiarias();
 }
@@ -651,8 +653,12 @@ function verificarConquistas() {
 }
 
 // ---------- painéis ----------
-function abrirPainel(html) { $('painel').innerHTML = html; $('veu').classList.remove('oculto'); pausado = true; SFX.abrir(); }
-function fecharPainel() { $('veu').classList.add('oculto'); pausado = !!evo; }
+let fechando = 0;
+function abrirPainel(html) { fechando++; $('painel').classList.remove('fecha'); $('painel').innerHTML = html; $('veu').classList.remove('oculto'); pausado = true; SFX.abrir(); }
+function fecharPainel() {
+  const meu = ++fechando; $('painel').classList.add('fecha'); pausado = !!evo;
+  setTimeout(() => { if (fechando !== meu) return; $('veu').classList.add('oculto'); $('painel').classList.remove('fecha'); }, 190);
+}
 $('veu').addEventListener('click', e => { if (e.target.id === 'veu') fecharPainel(); });
 // assinante com acesso a um tópico premium já escrito: o conteúdo vem do bucket privado
 const liberado = tp => tp.status === 'premium' && tp.premium_pronto && window.Premium && window.Premium.ativo;
@@ -722,7 +728,7 @@ async function desafio(e, j, m) {
     if (i >= qs.length) return fim();
     const q = qs[i], limite = 30; let resta = limite, respondeu = false, protegido = false, ajuda = 1;
     if (window.EXP) window.EXP.questaoAtual = q;
-    abrirPainel(`<div style="display:flex;justify-content:space-between;align-items:center"><span class="etq">Desafio ${i + 1}/${qs.length}</span><span class="liga l-${q.nivel}">Liga ${q.nivel}</span></div>
+    abrirPainel(`<div style="display:flex;justify-content:space-between;align-items:center"><span class="etq">Desafio ${i + 1}/${qs.length} <span class="passos">${qs.map((_, k) => `<i class="${k < i ? 'ok' : k === i ? 'atual' : ''}"></i>`).join('')}</span></span><span class="liga l-${q.nivel}">Liga ${q.nivel}</span></div>
       <div class="timer"><div id="tm" style="width:100%"></div></div>
       <div class="questao">${esc(q.enunciado)}</div>
       ${q.alternativas.map((a, n) => `<button class="alt" data-n="${n}"><span class="let">${'ABCDE'[n]}</span><span>${esc(a)}</span></button>`).join('')}
@@ -856,7 +862,8 @@ $('mapa').onclick = ev => {
 $('pdEscudo').onclick = comprarEscudo;
 $('btDiarias').onclick = () => { $('diarias').classList.toggle('oculto'); $('btDiarias').classList.toggle('on', !$('diarias').classList.contains('oculto')); };
 addEventListener('keydown', e => { if (e.key === 'h' && emJogo) $('dica').classList.toggle('oculto'); });
-$('btSom').onclick = () => { mudo = !mudo; $('btSom').textContent = mudo ? '🔇' : '🔊'; };
+$('btSom').onclick = () => { mudo = !mudo; $('btSom').innerHTML = ic(mudo ? 'mudo' : 'som'); };
+$('btFecharMapa').onclick = e => { e.stopPropagation(); fecharMapa(); };
 
 // ---------- modo demonstração ----------
 // T leva à ilha seguinte (de 1 a 26, voltando ao início); se estiver trancada, a demonstração a destranca
@@ -1098,7 +1105,7 @@ function comecar(novo) {
   const p = est.pos3d; if (p && noChao(p.x, p.z)) { jog.x = p.x; jog.z = p.z; } else { jog.x = ILHAS[0].cx; jog.z = ILHAS[0].cz + 5; }
   jog.rot = Math.PI; camCtl.yaw = 0; camPos.copy(camera.position); transicao = 1.6;
   emJogo = true; pausado = false;
-  $('inicio').classList.add('oculto');
+  $('inicio').classList.add('saindo'); setTimeout(() => $('inicio').classList.add('oculto'), 700);
   ['perfil', 'acoes', 'minimapa', 'dica'].forEach(id => $(id).classList.remove('oculto'));
   setTimeout(() => { if (emJogo) $('dica').classList.add('oculto'); }, 25000);
   $('demoBts').classList.toggle('oculto', !demo);

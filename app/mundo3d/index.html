@@ -60,11 +60,33 @@
   body.toque #alvo { top: calc(66px + env(safe-area-inset-top)); max-width: 80vw; font-size: 12.5px; }
   #btDiarias.on { background: rgba(255,209,102,.25); border-color: var(--ouro); }
   body.toque #diarias { top: calc(120px + env(safe-area-inset-top)); right: 70px; width: min(270px, 70vw); }
+  .ic { width: 1.15em; height: 1.15em; vertical-align: -.2em; fill: currentColor; }
+  .btt .ic { width: 26px; height: 26px; }
+  #alvoSeta .ic { width: 16px; height: 16px; vertical-align: 0; }
+  /* anel de XP ao redor do retrato */
+  @property --xp { syntax: '<percentage>'; inherits: false; initial-value: 0%; }
+  .anelXp { --xp: 0%; width: 64px; height: 64px; border-radius: 18px; padding: 3px; background: conic-gradient(var(--neon) var(--xp), rgba(255,255,255,.12) 0); transition: --xp .7s cubic-bezier(.2,.8,.2,1); box-shadow: 0 0 16px rgba(124,255,178,.25); }
+  .anelXp canvas { display: block; width: 100% !important; height: 100% !important; border-radius: 15px; border: none !important; }
+  body.toque .anelXp { width: 52px; height: 52px; }
+  /* transições de tela */
+  #inicio { transition: opacity .65s ease, transform .65s ease; }
+  #inicio.saindo { opacity: 0; transform: scale(1.05); pointer-events: none; }
+  #perfil, #acoes, #minimapa, #poderes, #alvo { animation: entraHud .5s cubic-bezier(.2,.9,.3,1.2) both; }
+  @keyframes entraHud { from { opacity: 0; transform: translateY(-10px); } }
+  body.toque #perfil { animation-name: entraHudToque; } @keyframes entraHudToque { from { opacity: 0; } }
+  .painel.fecha { animation: fecha .19s ease-in forwards; }
+  @keyframes fecha { to { transform: translateY(14px) scale(.97); opacity: 0; } }
+  .passos { display: inline-flex; gap: 5px; margin-left: 8px; vertical-align: middle; }
+  .passos i { width: 9px; height: 9px; border-radius: 50%; background: rgba(255,255,255,.18); }
+  .passos i.ok { background: var(--neon); } .passos i.atual { background: var(--ouro); box-shadow: 0 0 8px var(--ouro); }
+  .mapaCx { animation: abre .35s cubic-bezier(.2,.9,.3,1.2); }
+  .mapaTopo { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 10px; }
+  .mapaTopo .etq { font-size: 14px; }
   .vermais { background: none; border: none; color: var(--neon2); font-family: Nunito; font-weight: 800; font-size: 13px; cursor: pointer; padding: 6px 0; min-height: 32px; text-decoration: underline; }
   #demoBts { position: fixed; left: 50%; transform: translateX(-50%); bottom: 14px; z-index: 6; display: flex; gap: 8px; }
   #demoBts .bt { padding: 7px 11px; font-size: 12.5px; }
   body.toque #demoBts { bottom: auto; top: 64px; }
-  .cena { border-radius: 14px; overflow: hidden; margin: 0 0 12px; border: 1px solid rgba(255,255,255,.12); min-height: 150px; background: #141a2a; }
+  .cena { border-radius: 18px; overflow: hidden; margin: 0 0 12px; border: 1px solid rgba(124,255,178,.25); min-height: 150px; background: #141a2a; }
   .cena canvas { display: block; }
   .bt.perigo { background: #b3261e !important; color: #fff !important; border-color: #ff6b5e !important; }
   .vidro { background: var(--vidro); backdrop-filter: blur(14px) saturate(140%); -webkit-backdrop-filter: blur(14px) saturate(140%); border: 1px solid var(--vidro-borda); border-radius: 18px; box-shadow: 0 10px 40px rgba(0,0,0,.35); }
@@ -138,7 +160,7 @@
 
   /* Painéis */
   #veu { position: fixed; inset: 0; z-index: 30; display: grid; place-items: center; background: radial-gradient(circle at 50% 40%, rgba(20,40,70,.35), rgba(5,10,20,.75)); }
-  .painel { width: min(680px, 94vw); max-height: 88vh; overflow-y: auto; padding: 26px 28px; border-radius: 24px; background: linear-gradient(160deg, rgba(30,41,70,.92), rgba(18,24,42,.94)); border: 1px solid rgba(255,255,255,.14); box-shadow: 0 30px 80px rgba(0,0,0,.6), inset 0 1px 0 rgba(255,255,255,.08); animation: abre .35s cubic-bezier(.2,.9,.3,1.2); }
+  .painel { width: min(680px, 94vw); max-height: 88vh; overflow-y: auto; padding: 26px 28px; border-radius: 26px; backdrop-filter: blur(18px) saturate(140%); -webkit-backdrop-filter: blur(18px) saturate(140%); background: linear-gradient(160deg, rgba(30,41,70,.82), rgba(18,24,42,.88)); border: 1px solid rgba(255,255,255,.14); box-shadow: 0 30px 80px rgba(0,0,0,.6), inset 0 1px 0 rgba(255,255,255,.08); animation: abre .35s cubic-bezier(.2,.9,.3,1.2); }
   @keyframes abre { from { transform: translateY(24px) scale(.96); opacity: 0; } }
   .painel h2 { font-family: Fredoka; font-size: 28px; margin: 6px 0 10px; }
   .etq { font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--neon); font-weight: 800; }
@@ -152,7 +174,7 @@
   .premio { display: flex; gap: 10px; flex-wrap: wrap; margin: 12px 0; }
   .premio span { background: rgba(255,209,102,.14); color: var(--ouro); border: 1px solid rgba(255,209,102,.3); padding: 6px 12px; border-radius: 12px; font-weight: 800; font-size: 13.5px; }
   .acoesP { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
-  .questao { font-size: 17px; line-height: 1.55; margin: 12px 0 14px; }
+  .questao { font-size: 18px; line-height: 1.55; margin: 12px 0 14px; }
   .alt { min-height: 48px; display: flex; gap: 12px; align-items: center; width: 100%; text-align: left; border: 1px solid rgba(255,255,255,.14); background: rgba(255,255,255,.05); color: var(--txt); padding: 12px 14px; border-radius: 14px; margin: 8px 0; cursor: pointer; font-size: 14.5px; font-family: Nunito; transition: transform .12s, background .12s, border-color .12s; }
   .alt:hover:not(:disabled) { transform: translateX(4px); border-color: var(--neon2); background: rgba(110,200,255,.1); }
   .alt .let { flex: none; width: 28px; height: 28px; border-radius: 9px; background: rgba(255,255,255,.1); display: grid; place-items: center; font-family: Fredoka; font-weight: 700; }
@@ -163,7 +185,7 @@
   .exp { margin-top: 12px; padding: 12px 14px; background: rgba(255,255,255,.06); border-radius: 12px; font-size: 14px; line-height: 1.55; color: #dfe7f5; }
   .liga { display: inline-block; padding: 3px 10px; border-radius: 10px; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
   .l-bronze { background: #7c4a1f55; color: #f0b27a } .l-prata { background: #64748b55; color: #e2e8f0 } .l-ouro { background: #b4530955; color: #fde68a } .l-diamante { background: #0369a155; color: #7dd3fc }
-  .timer { height: 6px; border-radius: 4px; background: rgba(255,255,255,.1); overflow: hidden; margin-top: 10px; }
+  .timer { height: 8px; border-radius: 4px; background: rgba(255,255,255,.1); overflow: hidden; margin-top: 10px; }
   .timer div { height: 100%; background: linear-gradient(90deg, var(--ouro), #f97316); transition: width .1s linear; }
   .estrelas { font-size: 44px; letter-spacing: 6px; text-align: center; margin: 8px 0; }
   .estrelas .off { filter: grayscale(1) opacity(.3); }
@@ -211,15 +233,32 @@
 <link rel="icon" href="../compartilhado/marca/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="../compartilhado/marca/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="../compartilhado/marca/apple-touch-icon.png">
-<script src="../vendor/supabase.js?v=mwbk3l99"></script>
-<script src="../../config.js?v=mwbk3l99"></script>
-<script src="../compartilhado/sessao.js?v=mwbk3l99"></script>
+<script src="../vendor/supabase.js?v=mwc1p37m"></script>
+<script src="../../config.js?v=mwc1p37m"></script>
+<script src="../compartilhado/sessao.js?v=mwc1p37m"></script>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-som" viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/><path d="M16 8.5a4 4 0 0 1 0 7M18.5 6a7.5 7.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-mudo" viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/><path d="M16 9l5 6M21 9l-5 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-mapa" viewBox="0 0 24 24"><path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 4v14M15 6v14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-lista" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 9h8M8 13h8M8 17h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-livro" viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2V5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 19a2 2 0 0 1 2-2h13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-sonda" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" fill="currentColor"/><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-salto" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1-6.4 2.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 2v5h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-escudo" viewBox="0 0 24 24"><path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5l8-3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-pular" viewBox="0 0 24 24"><path d="M12 20V6M6 12l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/></symbol>
+<symbol id="i-falar" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4V5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-cristal" viewBox="0 0 24 24"><path d="M12 2l8 8-8 12-8-12 8-8z" fill="currentColor"/></symbol>
+<symbol id="i-pilula" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="8" rx="4" transform="rotate(-35 12 12)" fill="currentColor"/></symbol>
+<symbol id="i-fogo" viewBox="0 0 24 24"><path d="M12 2c1 4 5 5 5 10a5 5 0 0 1-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-3-1-6 1-9z" fill="currentColor"/></symbol>
+<symbol id="i-seta" viewBox="0 0 24 24"><path d="M12 3l7 18-7-4-7 4 7-18z" fill="currentColor"/></symbol>
+<symbol id="i-fechar" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/></symbol>
+</defs></svg>
 <canvas id="cena"></canvas>
 
 <div id="perfil" class="vidro oculto" style="position:fixed">
-  <canvas id="retrato" width="128" height="128"></canvas>
+  <div class="anelXp" id="anelXp"><canvas id="retrato" width="128" height="128"></canvas></div>
   <span id="nivelBadge">1</span>
   <span id="seq" class="seq" title="dias seguidos">🔥 0</span>
   <div>
@@ -230,34 +269,34 @@
   </div>
 </div>
 <div id="acoes" class="oculto">
-  <button class="bt" id="btSom" title="Som">🔊</button>
-  <button class="bt" id="btDiarias" title="Desafios de hoje">📋</button>
-  <button class="bt" id="btMapa">🗺️ Mapa <span class="tecla" style="height:20px;min-width:20px;font-size:11px">M</span></button>
-  <a class="bt prim" href="../index.html" target="_blank" rel="noopener">📖 Aulas</a>
+  <button class="bt" id="btSom" title="Som"><svg class="ic" aria-hidden="true"><use href="#i-som"/></svg></button>
+  <button class="bt" id="btDiarias" title="Desafios de hoje"><svg class="ic" aria-hidden="true"><use href="#i-lista"/></svg></button>
+  <button class="bt" id="btMapa"><svg class="ic" aria-hidden="true"><use href="#i-mapa"/></svg> Mapa <span class="tecla" style="height:20px;min-width:20px;font-size:11px">M</span></button>
+  <a class="bt prim" href="../index.html" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-livro"/></svg> Aulas</a>
 </div>
 <div id="demoBts" class="oculto"><button class="bt ouro" id="dmXp" title="Demonstração: +250 XP (tecla P)">⭐ +XP</button><button class="bt ouro" id="dmIlha" title="Demonstração: desbloquear próxima ilha (tecla U)">🔓 Ilha</button><button class="bt ouro" id="dmTele" title="Demonstração: teletransporte para a ilha seguinte (tecla T)">🌀 Teletransporte</button></div>
 <div id="diarias" class="vidro oculto"></div>
 <div id="poderes" class="vidro oculto">
   <div id="carteira"></div>
-  <button class="bt" id="pdSonda" title="Sonda de reconhecimento (tecla 1): revela pílulas, fragmentos e missões da ilha por 45 s">🛰️ Sonda <small>5 💎</small></button>
-  <button class="bt" id="pdSalto" title="Salto de dobra (tecla 2): viaje para qualquer ilha desbloqueada">🌀 Salto <small>10 💎</small></button>
-  <button class="bt" id="pdEscudo" title="Escudo de sequência: um dia sem jogar não zera seus dias seguidos">🛡️ Escudo <small>20 💎</small></button>
+  <button class="bt" id="pdSonda" title="Sonda de reconhecimento (tecla 1): revela pílulas, fragmentos e missões da ilha por 45 s"><svg class="ic" aria-hidden="true"><use href="#i-sonda"/></svg> Sonda <small>5 💎</small></button>
+  <button class="bt" id="pdSalto" title="Salto de dobra (tecla 2): viaje para qualquer ilha desbloqueada"><svg class="ic" aria-hidden="true"><use href="#i-salto"/></svg> Salto <small>10 💎</small></button>
+  <button class="bt" id="pdEscudo" title="Escudo de sequência: um dia sem jogar não zera seus dias seguidos"><svg class="ic" aria-hidden="true"><use href="#i-escudo"/></svg> Escudo <small>20 💎</small></button>
 </div>
 <canvas id="minimapa" class="oculto" width="380" height="380"></canvas>
 <div id="regiao"><div class="r1" id="rg1"></div><div class="r2" id="rg2"></div><div class="r3" id="rg3"></div></div>
 <div id="prompt" class="vidro oculto"></div>
-<div id="alvo" class="vidro oculto"><span id="alvoSeta">➤</span><span><small>Missão do dia</small><span id="alvoTxt"></span></span></div>
+<div id="alvo" class="vidro oculto"><span id="alvoSeta"><svg class="ic" aria-hidden="true"><use href="#i-seta"/></svg></span><span><small>Missão do dia</small><span id="alvoTxt"></span></span></div>
 <div id="dica" class="vidro oculto"><b>WASD</b> andar · <b>Shift</b> correr · <b>Espaço</b> pular · <b>arrastar o mouse</b> girar câmera · <b>roda</b> zoom · <b>E</b> interagir · <b>1</b> sonda · <b>2</b> salto · <b>M</b> mapa<span id="dicaDemo"></span></div>
 <div id="toasts"></div>
 <div id="toque">
   <div id="joy"><div class="pino"></div></div>
-  <button class="btt" id="btPular" aria-label="Pular"><div><span>⤒</span>Pular</div></button>
-  <button class="btt oculto" id="btFalar" aria-label="Falar"><div><span>💬</span>Falar</div></button>
+  <button class="btt" id="btPular" aria-label="Pular"><div><span><svg class="ic" aria-hidden="true"><use href="#i-pular"/></svg></span>Pular</div></button>
+  <button class="btt oculto" id="btFalar" aria-label="Falar"><div><span><svg class="ic" aria-hidden="true"><use href="#i-falar"/></svg></span>Falar</div></button>
 </div>
 <div id="combo"></div>
 <div id="veu" class="oculto"><div class="painel" id="painel"></div></div>
 <div id="evolucao" class="oculto"><div><div class="t1" id="ev1">EVOLUÇÃO!</div><div class="t2" id="ev2"></div></div></div>
-<div id="mapa" class="oculto"><div><canvas id="mapaCanvas"></canvas><div class="leg">Clique ou tecle M para fechar · ilhas com névoa ainda estão bloqueadas</div></div></div>
+<div id="mapa" class="oculto"><div class="mapaCx"><div class="mapaTopo"><span class="etq">Mapa da expedição</span><button class="bt" id="btFecharMapa" aria-label="Fechar mapa"><svg class="ic" aria-hidden="true"><use href="#i-fechar"/></svg></button></div><canvas id="mapaCanvas"></canvas><div class="leg">Clique ou tecle M para fechar · ilhas com névoa ainda estão bloqueadas</div></div></div>
 
 <div id="inicio">
   <div class="caixa">
@@ -281,10 +320,10 @@
   </div>
 </div>
 
-<script src="../compartilhado/avatar2d.js?v=mwbk3l99"></script>
-<script src="../compartilhado/estado.js?v=mwbk3l99"></script>
-<script src="cena.js?v=mwbk3l99"></script>
-<script type="module" src="main.js?v=mwbk3l99"></script>
-<script src="tour.js?v=mwbk3l99"></script>
+<script src="../compartilhado/avatar2d.js?v=mwc1p37m"></script>
+<script src="../compartilhado/estado.js?v=mwc1p37m"></script>
+<script src="cena.js?v=mwc1p37m"></script>
+<script type="module" src="main.js?v=mwc1p37m"></script>
+<script src="tour.js?v=mwc1p37m"></script>
 </body>
 </html>
