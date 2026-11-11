@@ -2,6 +2,7 @@
 // Cada unidade do currículo é uma ilha; cada tópico, uma estação com NPC, missão e desafio.
 import * as THREE from 'three';
 import { criarVisual, toon } from './visual.js';
+import { criarAvatar3D, criarPrevia, PERSONAGENS, patente } from './avatar3d.js';
 
 const { FORMAS, nivelDe, formaDe } = window.Avatar2D;
 const EV = window.EstadoVida;
@@ -425,85 +426,15 @@ function saltarPara(il) {
   toast('🌀', 'Salto concluído', il.u.regiao_mundo.nome);
 }
 
-// ---------- avatar 3D (8 formas) ----------
+// ---------- avatar 3D (personagem glTF; o nível muda tamanho, aura e insígnias) ----------
 const avatar = new THREE.Group(); scene.add(avatar);
-let formas = [], formaVisivel = -1;
-function olhos(g, y, z, sep, r = .11) {
-  for (const s of [-1, 1]) {
-    const b = new THREE.Mesh(new THREE.SphereGeometry(r, 10, 8), toon('#fff')); b.position.set(s * sep, y, z);
-    const p = new THREE.Mesh(new THREE.SphereGeometry(r * .55, 8, 6), new THREE.MeshBasicMaterial({ color: '#111' })); p.position.set(s * sep, y, z + r * .65);
-    g.add(b, p);
-  }
-}
+const av = criarAvatar3D({ toon }); avatar.add(av.grupo);
+let personagemSel = PERSONAGENS[0].id, previa = null;
 function montarFormas(corHex) {
-  formas.forEach(f => avatar.remove(f.g)); formas = [];
-  const cor = new THREE.Color(corHex), escura = cor.clone().offsetHSL(0, 0, -.18), suave = (c, e = {}) => toon(c, e);
-  const add = (g, m, ...meshes) => { meshes.forEach(x => { x.castShadow = true; g.add(x); }); };
-  // 0 bactéria
-  { const g = new THREE.Group(), corpo = new THREE.Mesh(new THREE.CapsuleGeometry(.42, .8, 8, 16), suave(cor)); corpo.rotation.x = Math.PI / 2; corpo.position.y = .55;
-    add(g, null, corpo); olhos(g, .72, .72, .17);
-    const flag = []; for (let k = 0; k < 7; k++) { const s = new THREE.Mesh(new THREE.SphereGeometry(.08 - k * .007, 6, 4), suave(escura)); g.add(s); flag.push(s); }
-    formas.push({ g, upd: (t, mv) => flag.forEach((s, k) => s.position.set(Math.sin(t * 16 - k * .9) * .16 * (k / 6 + .3), .55, -.85 - k * .17)) }); }
-  // 1 ameba
-  { const g = new THREE.Group(), geo = new THREE.IcosahedronGeometry(.72, 3), basep = geo.attributes.position.array.slice();
-    const corpo = new THREE.Mesh(geo, suave(cor, { transparent: true, opacity: .85 })); corpo.position.y = .7;
-    const nuc = new THREE.Mesh(new THREE.SphereGeometry(.26, 12, 8), suave('#4527a0')); nuc.position.set(-.1, .66, -.05);
-    add(g, null, corpo, nuc); olhos(g, .9, .58, .2);
-    formas.push({ g, upd: t => { const p = geo.attributes.position.array; for (let k = 0; k < p.length; k += 3) { const x = basep[k], y = basep[k + 1], z = basep[k + 2], f = 1 + Math.sin(t * 3 + x * 4 + y * 3) * .08 + Math.sin(t * 2.2 + z * 5) * .05; p[k] = x * f; p[k + 1] = y * f; p[k + 2] = z * f; } geo.attributes.position.needsUpdate = true; geo.computeVertexNormals(); } }); }
-  // 2 água-viva
-  { const g = new THREE.Group(), domo = new THREE.Mesh(new THREE.SphereGeometry(.68, 22, 12, 0, Math.PI * 2, 0, Math.PI / 2), suave(cor, { transparent: true, opacity: .82, emissive: cor, emissiveIntensity: .25 }));
-    domo.position.y = 1.15; add(g, null, domo); olhos(g, 1.35, .52, .2);
-    const tent = []; for (let k = 0; k < 8; k++) { const a = k / 8 * Math.PI * 2, tt = new THREE.Mesh(new THREE.CylinderGeometry(.035, .015, 1, 5), suave(escura)); tt.position.set(Math.cos(a) * .42, .65, Math.sin(a) * .42); g.add(tt); tent.push({ tt, a }); }
-    formas.push({ g, upd: t => { domo.scale.set(1 + Math.sin(t * 4) * .06, 1 - Math.sin(t * 4) * .08, 1 + Math.sin(t * 4) * .06); tent.forEach(({ tt, a }, k) => { tt.rotation.x = Math.sin(t * 3 + k) * .3; tt.rotation.z = Math.cos(t * 3 + k) * .3; }); g.position.y = Math.sin(t * 2) * .12; } }); }
-  // 3 peixe
-  { const g = new THREE.Group(), corpo = new THREE.Mesh(new THREE.SphereGeometry(.5, 18, 12), suave(cor)); corpo.scale.set(.75, .9, 1.35); corpo.position.y = .95;
-    const cauda = new THREE.Mesh(new THREE.ConeGeometry(.42, .7, 4), suave(escura)); cauda.rotation.x = -Math.PI / 2; cauda.position.set(0, .95, -.85);
-    const dorsal = new THREE.Mesh(new THREE.ConeGeometry(.18, .5, 4), suave(escura)); dorsal.position.set(0, 1.45, -.05);
-    add(g, null, corpo, cauda, dorsal); olhos(g, 1.08, .52, .24);
-    formas.push({ g, upd: (t, mv) => { cauda.rotation.y = Math.sin(t * (mv ? 14 : 5)) * .5; g.position.y = Math.sin(t * 2.4) * .1; g.rotation.z = Math.sin(t * 3) * .05; } }); }
-  // 4 anfíbio
-  { const g = new THREE.Group(), corpo = new THREE.Mesh(new THREE.SphereGeometry(.55, 16, 12), suave(cor)); corpo.scale.set(1, .72, 1.1); corpo.position.y = .5;
-    const barriga = new THREE.Mesh(new THREE.SphereGeometry(.42, 12, 8), suave('#e8f5c8')); barriga.scale.set(1, .5, 1); barriga.position.set(0, .38, .18);
-    const pernas = []; for (const [x, z] of [[-.42, -.25], [.42, -.25], [-.32, .35], [.32, .35]]) { const p = new THREE.Mesh(new THREE.SphereGeometry(.17, 8, 6), suave(escura)); p.scale.set(1, .6, 1.5); p.position.set(x, .14, z); g.add(p); pernas.push(p); }
-    add(g, null, corpo, barriga);
-    for (const s of [-1, 1]) { const o = new THREE.Mesh(new THREE.SphereGeometry(.17, 12, 8), suave(cor)); o.position.set(s * .25, .85, .3); g.add(o); }
-    olhos(g, .9, .4, .25, .1);
-    formas.push({ g, upd: (t, mv) => { g.position.y = mv ? Math.abs(Math.sin(t * 7)) * .35 : 0; corpo.scale.y = .72 + (mv ? 0 : Math.sin(t * 3) * .03); } }); }
-  // 5 réptil
-  { const g = new THREE.Group(), corpo = new THREE.Mesh(new THREE.CapsuleGeometry(.28, .9, 6, 12), suave(cor)); corpo.rotation.x = Math.PI / 2; corpo.position.y = .38;
-    const cab = new THREE.Mesh(new THREE.SphereGeometry(.27, 12, 8), suave(cor)); cab.scale.set(1, .8, 1.3); cab.position.set(0, .45, .78);
-    const cauda = new THREE.Mesh(new THREE.ConeGeometry(.2, 1.1, 8), suave(escura)); cauda.rotation.x = -Math.PI / 2; cauda.position.set(0, .34, -1.05);
-    add(g, null, corpo, cab, cauda); olhos(g, .58, .95, .14, .07);
-    const pernas = []; for (const [x, z] of [[-.3, .35], [.3, .35], [-.3, -.35], [.3, -.35]]) { const p = new THREE.Mesh(new THREE.CylinderGeometry(.07, .06, .35, 6), suave(escura)); p.position.set(x, .18, z); p.rotation.z = x > 0 ? -.7 : .7; g.add(p); pernas.push(p); }
-    for (let k = 0; k < 5; k++) { const sp = new THREE.Mesh(new THREE.ConeGeometry(.07, .2, 4), suave(escura)); sp.position.set(0, .68, .4 - k * .22); g.add(sp); }
-    formas.push({ g, upd: (t, mv) => { pernas.forEach((p, k) => p.rotation.x = mv ? Math.sin(t * 14 + k * Math.PI) * .6 : 0); cauda.rotation.y = Math.sin(t * (mv ? 10 : 2)) * .35; } }); }
-  // 6 ave
-  { const g = new THREE.Group(), corpo = new THREE.Mesh(new THREE.SphereGeometry(.5, 16, 12), suave(cor)); corpo.scale.set(.9, 1, 1.1); corpo.position.y = .85;
-    const cab = new THREE.Mesh(new THREE.SphereGeometry(.32, 14, 10), suave(cor)); cab.position.set(0, 1.42, .2);
-    const bico = new THREE.Mesh(new THREE.ConeGeometry(.1, .32, 6), suave('#ff8f00')); bico.rotation.x = Math.PI / 2; bico.position.set(0, 1.38, .55);
-    add(g, null, corpo, cab, bico); olhos(g, 1.5, .42, .14, .08);
-    const asas = []; for (const s of [-1, 1]) { const a = new THREE.Mesh(new THREE.BoxGeometry(.75, .06, .5), suave(escura)); a.geometry.translate(s * .37, 0, 0); a.position.set(s * .38, 1, -.05); a.castShadow = true; g.add(a); asas.push({ a, s }); }
-    for (const s of [-1, 1]) { const p = new THREE.Mesh(new THREE.CylinderGeometry(.035, .035, .4, 5), suave('#ff8f00')); p.position.set(s * .15, .2, 0); g.add(p); }
-    formas.push({ g, upd: (t, mv) => { asas.forEach(({ a, s }) => a.rotation.z = s * Math.sin(t * (mv ? 18 : 3)) * (mv ? .8 : .2)); g.position.y = mv ? Math.abs(Math.sin(t * 9)) * .25 : 0; } }); }
-  // 7 explorador(a) cientista
-  { const g = new THREE.Group(), jaleco = suave('#f7f9fc'), pele = suave('#f1c8a5');
-    const pernas = []; for (const s of [-1, 1]) { const p = new THREE.Mesh(new THREE.CapsuleGeometry(.12, .45, 4, 8), suave('#37474f')); p.geometry.translate(0, -.28, 0); p.position.set(s * .15, .62, 0); p.castShadow = true; g.add(p); pernas.push(p); }
-    const tronco = new THREE.Mesh(new THREE.CapsuleGeometry(.3, .55, 6, 12), jaleco); tronco.position.y = 1.12;
-    const lenco = new THREE.Mesh(new THREE.TorusGeometry(.24, .07, 8, 16), suave(cor)); lenco.rotation.x = Math.PI / 2; lenco.position.y = 1.5;
-    const cab = new THREE.Mesh(new THREE.SphereGeometry(.3, 16, 12), pele); cab.position.y = 1.8;
-    const cabelo = new THREE.Mesh(new THREE.SphereGeometry(.315, 14, 8, 0, Math.PI * 2, 0, Math.PI / 2.2), suave('#3e2723')); cabelo.position.y = 1.84;
-    const aba = new THREE.Mesh(new THREE.CylinderGeometry(.5, .5, .05, 18), suave('#c8a46e')); aba.position.y = 2.02;
-    const copa = new THREE.Mesh(new THREE.CylinderGeometry(.27, .3, .25, 14), suave('#c8a46e')); copa.position.y = 2.15;
-    const mochila = new THREE.Mesh(new THREE.BoxGeometry(.45, .55, .25), suave('#8d6e4a')); mochila.position.set(0, 1.18, -.33);
-    const faixa = new THREE.Mesh(new THREE.BoxGeometry(.47, .1, .27), suave(cor)); faixa.position.set(0, 1.3, -.33);
-    add(g, null, tronco, lenco, cab, cabelo, aba, copa, mochila, faixa); olhos(g, 1.82, .26, .11, .06);
-    const bracos = []; for (const s of [-1, 1]) { const b = new THREE.Mesh(new THREE.CapsuleGeometry(.09, .42, 4, 8), jaleco); b.geometry.translate(0, -.25, 0); b.position.set(s * .38, 1.38, 0); b.castShadow = true; g.add(b); bracos.push(b); }
-    const lupa = new THREE.Mesh(new THREE.TorusGeometry(.11, .025, 6, 14), suave('#90a4ae')); lupa.position.set(.42, .82, .12); g.add(lupa);
-    formas.push({ g, upd: (t, mv) => { const k = mv ? Math.sin(t * 11) * .7 : Math.sin(t * 2) * .05; pernas[0].rotation.x = k; pernas[1].rotation.x = -k; bracos[0].rotation.x = -k * .8; bracos[1].rotation.x = k * .8; lupa.position.z = .12 + k * .25; } }); }
-  formas.forEach(f => { f.g.visible = false; avatar.add(f.g); });
-  formaVisivel = -1; mostrarForma(formaDe(nivelDe(est ? est.xp : 0)));
+  av.cor(corHex); av.nivel(nivelDe(est ? est.xp : 0));
+  av.carregar(est && est.avatar || personagemSel, corHex).then(() => av.nivel(nivelDe(est ? est.xp : 0)));
 }
-function mostrarForma(i) { formas.forEach((f, k) => f.g.visible = k === i); formaVisivel = i; }
+function mostrarForma(i) { av.nivel(i + 1); }
 
 // ---------- partículas ----------
 const NP = 700, ppos = new Float32Array(NP * 3), pcor = new Float32Array(NP * 3), pvel = new Float32Array(NP * 3), pvida = new Float32Array(NP);
@@ -592,7 +523,7 @@ let evo = null;
 function evoluir(fa, fd, nivel) {
   if (fa === fd) { SFX.nivel(); toast('⭐', `Nível ${nivel}!`, 'Continue explorando para evoluir'); explosao(jog.x, jog.y + 1.5, jog.z, ['#FFD166', '#fff'], 70, 6); return; }
   evo = { t: 0, fa, fd, trocou: false }; pausado = true;
-  $('ev1').textContent = 'EVOLUÇÃO!'; $('ev2').textContent = `${FORMAS[fa].nome}  →  ${FORMAS[fd].nome}  ·  Nível ${nivel}`;
+  $('ev1').textContent = 'EVOLUÇÃO!'; $('ev2').textContent = `${patente(fa + 1)}  →  ${patente(fd + 1)}  ·  Nível ${nivel}`;
   $('evolucao').classList.remove('oculto'); feixe.visible = true; SFX.evolucao();
   camCtl.alvoDist = 8;
 }
@@ -604,22 +535,20 @@ function atualizarEvolucao(dt) {
   avatar.rotation.y += dt * (6 + t * 6); avatar.position.y = jog.y + Math.min(1.6, t * 1.4) * (t < 2.2 ? 1 : Math.max(0, 1 - (t - 2.2) * 2));
   const pulso = 1 + Math.sin(t * 20) * .08 * (t < 1.3 ? 1 : 0); avatar.scale.setScalar(pulso);
   if (t < 1.3 && Math.random() < .5) explosao(jog.x, jog.y + 1, jog.z, ['#FFD166', '#fff59d'], 4, 3);
-  if (t > 1.3 && !evo.trocou) { evo.trocou = true; mostrarForma(evo.fd); explosao(jog.x, jog.y + 1.5, jog.z, ['#FFD166', '#7CFFB2', '#6EC8FF', '#ffffff', '#FF8FAB'], 220, 11); }
+  if (t > 1.3 && !evo.trocou) { evo.trocou = true; mostrarForma(evo.fd); av.comemorar(); explosao(jog.x, jog.y + 1.5, jog.z, ['#FFD166', '#7CFFB2', '#6EC8FF', '#ffffff', '#FF8FAB'], 220, 11); }
   if (t > 3.2) { evo = null; feixe.visible = false; avatar.scale.setScalar(1); $('evolucao').classList.add('oculto'); pausado = !!document.querySelector('#veu:not(.oculto)'); camCtl.alvoDist = 15; verificarConquistas(); }
 }
 
 // ---------- HUD ----------
 function atualizarHud() {
   const n = nivelDe(est.xp), ini = 50 * (n - 1) * n, fim = 50 * n * (n + 1), f = formaDe(n);
-  $('pNome').textContent = est.nome; $('pForma').textContent = FORMAS[f].nome; $('nivelBadge').textContent = n;
+  $('pNome').textContent = est.nome; $('pForma').textContent = patente(n); $('nivelBadge').textContent = n;
   $('pXp').style.width = Math.round((est.xp - ini) / (fim - ini) * 100) + '%';
   $('pXpTxt').textContent = `${est.xp} XP · faltam ${fim - est.xp} para o nível ${n + 1}`;
   renderDiarias();
 }
-function retrato(t) {
-  const g = $('retrato').getContext('2d'); g.clearRect(0, 0, 128, 128);
-  window.Avatar2D.desenhar(g, 64, 74, formaDe(nivelDe(est.xp)), t, 1, 2.7, false);
-}
+let accRetrato = 9;
+function retrato(dt) { if ((accRetrato += dt) < .5) return; accRetrato = 0; av.retrato(renderer, scene, $('retrato')); }
 let bannerT = 0;
 function banner(a, b, c) { $('rg1').textContent = a; $('rg2').textContent = b; $('rg3').textContent = c || ''; $('regiao').classList.add('on'); clearTimeout(bannerT); bannerT = setTimeout(() => $('regiao').classList.remove('on'), 3600); }
 function toast(ic, titulo, sub) {
@@ -693,6 +622,7 @@ const iniciais = s => (s || '?').replace(/,.*/, '').split(/\s+/).filter(w => w.l
 function escrever(el, texto, vel = 14) { el.textContent = ''; let k = 0; const it = setInterval(() => { el.textContent = texto.slice(0, ++k); if (k >= texto.length) clearInterval(it); }, vel); el.onclick = () => { clearInterval(it); el.textContent = texto; }; }
 
 async function abrirEstacao(e) {
+  if (emJogo && av.pronto) av.interagir();
   const tp = e.topico, il = ILHAS[e.ilha], aula = `../index.html?volta=${encodeURIComponent(tp.id)}#${tp.id}`;
   if (e.premium && !liberado(tp)) return painelPremium(e);
   if (!e.pronto && !liberado(tp)) {
@@ -793,6 +723,7 @@ async function desafio(e, j, m) {
       if (cenaAtual) { cenaAtual.obj.destruir(); cenaAtual = null; }
       fecharPainel();
       if (venceu) {
+        av.comemorar();
         explosao(e.x, 3, e.z, ['#FFD166', '#7CFFB2', '#FF8FAB', '#6EC8FF'], 120, 9);
         ganharXp((jaFeito ? 0 : (m.recompensa_xp || 100)) + xpGanho, jaFeito ? 'revisão' : 'missão cumprida');
         if (!jaFeito) { diaria('missao'); }
@@ -980,7 +911,7 @@ function atualizarJogador(dt) {
   // pulo
   jog.vy -= 22 * dt; jog.y += jog.vy * dt; if (jog.y <= 1) { if (!jog.chao && jog.vy < -6) explosao(jog.x, 1.1, jog.z, ['#ffffff', '#e0f2f1'], 10, 2); jog.y = 1; jog.vy = 0; jog.chao = true; }
   if (!evo) { avatar.position.set(jog.x, jog.y, jog.z); avatar.rotation.y = jog.rot; }
-  const f = formas[formaVisivel]; if (f) f.upd(tempo, jog.vel > .5);
+  av.atualizar(dt, { vel: jog.vel, chao: jog.chao });
   // ilha atual
   const il = ilhaPerto(jog.x, jog.z);
   if (il && Math.hypot(jog.x - il.cx, jog.z - il.cz) < il.R && il.i !== ilhaAtual) { ilhaAtual = il.i; banner(`${il.u.serie}ª série · Unidade ${il.i + 1}`, il.u.regiao_mundo.nome, il.u.titulo); }
@@ -1050,11 +981,11 @@ function loop() {
   if (document.hidden) { relogio.getDelta(); return; }
   const dt = Math.min(.05, relogio.getDelta()); tempo += dt;
   if (emJogo && !pausado && !evo) atualizarJogador(dt);
-  else if (emJogo && !evo) { const f = formas[formaVisivel]; if (f) f.upd(tempo, false); }
+  else if (emJogo && !evo) av.atualizar(dt, { vel: 0, chao: true });
   atualizarEvolucao(dt);
-  if (evo) { const f = formas[formaVisivel]; if (f) f.upd(tempo, false); }
+  if (evo) av.atualizar(dt, { vel: 0, chao: true });
   animarMundo(dt); atualizarParticulas(dt); atualizarCamera(dt); atualizarFlutuantes(dt);
-  if (emJogo && (acc += dt) > .12) { acc = 0; desenharMinimapa(); retrato(tempo); }
+  if (emJogo && (acc += dt) > .12) { acc = 0; desenharMinimapa(); retrato(acc + .12); }
   if (emJogo && (accRepoe += dt) > 5) { accRepoe = 0; criarColetaveis(); atualizarPoderes(); }
   visual.render();
 }
@@ -1063,9 +994,13 @@ function loop() {
 let corSel = 0;
 function telaInicial(salvo) {
   const tem = EV.temProgresso(salvo);
+  if (salvo && salvo.avatar) personagemSel = salvo.avatar;
   if (salvo) { corSel = salvo.cor || 0; if (salvo.nome && salvo.nome !== 'Evonauta' && !$('nome').value) $('nome').value = salvo.nome; }
   $('cores').innerHTML = CORES_JOGADOR.map((c, k) => `<button style="background:${c}" data-k="${k}" class="${k === corSel ? 'sel' : ''}" title="Cor do avatar"></button>`).join('');
-  $('cores').querySelectorAll('button').forEach(b => b.onclick = () => { corSel = +b.dataset.k; $('cores').querySelectorAll('button').forEach(x => x.classList.toggle('sel', x === b)); });
+  $('cores').querySelectorAll('button').forEach(b => b.onclick = () => { corSel = +b.dataset.k; $('cores').querySelectorAll('button').forEach(x => x.classList.toggle('sel', x === b)); if (previa) previa.cor(CORES_JOGADOR[corSel]); });
+  $('personagens').innerHTML = PERSONAGENS.map(p => `<button type="button" data-id="${p.id}" class="${p.id === personagemSel ? 'sel' : ''}"><b>${p.nome}</b><small>${p.desc}</small></button>`).join('');
+  $('personagens').querySelectorAll('button').forEach(b => b.onclick = () => { personagemSel = b.dataset.id; $('personagens').querySelectorAll('button').forEach(x => x.classList.toggle('sel', x === b)); if (previa) previa.mostrar(personagemSel, CORES_JOGADOR[corSel]); });
+  try { previa ||= criarPrevia($('previa'), toon); previa.mostrar(personagemSel, CORES_JOGADOR[corSel]); } catch (e) { console.warn('prévia do avatar indisponível', e); }
   $('btCont').classList.toggle('oculto', !tem);
   $('btCont').classList.toggle('prim', tem); $('btNovo').classList.toggle('prim', !tem);
   $('btNovo').textContent = tem ? '↺ Recomeçar do zero' : '▶ Começar expedição';
@@ -1074,7 +1009,7 @@ function comecar(novo) {
   const salvo = EV.carregar(), nome = $('nome').value.trim() || 'Evonauta';
   demo = $('demo').checked;
   est = EV.completar(!novo && salvo ? salvo : EV.novo(nome));
-  est.nome = nome; if (novo && salvo && salvo.uid) est.uid = salvo.uid; est.cor = corSel;
+  est.nome = nome; if (novo && salvo && salvo.uid) est.uid = salvo.uid; est.cor = corSel; est.avatar = personagemSel;
   if (novo) { est.pos3d = null; combo = 0; }
   if (!Array.isArray(est.livres) || !est.livres.length) est.livres = [true];
   est.livres = ILHAS.map((_, i) => !!est.livres[i] || i === 0);
@@ -1132,7 +1067,7 @@ $('btNovo').onclick = () => {
 })();
 
 // acesso de depuração pelo console (útil para testes e demonstrações)
-window.EXP = { jog, ILHAS, PONTES, ESTACOES, ORBES, PILULAS, get est() { return est; }, abrirEstacao, ganharXp, noChao, pode, usarSonda, usarSalto, saltarPara, get feixes() { return feixes; }, abrirFragmento, camCtl, teclas, FRAGS, abrirMapa, fecharMapa, get emJogo() { return emJogo; }, visual };
+window.EXP = { jog, ILHAS, PONTES, ESTACOES, ORBES, PILULAS, get est() { return est; }, abrirEstacao, ganharXp, noChao, pode, usarSonda, usarSalto, saltarPara, get feixes() { return feixes; }, abrirFragmento, camCtl, teclas, FRAGS, abrirMapa, fecharMapa, get emJogo() { return emJogo; }, visual, avatar: av };
 
 // botões dos poderes
 $('pdSonda').onclick = usarSonda; $('pdSalto').onclick = usarSalto;

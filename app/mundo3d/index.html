@@ -161,7 +161,13 @@
   #inicio .form { padding: 18px; }
   #inicio input[type=text] { width: 100%; font-family: Fredoka; font-size: 18px; padding: 13px 16px; border-radius: 14px; border: 1px solid rgba(255,255,255,.25); background: rgba(255,255,255,.1); color: #fff; text-align: center; outline: none; }
   #inicio input[type=text]::placeholder { color: rgba(255,255,255,.55); }
-  .cores { display: flex; gap: 10px; justify-content: center; margin: 14px 0; }
+  #previa { display: block; margin: 8px auto 0; width: 240px; height: 260px; }
+  .personagens { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin: 8px 0 4px; }
+  .personagens button { min-width: 44px; min-height: 44px; padding: 7px 10px; border-radius: 12px; border: 2px solid transparent; background: rgba(255,255,255,.1); color: #fff; font-family: Fredoka, sans-serif; cursor: pointer; text-align: center; line-height: 1.15; transition: transform .15s, border-color .15s; }
+  .personagens button small { display: block; font-family: Nunito, sans-serif; font-size: 11px; color: var(--sub); font-weight: 600; }
+  .personagens button.sel { border-color: #fff; background: rgba(124,255,178,.22); transform: scale(1.04); }
+  @media (max-height: 760px), (max-width: 480px) { #previa { width: 150px; height: 162px; margin-top: 2px; } .personagens { gap: 6px; margin: 6px 0 2px; } .personagens button { padding: 4px 8px; min-height: 44px; } .personagens button b { font-size: 13px; } #inicio .caixa > img { width: 72px; height: 72px; } #inicio .sub { font-size: 14px; margin: 8px 0 12px; } #inicio .form { padding: 12px; } }
+  .cores { display: flex; gap: 10px; justify-content: center; margin: 10px 0; }
   .cores button { width: 34px; height: 34px; border-radius: 50%; border: 3px solid transparent; cursor: pointer; transition: transform .15s; }
   .cores button.sel { border-color: #fff; transform: scale(1.15); }
   #inicio .linha { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 6px; }
@@ -185,9 +191,9 @@
 <link rel="icon" href="../compartilhado/marca/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="../compartilhado/marca/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="../compartilhado/marca/apple-touch-icon.png">
-<script src="../vendor/supabase.js?v=mwb6j0qe"></script>
-<script src="../../config.js?v=mwb6j0qe"></script>
-<script src="../compartilhado/sessao.js?v=mwb6j0qe"></script>
+<script src="../vendor/supabase.js?v=mwbhqbys"></script>
+<script src="../../config.js?v=mwbhqbys"></script>
+<script src="../compartilhado/sessao.js?v=mwbhqbys"></script>
 </head>
 <body>
 <canvas id="cena"></canvas>
@@ -236,6 +242,8 @@
     <div class="sub">26 ilhas. Uma jornada da primeira célula ao cientista. Até onde você consegue evoluir?</div>
     <div class="form vidro">
       <input type="text" id="nome" maxlength="16" placeholder="Seu nome de evonauta">
+      <canvas id="previa" width="240" height="260"></canvas>
+      <div class="personagens" id="personagens"></div>
       <div class="cores" id="cores"></div>
       <div class="linha">
         <button class="bt prim" id="btNovo">▶ Começar expedição</button>
@@ -248,10 +256,10 @@
   </div>
 </div>
 
-<script src="../compartilhado/avatar2d.js?v=mwb6j0qe"></script>
-<script src="../compartilhado/estado.js?v=mwb6j0qe"></script>
-<script src="cena.js?v=mwb6j0qe"></script>
-<script type="module" src="main.js?v=mwb6j0qe"></script>
-<script src="tour.js?v=mwb6j0qe"></script>
+<script src="../compartilhado/avatar2d.js?v=mwbhqbys"></script>
+<script src="../compartilhado/estado.js?v=mwbhqbys"></script>
+<script src="cena.js?v=mwbhqbys"></script>
+<script type="module" src="main.js?v=mwbhqbys"></script>
+<script src="tour.js?v=mwbhqbys"></script>
 </body>
 </html>
