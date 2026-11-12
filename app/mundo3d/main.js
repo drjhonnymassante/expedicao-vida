@@ -84,6 +84,22 @@ const cacheJson = {};
 let ilhaAtual = -1, combo = 0;
 
 function salvar() { if (!est) return; est.pos3d = { x: jog.x, z: jog.z }; EV.salvar(est); }
+// ponto de salvamento em marcos do jogo (missão, guardião, nível) e a cada 5 minutos
+function ponto(rotulo) { if (!est) return; EV.guardarPonto(est, rotulo); salvar(); }
+let accPonto = 0;
+const dataPonto = t => new Date(t).toLocaleString('pt-BR', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' });
+function listaPontos(e) {
+  const ps = (e.pontos || []).slice().reverse();
+  if (!ps.length) return '<p style="color:var(--sub);font-size:13px">Ainda não há pontos guardados. Eles são criados a cada missão cumprida, guardião vencido e nível alcançado.</p>';
+  return ps.map(p => `<div class="ponto"><div class="tx"><b>${esc(p.rotulo)}</b><small>${dataPonto(p.t)} · ${p.xp} XP · ${p.ilhas} ilhas · ${p.missoes} missões</small></div><button type="button" class="bt" data-t="${p.t}">Restaurar</button></div>`).join('');
+}
+function ligarRestaurar(raiz, e, depois) {
+  raiz.querySelectorAll('button[data-t]').forEach(b => b.onclick = () => {
+    const p = (e.pontos || []).find(x => String(x.t) === b.dataset.t); if (!p) return;
+    if (b.dataset.ok !== '1') { b.dataset.ok = '1'; b.classList.add('perigo'); b.textContent = 'Confirmar?'; setTimeout(() => { b.dataset.ok = ''; b.classList.remove('perigo'); b.textContent = 'Restaurar'; }, 4000); return; }
+    const r = EV.restaurar(e, p); EV.salvar(r); if (window.salvarNaNuvem) window.salvarNaNuvem(); depois(r);
+  });
+}
 window.salvarJogo = () => { salvar(); if (window.salvarNaNuvem) window.salvarNaNuvem(); };
 addEventListener('pagehide', () => salvar());
 
@@ -439,8 +455,10 @@ function abrirPerfil() {
     <div class="premio"><span>⚔️ ${Object.keys(est.feitas).length} missões</span><span>🗺️ ${est.livres.filter(Boolean).length}/${ILHAS.length} ilhas</span><span>🛡️ ${Object.keys(est.chefes || {}).length} guardiões</span><span>💎 ${est.cristaisTotal || 0} cristais no total</span></div>
     <h3 style="font-family:Fredoka;margin:14px 0 6px">Conquistas · ${Object.keys(est.conquistas).length}/${CONQUISTAS.length}</h3>${conq}
     <p style="color:var(--sub);font-size:13px;margin-top:12px">Próxima patente: <b style="color:#fff">${patente(n + 1)}</b> em ${fim - est.xp} XP. Para trocar de personagem, volte à tela inicial e toque em Continuar.</p>
+    <h3 style="font-family:Fredoka;margin:14px 0 6px">🕒 Pontos de salvamento</h3><div id="pontosPerfil">${listaPontos(est)}</div>
     <div class="acoesP"><button class="bt prim" id="fecharPerfil">Voltar à expedição</button></div>`);
   $('fecharPerfil').onclick = fecharPainel;
+  ligarRestaurar($('pontosPerfil'), est, () => { location.href = location.pathname + '?continuar'; });
 }
 function abrirSequencia() {
   const s = est.seq || { dias: 0, historico: [], escudos: 0 }, hist = new Set(s.historico || []); if (s.ultimo === hoje()) hist.add(hoje());
@@ -620,7 +638,7 @@ function vitoriaChefe(p) {
   (est.chefes ||= {})[prox.i] = true; est.livres[prox.i] = true; p.chefePronto = false;
   av.comemorar(); tremer(.6); document.body.classList.add('clarao'); setTimeout(() => document.body.classList.remove('clarao'), 500);
   if (p.chefe) { explosao(p.chefe.position.x, p.chefe.position.y, p.chefe.position.z, ['#b388ff', '#ffb300', '#ffffff', '#7CFFB2'], 260, 12); p.chefe.visible = false; }
-  SFX.evolucao(); ganharXp(150, 'guardião derrotado');
+  SFX.evolucao(); ganharXp(150, 'guardião derrotado'); ponto('Guardião de ' + prox.u.regiao_mundo.nome + ' vencido');
   setTimeout(() => animarDesbloqueio(prox), 500);
   aplicarVisualBloqueio(); verificarConquistas();
 }
@@ -654,6 +672,7 @@ function ganharXp(v, motivo) {
 }
 let evo = null;
 function evoluir(fa, fd, nivel) {
+  ponto('Nível ' + nivel);
   if (fa === fd) { SFX.nivel(); toast('⭐', `Nível ${nivel}!`, 'Continue explorando para evoluir'); explosao(jog.x, jog.y + 1.5, jog.z, ['#FFD166', '#fff'], 70, 6); return; }
   evo = { t: 0, fa, fd, trocou: false }; pausado = true;
   $('ev1').textContent = 'EVOLUÇÃO!'; $('ev2').textContent = `${patente(fa + 1)}  →  ${patente(fd + 1)}  ·  Nível ${nivel}`;
@@ -881,7 +900,7 @@ async function desafio(e, j, m) {
         av.comemorar(); tremer(.35); if (e.fig) e.fig.comemorar();
         explosao(e.x, 3, e.z, ['#FFD166', '#7CFFB2', '#FF8FAB', '#6EC8FF'], 120, 9);
         ganharXp((jaFeito ? 0 : (m.recompensa_xp || 100)) + xpGanho, jaFeito ? 'revisão' : 'missão cumprida');
-        if (!jaFeito) { diaria('missao'); }
+        if (!jaFeito) { diaria('missao'); ponto('Missão: ' + tp.titulo); }
         verificarDesbloqueios(true); aplicarVisualBloqueio(); verificarConquistas();
       } else if (xpGanho) ganharXp(xpGanho, 'respostas certas');
     };
@@ -1021,7 +1040,7 @@ function teletransporteDemo() {
   salvar();
   toast('🌀', 'Teletransporte', al.u.regiao_mundo.nome);
 }
-function desbloquearDemo() { const prox = ILHAS.find(il => !livre(il.i)); if (prox) { est.livres[prox.i] = true; aplicarVisualBloqueio(); animarDesbloqueio(prox); salvar(); } }
+function desbloquearDemo() { const prox = ILHAS.find(il => !livre(il.i)); if (prox) { est.livres[prox.i] = true; aplicarVisualBloqueio(); animarDesbloqueio(prox); ponto('Ilha liberada: ' + prox.u.regiao_mundo.nome); } }
 $('dmXp').onclick = () => ganharXp(250, 'modo demonstração');
 $('dmIlha').onclick = desbloquearDemo;
 $('dmTele').onclick = teletransporteDemo;
@@ -1225,6 +1244,7 @@ function loop() {
   if (emJogo) atualizarAlvo(dt);
   if (emJogo && (acc += dt) > .12) { acc = 0; desenharMinimapa(); retrato(acc + .12); }
   if (emJogo && (accRepoe += dt) > 5) { accRepoe = 0; criarColetaveis(); atualizarPoderes(); }
+  if (emJogo && !pausado && (accPonto += dt) > 300) { accPonto = 0; ponto('Automático'); }
   if (emJogo) atualizarFigurantes(dt);
   visual.render();
 }
@@ -1243,6 +1263,15 @@ function telaInicial(salvo) {
   try { previa ||= criarPrevia($('previa'), toon); previa.mostrar(personagemSel, CORES_JOGADOR[corSel]); } catch (e) { console.warn('prévia do avatar indisponível', e); }
   $('btCont').classList.toggle('oculto', !tem);
   $('btCont').classList.toggle('prim', tem); $('btNovo').classList.toggle('prim', !tem);
+  // pontos de salvamento e aviso quando o progresso atual está atrás do melhor ponto guardado
+  const temPontos = !!(salvo && salvo.pontos && salvo.pontos.length), reg = salvo && EV.regrediu(salvo);
+  $('btPontos').classList.toggle('oculto', !temPontos); $('pontos').classList.add('oculto');
+  $('btPontos').onclick = () => { const o = $('pontos').classList.toggle('oculto'); if (!o) { $('pontos').innerHTML = listaPontos(salvo); ligarRestaurar($('pontos'), salvo, r => { telaInicial(r); toast('🕒', 'Ponto restaurado', `${r.xp} XP · ${r.livres.filter(Boolean).length} ilhas`); }); } };
+  $('avisoRegress').classList.toggle('oculto', !reg);
+  if (reg) {
+    $('avisoRegress').innerHTML = `⚠️ Seu progresso parece ter voltado para trás (agora: ${salvo.xp || 0} XP, ${salvo.livres.filter(Boolean).length} ilhas). Há um ponto guardado em ${dataPonto(reg.t)} com <b>${reg.xp} XP e ${reg.ilhas} ilhas</b>.<br><button type="button" class="bt prim" data-t="${reg.t}">Restaurar esse ponto</button>`;
+    ligarRestaurar($('avisoRegress'), salvo, r => { telaInicial(r); toast('🕒', 'Progresso restaurado', `${r.xp} XP · ${r.livres.filter(Boolean).length} ilhas`); });
+  }
   $('btNovo').textContent = tem ? '↺ Recomeçar do zero' : '▶ Começar expedição';
 }
 function comecar(novo) {
@@ -1328,7 +1357,7 @@ $('btNovo').onclick = () => {
 })();
 
 // acesso de depuração pelo console (útil para testes e demonstrações)
-window.EXP = { jog, ILHAS, PONTES, ESTACOES, ORBES, PILULAS, get est() { return est; }, abrirEstacao, ganharXp, noChao, pode, usarSonda, usarSalto, saltarPara, get feixes() { return feixes; }, abrirFragmento, camCtl, teclas, FRAGS, abrirMapa, fecharMapa, get emJogo() { return emJogo; }, visual, avatar: av, abrirChefe, abrirPerfil, abrirSequencia, PONTES };
+window.EXP = { jog, ILHAS, PONTES, ESTACOES, ORBES, PILULAS, get est() { return est; }, abrirEstacao, ganharXp, noChao, pode, usarSonda, usarSalto, saltarPara, get feixes() { return feixes; }, abrirFragmento, camCtl, teclas, FRAGS, abrirMapa, fecharMapa, get emJogo() { return emJogo; }, visual, avatar: av, abrirChefe, abrirPerfil, abrirSequencia, ponto, PONTES };
 
 // botões dos poderes
 $('pdSonda').onclick = usarSonda; $('pdSalto').onclick = usarSalto;

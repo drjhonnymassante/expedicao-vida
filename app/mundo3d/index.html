@@ -97,6 +97,14 @@
   .cena { border-radius: 18px; overflow: hidden; margin: 0 0 12px; border: 1px solid rgba(124,255,178,.25); min-height: 150px; background: #141a2a; }
   .cena canvas { display: block; }
   .bt.perigo { background: #b3261e !important; color: #fff !important; border-color: #ff6b5e !important; }
+  #avisoRegress { margin-top: 10px; padding: 10px 12px; border-radius: 12px; background: rgba(255,120,120,.14); border: 1px solid rgba(255,120,120,.4); font-size: 13px; text-align: left; }
+  #avisoRegress .bt { margin-top: 8px; font-size: 13px; }
+  #pontos { margin-top: 8px; text-align: left; max-height: 220px; overflow: auto; }
+  .ponto { display: flex; align-items: center; gap: 10px; padding: 7px 8px; border-radius: 10px; background: rgba(255,255,255,.06); margin: 5px 0; font-size: 12.5px; }
+  .ponto b { display: block; font-family: Fredoka, sans-serif; font-size: 13px; }
+  .ponto small { color: var(--sub); }
+  .ponto .tx { flex: 1; min-width: 0; }
+  .ponto .bt { padding: 6px 10px; font-size: 12px; }
   .vidro { background: var(--vidro); backdrop-filter: blur(14px) saturate(140%); -webkit-backdrop-filter: blur(14px) saturate(140%); border: 1px solid var(--vidro-borda); border-radius: 18px; box-shadow: 0 10px 40px rgba(0,0,0,.35); }
   .titulo { font-family: Fredoka, Nunito, sans-serif; }
 
@@ -203,8 +211,8 @@
   .flashcard .verso { background: linear-gradient(135deg, rgba(54,211,153,.3), rgba(16,185,129,.2)); border: 1px solid rgba(124,255,178,.5); }
 
   /* Título */
-  #inicio { position: fixed; inset: 0; z-index: 50; display: grid; place-items: center; background: radial-gradient(ellipse at 50% 120%, rgba(11,20,36,.2), rgba(11,20,36,.65)); }
-  #inicio .caixa { text-align: center; width: min(560px, 92vw); }
+  #inicio { position: fixed; inset: 0; z-index: 50; display: flex; flex-direction: column; align-items: center; overflow: auto; -webkit-overflow-scrolling: touch; background: radial-gradient(ellipse at 50% 120%, rgba(11,20,36,.2), rgba(11,20,36,.65)); }
+  #inicio .caixa { text-align: center; width: min(560px, 92vw); margin: auto; padding: 14px 0; }
   #logo { font-family: Fredoka; font-weight: 700; font-size: clamp(46px, 8vw, 86px); line-height: .95; margin: 0; background: linear-gradient(180deg, #ffffff, #b6ffd7 55%, #6EC8FF); -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(0 8px 30px rgba(0,0,0,.45)); }
   #logo small { display: block; font-size: .32em; letter-spacing: .5em; color: var(--neon); -webkit-text-fill-color: var(--neon); margin-top: 8px; }
   #inicio .sub { font-size: 17px; color: #e3ecfa; margin: 14px 0 22px; text-shadow: 0 2px 12px rgba(0,0,0,.5); }
@@ -216,7 +224,7 @@
   .personagens button { min-width: 44px; min-height: 44px; padding: 7px 10px; border-radius: 12px; border: 2px solid transparent; background: rgba(255,255,255,.1); color: #fff; font-family: Fredoka, sans-serif; cursor: pointer; text-align: center; line-height: 1.15; transition: transform .15s, border-color .15s; }
   .personagens button small { display: block; font-family: Nunito, sans-serif; font-size: 11px; color: var(--sub); font-weight: 600; }
   .personagens button.sel { border-color: #fff; background: rgba(124,255,178,.22); transform: scale(1.04); }
-  @media (max-height: 760px), (max-width: 480px) { #previa { width: 150px; height: 162px; margin-top: 2px; } .personagens { gap: 6px; margin: 6px 0 2px; } .personagens button { padding: 4px 8px; min-height: 44px; } .personagens button b { font-size: 13px; } #inicio .caixa > img { width: 72px; height: 72px; } #inicio .sub { font-size: 14px; margin: 8px 0 12px; } #inicio .form { padding: 12px; } }
+  @media (max-height: 920px), (max-width: 480px) { #previa { width: 150px; height: 162px; margin-top: 2px; } .personagens { gap: 6px; margin: 6px 0 2px; } .personagens button { padding: 4px 8px; min-height: 44px; } .personagens button b { font-size: 13px; } #inicio .caixa > img { width: 72px; height: 72px; } #inicio .sub { font-size: 14px; margin: 8px 0 12px; } #inicio .form { padding: 12px; } }
   .cores { display: flex; gap: 10px; justify-content: center; margin: 10px 0; }
   .cores button { width: 44px; height: 44px; border-radius: 50%; border: 3px solid transparent; cursor: pointer; transition: transform .15s; }
   .cores button.sel { border-color: #fff; transform: scale(1.15); }
@@ -241,9 +249,9 @@
 <link rel="icon" href="../compartilhado/marca/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="../compartilhado/marca/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="../compartilhado/marca/apple-touch-icon.png">
-<script src="../vendor/supabase.js?v=mwcxh546"></script>
-<script src="../../config.js?v=mwcxh546"></script>
-<script src="../compartilhado/sessao.js?v=mwcxh546"></script>
+<script src="../vendor/supabase.js?v=mwcxvzea"></script>
+<script src="../../config.js?v=mwcxvzea"></script>
+<script src="../compartilhado/sessao.js?v=mwcxvzea"></script>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
@@ -314,6 +322,7 @@
     <h1 id="logo">Expedição Vida<small>UMA JORNADA EVONAUTA</small></h1>
     <div class="sub">26 ilhas. Uma jornada da primeira célula ao cientista. Até onde você consegue evoluir?</div>
     <div class="form vidro">
+      <div id="avisoRegress" class="oculto" style="margin:0 0 10px"></div>
       <input type="text" id="nome" maxlength="16" placeholder="Seu nome de evonauta">
       <canvas id="previa" width="240" height="260"></canvas>
       <div class="personagens" id="personagens"></div>
@@ -324,16 +333,18 @@
       </div>
       <label><input type="checkbox" id="demo"> Modo demonstração (atalhos para apresentações)</label>
       <div id="avisoSeq" class="oculto" style="margin-top:10px;font-size:13px;color:var(--ouro);font-weight:800"></div>
+      <button type="button" class="bt oculto" id="btPontos" style="margin-top:8px;font-size:13px">🕒 Pontos de salvamento</button>
+      <div id="pontos" class="oculto"></div>
       <div id="carga">Carregando o arquipélago…</div>
     </div>
     <div style="margin-top:12px;font-size:12px;color:var(--sub)">Computador antigo? <a href="../mundo/" style="color:var(--neon)">Use a versão leve</a></div>
   </div>
 </div>
 
-<script src="../compartilhado/avatar2d.js?v=mwcxh546"></script>
-<script src="../compartilhado/estado.js?v=mwcxh546"></script>
-<script src="cena.js?v=mwcxh546"></script>
-<script type="module" src="main.js?v=mwcxh546"></script>
-<script src="tour.js?v=mwcxh546"></script>
+<script src="../compartilhado/avatar2d.js?v=mwcxvzea"></script>
+<script src="../compartilhado/estado.js?v=mwcxvzea"></script>
+<script src="cena.js?v=mwcxvzea"></script>
+<script type="module" src="main.js?v=mwcxvzea"></script>
+<script src="tour.js?v=mwcxvzea"></script>
 </body>
 </html>
