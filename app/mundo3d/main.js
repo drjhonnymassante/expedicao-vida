@@ -341,7 +341,7 @@ function criarNPC(e) {
   } else {
     // o personagem (figurante KayKit) só é instanciado quando o jogador está perto; ver atualizarFigurantes
     const h = [...String(e.topico.id)].reduce((s, c) => (s * 31 + c.charCodeAt(0)) >>> 0, 7);
-    e.vivo = true; e.perso = PERSONAGENS[h % PERSONAGENS.length].id; e.fig = null; e.olhar = h % 7 * .9;
+    e.vivo = true; e.perso = PERSONAGENS[h % PERSONAGENS.length].id; e.fig = null; e.olhar = h % 7 * .9; e.semente = h;
     g.rotation.y = e.olhar;
     const gema = new THREE.Mesh(new THREE.OctahedronGeometry(.3, 0), new THREE.MeshBasicMaterial({ color: '#FFD166' })); gema.position.y = 2.75;
     const hal = brilho('#FFD166', 1.6); hal.position.y = 2.75;
@@ -1163,7 +1163,7 @@ function atualizarFigurantes(dt) {
     if (!e.vivo) continue;
     const d = Math.hypot(e.x - jog.x, e.z - jog.z);
     if (checa) {
-      if (!e.fig && d < RAIO_FIG && e.grupo.visible) { e.fig = criarFigurante({ toon, id: e.perso, cor: e.cor }); e.fig.grupo.position.y = .21; e.grupo.add(e.fig.grupo); e.fig.carregar(); }
+      if (!e.fig && d < RAIO_FIG && e.grupo.visible) { e.fig = criarFigurante({ toon, id: e.perso, cor: e.cor, semente: e.semente }); e.fig.grupo.position.y = .21; e.grupo.add(e.fig.grupo); e.fig.carregar(); }
       else if (e.fig && (d > RAIO_FIG + 12 || !e.grupo.visible)) { e.grupo.remove(e.fig.grupo); e.fig.destruir(); e.fig = null; }
     }
     if (e.fig && d < RAIO_ANIM) e.fig.atualizar(dt);
@@ -1250,7 +1250,7 @@ function comecar(novo) {
   demo = $('demo').checked;
   est = EV.completar(!novo && salvo ? salvo : EV.novo(nome));
   est.nome = nome; if (novo && salvo && salvo.uid) est.uid = salvo.uid; est.cor = corSel; est.avatar = personagemSel;
-  if (novo) { est.pos3d = null; combo = 0; }
+  if (novo) { est.pos3d = null; combo = 0; est.reiniciadoEm = Date.now(); }
   if (!Array.isArray(est.livres) || !est.livres.length) est.livres = [true];
   est.livres = ILHAS.map((_, i) => !!est.livres[i] || i === 0);
   verificarDesbloqueios(false);
@@ -1282,7 +1282,16 @@ function comecar(novo) {
   atualizarHud(); verificarConquistas(); salvar(); if (window.salvarNaNuvem) window.salvarNaNuvem(); setInterval(salvar, 4000);
   setTimeout(() => toast('🧬', `Bem-vindo(a), ${est.nome}!`, TOQUE ? 'Use o joystick para andar e arraste a tela para girar a câmera' : 'Fale com os personagens com ❗ para receber missões'), 1200);
 }
-addEventListener('progresso-sincronizado', () => { if (!emJogo) telaInicial(EV.carregar()); });
+addEventListener('progresso-sincronizado', () => {
+  if (!emJogo || !est) { if (!emJogo) telaInicial(EV.carregar()); return; }
+  // a nuvem chegou com o jogo já aberto: une o progresso sem perder nada do que está em memória
+  const nuvem = EV.carregar(); if (!nuvem) return;
+  const m = EV.mesclar(est, nuvem); if (!m || m === est) return;
+  const a = nivelDe(est.xp); Object.assign(est, m);
+  est.livres = ILHAS.map((_, i) => !!est.livres[i] || i === 0);
+  verificarDesbloqueios(false); aplicarVisualBloqueio(); atualizarHud(); salvar();
+  if (nivelDe(est.xp) > a) evoluir(formaDe(a), formaDe(nivelDe(est.xp)), nivelDe(est.xp));
+});
 addEventListener('storage', e => { if (e.key === EV.CHAVE && est) { const novo = EV.carregar(); if (novo && novo.xp !== est.xp) { const a = nivelDe(est.xp); est.xp = novo.xp; est.aulas = novo.aulas; atualizarHud(); if (nivelDe(est.xp) > a) evoluir(formaDe(a), formaDe(nivelDe(est.xp)), nivelDe(est.xp)); } } });
 
 (async function iniciar() {

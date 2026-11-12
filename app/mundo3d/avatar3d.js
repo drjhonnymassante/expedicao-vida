@@ -47,7 +47,7 @@ function porLenco(obj, cor, toon) {
   const cabeca = obj.getObjectByName('head') || obj.getObjectByName('spine');
   if (!cabeca) return;
   const antigo = cabeca.getObjectByName('lenco'); if (antigo) cabeca.remove(antigo);
-  const t = new THREE.Mesh(new THREE.TorusGeometry(.19, .07, 8, 18), toon(cor)); t.name = 'lenco';
+  const t = new THREE.Mesh(new THREE.TorusGeometry(.3, .09, 8, 20), toon(cor)); t.name = 'lenco';
   t.rotation.x = Math.PI / 2; t.position.y = -.02; cabeca.add(t);
 }
 
@@ -145,8 +145,39 @@ export function criarAvatar3D({ toon }) {
 
 // figurante: personagem das estações (NPC). Leve: sem aura, sem insígnias, sem retrato.
 // Fica parado com fase própria, faz um gesto de vez em quando e reage quando o jogador fala com ele.
-export function criarFigurante({ toon, id, cor }) {
+// gerador determinístico: a mesma semente dá sempre o mesmo visual
+function rngDe(semente) { let s = (semente >>> 0) || 1; return () => { s += 0x6D2B79F5; let t = Math.imul(s ^ (s >>> 15), 1 | s); t ^= t + Math.imul(t ^ (t >>> 7), 61 | t); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+const TINTAS = ['#ffffff', '#ffffff', '#ffd9d9', '#d9e6ff', '#d9ffe0', '#fff1c2', '#ead9ff', '#d2fbf6', '#ffe0c2', '#e6e6e6'];
+const CORES_ACESS = ['#e53935', '#1e88e5', '#43a047', '#fdd835', '#8e24aa', '#fb8c00', '#00acc1', '#6d4c41', '#f06292', '#212121'];
+// acessórios procedurais presos aos ossos (cabeça, tronco): chapéus, óculos, mochila
+function acessorios(obj, rnd, toon, corEstacao) {
+  const cabeca = obj.getObjectByName('head'), tronco = obj.getObjectByName('spine') || obj.getObjectByName('body');
+  const corA = CORES_ACESS[Math.floor(rnd() * CORES_ACESS.length)], corB = CORES_ACESS[Math.floor(rnd() * CORES_ACESS.length)];
+  const chapeuModelo = obj.getObjectByName('Mage_Hat') || obj.getObjectByName('Barbarian_Hat') || obj.getObjectByName('Knight_Helmet');
+  const tipoChapeu = Math.floor(rnd() * 7);   // 0 chapéu do modelo (se houver), 1 palha, 2 boné, 3 gorro, 4 bandana, 5-6 nada
+  if (chapeuModelo && tipoChapeu !== 0) chapeuModelo.visible = false;
+  if (cabeca) {
+    // a cabeça mede ~1,1 de largura e vai de 0 a 1,0 acima do osso; o rosto olha para +z
+    const topo = .96;
+    if (tipoChapeu === 1) { const aba = new THREE.Mesh(new THREE.CylinderGeometry(.74, .78, .06, 18), toon('#e3c16f')); aba.position.y = topo; const copa = new THREE.Mesh(new THREE.CylinderGeometry(.38, .46, .3, 14), toon('#d9b55a')); copa.position.y = topo + .17; const fita = new THREE.Mesh(new THREE.CylinderGeometry(.465, .47, .09, 14), toon(corA)); fita.position.y = topo + .07; cabeca.add(aba, copa, fita); }
+    if (tipoChapeu === 2) { const copa = new THREE.Mesh(new THREE.SphereGeometry(.6, 14, 10, 0, Math.PI * 2, 0, Math.PI / 2), toon(corA)); copa.position.y = topo - .22; const aba = new THREE.Mesh(new THREE.BoxGeometry(.5, .06, .4), toon(corA)); aba.position.set(0, topo - .2, .66); cabeca.add(copa, aba); }
+    if (tipoChapeu === 3) { const g = new THREE.Mesh(new THREE.SphereGeometry(.61, 14, 10, 0, Math.PI * 2, 0, Math.PI / 2), toon(corA)); g.position.y = topo - .28; g.scale.y = 1.3; const pom = new THREE.Mesh(new THREE.SphereGeometry(.16, 10, 8), toon('#ffffff')); pom.position.y = topo + .55; cabeca.add(g, pom); }
+    if (tipoChapeu === 4) { const b = new THREE.Mesh(new THREE.TorusGeometry(.56, .07, 8, 22), toon(corEstacao)); b.rotation.x = Math.PI / 2; b.position.y = topo - .2; cabeca.add(b); }
+    if (rnd() < .35) {   // óculos
+      const ar = toon(corB); const y = .5, z = .54;
+      for (const sx of [-1, 1]) { const o = new THREE.Mesh(new THREE.TorusGeometry(.14, .03, 6, 16), ar); o.position.set(sx * .2, y, z); cabeca.add(o); }
+      const ponte = new THREE.Mesh(new THREE.BoxGeometry(.14, .03, .03), ar); ponte.position.set(0, y, z); cabeca.add(ponte);
+    }
+  }
+  if (tronco && rnd() < .4) {   // mochila
+    const m = new THREE.Mesh(new THREE.BoxGeometry(.5, .6, .24), toon(corB)); m.position.set(0, .3, -.5);
+    const bolso = new THREE.Mesh(new THREE.BoxGeometry(.32, .26, .08), toon(corA)); bolso.position.set(0, .2, -.64); tronco.add(m, bolso);
+  }
+}
+
+export function criarFigurante({ toon, id, cor, semente = 1 }) {
   const grupo = new THREE.Group();
+  const rnd = rngDe(semente * 2654435761 + 7);
   let obj = null, mixer = null, acoes = {}, atual = null, umaVez = null, morto = false;
   let proxGesto = 4 + Math.random() * 10;
   function tocar(nome, fade = .2) {
@@ -168,7 +199,20 @@ export function criarFigurante({ toon, id, cor }) {
     if (morto) return false;
     obj = instanciar(gltf, toon); grupo.add(obj);
     ({ mixer, acoes } = criarMixer(obj, gltf));
-    porLenco(obj, cor, toon);
+    // variação por estação: tinta do traje, capa (na cor da estação ou escondida), props na mão, acessórios e tamanho
+    const tinta = new THREE.Color(TINTAS[Math.floor(rnd() * TINTAS.length)]);
+    const capa = rnd() < .55;
+    obj.traverse(m => {
+      if (!m.isMesh) return;
+      const n = m.name || '';
+      if (/Cape/.test(n)) { m.visible = capa; if (capa) m.material.color.set(cor).lerp(new THREE.Color('#ffffff'), .25); return; }
+      if (/Mug|Throwable|Spellbook/.test(n)) { m.visible = n === 'Spellbook_open' ? false : rnd() < .5; return; }
+      if (/Head/.test(n)) return;
+      m.material.color.copy(tinta);
+    });
+    acessorios(obj, rnd, toon, cor);
+    obj.scale.setScalar(ESCALA * (.92 + rnd() * .2));
+    if (capa || rnd() < .6) porLenco(obj, cor, toon);
     const idle = tocar('Idle');
     if (idle) { idle.time = Math.random() * idle.getClip().duration; idle.timeScale = .9 + Math.random() * .2; }
     return true;
