@@ -2,7 +2,7 @@
 // Cada unidade do currículo é uma ilha; cada tópico, uma estação com NPC, missão e desafio.
 import * as THREE from 'three';
 import { criarVisual, toon } from './visual.js';
-import { criarAvatar3D, criarPrevia, PERSONAGENS, patente } from './avatar3d.js';
+import { criarAvatar3D, criarPrevia, criarFigurante, PERSONAGENS, patente } from './avatar3d.js';
 
 const { FORMAS, nivelDe, formaDe } = window.Avatar2D;
 const EV = window.EstadoVida;
@@ -339,12 +339,13 @@ function criarNPC(e) {
     const placa = new THREE.Mesh(new THREE.BoxGeometry(1.6, .5, .12), mat('#fbc02d')); placa.position.y = 1.1; placa.castShadow = true;
     g.add(cone1, cone2, placa);
   } else {
-    const corpo = new THREE.Mesh(new THREE.CapsuleGeometry(.42, .7, 4, 10), mat(e.cor, { flatShading: false, roughness: .6 })); corpo.position.y = .85; corpo.castShadow = true;
-    const cab = new THREE.Mesh(new THREE.SphereGeometry(.36, 14, 10), mat('#f1c8a5', { flatShading: false })); cab.position.y = 1.72; cab.castShadow = true;
-    const cabelo = new THREE.Mesh(new THREE.SphereGeometry(.38, 12, 8, 0, Math.PI * 2, 0, Math.PI / 2), mat('#4e342e')); cabelo.position.y = 1.78;
+    // o personagem (figurante KayKit) só é instanciado quando o jogador está perto; ver atualizarFigurantes
+    const h = [...String(e.topico.id)].reduce((s, c) => (s * 31 + c.charCodeAt(0)) >>> 0, 7);
+    e.vivo = true; e.perso = PERSONAGENS[h % PERSONAGENS.length].id; e.fig = null; e.olhar = h % 7 * .9;
+    g.rotation.y = e.olhar;
     const gema = new THREE.Mesh(new THREE.OctahedronGeometry(.3, 0), new THREE.MeshBasicMaterial({ color: '#FFD166' })); gema.position.y = 2.75;
     const hal = brilho('#FFD166', 1.6); hal.position.y = 2.75;
-    g.add(corpo, cab, cabelo, gema, hal); e.gema = gema; e.halo = hal; e.cabeca = cab;
+    g.add(gema, hal); e.gema = gema; e.halo = hal;
   }
   scene.add(g); e.grupo = g;
 }
@@ -774,6 +775,7 @@ function escrever(el, texto, vel = 14) { el.textContent = ''; let k = 0; const i
 
 async function abrirEstacao(e) {
   if (emJogo && av.pronto) av.interagir();
+  if (e.fig) e.fig.interagir();
   const tp = e.topico, il = ILHAS[e.ilha], aula = `../index.html?volta=${encodeURIComponent(tp.id)}#${tp.id}`;
   if (e.premium && !liberado(tp)) return painelPremium(e);
   if (!e.pronto && !liberado(tp)) {
@@ -876,7 +878,7 @@ async function desafio(e, j, m) {
       if (cenaAtual) { cenaAtual.obj.destruir(); cenaAtual = null; }
       fecharPainel();
       if (venceu) {
-        av.comemorar(); tremer(.35);
+        av.comemorar(); tremer(.35); if (e.fig) e.fig.comemorar();
         explosao(e.x, 3, e.z, ['#FFD166', '#7CFFB2', '#FF8FAB', '#6EC8FF'], 120, 9);
         ganharXp((jaFeito ? 0 : (m.recompensa_xp || 100)) + xpGanho, jaFeito ? 'revisão' : 'missão cumprida');
         if (!jaFeito) { diaria('missao'); }
@@ -931,7 +933,7 @@ function desenharMinimapa() {
   g.restore();
 }
 function abrirMapa() {
-  const c = $('mapaCanvas'), g = c.getContext('2d'), L = limitesMundo();
+  const c = $('mapaCanvas'), g = c.getContext('2d'), L = limitesMundo(); L.z1 += 16;   // folga para o rótulo da última fileira
   // em telas estreitas o mapa fica maior que a tela e rola, centrado no jogador
   const estreito = innerWidth < 700;
   const k = estreito ? innerWidth * 2.1 / (L.x1 - L.x0) : Math.min(innerWidth * .9 / (L.x1 - L.x0), innerHeight * .8 / (L.z1 - L.z0)), d = Math.min(2, devicePixelRatio || 1);
@@ -1146,7 +1148,26 @@ function atualizarJogador(dt) {
   else if (s && !pausado) { pr.innerHTML = `<span class="tecla">${TOQUE ? '👆' : 'E'}</span> ${s.premium ? (liberado(s.topico) ? '💎 Missão premium · ' : '💎 Baú premium · ') + esc(s.topico.titulo) : s.pronto ? (est.feitas[s.topico.id] ? '✅ ' : '💬 ') + esc(s.topico.titulo) : '🚧 Estação em construção'}`; pr.classList.remove('oculto'); }
   else pr.classList.add('oculto');
   // NPCs olham para o jogador
-  for (const e of ESTACOES) if (e.cabeca && e.grupo.visible && Math.hypot(e.x - jog.x, e.z - jog.z) < 7) e.grupo.rotation.y = lerp(e.grupo.rotation.y, Math.atan2(jog.x - e.x, jog.z - e.z), .1);
+  for (const e of ESTACOES) if (e.vivo && e.grupo.visible) {
+    const d = Math.hypot(e.x - jog.x, e.z - jog.z);
+    if (d < 7) { let alvo = Math.atan2(jog.x - e.x, jog.z - e.z), dif = alvo - e.grupo.rotation.y; dif = Math.atan2(Math.sin(dif), Math.cos(dif)); e.grupo.rotation.y += dif * .1; }
+  }
+}
+
+// figurantes das estações: instanciados num raio ao redor do jogador e animados num raio menor
+const RAIO_FIG = TOQUE ? 45 : 60, RAIO_ANIM = 40;
+let accFig = 1;
+function atualizarFigurantes(dt) {
+  const checa = (accFig += dt) > 1; if (checa) accFig = 0;
+  for (const e of ESTACOES) {
+    if (!e.vivo) continue;
+    const d = Math.hypot(e.x - jog.x, e.z - jog.z);
+    if (checa) {
+      if (!e.fig && d < RAIO_FIG && e.grupo.visible) { e.fig = criarFigurante({ toon, id: e.perso, cor: e.cor }); e.fig.grupo.position.y = .21; e.grupo.add(e.fig.grupo); e.fig.carregar(); }
+      else if (e.fig && (d > RAIO_FIG + 12 || !e.grupo.visible)) { e.grupo.remove(e.fig.grupo); e.fig.destruir(); e.fig = null; }
+    }
+    if (e.fig && d < RAIO_ANIM) e.fig.atualizar(dt);
+  }
 }
 
 function atualizarCamera(dt) {
@@ -1204,6 +1225,7 @@ function loop() {
   if (emJogo) atualizarAlvo(dt);
   if (emJogo && (acc += dt) > .12) { acc = 0; desenharMinimapa(); retrato(acc + .12); }
   if (emJogo && (accRepoe += dt) > 5) { accRepoe = 0; criarColetaveis(); atualizarPoderes(); }
+  if (emJogo) atualizarFigurantes(dt);
   visual.render();
 }
 

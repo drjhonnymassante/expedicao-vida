@@ -42,6 +42,15 @@ function criarMixer(obj, gltf) {
   return { mixer, acoes };
 }
 
+// lenço na cor do jogador/estação, preso ao osso da cabeça
+function porLenco(obj, cor, toon) {
+  const cabeca = obj.getObjectByName('head') || obj.getObjectByName('spine');
+  if (!cabeca) return;
+  const antigo = cabeca.getObjectByName('lenco'); if (antigo) cabeca.remove(antigo);
+  const t = new THREE.Mesh(new THREE.TorusGeometry(.19, .07, 8, 18), toon(cor)); t.name = 'lenco';
+  t.rotation.x = Math.PI / 2; t.position.y = -.02; cabeca.add(t);
+}
+
 export function criarAvatar3D({ toon }) {
   const grupo = new THREE.Group();
   let obj = null, mixer = null, acoes = {}, atual = null, umaVez = null, corAtual = '#36D399', nivelAtual = 1;
@@ -76,14 +85,7 @@ export function criarAvatar3D({ toon }) {
     }
   }
 
-  function lenco(cor) {
-    if (!obj) return;
-    const cabeca = obj.getObjectByName('head') || obj.getObjectByName('spine');
-    if (!cabeca) return;
-    const antigo = cabeca.getObjectByName('lenco'); if (antigo) cabeca.remove(antigo);
-    const t = new THREE.Mesh(new THREE.TorusGeometry(.19, .07, 8, 18), toon(cor)); t.name = 'lenco';
-    t.rotation.x = Math.PI / 2; t.position.y = -.02; cabeca.add(t);
-  }
+  function lenco(cor) { if (obj) porLenco(obj, cor, toon); }
 
   async function carregar(id, cor) {
     corAtual = cor || corAtual;
@@ -139,6 +141,50 @@ export function criarAvatar3D({ toon }) {
   }
 
   return { grupo, carregar, atualizar, retrato, nivel: aplicarNivel, cor(c) { corAtual = c; lenco(c); aura.material.color.set(c); }, comemorar: () => umaVezSo('Cheer'), interagir: () => umaVezSo('Interact'), pegar: () => umaVezSo('PickUp'), get pronto() { return !!mixer; } };
+}
+
+// figurante: personagem das estações (NPC). Leve: sem aura, sem insígnias, sem retrato.
+// Fica parado com fase própria, faz um gesto de vez em quando e reage quando o jogador fala com ele.
+export function criarFigurante({ toon, id, cor }) {
+  const grupo = new THREE.Group();
+  let obj = null, mixer = null, acoes = {}, atual = null, umaVez = null, morto = false;
+  let proxGesto = 4 + Math.random() * 10;
+  function tocar(nome, fade = .2) {
+    const a = acoes[nome]; if (!a || atual === a) return a;
+    a.reset(); a.enabled = true; a.setEffectiveWeight(1);
+    if (atual) a.crossFadeFrom(atual, fade, true); else a.play();
+    a.play(); atual = a; return a;
+  }
+  function umaVezSo(nome) {
+    if (umaVez) return;
+    const a = tocar(nome, .12); if (!a) return;
+    umaVez = a;
+    const fim = ev => { if (ev.action !== a) return; mixer.removeEventListener('finished', fim); if (umaVez === a) { umaVez = null; tocar('Idle', .3); } };
+    mixer.addEventListener('finished', fim);
+  }
+  async function carregar() {
+    let gltf;
+    try { gltf = await carregarPersonagem(id); } catch (e) { console.warn('figurante: não carregou', e); return false; }
+    if (morto) return false;
+    obj = instanciar(gltf, toon); grupo.add(obj);
+    ({ mixer, acoes } = criarMixer(obj, gltf));
+    porLenco(obj, cor, toon);
+    const idle = tocar('Idle');
+    if (idle) { idle.time = Math.random() * idle.getClip().duration; idle.timeScale = .9 + Math.random() * .2; }
+    return true;
+  }
+  function atualizar(dt) {
+    if (!mixer) return;
+    if (!umaVez && (proxGesto -= dt) < 0) { umaVezSo(Math.random() < .5 ? 'Interact' : 'PickUp'); proxGesto = 8 + Math.random() * 14; }
+    mixer.update(dt);
+  }
+  function destruir() {
+    morto = true;
+    if (mixer) mixer.stopAllAction();
+    if (obj) { obj.traverse(m => { if (m.isMesh && m.material) m.material.dispose(); }); grupo.remove(obj); }
+    obj = null; mixer = null; acoes = {}; atual = null; umaVez = null;
+  }
+  return { grupo, carregar, atualizar, destruir, interagir: () => umaVezSo('Interact'), comemorar: () => umaVezSo('Cheer'), get pronto() { return !!mixer; } };
 }
 
 // prévia giratória da tela inicial (renderizador próprio, leve)
