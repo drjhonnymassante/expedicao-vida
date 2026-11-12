@@ -591,6 +591,9 @@ function verificarDesbloqueios(anunciar) {
   aplicarVisualChefes();
 }
 function aplicarVisualChefes() { for (const p of PONTES) if (p.chefe) p.chefe.visible = !!p.chefePronto && livre(p.a) && !livre(p.b); }
+// ponte trancada perto do jogador (para explicar o que falta para chamar o guardião)
+function ponteTrancadaPerto() { for (const p of PONTES) if (p.barreira && livre(p.a) && !livre(p.b) && Math.hypot(p.barreira.position.x - jog.x, p.barreira.position.z - jog.z) < 7) return p; return null; }
+function faltamNa(il) { return Math.max(0, precisa(il) - feitasNa(il)); }
 function chefePerto() { for (const p of PONTES) if (p.chefe && p.chefe.visible && Math.hypot(p.chefe.position.x - jog.x, p.chefe.position.z - jog.z) < 4.2) return p; return null; }
 function abrirChefe(p) {
   const prox = ILHAS[p.b];
@@ -1148,7 +1151,7 @@ function atualizarJogador(dt) {
   av.atualizar(dt, { vel: jog.vel, chao: jog.chao });
   // ilha atual
   const il = ilhaPerto(jog.x, jog.z);
-  if (il && Math.hypot(jog.x - il.cx, jog.z - il.cz) < il.R && il.i !== ilhaAtual) { ilhaAtual = il.i; banner(`${il.u.serie}ª série · Unidade ${il.i + 1}`, il.u.regiao_mundo.nome, il.u.titulo); }
+  if (il && Math.hypot(jog.x - il.cx, jog.z - il.cz) < il.R && il.i !== ilhaAtual) { ilhaAtual = il.i; const f = faltamNa(il), prox = ILHAS[il.i + 1]; banner(`${il.u.serie}ª série · Unidade ${il.i + 1}`, il.u.regiao_mundo.nome, prox && !livre(prox.i) ? (f > 0 ? `Missões ${feitasNa(il)}/${precisa(il)} · faltam ${f} para chamar o Guardião` : `Missões completas · o Guardião espera na ponte para ${prox.u.regiao_mundo.nome}`) : il.u.titulo); }
   // coletáveis
   for (const o of ORBES) if (o.mesh && (o.x - jog.x) ** 2 + (o.z - jog.z) ** 2 < 1.7) {
     tremer(.06); est.orbes[o.id] = Date.now(); est.cristais = (est.cristais || 0) + 1; est.cristaisTotal = (est.cristaisTotal || 0) + 1;
@@ -1165,7 +1168,7 @@ function atualizarJogador(dt) {
   $('btFalar').classList.toggle('oculto', !((s || ch) && !pausado));
   if (ch && !pausado) { pr.innerHTML = `<span class="tecla">${TOQUE ? '👆' : 'E'}</span> ⚔️ Enfrentar o Guardião de ${esc(ILHAS[ch.b].u.regiao_mundo.nome)}`; pr.classList.remove('oculto'); }
   else if (s && !pausado) { pr.innerHTML = `<span class="tecla">${TOQUE ? '👆' : 'E'}</span> ${s.premium ? (liberado(s.topico) ? '💎 Missão premium · ' : '💎 Baú premium · ') + esc(s.topico.titulo) : s.pronto ? (est.feitas[s.topico.id] ? '✅ ' : '💬 ') + esc(s.topico.titulo) : '🚧 Estação em construção'}`; pr.classList.remove('oculto'); }
-  else pr.classList.add('oculto');
+  else { const pb = !pausado && ponteTrancadaPerto(); if (pb) { const f = faltamNa(ILHAS[pb.a]); pr.innerHTML = f > 0 ? `🔒 Ponte para ${esc(ILHAS[pb.b].u.regiao_mundo.nome)} · cumpra mais ${f} ${f === 1 ? 'missão' : 'missões'} nesta ilha para chamar o Guardião` : `🔒 Ponte para ${esc(ILHAS[pb.b].u.regiao_mundo.nome)} · o Guardião espera você aqui na ponte`; pr.classList.remove('oculto'); } else pr.classList.add('oculto'); }
   // NPCs olham para o jogador
   for (const e of ESTACOES) if (e.vivo && e.grupo.visible) {
     const d = Math.hypot(e.x - jog.x, e.z - jog.z);
