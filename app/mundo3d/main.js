@@ -3,6 +3,7 @@
 import * as THREE from 'three';
 import { criarVisual, toon } from './visual.js';
 import { criarAvatar3D, criarPrevia, criarFigurante, PERSONAGENS, patente } from './avatar3d.js';
+import { abrirMinijogo, MINIJOGOS, minijogoDoTopico } from '../compartilhado/minijogos/minijogos.js';
 
 const { FORMAS, nivelDe, formaDe } = window.Avatar2D;
 const EV = window.EstadoVida;
@@ -795,6 +796,23 @@ async function jsonTopico(tp) { return cacheJson[tp.id] ||= liberado(tp) ? JSON.
 const iniciais = s => (s || '?').replace(/,.*/, '').split(/\s+/).filter(w => w.length > 2).slice(0, 2).map(w => w[0].toUpperCase()).join('') || '★';
 function escrever(el, texto, vel = 14) { el.textContent = ''; let k = 0; const it = setInterval(() => { el.textContent = texto.slice(0, ++k); if (k >= texto.length) clearInterval(it); }, vel); el.onclick = () => { clearInterval(it); el.textContent = texto; }; }
 
+// minijogo pedagógico da estação: vencer conta como missão cumprida
+async function jogarMinijogo(mj, e, m) {
+  fecharPainel(); pausado = true;
+  let r; try { r = await abrirMinijogo(mj); } catch (err) { console.warn('minijogo', err); pausado = false; return toast('⚠️', 'Não foi possível abrir o laboratório'); }
+  pausado = false; if (!r || !r.venceu) return;
+  const reg = (est.minijogos ||= {})[mj] || (est.minijogos[mj] = { vezes: 0, melhor: 0 });
+  reg.vezes++; reg.melhor = Math.max(reg.melhor, r.pontos);
+  const tp = e.topico, jaFeito = !!est.feitas[tp.id];
+  if (emJogo && av.pronto) av.comemorar(); tremer(.35); explosao(e.x, 3, e.z, ['#FFD166', '#7CFFB2', '#FF8FAB', '#6EC8FF'], 120, 9);
+  if (!jaFeito) {
+    est.feitas[tp.id] = true; if (m && m.item_recompensa) est.itens.push(m.item_recompensa);
+    ganharXp(Math.min(260, (m && m.recompensa_xp || 100) + Math.round(r.pontos / 3)), 'processo montado no laboratório');
+    diaria('missao'); ponto('Laboratório: ' + MINIJOGOS[mj].titulo);
+    verificarDesbloqueios(true); aplicarVisualBloqueio(); verificarConquistas();
+  } else ganharXp(Math.max(10, Math.round(r.pontos / 6)), 'revisão no laboratório');
+  salvar();
+}
 async function abrirEstacao(e) {
   if (emJogo && av.pronto) av.interagir();
   if (e.fig) e.fig.interagir();
@@ -805,7 +823,7 @@ async function abrirEstacao(e) {
     $('ok').onclick = fecharPainel; return;
   }
   let j; try { j = await jsonTopico(tp); } catch { return toast('⚠️', 'Não foi possível carregar a missão'); }
-  const m = j.missao_mundo_aberto, feito = est.feitas[tp.id];
+  const m = j.missao_mundo_aberto, feito = est.feitas[tp.id], mj = minijogoDoTopico(tp.id);
   abrirPainel(`
     <div class="etq">${esc(m.regiao || il.u.regiao_mundo.nome)} · missão de ${esc(m.mecanica || 'exploração')}</div>
     <h2>${feito ? '✅ ' : ''}${esc(m.titulo)}</h2>
@@ -813,9 +831,11 @@ async function abrirEstacao(e) {
     <div style="font-size:14.5px"><b style="color:var(--neon)">Objetivo:</b> ${esc(m.objetivo)}</div>
     <ol class="etapas">${(m.etapas || []).map((x, k) => `<li data-n="${k + 1}">${esc(x)}</li>`).join('')}</ol>
     <div class="premio"><span>✨ ${m.recompensa_xp} XP</span>${m.item_recompensa ? `<span>🎒 ${esc(m.item_recompensa)}</span>` : ''}<span>${tp.acesso === 'gratuito' ? '🔓 Gratuito' : '💎 Premium'}</span></div>
-    <div class="acoesP"><button class="bt ouro" id="aceitar">${feito ? '⟳ Revisar o desafio' : '⚔️ Aceitar desafio'}</button><a class="bt roxo" href="${aula}" onclick="window.salvarJogo && salvarJogo()">📖 Estudar a aula</a><button class="bt" id="sair">Depois</button></div>`);
+    ${mj ? `<div class="cartaoMj"><span class="ic">${MINIJOGOS[mj].icone}</span><div><b>Laboratório: ${esc(MINIJOGOS[mj].titulo)}</b><small>${esc(MINIJOGOS[mj].desc)}</small></div></div>` : ''}
+    <div class="acoesP">${mj ? `<button class="bt ouro" id="jogarMj">🎮 ${feito ? 'Jogar de novo' : 'Montar o processo'}</button>` : ''}<button class="bt ${mj ? '' : 'ouro'}" id="aceitar">${feito ? '⟳ Revisar perguntas' : mj ? '⚔️ Desafio de perguntas' : '⚔️ Aceitar desafio'}</button><a class="bt roxo" href="${aula}" onclick="window.salvarJogo && salvarJogo()">📖 Estudar a aula</a><button class="bt" id="sair">Depois</button></div>`);
   escrever($('fala'), m.narrativa);
   $('sair').onclick = fecharPainel; $('aceitar').onclick = () => desafio(e, j, m);
+  if (mj) $('jogarMj').onclick = () => jogarMinijogo(mj, e, m);
 }
 
 async function painelPremium(e) {
@@ -1360,7 +1380,7 @@ $('btNovo').onclick = () => {
 })();
 
 // acesso de depuração pelo console (útil para testes e demonstrações)
-window.EXP = { jog, ILHAS, PONTES, ESTACOES, ORBES, PILULAS, get est() { return est; }, abrirEstacao, ganharXp, noChao, pode, usarSonda, usarSalto, saltarPara, get feixes() { return feixes; }, abrirFragmento, camCtl, teclas, FRAGS, abrirMapa, fecharMapa, get emJogo() { return emJogo; }, visual, avatar: av, abrirChefe, abrirPerfil, abrirSequencia, ponto, PONTES };
+window.EXP = { jog, ILHAS, PONTES, ESTACOES, ORBES, PILULAS, get est() { return est; }, abrirEstacao, ganharXp, noChao, pode, usarSonda, usarSalto, saltarPara, get feixes() { return feixes; }, abrirFragmento, camCtl, teclas, FRAGS, abrirMapa, fecharMapa, get emJogo() { return emJogo; }, visual, avatar: av, abrirChefe, abrirPerfil, abrirSequencia, ponto, fecharPainel, abrirMinijogo, jogarMinijogo, PONTES };
 
 // botões dos poderes
 $('pdSonda').onclick = usarSonda; $('pdSalto').onclick = usarSalto;
