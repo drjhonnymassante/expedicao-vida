@@ -266,7 +266,7 @@ function gerarMundo() {
     dm.position.set(dado.x, dado.y, dado.z); dm.scale.set(s * 1.3, s * .75, s); dm.updateMatrix(); nuvens.setMatrixAt(k++, dm.matrix);
   }
   nuvens.castShadow = true; scene.add(nuvens);
-  visual.registrarIlhas(ILHAS); visual.criarGrama(gerarTufos());
+  visual.registrarIlhas(ILHAS); visual.criarGrama(gerarTufos()); aplicarVisualPremium();
 }
 
 function construirIlha(ilha) {
@@ -352,7 +352,7 @@ function criarNPC(e) {
     const fecho = new THREE.Mesh(new THREE.BoxGeometry(.22, .3, .1), mat('#5d4037')); fecho.position.set(0, .8, .47);
     const cad = spriteEmoji('🔒', 1); cad.position.y = 2.1;
     const hal = brilho('#FFD166', 3.2); hal.position.y = 1;
-    g.add(bau, tampa, fecho, cad, hal); e.halo = hal; scene.add(g); e.grupo = g; return;
+    g.add(bau, tampa, fecho, cad, hal); e.halo = hal; e.cadeadoSprite = cad; e.tampa = tampa; scene.add(g); e.grupo = g; return;
   }
   if (!e.pronto) {
     const cone1 = new THREE.Mesh(new THREE.ConeGeometry(.35, .9, 8), mat('#ff8f00')); cone1.position.set(-.5, .6, 0); cone1.castShadow = true;
@@ -371,6 +371,12 @@ function criarNPC(e) {
   scene.add(g); e.grupo = g;
 }
 
+// assinante: baús premium aparecem abertos (sem cadeado, tampa levantada, brilho verde)
+function aplicarVisualPremium() {
+  const ativo = !!(window.Premium && window.Premium.ativo);
+  for (const e of ESTACOES) if (e.premium && e.tampa) { e.cadeadoSprite.visible = !ativo; e.tampa.rotation.z = Math.PI / 2 + (ativo ? -1.1 : 0); e.tampa.position.set(0, ativo ? 1.25 : 1.02, ativo ? -.35 : 0); if (e.halo && e.halo.material) e.halo.material.color.set(ativo ? '#7CFFB2' : '#FFD166'); }
+}
+addEventListener('premium', aplicarVisualPremium);
 function construirPonte(p) {
   const g = new THREE.Group();
   const tab = new THREE.Mesh(new THREE.BoxGeometry(2.8, .28, p.len), mat('#a87b4f')); tab.position.y = .92; tab.castShadow = true; tab.receiveShadow = true; g.add(tab);
