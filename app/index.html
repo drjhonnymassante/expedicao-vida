@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Aulas | Evonauta</title>
 <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
-<script src="compartilhado/avatar2d.js?v=mwjvhwtp"></script>
-<script src="compartilhado/estado.js?v=mwjvhwtp"></script>
-<script src="compartilhado/adaptativo.js?v=mwjvhwtp"></script>
+<script src="compartilhado/avatar2d.js?v=mwjvno6w"></script>
+<script src="compartilhado/estado.js?v=mwjvno6w"></script>
+<script src="compartilhado/adaptativo.js?v=mwjvno6w"></script>
 <script type="module">import { abrirMinijogo, MINIJOGOS, minijogoDoTopico } from './compartilhado/minijogos/minijogos.js'; window.Minijogos = { abrirMinijogo, MINIJOGOS, minijogoDoTopico }; if (window.ATUAL && typeof abrir === 'function' && minijogoDoTopico(ATUAL.id) && !document.querySelector('#tabs [data-k=lab]')) abrir(ATUAL.id);</script>
 <style>
   :root { --verde:#2E7D32; --verde-claro:#E8F5E9; --roxo:#6A1B9A; --fundo:#F6F8F6; --texto:#1f2a1f; --cinza:#6b746b; --borda:#dfe6df; --ouro:#C9A227; }
@@ -81,16 +81,16 @@
 <link rel="icon" href="compartilhado/marca/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="compartilhado/marca/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="compartilhado/marca/apple-touch-icon.png">
-<script src="vendor/supabase.js?v=mwjvhwtp"></script>
-<script src="../config.js?v=mwjvhwtp"></script>
-<script src="compartilhado/sessao.js?v=mwjvhwtp"></script>
+<script src="vendor/supabase.js?v=mwjvno6w"></script>
+<script src="../config.js?v=mwjvno6w"></script>
+<script src="compartilhado/sessao.js?v=mwjvno6w"></script>
 </head>
 <body>
 <header>
   <h1 style="margin:0;display:flex;align-items:center;gap:10px"><img src="compartilhado/marca/logo-evonauta-claro.svg" alt="Evonauta Educação" style="height:38px;width:auto;display:block"><small style="color:var(--cinza);font-weight:400;font-size:14px">aulas</small></h1>
   <a id="lkMundo" href="mundo3d/?continuar" style="margin-left:16px;background:#6A1B9A;color:#fff;padding:7px 12px;border-radius:10px;font-size:13px;font-weight:600;text-decoration:none;white-space:nowrap">🗺️ Mundo aberto</a>
   <div class="hud" title="HUD de demonstração (XP salvo só neste navegador)">
-    <canvas class="avatar" id="avatar" width="76" height="76"></canvas>
+    <img class="avatar" id="avatar" width="76" height="76" alt="" style="object-fit:cover;object-position:50% 12%;border-radius:50%;background:radial-gradient(circle at 50% 30%,#1c2a4a,#0b1424)">
     <div><div><b id="nivel">Nível 1</b> · <span id="forma"></span> · <span id="xp">0 XP</span></div><div class="xpbar"><div id="xpfill" style="width:0"></div></div></div>
     <span class="badge b-bronze" id="liga">Bronze</span>
   </div>
@@ -106,17 +106,20 @@ let CUR = null, IDX = {}, ATUAL = null, DADOS = null;
 const LIGAS = ['bronze','prata','ouro','diamante'];
 let st = EstadoVida.completar(EstadoVida.carregar());
 const { nivelDe, formaDe, FORMAS } = Avatar2D;
+const PATENTES = ['Recruta', 'Explorador(a)', 'Naturalista', 'Pesquisador(a)', 'Biólogo(a)', 'Especialista', 'Doutor(a)', 'Cientista-chefe'];
+const patente = n => PATENTES[Math.min(PATENTES.length - 1, Math.max(0, n - 1))];
 function hud() {
   st = EstadoVida.completar(EstadoVida.carregar() || st);
   const n = nivelDe(st.xp), ini = 50*(n-1)*n, fim = 50*n*(n+1), f = formaDe(n);
   document.getElementById('nivel').textContent = 'Nível ' + n;
-  document.getElementById('forma').textContent = FORMAS[f].nome;
+  document.getElementById('forma').textContent = patente(n);
+  const av = document.getElementById('avatar'), pers = ['knight', 'rogue', 'mage', 'barbarian'].includes(st.avatar) ? st.avatar : 'knight'; if (av.dataset.p !== pers) { av.dataset.p = pers; av.src = 'compartilhado/marca/retratos/' + pers + '.png'; }
   document.getElementById('xp').textContent = st.xp + ' XP';
   document.getElementById('xpfill').style.width = Math.round((st.xp-ini)/(fim-ini)*100) + '%';
   const liga = LIGAS[Math.min(Math.floor(st.xp/600),3)];
   const b = document.getElementById('liga'); b.textContent = liga[0].toUpperCase()+liga.slice(1); b.className = 'badge b-'+liga;
 }
-(function retrato(t) { const g = document.getElementById('avatar').getContext('2d'); g.clearRect(0,0,76,76); Avatar2D.desenhar(g, 38, 44, formaDe(nivelDe(st.xp)), t/1000, 1, 1.6, false); requestAnimationFrame(retrato); })(0);
+// retrato: imagem do personagem escolhido no mundo 3D (atualizada no hud)
 addEventListener('storage', e => { if (e.key === EstadoVida.CHAVE) hud(); });
 addEventListener('focus', hud); document.addEventListener('visibilitychange', () => { if (!document.hidden) hud(); });
 function ganhar(v, msg, chave) {
