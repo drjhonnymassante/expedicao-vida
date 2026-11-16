@@ -372,8 +372,9 @@ function criarNPC(e) {
 }
 
 // assinante: baús premium aparecem abertos (sem cadeado, tampa levantada, brilho verde)
+let premiumAplicado = null;
 function aplicarVisualPremium() {
-  const ativo = !!(window.Premium && window.Premium.ativo);
+  const ativo = !!(window.Premium && window.Premium.ativo); premiumAplicado = ativo;
   for (const e of ESTACOES) if (e.premium && e.tampa) { e.cadeadoSprite.visible = !ativo; e.tampa.rotation.z = Math.PI / 2 + (ativo ? -1.1 : 0); e.tampa.position.set(0, ativo ? 1.25 : 1.02, ativo ? -.35 : 0); if (e.halo && e.halo.material) e.halo.material.color.set(ativo ? '#7CFFB2' : '#FFD166'); }
 }
 addEventListener('premium', aplicarVisualPremium);
@@ -1307,6 +1308,7 @@ function loop() {
   if (emJogo) atualizarAlvo(dt);
   if (emJogo && (acc += dt) > .12) { acc = 0; desenharMinimapa(); retrato(acc + .12); }
   if (emJogo && (accRepoe += dt) > 5) { accRepoe = 0; criarColetaveis(); atualizarPoderes(); }
+  if (ESTACOES.length && !!(window.Premium && window.Premium.ativo) !== premiumAplicado) aplicarVisualPremium();   // a confirmação da assinatura pode chegar depois do mundo pronto
   if (emJogo && !pausado && (accPonto += dt) > 300) { accPonto = 0; ponto('Automático'); }
   if (emJogo) atualizarFigurantes(dt);
   visual.render();
