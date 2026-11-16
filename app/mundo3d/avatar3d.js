@@ -15,7 +15,8 @@ export const patente = n => PATENTES[Math.min(PATENTES.length - 1, Math.max(0, n
 export const ESCALA = 1.0;
 
 const BASE = '../vendor/kaykit/';
-const loader = new GLTFLoader();
+import { MeshoptDecoder } from 'three/addons/libs/meshopt_decoder.module.js';
+const loader = new GLTFLoader(); loader.setMeshoptDecoder(MeshoptDecoder);   // personagens comprimidos com meshopt (vendor/kaykit)
 const cache = {};
 export function carregarPersonagem(id) {
   const p = PERSONAGENS.find(x => x.id === id) || PERSONAGENS[0];
