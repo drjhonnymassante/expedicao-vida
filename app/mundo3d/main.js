@@ -423,7 +423,7 @@ let alvo = null, accAlvo = 9;
 const ontem = () => new Date(Date.now() - 864e5).toISOString().slice(0, 10);
 function escolherAlvo() {
   const livres = ESTACOES.filter(e => e.pronto && !e.premium && livre(e.ilha) && !est.feitas[e.topico.id]);
-  if (!livres.length) return null;
+  if (!livres.length) { const fraco = window.Adaptativo && Adaptativo.revisao(est, 1)[0]; const e = fraco && ESTACOES.find(x => x.topico.id === fraco.id && livre(x.ilha)); return e || null; }
   const atual = livres.filter(e => e.ilha === ilhaAtual);
   const lista = atual.length ? atual : livres;
   return lista.sort((a, b) => Math.hypot(a.x - jog.x, a.z - jog.z) - Math.hypot(b.x - jog.x, b.z - jog.z))[0];
@@ -447,6 +447,14 @@ function atualizarPoderes() {
   $('pdEscudo').disabled = (est.cristais || 0) < 20 || (s.escudos || 0) >= 2; $('pdEscudo').innerHTML = ic('escudo') + ' Escudo <small>20 💎 · ' + (s.escudos || 0) + '/2</small>';
   $('pdSonda').disabled = (est.cristais || 0) < 5 || tempo < sondaAte; $('pdSalto').disabled = (est.cristais || 0) < 10;
 }
+// lista de tópicos que mais precisam de revisão (histórico de erros e repetição espaçada)
+function listaRevisao() {
+  if (!window.Adaptativo) return '';
+  const r = Adaptativo.resumo(est), lista = Adaptativo.revisao(est, 5);
+  const cab = r.respondidas ? `<p style="font-size:13px;color:var(--sub);margin:0 0 6px">${r.respondidas} questões respondidas · ${Math.round((r.taxa || 0) * 100)}% de acerto · ${r.dominadas} dominadas (3+ acertos seguidos)</p>` : '<p style="font-size:13px;color:var(--sub)">Responda desafios para o jogo aprender onde você erra mais.</p>';
+  if (!lista.length) return cab + (r.respondidas ? '<p style="font-size:13px;color:#7CFFB2">Nada pendente: tudo em dia.</p>' : '');
+  return cab + lista.map(t => { const e = ESTACOES.find(x => x.topico.id === t.id); const nome = e ? e.topico.titulo : t.id; const motivo = t.vencidas ? `${t.vencidas} para rever` : `${Math.round(t.taxa * 100)}% de acerto`; return `<div class="dq"><span class="ic">${t.taxa < .5 ? '🔴' : '🟡'}</span><span class="tx" style="flex:1">${esc(nome)}<br><small style="color:var(--sub)">${motivo}</small></span>${e && livre(e.ilha) ? `<button class="bt" style="padding:6px 10px;font-size:12px" data-est="${esc(t.id)}">Revisar</button>` : ''}</div>`; }).join('');
+}
 function abrirPerfil() {
   const n = nivelDe(est.xp), ini = 50 * (n - 1) * n, fim = 50 * n * (n + 1), pct = Math.round((est.xp - ini) / (fim - ini) * 100);
   const pers = PERSONAGENS.find(p => p.id === est.avatar) || PERSONAGENS[0];
@@ -456,10 +464,12 @@ function abrirPerfil() {
     <div class="premio"><span>⚔️ ${Object.keys(est.feitas).length} missões</span><span>🗺️ ${est.livres.filter(Boolean).length}/${ILHAS.length} ilhas</span><span>🛡️ ${Object.keys(est.chefes || {}).length} guardiões</span><span>💎 ${est.cristaisTotal || 0} cristais no total</span></div>
     <h3 style="font-family:Fredoka;margin:14px 0 6px">Conquistas · ${Object.keys(est.conquistas).length}/${CONQUISTAS.length}</h3>${conq}
     <p style="color:var(--sub);font-size:13px;margin-top:12px">Próxima patente: <b style="color:#fff">${patente(n + 1)}</b> em ${fim - est.xp} XP. Para trocar de personagem, volte à tela inicial e toque em Continuar.</p>
+    <h3 style="font-family:Fredoka;margin:14px 0 6px">🧠 Revisão inteligente</h3><div id="revisaoPerfil">${listaRevisao()}</div>
     <h3 style="font-family:Fredoka;margin:14px 0 6px">🕒 Pontos de salvamento</h3><div id="pontosPerfil">${listaPontos(est)}</div>
     <div class="acoesP"><button class="bt prim" id="fecharPerfil">Voltar à expedição</button></div>`);
   $('fecharPerfil').onclick = fecharPainel;
   ligarRestaurar($('pontosPerfil'), est, () => { location.href = location.pathname + '?continuar'; });
+  $('revisaoPerfil').querySelectorAll('button[data-est]').forEach(b => b.onclick = () => { const e = ESTACOES.find(x => x.topico.id === b.dataset.est); if (e) { fecharPainel(); jog.x = e.x; jog.z = e.z + 2.6; setTimeout(() => abrirEstacao(e), 300); } });
 }
 function abrirSequencia() {
   const s = est.seq || { dias: 0, historico: [], escudos: 0 }, hist = new Set(s.historico || []); if (s.ultimo === hoje()) hist.add(hoje());
@@ -608,7 +618,7 @@ function abrirChefe(p) {
 async function desafioChefe(p) {
   const il = ILHAS[p.a], prox = ILHAS[p.b], tops = il.estacoes.filter(e => e.pronto && (!e.premium || liberado(e.topico)));
   let banco = [];
-  for (const e of tops) { try { const j = await jsonTopico(e.topico); banco.push(...j.questoes.filter(q => q.nivel !== 'diamante').map(q => ({ ...q, titulo: e.topico.titulo }))); } catch { } }
+  for (const e of tops) { try { const j = await jsonTopico(e.topico); banco.push(...j.questoes.filter(q => q.nivel !== 'diamante').map(q => ({ ...q, titulo: e.topico.titulo, topicoId: e.topico.id }))); } catch { } }
   if (banco.length < 5) return toast('⚔️', 'O guardião ainda dorme', 'Faltam missões disponíveis nesta ilha');
   banco.sort(() => Math.random() - .5); const qs = banco.slice(0, 5);
   let i = 0, acertos = 0, resta = 75, timer = null, acabou = false;
@@ -628,7 +638,7 @@ async function desafioChefe(p) {
     abrirPainel(`${cab()}<div class="questao"><small style="color:var(--sub)">${esc(q.titulo)}</small><br>${esc(q.enunciado)}</div>${q.alternativas.map((a, n) => `<button class="alt" data-n="${n}"><span class="let">${'ABCDE'[n]}</span><span>${esc(a)}</span></button>`).join('')}`);
     document.querySelectorAll('.alt').forEach(b => b.onclick = () => {
       if (respondeu || acabou) return; respondeu = true;
-      const ok = +b.dataset.n === q.correta;
+      const ok = +b.dataset.n === q.correta; if (window.Adaptativo) Adaptativo.registrar(est, q, (q.topicoId || ''), ok);
       document.querySelectorAll('.alt').forEach(x => { x.disabled = true; if (+x.dataset.n === q.correta) x.classList.add('certa'); });
       if (ok) { acertos++; SFX.certo(); tremer(.2); } else { b.classList.add('errada'); SFX.errado(); tremer(.35); resta -= 10; }
       setTimeout(() => { i++; passo(); }, ok ? 600 : 1000);
@@ -868,7 +878,7 @@ async function prepararCena(tp, m) {
 const encaixarCena = () => { if (cenaAtual) $('painel').prepend(cenaAtual.div); };
 
 async function desafio(e, j, m) {
-  const qs = ['bronze', 'prata', 'ouro'].map(n => j.questoes.find(q => q.nivel === n)).filter(Boolean);
+  const qs = (window.Adaptativo ? Adaptativo.selecionarDesafio(j.questoes, est, e.topico.id, 3) : null) || ['bronze', 'prata', 'ouro'].map(n => j.questoes.find(q => q.nivel === n)).filter(Boolean);
   await prepararCena(e.topico, m);
   let i = 0, acertos = 0, xpGanho = 0, timer = null;
   const BASEXP = { bronze: 10, prata: 15, ouro: 20, diamante: 30 };
@@ -889,7 +899,7 @@ async function desafio(e, j, m) {
     timer = setInterval(() => { resta -= .1; const el = $('tm'); if (el) el.style.width = Math.max(0, resta / limite * 100) + '%'; if (resta <= 0) clearInterval(timer); }, 100);
     document.querySelectorAll('.alt').forEach(b => b.onclick = () => {
       if (respondeu) return; respondeu = true; clearInterval(timer);
-      const ok = +b.dataset.n === q.correta;
+      const ok = +b.dataset.n === q.correta; if (window.Adaptativo) Adaptativo.registrar(est, q, e.topico.id, ok);
       if (cenaAtual) cenaAtual.obj.etapa(i, ok);
       document.querySelectorAll('.alt').forEach(x => { x.disabled = true; if (+x.dataset.n === q.correta) x.classList.add('certa'); });
       let extra = '';

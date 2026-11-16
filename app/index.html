@@ -5,8 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Aulas | Evonauta</title>
 <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
-<script src="compartilhado/avatar2d.js?v=mwfvta9z"></script>
-<script src="compartilhado/estado.js?v=mwfvta9z"></script>
+<script src="compartilhado/avatar2d.js?v=mwjfmab7"></script>
+<script src="compartilhado/estado.js?v=mwjfmab7"></script>
+<script src="compartilhado/adaptativo.js?v=mwjfmab7"></script>
 <script type="module">import { abrirMinijogo, MINIJOGOS, minijogoDoTopico } from './compartilhado/minijogos/minijogos.js'; window.Minijogos = { abrirMinijogo, MINIJOGOS, minijogoDoTopico }; if (window.ATUAL && typeof abrir === 'function' && minijogoDoTopico(ATUAL.id) && !document.querySelector('#tabs [data-k=lab]')) abrir(ATUAL.id);</script>
 <style>
   :root { --verde:#2E7D32; --verde-claro:#E8F5E9; --roxo:#6A1B9A; --fundo:#F6F8F6; --texto:#1f2a1f; --cinza:#6b746b; --borda:#dfe6df; --ouro:#C9A227; }
@@ -80,9 +81,9 @@
 <link rel="icon" href="compartilhado/marca/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="compartilhado/marca/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="compartilhado/marca/apple-touch-icon.png">
-<script src="vendor/supabase.js?v=mwfvta9z"></script>
-<script src="../config.js?v=mwfvta9z"></script>
-<script src="compartilhado/sessao.js?v=mwfvta9z"></script>
+<script src="vendor/supabase.js?v=mwjfmab7"></script>
+<script src="../config.js?v=mwjfmab7"></script>
+<script src="compartilhado/sessao.js?v=mwjfmab7"></script>
 </head>
 <body>
 <header>
@@ -137,7 +138,8 @@ async function iniciar() {
       + u.topicos.map(t => `<div class="t ${t.status==='pronto'?'':t.status==='premium'?'prem':'off'}" data-id="${t.id}"><span class="dot ${t.status==='pronto'?'pronto':''}"></span><span>${esc(t.titulo)}</span>${t.acesso==='gratuito'?'<span class="free">grátis</span>':t.status==='premium'?'<span class="free" style="color:#b8860b;border-color:#b8860b">🔒 premium</span>':''}</div>`).join('') + '</details>';
   }).join('');
   const e = CUR.estatisticas || {};
-  document.getElementById('nav').innerHTML = `<div class="stats"><b>${ok}</b> de ${tot} tópicos prontos · ${e.questoes??'?'} questões · ${e.flashcards??'?'} flashcards</div>` + html;
+  document.getElementById('nav').innerHTML = `<div class="stats"><b>${ok}</b> de ${tot} tópicos prontos · ${e.questoes??'?'} questões · ${e.flashcards??'?'} flashcards<br><a id="lkEnem" style="color:#6A1B9A;cursor:pointer;font-weight:700">📝 Banco do ENEM: questões oficiais de Biologia</a></div>` + html;
+  document.getElementById('lkEnem').onclick = enemTodas;
   document.querySelectorAll('.t').forEach(el => el.onclick = () => { if (liberado(IDX[el.dataset.id])) return abrir(el.dataset.id); if (el.classList.contains('prem')) { location.href = (window.RAIZ_SITE || '../') + 'index.html#lista-digital'; return; } if (!el.classList.contains('off')) abrir(el.dataset.id); });
   hud();
   const h = location.hash.slice(1); if (h && IDX[h]) abrir(h);
@@ -159,12 +161,56 @@ async function abrir(id) {
   ATUAL = t; DADOS = { md: md.replace(/^---[\s\S]*?\n---\s*/, ''), js };
   document.getElementById('main').innerHTML = `
     <div class="meta"><span>${esc(t.unidade.titulo)}</span><span>Região: ${esc(t.unidade.regiao_mundo.nome)}</span><span>${t.acesso==='gratuito'?'🔓 Gratuito':'🔒 Premium'}</span><span>ENEM: ${t.incidencia_enem}</span><span>BNCC: ${t.bncc.join(', ')}</span></div>
-    <div class="tabs" id="tabs">${[['aula','📖 Aula'],['quiz','🏆 Quiz por liga'],['flash','🃏 Flashcards'],['pares','🔗 Pares'],['seq','🔢 Sequência'],['classif','🗂️ Classificação'],['vf','⚡ V/F Relâmpago'],['missao','🗺️ Missão'],...(window.Minijogos && Minijogos.minijogoDoTopico(t.id) ? [['lab','🧪 Laboratório']] : [])].map(([k,n])=>`<button data-k="${k}" ${k==='lab'?'style="background:linear-gradient(135deg,#FFD166,#8E7CFF);color:#1a1230;font-weight:800"':''}>${n}</button>`).join('')}</div>
+    <div class="tabs" id="tabs">${[['aula','📖 Aula'],['quiz','🏆 Quiz por liga'],['flash','🃏 Flashcards'],['pares','🔗 Pares'],['seq','🔢 Sequência'],['classif','🗂️ Classificação'],['vf','⚡ V/F Relâmpago'],['missao','🗺️ Missão'],['enem','📝 ENEM'],...(window.Minijogos && Minijogos.minijogoDoTopico(t.id) ? [['lab','🧪 Laboratório']] : [])].map(([k,n])=>`<button data-k="${k}" ${k==='lab'?'style="background:linear-gradient(135deg,#FFD166,#8E7CFF);color:#1a1230;font-weight:800"':''}>${n}</button>`).join('')}</div>
     <div id="painel"></div>`;
   document.querySelectorAll('#tabs button').forEach(b => b.onclick = () => aba(b.dataset.k));
-  aba('aula'); window.scrollTo(0,0);
+  aba('aula'); window.scrollTo(0,0); caixaRevisao();
 }
 
+// banco de questões públicas do ENEM (INEP) relacionadas ao tópico
+let ENEM = null;
+async function enem(p) {
+  p.innerHTML = '<div class="card">Carregando questões do ENEM…</div>';
+  try { ENEM ||= await fetch(BASE + 'enem/questoes.json').then(r => r.json()); } catch { p.innerHTML = '<div class="card">Banco do ENEM indisponível.</div>'; return; }
+  const qs = ENEM.questoes.filter(q => q.temas.includes(ATUAL.id));
+  if (!qs.length) { p.innerHTML = `<div class="card"><h2>📝 ENEM</h2><p>Ainda não há questões do ENEM classificadas neste tópico. O banco tem ${ENEM.total} questões de Biologia (2009 a 2023).</p></div>`; return; }
+  const e = EstadoVida.completar(EstadoVida.carregar() || st);
+  const ordem = Adaptativo.ordenar(qs.map(q => ({ ...q, nivel: 'enem' })), e);
+  enemQuestao(p, ordem, 0, 0, ATUAL.id);
+}
+async function enemTodas() {
+  document.querySelectorAll('.t').forEach(el => el.classList.remove('ativo'));
+  const main = document.getElementById('main'); main.innerHTML = '<div class="card">Carregando o banco do ENEM…</div>';
+  try { ENEM ||= await fetch(BASE + 'enem/questoes.json').then(r => r.json()); } catch { main.innerHTML = '<div class="card">Banco do ENEM indisponível.</div>'; return; }
+  const anos = [...new Set(ENEM.questoes.map(q => q.ano))].sort((a, b) => b - a);
+  main.innerHTML = `<div class="meta"><span>📝 Banco do ENEM</span><span>${ENEM.total} questões de Biologia</span><span>${anos[anos.length-1]} a ${anos[0]}</span><span>Fonte: provas públicas do INEP</span></div><div class="tabs" id="tabsEnem"><button data-ano="todos" class="on">Todas (adaptativo)</button>${anos.map(a => `<button data-ano="${a}">${a}</button>`).join('')}</div><div id="painel"></div>`;
+  const ir = ano => { document.querySelectorAll('#tabsEnem button').forEach(b => b.classList.toggle('on', b.dataset.ano === String(ano))); const e = EstadoVida.completar(EstadoVida.carregar() || st); const qs = ENEM.questoes.filter(q => ano === 'todos' || q.ano === ano).map(q => ({ ...q, nivel: 'enem' })); enemQuestao(document.getElementById('painel'), ano === 'todos' ? Adaptativo.ordenar(qs, e) : qs, 0, 0, 'enem-geral'); };
+  document.querySelectorAll('#tabsEnem button').forEach(b => b.onclick = () => ir(b.dataset.ano === 'todos' ? 'todos' : +b.dataset.ano));
+  ir('todos'); window.scrollTo(0, 0);
+}
+function enemQuestao(p, qs, i, acertos, topicoId) {
+  if (i >= qs.length) { p.innerHTML = `<div class="card"><h2>Resultado: ${acertos}/${qs.length}</h2><p>Questões oficiais do ENEM sobre este tópico.</p><button class="btn" onclick="${topicoId === 'enem-geral' ? 'enemTodas()' : "aba('enem')"}">Refazer</button></div>`; return; }
+  const q = qs[i], img = t => esc(t).replace(/!\[\]\((https?:[^)]+)\)/g, '<img src="$1" alt="" style="max-width:100%;border-radius:8px;margin:8px 0">').replace(/\n/g, '<br>');
+  p.innerHTML = `<div class="card"><div class="meta"><span class="badge b-ouro">ENEM ${q.ano}</span><span>Questão ${q.numero}</span><span>${i+1}/${qs.length}</span></div><div style="font-size:15px;line-height:1.5">${img(q.contexto)}</div>${q.imagens.filter(u => !q.contexto.includes(u)).map(u => `<img src="${u}" alt="" style="max-width:100%;border-radius:8px;margin:8px 0">`).join('')}<p style="font-size:15.5px"><b>${esc(q.comando)}</b></p>${q.alternativas.map(a => `<button class="alt" data-l="${a.letra}">${a.letra}) ${esc(a.texto)}${a.imagem ? `<br><img src="${a.imagem}" alt="" style="max-width:100%">` : ''}</button>`).join('')}<div id="fb"></div><p style="font-size:12px;color:#777;margin-top:10px">Fonte: prova pública do ENEM/INEP (${q.ano}), via enem.dev.</p></div>`;
+  p.querySelectorAll('.alt').forEach(b => b.onclick = () => {
+    const ok = b.dataset.l === q.correta;
+    p.querySelectorAll('.alt').forEach(x => { x.disabled = true; if (x.dataset.l === q.correta) x.classList.add('certa'); });
+    { const e = EstadoVida.completar(EstadoVida.carregar() || st); Adaptativo.registrar(e, { id: q.id, nivel: 'enem' }, topicoId || (q.temas[0] || 'enem-geral'), ok); EstadoVida.salvar(e); st = e; }
+    if (!ok) b.classList.add('errada'); else ganhar(25, 'questão do ENEM');
+    p.querySelector('#fb').innerHTML = `<div class="exp">${ok ? '✅ Correto!' : '❌ A resposta certa é ' + q.correta + '.'}</div><p><button class="btn" id="prox">Próxima →</button></p>`;
+    p.querySelector('#prox').onclick = () => enemQuestao(p, qs, i + 1, acertos + (ok ? 1 : 0), topicoId);
+  });
+}
+// caixa "revisar hoje" no topo do menu
+function caixaRevisao() {
+  if (!window.Adaptativo || !CUR) return;
+  const e = EstadoVida.completar(EstadoVida.carregar() || st), lista = Adaptativo.revisao(e, 4).filter(t => IDX[t.id]);
+  let cx = document.getElementById('revisarHoje');
+  if (!lista.length) { if (cx) cx.remove(); return; }
+  if (!cx) { cx = document.createElement('div'); cx.id = 'revisarHoje'; cx.style.cssText = 'margin:8px 10px;padding:10px 12px;border-radius:12px;background:#fff7e0;border:1px solid #f3d27a;font-size:13px'; document.getElementById('nav').prepend(cx); }
+  cx.innerHTML = '<b>🧠 Revisar hoje</b><br>' + lista.map(t => `<a style="display:block;margin-top:4px;color:#6A1B9A;cursor:pointer" data-id="${t.id}">${t.taxa < .5 ? '🔴' : '🟡'} ${esc(IDX[t.id].titulo)}</a>`).join('');
+  cx.querySelectorAll('a').forEach(a => a.onclick = () => abrir(a.dataset.id));
+}
 // laboratório: minijogo em que o aluno monta o processo (mesmo módulo do mundo 3D)
 function laboratorio(p) {
   const id = Minijogos.minijogoDoTopico(ATUAL.id), d = Minijogos.MINIJOGOS[id];
@@ -188,7 +234,8 @@ function aba(k) {
     p.querySelector('#concluir').onclick = () => ganhar(50, 'aula concluída', 'aula:' + ATUAL.id);
   }
   if (k==='lab') laboratorio(p);
-  if (k==='quiz') quiz(p, j.questoes, 0, 0);
+  if (k==='quiz') quiz(p, Adaptativo.ordenar(j.questoes, EstadoVida.carregar() || st), 0, 0);
+  if (k==='enem') enem(p);
   if (k==='flash') flash(p, embaralhar(j.flashcards), 0);
   if (k==='pares') pares(p, mj.pares || []);
   if (k==='seq') seq(p, mj.sequencia);
@@ -206,6 +253,7 @@ function quiz(p, qs, i, acertos) {
   p.querySelectorAll('.alt').forEach(b => b.onclick = () => {
     const n = +b.dataset.n, ok = n === q.correta;
     p.querySelectorAll('.alt').forEach(x => { x.disabled = true; if (+x.dataset.n===q.correta) x.classList.add('certa'); });
+    { const e = EstadoVida.completar(EstadoVida.carregar() || st); Adaptativo.registrar(e, q, ATUAL.id, ok); EstadoVida.salvar(e); st = e; }
     if (!ok) b.classList.add('errada'); else ganhar(XPN[q.nivel], 'questão ' + q.nivel);
     p.querySelector('#fb').innerHTML = `<div class="exp">${ok?'✅ Correto!':'❌ Não foi dessa vez.'} ${esc(q.explicacao)}</div><p><button class="btn" id="prox">Próxima →</button></p>`;
     p.querySelector('#prox').onclick = () => quiz(p, qs, i+1, acertos + (ok?1:0));

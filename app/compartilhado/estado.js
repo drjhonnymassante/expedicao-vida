@@ -20,6 +20,7 @@
     r.xp = Math.max(n.xp || 0, v.xp || 0); r.cristais = Math.max(n.cristais || 0, v.cristais || 0); r.cristaisTotal = Math.max(n.cristaisTotal || 0, v.cristaisTotal || 0);
     r.itens = [...new Set([...(v.itens || []), ...(n.itens || [])])];
     if (v.seq && n.seq && (v.seq.recorde || 0) > (n.seq.recorde || 0)) r.seq.recorde = v.seq.recorde;
+    for (const k of ['hist', 'topHist']) { const m = Object.assign({}, v[k] || {}); for (const [id, r] of Object.entries(n[k] || {})) { const o = m[id]; m[id] = !o || (r.u || 0) >= (o.u || 0) ? r : o; } r[k] = m; }
     const porT = new Map(); for (const p of [...(v.pontos || []), ...(n.pontos || [])]) porT.set(p.t, p);
     r.pontos = [...porT.values()].sort((a, b) => a.t - b.t).slice(-8);
     return r;
