@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Aulas | Evonauta</title>
 <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
-<script src="compartilhado/avatar2d.js?v=mwjvno6w"></script>
-<script src="compartilhado/estado.js?v=mwjvno6w"></script>
-<script src="compartilhado/adaptativo.js?v=mwjvno6w"></script>
+<script src="compartilhado/avatar2d.js?v=mwjwn30k"></script>
+<script src="compartilhado/estado.js?v=mwjwn30k"></script>
+<script src="compartilhado/adaptativo.js?v=mwjwn30k"></script>
 <script type="module">import { abrirMinijogo, MINIJOGOS, minijogoDoTopico } from './compartilhado/minijogos/minijogos.js'; window.Minijogos = { abrirMinijogo, MINIJOGOS, minijogoDoTopico }; if (window.ATUAL && typeof abrir === 'function' && minijogoDoTopico(ATUAL.id) && !document.querySelector('#tabs [data-k=lab]')) abrir(ATUAL.id);</script>
 <style>
   :root { --verde:#2E7D32; --verde-claro:#E8F5E9; --roxo:#6A1B9A; --fundo:#F6F8F6; --texto:#1f2a1f; --cinza:#6b746b; --borda:#dfe6df; --ouro:#C9A227; }
@@ -23,6 +23,10 @@
   .b-bronze{background:#f3e3d3;color:#8a5a2b}.b-prata{background:#eceff1;color:#546e7a}.b-ouro{background:#fff4cc;color:#8a6d00}.b-diamante{background:#e1f5fe;color:#0277bd}
   .layout { display:grid; grid-template-columns: 320px 1fr; min-height:calc(100vh - 60px); }
   nav { border-right:1px solid var(--borda); background:#fff; overflow-y:auto; max-height:calc(100vh - 60px); position:sticky; top:60px; }
+  figure.fig { margin:18px 0; padding:12px; border:1px solid var(--borda); border-radius:14px; background:#fff; }
+  figure.fig img { display:block; width:100%; max-width:860px; height:auto; margin:0 auto; border-radius:8px; }
+  figure.fig figcaption { font-size:13.5px; color:#444; margin-top:10px; line-height:1.45; }
+  figure.fig .credito { color:#888; font-size:12px; }
   .stats { padding:12px 16px; font-size:12px; color:var(--cinza); border-bottom:1px solid var(--borda); }
   .stats b { color:var(--texto); }
   details.u { border-bottom:1px solid var(--borda); }
@@ -81,9 +85,9 @@
 <link rel="icon" href="compartilhado/marca/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="compartilhado/marca/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="compartilhado/marca/apple-touch-icon.png">
-<script src="vendor/supabase.js?v=mwjvno6w"></script>
-<script src="../config.js?v=mwjvno6w"></script>
-<script src="compartilhado/sessao.js?v=mwjvno6w"></script>
+<script src="vendor/supabase.js?v=mwjwn30k"></script>
+<script src="../config.js?v=mwjwn30k"></script>
+<script src="compartilhado/sessao.js?v=mwjwn30k"></script>
 </head>
 <body>
 <header>

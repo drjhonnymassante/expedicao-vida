@@ -74,7 +74,7 @@ Se o ATP fosse quebrado num tubo de ensaio, a energia apenas esquentaria a água
 
 O caminho inverso, a **fosforilação do ADP** (ADP + Pi → ATP), exige energia, que vem do catabolismo (principalmente da respiração celular) ou, nos seres fotossintetizantes, também da luz. Assim se forma o **ciclo ATP–ADP**: a célula gasta e recarrega ATP o tempo todo, como uma bateria recarregável. É por esse ciclo que a energia passa das rotas catabólicas para as anabólicas.
 
-> 🖼️ **Figura sugerida:** molécula de ATP com adenina, ribose e três fosfatos destacados em cores diferentes; ao lado, um ciclo com duas setas: "ATP → ADP + Pi" liberando energia para trabalho (contração, transporte ativo, síntese) e "ADP + Pi → ATP" recebendo energia da respiração ou da luz.
+<figure class="fig"><img src="../content/figuras/atp-metabolismo/ciclo-atp-adp.svg" alt="Molécula de ATP (adenina, ribose e três fosfatos) e o ciclo ATP–ADP" loading="lazy"><figcaption><b>Figura 1.</b> A molécula de ATP: adenina + ribose (adenosina) ligadas a três grupos fosfato, com as ligações ricas em energia. No ciclo, a hidrólise (ATP → ADP + Pi) libera energia para o trabalho celular e a fosforilação (ADP + Pi → ATP) recarrega a molécula com energia da respiração ou da fotossíntese. <span class="credito">Ilustração Evonauta.</span></figcaption></figure>
 
 ### Para que a célula gasta ATP?
 
