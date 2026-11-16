@@ -1400,7 +1400,9 @@ $('btNovo').onclick = () => {
   est = EV.completar(null); est.livres = ILHAS.map((_, i) => i < 3); aplicarVisualBloqueio(); est = null;
   // ao voltar da aula (?continuar), entra direto no jogo e reabre a estação de onde saiu
   const qs = new URLSearchParams(location.search);
-  if (qs.has('continuar') && EV.temProgresso(EV.carregar())) {
+  // ?dev: versão de desenvolvedor para testes: todas as ilhas livres e modo demonstração ligado (não altera o progresso salvo na nuvem)
+  if (qs.has('dev')) { $('demo').checked = true; const s0 = EV.carregar(); comecar(!!(s0 && !EV.temProgresso(s0)) ? true : false); est.livres = ILHAS.map(() => true); for (const p of PONTES) p.chefePronto = false; aplicarVisualBloqueio(); verificarDesbloqueios(false); toast('🛠️', 'Modo desenvolvedor', 'Todas as ilhas liberadas · teclas da demonstração ativas'); history.replaceState(null, '', location.pathname); }
+  else if (qs.has('continuar') && EV.temProgresso(EV.carregar())) {
     comecar(false);
     const alvo = qs.get('estacao') && ESTACOES.find(e => e.topico.id === qs.get('estacao'));
     if (alvo && livre(alvo.ilha)) { jog.x = alvo.x; jog.z = alvo.z + 2.6; setTimeout(() => abrirEstacao(alvo), 900); }
