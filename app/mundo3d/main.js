@@ -109,14 +109,18 @@ const canvas = $('cena');
 let renderer;
 try { renderer = new THREE.WebGLRenderer({ canvas, antialias: false, powerPreference: 'high-performance' }); }
 catch { location.href = '../mundo/'; throw new Error('sem WebGL'); }
-renderer.setPixelRatio(Math.min(devicePixelRatio, 1.5));
+// qualidade: preferência salva (auto/alta/media/baixa) ou escolha automática pelo aparelho
+const PREF_QUAL = localStorage.getItem('ev_qualidade') || 'auto';
+const NUCLEOS = navigator.hardwareConcurrency || 4, MEMORIA = navigator.deviceMemory || 4, TOQUE0 = matchMedia('(pointer: coarse)').matches || 'ontouchstart' in window;
+const QUAL_AUTO = localStorage.getItem('ev_qualidade_auto') || (TOQUE0 ? ((NUCLEOS <= 4 || MEMORIA <= 3) ? 'baixa' : 'media') : ((NUCLEOS <= 2 || MEMORIA <= 2) ? 'media' : 'alta'));
+const QUALIDADE = PREF_QUAL === 'auto' ? QUAL_AUTO : PREF_QUAL;
+renderer.setPixelRatio(Math.min(devicePixelRatio, { alta: 1.5, media: 1.25, baixa: 1 }[QUALIDADE] || 1.25));
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(55, 1, .1, 900);
 const TOQUE = matchMedia('(pointer: coarse)').matches || 'ontouchstart' in window;
 if (TOQUE) document.body.classList.add('toque');
 if (TOQUE) { const bm = document.getElementById('btMapa'); bm.innerHTML = ic('mapa'); bm.title = 'Mapa'; const la = document.querySelector('#acoes a'); if (la) { la.innerHTML = ic('livro'); la.title = 'Aulas'; } }
-const QUALIDADE = TOQUE ? 'media' : 'alta';
 // céu, ciclo de dia e noite, água, grama, luzes e pós-processamento (visual.js)
 const visual = criarVisual({ renderer, scene, camera, qualidade: QUALIDADE, toque: TOQUE });
 const { sol, tempoU } = visual;
@@ -227,7 +231,7 @@ function gerarTufos() {
   for (const il of ILHAS) {
     const t = il.tema, base = t.grama || (t.folha ? cor.set(t.folha).offsetHSL(.02, .06, .12).getHexString() && '#' + cor.getHexString() : null);
     if (!base) continue;
-    const n = Math.round((QUALIDADE === 'alta' ? 230 : 95) * (t.gramaDens || 1)), R0 = rng(il.i * 131 + 7);
+    const n = Math.round(({ alta: 230, media: 95, baixa: 40 }[QUALIDADE] || 95) * (t.gramaDens || 1)), R0 = rng(il.i * 131 + 7);
     for (let k = 0, tent = 0; k < n && tent < n * 3; tent++) {
       const a = R0() * Math.PI * 2, rr = 2.5 + Math.sqrt(R0()) * (il.R - 4.2), x = il.cx + Math.cos(a) * rr, z = il.cz + Math.sin(a) * rr;
       if (rr < 3.4 || il.estacoes.some(e => Math.hypot(e.x - x, e.z - z) < 2.1)) continue;
@@ -1265,10 +1269,22 @@ function animarMundo(dt) {
   vgeo.attributes.position.needsUpdate = true;
 }
 
+let fpsN = 0, fpsT = 0, fpsEspera = 6, rebaixados = 0;
+function medirFps(dt) {
+  if (!emJogo || PREF_QUAL !== 'auto') return;
+  if (fpsEspera > 0) { fpsEspera -= dt; return; }
+  fpsN++; fpsT += dt; if (fpsT < 4) return;
+  const fps = fpsN / fpsT; fpsN = 0; fpsT = 0;
+  if (fps < 28 && rebaixados < 4) {
+    const o = visual.rebaixar(); rebaixados++;
+    if (o) { const pr = renderer.getPixelRatio(); if (pr > 1) renderer.setPixelRatio(Math.max(1, pr - .25)); redimensionar(); toast('⚙️', 'Qualidade ajustada', `Desligado: ${o} (${Math.round(fps)} fps)`); }
+    if (rebaixados >= 2 && QUALIDADE !== 'baixa') localStorage.setItem('ev_qualidade_auto', QUALIDADE === 'alta' ? 'media' : 'baixa');
+  }
+}
 function loop() {
   requestAnimationFrame(loop);
   if (document.hidden) { relogio.getDelta(); return; }
-  const dt = Math.min(.05, relogio.getDelta()); tempo += dt;
+  const dt = Math.min(.05, relogio.getDelta()); tempo += dt; medirFps(dt);
   if (emJogo && !pausado && !evo) atualizarJogador(dt);
   else if (emJogo && !evo) av.atualizar(dt, { vel: 0, chao: true });
   atualizarEvolucao(dt);
@@ -1358,9 +1374,12 @@ addEventListener('storage', e => { if (e.key === EV.CHAVE && est) { const novo =
 
 (async function iniciar() {
   try { await Promise.race([document.fonts.ready, new Promise(r => setTimeout(r, 1500))]); } catch { }
+  const carga = (p, t) => { const b = $('cargaBarra'); if (b) b.style.width = p + '%'; if (t) $('carga').textContent = t; };
+  carga(8, 'Carregando o currículo…');
   try { CUR = await fetch(BASE + 'curriculo.json').then(r => r.json()); }
   catch { $('carga').textContent = 'Não foi possível carregar o currículo. Abra pelo servidor de prévia.'; return; }
-  gerarMundo();
+  carga(35, 'Gerando o arquipélago…'); await new Promise(r => setTimeout(r, 30));
+  gerarMundo(); carga(100);
   const prontas = ESTACOES.filter(e => e.pronto).length;
   $('carga').textContent = `${ILHAS.length} ilhas · ${ESTACOES.length} estações · ${prontas} missões disponíveis · ${ORBES.length} biocristais escondidos`;
   telaInicial(EV.carregar());
@@ -1376,6 +1395,7 @@ $('btNovo').onclick = () => {
   }
   confirmaReset = 0; bt.classList.remove('perigo'); comecar(true);
 }; $('btCont').onclick = () => comecar(false);
+{ const s = $('selQual'); if (s) { s.value = PREF_QUAL; s.onchange = () => { localStorage.setItem('ev_qualidade', s.value); localStorage.removeItem('ev_qualidade_auto'); location.reload(); }; } }
   $('nome').addEventListener('keydown', e => { if (e.key === 'Enter') comecar(false); });
   est = EV.completar(null); est.livres = ILHAS.map((_, i) => i < 3); aplicarVisualBloqueio(); est = null;
   // ao voltar da aula (?continuar), entra direto no jogo e reabre a estação de onde saiu

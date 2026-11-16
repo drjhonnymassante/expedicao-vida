@@ -148,7 +148,7 @@ export function criarVisual({ renderer, scene, camera, qualidade = 'alta', toque
   // luzes
   const hemi = new THREE.HemisphereLight('#d8f0ff', '#4c6b3c', 1.0);
   const sol = new THREE.DirectionalLight('#fff1d6', 2.4);
-  sol.castShadow = true; sol.shadow.mapSize.set(alta ? 2048 : 1024, alta ? 2048 : 1024);
+  sol.castShadow = true; const mapa = alta ? 2048 : qualidade === 'baixa' ? 768 : 1024; sol.shadow.mapSize.set(mapa, mapa);
   Object.assign(sol.shadow.camera, { left: -42, right: 42, top: 42, bottom: -42, near: 1, far: 240 });
   sol.shadow.bias = -.0005; sol.shadow.normalBias = .035;
   scene.add(hemi, sol, sol.target);
@@ -276,6 +276,14 @@ export function criarVisual({ renderer, scene, camera, qualidade = 'alta', toque
   }
 
   function render() { if (composer) composer.render(); else renderer.render(scene, camera); }
+  // adaptação em tempo de execução: cada chamada tira um efeito caro; devolve o que foi desligado (ou null)
+  function rebaixar() {
+    if (smaa && smaa.enabled) { smaa.enabled = false; return 'suavização'; }
+    if (bloom && bloom.enabled) { bloom.enabled = false; return 'brilho'; }
+    if (composer) { composer = null; return 'contorno'; }
+    if (sol.castShadow) { sol.castShadow = false; return 'sombras'; }
+    return null;
+  }
 
   // foto de cima do arquipélago para o mapa: renderiza o mundo real com câmera ortográfica
   const camFoto = new THREE.OrthographicCamera(-1, 1, 1, -1, 1, 600);
@@ -295,5 +303,5 @@ export function criarVisual({ renderer, scene, camera, qualidade = 'alta', toque
     g.putImageData(img, 0, 0); return c;
   }
 
-  return { sol, hemi, agua, aguaU, tempoU, registrarIlhas, criarGrama, redimensionar, atualizar, render, fotoDeCima, set hora(h) { hora = h; }, get hora() { return hora; }, get composer() { return composer; } };
+  return { sol, hemi, agua, aguaU, tempoU, registrarIlhas, criarGrama, redimensionar, atualizar, render, fotoDeCima, set hora(h) { hora = h; }, get hora() { return hora; }, get composer() { return composer; }, rebaixar };
 }
