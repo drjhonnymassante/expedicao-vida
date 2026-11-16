@@ -1075,13 +1075,21 @@ $('btFecharMapa').onclick = e => { e.stopPropagation(); fecharMapa(); };
 
 // ---------- modo demonstração ----------
 // T leva à ilha seguinte (de 1 a 26, voltando ao início); se estiver trancada, a demonstração a destranca
-function teletransporteDemo() {
-  const al = ILHAS[(ilhaAtual + 1) % ILHAS.length];
+// teletransporte da demonstração: abre a lista das 26 ilhas para escolher o destino (libera a ilha se preciso)
+function irParaIlha(al) {
   if (!livre(al.i)) { est.livres[al.i] = true; aplicarVisualBloqueio(); }
   explosao(jog.x, jog.y + 1, jog.z, ['#6EC8FF', '#B388FF', '#ffffff'], 60, 8); SFX.evolucao();
   jog.x = al.cx; jog.z = al.cz + 5; jog.y = 4; jog.vy = 0;
   salvar();
   toast('🌀', 'Teletransporte', al.u.regiao_mundo.nome);
+}
+function teletransporteDemo() {
+  if (pausado) return;
+  abrirPainel(`<div class="etq">Modo demonstração</div><h2>🌀 Teletransporte</h2><p style="color:var(--sub);font-size:13.5px">Escolha a ilha. Ilhas trancadas são liberadas ao chegar.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:6px;margin:10px 0">${ILHAS.map(il => `<button class="bt" data-i="${il.i}" style="justify-content:flex-start;text-align:left;padding:8px 10px;font-size:13px">${il.i === ilhaAtual ? '📍' : livre(il.i) ? '🟢' : '🔒'} ${il.i + 1}. ${esc(il.u.regiao_mundo.nome)}</button>`).join('')}</div>
+    <div class="acoesP"><button class="bt" id="fecharTele">Cancelar</button></div>`);
+  $('fecharTele').onclick = fecharPainel;
+  $('painel').querySelectorAll('button[data-i]').forEach(b => b.onclick = () => { fecharPainel(); irParaIlha(ILHAS[+b.dataset.i]); });
 }
 function desbloquearDemo() { const prox = ILHAS.find(il => !livre(il.i)); if (prox) { est.livres[prox.i] = true; aplicarVisualBloqueio(); animarDesbloqueio(prox); ponto('Ilha liberada: ' + prox.u.regiao_mundo.nome); } }
 $('dmXp').onclick = () => ganharXp(250, 'modo demonstração');
