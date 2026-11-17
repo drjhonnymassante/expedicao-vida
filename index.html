@@ -27,7 +27,7 @@
 <meta property="og:description" content="26 ilhas, 127 aulas e missões para dominar a Biologia do ENEM. Comece grátis e garanta seu lugar na turma fundadora.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@500;700;800&display=swap">
-<link rel="stylesheet" href="estilo.css?v=mwl28cs0">
+<link rel="stylesheet" href="estilo.css?v=mwl42sbj">
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
@@ -118,7 +118,7 @@
 </div></section>
 
 <section id="planos"><div class="cont">
-  <div class="sec-tit"><div class="etq">Lista de espera dos evonautas fundadores</div><h2>Garanta seu lugar nos planos premium</h2><p>Quem entra na lista agora garante o <b>preço de evonauta fundador</b> e recebe primeiro o aviso de abertura. As mentorias têm vagas limitadas na primeira turma.</p></div>
+  <div class="sec-tit"><div class="etq">Lista de espera dos evonautas fundadores</div><h2>Garanta seu lugar nos planos premium</h2><p>As primeiras assinaturas de cada plano pagam o <b>preço de evonauta fundador</b>, e quem está na lista recebe primeiro o aviso de abertura. As mentorias têm vagas limitadas na primeira turma.</p></div>
   <div class="planos" id="cartoesPlanos"></div>
   <p style="text-align:center;color:var(--sub);font-size:13.5px;margin-top:18px">Entrar na lista é gratuito e não gera nenhuma cobrança ou compromisso de compra. Os números exibidos são as inscrições reais.</p>
 </div></section>
@@ -128,7 +128,7 @@
   <details class="faq"><summary>É grátis mesmo?</summary><p>Sim. Com o cadastro você acessa 30 aulas completas (a primeira de cada unidade) e o mundo aberto. Os planos premium liberam as 127 aulas, todas as missões, ligas e as mentorias.</p></details>
   <details class="faq"><summary>Para quem é?</summary><p>Para estudantes do ensino médio e de cursinho que vão fazer ENEM ou vestibulares, incluindo Medicina. Professores e responsáveis também podem acompanhar.</p></details>
   <details class="faq"><summary>Funciona no celular?</summary><p>Sim. No celular você anda pelo mundo 3D com um joystick na tela, gira a câmera arrastando o dedo e fala com os personagens tocando no botão. No computador a experiência é ainda mais completa, e há uma versão leve para máquinas mais simples.</p></details>
-  <details class="faq"><summary>Quanto custam os planos premium?</summary><p>Para os evonautas fundadores: Plataforma Completa por R$ 13,90/mês (ou R$ 133 no plano anual); com Mentoria em Grupo, R$ 47,90/mês (ou R$ 459 no anual); com Mentoria Individual, R$ 697/mês (ou R$ 6.691 no anual). Os planos anuais têm 20% de desconto. Quem está na lista recebe primeiro o aviso de abertura, e entrar na lista não obriga a comprar.</p></details>
+  <details class="faq"><summary>Quanto custam os planos premium?</summary><p>Preço de evonauta fundador, válido para as primeiras assinaturas de cada plano: Plataforma Completa por R$ 13,90/mês ou R$ 133 no anual (primeiras 500); com Mentoria em Grupo, R$ 47,90/mês ou R$ 459 no anual (primeiras 100); com Mentoria Individual, R$ 187,90/mês ou R$ 1.804 no anual (primeiras 20). Preenchidas essas vagas, os preços passam a ser R$ 19,90, R$ 67,90 e R$ 397,90 por mês (R$ 191, R$ 652 e R$ 3.820 no anual). Quem assina como fundador no mensal mantém o valor enquanto a assinatura estiver ativa; no anual, o valor vale para os 12 meses contratados. Os planos anuais têm 20% de desconto. Quem está na lista recebe primeiro o aviso de abertura, e entrar na lista não obriga a comprar.</p></details>
   <details class="faq"><summary>O que vocês fazem com meus dados?</summary><p>Usamos seus dados apenas para a sua conta, a lista de espera e, se você autorizar, para enviar novidades. Você pode pedir a exclusão a qualquer momento. Veja a <a href="privacidade.html">Política de Privacidade</a>.</p></details>
 </div></section>
 
@@ -144,9 +144,9 @@
 
 <div class="veu oculto" id="veu"><div class="modal" id="modal"></div></div>
 
-<script src="app/vendor/supabase.js?v=mwl28cs0"></script>
-<script src="config.js?v=mwl28cs0"></script>
-<script src="vida.js?v=mwl28cs0"></script>
+<script src="app/vendor/supabase.js?v=mwl42sbj"></script>
+<script src="config.js?v=mwl42sbj"></script>
+<script src="vida.js?v=mwl42sbj"></script>
 <script>
 const { cfg, sb, PLANOS, esc } = Vida;
 // aviso de cookies (Consent Mode)
@@ -179,7 +179,13 @@ sb.auth.getSession().then(({ data: { session } }) => {
 });
 
 // planos com contadores reais
-const PRECOS = { digital: { mes: 'R$ 13,90', ano: 'R$ 133' }, grupo: { mes: 'R$ 47,90', ano: 'R$ 459' }, individual: { mes: 'R$ 697', ano: 'R$ 6.691' } };
+// preço de evonauta fundador nas primeiras vagas (assinaturas pagas); depois, preço regular. O servidor aplica a mesma regra.
+const TABELA = { digital: { vagas: 500, fundador: { mes: 13.9, ano: 133 }, regular: { mes: 19.9, ano: 191 } }, grupo: { vagas: 100, fundador: { mes: 47.9, ano: 459 }, regular: { mes: 67.9, ano: 652 } }, individual: { vagas: 20, fundador: { mes: 187.9, ano: 1804 }, regular: { mes: 397.9, ano: 3820 } } };
+const brl = v => v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', minimumFractionDigits: Number.isInteger(v) ? 0 : 2 });
+let OCUPADAS = {};
+const ehFundador = p => (OCUPADAS[p] || 0) < TABELA[p].vagas;
+const valorAtual = p => ehFundador(p) ? TABELA[p].fundador : TABELA[p].regular;
+const PRECOS = new Proxy({}, { get: (_, p) => ({ mes: brl(valorAtual(p).mes), ano: brl(valorAtual(p).ano) }) });
 const DETALHES = {
   digital: { selo: '', itens: ['As 127 aulas do currículo completo', '1.270 questões em 4 ligas (bronze a diamante)', 'Todas as missões das 26 ilhas', 'Ligas semanais e revisão espaçada ilimitada', 'Simulados e relatório de desempenho'] },
   grupo: { selo: 'Recomendado', itens: ['Tudo da Plataforma Completa', 'Encontros semanais ao vivo com o Dr. Jhonny, por objetivo (ENEM, Medicina…)', 'Plano de estudos da turma', 'Plantão de dúvidas e comunidade', 'Liga de equipe com a sua turma'] },
@@ -190,13 +196,14 @@ const VENDAS = cfg.vendasAbertas || new URLSearchParams(location.search).get('ve
 let CONTAGENS = null;
 async function renderPlanos() {
   CONTAGENS = await Vida.contagens();
+  try { const { data } = await sb.rpc('vagas_fundador'); OCUPADAS = {}; for (const r of data || []) OCUPADAS[r.plano] = Number(r.ocupadas); } catch { }
   let total = 0;
   document.getElementById('cartoesPlanos').innerHTML = ['digital', 'grupo', 'individual'].map(p => {
     const d = DETALHES[p], c = CONTAGENS ? CONTAGENS[p] : null; if (c) total += c.inscritos;
     const pct = c ? Math.min(100, c.inscritos / c.vagas * 100) : 0, cheio = c && c.inscritos >= c.vagas;
     const legenda = p === 'digital' ? 'preço de fundador para os primeiros' : 'vagas na turma fundadora';
     return `<div class="plano ${d.selo ? 'destaque' : ''}">${d.selo ? `<div class="fita">${d.selo}</div>` : ''}
-      <div style="font-size:34px">${PLANOS[p].ic}</div><h3>${PLANOS[p].nome}</h3><div class="preco"><span class="valor">${PRECOS[p].mes}</span><span class="per">/mês</span><div class="anual">ou <b>${PRECOS[p].ano}</b> no plano anual <span class="off">20% off</span></div><div class="fund">💎 Preço de evonauta fundador</div></div>
+      <div style="font-size:34px">${PLANOS[p].ic}</div><h3>${PLANOS[p].nome}</h3><div class="preco"><span class="valor">${PRECOS[p].mes}</span><span class="per">/mês</span><div class="anual">ou <b>${PRECOS[p].ano}</b> no plano anual <span class="off">20% off</span></div>${ehFundador(p) ? `<div class="fund">💎 Preço de evonauta fundador nas primeiras ${TABELA[p].vagas} assinaturas</div><div class="depois">Depois: ${brl(TABELA[p].regular.mes)}/mês ou ${brl(TABELA[p].regular.ano)} no anual</div>` : `<div class="fund">Vagas de fundador preenchidas</div>`}</div>
       <ul>${d.itens.map(i => `<li>${esc(i)}</li>`).join('')}</ul>
       <div class="vagas"><div class="barra"><div data-w="${pct}"></div></div>
         <div class="info"><span>${c && c.inscritos >= 5 ? `<b>${c.inscritos}</b> na lista` : '🚀 Seja um(a) dos primeiros'}</span><span>${c ? (cheio ? '🔥 turma fundadora completa' : `<b>${c.vagas}</b> ${legenda}`) : ''}</span></div></div>
@@ -209,7 +216,7 @@ async function renderPlanos() {
 renderPlanos();
 
 // compra: escolhe mensal ou anual e segue para o checkout do Mercado Pago
-const VALOR = { digital: { mes: 13.9, ano: 133 }, grupo: { mes: 47.9, ano: 459 }, individual: { mes: 697, ano: 6691 } };
+const VALOR = new Proxy({}, { get: (_, p) => valorAtual(p) });
 const reais = v => v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 function abrirCompra(plano) {
   const v = VALOR[plano], economia = Math.round((1 - v.ano / (v.mes * 12)) * 100);
@@ -242,7 +249,7 @@ addEventListener('keydown', e => { if (e.key === 'Escape') veu.classList.add('oc
 async function abrirLista(plano) {
   const { data: { session } } = await sb.auth.getSession();
   modal.innerHTML = `<div class="etq">Lista de espera</div><h3>${PLANOS[plano].ic} ${PLANOS[plano].nome}</h3>
-    <p style="color:var(--sub);margin:0 0 6px">Seja avisado(a) primeiro e garanta o preço de evonauta fundador: ${PRECOS[plano].mes}/mês ou ${PRECOS[plano].ano} no plano anual.</p>
+    <p style="color:var(--sub);margin:0 0 6px">Seja avisado(a) primeiro da abertura. O preço de evonauta fundador (${brl(TABELA[plano].fundador.mes)}/mês ou ${brl(TABELA[plano].fundador.ano)} no anual) vale para as primeiras ${TABELA[plano].vagas} assinaturas; depois, ${brl(TABELA[plano].regular.mes)}/mês.</p>
     <form id="fLista">
       <label class="campo">Plano</label>
       <select class="inp" name="plano">${Object.entries(PLANOS).map(([k, v]) => `<option value="${k}" ${k === plano ? 'selected' : ''}>${v.nome}</option>`).join('')}</select>
