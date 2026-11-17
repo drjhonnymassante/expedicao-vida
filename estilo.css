@@ -127,3 +127,11 @@ select.inp option { color: #111; }
 #avisoCookies.oculto { display: none; }
 #avisoCookies .botoes { display: flex; gap: 8px; flex: none; }
 @media (max-width: 600px) { #avisoCookies { flex-direction: column; align-items: stretch; } #avisoCookies .botoes .bt { flex: 1; } }
+
+/* faixa do lançamento oficial (janeiro de 2027) */
+.faixaLanc { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 9px 16px; background: linear-gradient(90deg, #6a2bd9, #2b7cd3 55%, #13a07a); color: #fff; text-decoration: none; font-size: 14px; line-height: 1.35; text-align: center; }
+.faixaLanc:hover { filter: brightness(1.08); }
+.faixaLanc .fl-ic { font-size: 18px; }
+.faixaLanc .fl-sub { color: rgba(255,255,255,.88); }
+.faixaLanc .fl-cta { flex: none; padding: 4px 10px; border-radius: 999px; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.35); font-weight: 800; font-size: 13px; white-space: nowrap; }
+@media (max-width: 700px) { .faixaLanc { font-size: 13px; padding: 8px 12px; } .faixaLanc .fl-sub { display: none; } }
