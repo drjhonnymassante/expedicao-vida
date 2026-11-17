@@ -16,7 +16,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Evonauta | Biologia do ensino médio e ENEM em modo jogo</title>
-<meta name="description" content="Explore 26 ilhas, cumpra missões e evolua da bactéria ao cientista enquanto estuda toda a Biologia do ensino médio e do ENEM. Comece grátis.">
+<meta name="description" content="Explore 26 ilhas, cumpra missões e evolua de recruta a cientista-chefe enquanto estuda toda a Biologia do ensino médio e do ENEM. Comece grátis.">
 <meta property="og:title" content="Evonauta | Biologia em modo jogo">
 <meta property="og:image" content="https://evonauta.com.br/img/og-evonauta.png">
 <meta property="og:image:width" content="1200">
@@ -27,7 +27,7 @@
 <meta property="og:description" content="26 ilhas, 127 aulas e missões para dominar a Biologia do ENEM. Comece grátis e garanta seu lugar na turma fundadora.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@500;700;800&display=swap">
-<link rel="stylesheet" href="estilo.css?v=mwl14uhl">
+<link rel="stylesheet" href="estilo.css?v=mwl1r134">
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
@@ -49,7 +49,7 @@
   <div>
     <span class="selo">🚀 Lançamento oficial em janeiro de 2027 · turma fundadora aberta</span>
     <h1>A Biologia do ENEM <em>virou uma expedição.</em></h1>
-    <p class="lead">Vire um(a) <b>evonauta</b>: explore 26 ilhas, converse com personagens, cumpra missões e veja seu avatar evoluir da bactéria ao cientista. Você revisa a matéria sem perceber.</p>
+    <p class="lead">Vire um(a) <b>evonauta</b>: explore 26 ilhas, converse com personagens, cumpra missões e veja seu personagem evoluir de recruta a cientista-chefe. Você revisa a matéria sem perceber.</p>
     <div class="ctas">
       <a class="bt prim" href="entrar.html?modo=cadastro">▶ Começar grátis</a>
       <a class="bt ouro" href="#planos">⭐ Lista VIP dos planos premium</a>
@@ -63,8 +63,13 @@
   </div>
   <div class="palco">
     <div class="anel"></div>
-    <canvas id="evolucao" width="520" height="520" aria-label="Avatar evoluindo da bactéria ao cientista"></canvas>
-    <div class="rotulo" id="formaNome">Bactéria</div>
+    <div class="herois" id="herois" aria-label="Os quatro personagens do jogo">
+      <img src="app/compartilhado/marca/retratos/knight.png" alt="Guardião(ã)" class="on">
+      <img src="app/compartilhado/marca/retratos/rogue.png" alt="Explorador(a)" loading="lazy">
+      <img src="app/compartilhado/marca/retratos/mage.png" alt="Sábio(a)" loading="lazy">
+      <img src="app/compartilhado/marca/retratos/barbarian.png" alt="Desbravador(a)" loading="lazy">
+    </div>
+    <div class="rotulo" id="formaNome">Guardião(ã) · Recruta</div>
     <div class="flutua" style="top:10%;left:2%">⚔️ Missão cumprida +120 XP</div>
     <div class="flutua" style="top:22%;right:0;animation-delay:1.2s">💎 Biocristal +5 XP</div>
     <div class="flutua" style="bottom:22%;left:-2%;animation-delay:2.1s">🔥 Combo ×4</div>
@@ -75,7 +80,7 @@
   <div class="sec-tit"><div class="etq">Como funciona</div><h2>Estudar como quem joga</h2><p>Cada unidade do ensino médio é uma ilha. Cada tópico é uma missão. Sua evolução depende do que você aprende.</p></div>
   <div class="grade3">
     <div class="card"><div class="ic">🗺️</div><h3>Explore o arquipélago</h3><p>Do Vale da Sopa Primordial ao Continente dos Biomas. Cada ilha tem cenário, personagens e segredos próprios, e as próximas só abrem quando você domina a atual.</p></div>
-    <div class="card"><div class="ic">🧬</div><h3>Evolua o seu avatar</h3><p>Bactéria, ameba, água-viva, peixe, anfíbio, réptil, ave… até cientista. Cada nível conquistado com XP de verdade, missão após missão.</p></div>
+    <div class="card"><div class="ic">🧬</div><h3>Evolua o seu personagem</h3><p>Escolha entre Guardião(ã), Explorador(a), Sábio(a) e Desbravador(a) e suba de Recruta a Cientista-chefe. Cada patente conquistada com XP de verdade, missão após missão.</p></div>
     <div class="card"><div class="ic">🧠</div><h3>Revise sem perceber</h3><p>Fragmentos de memória, desafios do dia e ligas com dificuldade real (bronze a diamante) trazem de volta o que você estudou no momento certo.</p></div>
   </div>
 </div></section>
@@ -139,10 +144,9 @@
 
 <div class="veu oculto" id="veu"><div class="modal" id="modal"></div></div>
 
-<script src="app/vendor/supabase.js?v=mwl14uhl"></script>
-<script src="config.js?v=mwl14uhl"></script>
-<script src="vida.js?v=mwl14uhl"></script>
-<script src="app/compartilhado/avatar2d.js?v=mwl14uhl"></script>
+<script src="app/vendor/supabase.js?v=mwl1r134"></script>
+<script src="config.js?v=mwl1r134"></script>
+<script src="vida.js?v=mwl1r134"></script>
 <script>
 const { cfg, sb, PLANOS, esc } = Vida;
 // aviso de cookies (Consent Mode)
@@ -160,10 +164,11 @@ document.getElementById('rodResp').textContent = cfg.responsavel;
 document.getElementById('rodCnpj').textContent = cfg.cnpj;
 const rc = document.getElementById('rodContato'); rc.href = 'mailto:' + cfg.contato; rc.textContent = cfg.contato;
 
-// avatar evoluindo no palco
+// personagens do jogo alternando no palco, cada um com uma patente
 (function () {
-  const c = document.getElementById('evolucao'), g = c.getContext('2d'), nome = document.getElementById('formaNome'); let ini = performance.now();
-  (function a(now) { const k = Math.max(0, now - ini) / 1000, f = Math.floor(k / 1.6) % Avatar2D.FORMAS.length; g.clearRect(0, 0, 520, 520); Avatar2D.desenhar(g, 260, 290, f, k, 1, 9.5, false); nome.textContent = Avatar2D.FORMAS[f].nome; requestAnimationFrame(a); })(ini);
+  const imgs = [...document.querySelectorAll('#herois img')], nome = document.getElementById('formaNome');
+  const PAT = ['Recruta', 'Naturalista', 'Biólogo(a)', 'Cientista-chefe']; let k = 0;
+  setInterval(() => { imgs[k].classList.remove('on'); k = (k + 1) % imgs.length; imgs[k].classList.add('on'); nome.textContent = imgs[k].alt + ' · ' + PAT[k]; }, 2600);
 })();
 
 // sessão
